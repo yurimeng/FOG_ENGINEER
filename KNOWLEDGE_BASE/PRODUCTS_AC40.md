@@ -76,3 +76,19 @@ else:
 ## 8. 扩展逻辑
 
 多个AC40组成MDC。
+
+
+## TECH SPEC
+Items,Specification
+Container,"- 40ft ISO HC container: 12,192mm (L) × 2,438mm (W) × 2,896mm (H)
+- External cooling units can be stacked or placed alongside"
+IT Load Capacity,"- Total IT load: 500kW (standard), with customized versions supporting up to 1MW"
+Server Capacity,"- 4 liquid-cooled server cabinets: 42U, 19-inch, 600mm(W)×1,400mm(D)×2,000mm(H), 120kW/rack, supporting servers up to 1,000mm depth
+- 1 air-cooled network cabinet: 42U, 600mm(W)×1,400mm(D)×2,000mm(H), 20kW/rack"
+Cooling Capacity,"- Primary: 500kW (standard), with customized versions exceeding 1MW
+- Secondary: CDU,120kW/pcs, rack-mounted,24°C/44°C"
+Power Input,- 3-phase 380V/415V/480V AC 50/60Hz
+Redundancy,"- Cooling: 2N redundancy
+- Power supply: 2N redundancy"
+Ambient Environment,"- Designed for dry-bulb temperature ≤35°C
+- External cooling configurations adjustable for project-specific conditions, chiller, dry cooler+DX"
