@@ -29,19 +29,55 @@ Engineer 不是聊天机器人，而是一个工程决策中枢。
 ---
 
 # 二、系统架构
-workspace-engineer/
-│
-├── IDENTITY.md        # 系统身份定义
-├── SOUL.md            # 工程哲学与决策原则
-├── USER.md            # Workspace Owner定义
-├── AGENTS.md          # 多子Agent架构
-├── BOOTSTRAP.md       # 启动协议
-├── HEARTBEAT.md       # 运行时行为规则
-│
-├── KNOWLEDGE_BASE/    # 技术知识库
-├── PROCESS/           # 工程流程
-├── TOOLS/             # 执行工具
-├── memory/            # 运行记录与风险日志
+workspace-engineer/                  # 工程师工作空间主目录
+├── 0.PRINCIPLES.md                  # 工程原则和设计哲学
+├── AGENTS.md                        # 角色说明文档，定义各类 Agent 的职责
+├── AGENTS/                           # 各类 Agent 的详细说明
+│   ├── AM.md                         # Account Manager（客户经理）职责说明
+│   ├── ATS.md                        # Architecture & Technical Support（架构及技术支持）职责说明
+│   ├── Compliance Officer.md         # 合规官职责说明
+│   ├── Cooling Engineer.md           # 冷却工程师职责说明
+│   ├── Cost Architect.md             # 成本架构师职责说明
+│   ├── Layout Planner.md             # 布局规划师职责说明
+│   ├── Power Engineer.md             # 电力工程师职责说明
+│   └── Risk Auditor.md               # 风险审计员职责说明
+├── BOOTSTRAP.md                      # 系统初始化和启动流程说明
+├── HEARTBEAT.md                       # 系统健康检查与心跳机制说明
+├── IDENTITY.md                        # 人格与定位定义文档
+├── KB/                               # 知识库文件夹
+│   ├── 3RD-PARTY/                     # 第三方解决方案资料
+│   │   ├── COOLING/                    # 冷却系统相关
+│   │   │   ├── COOLING_SYSTEM_SOLUTION.md   # 冷却系统解决方案文档
+│   │   │   └── DRYCOOL_with_DX.md           # 干冷结合 DX 系统方案
+│   │   ├── NETWORK/                    # 网络相关资料
+│   │   │   ├── AC40_NETWORK_CONF.pdf        # AC40 网络配置文件（PDF）
+│   │   │   └── PRODUCTS_NETWORK.md         # 网络产品说明
+│   │   └── POWER/                      # 电力系统相关
+│   │       ├── POWER_SYSTEMS_SOLUTION.md   # 电力系统解决方案
+│   │       └── UPS_EATON_9395XR.md        # UPS 设备说明（Eaton 9395XR）
+│   ├── PRODUCTS_A32.md                # A32 产品说明文档
+│   ├── PRODUCTS_AC40.md               # AC40 产品说明文档
+│   ├── PRODUCTS_DC40.md               # DC40 产品说明文档
+│   └── PRODUCTS_MDC.md                # MDC 模块化数据中心说明
+├── PROCESS/                           # 工作流程文件夹
+│   ├── AM/                            # 客户经理相关流程
+│   │   ├── CLIENT_MANAGEMENT_FLOW.md   # 客户管理流程
+│   │   ├── FOLLOWUP_RULES.md           # 跟进规则
+│   │   └── QUOTE_FLOW.md               # 报价流程
+│   └── ATS/                           # 架构及技术支持流程
+│       ├── CERTIFICATION_UL_CSA.md     # UL/CSA 认证流程
+│       ├── PRESALES_STANDARDS.md       # 售前标准
+│       ├── PRE_SALES_FLOW.md           # 售前流程
+│       └── WEATHER_DATA.md             # 天气数据采集与使用流程
+├── README.md                          # 仓库总览说明文档
+├── SOUL.md                             # 工程哲学与原则（核心设计理念）
+├── TOOLS.md                            # 工具使用说明
+├── TOOLS/                              # 各类工具文档
+│   ├── CAD_GUIDELINES.md               # CAD 设计规范
+│   ├── NOTION_WORKFLOW.md              # Notion 工作流程说明
+│   └── QUOTE_ENGINE.md                 # 报价工具说明
+├── USER.md                             # 用户手册或用户指南
+└── VERSION.md                          # 文档/仓库版本记录
 
 ---
 
