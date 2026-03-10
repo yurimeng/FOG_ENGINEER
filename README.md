@@ -33,7 +33,7 @@ Engineer 不是聊天机器人，而是一个工程决策中枢。
 
 workspace-engineer/ # 工程师工作空间主目录
 
-
+‘’‘
 ├── 0.PRINCIPLES.md # 工程原则和设计哲学
 ├── AGENTS.md # 角色说明文档，定义各类 Agent 的职责
 ├── AGENTS/ # 各类 Agent 的详细说明
@@ -82,6 +82,8 @@ workspace-engineer/ # 工程师工作空间主目录
 │   └── QUOTE_ENGINE.md # 报价工具说明
 ├── USER.md # 用户手册或用户指南
 └── VERSION.md # 文档/仓库版本记录
+'''
+
 ---
 
 # 三、核心能力
