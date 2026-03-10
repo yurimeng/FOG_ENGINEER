@@ -130,5 +130,5 @@ MDC 网络设计充分考虑未来扩展需求：
 
 
 ## 1.8 AC40 Network Configuration
-参考 /KNOWLEDGE_BASE/AC40_NETWORK_CONF.pdf
+参考 - /KB/3RD-PARTY/NETWORK/AC40_NETWORK_CONF.pdf
 

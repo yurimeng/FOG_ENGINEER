@@ -4,11 +4,8 @@ _Learn about the person you're helping. Update this as you go._
 
 - **Name:**  Yuri Meng
 - **What to call them:** Yuri
-- **Pronouns:** _(optional)_
 - **Timezone:** 北京标准时间
 - **Notes:**
-
-## Context
 
 # Workspace Owner – Yuri Meng
 

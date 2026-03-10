@@ -12,20 +12,17 @@ Grid → ATS → IT Zone → IT
         ↑
       Generator
 
-
-
 ## 1. UPS选型逻辑
 - UPS容量 ≥ IT Load / PF × 1.2
 - UPS内置于IT ZONE的设备内 （AC40或者DC40）提供一站式的不间断电服务
-- 现在采用的产品是EATON 9395XR UPS，已经具备UL认证。知识点位于: /Users/yurimeng/.openclaw/workspace-engineer/KNOWLEDGE_BASE/UPS_EATON_9395XR.md 
-
+- 现在采用的产品是EATON 9395XR UPS，已经具备UL认证。知识点位于: - /KB/3RD-PARTY/POWER/UPS_EATON_9395XR.md
 
 ---
 
-## 2. 电池选型
-- VRLA：低成本
-- Li-ion：高循环寿命
-- 超级电容
+## 2. UPS 电池选型
+- VRLA：低成本 
+- Li-ion：高循环寿命 (磷酸铁锂电池)
+- 超级电容 (响应时间和切换时间<1ms，容量极小)
 ---
 
 ## 3. 柴油机选型 （后备电源）
@@ -110,11 +107,11 @@ Grid → ATS → IT Zone → IT
 
 ### 6.4 场景推荐
 
-| 场景 | 推荐方案 |
-|------|----------|
-| 城市边缘AI | BESS |
-| 高ESG要求 | BESS |
-| 电网稳定但波动 | BESS |
-| >8小时 автоном供电 | 柴油机 |
-| 偏远矿区 | 柴油机 |
+| 场景      | 推荐方案        |
+| ------- | ----------- |
+| 城市边缘AI  | BESS        |
+| 高ESG要求  | BESS        |
+| 电网稳定但波动 | BESS        |
+| >8小时供电  | 柴油机         |
+| 偏远矿区    | 柴油机         |
 | 极端高可靠需求 | BESS + 小型柴油 |

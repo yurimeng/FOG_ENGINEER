@@ -4,24 +4,21 @@
 
 ## 1. 产品定位
 
-AC40 是 40ft 集装箱模块，
-包含 8 × A32，
-集成 PDC、消防系统、辅助空调。
-
-面向 360-400kW 级边缘数据中心。
+- AC40 是 40ft 集装箱模块，包含 8 × A32，集成 PDC、消防系统、辅助空调。
+- 面向 360-400kW 级边缘数据中心。
 
 ---
 
 ## 2. 核心参数
 
-| 项目 | 参数 |
-|------|------|
-| IT Capacity | 360kW 最大400KW|
-| A32 Tanks | 8 Units |
-| Operation Load | 40kW |
-| Cooling | Immersion + Dry Cooler |
-| PUE | ~1.04 |
-| Container | 40ft |
+| 项目             | 参数                                   |
+| -------------- | ------------------------------------ |
+| IT Capacity    | 360kW 最大400KW                        |
+| A32 Tanks      | 8 Units                              |
+| Operation Load | 40kW                                 |
+| Cooling        | Immersion + Dry Cooler (DX Optional) |
+| PUE            | ~1.04                                |
+| Container      | 40ft                                 |
 
 ---
 
@@ -29,6 +26,8 @@ AC40 是 40ft 集装箱模块，
 
 Input → PDC → UPS → A32 Tanks
 已内置UPS
+	- EATON 9395XR (UL)
+	- 93PR (NO UL)
 
 
 ---
