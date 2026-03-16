@@ -6,23 +6,22 @@
 ## 1. 产品定位
 
 DC40 是 40ft 容器，
-支持 4 × 120kW DLC racks，
+支持 8 × 150kW DLC racks，
 适用于高性能AI算力部署。
 
-可两个DC40合并成一个Utility提供8*DLC Rack的方案，符合NVIDIA SU Best Practice
 
 ---
 
 ## 2. 核心参数
 
-| 项目 | 参数 |
-|------|------|
-| IT Capacity | 480kW |
-| Rack Count | 4 |
-| Cooling | DLC |
-| Inlet Temp | 24°C |
-| Operation Load | 60kW |
-| PUE | ~1.2 |
+| 项目             | 参数     |
+| -------------- | ------ |
+| IT Capacity    | 1200kW |
+| Rack Count     | 8      |
+| Cooling        | DLC    |
+| Inlet Temp     | 24°C   |
+| Operation Load | 180kW  |
+| PUE            | ~1.15  |
 
 ---
 
