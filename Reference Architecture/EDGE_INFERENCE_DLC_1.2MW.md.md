@@ -1,240 +1,370 @@
-1.2MW 直冷式 AI 推理算力单元
+
+# **DC40-DLC 1.0MW 模块化液冷算力单元**
 
   
 
-Reference Architecture Version: v1.0
-Last Updated: 2026-03-16
+**Standard Engineering Specification v1.0**
 
 ---
 
-# **1 Overview / 架构概述**
+# **1. 系统概述（System Overview）**
 
-### **EN**
-This architecture is a high-density AI inference infrastructure based on direct liquid cooling (DLC).
+  
 
-The system integrates compute racks, cooling infrastructure, and power systems into a modular containerized deployment.
+**产品名称：** DC40-DLC
 
+**系统类型：** 模块化高密度液冷数据中心单元
 
-The architecture is designed for:
+**部署形式：** 40FT 集装箱 / 框架式模块
 
-- High GPU density
-    
-- High power efficiency
-    
-- Rapid deployment
-    
-- Edge AI infrastructure
-    
-### **CN**
-该架构为基于 **Direct Liquid Cooling（DLC）直冷技术** 的高密度 AI 推理算力单元。
-系统将 **计算机柜、冷却系统和电力系统** 集成在一个模块化集装箱部署单元中。
+**应用场景：**
 
-设计目标包括：
-
-- 高算力密度
+- AI Training / Inference
     
-- 高能源效率
+- HPC（高性能计算）
     
-- 快速部署
-    
-- 边缘 AI 算力基础设施
+- Edge Computing（边缘算力）
     
 
 ---
 
-# **2 System Capacity / 系统规模**
+## **1.1 核心指标**
 
-  
-Total IT Power
-1.2 MW
-
-DLC Rack Count
-8 Racks
-
-
-Air-Cooled Rack
-1 Rack (Network / Control)
-
-Power Density per Rack
-150 kW
-
-Deployment Unit
-DC40 DLC Container
+|**项目**|**参数**|
+|---|---|
+|IT总功率|**1.0–1.05MW**|
+|单机柜功率|**120KW（DLC）**|
+|机柜数量|**8 DLC + 1 风冷辅助柜**|
+|PUE（设计）|**1.15–1.25（含DX）**|
+|部署周期|**75–90天（+物流）**|
 
 ---
 
-# **3 Compute Architecture / 计算架构**
-
-Server Specification
-Dual Socket CPU
-
-Memory
-≥ 1.5 TB RAM
-
-GPU
-NVIDIA H200/B200/B300 DLC Server
-
-Networking
-NVIDIA 400/800G IB
-
-Network Interface
-OCP 25G × 1
+# **2. 电力系统（Electrical System）**
 
   
 
-Server Form Factor
-4U
+## **2.1 输入电源**
 
-Servers per Rack
-8 Servers
-
-Total Server Count
-64 Servers
-
-Total GPU Count
-512 GPUs
-
-Primary Use Case
-AI Inference
+|**项目**|**参数**|
+|---|---|
+|输入电压|**415V AC / 3P + N + PE**|
+|频率|50 / 60 Hz|
+|总容量|**≥1.2MW**|
 
 ---
 
-# **4 Cooling Architecture / 冷却架构**
+## **2.2 配电架构**
 
-  
-
-Cooling Technology
-Direct Liquid Cooling (DLC)
-
-  
-
-Heat Rejection
-Dry Cooler
-
-
-Auxiliary Cooling
-DX Cooling Support
-
-  
-
-Cooling Loop
-Primary Loop
-DLC Rack → Manifold → Plate Heat Exchanger → Dry Cooler
-
-Secondary Loop
-Dry Cooler + DX Assist
-
-  
-
-Cooling Water Temperature
-Supply: 20–24°C
-Return: 28–32°C
-
-  
-
-Air Cooling
-One low-power air-cooled rack (network / management)
+```
+Grid / BESS
+    ↓
+   PDC
+    ↓
+ Busbar（母线）
+    ↓
+Tap-off Box（250A）
+    ↓
+Outlet Box（C19）
+    ↓
+Server PSU
+```
 
 ---
 
-# **5 Power Architecture / 电力架构**
+## **2.3 母线系统**
 
-Grid Connection
-Utility Grid
-
-UPS System
-Integrated Container UPS System
-
-  
-
-Energy Storage
-External Battery Energy Storage System (BESS)
-
-Power Flow
-GRID → BESS → SWITCHGEAR → UPS → DC40
-
-Backup Time
-Short-duration ride-through and power stabilization.
+|**项目**|**参数**|
+|---|---|
+|类型|封闭式母线（Busbar）|
+|额定电流|≥2000A|
+|分支方式|Tap-off 插接|
+|单机柜供电|**250A / 柜**|
 
 ---
 
-# **6 Infrastructure / 基础设施**
+## **2.4 负载特性**
 
-  
-
-Deployment Type
-Containerized AI Datacenter
-
-Compute Module
-DC40 DLC Computing Container
-
-Integrated Systems
-- Compute
-- Cooling
-- Power Distribution
-- UPS System
-
-Deployment Timeline
-
-  
-
-75–90 Days
+|**项目**|**参数**|
+|---|---|
+|服务器类型|GPU服务器（如B300）|
+|PSU类型|单相 200–240V|
+|负载特性|高动态（AI负载）|
 
 ---
 
-# **7 Redundancy Strategy / 冗余策略**
+## **2.5 设计要求（关键）**
 
-  
-
-Power
-T2 Infrastructure Level
-
-  
-
-Service Availability
-Near T3 Operational Availability
-
-Cooling
-N+1 Cooling Capacity
-
-  
-
-Network
-Single uplink expandable to dual uplink
+- ✔ 三相负载均衡（Phase Balancing）
+    
+- ✔ 每机柜内部ABC相轮询分配
+    
+- ✔ Crest Factor ≥ 3 支持
+    
+- ✔ 谐波抑制（THDi ≤ 5%）
+    
 
 ---
 
-# **8 Advantages / 优势**
+## **2.6 UPS系统**
 
-High-density DLC cooling
-Efficient GPU power density
-Rapid containerized deployment
-Lower cooling energy consumption
+|**项目**|**参数**|
+|---|---|
+|容量|**1500 kVA**|
+|类型|在线双变换|
+|冗余|内部N+1|
+|后备电源|BESS（外部）|
+
+---
+
+# **3. 液冷系统（Liquid Cooling System）**
 
   
 
-高密度直冷散热
-GPU 功率密度高
-集装箱快速部署
-较低散热能耗
+## **3.1 架构**
+
+```
+Dry Cooler + DX
+       ↓
+Primary CDU（主CDU）
+       ↓
+Rack CDU（机架级）
+       ↓
+GPU Server（冷板）
+```
 
 ---
 
-# **9 Limitations / 局限**
+## **3.2 CDU配置**
 
-DLC infrastructure requires chilled water or hybrid cooling support.
-DX assistance may be required in high ambient temperature regions.
-
-DLC系统需要冷冻水或混合散热支持。
-在高温地区可能需要 DX 辅助散热。
+| **项目** | **参数**    |
+| ------ | --------- |
+| 主CDU   | **1.2MW** |
+| 机架CDU  | 每柜1套      |
+| 总换热能力  | ≥1.2MW    |
 
 ---
 
-# **10 Typical Use Cases / 典型应用**
-AI inference clusters
-Regional AI service nodes
-Edge AI infrastructure
+## **3.3 冷却介质**
 
-AI 推理集群
-区域 AI 服务节点
-边缘 AI 算力基础设施
+|**项目**|**参数**|
+|---|---|
+|一次侧|水 / 水乙二醇|
+|二次侧|去离子水 / 冷却液|
+|设计ΔT|**5–10°C**|
+
+---
+
+## **3.4 流量要求（参考）**
+
+|**项目**|**参数**|
+|---|---|
+|单柜流量|40–60 L/min|
+|系统总流量|≥300 L/min|
+
+---
+
+## **3.5 设计要求**
+
+- ✔ CDU冗余（避免单点故障）
+    
+- ✔ 独立机柜回路（隔离负载波动）
+    
+- ✔ 自动流量调节（变频泵）
+    
+
+---
+
+# **4. 散热系统（Heat Rejection System）**
+
+  
+
+## **4.1 组成**
+
+- Dry Cooler（干冷器）
+    
+- DX系统（Direct Expansion）
+    
+
+---
+
+## **4.2 能力配置**
+
+|**项目**|**参数**|
+|---|---|
+|总散热能力|≥1.2MW|
+|Dry Cooler占比|30–50%（视环境）|
+|DX占比|50–70%|
+
+---
+
+## **4.3 环境适应**
+
+|**环境温度**|**运行模式**|
+|---|---|
+|< 28°C|Dry Cooler优先|
+|≥ 28°C|DX主导|
+
+---
+
+# **5. 空气侧系统（Airflow System）**
+
+  
+
+## **5.1 架构（核心设计）**
+
+```
+风墙送风 → 服务器 → 负压排风（百叶窗 + 风机）
+```
+
+---
+
+## **5.2 风墙系统**
+
+|**项目**|**参数**|
+|---|---|
+|数量|3台|
+|单台能力|70KW|
+|总能力|**210KW**|
+|出风温度|18–23°C|
+
+---
+
+## **5.3 排风系统**
+
+|**项目**|**参数**|
+|---|---|
+|类型|负压排风|
+|组件|百叶窗 + EC风机|
+|控制方式|变频调速|
+
+---
+
+## **5.4 风量设计**
+
+|**项目**|**参数**|
+|---|---|
+|空气侧热负载|150–220KW|
+|设计ΔT|8–12°C|
+|总风量|**60,000 – 80,000 CMH**|
+
+---
+
+## **5.5 压差控制**
+
+|**区域**|**压力**|
+|---|---|
+|机柜前（冷侧）|微正压|
+|机柜后（热侧）|负压|
+|推荐ΔP|**5–15 Pa**|
+
+---
+
+## **5.6 设计要求**
+
+- ✔ 单向气流（避免回流）
+    
+- ✔ 防短路气流
+    
+- ✔ 顶部热空气导流
+    
+
+---
+
+# **6. 电池系统（BESS）**
+
+  
+
+## **6.1 配置**
+
+|**项目**|**参数**|
+|---|---|
+|类型|Tesla Megapack XL2|
+|功能|UPS后备供电|
+|部署|独立箱体|
+
+---
+
+## **6.2 设计要求**
+
+- ✔ 独立布置（不叠放）
+    
+- ✔ 满足消防规范（NFPA 855 / UL9540）
+    
+- ✔ 与计算箱保持安全距离
+    
+
+---
+
+# **7. 机械与布局（Mechanical Layout）**
+
+  
+
+## **7.1 布局原则**
+
+|**项目**|**要求**|
+|---|---|
+|风墙箱|必须紧邻计算箱|
+|电池箱|独立区域|
+|散热箱|可侧放 / 可分离|
+|叠放|**仅限散热箱（条件允许）**|
+
+---
+
+## **7.2 禁止事项**
+
+- ❌ 电池箱叠放
+    
+- ❌ 风墙箱远离计算箱
+    
+- ❌ 气流被遮挡
+    
+
+---
+
+# **8. 可靠性设计（Reliability）**
+
+|**系统**|**设计**|
+|---|---|
+|电力|N+1（UPS）|
+|冷却|N+1（CDU）|
+|气流|冗余风机|
+|整体|无单点故障（No SPOF）|
+
+---
+
+# **9. 运维与监控（DCIM）**
+
+  
+
+## **9.1 监控范围**
+
+- 电力（电压 / 电流 / 功率）
+    
+- CDU（流量 / 温度 / 压力）
+    
+- 风墙（风量 / 温度）
+    
+- 环境（温湿度 / 压差）
+    
+
+---
+
+## **9.2 接口**
+
+- Modbus / SNMP
+    
+- API集成
+    
+
+---
+
+# **10. 总结（对外描述版本）**
+
+  
+
+> DC40-DLC 是一款面向AI与高性能计算的模块化液冷数据中心单元，
+
+> 采用双CDU液冷架构与受控气流设计，在1MW级高密度场景下实现稳定运行与快速部署，
+
+> 适用于边缘计算与分布式算力基础设施建设。

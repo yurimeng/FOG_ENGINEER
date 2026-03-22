@@ -26,10 +26,24 @@ REFERENCE_ARCHITECTURE/EDGE_INFERENCE_IMMERSION_0.5MW.md
 
 ---
 
+## 1.2 MW DLC AI Modular Data Center Unit
+High-density immersion cooling inference infrastructure.
+
+Features
+
+Low CAPEX per GPU  
+High power density
+Modular container deployment  
+Rapid installation
+
+Reference
+REFERENCE_ARCHITECTURE/EDGE_INFERENCE_DLC_1.2MW.md
+
+-----
+
+
 ## Future Architectures
 
-3MW GPU Training Cluster
-
-10MW Modular AI Datacenter
-
-Immersion HPC Cluster
+- 3MW GPU Training Cluster
+- 10MW Modular AI Datacenter
+- Immersion HPC Cluster
