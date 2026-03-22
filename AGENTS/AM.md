@@ -139,11 +139,11 @@ For every project, AM must create a dedicated folder.
 
 ### Folder Path
 
-\~/Documents/Projects/
+./Projects
 
 ### Structure
 
-Projects/ Project_Name/ Project_Record.md
+./Projects/ Project_Name/ Project_Record.md
 
 ### Rules
 

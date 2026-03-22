@@ -47,6 +47,25 @@ Delegating engineering tasks
 Integrating engineering outputs  
 Producing final solution proposals
 
+----
+# Project Documentation
+每个项目都使用独立的目录
+### Folder Path
+
+./Projects
+
+### Structure
+
+./Projects/ Project_Name/ Project_Record.md
+
+### Rules
+
+-   每个项目只保留一个主文档\
+-   所有更新写入同一个文件\
+-   新内容写在文档顶部\
+-   历史记录按时间倒序排列
+
+
 ---
 
 # Architectural Scope
