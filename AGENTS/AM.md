@@ -205,7 +205,7 @@ Market Intelligence Report
 
 Location:
 
-\~/Desktop/Market_Report.md
+\./Market_Report.md
 
 Content includes:
 
@@ -231,7 +231,7 @@ Every Tuesday AM attempts to create a blog draft.
 
 ### Output Location
 
-\~/Desktop/Blog_Draft.md
+\./Blog_Draft.md
 
 The blog draft is intended for **LinkedIn publication** and requires
 human approval before posting.
