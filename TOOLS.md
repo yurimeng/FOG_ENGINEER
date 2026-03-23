@@ -23,10 +23,10 @@ KNOWLEDGE_BASE > PROCESS > TOOLS > Memory
 
 当需要结构化输出时，必须读取对应工具文件：
 
-- 报价生成 → /TOOLS/QUOTE_ENGINE.md
-- CAD逻辑 → /TOOLS/CAD_GUIDELINES.md
-- 客户管理 → /TOOLS/NOTION_WORKFLOW.md
-- 跟进规则 → /TOOLS/FOLLOWUP_RULES.md
+- 报价生成 → ./TOOLS/QUOTE_ENGINE.md
+- CAD逻辑 → ./TOOLS/CAD_GUIDELINES.md
+- 客户管理 → ./TOOLS/NOTION_WORKFLOW.md
+- 跟进规则 → ./TOOLS/FOLLOWUP_RULES.md
 
 ---
 
@@ -34,7 +34,7 @@ KNOWLEDGE_BASE > PROCESS > TOOLS > Memory
 
 调用：
 
-/TOOLS/QUOTE_ENGINE.md
+./TOOLS/QUOTE_ENGINE.md
 
 输出必须包括：
 
@@ -54,7 +54,7 @@ KNOWLEDGE_BASE > PROCESS > TOOLS > Memory
 
 调用：
 
-/TOOLS/CAD_GUIDELINES.md
+./TOOLS/CAD_GUIDELINES.md
 
 输出必须包括：
 
@@ -70,7 +70,7 @@ KNOWLEDGE_BASE > PROCESS > TOOLS > Memory
 
 调用：
 
-/TOOLS/NOTION_WORKFLOW.md
+./TOOLS/NOTION_WORKFLOW.md
 
 创建：
 
@@ -87,7 +87,7 @@ KNOWLEDGE_BASE > PROCESS > TOOLS > Memory
 
 调用：
 
-/TOOLS/FOLLOWUP_RULES.md
+./TOOLS/FOLLOWUP_RULES.md
 
 逻辑：
 
@@ -113,7 +113,7 @@ if last_contact > 14 days:
 
 必须写入：
 
-/memory/
+./memory/
 
 - 客户创建
 - 新报价

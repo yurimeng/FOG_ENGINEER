@@ -229,7 +229,7 @@ Identified risks
 
 Memory path:
 
-/memory/
+./memory/
 
 Maintaining historical engineering context improves decision quality.
 
