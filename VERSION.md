@@ -35,7 +35,7 @@ Agent Structure
 Knowledge Base
 - A32
 - AC40
-- DC40
+- DC45
 - MDC
 
 Third Party Knowledge

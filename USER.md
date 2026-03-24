@@ -43,7 +43,7 @@ Engineer 输出必须：
 
 - A32
 - AC40
-- DC40
+- DC45
 - MDC
 
 ---

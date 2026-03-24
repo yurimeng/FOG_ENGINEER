@@ -20,7 +20,7 @@ Engineer 不是聊天机器人，而是一个工程决策中枢。
 
 构建一个可规模化、可复用、可扩展的工程决策系统，用于：
 
-- AC40 / DC40 / A32 / MDC 设计
+- AC40 / DC45 / A32 / MDC 设计
 - BESS / 柴油发电机 / UPS 架构对比
 - Edge AI 部署规划
 - 北美合规与认证判断
@@ -60,7 +60,7 @@ workspace-engineer/ # 工程师工作空间主目录
 │   │       └── UPS_EATON_9395XR.md # UPS 设备说明（Eaton 9395XR）
 │   ├── PRODUCTS_A32.md # A32 产品说明文档
 │   ├── PRODUCTS_AC40.md # AC40 产品说明文档
-│   ├── PRODUCTS_DC40.md # DC40 产品说明文档
+│   ├── PRODUCTS_DC45.md # DC45 产品说明文档
 │   └── PRODUCTS_MDC.md # MDC 模块化数据中心说明
 ├── PROCESS/ # 工作流程文件夹
 │   ├── AM/ # 客户经理相关流程
@@ -214,7 +214,7 @@ Engineer 遵循系统工程方法：
 # 十一、未来扩展方向
 
 - 自动选型矩阵
-- AC40 vs DC40 决策引擎
+- AC40 vs DC45 决策引擎
 - MDC 规模化计算模型
 - BESS 容量优化算法
 - 成本敏感度分析

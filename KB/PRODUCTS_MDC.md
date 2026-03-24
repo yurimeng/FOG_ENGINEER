@@ -5,11 +5,11 @@
 
 ## 1. 定义
 
-MDC 是由多个 AC40 / DC40 组成的模块化数据中心。其中：
+MDC 是由多个 AC40 / DC45 组成的模块化数据中心。其中：
 
 -IT ZONE： 
 	AC40: - ./KB/PRODUCTS_AC40.md
-	DC40: - ./KB/PRODUCTS_DC40.md
+	DC45: - ./KB/PRODUCTS_DC45.md
 	NETWORK: ./KB/3RD-PARTY/PRODUCTS_NETWORK.md
 -Cooling Zone：- ./KB/3RD-PARTY/PRODUCTS_COOLING.md
 -Power Zone：- ./PROCESS/ATS/POWER_SYSTEMS

@@ -168,7 +168,7 @@ Vertical expansion
 (increased power density)
 
 Hybrid architecture  
-(AC40 + DC40 deployments)
+(AC40 + DC45 deployments)
 
 Infrastructure should evolve without requiring full redesign.
 

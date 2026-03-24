@@ -14,7 +14,7 @@ Grid → ATS → IT Zone → IT
 
 ## 1. UPS选型逻辑
 - UPS容量 ≥ IT Load / PF × 1.2
-- UPS内置于IT ZONE的设备内 （AC40或者DC40）提供一站式的不间断电服务
+- UPS内置于IT ZONE的设备内 （AC40或者DC45）提供一站式的不间断电服务
 - 现在采用的产品是EATON 9395XR UPS，已经具备UL认证。知识点位于: - ./KB/3RD-PARTY/POWER/UPS_EATON_9395XR.md
 
 ---
