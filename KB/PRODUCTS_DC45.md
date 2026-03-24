@@ -14,16 +14,16 @@ DC45 是 45ft 容器，
 
 ## 2. 核心参数
 
-| 项目             | 参数                                     |
-| -------------- | -------------------------------------- |
-| IT Capacity    | 1200kW                                 |
-| Rack Count     | 8                                      |
-| Cooling        | DLC                                    |
-| Inlet Temp     | 24°C                                   |
-| Operation Load | 240kW                                  |
-| PUE            | ~1.15                                  |
-| UPS            | EATON 9395 XR 1500 **10个UPM，功率1200kw** |
-| Battery        | 4个93i机柜，300kW/个，共提供9min备用电             |
+| 项目             | 参数                                                |
+| -------------- | ------------------------------------------------- |
+| IT Capacity    | 1200kW                                            |
+| Rack Count     | 8                                                 |
+| Cooling        | DLC                                               |
+| Inlet Temp     | 24°C                                              |
+| Operation Load | 240kW                                             |
+| PUE            | ~1.15                                             |
+| UPS            | EATON 9395 XR 1500 **10个UPM，功率1200kw**， 发热量46.9kW |
+| Battery        | 4个93i机柜，300kW/个，共提供9min备用电                        |
 
 ---
 
