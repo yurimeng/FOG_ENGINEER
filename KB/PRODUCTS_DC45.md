@@ -24,6 +24,8 @@ DC45 是 45ft 容器，
 | PUE            | ~1.15                                             |
 | UPS            | EATON 9395 XR 1500 **10个UPM，功率1200kw**， 发热量46.9kW |
 | Battery        | 4个93i机柜，300kW/个，共提供9min备用电                        |
+| Major CDU      | 1.2 MW Rack CDU                                   |
+| Backup CDU     | 150KW in-Rack CDU （optional）                      |
 
 ---
 
