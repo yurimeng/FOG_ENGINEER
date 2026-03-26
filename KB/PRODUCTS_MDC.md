@@ -50,15 +50,14 @@ MDC 是由多个 AC40 / DC45 组成的模块化数据中心。其中：
 ## 5. 并网逻辑
 
 支持：
-
 - 并网模式
 - 孤岛模式
 - BESS调节
 
 ---
 
-## 6. 风险
+## 6. Power Flow
 
-- 多模块同步控制
-- 电网波动冲击
-- 负载不均
+参考MDC Power Flow.png
+
+![[MDC Power Flow.png]]
