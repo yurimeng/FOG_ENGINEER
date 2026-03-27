@@ -144,7 +144,8 @@ Hybrid architecture
 
 Step 3 — Infrastructure Model
 
-Determine:
+First check reference configuration in ./Reference Architecture
+Then determine:
 
 Container configuration  
 power distribution  
