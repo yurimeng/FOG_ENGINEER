@@ -1,5 +1,5 @@
-# MDC – Modular Data Center
-**适用对象：ACC（Advanced Computing Cluster）标准计算单元**  
+# MDC – Modular Datacenter Cluster
+**标准计算单元**  
 **版本：V1.0**
 
 
