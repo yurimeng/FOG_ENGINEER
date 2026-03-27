@@ -85,6 +85,27 @@
 ```
 
 ---
+## UPS 电池柜
+
+名称： 93LiG2 Lithium Battery System
+型号：12-Module/Rack ｜ 93Li92S-100Ah-3PBFA
+参数：
+- Voltage：307.2
+- Rate Energy kwh：63.897
+- Change voltage V：331.2
+- Charging current: 0.25c
+- Dischage voltage V: 268.8
+- Max Dischage Power: 322.56
+- Dimensions: 600,900,2000
+- Weight Kg：970
+
+
+
+产品连接： https://www.eaton.com/content/dam/eaton/products/backup-power-ups-surge-it-power-distribution/backup-power-ups/eaton-93li-lithium-battery/eaton-93li-g2-lithium-battery-system-brochure-en-anz.pdf
+
+
+
+---
 
 ## 关键特性
 

@@ -1,93 +1,71 @@
 # AC40 – All-In-One PowerPod (Immersion)
-**适用对象：ACC（Advanced Computing Cluster）标准计算单元 IT Zone**  
+**适用对象：MDC（Modular Datacenter Cluster）标准计算单元 IT Zone**  
 **版本：V1.0**
 
 ## 1. 产品定位
 
-- AC40 是 40ft 集装箱模块，包含 8 × A32，集成 PDC、消防系统、辅助空调。
-- 面向 360-400kW 级边缘数据中心。
+AC40 是 40ft 容器，
+支持 8 × 50kW Immersion Tank [[PRODUCTS_A32]] 
+适用于高性能AI算力部署。
+
 
 ---
 
 ## 2. 核心参数
 
-| 项目             | 参数                                   |
-| -------------- | ------------------------------------ |
-| IT Capacity    | 360kW 最大400KW                        |
-| A32 Tanks      | 8 Units                              |
-| Operation Load | 40kW                                 |
-| Cooling        | Immersion + Dry Cooler (DX Optional) |
-| PUE            | ~1.04                                |
-| Container      | 40ft                                 |
-
----
-
-## 3. 电力路径
-
-Input → PDC → UPS → A32 Tanks
-已内置UPS
-	- EATON 9395XR (UL)
-	- 93PR (NO UL)
+| 项目                  | 参数                                                |
+| ------------------- | ------------------------------------------------- |
+| IT Capacity         | 400kW                                             |
+| Immersion Tank      | 50kW                                              |
+| Tank  Qty           | 8                                                 |
+| Air Cooled Rack     | 10kW                                              |
+| Air Cooled Rack Qty | 1                                                 |
+| Inlet               | 32°C                                              |
+| Operation Load      | ～8kW                                              |
+| UPS                 | EATON 9395 XR 500 **4个UPM，功率600kw**， 发热量7.9kW |
+| Battery             | 2个93i机柜，332kW/个，共提供10min备用电                        |
 
 
 ---
 
-## 4. 热力路径
+## 3. 机柜详情
+- 32RU/29RU
+- 内阻Dual CDU，1+1 完全冗余
 
-A32 → Dry Cooler / DX
+## 4. 冷却
 
-判断逻辑：
+###  Immersion冷却部分
 
-if ambient_99% < 28°C:
-    Dry cooler sufficient
-else:
-    DX required
+- Dry cooler + DX
+- 或 Heat Pump
 
----
+不允许纯干冷器。
 
-## 5. 结构布局原则
-
-- 中央冷却管道
-- 两侧A32排列
-- 通道宽度 >900mm
-- 消防喷淋覆盖全部IT区域
+### 风冷部分
+- 必须配置独立空调
 
 ---
 
-## 6. 故障模式
+## 4. 电力路径
 
-| 故障 | 影响 |
-|------|------|
-| 单A32失效 | 局部损失 |
-| Dry cooler失效 | 全局温升 |
-| PDC故障 | 全局断电 |
+Input → PDC → UPS → PDC → Tanks → PDU
 
 ---
 
-## 7. 适用场景
+## 5. 水路冗余
 
-- 快速部署
-- 无传统机房场地
-- 电力基础设施完善区域
+- 各TANK内置CDU，不再需要独立CDU
+- 2N 系统
 
 ---
 
-## 8. 扩展逻辑
+## 6. 布局
 
-多个AC40组成MDC。
+- 双排靠集装箱墙壁摆放，中间预留运维通道
+- 机柜底部350～400管路，配电区域无地板架高
 
+---
 
-## TECH SPEC
-Items,Specification
-Container,"- 40ft ISO HC container: 12,192mm (L) × 2,438mm (W) × 2,896mm (H)
-- External cooling units can be stacked or placed alongside"
-IT Load Capacity,"- Total IT load: 500kW (standard), with customized versions supporting up to 1MW"
-Server Capacity,"- 4 liquid-cooled server cabinets: 42U, 19-inch, 600mm(W)×1,400mm(D)×2,000mm(H), 120kW/rack, supporting servers up to 1,000mm depth
-- 1 air-cooled network cabinet: 42U, 600mm(W)×1,400mm(D)×2,000mm(H), 20kW/rack"
-Cooling Capacity,"- Primary: 500kW (standard), with customized versions exceeding 1MW
-- Secondary: CDU,120kW/pcs, rack-mounted,24°C/44°C"
-Power Input,- 3-phase 380V/415V/480V AC 50/60Hz
-Redundancy,"- Cooling: 2N redundancy
-- Power supply: 2N redundancy"
-Ambient Environment,"- Designed for dry-bulb temperature ≤35°C
-- External cooling configurations adjustable for project-specific conditions, chiller, dry cooler+DX"
+## 7. 扩展逻辑
+
+可与DC45混合构建MDC。

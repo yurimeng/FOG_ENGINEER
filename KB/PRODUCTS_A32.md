@@ -16,7 +16,7 @@ A32 是 32RU OU-compatible immersion cooling tank，
 | IT Capacity  | 45kW，最大50KW             |
 | Rack Units   | 32RU                    |
 | Cooling Type | Single-phase Immersion  |
-| CDU          | 2 × 45kW (2N redundant) |
+| CDU          | 2 × 50kW (2N redundant) |
 | Inlet Temp   | 32–35°C                 |
 | Outlet Temp  | 35–38°C                 |
 | PUE          | ~1.04                   |

@@ -1,5 +1,5 @@
 # DC45 – PowerPod with Direct Liquid Cooling
-**适用对象：ACC（Advanced Computing Cluster）标准计算单元 IT Zone**  
+**适用对象：MDC（Modular Datacenter Cluster）标准计算单元 IT Zone**  
 **版本：V1.0**
 
 
@@ -14,23 +14,25 @@ DC45 是 45ft 容器，
 
 ## 2. 核心参数
 
-| 项目             | 参数                                                |
-| -------------- | ------------------------------------------------- |
-| IT Capacity    | 1200kW                                            |
-| Rack Count     | 8                                                 |
-| Cooling        | DLC                                               |
-| Inlet Temp     | 24°C                                              |
-| Operation Load | 240kW                                             |
-| PUE            | ~1.15                                             |
-| UPS            | EATON 9395 XR 1500 **10个UPM，功率1200kw**， 发热量46.9kW |
-| Battery        | 4个93i机柜，300kW/个，共提供9min备用电                        |
-| Major CDU      | 1.2 MW Rack CDU                                   |
-| Backup CDU     | 150KW in-Rack CDU （optional）                      |
+| 项目                  | 参数                                                |
+| ------------------- | ------------------------------------------------- |
+| IT Capacity         | 1200kW                                            |
+| DLC  Rack           | 150kW                                             |
+| DLC Rack Qty        | 8                                                 |
+| Air Cooled Rack     | 10kW                                              |
+| Air Cooled Rack Qty | 1                                                 |
+| Inlet               | 24°C                                              |
+| Operation Load      | Fan Wall ～210KW，CDU ～16kW，Chiller ～160kW          |
+| Busbar & current    | SIEMENS 1600A                                     |
+| UPS                 | EATON 9395 XR 1500 **10个UPM，功率1200kw**， 发热量46.9kW |
+| Battery             | 3个93i机柜，332kW/个，共提供8min备用电                        |
+| Major CDU           | 1.2 MW Rack CDU                                   |
+| Backup CDU          | 150KW in-Rack CDU （optional）                      |
 
 ---
 
 ## 3. 机柜详情
-- 42/47 U
+- 48 U
 - 侧置Manifold
 - 后置PDU
 
@@ -66,9 +68,10 @@ Input → PDC → UPS → PDC → Busbar → Tap-off Unit (TOU with MCCB) → DL
 
 ## 6. 布局
 
-- 机柜采用深度1200，宽度720
-- 机柜后门离集装箱墙600-800
+- 机柜采用深度1200，宽度800
+- 机柜后门离集装箱墙350
 - 前门保留足够空间运维
+- 机柜底部350～400管路，配电区域无地板架高
 
 ---
 
