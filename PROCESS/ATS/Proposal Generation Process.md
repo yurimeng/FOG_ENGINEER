@@ -14,9 +14,9 @@ Generate a complete customer-facing infrastructure proposal.
 ## 2 Inputs
 
 Architecture design  
-Capacity planning  
-Cooling design  
-Cost estimation
+Capacity planning (including IT load and total facility load)
+Cooling design
+**NO COST ESTIMATES — see Principle 7**
 
 架构设计  
 容量规划  
@@ -31,7 +31,7 @@ Cost estimation
 
 2 Prepare solution description
 
-3 Prepare cost estimation
+3 Prepare configuration specification (product model, IT load, total facility load, PUE, redundancy)
 
 4 Prepare deployment timeline
 
@@ -48,8 +48,8 @@ Customer solution proposal
 ## 5 Deliverables
 
 Architecture diagram  
-System description  
-Cost estimate  
+System description
+**Configuration specification** (product, IT load, total facility load, PUE, cooling, power, redundancy)
 Deployment plan
 
 架构图  
@@ -61,5 +61,16 @@ Deployment plan
 
 ## 6 Risks
 
-Overly complex proposal  
-Missing cost information
+Overly complex proposal
+Unclear load definitions (always clarify IT vs total facility load)
+
+---
+
+## 7 ⚠️ Price Prohibition
+
+**This process does NOT output prices, cost estimates, or quotations.**
+
+If asked about price:
+> "Configuration is handled by our engineering team. For pricing, please contact your account manager."
+
+Any team member who provides price information is acting outside of system scope.

@@ -13,12 +13,12 @@ Design cooling infrastructure capable of supporting the IT load.
 
 ## 2 Inputs
 
-IT load  
-Ambient temperature  
+IT load (must distinguish from total facility load — see ./KB/POWER_LOAD.md)
+Ambient temperature
 Cooling water availability
 
-IT负载  
-环境温度  
+IT负载（必须与整体电力负荷区分 — 参考 ./KB/POWER_LOAD.md）
+环境温度
 水资源条件
 
 ---

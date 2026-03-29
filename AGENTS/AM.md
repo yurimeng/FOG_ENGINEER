@@ -278,12 +278,13 @@ AM 不负责：
 
 # 5 Key Outputs / 关键输出
 
-Customer Requirement Brief\
-Opportunity Summary\
-Project History Record\
-Follow‑up Reminder\
-Market Intelligence Report\
+Customer Requirement Brief
+Opportunity Summary
+Project History Record
+Follow‑up Reminder
+Market Intelligence Report
 Blog Draft
+**Formal Quotation** (AM prepares commercial quotation after engineering configuration is confirmed — engineering team does NOT provide prices)
 
 ------------------------------------------------------------------------
 

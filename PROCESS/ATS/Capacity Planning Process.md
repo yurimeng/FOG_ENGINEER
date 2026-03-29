@@ -5,9 +5,12 @@
 
 ## 1 Purpose
 
-Estimate IT load and infrastructure capacity requirements.
+**⚠️ CRITICAL: This process defines both IT load and total facility load. These are NOT the same number.**
 
-估算 IT 负载与基础设施容量需求。
+Estimate IT load and total facility load requirements.
+Reference: ./KB/POWER_LOAD.md
+
+估算 IT 负载与整体电力负荷需求。
 
 ---
 
@@ -37,17 +40,18 @@ GPU数量
 
 ## 4 Outputs
 
-IT load estimate  
-Facility power requirement  
+IT load estimate
+Total facility load estimate (IT load ÷ PUE)
 Peak power requirement
 
-IT负载估算  
-基础设施功率需求  
+IT负载估算
+整体电力负荷估算（IT负载 ÷ PUE，场地电力接入容量）
 峰值功率
 
 ---
 
 ## 5 Risks
 
-Underestimated peak power  
+Underestimated peak power
 Incorrect redundancy assumptions
+**Confusing IT load with total facility load**

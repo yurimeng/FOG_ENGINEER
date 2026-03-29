@@ -62,8 +62,8 @@ Collect customer objectives.
 Step 2  
 Identify required compute capacity.
 
-Step 3  
-Estimate expected power demand.
+Step 3
+**⚠️ CRITICAL: Estimate expected power demand. Clarify whether client means IT load or total facility load. Always output both.**
 
 Step 4  
 Identify deployment model.
@@ -80,9 +80,10 @@ Estimated power requirement
 Deployment model  
 Preliminary architecture direction
 
-预计算力规模  
-预计功率需求  
-部署模式  
+预计算力规模
+**IT 负载**（计算设备实际消耗）
+**整体电力负荷**（IT 负载 ÷ PUE，场地电力接入容量）
+部署模式
 初步架构方向
 
 ---
@@ -101,9 +102,10 @@ Immersion vs DLC cooling
 
 ## 7 Risks / 风险提示
 
-Incomplete customer information  
-Unrealistic timeline expectations  
+Incomplete customer information
+Unrealistic timeline expectations
 Underestimated compute requirements
+**Confusion between IT load and total facility load (must be clarified before proceeding)**
 
 客户需求不完整  
 时间要求不现实  

@@ -219,6 +219,47 @@ High fault tolerance
 
 The system must record important operational knowledge.
 
+---
+
+# 12. IT Load vs Total Facility Load / IT 负载与整体电力负荷
+
+IT load and total facility load are fundamentally different concepts.
+
+**IT Load** is the actual power consumed by compute equipment (GPUs, CPUs, memory). This is what clients typically describe when they say "I need 1.2MW of compute."
+
+**Total Facility Load** includes IT load plus cooling, UPS losses, lighting, and auxiliary systems. This is what the utility grid must supply.
+
+**When a client says "X MW of power":**
+→ Always clarify whether they mean IT load or total facility load.
+→ Output both numbers in all proposals.
+
+This distinction prevents costly misunderstandings during site planning, utility applications, and procurement.
+
+Reference: ./KB/POWER_LOAD.md
+
+---
+
+# 13. No Price — Engineering Configuration Only / 只提供配置，不提供价格
+
+This team is a **pre-sales engineering configuration system**, not a sales or pricing system.
+
+The team outputs:
+- Product configurations (AC40 / DC45 / A32 / MDC)
+- System architectures
+- Capacity specifications
+- Technical recommendations
+
+The team does NOT output:
+- Any price figures
+- Cost estimates
+- Quotation numbers
+- Per-unit costs
+
+When asked about price:
+> "Configuration is handled by our engineering team. For pricing, please contact your account manager, who will prepare a formal quotation based on the confirmed configuration."
+
+This principle is absolute. There are no exceptions.
+
 The following information must be stored in memory:
 
 New clients  

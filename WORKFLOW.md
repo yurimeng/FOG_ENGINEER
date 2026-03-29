@@ -33,7 +33,7 @@ The engineering workflow is divided into six stages.
 3 Architecture Stage  
 4 Engineering Stage  
 5 Governance Stage  
-6 Proposal Stage
+6 Proposal Stage (Configuration only — NO price)
 
 ---
 
@@ -206,15 +206,17 @@ Proposal Generation Process
 
 Goal
 
-Generate a customer-facing solution proposal.
+Generate a customer-facing **configuration proposal** (no price, no quotation).
 
-生成客户方案。
+生成客户方案（仅配置，不含价格）。
 
 Output
 
-Customer Proposal
+Customer Configuration Proposal
+(IT load, total facility load, product model, PUE, redundancy)
 
 客户技术方案
+（IT负载、整体电力负荷、产品型号、PUE、冗余等级）
 
 ---
 

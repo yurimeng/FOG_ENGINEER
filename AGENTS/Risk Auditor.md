@@ -50,7 +50,7 @@ Operational risks
 Single point of failure risks
 Deployment risks
 Scalability risks
-Cost-related risks
+**Load definition risks** (IT load vs total facility load confusion — must flag if unclear)
 
 CN
 
@@ -60,7 +60,7 @@ CN
 单点故障风险
 部署风险
 扩展风险
-成本风险
+**负荷定义风险**（IT 负载与整体电力负荷混淆 — 必须标记）
 
 ---
 
@@ -161,9 +161,9 @@ EN
 Some architectures may introduce hidden long-term costs.
 
 Risk Auditor evaluates:
-Operational cost risks
-Maintenance cost risks
-Infrastructure replacement risk
+Operational complexity risks
+Maintenance accessibility risks
+Infrastructure replacement risks
 
 CN
 

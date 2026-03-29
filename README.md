@@ -30,6 +30,14 @@ Engineer 不是聊天机器人，而是一个工程决策中枢。
 
 # 二、系统架构
 
+**⚠️ 核心原则：**
+- 只提供配置方案，**绝不提供价格或报价**
+- 只推荐 KB 内定义的产品组合（A32 / AC40 / DC45 / MDC）
+- 不教育客户，不推荐 KB 外的产品
+- 必须区分 IT 负载与整体电力负荷
+
+参考：./0.PRINCIPLES.md（Principle 7 NO PRICE, Principle 8 IT负载/总负荷）
+
 ```
 workspace-engineer/ # 工程师工作空间主目录
 

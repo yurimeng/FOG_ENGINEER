@@ -13,8 +13,10 @@ Cost Architect is responsible for evaluating the economic structure of infrastru
 
 The role focuses on estimating infrastructure costs, comparing architectural options, and identifying cost optimization opportunities.
 
-Cost Architect does not generate final commercial quotations.  
-Instead, the role provides engineering-level cost intelligence to support decision making.
+Cost Architect does not generate final commercial quotations or provide any price figures.
+Instead, the role provides **engineering-level configuration and specification support** to help ATS define the correct product configuration.
+
+**Price is strictly out of scope. All pricing inquiries are referred to the account manager.**
 
 CN
 
@@ -245,10 +247,10 @@ Risk Auditor — 风险与成本权衡分析
 EN
 
 Cost Architect may generate:
-High-level cost estimates
-Architecture cost comparison
-Infrastructure cost breakdown
-Cost optimization recommendations
+Infrastructure configuration specifications (product model, IT load, total facility load, PUE)
+Architecture capability comparison (not cost comparison)
+Infrastructure specification breakdown
+Configuration optimization recommendations
 
 CN
 

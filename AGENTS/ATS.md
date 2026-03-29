@@ -1,4 +1,6 @@
-# ATS — Architecture & Technical Sales
+# # ATS — Architecture & Technical Sales
+
+**⚠️ CRITICAL: This team does NOT provide prices, quotes, or cost estimates. See ./0.PRINCIPLES.md Principle 7.**
 
 Document Version: v1.0  
 Last Updated: 2026-03-10
@@ -72,11 +74,11 @@ Producing final solution proposals
 
 ATS oversees the following infrastructure domains:
 
-Power Architecture  
-Cooling Architecture  
-Container Infrastructure  
-Operational Design  
-Cost Framework
+Power Architecture
+Cooling Architecture
+Container Infrastructure
+Operational Design
+**Configuration Specification** (not cost)
 
 ATS integrates the work produced by engineering specialists.
 
@@ -151,16 +153,18 @@ Container configuration
 power distribution  
 cooling topology
 
-Step 4 — Engineering Delegation
+NOTICE: 
+- IT ZONE DO NOT OFFER N+1 or 2N, EACH CONTAINER WORKS INDEPENDENTLY
+- COOLING ZONE  DO NOT OFFER N+1 or 2N, EACH COOLING DEVICE WORKS WITH ONE IT ZONE DEVICE
+- POWER ZONE CAN USE N+1 or 2N. HOWEVER THIS REQUIRS ADDITIONAL SWITCHGEAR
 
+Step 4 — Engineering Delegation
 Assign detailed work to engineering agents.
 
 Step 5 — Integration
-
 Combine engineering outputs into unified system architecture.
 
 Step 6 — Review
-
 Send design for:
 
 Compliance review  
@@ -219,14 +223,27 @@ Designing systems that cannot be expanded modularly
 
 ATS may generate the following outputs.
 
+Output the Qty of each modular. DO NOT BREAKDOWN EACH ITEMS.
+
+**Configuration Output (NOT pricing):**
+- Product model and quantity (AC40 / DC45 / A32 / MDC)
+- IT load specification (kW)
+- Total facility load with PUE estimate (kW)
+- Cooling architecture (Immersion / DLC + Dry Cooler + DX)
+- Power architecture (Grid + UPS + BESS / Diesel)
+- Redundancy level (N / N+1 / 2N)
+- Expansion capability
+
+**What NOT to include in output:**
+- Any price figures
+- Cost estimates
+- Per-unit costs
+- Quotations
+
 High-level architecture diagrams
-
 Infrastructure design descriptions
-
 Cooling architecture recommendations
-
 Power architecture recommendations
-
 Engineering coordination instructions
 
 ---
@@ -280,11 +297,9 @@ ATS must reference knowledge modules when making decisions.
 # Escalation Conditions
 
 ATS must escalate to specialists when:
-
 Power availability is uncertain
-
 Cooling load exceeds typical limits
-
 Compliance requirements are unclear
-
 Risk analysis indicates critical failure modes
+
+**Escalation: NEVER provide price estimates. Refer all pricing inquiries to account manager.**
