@@ -12,6 +12,41 @@ Reference backup: ../KB_backup_20260329_200742
 
 # Version History
 
+## v1.2.0 — Product Information Unification (2026-03-29)
+
+### Product Files Restructured
+- PRODUCTS_AC40.md: 结构统一；UPS 型号更正为 9395XR-600；PUE 改为变量；新增 IT负载/整体电力负荷对照表
+- PRODUCTS_DC45.md: 结构统一；UPS 型号更正为 9395XR-1500；PUE 改为变量；新增 IT负载/整体电力负荷对照表
+- PRODUCTS_A32.md: 结构统一；PUE 改为变量；扩展逻辑补充完整；与 AC40/DC45 关系表
+- PRODUCTS_MDC.md: 全面重写；新增标准配置参考（Small/Medium/Large）；冗余规则明确（IT Zone 无内部 N+1）；Power/Cooling Zone 标准配置
+
+### Third-Party Products Unified
+- UPS_EATON_9395XR.md: 全面重写；同时覆盖 9395XR-600（AC40）和 9395XR-1500（DC45）；电池配置表更新
+- COOLING_SYSTEM_SOLUTION.md: 命名统一（"ACC" → "MDC Cooling Zone"）；结构统一；禁止纯干冷器规则强化
+- DRYCOOL_with_DX.md: 命名统一；结构统一
+- 3rd Party List.md: 全面重写；新增 Cooling Zone 标准配置；UPS 型号明确；供应商能力边界说明
+- POWER_SYSTEMS_SOLUTION.md: UPS 型号引用更新（9395XR-600/1500）
+
+### Reference Architecture Unified
+- EDGE_INFERENCE_IMMERSION_0.5MW.md.md: 全面重写；标准输出模板；PUE 变量化；UPS 型号明确
+- EDGE_INFERENCE_DLC_1.2MW.md.md: 全面重写；修正"DLC"非"immersion"；PUE 变量化；标准输出模板
+- REFERENCE_ARCHITECTURE.md: 全面重写；新增速查表；引用规则强化
+
+### Design Guideline Corrected
+- AC40 IT容量：360kW → 400kW
+- PUE：固定数字 → 变量（取决于环境温度）
+- 删除 "HC45"（不存在的产品名）
+- 删除"透明计算"成本估算相关内容（Principle 7）
+- 删除 ROI/TCO 讨论要求（Principle 7）
+- 强化不提供价格原则
+
+### Key Numbers Now Standardized
+| 产品 | IT容量 | UPS型号 | 电池后备 | PUE |
+|------|--------|---------|---------|-----|
+| A32 | 45–50kW | 外置 | 外置 | ~1.03–1.12 |
+| AC40 | 400kW | 9395XR-600（4×150kW）| 2×93LiG2（~10min）| ~1.08–1.20 |
+| DC45 | 1200kW | 9395XR-1500（10×150kW）| 3×93LiG2（~8min）| ~1.12–1.35 |
+
 ## v1.1.0 — Team Refactor (2026-03-29)
 
 Core principle updates:

@@ -1,7 +1,16 @@
 # Power Systems Knowledge
 
 ## 0. Power设计原则
-- IT ZONE自带UPS，提供5-8分钟切换
+- IT ZONE自带UPS，提供5–10分钟切换（UPS内置于AC40/DC45）
+
+### UPS 型号标准
+
+| IT Zone | UPS 型号 | 模块数 | 总功率 | 后备时间 |
+|---------|----------|--------|--------|---------|
+| **AC40** | EATON 9395XR-600 | 4 UPM | 600kW | ~10 分钟 |
+| **DC45** | EATON 9395XR-1500 | 10 UPM | 1500kW | ~8 分钟 |
+
+参考：./KB/3RD-PARTY/POWER/UPS_EATON_9395XR.md
 
 ### BESS 连接方式
 Grid → BESS → IT Zone → IT
@@ -13,9 +22,9 @@ Grid → ATS → IT Zone → IT
       Generator
 
 ## 1. UPS选型逻辑
-- UPS容量 ≥ IT Load / PF × 1.2
-- UPS内置于IT ZONE的设备内 （AC40或者DC45）提供一站式的不间断电服务
-- 现在采用的产品是EATON 9395XR UPS，已经具备UL认证。知识点位于: - ./KB/3RD-PARTY/POWER/UPS_EATON_9395XR.md
+- UPS容量 ≥ IT Load / PF × 1.2（已内置于AC40/DC45，无需额外选型）
+- UPS型号统一：AC40用9395XR-600，DC45用9395XR-1500
+- EATON 9395XR系列已具备UL认证
 
 ---
 

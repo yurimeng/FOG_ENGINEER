@@ -1,5 +1,5 @@
-**适用对象：ACC（Advanced Computing Cluster）标准计算单元**  
-**版本：V1.0**
+**适用对象：MDC 模块化数据中心集群（Network Zone）**
+**版本：V1.1（2026-03-29 统一命名版）**
 
 # MDC 网络系统设计说明
 

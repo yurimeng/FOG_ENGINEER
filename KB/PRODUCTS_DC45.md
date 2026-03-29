@@ -1,80 +1,118 @@
-# DC45 – PowerPod with Direct Liquid Cooling
-**适用对象：MDC（Modular Datacenter Cluster）标准计算单元 IT Zone**  
-**版本：V1.0**
+# DC45 – PowerPod with Direct Liquid Cooling (45ft)
+适用对象：MDC（Modular Datacenter Cluster）标准计算单元 IT Zone
+版本：V1.1（2026-03-29 统一结构版）
 
+---
 
 ## 1. 产品定位
 
-DC45 是 45ft 容器，
-支持 8 × 150kW DLC racks，
-适用于高性能AI算力部署。
+DC45 是 45ft 容器规格的直冷液冷（DLC）集装箱，支持 8 × 150kW DLC 机柜，适用于超大算力 AI 集群部署。
 
+标准 IT 容量为 1200kW，支持与 AC40 混合构建 MDC 集群。
 
 ---
 
 ## 2. 核心参数
 
-| 项目                  | 参数                                                |
-| ------------------- | ------------------------------------------------- |
-| IT Capacity         | 1200kW                                            |
-| DLC  Rack           | 150kW                                             |
-| DLC Rack Qty        | 8                                                 |
-| Air Cooled Rack     | 10kW                                              |
-| Air Cooled Rack Qty | 1                                                 |
-| Inlet               | 24°C                                              |
-| Operation Load      | Fan Wall ～210KW，CDU ～16kW，Chiller ～160kW          |
-| Busbar & current    | SIEMENS 1600A                                     |
-| UPS                 | EATON 9395 XR 1500 **10个UPM，功率1200kw**， 发热量46.9kW |
-| Battery             | 3个93i机柜，332kW/个，共提供8min备用电                        |
-| Major CDU           | 1.2 MW Rack CDU                                   |
-| Backup CDU          | 150KW in-Rack CDU （optional）                      |
+| 项目 | 参数 |
+|------|------|
+| IT 容量 | **1200kW** |
+| DLC 机柜 | 150kW |
+| DLC 机柜数量 | 8 |
+| 风冷机柜 | 10kW × 1 |
+| 服务器进口温度 | 24°C |
+| Busbar 规格 | SIEMENS 1600A |
+| UPS | EATON **9395XR-1500**，10 个功率模块（每模块 150kW），总功率 **1500kW**，发热量约 46.9kW |
+| 电池 | 3 个 93LiG2 机柜，每柜 332kW，共提供 **8 分钟**后备时间 |
+| 主 CDU | 1.2MW Rack CDU |
+| 备用 CDU | 150kW In-Rack CDU（可选） |
+| 功率因数 | 0.9（UPS 输出侧） |
+
+> **注：** 9395XR-1500 中的"1500"= 10 × 150kW 模块，与 AC40 使用的 9395XR-600（4 模块）属同一产品系列。
 
 ---
 
-## 3. 机柜详情
-- 48 U
-- 侧置Manifold
-- 后置PDU
+## 3. IT负载 vs 整体电力负荷
 
-## 4. 冷却
-
-### DLC冷却部分
-
-- Dry cooler + DX
-- 或 Heat Pump
-
-不允许纯干冷器。
-
-### 风冷部分
-- 必须配置风墙模块。
-- 3个风墙模组，2+1 工作方式。单个功率70kW
-- 风墙模组带压缩机，可加热和制冷，确保温度控制在18-25摄氏度
+| 项目 | 数值 | 说明 |
+|------|------|------|
+| **IT 负载** | 1200kW | 服务器、GPU 实际消耗 |
+| **整体电力负荷** | ~1380–1560kW | 取决于 PUE（PUE 约 1.15–1.30，DX 全开时更高）|
+| PUE 设计值 | **取决于环境温度**：<br>• 低温区（干冷器优先）：~1.12–1.15<br>• 高温区（DX 主导）：~1.25–1.35 | 不写固定数字 |
 
 ---
 
-## 4. 电力路径
+## 4. 机柜详情
 
-Input → PDC → UPS → PDC → Busbar → Tap-off Unit (TOU with MCCB) → DLC racks → PDU
+- 48U 标准机柜
+- 侧置 Manifold（液冷歧管）
+- 后置 PDU
+- 机柜深度 1200mm，宽度 800mm
+- 机柜后门离集装箱墙 350mm
+- 前门保留足够运维空间
+- 机柜底部 350–400mm 管路，配电区域无地板架高
 
 ---
 
-## 5. 水路冗余
+## 5. 冷却架构
 
-- DC45包含1个1.2MW CDU
-- 可在机柜内选配150KW的inRack CDU
+### 5.1 DLC 冷却部分
+
+| 项目 | 参数 |
+|------|------|
+| 冷却方式 | Direct Liquid Cooling（冷板式液冷） |
+| 服务器进口温度 | 24°C |
+| CDU 配置 | 主 CDU 1.2MW Rack CDU × 1 + 可选 150kW In-Rack CDU |
+| 散热方式 | **干冷器 + DX** 或 **热泵** |
+| **禁止** | 纯干冷器（无 DX）— 环境 >28°C 时无法满足散热需求 |
+
+### 5.2 风墙冷却部分
+
+| 项目 | 参数 |
+|------|------|
+| 风墙模组数量 | 3 个（2+1 工作方式） |
+| 单模组能力 | 70kW |
+| 总风冷能力 | 210kW |
+| 出风温度 | 18–25°C（压缩机可加热/制冷） |
+| 风墙模组 | 带压缩机，可加热和制冷，确保 18–25°C 温度控制 |
+
+### 5.3 水路冗余
+
 - 2N 系统
+- DC45 包含 1 个 1.2MW CDU
+- 可在机柜内选配 150kW In-Rack CDU
 
 ---
 
-## 6. 布局
+## 6. 电力路径
 
-- 机柜采用深度1200，宽度800
-- 机柜后门离集装箱墙350
-- 前门保留足够空间运维
-- 机柜底部350～400管路，配电区域无地板架高
+```
+Grid / BESS → PDC → UPS (EATON 9395XR-1500) → PDC → Busbar
+    → Tap-off Unit (TOU，带 MCCB) → DLC Racks → PDU
+```
+
+说明：
+- UPS 内置于 DC45，提供 8 分钟后备
+- Busbar 采用 SIEMENS 1600A 封闭式母线
+- TOU 每路 250A 为单机柜供电
+- BESS 连接方式：Grid → BESS → DC45（Power Zone 负责）
 
 ---
 
 ## 7. 扩展逻辑
 
-可与AC40混合构建MDC。
+- 可与 AC40 混合构建 MDC
+- 支持横向扩展（增加 DC45 数量）
+- 支持纵向扩展（单柜功率密度提升，但需重新评估 CDU 容量）
+
+---
+
+## 8. UPS 型号说明
+
+| 产品 | UPS 型号 | 模块数 | 每模块 | 总 UPS 功率 | 发热量 |
+|------|----------|--------|--------|-----------|--------|
+| **AC40** | EATON 9395XR-600 | 4 UPM | 150kW | 600kW | ~7.9kW |
+| **DC45** | EATON 9395XR-1500 | 10 UPM | 150kW | 1500kW | ~46.9kW |
+
+电池型号均为 **EATON 93LiG2**（93Li92S-100Ah-3PBFA，332kW/柜）。
+参考：./KB/3RD-PARTY/POWER/UPS_EATON_9395XR.md

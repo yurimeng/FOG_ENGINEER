@@ -1,62 +1,173 @@
 # MDC – Modular Datacenter Cluster
-**标准计算单元**  
-**版本：V1.0**
-
-
-## 1. 定义
-
-MDC 是由多个模块组成的模块化数据中心。其中：
-
-### 组成结构
-- IT Zone
-- Cooling Zone
-- Power Zone
-
-### 细化及参考
--IT ZONE： 算力单元，提供服务器容纳，UPS
-	[[PRODUCTS_AC40]]: - ./KB/PRODUCTS_AC40.md
-	[[PRODUCTS_DC45]]: - ./KB/PRODUCTS_DC45.md
-	[[PRODUCTS_NETWORK]]: ./KB/3RD-PARTY/NETWORK/PRODUCTS_NETWORK.md
-	[[UPS_EATON_9395XR]]：./KB/3RD-PARTY/POWER/UPS_EATON_9395XR.md
-	[[AC40_NETWORK_CONF.pdf]] : AC40内部组网
--Cooling Zone：外制冷，为IT Zone内服务器提供额外的散热能力
-	- ./KB/3RD-PARTY/COOLING/COOLING_SYSTEM_SOLUTION.md
-	- ./KB/3RD-PARTY/COOLING/DRYCOOL_with_DX.md
--Power Zone：后备电源系统，在FOG COMPUTING中由BESS替换掉传统的柴油发电机系统
-	- ./PROCESS/ATS/POWER_SYSTEMS
+模块化数据中心集群标准组合参考
+版本：V1.1（2026-03-29 统一结构版）
 
 ---
 
-## 2. 最小节点
+## 1. MDC 定义
 
-| 等级     | 容量     | 冷却方式 | 典型配置            | 使用场景       |
-| ------ | ------ | ---- | --------------- | ---------- |
-| Single | 0.5MW  | 浸没液冷 | 64*RTX Pro 6000 | 边缘推理       |
-| Small  | 1.2 MW | DLC  | 64*B300         | 边缘推理/模型再训练 |
+MDC（Modular Datacenter Cluster）是由多个模块组成的模块化数据中心。
+每个 MDC 由三个 Zone 组成：
 
-
----
-
-## 3. 设计原则
-
-- 模块独立
-- 并联扩展
-- 分区消防
-- 冗余供电
+| Zone | 中文名 | 描述 |
+|------|--------|------|
+| **IT Zone** | 算力单元区 | 提供服务器容纳和 UPS，由 AC40 / DC45 组成 |
+| **Cooling Zone** | 冷却单元区 | 外制冷，为 IT Zone 内服务器提供散热能力 |
+| **Power Zone** | 电力单元区 | 后备电源系统，由 BESS 或柴油发电机提供 |
 
 ---
 
-## 4. 并网逻辑
+## 2. 架构图
 
-支持：
-- 并网模式
-- 孤岛模式
-- BESS调节
+```
+Transformer → Switchgear → [Power Zone: BESS / Generator]
+                          ↓
+                    [IT Zone: AC40 / DC45]
+                      ├── PDC → UPS → CDU → Tanks/Racks
+                      ↓
+              [Cooling Zone: Dry Cooler + DX]
+```
 
 ---
 
-## 5. Power Flow
+## 3. IT Zone 产品对照
 
-参考MDC Power Flow.png
+| 产品 | 规格 | IT 容量 | 冷却类型 | UPS 型号 | 电池后备 |
+|------|------|---------|----------|----------|----------|
+| **A32** | 单柜 | 45–50kW | 浸没式 | 外置（不含）| 外置 |
+| **AC40** | 40ft 集装箱 | 400kW | 浸没式 | 9395XR-600 | 2×93LiG2（10min）|
+| **DC45** | 45ft 集装箱 | 1200kW | DLC | 9395XR-1500 | 3×93LiG2（8min）|
 
-![[MDC Power Flow.png]]
+参考：
+- AC40 详细规格：./KB/PRODUCTS_AC40.md
+- DC45 详细规格：./KB/PRODUCTS_DC45.md
+- A32 详细规格：./KB/PRODUCTS_A32.md
+
+---
+
+## 4. 最小节点规格
+
+| 等级 | IT 容量 | 典型配置 | 冷却方式 | 使用场景 |
+|------|---------|---------|----------|----------|
+| **Single** | 0.5MW | 8×AC40 或 ~10×DC45 | 浸没式 | 边缘推理 |
+| **Small** | 1.2MW | ~3×DC45 或 ~3×AC40 | DLC / 浸没式 | 边缘推理 / 模型再训练 |
+| **Medium** | 2–3MW | DC45 + AC40 混合 | 混合 | 区域级边缘节点 |
+| **Large** | 5MW+ | 多个 MDC 并联 | 按需组合 | 数据中心级部署 |
+
+---
+
+## 5. 标准配置参考（团队引用标准）
+
+> ⚠️ 以下为标准组合推荐。实际配置根据客户需求由 ATS 确认。
+
+### 5.1 小规模边缘推理（0.5–1MW）
+
+| 项目 | 配置 |
+|------|------|
+| 推荐产品 | AC40 |
+| 数量 | 1–2 台 |
+| IT 容量 | 400–800kW |
+| 冷却 | 浸没式（干冷 + DX）|
+| 电力 | Grid + UPS + BESS（推荐）/ 柴油发电机 |
+| 冗余 | IT Zone 独立运行；Power Zone 可选 N+1 |
+
+### 5.2 中等规模推理/训练（1–3MW）
+
+| 项目 | 配置 |
+|------|------|
+| 推荐产品 | DC45 或 AC40+DC45 混合 |
+| 数量 | 1–3 台 DC45，或混合组合 |
+| IT 容量 | 1200–3600kW |
+| 冷却 | DLC（干冷 + DX）|
+| 电力 | Grid + UPS + BESS（推荐）|
+| 冗余 | N+1（Power Zone 可升级 2N）|
+
+### 5.3 大规模集群（3MW+）
+
+| 项目 | 配置 |
+|------|------|
+| 推荐产品 | 多台 DC45 + AC40 组合 |
+| 扩展方式 | 横向并联（增加集装箱数量）|
+| IT 容量 | 3MW+ |
+| 冷却 | 按集装箱类型独立配置 |
+| 电力 | Grid + UPS + BESS（Power Zone N+1/2N）|
+
+---
+
+## 6. 冷却 Zone 配置标准
+
+> 冷却 Zone 与 IT Zone **一对一配置**，每个 IT Zone 集装箱配置一套独立冷却设备。
+
+| IT Zone | 冷却 Zone 配置 | 散热方式 |
+|---------|---------------|----------|
+| AC40（浸没式）| 干冷器 + DX（强制）| 每台 AC40 独立配置 |
+| DC45（DLC）| 干冷器 + DX（强制）| 每台 DC45 独立配置 |
+
+> ⚠️ **规则：不允许纯干冷器方案。** 无论 AC40 或 DC45，必须配置 DX 辅助系统，确保环境温度 >28°C 时的散热能力。
+
+参考：./KB/3RD-PARTY/COOLING/COOLING_SYSTEM_SOLUTION.md
+
+---
+
+## 7. 电力 Zone 配置标准
+
+| 架构 | 适用场景 | 特点 |
+|------|---------|------|
+| **Grid + UPS + BESS**（推荐）| 城市边缘 / 高 ESG 要求 / 电网不稳定 | 毫秒切换、稳压、模块化 |
+| **Grid + UPS + 柴油发电机** | 偏远地区 / 长时备电需求（>8h）| 机械发电、长时间运行 |
+| **Grid + UPS + BESS + 小型柴油** | 极端高可靠性需求 | BESS 覆盖瞬态 + 柴油兜底 |
+
+> 参考：./KB/3RD-PARTY/POWER/POWER_SYSTEMS_SOLUTION.md
+
+---
+
+## 8. 冗余设计规则
+
+| Zone | 可选冗余 | 说明 |
+|------|---------|------|
+| **IT Zone** | **无内部冗余** | 每个容器独立运行；多容器之间可提供系统级 N+1/2N |
+| **Cooling Zone** | **无内部冗余** | 每台冷却设备一对一服务对应 IT Zone；多套冷却设备之间无冗余共享 |
+| **Power Zone** | **N+1 / 2N 可选** | 需要额外的 Switchgear 配置（成本增加）|
+
+> ⚠️ **重要：** IT Zone 和 Cooling Zone 不提供 N+1 或 2N 冗余。每个容器/设备独立工作。如客户需要更高冗余，通过增加整个集装箱数量实现。
+
+参考：./AGENTS/ATS.md（Architecture Workflow, Step 3）
+
+---
+
+## 9. 网络 Zone 配置
+
+网络设备由外部集成商提供（如"引澜"等），MDC 提供标准机柜空间和电源接口。
+
+参考：./KB/3RD-PARTY/NETWORK/PRODUCTS_NETWORK.md
+
+---
+
+## 10. 设计原则
+
+- **模块独立**：每个集装箱独立配置、独立运行
+- **并联扩展**：通过增加集装箱数量实现容量扩展
+- **分区消防**：每个集装箱独立消防系统
+- **冗余供电**：UPS 内置于 IT Zone，BESS/发电机为 Power Zone
+
+---
+
+## 11. Power Flow
+
+```
+Grid Utility
+    ↓
+Transformer
+    ↓
+Switchgear / Breaker
+    ↓
+[BESS] ← 可选，Grid 不稳定或需要削峰时配置
+    ↓
+AC40 / DC45 IT Zone
+    ├── PDC
+    ├── UPS (EATON 9395XR)
+    ├── CDU / 风墙
+    └── 服务器负载
+    ↓
+Cooling Zone (Dry Cooler + DX)
+```

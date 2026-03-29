@@ -23,30 +23,35 @@ KNOWLEDGE_BASE > PROCESS > TOOLS > Memory
 
 当需要结构化输出时，必须读取对应工具文件：
 
-- 报价生成 → ./TOOLS/QUOTE_ENGINE.md
+- 配置生成 → ./PROCESS/ATS/Proposal Generation Process.md
 - CAD逻辑 → ./TOOLS/CAD_GUIDELINES.md
 - 客户管理 → ./TOOLS/NOTION_WORKFLOW.md
-- 跟进规则 → ./TOOLS/FOLLOWUP_RULES.md
+- ⚠️ 报价生成 → **仅供 AM（商务团队）使用，Engineering Agent 禁止访问 ./TOOLS/QUOTE_ENGINE.md**
 
 ---
 
-## 2. 报价输出规范
+## 2. 配置输出规范（Engineering Agent 使用）
 
 调用：
 
-./TOOLS/QUOTE_ENGINE.md
+./PROCESS/ATS/Proposal Generation Process.md
+
+**⚠️ Engineering Agent 禁止访问 ./TOOLS/QUOTE_ENGINE.md（仅供商务团队）。**
 
 输出必须包括：
 
 - 项目名称
 - 地点
-- 配置
-- 冗余结构
-- 冷却方案
+- **产品型号与数量**（A32 / AC40 / DC45）
+- **IT 负载（kW）**
+- **整体电力负荷（kW）**
+- PUE 参考范围
+- 冗余结构（N / N+1 / 2N）
+- 冷却方案（Immersion / DLC + Dry Cooler + DX）
 - 交付周期
-- EXW
-- FOB
-- CIF
+
+**禁止输出：价格、成本、报价。**
+
 
 ---
 
@@ -77,7 +82,7 @@ KNOWLEDGE_BASE > PROCESS > TOOLS > Memory
 - 客户编号
 - 项目编号
 - 技术需求摘要
-- 报价版本
+- **配置版本**（不是报价版本）
 - 风险标记
 - 下次跟进时间
 
@@ -85,14 +90,10 @@ KNOWLEDGE_BASE > PROCESS > TOOLS > Memory
 
 ## 5. 自动提醒规则
 
-调用：
+跟进提醒规则由 AM 负责，具体逻辑参见：
 
-./TOOLS/FOLLOWUP_RULES.md
+./AGENTS/AM.md（Section 3.6 Project Follow-up Monitoring）
 
-逻辑：
-
-if last_contact > 14 days:
-    提醒 Yuri
 
 ---
 
@@ -113,9 +114,9 @@ if last_contact > 14 days:
 
 必须写入：
 
-./memory/
+./Projects/[项目名]/Project_Record.md
 
 - 客户创建
-- 新报价
+- **新配置版本**（不是报价）
 - 新设计决策
 - 重大风险
