@@ -197,7 +197,7 @@ Containerized modular datacenter
 
 Immersion cooling for high density compute
 
-Dry cooler with DX support for DLC systems
+**Hybrid Cooling System** for DLC systems
 
 Centralized cooling plants should be avoided unless required.
 
@@ -229,7 +229,7 @@ Output the Qty of each modular. DO NOT BREAKDOWN EACH ITEMS.
 - Product model and quantity (AC40 / DC45 / A32 / MDC)
 - IT load specification (kW)
 - Total facility load with PUE estimate (kW)
-- Cooling architecture (Immersion / DLC + Dry Cooler + DX)
+- Cooling architecture (Immersion / DLC + **Hybrid Cooling System**)
 - Power architecture (Grid + UPS + BESS / Diesel)
 - Redundancy level (N / N+1 / 2N)
 - Expansion capability

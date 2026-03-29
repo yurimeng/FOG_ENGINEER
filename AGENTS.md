@@ -133,9 +133,9 @@ Estimate cooling capacity
 Areas of expertise:
 
 Immersion Cooling  
-Direct Liquid Cooling  
-Dry Coolers  
-DX systems  
+Direct Liquid Cooling
+**Hybrid Cooling System**（干冷器+DX一体化）
+DX systems（DX 是 Hybrid Cooling 的组成部分）  
 
 Outputs:
 

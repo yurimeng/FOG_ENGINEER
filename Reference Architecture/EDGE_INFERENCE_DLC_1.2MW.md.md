@@ -15,8 +15,8 @@ Last Updated: 2026-03-29
 | IT 容量 | **1.2MW（1200kW）** |
 | 产品形态 | 1× DC45 集装箱 |
 | 冷却技术 | Direct Liquid Cooling（直冷液冷 DLC）|
-| 散热方式 | 干冷器 + DX + 风墙 |
-| 部署周期 | 75–90 天 |
+| 散热方式 | **Hybrid Cooling System**（干冷器+DX一体化）+ 风墙 |
+| 交付周期 | 约 195–305 天（含制造、海运、部署）|
 
 ---
 
@@ -84,7 +84,7 @@ Grid / BESS → PDC → UPS（9395XR-1500）→ PDC → Busbar（1600A）
 ## 6. 液冷系统架构
 
 ```
-Dry Cooler + DX
+Hybrid Cooling System
         ↓
 Primary CDU（1.2MW）← DC45 内置
         ↓
@@ -113,7 +113,7 @@ GPU Server（冷板）
 
 | 项目 | 配置 |
 |------|------|
-| 散热方式 | **干冷器 + DX**（必须）|
+| 散热方式 | **Hybrid Cooling System**（必须）|
 | 主 CDU | 1.2MW Rack CDU |
 | 环境 >28°C | DX 强制启动 |
 | 禁止 | 纯干冷器 |
@@ -122,15 +122,16 @@ GPU Server（冷板）
 
 ---
 
-## 9. 冗余策略
+## 9. 冗余说明
 
-| 系统 | 冗余级别 | 说明 |
-|------|---------|------|
-| UPS | 内部 N+1（10 模块）| 单模块故障不影响运行 |
-| CDU | 2N（Rack CDU 可选 1+1）| 完全冗余 |
-| 风墙 | 2+1（3 台中 2 台工作）| 单台风墙故障不影响运行 |
-| IT Zone | 独立运行 | 单台 DC45 无内部 N+1；多台 DC45 提供系统级冗余 |
-| Power Zone | 可选 N+1/2N | 需要额外 Switchgear |
+| 层级 | 冗余描述 |
+|------|---------|
+| **UPS 模块** | 9395XR-1500 内置 10 个功率模块，内部 N+1（单模块故障不影响运行）|
+| **CDU** | 主 CDU + 可选 In-Rack CDU（可选 1+1 配置）|
+| **风墙** | 3 台中 2+1 工作（单台风墙故障不影响运行）|
+| **IT Zone（DC45）** | **无内部冗余** — 单台 DC45 独立运行 |
+| **MDC 系统级** | 多台 DC45 并联 → 系统级冗余（由集装箱数量决定）|
+| **Power Zone** | 可选 N+1/2N | 需要额外 Switchgear |
 
 ---
 
@@ -138,9 +139,9 @@ GPU Server（冷板）
 
 | 环境条件 | 运行模式 | PUE 参考值 |
 |----------|---------|-----------|
-| 环境 <28°C | 干冷器优先 | ~1.12–1.15 |
-| 环境 28–35°C | 干冷器 + DX + 风墙 | ~1.20–1.28 |
-| 环境 >35°C | DX 主导 + 风墙 | ~1.28–1.35 |
+| 环境 <28°C | Hybrid Cooling（干冷优先）| ~1.12–1.15 |
+| 环境 28–35°C | Hybrid Cooling（DX介入）+ 风墙 | ~1.20–1.28 |
+| 环境 >35°C | Hybrid Cooling（DX主导）+ 风墙 | ~1.28–1.35 |
 
 ---
 
@@ -154,10 +155,10 @@ Reference Architecture — 1.2MW DLC AI Inference Unit
 IT Load:       1200kW（1×DC45）
 Total Load:    ~1380–1560kW（PUE≈1.15–1.30）
 Product:       DC45（DLC Container，45ft）
-Cooling:       DLC + Dry Cooler + DX + Air Wall
+Cooling:       DLC + Hybrid Cooling System + Air Wall
 Power:         Grid + UPS（9395XR-1500）+ BESS（可选）
-Redundancy:    UPS N+1 / CDU 2N / 风墙 2+1
-Deployment:    75–90 days
+Redundancy:    UPS 模块 N+1 / 风墙 2+1（**IT Zone 本身无内部冗余**）
+Delivery:      约 195–305 天（制造90-180d + 海运45-50d + 部署30-45d）
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```

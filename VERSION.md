@@ -12,6 +12,23 @@ Reference backup: ../KB_backup_20260329_200742
 
 # Version History
 
+## v1.3.0 — Critical Corrections Round 4 (2026-03-29)
+
+### IT Zone Redundancy — Fatal Error Fixed
+- AC40/DC45 作为容器**无内部冗余设计**，不能通过增加服务器实现冗余
+- UPS 模块内部 N+1（单模块故障不影响运行）≠ IT Zone 级别冗余
+- IT Zone 冗余通过增加集装箱数量实现（系统级冗余）
+- 涉及文件：PRODUCTS_AC40.md, PRODUCTS_DC45.md, PRODUCTS_MDC.md, Reference Architecture (both), DESIGN_GUIDELINE.md
+
+### Cooling Naming — Hybrid Cooling System 统一命名
+- "干冷器 + DX"（两个独立设备）→ "**Hybrid Cooling System**"（一个集成设备）
+- 涉及文件：所有包含冷却描述的文件
+
+### 交付周期 — 错误数字修正
+- 错误：75-90天
+- 正确：约195-305天（30天合同+90-180天制造+45-50天海运+30-45天部署）
+- 涉及文件：USER.md, Reference Architecture (both)
+
 ## v1.2.0 — Product Information Unification (2026-03-29)
 
 ### Product Files Restructured

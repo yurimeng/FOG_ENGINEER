@@ -43,16 +43,16 @@
 
 ---
 
-## 4. 干冷器 + DX 系统参数（标准配置）
+## 4. Hybrid Cooling System 系统参数（标准配置）
 
 ### 4.1 系统架构
 
 ```
-Dry Cooler（干冷器）
+**Hybrid Cooling System**（干冷器+DX一体化）
         ↓
 Primary Heat Exchanger
         ↓
-DX System（直接蒸发制冷）← 高温时自动启动
+DX System（直接蒸发制冷）← 高温时自动启动（≥28°C）
         ↓
 Secondary Heat Exchanger
         ↓
@@ -99,9 +99,9 @@ IT Zone（AC40/DC45）
 
 | IT Zone | IT 容量 | 冷却需求 | 散热方式 |
 |---------|---------|---------|---------|
-| A32（单柜）| 45–50kW | ~48–56kW（含 CDU）| 干冷器+DX（独立配置）|
-| AC40（40ft）| 400kW | ~440–480kW（含 CDU + DX）| 干冷器+DX（每台 AC40 独立）|
-| DC45（45ft）| 1200kW | ~1380–1560kW（含 CDU + 风墙 + DX）| 干冷器+DX（每台 DC45 独立）|
+| A32（单柜）| 45–50kW | ~48–56kW（含 CDU）| **Hybrid Cooling System**（独立配置）|
+| AC40（40ft）| 400kW | ~440–480kW（含 CDU + DX）| **Hybrid Cooling System**（每台 AC40 独立）|
+| DC45（45ft）| 1200kW | ~1380–1560kW（含 CDU + 风墙 + DX）| **Hybrid Cooling System**（每台 DC45 独立）|
 
 ---
 

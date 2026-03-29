@@ -26,10 +26,10 @@
 ```
 IT Load:        500kW（1×AC40）
 Total Load:     ~540–600kW
-Cooling:        Immersion + Dry Cooler + DX
+Cooling:        Immersion + **Hybrid Cooling System**
 Power:          Grid + UPS（EATON 9395XR-600）+ BESS
-Redundancy:     UPS N+1 / CDU 2N
-Deployment:     75–90 days
+Redundancy:     UPS 模块 N+1 / CDU 1+1（**IT Zone 本身无内部冗余**）
+Delivery:       约 195–305 天（制造90-180d + 海运45-50d + 部署30-45d）
 ```
 
 **特征：** 浸没式液冷，PUE 极低（低温区 ~1.08），适合 GPU 推理
@@ -45,10 +45,10 @@ Deployment:     75–90 days
 ```
 IT Load:        1200kW（1×DC45）
 Total Load:     ~1380–1560kW
-Cooling:        DLC + Dry Cooler + DX + Air Wall
+Cooling:        DLC + **Hybrid Cooling System** + Air Wall
 Power:          Grid + UPS（EATON 9395XR-1500）+ BESS
-Redundancy:     UPS N+1 / CDU 2N / 风墙 2+1
-Deployment:     75–90 days
+Redundancy:     UPS 模块 N+1 / 风墙 2+1（**IT Zone 本身无内部冗余**）
+Delivery:       约 195–305 天（制造90-180d + 海运45-50d + 部署30-45d）
 ```
 
 **特征：** 直冷液冷，高密度 DLC，适合 GPU 推理/训练

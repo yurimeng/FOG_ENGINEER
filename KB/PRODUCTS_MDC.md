@@ -25,7 +25,7 @@ Transformer → Switchgear → [Power Zone: BESS / Generator]
                     [IT Zone: AC40 / DC45]
                       ├── PDC → UPS → CDU → Tanks/Racks
                       ↓
-              [Cooling Zone: Dry Cooler + DX]
+              [Cooling Zone: Hybrid Cooling System（干冷器+DX一体化）]
 ```
 
 ---
@@ -100,10 +100,10 @@ Transformer → Switchgear → [Power Zone: BESS / Generator]
 
 | IT Zone | 冷却 Zone 配置 | 散热方式 |
 |---------|---------------|----------|
-| AC40（浸没式）| 干冷器 + DX（强制）| 每台 AC40 独立配置 |
-| DC45（DLC）| 干冷器 + DX（强制）| 每台 DC45 独立配置 |
+| AC40（浸没式）| **Hybrid Cooling System**（干冷器+DX一体化）| 每台 AC40 独立配置 |
+| DC45（DLC）| **Hybrid Cooling System**（干冷器+DX一体化）| 每台 DC45 独立配置 |
 
-> ⚠️ **规则：不允许纯干冷器方案。** 无论 AC40 或 DC45，必须配置 DX 辅助系统，确保环境温度 >28°C 时的散热能力。
+> ⚠️ **规则：不允许纯干冷器方案。** 无论 AC40 或 DC45，必须配置 Hybrid Cooling System（干冷器+DX一体化设备），确保环境温度 >28°C 时的散热能力。
 
 参考：./KB/3RD-PARTY/COOLING/COOLING_SYSTEM_SOLUTION.md
 
@@ -130,12 +130,32 @@ Transformer → Switchgear → [Power Zone: BESS / Generator]
 | **Power Zone** | **N+1 / 2N 可选** | 需要额外的 Switchgear 配置（成本增加）|
 
 > ⚠️ **重要：** IT Zone 和 Cooling Zone 不提供 N+1 或 2N 冗余。每个容器/设备独立工作。如客户需要更高冗余，通过增加整个集装箱数量实现。
+>
+> **UPS 模块内部 N+1：** AC40/DC45 内置 UPS 模块（9395XR-600/1500）支持单模块故障不影响运行，但这不是 IT Zone 级别的冗余设计。
 
 参考：./AGENTS/ATS.md（Architecture Workflow, Step 3）
 
 ---
 
-## 9. 网络 Zone 配置
+## 9. 交付周期
+
+| 阶段 | 周期 | 说明 |
+|------|------|------|
+| 合同签署 + 预付款 | **30 天** | 合同签订后需支付预付款 |
+| 制造（因量而定）| **90–180 天** | 集装箱数量越多，制造周期越长 |
+| 海运 | **45–50 天** | 中国→北美主要港口参考时间 |
+| 现场部署 | **30–45 天** | 场地准备、集装箱就位、系统调试 |
+| **总周期（参考）** | **约 195–305 天** | 实际周期取决于项目规模 |
+
+> ⚠️ **以上为单个集装箱单元参考周期。** MDC 集群（多台集装箱）因可并行制造，实际总周期与单台接近。详细周期需根据具体项目规模确认。
+
+---
+
+## 10. 网络 Zone 配置
+
+---
+
+## 11. 网络 Zone 配置
 
 网络设备由外部集成商提供（如"引澜"等），MDC 提供标准机柜空间和电源接口。
 
@@ -143,7 +163,7 @@ Transformer → Switchgear → [Power Zone: BESS / Generator]
 
 ---
 
-## 10. 设计原则
+## 12. 设计原则
 
 - **模块独立**：每个集装箱独立配置、独立运行
 - **并联扩展**：通过增加集装箱数量实现容量扩展
@@ -169,5 +189,5 @@ AC40 / DC45 IT Zone
     ├── CDU / 风墙
     └── 服务器负载
     ↓
-Cooling Zone (Dry Cooler + DX)
+Cooling Zone (Hybrid Cooling System)
 ```

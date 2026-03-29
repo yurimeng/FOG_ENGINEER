@@ -55,8 +55,8 @@ Deployment constraints summary
 
 ## 5 Key Decisions
 
-Dry cooler vs cooling tower  
-DX support requirement  
+**Hybrid Cooling System** vs 冷却塔
+**Hybrid Cooling System**配置要求（环境≥28°C时DX强制启动）
 Container vs building
 
 ---

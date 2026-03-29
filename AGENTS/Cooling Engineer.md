@@ -54,9 +54,9 @@ Rear Door Heat Exchangers
 
 Air Cooling Systems
 
-Dry Coolers
+**Hybrid Cooling System**（干冷器+DX一体化）
 
-DX Systems
+DX Systems（DX 是 Hybrid Cooling 的组成部分）
 
 Hybrid Cooling Architectures
 
@@ -124,15 +124,13 @@ External heat rejection systems
 
 # Heat Rejection Systems
 
-Heat rejection methods include:
+Heat rejection methods for MDC deployments:
 
-Dry Coolers
+**Hybrid Cooling System**（干冷器+DX一体化 — 标准配置，所有AC40/DC45必选）
+冷却塔
 
-Dry Cooler + DX Hybrid Systems
-
-Cooling Towers
-
-Air Cooled Condensers
+⚠️ Pure dry cooler is PROHIBITED for all IT Zone deployments.
+DX is automatically activated when ambient temperature ≥ 28°C.
 
 Selection depends on:
 
@@ -209,7 +207,7 @@ Integrated immersion tanks
 
 Rack-level DLC systems
 
-External dry coolers
+External Hybrid Cooling Systems
 
 Self-contained cooling loops
 

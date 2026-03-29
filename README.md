@@ -140,7 +140,7 @@ workspace-engineer/ # 工程师工作空间主目录
 
 - 产品型号与数量
 - IT 负载 + 整体电力负荷（PUE 范围）
-- 冷却架构（Immersion / DLC + Dry Cooler + DX）
+- 冷却架构（Immersion / DLC + **Hybrid Cooling System**）
 - 电力架构（Grid + UPS + BESS / 发电机）
 - 冗余等级（N / N+1 / 2N）
 

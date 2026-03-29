@@ -141,31 +141,27 @@ Grid + UPS + BESS
 
 Primary Options:
 
-Dry Cooler  
-Cooling Tower  
-DX Cooling  
-Hybrid Cooling
+**Hybrid Cooling System**（干冷器+DX一体化）
+Cooling Tower
 
 主要选项：
 
-干冷器  
-冷却塔  
-DX制冷  
-混合方案
+**Hybrid Cooling System**（干冷器+DX一体化）
+冷却塔
 
 Decision Rules:
 
-IF ambient temperature < 28°C  
-→ Dry cooler preferred
+IF using AC40 / DC45 / MDC
+→ **Hybrid Cooling System** is mandatory (禁止纯干冷器)
+→ DX activates automatically when ambient ≥ 28°C
 
-IF water availability is high  
+IF water availability is high
 → Cooling tower viable
 
-IF ambient temperature extremely high  
-→ Add DX support
-
-IF noise restrictions exist  
+IF noise restrictions exist
 → Avoid large cooling towers
+
+⚠️ Pure dry cooler is PROHIBITED for all IT Zone deployments.
 
 ---
 
@@ -270,7 +266,7 @@ Grid + UPS + BESS
 
 Cooling
 
-Dry cooler with optional DX
+**Hybrid Cooling System**（干冷器+DX一体化，DX在≥28°C时自动启动）
 
 Infrastructure
 

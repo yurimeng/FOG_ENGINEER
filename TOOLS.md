@@ -47,7 +47,7 @@ KNOWLEDGE_BASE > PROCESS > TOOLS > Memory
 - **整体电力负荷（kW）**
 - PUE 参考范围
 - 冗余结构（N / N+1 / 2N）
-- 冷却方案（Immersion / DLC + Dry Cooler + DX）
+- 冷却方案（Immersion / DLC + **Hybrid Cooling System**）
 - 交付周期
 
 **禁止输出：价格、成本、报价。**

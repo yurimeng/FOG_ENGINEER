@@ -53,11 +53,11 @@ Grid → Transformer → Switchgear → PDC → UPS → IT
 
 Immersion:
 
-Tank → CDU → Manifold → Dry Cooler / DX
+Tank → CDU → Manifold → **Hybrid Cooling System**
 
 DLC:
 
-Rack → CDU → Chiller → Dry Cooler
+Rack → CDU → **Hybrid Cooling System**
 
 必须说明：
 

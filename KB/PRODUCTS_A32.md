@@ -50,7 +50,7 @@ A32 是 32RU OU-compatible 浸没式液冷单机柜，单柜 IT 负载 45–50kW
 ### 5.1 热力路径
 
 ```
-IT Load → Dielectric Fluid → Heat Exchanger → CDU → Dry Cooler / DX
+IT Load → Dielectric Fluid → Heat Exchanger → CDU → **Hybrid Cooling System**
 ```
 
 ### 5.2 散热选型规则
@@ -68,7 +68,7 @@ IT Load → Dielectric Fluid → Heat Exchanger → CDU → Dry Cooler / DX
 |------|------|----------|
 | 单 CDU 故障 | 无影响（2N 冗余） | 低 |
 | 双 CDU 故障 | 停机 | 高 |
-| Dry Cooler 失效 | 温度升高（DX 兜底） | 中 |
+| **Hybrid Cooling System** 失效 | 温度升高（DX 兜底） | 中 |
 | Pump 失效 | 过热 | 高 |
 
 ---
