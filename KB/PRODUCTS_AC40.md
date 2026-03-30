@@ -1,3 +1,10 @@
+---
+tags:
+  - #workspace/engineer
+  - #type/product
+  - #product/ac40
+---
+
 # AC40 – All-In-One Immersion Container (40ft)
 适用对象：MDC（Modular Datacenter Cluster）标准计算单元 IT Zone
 版本：V1.1（2026-03-29 统一结构版）
@@ -131,4 +138,4 @@ Grid / BESS → PDC → UPS (EATON 9395XR-600) → PDC → Tanks → PDU
 | **DC45** | EATON 9395XR-1500 | 10 UPM | 150kW | 1500kW | ~46.9kW |
 
 电池型号均为 **EATON 93LiG2**（93Li92S-100Ah-3PBFA，332kW/柜）。
-参考：./KB/3RD-PARTY/POWER/UPS_EATON_9395XR.md
+参考：[[KB/3RD-PARTY/POWER/UPS_EATON_9395XR.md|KB/UPS_EATON_9395XR]]

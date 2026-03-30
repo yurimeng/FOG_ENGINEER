@@ -1,3 +1,10 @@
+---
+tags:
+  - #workspace/engineer
+  - #type/agent
+  - #domain/cooling
+---
+
 # Cooling Engineer
 
 Document Version: v1.0  

@@ -1,5 +1,12 @@
 
 
+---
+tags:
+  - #workspace/engineer
+  - #type/process
+  - #process/ats
+---
+
 ## 1 总则 / Principles
 
 - **客户为中心**

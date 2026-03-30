@@ -1,3 +1,10 @@
+---
+tags:
+  - #workspace/engineer
+  - #type/tool
+  - #system/feis
+---
+
 # TOOLS.md - Local Notes
 
 Skills define _how_ tools work. This file is for _your_ specifics — the stuff that's unique to your setup.
@@ -23,10 +30,10 @@ KNOWLEDGE_BASE > PROCESS > TOOLS > Memory
 
 当需要结构化输出时，必须读取对应工具文件：
 
-- 配置生成 → ./PROCESS/ATS/Proposal Generation Process.md
-- CAD逻辑 → ./TOOLS/CAD_GUIDELINES.md
-- 客户管理 → ./TOOLS/NOTION_WORKFLOW.md
-- ⚠️ 报价生成 → **仅供 AM（商务团队）使用，Engineering Agent 禁止访问 ./TOOLS/QUOTE_ENGINE.md**
+- 配置生成 → [[PROCESS/ATS/Proposal Generation Process.md|PROCESS/Proposal Generation Process]]
+- CAD逻辑 → [[TOOLS/CAD_GUIDELINES.md|TOOLS/CAD_GUIDELINES]]
+- 客户管理 → [[TOOLS/NOTION_WORKFLOW.md|TOOLS/NOTION_WORKFLOW]]
+- ⚠️ 报价生成 → **仅供 AM（商务团队）使用，Engineering Agent 禁止访问 [[TOOLS/QUOTE_ENGINE.md|TOOLS/QUOTE_ENGINE]]**
 
 ---
 
@@ -34,9 +41,9 @@ KNOWLEDGE_BASE > PROCESS > TOOLS > Memory
 
 调用：
 
-./PROCESS/ATS/Proposal Generation Process.md
+[[PROCESS/ATS/Proposal Generation Process.md|PROCESS/Proposal Generation Process]]
 
-**⚠️ Engineering Agent 禁止访问 ./TOOLS/QUOTE_ENGINE.md（仅供商务团队）。**
+**⚠️ Engineering Agent 禁止访问 [[TOOLS/QUOTE_ENGINE.md|TOOLS/QUOTE_ENGINE]]（仅供商务团队）。**
 
 输出必须包括：
 
@@ -59,7 +66,7 @@ KNOWLEDGE_BASE > PROCESS > TOOLS > Memory
 
 调用：
 
-./TOOLS/CAD_GUIDELINES.md
+[[TOOLS/CAD_GUIDELINES.md|TOOLS/CAD_GUIDELINES]]
 
 输出必须包括：
 
@@ -75,7 +82,7 @@ KNOWLEDGE_BASE > PROCESS > TOOLS > Memory
 
 调用：
 
-./TOOLS/NOTION_WORKFLOW.md
+[[TOOLS/NOTION_WORKFLOW.md|TOOLS/NOTION_WORKFLOW]]
 
 创建：
 
@@ -92,7 +99,7 @@ KNOWLEDGE_BASE > PROCESS > TOOLS > Memory
 
 跟进提醒规则由 AM 负责，具体逻辑参见：
 
-./AGENTS/AM.md（Section 3.6 Project Follow-up Monitoring）
+[[AGENTS/AM.md|AGENTS/AM]]（Section 3.6 Project Follow-up Monitoring）
 
 
 ---
@@ -114,7 +121,7 @@ KNOWLEDGE_BASE > PROCESS > TOOLS > Memory
 
 必须写入：
 
-./Projects/[项目名]/Project_Record.md
+[[Projects/[项目名]/Project_Record.md|Projects/Project_Record]]
 
 - 客户创建
 - **新配置版本**（不是报价）

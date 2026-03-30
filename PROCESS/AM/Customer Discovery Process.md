@@ -1,3 +1,10 @@
+---
+tags:
+  - #workspace/engineer
+  - #type/process
+  - #process/am
+---
+
 # Customer Discovery Process
 客户需求发现流程
 

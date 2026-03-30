@@ -1,3 +1,10 @@
+---
+tags:
+  - #workspace/engineer
+  - #type/reference
+  - #domain/power
+---
+
 # Power Systems Knowledge
 
 ## 0. Power设计原则
@@ -10,7 +17,7 @@
 | **AC40** | EATON 9395XR-600 | 4 UPM | 600kW | ~10 分钟 |
 | **DC45** | EATON 9395XR-1500 | 10 UPM | 1500kW | ~8 分钟 |
 
-参考：./KB/3RD-PARTY/POWER/UPS_EATON_9395XR.md
+参考：[[KB/3RD-PARTY/POWER/UPS_EATON_9395XR.md|KB/UPS_EATON_9395XR]]
 
 ### BESS 连接方式
 Grid → BESS → IT Zone → IT

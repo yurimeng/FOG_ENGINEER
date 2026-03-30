@@ -1,3 +1,10 @@
+---
+tags:
+  - #workspace/engineer
+  - #type/agent
+  - #domain/cost
+---
+
 # Cost Architect / 成本架构师
 
 Document Version / 文档版本: v1.0  

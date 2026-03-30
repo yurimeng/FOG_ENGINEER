@@ -1,3 +1,10 @@
+---
+tags:
+  - #workspace/engineer
+  - #type/reference
+  - #domain/supplier
+---
+
 # 3rd Party List — 第三方产品和解决方案参考清单
 
 版本：V1.1（2026-03-29 统一命名版）
@@ -17,9 +24,9 @@
 
 | 类别 | 产品 | 说明 | 参考文档 |
 |------|------|------|---------|
-| **散热方案（标准）** | 干冷器 + DX | MDC Cooling Zone 标准配置，所有 IT Zone 必须 | ./COOLING/COOLING_SYSTEM_SOLUTION.md |
-| **散热方案（替代）** | 热泵 | 可替代 DX，同时加热和制冷 | ./COOLING/COOLING_SYSTEM_SOLUTION.md |
-| **详细方案** | 干冷器 + DX 双冷源机组 | MDC Cooling Zone 标准散热机组规格 | ./COOLING/DRYCOOL_with_DX.md |
+| **散热方案（标准）** | 干冷器 + DX | MDC Cooling Zone 标准配置，所有 IT Zone 必须 | [[KB/3RD-PARTY/COOLING/COOLING_SYSTEM_SOLUTION.md|KB/COOLING_SYSTEM_SOLUTION]] |
+| **散热方案（替代）** | 热泵 | 可替代 DX，同时加热和制冷 | [[KB/3RD-PARTY/COOLING/COOLING_SYSTEM_SOLUTION.md|KB/COOLING_SYSTEM_SOLUTION]] |
+| **详细方案** | 干冷器 + DX 双冷源机组 | MDC Cooling Zone 标准散热机组规格 | [[KB/3RD-PARTY/COOLING/DRYCOOL_with_DX.md|KB/DRYCOOL_with_DX]] |
 
 ### 2.2 冷却设备供应商参考
 
@@ -39,8 +46,8 @@
 
 | IT Zone | UPS 型号 | 模块数 | 每模块 | 总功率 | 发热量 | 参考文档 |
 |---------|----------|--------|--------|--------|--------|---------|
-| **AC40** | EATON 9395XR-600 | 4 UPM | 150kW | 600kW | ~7.9kW | ./POWER/UPS_EATON_9395XR.md |
-| **DC45** | EATON 9395XR-1500 | 10 UPM | 150kW | 1500kW | ~46.9kW | ./POWER/UPS_EATON_9395XR.md |
+| **AC40** | EATON 9395XR-600 | 4 UPM | 150kW | 600kW | ~7.9kW | [[KB/3RD-PARTY/POWER/UPS_EATON_9395XR.md|KB/UPS_EATON_9395XR]] |
+| **DC45** | EATON 9395XR-1500 | 10 UPM | 150kW | 1500kW | ~46.9kW | [[KB/3RD-PARTY/POWER/UPS_EATON_9395XR.md|KB/UPS_EATON_9395XR]] |
 
 > 注：UPS 型号数字代表总 UPS 功率（kW）。9395XR-600 ≠ 600kVA，而是 4×150kW = 600kW。
 
@@ -54,8 +61,8 @@
 
 | 品牌/型号 | 类型 | 适用场景 | 参考文档 |
 |----------|------|---------|---------|
-| TESLA Megapack XL2 | 大型储能 | 城市边缘 / 高 ESG | ./POWER/POWER_SYSTEMS_SOLUTION.md |
-| 安徽国轩 | 储能（国产）| 成本优化 | ./POWER/POWER_SYSTEMS_SOLUTION.md |
+| TESLA Megapack XL2 | 大型储能 | 城市边缘 / 高 ESG | [[KB/3RD-PARTY/POWER/POWER_SYSTEMS_SOLUTION.md|KB/POWER_SYSTEMS_SOLUTION]] |
+| 安徽国轩 | 储能（国产）| 成本优化 | [[KB/3RD-PARTY/POWER/POWER_SYSTEMS_SOLUTION.md|KB/POWER_SYSTEMS_SOLUTION]] |
 
 ### 3.4 电力设备
 
@@ -70,9 +77,9 @@
 
 | 类别 | 供应商/产品 | 说明 | 参考文档 |
 |------|------------|------|---------|
-| **布线系统** | 引澜（需求已确认）| 结构化布线，商用成熟产品，可直接采购 | ./NETWORK/PRODUCTS_NETWORK.md |
-| **网络架构** | 三层网络模型 | 接入层/汇聚层/核心层 | ./NETWORK/PRODUCTS_NETWORK.md |
-| **交换设备** | 按项目配置 | 支持 10G/25G/100G | ./NETWORK/PRODUCTS_NETWORK.md |
+| **布线系统** | 引澜（需求已确认）| 结构化布线，商用成熟产品，可直接采购 | [[KB/3RD-PARTY/NETWORK/PRODUCTS_NETWORK.md|KB/PRODUCTS_NETWORK]] |
+| **网络架构** | 三层网络模型 | 接入层/汇聚层/核心层 | [[KB/3RD-PARTY/NETWORK/PRODUCTS_NETWORK.md|KB/PRODUCTS_NETWORK]] |
+| **交换设备** | 按项目配置 | 支持 10G/25G/100G | [[KB/3RD-PARTY/NETWORK/PRODUCTS_NETWORK.md|KB/PRODUCTS_NETWORK]] |
 
 ---
 

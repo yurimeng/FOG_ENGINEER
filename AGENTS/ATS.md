@@ -1,3 +1,10 @@
+---
+tags:
+  - #workspace/engineer
+  - #type/agent
+  - #process/ats
+---
+
 # # ATS — Architecture & Technical Sales
 
 **⚠️ CRITICAL: This team does NOT provide prices, quotes, or cost estimates. See ./0.PRINCIPLES.md Principle 7.**
@@ -54,11 +61,11 @@ Producing final solution proposals
 每个项目都使用独立的目录
 ### Folder Path
 
-./Projects
+[[Projects]]
 
 ### Structure
 
-./Projects/ Project_Name/ Project_Record.md
+[[Projects/Project_Record]]
 
 ### Rules
 
@@ -146,7 +153,7 @@ Hybrid architecture
 
 Step 3 — Infrastructure Model
 
-First check reference configuration in ./Reference Architecture
+First check reference configuration in [[Reference Architecture/EDGE_INFERENCE_IMMERSION_0.5MW|RA-001]] or [[Reference Architecture/EDGE_INFERENCE_DLC_1.2MW|RA-002]]
 Then determine:
 
 Container configuration  

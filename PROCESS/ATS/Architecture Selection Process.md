@@ -1,3 +1,10 @@
+---
+tags:
+  - #workspace/engineer
+  - #type/process
+  - #process/ats
+---
+
 # Architecture Selection Process
 系统架构选择流程
 

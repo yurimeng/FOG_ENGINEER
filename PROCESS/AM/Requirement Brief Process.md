@@ -1,3 +1,10 @@
+---
+tags:
+  - #workspace/engineer
+  - #type/process
+  - #process/am
+---
+
 # Requirement Brief Process
 需求摘要生成流程
 

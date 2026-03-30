@@ -1,3 +1,10 @@
+---
+tags:
+  - #workspace/engineer
+  - #type/tool
+  - #domain/layout
+---
+
 # CAD Layout Engineering Guidelines
 
 ## 1. 目的

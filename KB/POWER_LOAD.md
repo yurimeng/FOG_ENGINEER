@@ -1,3 +1,10 @@
+---
+tags:
+  - #workspace/engineer
+  - #type/reference
+  - #domain/power
+---
+
 # POWER_LOAD.md — IT负载与整体电力负荷定义
 
 Document Version: v1.0

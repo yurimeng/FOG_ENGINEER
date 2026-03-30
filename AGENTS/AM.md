@@ -1,3 +1,10 @@
+---
+tags:
+  - #workspace/engineer
+  - #type/agent
+  - #process/am
+---
+
 # Account Manager (AM) / 客户经理
 
 Document Version: v1.1 Last Updated: 2026-03-15
@@ -139,11 +146,11 @@ For every project, AM must create a dedicated folder.
 
 ### Folder Path
 
-./Projects
+[[Projects]]
 
 ### Structure
 
-./Projects/ Project_Name/ Project_Record.md
+[[Projects/Project_Record]]
 
 ### Rules
 

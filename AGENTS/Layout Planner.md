@@ -1,3 +1,10 @@
+---
+tags:
+  - #workspace/engineer
+  - #type/agent
+  - #domain/layout
+---
+
 # Layout Planner
 
 Document Version: v1.0  

@@ -1,3 +1,10 @@
+---
+tags:
+  - #workspace/engineer
+  - #type/product
+  - #product/mdc
+---
+
 # MDC – Modular Datacenter Cluster
 模块化数据中心集群标准组合参考
 版本：V1.1（2026-03-29 统一结构版）
@@ -39,9 +46,9 @@ Transformer → Switchgear → [Power Zone: BESS / Generator]
 | **DC45** | 45ft 集装箱 | 1200kW | DLC | 9395XR-1500 | 3×93LiG2（8min）|
 
 参考：
-- AC40 详细规格：./KB/PRODUCTS_AC40.md
-- DC45 详细规格：./KB/PRODUCTS_DC45.md
-- A32 详细规格：./KB/PRODUCTS_A32.md
+- AC40 详细规格：[[KB/PRODUCTS_AC40.md|KB/PRODUCTS_AC40]]
+- DC45 详细规格：[[KB/PRODUCTS_DC45.md|KB/PRODUCTS_DC45]]
+- A32 详细规格：[[KB/PRODUCTS_A32.md|KB/PRODUCTS_A32]]
 
 ---
 
@@ -105,7 +112,7 @@ Transformer → Switchgear → [Power Zone: BESS / Generator]
 
 > ⚠️ **规则：不允许纯干冷器方案。** 无论 AC40 或 DC45，必须配置 Hybrid Cooling System（干冷器+DX一体化设备），确保环境温度 >28°C 时的散热能力。
 
-参考：./KB/3RD-PARTY/COOLING/COOLING_SYSTEM_SOLUTION.md
+参考：[[KB/3RD-PARTY/COOLING/COOLING_SYSTEM_SOLUTION.md|KB/COOLING_SYSTEM_SOLUTION]]
 
 ---
 
@@ -117,7 +124,7 @@ Transformer → Switchgear → [Power Zone: BESS / Generator]
 | **Grid + UPS + 柴油发电机** | 偏远地区 / 长时备电需求（>8h）| 机械发电、长时间运行 |
 | **Grid + UPS + BESS + 小型柴油** | 极端高可靠性需求 | BESS 覆盖瞬态 + 柴油兜底 |
 
-> 参考：./KB/3RD-PARTY/POWER/POWER_SYSTEMS_SOLUTION.md
+> 参考：[[KB/3RD-PARTY/POWER/POWER_SYSTEMS_SOLUTION.md|KB/POWER_SYSTEMS_SOLUTION]]
 
 ---
 
@@ -133,7 +140,7 @@ Transformer → Switchgear → [Power Zone: BESS / Generator]
 >
 > **UPS 模块内部 N+1：** AC40/DC45 内置 UPS 模块（9395XR-600/1500）支持单模块故障不影响运行，但这不是 IT Zone 级别的冗余设计。
 
-参考：./AGENTS/ATS.md（Architecture Workflow, Step 3）
+参考：[[AGENTS/ATS.md|AGENTS/ATS]]（Architecture Workflow, Step 3）
 
 ---
 
@@ -159,7 +166,7 @@ Transformer → Switchgear → [Power Zone: BESS / Generator]
 
 网络设备由外部集成商提供（如"引澜"等），MDC 提供标准机柜空间和电源接口。
 
-参考：./KB/3RD-PARTY/NETWORK/PRODUCTS_NETWORK.md
+参考：[[KB/3RD-PARTY/NETWORK/PRODUCTS_NETWORK.md|KB/PRODUCTS_NETWORK]]
 
 ---
 

@@ -1,3 +1,10 @@
+---
+tags:
+  - #workspace/engineer
+  - #type/reference
+  - #domain/network
+---
+
 **适用对象：MDC 模块化数据中心集群（Network Zone）**
 **版本：V1.1（2026-03-29 统一命名版）**
 
@@ -130,5 +137,5 @@ MDC 网络设计充分考虑未来扩展需求：
 
 
 ## 1.8 AC40 Network Configuration
-参考 - ./KB/3RD-PARTY/NETWORK/AC40_NETWORK_CONF.pdf
+参考 - [[KB/3RD-PARTY/NETWORK/AC40_NETWORK_CONF.pdf|KB/AC40_NETWORK_CONF]]
 

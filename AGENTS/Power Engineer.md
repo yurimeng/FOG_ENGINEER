@@ -1,3 +1,10 @@
+---
+tags:
+  - #workspace/engineer
+  - #type/agent
+  - #domain/power
+---
+
 # Power Engineer
 
 Document Version: v1.0  

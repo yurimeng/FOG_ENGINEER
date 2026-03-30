@@ -1,3 +1,10 @@
+---
+tags:
+  - #workspace/engineer
+  - #type/decision
+  - #system/feis
+---
+
 # Engineering Architecture Decision Tree
 工程架构决策树
 

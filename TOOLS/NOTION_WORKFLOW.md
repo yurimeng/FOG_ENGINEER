@@ -1,3 +1,10 @@
+---
+tags:
+  - #workspace/engineer
+  - #type/tool
+  - #process/am
+---
+
 # Notion Client Management Workflow
 
 ## 1. 目标

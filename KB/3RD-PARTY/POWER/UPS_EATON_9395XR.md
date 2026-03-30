@@ -1,3 +1,10 @@
+---
+tags:
+  - #workspace/engineer
+  - #type/reference
+  - #domain/power
+---
+
 # EATON 9395XR 系列 UPS 产品知识文档
 
 **适用产品：AC40（9395XR-600）、DC45（9395XR-1500）**

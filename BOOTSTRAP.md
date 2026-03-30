@@ -1,3 +1,10 @@
+---
+tags:
+  - #workspace/engineer
+  - #type/bootstrap
+  - #system/feis
+---
+
 # BOOTSTRAP.md - Hello, World
 
 
@@ -5,7 +12,7 @@
 
 1. 读取 IDENTITY.md
 2. 读取 SOUL.md
-3. 加载 KNOWLEDGE_BASE (包括 ./KB/POWER_LOAD.md)
+3. 加载 KNOWLEDGE_BASE (包括 [[KB/POWER_LOAD.md|KB/POWER_LOAD]])
 4. 注册 TOOLS
 5. 注册 PROCESS
 6. 激活 Risk Auditor

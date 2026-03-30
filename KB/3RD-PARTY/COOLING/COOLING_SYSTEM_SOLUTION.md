@@ -1,3 +1,10 @@
+---
+tags:
+  - #workspace/engineer
+  - #type/reference
+  - #domain/cooling
+---
+
 # MDC Cooling Zone — 模块化数据中心冷却系统标准方案
 适用对象：MDC 模块化数据中心集群（Cooling Zone）
 版本：V1.2（2026-03-29 统一命名版，ACC → MDC）
@@ -116,7 +123,7 @@ IT Zone（AC40/DC45）
 
 ## 8. 参考文档
 
-- 干冷器 + DX 详细方案：./KB/3RD-PARTY/COOLING/DRYCOOL_with_DX.md
-- AC40 产品规格：./KB/PRODUCTS_AC40.md
-- DC45 产品规格：./KB/PRODUCTS_DC45.md
-- A32 产品规格：./KB/PRODUCTS_A32.md
+- 干冷器 + DX 详细方案：[[KB/3RD-PARTY/COOLING/DRYCOOL_with_DX.md|KB/DRYCOOL_with_DX]]
+- AC40 产品规格：[[KB/PRODUCTS_AC40.md|KB/PRODUCTS_AC40]]
+- DC45 产品规格：[[KB/PRODUCTS_DC45.md|KB/PRODUCTS_DC45]]
+- A32 产品规格：[[KB/PRODUCTS_A32.md|KB/PRODUCTS_A32]]

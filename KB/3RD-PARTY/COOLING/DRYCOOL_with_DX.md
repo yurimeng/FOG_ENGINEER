@@ -1,3 +1,10 @@
+---
+tags:
+  - #workspace/engineer
+  - #type/reference
+  - #domain/cooling
+---
+
 # MDC Cooling Zone — 干冷器 + DX 双冷源系统
 适用对象：MDC 模块化数据中心集群（Cooling Zone）标准散热方案
 版本：V1.1（2026-03-29）
@@ -105,6 +112,6 @@
 | DC45（1200kW IT）| 干冷器 + DX + 风墙（DC45 专用）|
 
 参考：
-- AC40 完整规格：./KB/PRODUCTS_AC40.md
-- DC45 完整规格：./KB/PRODUCTS_DC45.md
-- MDC 标准组合：./KB/PRODUCTS_MDC.md
+- AC40 完整规格：[[KB/PRODUCTS_AC40.md|KB/PRODUCTS_AC40]]
+- DC45 完整规格：[[KB/PRODUCTS_DC45.md|KB/PRODUCTS_DC45]]
+- MDC 标准组合：[[KB/PRODUCTS_MDC.md|KB/PRODUCTS_MDC]]

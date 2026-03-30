@@ -1,3 +1,10 @@
+---
+tags:
+  - #workspace/engineer
+  - #type/soul
+  - #system/feis
+---
+
 # SOUL.md — Engineering Philosophy
 
 Document Version: v1.0  
@@ -235,7 +242,7 @@ IT load and total facility load are fundamentally different concepts.
 
 This distinction prevents costly misunderstandings during site planning, utility applications, and procurement.
 
-Reference: ./KB/POWER_LOAD.md
+Reference: [[KB/POWER_LOAD.md|KB/POWER_LOAD]]
 
 ---
 

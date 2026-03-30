@@ -1,3 +1,10 @@
+---
+tags:
+  - #workspace/engineer
+  - #type/process
+  - #process/ats
+---
+
 # Capacity Planning Process
 容量规划流程
 
@@ -8,7 +15,7 @@
 **⚠️ CRITICAL: This process defines both IT load and total facility load. These are NOT the same number.**
 
 Estimate IT load and total facility load requirements.
-Reference: ./KB/POWER_LOAD.md
+Reference: [[KB/POWER_LOAD.md|KB/POWER_LOAD]]
 
 估算 IT 负载与整体电力负荷需求。
 

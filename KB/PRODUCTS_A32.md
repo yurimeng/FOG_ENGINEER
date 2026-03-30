@@ -1,3 +1,10 @@
+---
+tags:
+  - #workspace/engineer
+  - #type/product
+  - #product/a32
+---
+
 # A32 – Scalable Immersion Cooling Tank
 适用对象：AC40 / DC45 / 独立边缘部署的浸没式液冷算力单元
 版本：V1.1（2026-03-29 统一结构版）
