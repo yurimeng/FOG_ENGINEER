@@ -46,9 +46,9 @@ Transformer → Switchgear → [Power Zone: BESS / Generator]
 | **DC45** | 45ft 集装箱 | 1200kW | DLC | 9395XR-1500 | 3×93LiG2（8min）|
 
 参考：
-- AC40 详细规格：[[KB/PRODUCTS_AC40.md|KB/PRODUCTS_AC40]]
-- DC45 详细规格：[[KB/PRODUCTS_DC45.md|KB/PRODUCTS_DC45]]
-- A32 详细规格：[[KB/PRODUCTS_A32.md|KB/PRODUCTS_A32]]
+- AC40 详细规格：[[PRODUCTS_AC40|KB/PRODUCTS_AC40]]
+- DC45 详细规格：[[PRODUCTS_DC45|KB/PRODUCTS_DC45]]
+- A32 详细规格：[[PRODUCTS_A32|KB/PRODUCTS_A32]]
 
 ---
 
@@ -112,7 +112,7 @@ Transformer → Switchgear → [Power Zone: BESS / Generator]
 
 > ⚠️ **规则：不允许纯干冷器方案。** 无论 AC40 或 DC45，必须配置 Hybrid Cooling System（干冷器+DX一体化设备），确保环境温度 >28°C 时的散热能力。
 
-参考：[[KB/3RD-PARTY/COOLING/COOLING_SYSTEM_SOLUTION.md|KB/COOLING_SYSTEM_SOLUTION]]
+参考：[[COOLING_SYSTEM_SOLUTION|KB/COOLING_SYSTEM_SOLUTION]]
 
 ---
 
@@ -140,7 +140,7 @@ Transformer → Switchgear → [Power Zone: BESS / Generator]
 >
 > **UPS 模块内部 N+1：** AC40/DC45 内置 UPS 模块（9395XR-600/1500）支持单模块故障不影响运行，但这不是 IT Zone 级别的冗余设计。
 
-参考：[[AGENTS/ATS.md|AGENTS/ATS]]（Architecture Workflow, Step 3）
+参考：[[ATS|AGENTS/ATS]]（Architecture Workflow, Step 3）
 
 ---
 

@@ -34,8 +34,8 @@ Engineer 不是聊天机器人，而是一个工程决策中枢。
 
 参考：
 - ./0.PRINCIPLES.md（Principle 7 NO PRICE / Principle 8 IT负载/总负荷）
-- [[SOUL.md|SOUL]]
-- [[KB/POWER_LOAD.md|KB/POWER_LOAD]]
+- [[Works_Public/SOUL|SOUL]]
+- [[POWER_LOAD|KB/POWER_LOAD]]
 
 ---
 
@@ -48,7 +48,7 @@ Engineer 不是聊天机器人，而是一个工程决策中枢。
 | **DC45** | 45ft 集装箱 | **1200kW** | DLC 直冷 | 9395XR-1500（10×150kW）| 3×93LiG2（~8min）|
 
 > PUE 均为**变量**，取决于环境温度，不写固定数字。
-> 参考：[[KB/POWER_LOAD.md|KB/POWER_LOAD]]
+> 参考：[[POWER_LOAD|KB/POWER_LOAD]]
 
 ---
 
@@ -176,7 +176,7 @@ workspace-engineer/ # 工程师工作空间主目录
 
 1. 读取 IDENTITY.md
 2. 读取 SOUL.md
-3. 加载 KNOWLEDGE_BASE（包括 [[KB/POWER_LOAD.md|KB/POWER_LOAD]]）
+3. 加载 KNOWLEDGE_BASE（包括 [[POWER_LOAD|KB/POWER_LOAD]]）
 4. 注册 TOOLS
 5. 注册 PROCESS
 6. 激活 Risk Auditor
@@ -248,7 +248,7 @@ Engineer 遵循系统工程方法：
 | RA-001 | 0.5MW 浸没式推理 | 0.5MW | 1×AC40 | 浸没式 |
 | RA-002 | 1.2MW DLC 推理 | 1.2MW | 1×DC45 | DLC |
 
-参考：[[REFERENCE_ARCHITECTURE.md|REFERENCE_ARCHITECTURE]]
+参考：[[REFERENCE_ARCHITECTURE|REFERENCE_ARCHITECTURE]]
 
 ---
 

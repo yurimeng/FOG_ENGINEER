@@ -317,28 +317,28 @@ ATS must always follow this **two-step process** for every zone being configured
 
 ## Master Index
 
-[[KB/3RD-PARTY/3rd Party List.md|KB/3RD-PARTY/3rd Party List]] — always start here for an overview. Contains the full supplier directory, manufacturing constraints, and update history.
+[[3rd Party List|KB/3RD-PARTY/3rd Party List]] — always start here for an overview. Contains the full supplier directory, manufacturing constraints, and update history.
 
 ## Zone-to-KB Mapping
 
 | Zone Being Configured | Step 1 — Read Guideline | Step 2 — Traverse Products |
 |-----------------------|----------------------|--------------------------|
-| **Cooling Zone** | [[KB/3RD-PARTY/COOLING/COOLING_SYSTEM_SOLUTION.md\|KB/COOLING_SYSTEM_SOLUTION]] | [[KB/3RD-PARTY/COOLING/\|KB/COOLING/]] → DRYCOOL_with_DX.md, Hybrid Cooler 同飞.md |
-| **Power Zone (BESS)** | [[KB/3RD-PARTY/BESS/POWER_SYSTEMS_Guideline.md\|KB/BESS/POWER_SYSTEMS_Guideline]] | [[KB/3RD-PARTY/BESS/\|KB/BESS/]] → TESLA MEGAPACK 2 XL.md, Gotion ESC480.md |
-| **Network Zone** | [[KB/3RD-PARTY/NETWORK/AC40_NETWORK_Guideline.md\|KB/NETWORK/AC40_NETWORK_Guideline]] | [[KB/3RD-PARTY/NETWORK/\|KB/NETWORK/]] → PRODUCTS_NETWORK.md, AC40_NETWORK_CONF.pdf |
-| **Built-in (IT Zone)** | — | [[KB/3RD-PARTY/Buildin/UPS_EATON_9395XR.md\|KB/Buildin/UPS_EATON_9395XR]] |
+| **Cooling Zone** | [[COOLING_SYSTEM_SOLUTION\|KB/COOLING_SYSTEM_SOLUTION]] | [[KB/3RD-PARTY/COOLING/\|KB/COOLING/]] → DRYCOOL_with_DX.md, Hybrid Cooler 同飞.md |
+| **Power Zone (BESS)** | [[POWER_SYSTEMS_Guideline\|KB/BESS/POWER_SYSTEMS_Guideline]] | [[KB/3RD-PARTY/BESS/\|KB/BESS/]] → TESLA MEGAPACK 2 XL.md, Gotion ESC480.md |
+| **Network Zone** | [[AC40_NETWORK_Guideline\|KB/NETWORK/AC40_NETWORK_Guideline]] | [[KB/3RD-PARTY/NETWORK/\|KB/NETWORK/]] → PRODUCTS_NETWORK.md, AC40_NETWORK_CONF.pdf |
+| **Built-in (IT Zone)** | — | [[UPS_EATON_9395XR\|KB/Buildin/UPS_EATON_9395XR]] |
 
 ## Step-by-Step Example: Cooling Zone
 
 > **Scenario:** Project requires 2× AC40 units at a site with ambient temp 30°C, limited water access.
 
 **Step 1 — Guideline:**
-Check [[KB/3RD-PARTY/COOLING/COOLING_SYSTEM_SOLUTION.md|KB/COOLING_SYSTEM_SOLUTION]] → confirms dry cooler + DX is mandatory; DX activates at ≥28°C; pure dry cooler is prohibited.
+Check [[COOLING_SYSTEM_SOLUTION|KB/COOLING_SYSTEM_SOLUTION]] → confirms dry cooler + DX is mandatory; DX activates at ≥28°C; pure dry cooler is prohibited.
 
 **Step 2 — Traverse Products:**
 Check subfolder [[KB/3RD-PARTY/COOLING/\|KB/COOLING/]]:
-- [[KB/3RD-PARTY/COOLING/DRYCOOL_with_DX.md|KB/DRYCOOL_with_DX]] → 泰铂, 干冷器+DX, IP55, C3防腐, 每台 AC40 独立配置
-- [[KB/3RD-PARTY/COOLING/Hybrid Cooler 600kW - 同飞.md|KB/Hybrid Cooler 同飞]] → 三河同飞, 600kW 集成冷站, 热泵方案
+- [[DRYCOOL_with_DX|KB/DRYCOOL_with_DX]] → 泰铂, 干冷器+DX, IP55, C3防腐, 每台 AC40 独立配置
+- [[Hybrid Cooler 600kW - 同飞|KB/Hybrid Cooler 同飞]] → 三河同飞, 600kW 集成冷站, 热泵方案
 
 **Step 3 — Compose:**
 Match capacity (AC40 × 2 = ~800kW cooling demand) → select 2× 泰铂 Hybrid Cooling System (600kW class, 干冷器+DX) OR 2× 三河同飞集成冷站.
@@ -350,12 +350,12 @@ Match capacity (AC40 × 2 = ~800kW cooling demand) → select 2× 泰铂 Hybrid 
 > **Scenario:** Same project, urban edge site, 1MW IT load, ESG priority.
 
 **Step 1 — Guideline:**
-Check [[KB/3RD-PARTY/BESS/POWER_SYSTEMS_Guideline.md|KB/BESS/POWER_SYSTEMS_Guideline]] → urban edge → BESS preferred over diesel; ESG → Tesla recommended.
+Check [[POWER_SYSTEMS_Guideline|KB/BESS/POWER_SYSTEMS_Guideline]] → urban edge → BESS preferred over diesel; ESG → Tesla recommended.
 
 **Step 2 — Traverse Products:**
 Check subfolder [[KB/3RD-PARTY/BESS/\|KB/BESS/]]:
-- [[KB/3RD-PARTY/BESS/TESLA MEGAPACK 2 XL.md\|KB/BESS/TESLA Megapack 2 XL]] → 2hr: 1927kW/3854kWh; 4hr: 979kW/3916kWh; IP66; UL certified
-- [[KB/3RD-PARTY/BESS/Gotion ESC480-125P261-UL.md\|KB/BESS/Gotion ESC480]] → 261kWh/unit; 125kW PCS; cost-optimized; 60Hz
+- [[TESLA MEGAPACK 2 XL\|KB/BESS/TESLA Megapack 2 XL]] → 2hr: 1927kW/3854kWh; 4hr: 979kW/3916kWh; IP66; UL certified
+- [[Gotion ESC480-125P261-UL\|KB/BESS/Gotion ESC480]] → 261kWh/unit; 125kW PCS; cost-optimized; 60Hz
 
 **Step 3 — Compose:**
 ESG priority + urban → Tesla Megapack 2 XL × 1 (2hr, covers IT load ~1MW + margin). UPS (EATON 9395XR) already built into IT Zone.
@@ -376,7 +376,7 @@ ATS selects third-party products based on:
 - **Guideline is authoritative** — if a product contradicts the Guideline, the Guideline takes precedence and ATS must escalate.
 - If a required product is NOT in the KB, ATS must flag this and escalate before proceeding.
 - Product selection must be documented in the project record with the chosen supplier and model.
-- Manufacturing constraints (e.g., 广东惠集 =箱体 only, 惟远能源 =标准件 only) must be respected — see [[KB/3RD-PARTY/3rd Party List.md|KB/3RD-PARTY/3rd Party List]] Section 5.
+- Manufacturing constraints (e.g., 广东惠集 =箱体 only, 惟远能源 =标准件 only) must be respected — see [[3rd Party List|KB/3RD-PARTY/3rd Party List]] Section 5.
 
 ---
 

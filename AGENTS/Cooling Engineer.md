@@ -276,7 +276,7 @@ Environmental suitability evaluations
 
 ## Two-Step Lookup Process
 
-> **Step 1 → Guideline:** Read [[KB/3RD-PARTY/COOLING/COOLING_SYSTEM_SOLUTION.md|KB/COOLING_SYSTEM_SOLUTION]] first — it defines mandatory architecture rules, IT Zone matching requirements, and prohibited configurations.
+> **Step 1 → Guideline:** Read [[COOLING_SYSTEM_SOLUTION|KB/COOLING_SYSTEM_SOLUTION]] first — it defines mandatory architecture rules, IT Zone matching requirements, and prohibited configurations.
 > **Step 2 → Products:** Traverse [[KB/3RD-PARTY/COOLING/\|KB/COOLING/]] to verify individual product parameters match the project requirements.
 
 ## Step 1 — Guideline (Authoritative)
@@ -296,8 +296,8 @@ Check [[KB/3RD-PARTY/COOLING/\|KB/COOLING/]] subfolder:
 
 | Product | Supplier | Key Specs to Verify | Reference |
 |---------|---------|-------------------|----------|
-| DRYCOOL_with_DX | 泰铂 | 600kW class; IP55; C3防腐; 涡旋压缩机 | [[KB/3RD-PARTY/COOLING/DRYCOOL_with_DX.md\|KB/DRYCOOL_with_DX]] |
-| Hybrid Cooler 600kW | 三河同飞 | 600kW; 螺杆压缩机; -15°C~45°C; IP54 | [[KB/3RD-PARTY/COOLING/Hybrid Cooler 600kW - 同飞.md\|KB/Hybrid Cooler 同飞]] |
+| DRYCOOL_with_DX | 泰铂 | 600kW class; IP55; C3防腐; 涡旋压缩机 | [[DRYCOOL_with_DX\|KB/DRYCOOL_with_DX]] |
+| Hybrid Cooler 600kW | 三河同飞 | 600kW; 螺杆压缩机; -15°C~45°C; IP54 | [[Hybrid Cooler 600kW - 同飞\|KB/Hybrid Cooler 同飞]] |
 
 ## Verification Checklist
 

@@ -260,7 +260,7 @@ Overly complex electrical systems should be avoided unless clearly justified.
 
 ## Two-Step Lookup Process
 
-> **Step 1 → Guideline:** Read [[KB/3RD-PARTY/BESS/POWER_SYSTEMS_Guideline.md|KB/BESS/POWER_SYSTEMS_Guideline]] first — it defines BESS selection logic, UPS sizing rules, grid integration strategy, and scenario-based recommendations.
+> **Step 1 → Guideline:** Read [[POWER_SYSTEMS_Guideline|KB/BESS/POWER_SYSTEMS_Guideline]] first — it defines BESS selection logic, UPS sizing rules, grid integration strategy, and scenario-based recommendations.
 > **Step 2 → Products:** Traverse [[KB/3RD-PARTY/BESS/\|KB/BESS/]] to verify individual BESS product parameters match the project requirements.
 
 ## Step 1 — Guideline (Authoritative)
@@ -280,14 +280,14 @@ Check [[KB/3RD-PARTY/BESS/\|KB/BESS/]] subfolder:
 
 | Product | Supplier | Key Specs to Verify | Reference |
 |---------|---------|-------------------|----------|
-| Megapack 2 XL | Tesla | 2hr: 1927kW/3854kWh; 4hr: 979kW/3916kWh; IP66; UL9540; 480V AC | [[KB/3RD-PARTY/BESS/TESLA MEGAPACK 2 XL.md\|KB/BESS/TESLA Megapack 2 XL]] |
-| ESC480-125P261-UL | 国轩高科 | 261kWh; 125kW PCS; 液冷; IP55; 60Hz | [[KB/3RD-PARTY/BESS/Gotion ESC480-125P261-UL.md\|KB/BESS/Gotion ESC480]] |
+| Megapack 2 XL | Tesla | 2hr: 1927kW/3854kWh; 4hr: 979kW/3916kWh; IP66; UL9540; 480V AC | [[TESLA MEGAPACK 2 XL\|KB/BESS/TESLA Megapack 2 XL]] |
+| ESC480-125P261-UL | 国轩高科 | 261kWh; 125kW PCS; 液冷; IP55; 60Hz | [[Gotion ESC480-125P261-UL\|KB/BESS/Gotion ESC480]] |
 
 Also verify built-in UPS in IT Zone:
 | IT Zone | UPS Model | Reference |
 |---------|----------|----------|
-| AC40 | EATON 9395XR-600 (4×150kW) | [[KB/3RD-PARTY/Buildin/UPS_EATON_9395XR.md\|KB/UPS_EATON_9395XR]] |
-| DC45 | EATON 9395XR-1500 (10×150kW) | [[KB/3RD-PARTY/Buildin/UPS_EATON_9395XR.md\|KB/UPS_EATON_9395XR]] |
+| AC40 | EATON 9395XR-600 (4×150kW) | [[UPS_EATON_9395XR\|KB/UPS_EATON_9395XR]] |
+| DC45 | EATON 9395XR-1500 (10×150kW) | [[UPS_EATON_9395XR\|KB/UPS_EATON_9395XR]] |
 
 ## Verification Checklist
 

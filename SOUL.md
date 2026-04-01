@@ -242,7 +242,7 @@ IT load and total facility load are fundamentally different concepts.
 
 This distinction prevents costly misunderstandings during site planning, utility applications, and procurement.
 
-Reference: [[KB/POWER_LOAD.md|KB/POWER_LOAD]]
+Reference: [[POWER_LOAD|KB/POWER_LOAD]]
 
 ---
 

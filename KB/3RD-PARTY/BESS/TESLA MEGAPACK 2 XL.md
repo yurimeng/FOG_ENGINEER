@@ -37,3 +37,6 @@ Category: BESS
 
 - 通信协议：Modbus TCP / DNP3 / REST API
 - 控制模式：实时功率、频率支持、电压控制等
+
+Tesla Megapack 预订网站
+https://www.tesla.com/megapack/design

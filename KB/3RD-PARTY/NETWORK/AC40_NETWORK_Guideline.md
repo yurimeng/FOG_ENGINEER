@@ -13,7 +13,7 @@ Category: Network Configuration
 
 ## 关联文件
 
-- PDF 原件：[[KB/3RD-PARTY/NETWORK/AC40_NETWORK_CONF.pdf|KB/AC40_NETWORK_CONF.pdf]]
+- PDF 原件：[[AC40_NETWORK_CONF.pdf|KB/AC40_NETWORK_CONF.pdf]]
 
 ## 说明
 
