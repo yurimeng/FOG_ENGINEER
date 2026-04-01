@@ -22,22 +22,22 @@ Category: Reference
 
 ## 2. Cooling Zone — 冷却系统
 
-> ⚠️ **引用规则：** 选型前必须先查阅 [[COOLING_SYSTEM_SOLUTION|KB/COOLING_SYSTEM_SOLUTION]]（冷却系统 Guideline），按其选型原则遍历子文件夹产品，最终组合完整解决方案。
+> ⚠️ **引用规则：** 选型前必须先查阅 [[KB/3RD-PARTY/COOLING/COOLING_SYSTEM_SOLUTION|KB/COOLING_SYSTEM_SOLUTION]]（冷却系统 Guideline），按其选型原则遍历子文件夹产品，最终组合完整解决方案。
 
 ### 2.1 Guideline（选型总则）
 
 | 文件 | 说明 |
 |------|------|
-| [[COOLING_SYSTEM_SOLUTION\|KB/COOLING_SYSTEM_SOLUTION]] | 冷却 Zone 选型原则、架构对比、环境与 IT Zone 匹配规则 |
+| [[KB/3RD-PARTY/COOLING/COOLING_SYSTEM_SOLUTION|KB/COOLING_SYSTEM_SOLUTION]] | 冷却 Zone 选型原则、架构对比、环境与 IT Zone 匹配规则 |
 
 ### 2.2 产品目录
 
 | 类别 | 产品 | 供应商 | 说明 | 参考文档 |
 |------|------|--------|------|---------|
-| **散热方案（标准）** | 干冷器 + DX | — | MDC Cooling Zone 标准配置，所有 IT Zone 必须 | [[COOLING_SYSTEM_SOLUTION\|KB/COOLING_SYSTEM_SOLUTION]] |
-| **散热方案（替代）** | 热泵 | — | 可替代 DX，同时加热和制冷 | [[COOLING_SYSTEM_SOLUTION\|KB/COOLING_SYSTEM_SOLUTION]] |
-| **详细方案** | 干冷器 + DX 双冷源机组 | 泰铂 | MDC Cooling Zone 标准散热机组规格 | [[DRYCOOL_with_DX\|KB/DRYCOOL_with_DX]] |
-| **集成冷站** | 600kW 集成冷站 | 三河同飞 | 一体化热泵冷源，含压缩机、水泵、控制系统 | [[Hybrid Cooler 600kW - 同飞\|KB/Hybrid Cooler 同飞]] |
+| **散热方案（标准）** | 干冷器 + DX | — | MDC Cooling Zone 标准配置，所有 IT Zone 必须 | [[KB/3RD-PARTY/COOLING/COOLING_SYSTEM_SOLUTION|KB/COOLING_SYSTEM_SOLUTION]] |
+| **散热方案（替代）** | 热泵 | — | 可替代 DX，同时加热和制冷 | [[KB/3RD-PARTY/COOLING/COOLING_SYSTEM_SOLUTION|KB/COOLING_SYSTEM_SOLUTION]] |
+| **详细方案** | 干冷器 + DX 双冷源机组 | 泰铂 | MDC Cooling Zone 标准散热机组规格 | [[KB/3RD-PARTY/COOLING/DRYCOOL_with_DX|KB/DRYCOOL_with_DX]] |
+| **集成冷站** | 600kW 集成冷站 | 三河同飞 | 一体化热泵冷源，含压缩机、水泵、控制系统 | [[KB/3RD-PARTY/COOLING/Hybrid Cooler 600kW - 同飞|KB/Hybrid Cooler 同飞]] |
 
 ### 2.3 冷却设备供应商参考
 
@@ -65,8 +65,8 @@ Category: Reference
 
 | IT Zone | UPS 型号 | 模块数 | 每模块 | 总功率 | 发热量 | 参考文档 |
 |---------|----------|--------|--------|--------|--------|---------|
-| **AC40** | EATON 9395XR-600 | 4 UPM | 150kW | 600kW | ~7.9kW | [[UPS_EATON_9395XR\|KB/UPS_EATON_9395XR]] |
-| **DC45** | EATON 9395XR-1500 | 10 UPM | 150kW | 1500kW | ~46.9kW | [[UPS_EATON_9395XR\|KB/UPS_EATON_9395XR]] |
+| **AC40** | EATON 9395XR-600 | 4 UPM | 150kW | 600kW | ~7.9kW | [[KB/3RD-PARTY/Buildin/UPS_EATON_9395XR|KB/UPS_EATON_9395XR]] |
+| **DC45** | EATON 9395XR-1500 | 10 UPM | 150kW | 1500kW | ~46.9kW | [[KB/3RD-PARTY/Buildin/UPS_EATON_9395XR|KB/UPS_EATON_9395XR]] |
 
 > 注：UPS 型号数字代表总 UPS 功率（kW）。9395XR-600 ≠ 600kVA，而是 4×150kW = 600kW。
 
@@ -106,10 +106,10 @@ Category: Reference
 
 | 类别 | 供应商/产品 | 说明 | 参考文档 |
 |------|------------|------|---------|
-| **布线系统** | 引澜（需求已确认）| 结构化布线，商用成熟产品，可直接采购 | [[PRODUCTS_NETWORK\|KB/PRODUCTS_NETWORK]] |
-| **网络架构** | 三层网络模型 | 接入层/汇聚层/核心层 | [[AC40_NETWORK_Guideline\|KB/NETWORK_Guideline]] |
+| **布线系统** | 引澜（需求已确认）| 结构化布线，商用成熟产品，可直接采购 | [[KB/3RD-PARTY/NETWORK/PRODUCTS_NETWORK|KB/PRODUCTS_NETWORK]] |
+| **网络架构** | 三层网络模型 | 接入层/汇聚层/核心层 | [[KB/3RD-PARTY/NETWORK/AC40_NETWORK_Guideline|KB/NETWORK_Guideline]] |
 | **交换设备** | 按项目配置 | 支持 10G/25G/100G | 按项目配置 |
-| **AC40 网络配置** | 参考配置 | AC40 集装箱网络端口定义及布线规范 | [[AC40_NETWORK_CONF.pdf\|KB/AC40_NETWORK_CONF.pdf]] |
+| **AC40 网络配置** | 参考配置 | AC40 集装箱网络端口定义及布线规范 | [[KB/3RD-PARTY/NETWORK/AC40_NETWORK_CONF.pdf|KB/AC40_NETWORK_CONF.pdf]] |
 
 ---
 

@@ -276,7 +276,7 @@ Environmental suitability evaluations
 
 ## Two-Step Lookup Process
 
-> **Step 1 → Guideline:** Read [[COOLING_SYSTEM_SOLUTION|KB/COOLING_SYSTEM_SOLUTION]] first — it defines mandatory architecture rules, IT Zone matching requirements, and prohibited configurations.
+> **Step 1 → Guideline:** Read [[KB/3RD-PARTY/COOLING/COOLING_SYSTEM_SOLUTION|KB/COOLING_SYSTEM_SOLUTION]] first — it defines mandatory architecture rules, IT Zone matching requirements, and prohibited configurations.
 > **Step 2 → Products:** Traverse [[KB/3RD-PARTY/COOLING/\|KB/COOLING/]] to verify individual product parameters match the project requirements.
 
 ## Step 1 — Guideline (Authoritative)

@@ -104,15 +104,14 @@ workspace-engineer/ # 工程师工作空间主目录
 │       └── Proposal Generation Process.md    # 输出配置，不含价格
 ├── REFERENCE_ARCHITECTURE/
 │   ├── REFERENCE_ARCHITECTURE.md            # 索引速查表
-│   ├── EDGE_INFERENCE_IMMERSION_0.5MW.md.md  # RA-001：0.5MW 浸没式
-│   └── EDGE_INFERENCE_DLC_1.2MW.md.md        # RA-002：1.2MW DLC
+│   ├── EDGE_INFERENCE_IMMERSION_0.5MW.md    # RA-001：0.5MW 浸没式
+│   └── EDGE_INFERENCE_DLC_1.2MW.md           # RA-002：1.2MW DLC
 ├── Projects/              # 项目记录（每个项目一个文件夹）
 ├── SOUL.md               # 工程哲学
 ├── TOOLS/
 │   ├── CAD_GUIDELINES.md
 │   ├── NOTION_WORKFLOW.md
-│   ├── QUOTE_ENGINE.md    # ⚠️ 仅供商务团队使用，Engineering Agent 禁止访问
-│   └── QUOTE_ENGINE.md
+│   └── QUOTE_ENGINE.md    # ⚠️ 仅供商务团队使用，Engineering Agent 禁止访问
 ├── USER.md
 └── VERSION.md
 ```

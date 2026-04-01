@@ -52,8 +52,8 @@ Reference backup: ../KB_backup_20260329_200742
 - POWER_SYSTEMS_SOLUTION.md: UPS 型号引用更新（9395XR-600/1500）
 
 ### Reference Architecture Unified
-- EDGE_INFERENCE_IMMERSION_0.5MW.md.md: 全面重写；标准输出模板；PUE 变量化；UPS 型号明确
-- EDGE_INFERENCE_DLC_1.2MW.md.md: 全面重写；修正"DLC"非"immersion"；PUE 变量化；标准输出模板
+- EDGE_INFERENCE_IMMERSION_0.5MW.md: 全面重写；标准输出模板；PUE 变量化；UPS 型号明确
+- EDGE_INFERENCE_DLC_1.2MW.md: 全面重写；修正"DLC"非"immersion"；PUE 变量化；标准输出模板
 - REFERENCE_ARCHITECTURE.md: 全面重写；新增速查表；引用规则强化
 
 ### Design Guideline Corrected

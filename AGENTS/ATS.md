@@ -326,7 +326,7 @@ ATS must always follow this **two-step process** for every zone being configured
 | **Cooling Zone** | [[COOLING_SYSTEM_SOLUTION\|KB/COOLING_SYSTEM_SOLUTION]] | [[KB/3RD-PARTY/COOLING/\|KB/COOLING/]] → DRYCOOL_with_DX.md, Hybrid Cooler 同飞.md |
 | **Power Zone (BESS)** | [[POWER_SYSTEMS_Guideline\|KB/BESS/POWER_SYSTEMS_Guideline]] | [[KB/3RD-PARTY/BESS/\|KB/BESS/]] → TESLA MEGAPACK 2 XL.md, Gotion ESC480.md |
 | **Network Zone** | [[AC40_NETWORK_Guideline\|KB/NETWORK/AC40_NETWORK_Guideline]] | [[KB/3RD-PARTY/NETWORK/\|KB/NETWORK/]] → PRODUCTS_NETWORK.md, AC40_NETWORK_CONF.pdf |
-| **Built-in (IT Zone)** | — | [[UPS_EATON_9395XR\|KB/Buildin/UPS_EATON_9395XR]] |
+| **Built-in (IT Zone)** | — | [[UPS_EATON_9395XR\|KB/3RD-PARTY/Buildin/UPS_EATON_9395XR]] |
 
 ## Step-by-Step Example: Cooling Zone
 

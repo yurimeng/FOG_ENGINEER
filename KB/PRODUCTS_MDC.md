@@ -112,7 +112,7 @@ Transformer → Switchgear → [Power Zone: BESS / Generator]
 
 > ⚠️ **规则：不允许纯干冷器方案。** 无论 AC40 或 DC45，必须配置 Hybrid Cooling System（干冷器+DX一体化设备），确保环境温度 >28°C 时的散热能力。
 
-参考：[[COOLING_SYSTEM_SOLUTION|KB/COOLING_SYSTEM_SOLUTION]]
+参考：[[KB/3RD-PARTY/COOLING/COOLING_SYSTEM_SOLUTION|KB/COOLING_SYSTEM_SOLUTION]]
 
 ---
 
@@ -124,7 +124,7 @@ Transformer → Switchgear → [Power Zone: BESS / Generator]
 | **Grid + UPS + 柴油发电机** | 偏远地区 / 长时备电需求（>8h）| 机械发电、长时间运行 |
 | **Grid + UPS + BESS + 小型柴油** | 极端高可靠性需求 | BESS 覆盖瞬态 + 柴油兜底 |
 
-> 参考：[[POWER_SYSTEMS_Guideline|KB/POWER_SYSTEMS_SOLUTION]]
+> 参考：[[KB/3RD-PARTY/BESS/POWER_SYSTEMS_Guideline|KB/POWER_SYSTEMS_Guideline]]
 
 ---
 
@@ -160,17 +160,13 @@ Transformer → Switchgear → [Power Zone: BESS / Generator]
 
 ## 10. 网络 Zone 配置
 
----
-
-## 11. 网络 Zone 配置
-
 网络设备由外部集成商提供（如"引澜"等），MDC 提供标准机柜空间和电源接口。
 
-参考：[[KB/AI Agent/Workspace-Engineer/KB/3RD-PARTY/NETWORK/PRODUCTS_NETWORK|KB/PRODUCTS_NETWORK]]
+参考：[[KB/3RD-PARTY/NETWORK/PRODUCTS_NETWORK|KB/PRODUCTS_NETWORK]]
 
 ---
 
-## 12. 设计原则
+## 11. 设计原则
 
 - **模块独立**：每个集装箱独立配置、独立运行
 - **并联扩展**：通过增加集装箱数量实现容量扩展
@@ -179,7 +175,7 @@ Transformer → Switchgear → [Power Zone: BESS / Generator]
 
 ---
 
-## 11. Power Flow
+## 12. Power Flow
 
 ```
 Grid Utility

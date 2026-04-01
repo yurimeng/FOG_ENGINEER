@@ -130,7 +130,7 @@ Grid / BESS → PDC → UPS (EATON 9395XR-600) → PDC → Tanks → PDU
 
 ---
 
-## 8. UPS 型号说明
+## 9. UPS 型号说明
 
 | 产品 | UPS 型号 | 模块数 | 每模块 | 总 UPS 功率 | 发热量 |
 |------|----------|--------|--------|-----------|--------|
@@ -138,4 +138,4 @@ Grid / BESS → PDC → UPS (EATON 9395XR-600) → PDC → Tanks → PDU
 | **DC45** | EATON 9395XR-1500 | 10 UPM | 150kW | 1500kW | ~46.9kW |
 
 电池型号均为 **EATON 93LiG2**（93Li92S-100Ah-3PBFA，332kW/柜）。
-参考：[[KB/AI Agent/Workspace-Engineer/KB/3RD-PARTY/Buildin/UPS_EATON_9395XR|KB/UPS_EATON_9395XR]]
+参考：[[KB/3RD-PARTY/Buildin/UPS_EATON_9395XR|KB/UPS_EATON_9395XR]]
