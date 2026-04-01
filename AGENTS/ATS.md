@@ -9,8 +9,8 @@ tags:
 
 **⚠️ CRITICAL: This team does NOT provide prices, quotes, or cost estimates. See ./0.PRINCIPLES.md Principle 7.**
 
-Document Version: v1.0  
-Last Updated: 2026-03-10
+Document Version: v1.1
+Last Updated: 2026-04-01
 
 ---
 
@@ -156,11 +156,14 @@ Step 3 — Infrastructure Model
 First check reference configuration in [[Reference Architecture/EDGE_INFERENCE_IMMERSION_0.5MW|RA-001]] or [[Reference Architecture/EDGE_INFERENCE_DLC_1.2MW|RA-002]]
 Then determine:
 
-Container configuration  
-power distribution  
+Container configuration
+power distribution
 cooling topology
 
-NOTICE: 
+**Then — Third-Party Accessories Lookup (MANDATORY):**
+ATS MUST check [[KB/AI Agent/Workspace-Engineer/KB/3RD-PARTY/3rd Party List.md|KB/3RD-PARTY]] for each zone being configured. See [[KB/AI Agent/Workspace-Engineer/AGENTS/ATS.md|ATS.md]] **Third-Party Accessories — KB Lookup Rule** section for details. Select qualified products based on IT Zone type, site conditions, and redundancy requirements.
+
+NOTICE:
 - IT ZONE DO NOT OFFER N+1 or 2N, EACH CONTAINER WORKS INDEPENDENTLY
 - COOLING ZONE  DO NOT OFFER N+1 or 2N, EACH COOLING DEVICE WORKS WITH ONE IT ZONE DEVICE
 - POWER ZONE CAN USE N+1 or 2N. HOWEVER THIS REQUIRS ADDITIONAL SWITCHGEAR
@@ -298,6 +301,52 @@ Engineering Processes
 Engineering Tools
 
 ATS must reference knowledge modules when making decisions.
+
+---
+
+# Third-Party Accessories — KB Lookup Rule
+
+⚠️ **CRITICAL: Before configuring ANY Cooling Zone, Power Zone, or Network Zone, ATS MUST check the KB third-party product library.**
+
+## Lookup Requirement
+
+When creating a configuration, ATS must always consult:
+
+[[KB/AI Agent/Workspace-Engineer/KB/3RD-PARTY/3rd Party List.md|KB/3RD-PARTY/3rd Party List]]
+
+This is the master index for all qualified third-party products. ATS must then drill into the relevant sub-folder based on the system zone being configured.
+
+## Zone-to-KB Mapping
+
+| Zone Being Configured | KB Path to Consult | Key Decision |
+|-----------------------|-------------------|-------------|
+| **Cooling Zone** | [[KB/3RD-PARTY/COOLING/COOLING_SYSTEM_SOLUTION.md\|KB/3RD-PARTY/COOLING/]] | Select dry cooler + DX OR heat pump based on site conditions |
+| **Power Zone** | [[KB/3RD-PARTY/POWER/POWER_SYSTEMS_SOLUTION.md\|KB/3RD-PARTY/POWER/]] | Select UPS (EATON), BESS (Tesla/国轩), or diesel based on site requirements |
+| **Network Zone** | [[KB/3RD-PARTY/NETWORK/PRODUCTS_NETWORK.md\|KB/3RD-PARTY/NETWORK/]] | Select structured cabling and switching architecture |
+
+## Selection Logic
+
+ATS selects third-party products based on:
+
+1. **IT Zone type** (AC40 / DC45 / A32) — match capacity and interface compatibility
+2. **Site environmental conditions** — ambient temperature, water availability, space constraints
+3. **Redundancy requirements** — N / N+1 / 2N as applicable
+4. **ESG and operational constraints** — urban vs. remote, noise, emissions
+
+## Example: Cooling Zone Selection
+
+> **Scenario:** Project requires 2× AC40 units at a site with ambient temp 30°C, limited water access.
+
+1. Check [[KB/3RD-PARTY/COOLING/COOLING_SYSTEM_SOLUTION.md|KB/COOLING_SYSTEM_SOLUTION]] → confirms dry cooler + DX is mandatory
+2. Check [[KB/3RD-PARTY/COOLING/DRYCOOL_with_DX.md|KB/DRYCOOL_with_DX]] → select supplier (e.g., 上海泰铂 or 三河同飞) based on capacity match
+3. Result: 2× Hybrid Cooling System (600kW class), dry cooler + DX configuration
+
+## Rules
+
+- ATS must use **only** products listed in the KB third-party library.
+- If a required product is NOT in the KB, ATS must flag this and escalate before proceeding.
+- Product selection must be documented in the project record with the chosen supplier and model.
+- Manufacturing constraints (e.g., 广东惠集 =箱体 only, 惟远能源 =标准件 only) must be respected — see [[KB/3RD-PARTY/3rd Party List.md|KB/3RD-PARTY/3rd Party List]] Section 5.
 
 ---
 
