@@ -3,6 +3,8 @@ tags:
   - #workspace/engineer
   - #type/reference
   - #domain/power
+Supplier Name: EATON
+Category: UPS
 ---
 
 # EATON 9395XR 系列 UPS 产品知识文档

@@ -17,7 +17,7 @@ tags:
 | **AC40** | EATON 9395XR-600 | 4 UPM | 600kW | ~10 分钟 |
 | **DC45** | EATON 9395XR-1500 | 10 UPM | 1500kW | ~8 分钟 |
 
-参考：[[KB/3RD-PARTY/POWER/UPS_EATON_9395XR.md|KB/UPS_EATON_9395XR]]
+参考：[[KB/AI Agent/Workspace-Engineer/KB/3RD-PARTY/Buildin/UPS_EATON_9395XR|KB/UPS_EATON_9395XR]]
 
 ### BESS 连接方式
 Grid → BESS → IT Zone → IT

@@ -254,6 +254,61 @@ Overly complex electrical systems should be avoided unless clearly justified.
 
 ---
 
+# KB Lookup & Verify — Power Zone / BESS
+
+⚠️ **CRITICAL: Before evaluating or designing any Power Zone or BESS system, Power Engineer MUST follow the two-step KB lookup process.**
+
+## Two-Step Lookup Process
+
+> **Step 1 → Guideline:** Read [[KB/3RD-PARTY/BESS/POWER_SYSTEMS_Guideline.md|KB/BESS/POWER_SYSTEMS_Guideline]] first — it defines BESS selection logic, UPS sizing rules, grid integration strategy, and scenario-based recommendations.
+> **Step 2 → Products:** Traverse [[KB/3RD-PARTY/BESS/\|KB/BESS/]] to verify individual BESS product parameters match the project requirements.
+
+## Step 1 — Guideline (Authoritative)
+
+The Guideline file is the authoritative source for:
+- BESS vs Diesel Generator selection logic
+- UPS sizing rules (AC40 → 9395XR-600; DC45 → 9395XR-1500)
+- Grid integration and BESS connection topology (Grid → BESS → IT Zone → IT)
+- Scenario-based recommendations (urban/ESG → BESS; remote/long outage → diesel)
+- Redundancy strategies (N / N+1 / 2N)
+
+**If a proposed product or configuration contradicts the Guideline, Power Engineer must flag this and escalate to ATS before proceeding.**
+
+## Step 2 — Product Verification
+
+Check [[KB/3RD-PARTY/BESS/\|KB/BESS/]] subfolder:
+
+| Product | Supplier | Key Specs to Verify | Reference |
+|---------|---------|-------------------|----------|
+| Megapack 2 XL | Tesla | 2hr: 1927kW/3854kWh; 4hr: 979kW/3916kWh; IP66; UL9540; 480V AC | [[KB/3RD-PARTY/BESS/TESLA MEGAPACK 2 XL.md\|KB/BESS/TESLA Megapack 2 XL]] |
+| ESC480-125P261-UL | 国轩高科 | 261kWh; 125kW PCS; 液冷; IP55; 60Hz | [[KB/3RD-PARTY/BESS/Gotion ESC480-125P261-UL.md\|KB/BESS/Gotion ESC480]] |
+
+Also verify built-in UPS in IT Zone:
+| IT Zone | UPS Model | Reference |
+|---------|----------|----------|
+| AC40 | EATON 9395XR-600 (4×150kW) | [[KB/3RD-PARTY/Buildin/UPS_EATON_9395XR.md\|KB/UPS_EATON_9395XR]] |
+| DC45 | EATON 9395XR-1500 (10×150kW) | [[KB/3RD-PARTY/Buildin/UPS_EATON_9395XR.md\|KB/UPS_EATON_9395XR]] |
+
+## Verification Checklist
+
+Before finalizing any Power Zone design, Power Engineer must confirm:
+
+- [ ] UPS capacity meets IT load / PF × 1.2 minimum (built into IT Zone — verify model correct)
+- [ ] BESS sizing adequate for required backup duration and IT load
+- [ ] BESS connection topology follows Grid → BESS → IT Zone → IT
+- [ ] Scenario recommendation from Guideline aligns with site conditions
+- [ ] Grid interaction strategy documented
+- [ ] Redundancy level appropriate (N / N+1 / 2N)
+- [ ] No conflicts with Guideline mandatory rules
+
+## Rules
+
+- Only use BESS products listed in the KB BESS folder.
+- UPS model is fixed by IT Zone type — no substitution allowed.
+- Escalate to ATS if no KB BESS product meets project requirements.
+
+---
+
 # Engineering Warning Conditions
 
 Power Engineer must raise warnings if:

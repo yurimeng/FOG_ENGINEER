@@ -3,6 +3,8 @@ tags:
   - #workspace/engineer
   - #type/reference
   - #domain/cooling
+Supplier Name:
+Category: Cooling System
 ---
 
 # MDC Cooling Zone — 模块化数据中心冷却系统标准方案

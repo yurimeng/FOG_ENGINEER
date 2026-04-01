@@ -124,7 +124,7 @@ Transformer → Switchgear → [Power Zone: BESS / Generator]
 | **Grid + UPS + 柴油发电机** | 偏远地区 / 长时备电需求（>8h）| 机械发电、长时间运行 |
 | **Grid + UPS + BESS + 小型柴油** | 极端高可靠性需求 | BESS 覆盖瞬态 + 柴油兜底 |
 
-> 参考：[[KB/3RD-PARTY/POWER/POWER_SYSTEMS_SOLUTION.md|KB/POWER_SYSTEMS_SOLUTION]]
+> 参考：[[POWER_SYSTEMS_Guideline|KB/POWER_SYSTEMS_SOLUTION]]
 
 ---
 
@@ -166,7 +166,7 @@ Transformer → Switchgear → [Power Zone: BESS / Generator]
 
 网络设备由外部集成商提供（如"引澜"等），MDC 提供标准机柜空间和电源接口。
 
-参考：[[KB/3RD-PARTY/NETWORK/PRODUCTS_NETWORK.md|KB/PRODUCTS_NETWORK]]
+参考：[[KB/AI Agent/Workspace-Engineer/KB/3RD-PARTY/NETWORK/PRODUCTS_NETWORK|KB/PRODUCTS_NETWORK]]
 
 ---
 

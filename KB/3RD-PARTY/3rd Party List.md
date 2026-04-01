@@ -3,11 +3,13 @@ tags:
   - #workspace/engineer
   - #type/reference
   - #domain/supplier
+Supplier Name:
+Category: Reference
 ---
 
 # 3rd Party List — 第三方产品和解决方案参考清单
 
-版本：V1.1（2026-03-29 统一命名版）
+版本：V1.2（2026-04-01 新增 Guideline 体系 + BESS 独立产品文档）
 
 ---
 
@@ -20,15 +22,24 @@ tags:
 
 ## 2. Cooling Zone — 冷却系统
 
-### 2.1 标准散热方案
+> ⚠️ **引用规则：** 选型前必须先查阅 [[KB/3RD-PARTY/COOLING/COOLING_SYSTEM_SOLUTION.md|KB/COOLING_SYSTEM_SOLUTION]]（冷却系统 Guideline），按其选型原则遍历子文件夹产品，最终组合完整解决方案。
 
-| 类别 | 产品 | 说明 | 参考文档 |
-|------|------|------|---------|
-| **散热方案（标准）** | 干冷器 + DX | MDC Cooling Zone 标准配置，所有 IT Zone 必须 | [[KB/3RD-PARTY/COOLING/COOLING_SYSTEM_SOLUTION.md|KB/COOLING_SYSTEM_SOLUTION]] |
-| **散热方案（替代）** | 热泵 | 可替代 DX，同时加热和制冷 | [[KB/3RD-PARTY/COOLING/COOLING_SYSTEM_SOLUTION.md|KB/COOLING_SYSTEM_SOLUTION]] |
-| **详细方案** | 干冷器 + DX 双冷源机组 | MDC Cooling Zone 标准散热机组规格 | [[KB/3RD-PARTY/COOLING/DRYCOOL_with_DX.md|KB/DRYCOOL_with_DX]] |
+### 2.1 Guideline（选型总则）
 
-### 2.2 冷却设备供应商参考
+| 文件 | 说明 |
+|------|------|
+| [[KB/3RD-PARTY/COOLING/COOLING_SYSTEM_SOLUTION.md\|KB/COOLING_SYSTEM_SOLUTION]] | 冷却 Zone 选型原则、架构对比、环境与 IT Zone 匹配规则 |
+
+### 2.2 产品目录
+
+| 类别 | 产品 | 供应商 | 说明 | 参考文档 |
+|------|------|--------|------|---------|
+| **散热方案（标准）** | 干冷器 + DX | — | MDC Cooling Zone 标准配置，所有 IT Zone 必须 | [[KB/3RD-PARTY/COOLING/COOLING_SYSTEM_SOLUTION.md\|KB/COOLING_SYSTEM_SOLUTION]] |
+| **散热方案（替代）** | 热泵 | — | 可替代 DX，同时加热和制冷 | [[KB/3RD-PARTY/COOLING/COOLING_SYSTEM_SOLUTION.md\|KB/COOLING_SYSTEM_SOLUTION]] |
+| **详细方案** | 干冷器 + DX 双冷源机组 | 泰铂 | MDC Cooling Zone 标准散热机组规格 | [[KB/3RD-PARTY/COOLING/DRYCOOL_with_DX.md\|KB/DRYCOOL_with_DX]] |
+| **集成冷站** | 600kW 集成冷站 | 三河同飞 | 一体化热泵冷源，含压缩机、水泵、控制系统 | [[KB/3RD-PARTY/COOLING/Hybrid Cooler 600kW - 同飞.md\|KB/Hybrid Cooler 同飞]] |
+
+### 2.3 冷却设备供应商参考
 
 | 品牌/供应商 | 产品类型 | 备注 |
 |------------|---------|------|
@@ -42,29 +53,37 @@ tags:
 
 ## 3. Power Zone — 电力系统
 
-### 3.1 UPS（内置于 IT Zone）
+> ⚠️ **引用规则：** 选型前必须先查阅 [[KB/3RD-PARTY/BESS/POWER_SYSTEMS_Guideline.md|KB/BESS/POWER_SYSTEMS_Guideline]]（电力系统 Guideline），按其选型原则遍历子文件夹产品，最终组合完整解决方案。
+
+### 3.1 Guideline（选型总则）
+
+| 文件 | 说明 |
+|------|------|
+| [[KB/3RD-PARTY/BESS/POWER_SYSTEMS_Guideline.md\|KB/BESS/POWER_SYSTEMS_Guideline]] | BESS 选型原则、UPS 选型逻辑、冗余策略、场景推荐 |
+
+### 3.2 UPS（内置于 IT Zone）
 
 | IT Zone | UPS 型号 | 模块数 | 每模块 | 总功率 | 发热量 | 参考文档 |
 |---------|----------|--------|--------|--------|--------|---------|
-| **AC40** | EATON 9395XR-600 | 4 UPM | 150kW | 600kW | ~7.9kW | [[KB/3RD-PARTY/POWER/UPS_EATON_9395XR.md|KB/UPS_EATON_9395XR]] |
-| **DC45** | EATON 9395XR-1500 | 10 UPM | 150kW | 1500kW | ~46.9kW | [[KB/3RD-PARTY/POWER/UPS_EATON_9395XR.md|KB/UPS_EATON_9395XR]] |
+| **AC40** | EATON 9395XR-600 | 4 UPM | 150kW | 600kW | ~7.9kW | [[KB/3RD-PARTY/Buildin/UPS_EATON_9395XR.md\|KB/UPS_EATON_9395XR]] |
+| **DC45** | EATON 9395XR-1500 | 10 UPM | 150kW | 1500kW | ~46.9kW | [[KB/3RD-PARTY/Buildin/UPS_EATON_9395XR.md\|KB/UPS_EATON_9395XR]] |
 
 > 注：UPS 型号数字代表总 UPS 功率（kW）。9395XR-600 ≠ 600kVA，而是 4×150kW = 600kW。
 
-### 3.2 电池系统
+### 3.3 电池系统
 
 | 品牌/型号 | 类型 | 每柜能量 | 每柜功率 | 适用 |
 |----------|------|---------|---------|------|
 | EATON 93LiG2（93Li92S-100Ah）| 磷酸铁锂 | 63.9kWh | 332kW | AC40 / DC45 |
 
-### 3.3 BESS / 储能系统
+### 3.4 BESS / 储能系统（独立产品文档）
 
 | 品牌/型号 | 类型 | 适用场景 | 参考文档 |
 |----------|------|---------|---------|
-| TESLA Megapack XL2 | 大型储能 | 城市边缘 / 高 ESG | [[KB/3RD-PARTY/POWER/POWER_SYSTEMS_SOLUTION.md|KB/POWER_SYSTEMS_SOLUTION]] |
-| 安徽国轩 | 储能（国产）| 成本优化 | [[KB/3RD-PARTY/POWER/POWER_SYSTEMS_SOLUTION.md|KB/POWER_SYSTEMS_SOLUTION]] |
+| TESLA Megapack 2 XL | 大型储能 | 城市边缘 / 高 ESG | [[KB/3RD-PARTY/BESS/TESLA MEGAPACK 2 XL.md\|KB/BESS/TESLA MEGAPACK 2 XL]] |
+| 国轩 ESC480-125P261-UL | 工商业储能一体机 | 成本优化 / 国产方案 | [[KB/3RD-PARTY/BESS/Gotion ESC480-125P261-UL.md\|KB/BESS/Gotion ESC480]] |
 
-### 3.4 电力设备
+### 3.5 电力设备
 
 | 品牌/供应商 | 产品 | 说明 |
 |------------|------|------|
@@ -75,11 +94,22 @@ tags:
 
 ## 4. Network Zone — 网络系统
 
+> ⚠️ **引用规则：** 选型前必须先查阅 [[KB/3RD-PARTY/NETWORK/AC40_NETWORK_Guideline.md|KB/NETWORK/AC40_NETWORK_Guideline]]（网络系统 Guideline），按其选型原则遍历子文件夹产品，最终组合完整解决方案。
+
+### 4.1 Guideline（选型总则）
+
+| 文件 | 说明 |
+|------|------|
+| [[KB/3RD-PARTY/NETWORK/AC40_NETWORK_Guideline.md\|KB/NETWORK/AC40_NETWORK_Guideline]] | 网络架构原则、三层模型、交换机配置、安全要求 |
+
+### 4.2 产品目录
+
 | 类别 | 供应商/产品 | 说明 | 参考文档 |
 |------|------------|------|---------|
-| **布线系统** | 引澜（需求已确认）| 结构化布线，商用成熟产品，可直接采购 | [[KB/3RD-PARTY/NETWORK/PRODUCTS_NETWORK.md|KB/PRODUCTS_NETWORK]] |
-| **网络架构** | 三层网络模型 | 接入层/汇聚层/核心层 | [[KB/3RD-PARTY/NETWORK/PRODUCTS_NETWORK.md|KB/PRODUCTS_NETWORK]] |
-| **交换设备** | 按项目配置 | 支持 10G/25G/100G | [[KB/3RD-PARTY/NETWORK/PRODUCTS_NETWORK.md|KB/PRODUCTS_NETWORK]] |
+| **布线系统** | 引澜（需求已确认）| 结构化布线，商用成熟产品，可直接采购 | [[KB/3RD-PARTY/NETWORK/PRODUCTS_NETWORK.md\|KB/PRODUCTS_NETWORK]] |
+| **网络架构** | 三层网络模型 | 接入层/汇聚层/核心层 | [[KB/3RD-PARTY/NETWORK/AC40_NETWORK_Guideline.md\|KB/NETWORK_Guideline]] |
+| **交换设备** | 按项目配置 | 支持 10G/25G/100G | 按项目配置 |
+| **AC40 网络配置** | 参考配置 | AC40 集装箱网络端口定义及布线规范 | [[KB/3RD-PARTY/NETWORK/AC40_NETWORK_CONF.pdf\|KB/AC40_NETWORK_CONF.pdf]] |
 
 ---
 
@@ -108,5 +138,6 @@ tags:
 
 | 日期 | 版本 | 变更内容 |
 |------|------|---------|
+| 2026-04-01 | V1.2 | 新增 Guideline 体系；BESS 目录独立，添加 Tesla Megapack 2 XL 和国轩产品文档；各 Zone 增加 Guideline 引用规则；同步更新 KB 路径引用 |
 | 2026-03-29 | V1.1 | 统一命名结构；添加 UPS 型号（9395XR-600/1500）；增加冷却 Zone 标准配置说明 |
 | 初始版本 | V1.0 | 初始第三方产品清单 |

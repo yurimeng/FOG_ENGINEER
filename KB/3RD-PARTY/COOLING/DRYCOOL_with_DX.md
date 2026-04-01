@@ -3,6 +3,8 @@ tags:
   - #workspace/engineer
   - #type/reference
   - #domain/cooling
+Supplier Name: 泰铂（上海）环保科技股份有限公司
+Category: Dry Cooler + DX
 ---
 
 # MDC Cooling Zone — 干冷器 + DX 双冷源系统

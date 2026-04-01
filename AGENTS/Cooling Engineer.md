@@ -270,6 +270,55 @@ Environmental suitability evaluations
 
 ---
 
+# KB Lookup & Verify — Cooling Zone
+
+⚠️ **CRITICAL: Before evaluating or designing any Cooling Zone, Cooling Engineer MUST follow the two-step KB lookup process.**
+
+## Two-Step Lookup Process
+
+> **Step 1 → Guideline:** Read [[KB/3RD-PARTY/COOLING/COOLING_SYSTEM_SOLUTION.md|KB/COOLING_SYSTEM_SOLUTION]] first — it defines mandatory architecture rules, IT Zone matching requirements, and prohibited configurations.
+> **Step 2 → Products:** Traverse [[KB/3RD-PARTY/COOLING/\|KB/COOLING/]] to verify individual product parameters match the project requirements.
+
+## Step 1 — Guideline (Authoritative)
+
+The Guideline file is the authoritative source for:
+- Permitted cooling architectures (dry cooler + DX mandatory; pure dry cooler prohibited)
+- DX activation threshold (≥28°C ambient)
+- IT Zone to Cooling Zone matching rules (AC40, DC45, A32 each have specific capacity requirements)
+- Hybrid Cooling System design principles
+- Environmental operating ranges
+
+**If a proposed product or configuration contradicts the Guideline, Cooling Engineer must flag this and escalate to ATS before proceeding.**
+
+## Step 2 — Product Verification
+
+Check [[KB/3RD-PARTY/COOLING/\|KB/COOLING/]] subfolder:
+
+| Product | Supplier | Key Specs to Verify | Reference |
+|---------|---------|-------------------|----------|
+| DRYCOOL_with_DX | 泰铂 | 600kW class; IP55; C3防腐; 涡旋压缩机 | [[KB/3RD-PARTY/COOLING/DRYCOOL_with_DX.md\|KB/DRYCOOL_with_DX]] |
+| Hybrid Cooler 600kW | 三河同飞 | 600kW; 螺杆压缩机; -15°C~45°C; IP54 | [[KB/3RD-PARTY/COOLING/Hybrid Cooler 600kW - 同飞.md\|KB/Hybrid Cooler 同飞]] |
+
+## Verification Checklist
+
+Before finalizing any Cooling Zone design, Cooling Engineer must confirm:
+
+- [ ] Cooling capacity ≥ IT Zone heat load with margin
+- [ ] DX system present (pure dry cooler = prohibited)
+- [ ] Supplier and model documented
+- [ ] IT Zone to Cooling Zone 1:1 pairing maintained
+- [ ] Environmental temperature range covers site conditions
+- [ ]防护等级 suits deployment environment (IP55 min recommended)
+- [ ] No conflicts with Guideline mandatory rules
+
+## Rules
+
+- Only use products listed in the KB cooling folder.
+- All product parameters must match the Guideline's IT Zone matching table.
+- Escalate to ATS if no KB product meets project requirements.
+
+---
+
 # Engineering Warning Conditions
 
 Cooling Engineer must raise warnings when:

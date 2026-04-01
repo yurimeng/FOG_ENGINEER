@@ -1,3 +1,12 @@
+---
+tags:
+  - #workspace/engineer
+  - #type/reference
+  - #domain/cooling
+Supplier Name: 三河同飞
+Category: Hybrid Cooler
+---
+
 600kW集成冷站 - 技术参数清单
 
 Supplier: 同飞
