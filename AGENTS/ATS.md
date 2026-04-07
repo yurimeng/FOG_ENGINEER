@@ -1,8 +1,8 @@
 ---
 tags:
-  - #workspace/engineer
-  - #type/agent
-  - #process/ats
+  - 
+  - 
+  -
 ---
 
 # # ATS — Architecture & Technical Sales
