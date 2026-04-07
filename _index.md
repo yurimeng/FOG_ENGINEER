@@ -84,10 +84,9 @@ tags:
 |------|------|
 | [[KB/POWER_LOAD]] | IT 负载 vs 整体电力负荷定义（**必读**）|
 | [[KB/3RD-PARTY/Buildin/UPS_EATON_9395XR]] | UPS 规格（9395XR-600 / 9395XR-1500）|
-| [[KB/3RD-PARTY/BESS/POWER_SYSTEMS_Guideline]] | 电力系统选型总则 |
+| [[KB/3RD-PARTY/BESS/POWER_SYSTEMS_Guideline]] | 电力系统选型总则（含 BESS vs 柴油机对比）|
 | [[KB/3RD-PARTY/BESS/TESLA MEGAPACK 2 XL]] | Tesla 大型储能 |
 | [[KB/3RD-PARTY/BESS/Gotion ESC480-125P261-UL]] | 国轩工商业储能 |
-| [[KB/3RD-PARTY/BESS/POWER_SYSTEMS_Guideline 1]] | 电力系统知识（BESS vs 柴油机对比）|
 
 ### 冷却系统（KB/3RD-PARTY/COOLING）
 
@@ -166,12 +165,19 @@ tags:
 
 ## 文件路径规范
 
+**Wikilink 引用规则：**
+
+- 链接目标使用完整相对路径（从 vault 根目录 `Works_Public/` 起）
+- 别名（`|`之后）使用简短代号（如 `KB/...`、`PROCESS/...`），**不要在别名中携带完整路径层级**
+- 禁止在链接中使用 vault 外部路径（如 `KB/AI Agent/Workspace-Engineer/...`）
+
 ```
 ✅ 正确示例：
 [[KB/3RD-PARTY/COOLING/COOLING_SYSTEM_SOLUTION|KB/COOLING_SYSTEM_SOLUTION]]
 [[KB/3RD-PARTY/Buildin/UPS_EATON_9395XR|KB/UPS_EATON_9395XR]]
+别名仅用短代号，不重复完整路径。
 
 ❌ 错误示例（已废弃）：
-[[KB/COOLING_SYSTEM_SOLUTION|KB/COOLING_SYSTEM_SOLUTION]]
 [[KB/AI Agent/Workspace-Engineer/KB/3RD-PARTY/...]]
+路径中包含 vault 外部的文件夹名（Workspace-Engineer 等）。
 ```

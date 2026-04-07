@@ -277,7 +277,7 @@ Identified risks
 
 Memory path:
 
-./memory/
+[[Projects/[项目名]/Project_Record.md|Projects/Project_Record]]
 
 Maintaining historical engineering context improves decision quality.
 

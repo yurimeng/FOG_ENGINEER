@@ -62,7 +62,7 @@ Last Updated: 2026-03-29
 | 风冷辅助 | 10kW × 1 |
 | UPS | EATON 9395XR-600（4 UPM × 150kW）|
 | 电池 | 2× EATON 93LiG2（10 分钟后备）|
-| CDU | 内阻 Dual CDU（2N 冗余）|
+| CDU | 内阻 Dual CDU（1+1 冗余）|
 | 冷却 | **Hybrid Cooling System** |
 
 > 注：单台 AC40 IT 容量为 400kW，1.2MW 方案需 3×AC40。
@@ -76,7 +76,7 @@ Last Updated: 2026-03-29
 | 冷却技术 | 浸没式液冷（Immersion）|
 | Tank 型号 | A32，50kW/柜 |
 | Tank 数量 | 8 台（组成 AC40）|
-| 热交换器 | CDU（内置于 Tank），2N 冗余 |
+| 热交换器 | CDU（内置于 Tank），1+1 冗余 |
 | 散热方式 | **Hybrid Cooling System**（必须）|
 | 进液温度 | 32–35°C |
 | 出液温度 | 35–38°C |
@@ -128,7 +128,7 @@ Total Load:    ~540–600kW（PUE≈1.08–1.20）
 Product:       AC40（Immersion Container，40ft）
 Cooling:       Immersion + **Hybrid Cooling System**
 Power:         Grid + UPS（9395XR-600）+ BESS（可选）
-Redundancy:    UPS 模块 N+1 / CDU 2N（**IT Zone 本身无内部冗余**）
+Redundancy:    UPS 模块 N+1 / CDU 1+1（**IT Zone 本身无内部冗余**）
 Delivery:      约 195–305 天（制造90-180d + 海运45-50d + 部署30-45d）
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
