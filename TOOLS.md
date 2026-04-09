@@ -49,7 +49,7 @@ KNOWLEDGE_BASE > PROCESS > TOOLS > Memory
 
 - 项目名称
 - 地点
-- **产品型号与数量**（A32 / AC40 / DC45）
+- **产品型号与数量**（A32 / AC40 / AC45 / DC45）
 - **IT 负载（kW）**
 - **整体电力负荷（kW）**
 - PUE 参考范围

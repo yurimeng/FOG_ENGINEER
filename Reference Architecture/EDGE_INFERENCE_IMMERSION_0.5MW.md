@@ -88,8 +88,8 @@ Last Updated: 2026-03-29
 | 项目 | 参数 |
 |------|------|
 | 电网连接 | Grid Utility |
-| UPS | EATON 9395XR-600（4 UPM，600kW），内置于 AC40 |
-| 电池后备 | 2× EATON 93LiG2，约 10 分钟 |
+| UPS | EATON 9395XR-600（4 UPM，600kW），**外置（客户自备）**，AC40 本体不含 UPS |
+| UPS 电池 | 2× EATON 93LiG2，**外置（客户自备）**，约 10 分钟后备 |
 | 储能（BESS）| 1MW BESS（可选，Grid 不稳定地区推荐）|
 | 功率路径 | Grid → BESS → Switchgear → AC40 |
 

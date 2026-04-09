@@ -9,11 +9,68 @@ tags:
 
 Workspace: Engineer Workspace
 Product: Fog Computing Engineering AI
-Version: v1.4.0
+Version: v1.5.0
 Release Date: 2026-04-09
 Status: Active Development
 
-Reference backup: ../KB_backup_20260409
+Reference backup: ../KB_backup_20260409_v1.5.0
+
+---
+
+## v1.5.0 — New Product: AC45 45ft Immersion Container (2026-04-09)
+
+### 新增产品：AC45
+
+**AC45 — All-In-One Immersion Container（45ft，UL Compliant）**
+
+AC45 是 45ft 浸没式液冷集装箱，IT 容量 400kW（与 AC40 相同），核心差异：
+
+| 差异项 | AC45 | AC40 | DC45 |
+|--------|------|------|------|
+| 集装箱规格 | **45ft** | 40ft | 45ft |
+| UPS 放置 | **内置（专用电力舱）** | **外置（客户自备）** | 内置 |
+| UPS 电池放置 | 内置 | **外置（客户自备）** | 内置 |
+| UPS 电池后备时间 | **~20 分钟** | ~10 分钟（客户自备）| ~8 分钟 |
+| UL 合规 | **✅ 是** | ❌ 否 | ✅ 是 |
+
+### 重要更正：UPS 状态
+
+> **⚠️ 本次更新同步更正了 AC40 UPS 状态的错误描述。**
+> - **AC40：UPS 及 UPS 电池外置（客户自备）**，AC40 本体不含 UPS
+> - **AC45：UPS 及 UPS 电池内置**于专用电力舱，UL 合规
+> - **DC45：UPS 及 UPS 电池内置**，UL 合规
+
+### AC45 核心参数
+
+| 项目 | 参数 |
+|------|------|
+| IT 容量 | 400kW（8×A32 浸没槽）|
+| 冷却类型 | 浸没式 |
+| UPS | EATON 9395XR-600（4×150kW = 600kW）|
+| UPS 放置 | 内置（专用电力舱，UL 合规）|
+| UPS 电池 | 2×93LiG2，约 20 分钟后备（内置）|
+| 合规 | UL 认证 |
+
+> ⚠️ **UPS 电池 vs BESS 电池：** 本次更新全线增加了 UPS 电池与 BESS 电池的区分说明。UPS 电池（93LiG2）= 分钟级瞬时切换后备；BESS = 小时级独立储能系统，两者完全不同。
+
+### 更新的关联文档
+
+| 文件 | 变更内容 |
+|------|---------|
+| `KB/PRODUCTS_AC45.md` | **新建**，完整产品文档，含与 AC40/DC45 对比表 |
+| `KB/3RD-PARTY/3rd Party List.md` | UPS 对比表新增 AC45 行，含后备时间列 |
+| `README.md` | 产品速查表新增 AC45 行；目录树新增 PRODUCTS_AC45.md；禁止事项补充 AC45 |
+| `VERSION.md` | 新增 v1.5.0 版本记录 |
+| `KB/PRODUCTS_AC40.md` | 补充 AC45 vs AC40 vs DC45 三方对比 |
+| `KB/PRODUCTS_DC45.md` | 补充 AC45 vs DC45 关系描述 |
+| `KB/PRODUCTS_A32.md` | 关系表补充 AC45 |
+| `KB/PRODUCTS_MDC.md` | IT Zone 表格补充 AC45；冷却 Zone 配置补充 AC45 |
+
+### 选型原则更新
+
+- AC40 vs AC45 选型：优先 AC40（成本/尺寸更低）；需要 UL 合规 → 选择 AC45
+- AC45 冷却架构与 AC40 完全一致（Hybrid Cooling System）
+- AC45 电力架构：9395XR-600 + 2×93LiG2，置于专用电力舱
 
 ---
 
@@ -118,11 +175,12 @@ Reference backup: ../KB_backup_20260409
 - 强化不提供价格原则
 
 ### Key Numbers Now Standardized
-| 产品 | IT容量 | UPS型号 | 电池后备 | PUE |
-|------|--------|---------|---------|-----|
-| A32 | 45–50kW | 外置 | 外置 | ~1.03–1.12 |
-| AC40 | 400kW | 9395XR-600（4×150kW）| 2×93LiG2（~10min）| ~1.08–1.20 |
-| DC45 | 1200kW | 9395XR-1500（10×150kW）| 3×93LiG2（~8min）| ~1.12–1.35 |
+| 产品 | IT容量 | UPS型号 | UPS放置 | UPS电池后备 | UL | PUE |
+|------|--------|---------|---------|-----------|-----|-----|
+| A32 | 45–50kW | 外置 | 外置（客户自备）| 外置 | — | ~1.03–1.12 |
+| AC40 | 400kW | 9395XR-600（4×150kW）| 外置（客户自备）| 2×93LiG2（~10min，客户自备）| ❌ | ~1.08–1.20 |
+| AC45 | 400kW | 9395XR-600（4×150kW）| 内置（专用电力舱）| 2×93LiG2（~20min）| ✅ | ~1.08–1.20 |
+| DC45 | 1200kW | 9395XR-1500（10×150kW）| 内置 | 3×93LiG2（~8min）| ✅ | ~1.12–1.35 |
 
 ## v1.1.0 — Team Refactor (2026-03-29)
 

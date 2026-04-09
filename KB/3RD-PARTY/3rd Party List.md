@@ -15,7 +15,7 @@ Category: Reference
 
 ## 1. 分类体系说明
 
-在 MDC 体系中，**IT Zone**（A32 / AC40 / DC45）是公司自主产品。
+在 MDC 体系中，**IT Zone**（A32 / AC40 / AC45 / DC45）是公司自主产品。
 **Cooling Zone**、**Power Zone** 和 **Network Zone** 主要采用第三方成熟产品。
 
 ---
@@ -75,22 +75,24 @@ Category: Reference
 |------|------|
 | [[KB/3RD-PARTY/BESS/POWER_SYSTEMS_Guideline]] | 电力 Zone 选型原则：BESS 选型逻辑、UPS 选型、冗余策略、场景推荐 |
 
-### 4.2 内置 UPS（IT Zone 标配）
+### 4.2 UPS（IT Zone 标配）
 
-> UPS 内置于 AC40/DC45 集装箱，无需外采。
+| IT Zone | UPS 型号 | 模块数 | 每模块 | 总功率 | 发热量 | UPS 放置 | UPS电池后备时间 | 参考文档 |
+|---------|---------|--------|--------|--------|--------|---------|--------------|---------|
+| **AC40** | EATON 9395XR-600 | 4 UPM | 150kW | 600kW | ~7.9kW | **外置（客户自备）** | ~10 分钟（客户自备 2×93LiG2） | [[KB/3RD-PARTY/UPS/UPS_EATON_9395XR]] |
+| **AC45** | EATON 9395XR-600 | 4 UPM | 150kW | 600kW | ~7.9kW | 内置（专用电力舱），UL 合规 | ~20 分钟（内置 2×93LiG2） | [[KB/3RD-PARTY/UPS/UPS_EATON_9395XR]] |
+| **DC45** | EATON 9395XR-1500 | 10 UPM | 150kW | 1500kW | ~46.9kW | 内置，UL 合规 | ~8 分钟（内置 3×93LiG2） | [[KB/3RD-PARTY/UPS/UPS_EATON_9395XR]] |
 
-| IT Zone | UPS 型号 | 模块数 | 每模块 | 总功率 | 发热量 | 参考文档 |
-|---------|---------|--------|--------|--------|--------|---------|
-| **AC40** | EATON 9395XR-600 | 4 UPM | 150kW | 600kW | ~7.9kW | [[KB/3RD-PARTY/UPS/UPS_EATON_9395XR]] |
-| **DC45** | EATON 9395XR-1500 | 10 UPM | 150kW | 1500kW | ~46.9kW | [[KB/3RD-PARTY/UPS/UPS_EATON_9395XR]] |
+> 注：UPS 型号数字代表总 UPS 功率（kW）。9395XR-600 ≠ 600kVA，而是 4×150kW = 600kW。**AC40 UPS 及 UPS电池需客户外置自备；AC45/DC45 UPS 及 UPS电池内置于集装箱。**
 
-> 注：UPS 型号数字代表总 UPS 功率（kW）。9395XR-600 ≠ 600kVA，而是 4×150kW = 600kW。
+> ⚠️ **UPS 电池 vs BESS 电池：** 上表中"UPS电池后备"指 UPS 配套的 93LiG2 磷酸铁锂电池柜（分钟级瞬时切换后备）。BESS（如 Tesla Megapack / 国轩）是独立大型储能系统（小时级供电），两者完全不同。
 
-### 4.3 电池系统
+### 4.3 UPS 电池系统
 
 | 品牌/型号 | 类型 | 每柜能量 | 每柜功率 | 适用 |
 |----------|------|---------|---------|------|
-| EATON 93LiG2（93Li92S-100Ah）| 磷酸铁锂 | 63.9kWh | 332kW | AC40 / DC45 |
+|----------|------|---------|---------|------|
+| EATON 93LiG2（93Li92S-100Ah）| 磷酸铁锂 | 63.9kWh | 332kW | AC45 / DC45（内置）；AC40（客户自备，外置）|
 
 ### 4.4 BESS / 储能系统
 

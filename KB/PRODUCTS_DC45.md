@@ -100,7 +100,8 @@ Grid / BESS → PDC → UPS (EATON 9395XR-1500) → PDC → Busbar
 ```
 
 说明：
-- UPS 内置于 DC45，提供 8 分钟后备
+- UPS 内置于 DC45，提供约 8 分钟 UPS电池后备
+- UPS电池：3×93LiG2，内置于 DC45（与 BESS 电池完全不同）
 - Busbar 采用 SIEMENS 1600A 封闭式母线
 - TOU 每路 250A 为单机柜供电
 - BESS 连接方式：Grid → BESS → DC45（Power Zone 负责）
@@ -146,10 +147,13 @@ Grid / BESS → PDC → UPS (EATON 9395XR-1500) → PDC → Busbar
 
 ## 10. UPS 型号说明
 
-| 产品 | UPS 型号 | 模块数 | 每模块 | 总 UPS 功率 | 发热量 |
-|------|----------|--------|--------|-----------|--------|
-| **AC40** | EATON 9395XR-600 | 4 UPM | 150kW | 600kW | ~7.9kW |
-| **DC45** | EATON 9395XR-1500 | 10 UPM | 150kW | 1500kW | ~46.9kW |
+| 产品 | UPS 型号 | 模块数 | 每模块 | 总 UPS 功率 | 发热量 | UPS 放置 | UPS 电池后备时间 |
+|------|----------|--------|--------|-----------|--------|---------|--------------|
+| **AC40** | EATON 9395XR-600 | 4 UPM | 150kW | 600kW | ~7.9kW | **外置（客户自备）** | ~10 分钟（客户自备 2×93LiG2） |
+| **AC45** | EATON 9395XR-600 | 4 UPM | 150kW | 600kW | ~7.9kW | 内置（专用电力舱），UL 合规 | ~20 分钟（内置 2×93LiG2） |
+| **DC45** | EATON 9395XR-1500 | 10 UPM | 150kW | 1500kW | ~46.9kW | 内置，UL 合规 | ~8 分钟（内置 3×93LiG2） |
 
-电池型号均为 **EATON 93LiG2**（93Li92S-100Ah-3PBFA，332kW/柜）。
+> ⚠️ **UPS 电池 vs BESS 电池：** 上表中"UPS电池后备"指 UPS 配套的 93LiG2 磷酸铁锂电池柜（分钟级瞬时切换后备）。BESS（如 Tesla Megapack / 国轩）是独立大型储能系统（小时级供电），两者完全不同。
+
+UPS电池型号均为 **EATON 93LiG2**（93Li92S-100Ah-3PBFA，332kW/柜）。
 参考：[[KB/3RD-PARTY/UPS/UPS_EATON_9395XR|KB/UPS_EATON_9395XR]]

@@ -74,7 +74,7 @@ Last Updated: 2026-03-29
 | 输入电压 | 415V AC / 3P + N + PE |
 | 频率 | 50/60Hz |
 | UPS | EATON 9395XR-1500（10 UPM，1500kW），内置于 DC45 |
-| 电池后备 | 3× EATON 93LiG2，约 8 分钟 |
+| UPS 电池 | 3× EATON 93LiG2，内置于 DC45，约 8 分钟后备（**UPS 电池**，与 BESS 电池完全不同）|
 | BESS（推荐）| Grid → BESS → DC45 |
 | 母线 | SIEMENS 1600A 封闭式母线 |
 | 分支方式 | Tap-off 插接，每机柜 250A |

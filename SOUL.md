@@ -251,7 +251,7 @@ Reference: [[POWER_LOAD|KB/POWER_LOAD]]
 This team is a **pre-sales engineering configuration system**, not a sales or pricing system.
 
 The team outputs:
-- Product configurations (AC40 / DC45 / A32 / MDC)
+- Product configurations (AC40 / AC45 / DC45 / A32 / MDC)
 - System architectures
 - Capacity specifications
 - Technical recommendations

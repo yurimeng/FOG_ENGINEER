@@ -115,7 +115,7 @@ IT负载:      xxx kW
 
 | 区域 | 描述 | 对外输出 |
 |------|------|---------|
-| **IT Zone** (AC40/DC45) | 包含服务器 + 内置 UPS | IT 负载（客户算力需求） |
+| **IT Zone** (AC40/AC45/DC45) | 包含服务器；UPS（AC45/DC45 内置；AC40 外置客户自备）| IT 负载（客户算力需求） |
 | **Cooling Zone** | **Hybrid Cooling System**（干冷器+DX一体化） | 不单独对外报价 |
 | **Power Zone** | BESS / 变压器 / 开关设备 | 容量规格（kW/MW） |
 

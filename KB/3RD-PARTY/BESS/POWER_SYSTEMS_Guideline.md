@@ -10,14 +10,18 @@ tags:
 # Power Systems Guideline — 电力系统设计原则
 
 ## 0. Power设计原则
-- IT ZONE自带UPS，提供5–10分钟切换（UPS内置于AC40/DC45）
+- AC45/DC45：UPS及UPS电池内置于集装箱，提供分钟级瞬时切换后备
+- AC40：UPS及UPS电池**需客户外置自备**，AC40 本体不含 UPS
 
 ### UPS 型号标准
 
-| IT Zone | UPS 型号 | 模块数 | 总功率 | 后备时间 |
-|---------|----------|--------|--------|---------|
-| **AC40** | EATON 9395XR-600 | 4 UPM | 600kW | ~10 分钟 |
-| **DC45** | EATON 9395XR-1500 | 10 UPM | 1500kW | ~8 分钟 |
+| IT Zone | UPS 型号 | 模块数 | 总功率 | UPS 放置 | UPS 电池后备时间 |
+|---------|----------|--------|--------|---------|--------------|
+| **AC40** | EATON 9395XR-600 | 4 UPM | 600kW | **外置（客户自备）** | ~10 分钟（客户自备 2×93LiG2）|
+| **AC45** | EATON 9395XR-600 | 4 UPM | 600kW | 内置（专用电力舱），UL 合规 | ~20 分钟（内置 2×93LiG2）|
+| **DC45** | EATON 9395XR-1500 | 10 UPM | 1500kW | 内置，UL 合规 | ~8 分钟（内置 3×93LiG2）|
+
+> ⚠️ **UPS 电池 vs BESS 电池：** 上表中"UPS电池"指 UPS 配套的 93LiG2 磷酸铁锂电池柜（分钟级瞬时切换后备）。BESS（如 Tesla Megapack / 国轩）是独立大型储能系统（小时级供电），两者完全不同。
 
 参考：[[KB/3RD-PARTY/UPS/UPS_EATON_9395XR|KB/UPS_EATON_9395XR]]
 
@@ -31,7 +35,7 @@ Grid → ATS → IT Zone → IT
       Generator
 
 ## 1. UPS选型逻辑
-- UPS容量 ≥ IT Load / PF × 1.2（已内置于AC40/DC45，无需额外选型）
+- UPS容量 ≥ IT Load / PF × 1.2（AC45/DC45 UPS已内置；AC40 UPS需客户按此规则外置选型）
 - UPS型号统一：AC40用9395XR-600，DC45用9395XR-1500
 - EATON 9395XR系列已具备UL认证
 
@@ -70,7 +74,7 @@ Grid → ATS → IT Zone → IT
 ## 6. BESS和柴油发电机的对比
 
 ### 6.1 系统级对比
-| 对比维度 | BESS 方案（Transformer → Switchgear → BESS → AC40(内置UPS)） | 柴油发电机方案（Grid + ATS + Generator） |
+| 对比维度 | BESS 方案（Transformer → Switchgear → BESS → IT Zone） | 柴油发电机方案（Grid + ATS + Generator） |
 |-----------|-------------------------------------------------------------|------------------------------------------|
 | 系统架构位置 | 串联在主供电路径 | 并联备用电源 |
 | 电源类型 | 电子电源（PCS逆变） | 机械发电（柴油发动机） |

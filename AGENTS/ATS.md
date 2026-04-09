@@ -236,7 +236,7 @@ ATS may generate the following outputs.
 Output the Qty of each modular. DO NOT BREAKDOWN EACH ITEMS.
 
 **Configuration Output (NOT pricing):**
-- Product model and quantity (AC40 / DC45 / A32 / MDC)
+- Product model and quantity (AC40 / AC45 / DC45 / A32 / MDC)
 - IT load specification (kW)
 - Total facility load with PUE estimate (kW)
 - Cooling architecture (Immersion / DLC + **Hybrid Cooling System**)
@@ -365,7 +365,7 @@ ESG priority + urban → Tesla Megapack 2 XL × 1 (2hr, covers IT load ~1MW + ma
 ATS selects third-party products based on:
 
 1. **Guideline rules** — always satisfy mandatory requirements defined in the Guideline first
-2. **IT Zone type** (AC40 / DC45 / A32) — match capacity and interface compatibility
+2. **IT Zone type** (AC40 / AC45 / DC45 / A32) — match capacity and interface compatibility
 3. **Site environmental conditions** — ambient temperature, water availability, space constraints
 4. **Redundancy requirements** — N / N+1 / 2N as applicable
 5. **ESG and operational constraints** — urban vs. remote, noise, emissions

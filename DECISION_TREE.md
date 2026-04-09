@@ -13,7 +13,7 @@ Last Updated: 2026-03-10
 
 ---
 
-**⚠️ 所有决策必须在 KB 定义的产品组合内（A32 / AC40 / DC45 / MDC）。不推荐 KB 外的产品。**
+**⚠️ 所有决策必须在 KB 定义的产品组合内（A32 / AC40 / AC45 / DC45 / MDC）。不推荐 KB 外的产品。**
 
 ---
 
@@ -158,7 +158,7 @@ Cooling Tower
 
 Decision Rules:
 
-IF using AC40 / DC45 / MDC
+IF using AC40 / AC45 / DC45 / MDC
 → **Hybrid Cooling System** is mandatory (禁止纯干冷器)
 → DX activates automatically when ambient ≥ 28°C
 

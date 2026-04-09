@@ -49,9 +49,16 @@ Selected architecture blueprint
 
 ## 5 Key Decisions
 
-Immersion vs DLC  
-BESS vs Generator  
-Container vs building
+**浸没式 vs DLC：**
+- 400kW 级：AC40（40ft）/ AC45（45ft，UL 合规）→ 浸没式
+- 1200kW 级：DC45（45ft）→ DLC 直冷液冷
+
+**AC40 vs AC45：**
+- 无 UL 合规要求 → AC40（40ft，UPS及UPS电池外置，成本/尺寸最优）
+- **需要 UL 认证** → AC45（45ft，UPS及UPS电池内置，UL 合规）
+
+**BESS vs Generator**
+**Container vs building**
 
 ---
 

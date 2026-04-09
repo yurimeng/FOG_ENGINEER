@@ -18,7 +18,7 @@ MDC（Modular Datacenter Cluster）是由多个模块组成的模块化数据中
 
 | Zone | 中文名 | 描述 |
 |------|--------|------|
-| **IT Zone** | 算力单元区 | 提供服务器容纳和 UPS，由 AC40 / DC45 组成 |
+| **IT Zone** | 算力单元区 | 提供服务器容纳和 UPS，由 AC40 / AC45 / DC45 组成 |
 | **Cooling Zone** | 冷却单元区 | 外制冷，为 IT Zone 内服务器提供散热能力 |
 | **Power Zone** | 电力单元区 | 后备电源系统，由 BESS 或柴油发电机提供 |
 
@@ -29,7 +29,7 @@ MDC（Modular Datacenter Cluster）是由多个模块组成的模块化数据中
 ```
 Transformer → Switchgear → [Power Zone: BESS / Generator]
                           ↓
-                    [IT Zone: AC40 / DC45]
+                    [IT Zone: AC40 / AC45 / DC45]
                       ├── PDC → UPS → CDU → Tanks/Racks
                       ↓
               [Cooling Zone: Hybrid Cooling System（干冷器+DX一体化）]
@@ -39,14 +39,18 @@ Transformer → Switchgear → [Power Zone: BESS / Generator]
 
 ## 3. IT Zone 产品对照
 
-| 产品 | 规格 | IT 容量 | 冷却类型 | UPS 型号 | 电池后备 |
-|------|------|---------|----------|----------|----------|
-| **A32** | 单柜 | 45–50kW | 浸没式 | 外置（不含）| 外置 |
-| **AC40** | 40ft 集装箱 | 400kW | 浸没式 | 9395XR-600 | 2×93LiG2（10min）|
-| **DC45** | 45ft 集装箱 | 1200kW | DLC | 9395XR-1500 | 3×93LiG2（8min）|
+| 产品 | 规格 | IT 容量 | 冷却类型 | UPS 放置 | UPS 电池后备 | UL |
+|------|------|---------|----------|---------|-----------|-----|
+| **A32** | 单柜 | 45–50kW | 浸没式 | 外置（客户自备）| 外置 | — |
+| **AC40** | 40ft 集装箱 | 400kW | 浸没式 | **外置（客户自备）**| 2×93LiG2（~10min，客户自备）| ❌ |
+| **AC45** | 45ft 集装箱 | 400kW | 浸没式 | 内置（专用电力舱）| 2×93LiG2（~20min）| ✅ |
+| **DC45** | 45ft 集装箱 | 1200kW | DLC | 内置 | 3×93LiG2（~8min）| ✅ |
+
+> ⚠️ **UPS 电池 vs BESS 电池：** 上表中"UPS电池后备"指 UPS 配套的 93LiG2 磷酸铁锂电池柜（分钟级瞬时切换后备）。BESS（如 Tesla Megapack / 国轩）是独立大型储能系统（小时级供电），两者完全不同。
 
 参考：
 - AC40 详细规格：[[PRODUCTS_AC40|KB/PRODUCTS_AC40]]
+- AC45 详细规格：[[PRODUCTS_AC45|KB/PRODUCTS_AC45]]
 - DC45 详细规格：[[PRODUCTS_DC45|KB/PRODUCTS_DC45]]
 - A32 详细规格：[[PRODUCTS_A32|KB/PRODUCTS_A32]]
 
@@ -56,10 +60,12 @@ Transformer → Switchgear → [Power Zone: BESS / Generator]
 
 | 等级 | IT 容量 | 典型配置 | 冷却方式 | 使用场景 |
 |------|---------|---------|----------|----------|
-| **Single** | 0.5MW | 8×AC40 或 ~10×DC45 | 浸没式 | 边缘推理 |
-| **Small** | 1.2MW | ~3×DC45 或 ~3×AC40 | DLC / 浸没式 | 边缘推理 / 模型再训练 |
-| **Medium** | 2–3MW | DC45 + AC40 混合 | 混合 | 区域级边缘节点 |
+| **Single** | 0.5MW | 8×AC40 / AC45 或 ~10×DC45 | 浸没式 | 边缘推理 |
+| **Small** | 1.2MW | ~3×DC45 或 ~3×AC40/AC45 | DLC / 浸没式 | 边缘推理 / 模型再训练 |
+| **Medium** | 2–3MW | DC45 + AC40/AC45 混合 | 混合 | 区域级边缘节点 |
 | **Large** | 5MW+ | 多个 MDC 并联 | 按需组合 | 数据中心级部署 |
+
+> **AC45 选型提示：** AC45 与 AC40 IT 容量相同。如无 UL 合规需求，优先选择 AC40（成本/尺寸更低）。AC45 适用于需要 UL 认证或更长电池后备时间（~20min）的场景。
 
 ---
 
@@ -108,6 +114,7 @@ Transformer → Switchgear → [Power Zone: BESS / Generator]
 | IT Zone | 冷却 Zone 配置 | 散热方式 |
 |---------|---------------|----------|
 | AC40（浸没式）| **Hybrid Cooling System**（干冷器+DX一体化）| 每台 AC40 独立配置 |
+| AC45（浸没式，UL）| **Hybrid Cooling System**（干冷器+DX一体化）| 每台 AC45 独立配置 |
 | DC45（DLC）| **Hybrid Cooling System**（干冷器+DX一体化）| 每台 DC45 独立配置 |
 
 > ⚠️ **规则：不允许纯干冷器方案。** 无论 AC40 或 DC45，必须配置 Hybrid Cooling System（干冷器+DX一体化设备），确保环境温度 >28°C 时的散热能力。
@@ -138,7 +145,7 @@ Transformer → Switchgear → [Power Zone: BESS / Generator]
 
 > ⚠️ **重要：** IT Zone 和 Cooling Zone 不提供 N+1 或 2N 冗余。每个容器/设备独立工作。如客户需要更高冗余，通过增加整个集装箱数量实现。
 >
-> **UPS 模块内部 N+1：** AC40/DC45 内置 UPS 模块（9395XR-600/1500）支持单模块故障不影响运行，但这不是 IT Zone 级别的冗余设计。
+> **UPS 模块内部 N+1：** AC45/DC45 内置 UPS 模块（9395XR-600/1500）支持单模块故障不影响运行；AC40 UPS外置，客户按此原则选型。但这都不是 IT Zone 级别的冗余设计。
 
 参考：[[ATS|AGENTS/ATS]]（Architecture Workflow, Step 3）
 
@@ -171,7 +178,7 @@ Transformer → Switchgear → [Power Zone: BESS / Generator]
 - **模块独立**：每个集装箱独立配置、独立运行
 - **并联扩展**：通过增加集装箱数量实现容量扩展
 - **分区消防**：每个集装箱独立消防系统
-- **冗余供电**：UPS 内置于 IT Zone，BESS/发电机为 Power Zone
+- **冗余供电**：AC45/DC45 UPS及UPS电池内置；AC40 UPS及UPS电池外置（客户自备）；BESS/发电机为 Power Zone
 
 ---
 
@@ -186,7 +193,7 @@ Switchgear / Breaker
     ↓
 [BESS] ← 可选，Grid 不稳定或需要削峰时配置
     ↓
-AC40 / DC45 IT Zone
+AC40 / AC45 / DC45 IT Zone
     ├── PDC
     ├── UPS (EATON 9395XR)
     ├── CDU / 风墙

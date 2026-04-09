@@ -5,7 +5,7 @@ tags:
   - #domain/power
 Supplier Name: EATON
 Category: UPS
-适用对象: AC40 / DC45（内置 UPS）
+适用对象: AC45 / DC45（UPS及UPS电池内置）；AC40（UPS及UPS电池外置，客户自备）
 版本: V1.0（2026-04-09 重命名 Buildin→UPS）
 ---
 
@@ -150,31 +150,37 @@ Category: UPS
 
 ---
 
-## 8. 在 AC40 / DC45 中的配置
+## 8. 在 AC40 / AC45 / DC45 中的配置
 
-| 参数 | AC40 | DC45 |
-|------|------|------|
-| UPS 型号 | 9395XR-600 | 9395XR-1500 |
-| 模块数 | 4 UPM | 10 UPM |
-| 每模块功率 | 150kW | 150kW |
-| 总 UPS 功率 | 600kW | 1500kW |
-| IT 负载 | 400kW | 1200kW |
-| UPS 裕量 | 1.5×（裕量充足）| 1.25×（裕量充足）|
-| 发热量 | ~7.9kW | ~46.9kW |
-| 电池柜 | 2 × 93LiG2 | 3 × 93LiG2 |
-| 频率 | 50/60Hz | 50/60Hz |
+| 参数 | AC40 | AC45 | DC45 |
+|------|------|------|------|
+| UPS 型号 | 9395XR-600 | 9395XR-600 | 9395XR-1500 |
+| 模块数 | 4 UPM | 4 UPM | 10 UPM |
+| 每模块功率 | 150kW | 150kW | 150kW |
+| 总 UPS 功率 | 600kW | 600kW | 1500kW |
+| IT 负载 | 400kW | 400kW | 1200kW |
+| UPS 放置 | **外置（客户自备）** | 内置（专用电力舱），UL 合规 | 内置，UL 合规 |
+| UPS 裕量 | 1.5×（裕量充足）| 1.5×（裕量充足）| 1.25×（裕量充足）|
+| 发热量 | ~7.9kW | ~7.9kW | ~46.9kW |
+| UPS 电池柜 | 2 × 93LiG2（**客户外置自备**）| 2 × 93LiG2（内置电力舱）| 3 × 93LiG2（内置）|
+| UPS 电池后备时间 | ~10 分钟（客户自备）| ~20 分钟 | ~8 分钟 |
+| 频率 | 50/60Hz | 50/60Hz | 50/60Hz |
+
+> ⚠️ **UPS 电池 vs BESS 电池：** 上表中"UPS电池柜"指 UPS 配套的 93LiG2 磷酸铁锂电池柜（分钟级瞬时切换后备）。BESS（如 Tesla Megapack / 国轩）是独立大型储能系统（小时级供电），两者完全不同。
 
 ---
 
 ## 9. 与 BESS 的关系
 
-| 组件            | 位置                    | 作用                          |
-| ------------- | --------------------- | --------------------------- |
-| **UPS**       | IT Zone（AC40/DC45 内置） | 覆盖瞬时中断（ms 级切换），提供 5–10 分钟后备 |
+| 组件            | 位置                              | 作用                          |
+| ------------- | ----------------------------- | --------------------------- |
+| **UPS**       | IT Zone（AC45/DC45 内置；AC40 外置）| 覆盖瞬时中断（ms 级切换），提供分钟级 UPS 电池后备 |
 | **BESS**      | Power Zone（外置）        | 覆盖长时间中断（1–4 小时），稳压、削峰       |
 | **Generator** | Power Zone（外置）        | 覆盖超长中断（>8 小时，需燃料补给）         |
 
 连接逻辑：Grid → BESS → UPS（IT Zone 内）→ 服务器
+
+> ⚠️ 上图中"UPS"指 EATON 9395XR 系列（AC45/DC45 内置；AC40 外置）。"UPS电池"（93LiG2）紧随 UPS 安装。BESS（如 Tesla Megapack / 国轩）与 UPS电池完全独立，是独立大型储能系统。
 
 ---
 
@@ -182,6 +188,7 @@ Category: UPS
 
 - 电力系统设计原则：[[KB/3RD-PARTY/BESS/POWER_SYSTEMS_Guideline]]
 - AC40 产品规格：[[KB/PRODUCTS_AC40]]
+- AC45 产品规格：[[KB/PRODUCTS_AC45]]
 - DC45 产品规格：[[KB/PRODUCTS_DC45]]
 - BESS 产品（Tesla Megapack）：[[KB/3RD-PARTY/BESS/TESLA MEGAPACK 2 XL]]
 - BESS 产品（国轩）：[[KB/3RD-PARTY/BESS/Gotion ESC480-125P261-UL]]
