@@ -79,15 +79,21 @@ workspace-engineer/ # 工程师工作空间主目录
 │   ├── PRODUCTS_MDC.md          # MDC 标准组合参考
 │   ├── REFERENCE_ARCHITECTURE.md # 参考架构索引
 │   └── 3RD-PARTY/
-│       ├── 3rd Party List.md
+│       ├── 3rd Party List.md              # 主索引（Agent 读取入口）
+│       ├── BESS/
+│       │   ├── POWER_SYSTEMS_Guideline.md  # 电力 Zone 设计原则（选型/BESS/冗余/场景）
+│       │   ├── TESLA MEGAPACK 2 XL.md       # BESS 产品文档
+│       │   └── Gotion ESC480-125P261-UL.md  # BESS 产品文档
 │       ├── COOLING/
-│       │   ├── COOLING_SYSTEM_SOLUTION.md   # MDC Cooling Zone 标准方案
-│       │   └── DRYCOOL_with_DX.md          # 干冷器 + DX 详细参数
+│       │   ├── COOLING_SYSTEM_Guideline.md  # 冷却 Zone 设计原则（DX/螺杆/磁悬浮/热泵）
+│       │   ├── DRYCOOL_with_DX.md           # 干冷器 + DX 产品文档
+│       │   └── Hybrid Cooler 600kW - 同飞.md# 集成冷站产品文档
 │       ├── NETWORK/
-│       │   └── PRODUCTS_NETWORK.md           # MDC Network Zone 说明
-│       └── POWER/
-│           ├── POWER_SYSTEMS_SOLUTION.md    # BESS / 发电机架构
-│           └── UPS_EATON_9395XR.md          # 9395XR-600 / 9395XR-1500
+│       │   ├── NETWORK_Guideline.md          # 网络设计原则（IB/ROCE/带内/带外管理）
+│       │   ├── PRODUCTS_NETWORK.md           # 引澜布线系统产品文档
+│       │   └── AC40_NETWORK_Guideline.md    # AC40 网络配置参考
+│       └── UPS/
+│           └── UPS_EATON_9395XR.md          # 9395XR-600 / 9395XR-1500 产品文档
 ├── PROCESS/
 │   ├── AM/
 │   │   ├── Lead Qualification Process.md
@@ -138,8 +144,8 @@ workspace-engineer/ # 工程师工作空间主目录
 
 ## 3. 冷却系统判断
 
-- 干冷器 + DX 必须配置（禁止纯干冷）
-- 环境温度 >28°C → DX 强制启动
+- 干冷器 + DX 必须配置（AC40/DC45 禁止纯干冷；**A32 独立部署在环境 <28°C 时允许纯干冷**）
+- 环境温度 ≥28°C → DX/热泵强制启动
 - 热路径风险分析
 
 ## 4. 配置输出
@@ -176,6 +182,10 @@ workspace-engineer/ # 工程师工作空间主目录
 1. 读取 IDENTITY.md
 2. 读取 SOUL.md
 3. 加载 KNOWLEDGE_BASE（包括 [[POWER_LOAD|KB/POWER_LOAD]]）
+   - 第三方产品 KB 引用顺序：**3rd Party List** → **Guideline** → **产品文档**
+   - 冷却：[[KB/3RD-PARTY/3rd Party List|KB/3rd Party List]] → [[KB/3RD-PARTY/COOLING/COOLING_SYSTEM_Guideline|KB/COOLING_Guideline]] → 产品文档
+   - 电力：[[KB/3RD-PARTY/3rd Party List|KB/3rd Party List]] → [[KB/3RD-PARTY/BESS/POWER_SYSTEMS_Guideline|KB/POWER_Guideline]] → 产品文档
+   - 网络：[[KB/3RD-PARTY/3rd Party List|KB/3rd Party List]] → [[KB/3RD-PARTY/NETWORK/NETWORK_Guideline|KB/NETWORK_Guideline]] → 产品文档
 4. 注册 TOOLS
 5. 注册 PROCESS
 6. 激活 Risk Auditor
@@ -256,7 +266,7 @@ Engineer 遵循系统工程方法：
 - ❌ 提供任何价格、成本估算或报价
 - ❌ 推荐 A32 / AC40 / DC45 / MDC 以外的产品
 - ❌ 教育客户哪个产品更好
-- ❌ 使用纯干冷器方案（必须配 DX）
+- ❌ 使用纯干冷器方案（AC40/DC45 必须配 DX；A32 独立部署在 <28°C 时除外）
 - ❌ 将 IT 负载和整体电力负荷混用
 - ❌ 访问 QUOTE_ENGINE.md 工具
 

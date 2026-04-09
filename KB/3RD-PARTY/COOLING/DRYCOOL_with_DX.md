@@ -1,40 +1,31 @@
 ---
 tags:
   - #workspace/engineer
-  - #type/reference
+  - #type/product
   - #domain/cooling
-Supplier Name: 泰铂（上海）环保科技股份有限公司
-Category: Dry Cooler + DX
 ---
+Supplier Name: 泰铂（上海）环保科技股份有限公司
+Category: Dry Cooler + DX Product Solution
+适用对象: MDC 模块化数据中心集群（Cooling Zone）标准散热方案
+版本: V1.0（2026-04-09 移除设计原则，保留产品方案）
 
-# MDC Cooling Zone — 干冷器 + DX 双冷源系统
-适用对象：MDC 模块化数据中心集群（Cooling Zone）标准散热方案
-版本：V1.1（2026-03-29）
+> **本文档为干冷器+DX 产品方案文档。选型前请先查阅 [[KB/3RD-PARTY/COOLING/COOLING_SYSTEM_Guideline]]（冷却系统设计原则）。
 
 ---
 
 ## 1. 方案定位
 
-本方案是 MDC Cooling Zone 的**标准散热配置**，适用于 AC40（浸没式）和 DC45（DLC）两种 IT Zone。
+本方案是 MDC Cooling Zone 的**标准散热机组配置**，适用于 AC40（浸没式）和 DC45（DLC）两种 IT Zone。
 
 每台 IT Zone 集装箱配置**一套独立**的干冷器 + DX 系统。
 
----
-
-## 2. 设计原则
-
-| 原则 | 说明 |
-|------|------|
-| **自然冷优先** | 干冷器作为主散热方式，DX 仅在高温时介入 |
-| **高温必开 DX** | 环境温度 >28°C 时，DX 强制启动 |
-| **模块化解耦** | 每台 IT Zone 独立配置，不跨设备共享 |
-| **禁止纯干冷** | 无论何种情况，必须保留 DX 辅助能力 |
+> 设计原则、选型逻辑、温度触发阈值请参考：[[KB/3RD-PARTY/COOLING/COOLING_SYSTEM_Guideline]]
 
 ---
 
-## 3. 核心技术参数
+## 2. 核心技术参数
 
-### 3.1 制冷能力配置
+### 2.1 制冷能力配置
 
 | 项目 | 参考参数（AC40）| 参考参数（DC45）|
 |------|---------------|---------------|
@@ -43,7 +34,7 @@ Category: Dry Cooler + DX
 | IPLV（综合能效）| 参考目标 >5.0 | 参考目标 >5.0 |
 | 系统类型 | 变频系统 | 变频系统 |
 
-### 3.2 运行模式
+### 2.2 运行模式
 
 | 模式 | 触发条件 | 主导散热 | 辅助散热 |
 |------|---------|---------|---------|
@@ -51,7 +42,7 @@ Category: Dry Cooler + DX
 | **混合模式** | 环境 28–35°C | 干冷器 | DX 部分开启 |
 | **高温模式** | 环境 >35°C | DX 主导 | 干冷器辅助 |
 
-### 3.3 COP 性能参考
+### 2.3 COP 性能参考
 
 | 模式 | COP 参考值 |
 |------|-----------|
@@ -60,7 +51,7 @@ Category: Dry Cooler + DX
 
 ---
 
-## 4. 冷冻水参数
+## 3. 冷冻水参数
 
 | 项目 | 参数 |
 |------|------|
@@ -72,7 +63,7 @@ Category: Dry Cooler + DX
 
 ---
 
-## 5. 关键部件配置
+## 4. 关键部件配置
 
 | 部件 | 推荐规格 |
 |------|---------|
@@ -85,28 +76,28 @@ Category: Dry Cooler + DX
 
 ---
 
-## 6. 冗余设计
+## 5. 冗余设计
 
-### 6.1 压缩机冗余（DX 部分）
+### 5.1 压缩机冗余（DX 部分）
 
 - N+1 配置（通常 3 用 1 备或更多）
 - 支持单台故障不停机
 - 满负载时可在线切换
 
-### 6.2 水泵冗余
+### 5.2 水泵冗余
 
 - 2+1 配置（2 用 1 备）
 - 变频控制
 - 支持自动切换
 
-### 6.3 干冷器冗余
+### 5.3 干冷器冗余
 
 - 按项目需求配置
 - 低温地区可减少干冷器配置
 
 ---
 
-## 7. 与 IT Zone 的匹配
+## 6. 与 IT Zone 的匹配
 
 | IT Zone | 冷却 Zone 配置 |
 |---------|---------------|
@@ -114,6 +105,7 @@ Category: Dry Cooler + DX
 | DC45（1200kW IT）| 干冷器 + DX + 风墙（DC45 专用）|
 
 参考：
-- AC40 完整规格：[[PRODUCTS_AC40|KB/PRODUCTS_AC40]]
-- DC45 完整规格：[[PRODUCTS_DC45|KB/PRODUCTS_DC45]]
-- MDC 标准组合：[[PRODUCTS_MDC|KB/PRODUCTS_MDC]]
+- AC40 完整规格：[[KB/PRODUCTS_AC40]]
+- DC45 完整规格：[[KB/PRODUCTS_DC45]]
+- MDC 标准组合：[[KB/PRODUCTS_MDC]]
+- 冷却系统设计原则：[[KB/3RD-PARTY/COOLING/COOLING_SYSTEM_Guideline]]

@@ -9,11 +9,64 @@ tags:
 
 Workspace: Engineer Workspace
 Product: Fog Computing Engineering AI
-Version: v1.1.0
-Release Date: 2026-03-29
+Version: v1.4.0
+Release Date: 2026-04-09
 Status: Active Development
 
-Reference backup: ../KB_backup_20260329_200742
+Reference backup: ../KB_backup_20260409
+
+---
+
+## v1.4.0 — KB Structure Refactor: Guideline + Product Docs (2026-04-09)
+
+### 目录结构重构：Guideline + 产品文档体系
+
+**变更背景：** Agent 读取第三方 KB 的标准顺序为：3rd Party List → Guideline → 产品文档。原结构中 COOLING/NETWORK 类别未拆分设计原则与产品文档，结构不清。
+
+### 新增文件
+
+| 文件 | 类型 | 说明 |
+|------|------|------|
+| `COOLING/COOLING_SYSTEM_Guideline.md` | NEW Guideline | 冷却系统设计原则：架构分类（DX/螺杆/磁悬浮/热泵）、温度策略、IT Zone 匹配规则 |
+| `NETWORK/NETWORK_Guideline.md` | NEW Guideline | 网络设计原则：三层架构、IB/ROCE 策略、带内/带外管理、安全设计 |
+| `UPS/UPS_EATON_9395XR.md` | NEW（迁移）| Buildin/ → UPS/，路径更新 |
+
+### 文件重构
+
+| 文件 | 变更内容 |
+|------|---------|
+| `COOLING/DRYCOOL_with_DX.md` | 移除设计原则内容，保留产品方案参数 |
+| `COOLING/COOLING_SYSTEM_SOLUTION.md` | **已删除**（内容已迁移至 Guideline + 各产品文档）|
+| `NETWORK/PRODUCTS_NETWORK.md` | 重构为纯产品文档（引澜布线系统）|
+| `NETWORK/AC40_NETWORK_Guideline.md` | 转为引澜产品参考文档 |
+| `BESS/POWER_SYSTEMS_Guideline.md` | 标题统一为 "Guideline" 格式；BESS 产品改为 wiki-link；tag 改为 `guideline` |
+| `3rd Party List.md` | 全面重写 V1.3；Guideline 引用规则明确化；各子目录结构同步更新 |
+
+### 冷却系统重大规则更新
+
+| 规则 | 变更 |
+|------|------|
+| **A32 纯干冷例外** | A32 独立部署在环境 <28°C 时允许纯干冷器（PUE 可低至 1.03）；AC40/DC45 及 A32 在集装箱内部署时仍禁止纯干冷 |
+| **温度阈值统一** | 所有文件统一使用 ≥28°C 作为 DX 强制启动阈值 |
+| **架构类型扩展** | 新增螺杆压缩机方案（≥300kW）和磁悬浮压缩机方案（能效优先场景）|
+
+### 涉及文件清单
+
+- README.md：KB 目录树更新；KB Agent 引用规则写入 BOOTSTRAP 说明；A32 例外规则写入禁止事项
+- VERSION.md：本版本记录
+- 3rd Party List.md → V1.3
+- PRODUCTS_AC40.md：冷却部分 → 指向新 Guideline；UPS 链接 → UPS/
+- PRODUCTS_DC45.md：冷却部分 → 指向新 Guideline；UPS 链接 → UPS/
+- PRODUCTS_A32.md：明确"独立部署 vs 集装箱部署"区分；A32 例外规则写入产品文档
+- PRODUCTS_MDC.md：冷却参考链接 → 新 Guideline
+- BESS/POWER_SYSTEMS_Guideline.md：标题/格式/BESS wiki-link 全部更新
+- Buildin/ → UPS/：目录重命名，UPS_EATON_9395XR.md 迁移完成
+
+### Agent 验证结果
+
+- 3-layer 导航流程正确（3rd Party List → Guideline → Product）
+- 无 broken link，所有 wiki-link 指向有效文件
+- 三个 Guideline 标题格式统一，tag 一致
 
 ---
 

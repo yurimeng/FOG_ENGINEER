@@ -1,16 +1,15 @@
 ---
 tags:
   - #workspace/engineer
-  - #type/reference
+  - #type/product
   - #domain/power
 Supplier Name: EATON
 Category: UPS
+适用对象: AC40 / DC45（内置 UPS）
+版本: V1.0（2026-04-09 重命名 Buildin→UPS）
 ---
 
-# EATON 9395XR 系列 UPS 产品知识文档
-
-**适用产品：AC40（9395XR-600）、DC45（9395XR-1500）**
-**版本：V1.1（2026-03-29 统一型号版）**
+> **本文档为 EATON 9395XR 系列 UPS 产品文档。UPS 选型原则请参考 [[KB/3RD-PARTY/BESS/POWER_SYSTEMS_Guideline]]。**
 
 ---
 
@@ -179,10 +178,20 @@ Category: UPS
 
 ---
 
-## 10. 文件信息
+## 10. 参考文档
 
-- **文档版本**: V1.1
-- **更新日期**: 2026-03-29
+- 电力系统设计原则：[[KB/3RD-PARTY/BESS/POWER_SYSTEMS_Guideline]]
+- AC40 产品规格：[[KB/PRODUCTS_AC40]]
+- DC45 产品规格：[[KB/PRODUCTS_DC45]]
+- BESS 产品（Tesla Megapack）：[[KB/3RD-PARTY/BESS/TESLA MEGAPACK 2 XL]]
+- BESS 产品（国轩）：[[KB/3RD-PARTY/BESS/Gotion ESC480-125P261-UL]]
+
+---
+
+## 11. 文件信息
+
+- **文档版本**: V1.0（2026-04-09）
+- **更新日期**: 2026-04-09
 - **来源文件**:
   - 9395XR-1500 Wiring Diagram
   - 93LiG2 Lithium Battery System Brochure

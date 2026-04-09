@@ -9,7 +9,7 @@ Category: Reference
 
 # 3rd Party List — 第三方产品和解决方案参考清单
 
-版本：V1.2（2026-04-01 新增 Guideline 体系 + BESS 独立产品文档）
+版本：V1.3（2026-04-09 新增独立 Guideline 体系；冷却/网络拆分设计原则与产品文档）
 
 ---
 
@@ -20,70 +20,86 @@ Category: Reference
 
 ---
 
-## 2. Cooling Zone — 冷却系统
+## 2. Agent 引用规则（重要）
 
-> ⚠️ **引用规则：** 选型前必须先查阅 [[KB/3RD-PARTY/COOLING/COOLING_SYSTEM_SOLUTION|KB/COOLING_SYSTEM_SOLUTION]]（冷却系统 Guideline），按其选型原则遍历子文件夹产品，最终组合完整解决方案。
-
-### 2.1 Guideline（选型总则）
-
-| 文件                                               | 说明                                 |
-| ------------------------------------------------ | ---------------------------------- |
-| [[KB/3RD-PARTY/COOLING/COOLING_SYSTEM_SOLUTION]] | 冷却 Zone 选型原则、架构对比、环境与 IT Zone 匹配规则 |
-
-### 2.2 产品目录
-
-| 类别           | 产品             | 供应商  | 说明                                  | 参考文档                                              |
-| ------------ | -------------- | ---- | ----------------------------------- | ------------------------------------------------- |
-| **散热方案（标准）** | 干冷器 + DX       | —    | MDC Cooling Zone 标准配置，所有 IT Zone 必须 | [[KB/3RD-PARTY/COOLING/COOLING_SYSTEM_SOLUTION]]  |
-| **散热方案（替代）** | 热泵             | —    | 可替代 DX，同时加热和制冷                      | [[KB/3RD-PARTY/COOLING/COOLING_SYSTEM_SOLUTION]]  |
-| **详细方案**     | 干冷器 + DX 双冷源机组 | 泰铂   | MDC Cooling Zone 标准散热机组规格           | [[KB/3RD-PARTY/COOLING/DRYCOOL_with_DX]]          |
-| **集成冷站**     | 600kW 集成冷站     | 三河同飞 | 一体化热泵冷源，含压缩机、水泵、控制系统                | [[KB/3RD-PARTY/COOLING/Hybrid Cooler 600kW - 同飞]] |
-
-### 2.3 冷却设备供应商参考
-
-| 品牌/供应商 | 产品类型 | 备注 |
-|------------|---------|------|
-| 上海泰铂 | 干冷器 | 参考供应商 |
-| 三河同飞 | 冷却设备 | 参考供应商 |
-| 英维克股份 | 冷却设备 | 参考供应商 |
-
-> ⚠️ 冷却设备选型需与 IT Zone 容量匹配，具体参数见产品文件。
+> **Agent 在读取第三方产品时的标准顺序：**
+> 1. 查询 [[KB/3RD-PARTY/3rd Party List|3rd Party List]] ← 本文件
+> 2. 查询对应类别的 **Guideline**（设计原则）
+> 3. 在子文件夹中查找合适的产品文档，匹配解决方案
 
 ---
 
-## 3. Power Zone — 电力系统
-
-> ⚠️ **引用规则：** 选型前必须先查阅 [[POWER_SYSTEMS_Guideline|KB/BESS/POWER_SYSTEMS_Guideline]]（电力系统 Guideline），按其选型原则遍历子文件夹产品，最终组合完整解决方案。
+## 3. Cooling Zone — 冷却系统
 
 ### 3.1 Guideline（选型总则）
 
+> ⚠️ **引用规则：** 选型前必须先查阅 Guideline，再按其选型原则遍历子文件夹产品。
+
 | 文件 | 说明 |
 |------|------|
-| [[POWER_SYSTEMS_Guideline\|KB/BESS/POWER_SYSTEMS_Guideline]] | BESS 选型原则、UPS 选型逻辑、冗余策略、场景推荐 |
+| [[KB/3RD-PARTY/COOLING/COOLING_SYSTEM_Guideline]] | 冷却 Zone 选型原则：架构分类（DX/螺杆/磁悬浮/热泵）、环境温度策略、IT Zone 匹配规则、A32 纯干冷例外 |
 
-### 3.2 UPS（内置于 IT Zone）
+### 3.2 产品目录
 
-| IT Zone  | UPS 型号            | 模块数    | 每模块   | 总功率    | 发热量     | 参考文档                                      |
-| -------- | ----------------- | ------ | ----- | ------ | ------- | ----------------------------------------- |
-| **AC40** | EATON 9395XR-600  | 4 UPM  | 150kW | 600kW  | ~7.9kW  | [[KB/3RD-PARTY/Buildin/UPS_EATON_9395XR]] |
-| **DC45** | EATON 9395XR-1500 | 10 UPM | 150kW | 1500kW | ~46.9kW | [[KB/3RD-PARTY/Buildin/UPS_EATON_9395XR]] |
+| 类别 | 产品 | 供应商 | 说明 | 参考文档 |
+|------|------|--------|------|---------|
+| **标准散热方案** | 干冷器 + DX 双冷源机组 | 泰铂 | 适用于 AC40/DC45 标准配置 | [[KB/3RD-PARTY/COOLING/DRYCOOL_with_DX]] |
+| **集成冷站** | 600kW 集成冷站 | 三河同飞 | 螺杆式压缩机，一体化热泵冷源 | [[KB/3RD-PARTY/COOLING/Hybrid Cooler 600kW - 同飞]] |
+
+### 3.3 架构类型速查
+
+| 架构类型 | 压缩机 | 适用制冷量 |
+|---------|--------|-----------|
+| DX 方案 | 涡旋式 | <300kW |
+| 螺杆压缩机方案 | 螺杆式 | 300–600kW |
+| 磁悬浮压缩机方案 | 磁悬浮 | 能效优先 |
+| 热泵方案 | 热泵机组 | 极寒/精确温控 |
+
+### 3.4 供应商参考
+
+| 品牌/供应商 | 产品类型 | 备注 |
+|------------|---------|------|
+| 泰铂（上海）| 干冷器 + DX | 参考供应商 |
+| 三河同飞 | 冷却设备、集成冷站 | 参考供应商 |
+| 英维克股份 | 冷却设备 | 参考供应商 |
+
+---
+
+## 4. Power Zone — 电力系统
+
+### 4.1 Guideline（选型总则）
+
+> ⚠️ **引用规则：** 选型前必须先查阅 Guideline，再按其选型原则遍历子文件夹产品。
+
+| 文件 | 说明 |
+|------|------|
+| [[KB/3RD-PARTY/BESS/POWER_SYSTEMS_Guideline]] | 电力 Zone 选型原则：BESS 选型逻辑、UPS 选型、冗余策略、场景推荐 |
+
+### 4.2 内置 UPS（IT Zone 标配）
+
+> UPS 内置于 AC40/DC45 集装箱，无需外采。
+
+| IT Zone | UPS 型号 | 模块数 | 每模块 | 总功率 | 发热量 | 参考文档 |
+|---------|---------|--------|--------|--------|--------|---------|
+| **AC40** | EATON 9395XR-600 | 4 UPM | 150kW | 600kW | ~7.9kW | [[KB/3RD-PARTY/UPS/UPS_EATON_9395XR]] |
+| **DC45** | EATON 9395XR-1500 | 10 UPM | 150kW | 1500kW | ~46.9kW | [[KB/3RD-PARTY/UPS/UPS_EATON_9395XR]] |
 
 > 注：UPS 型号数字代表总 UPS 功率（kW）。9395XR-600 ≠ 600kVA，而是 4×150kW = 600kW。
 
-### 3.3 电池系统
+### 4.3 电池系统
 
 | 品牌/型号 | 类型 | 每柜能量 | 每柜功率 | 适用 |
 |----------|------|---------|---------|------|
 | EATON 93LiG2（93Li92S-100Ah）| 磷酸铁锂 | 63.9kWh | 332kW | AC40 / DC45 |
 
-### 3.4 BESS / 储能系统（独立产品文档）
+### 4.4 BESS / 储能系统
 
 | 品牌/型号 | 类型 | 适用场景 | 参考文档 |
 |----------|------|---------|---------|
-| TESLA Megapack 2 XL | 大型储能 | 城市边缘 / 高 ESG | [[TESLA MEGAPACK 2 XL\|KB/BESS/TESLA MEGAPACK 2 XL]] |
-| 国轩 ESC480-125P261-UL | 工商业储能一体机 | 成本优化 / 国产方案 | [[Gotion ESC480-125P261-UL\|KB/BESS/Gotion ESC480]] |
+| TESLA Megapack 2 XL | 大型储能（集装箱级）| 城市边缘 / 高 ESG | [[KB/3RD-PARTY/BESS/TESLA MEGAPACK 2 XL]] |
+| 国轩 ESC480-125P261-UL | 工商业储能一体机 | 成本优化 / 国产方案 | [[KB/3RD-PARTY/BESS/Gotion ESC480-125P261-UL]] |
 
-### 3.5 电力设备
+### 4.5 电力设备
 
 | 品牌/供应商 | 产品 | 说明 |
 |------------|------|------|
@@ -92,28 +108,34 @@ Category: Reference
 
 ---
 
-## 4. Network Zone — 网络系统
+## 5. Network Zone — 网络系统
 
-> ⚠️ **引用规则：** 选型前必须先查阅 [[AC40_NETWORK_Guideline|KB/NETWORK/AC40_NETWORK_Guideline]]（网络系统 Guideline），按其选型原则遍历子文件夹产品，最终组合完整解决方案。
+### 5.1 Guideline（选型总则）
 
-### 4.1 Guideline（选型总则）
+> ⚠️ **引用规则：** 选型前必须先查阅 Guideline，再按其选型原则遍历子文件夹产品。
 
 | 文件 | 说明 |
 |------|------|
-| [[AC40_NETWORK_Guideline\|KB/NETWORK/AC40_NETWORK_Guideline]] | 网络架构原则、三层模型、交换机配置、安全要求 |
+| [[KB/3RD-PARTY/NETWORK/NETWORK_Guideline]] | 网络设计原则：IB/ROCE 策略、带内/带外管理、网络拓扑选型、安全设计 |
 
-### 4.2 产品目录
+### 5.2 产品目录
 
-| 类别            | 供应商/产品    | 说明                  | 参考文档                                            |
-| ------------- | --------- | ------------------- | ----------------------------------------------- |
-| **布线系统**      | 引澜（需求已确认） | 结构化布线，商用成熟产品，可直接采购  | [[KB/3RD-PARTY/NETWORK/PRODUCTS_NETWORK]]       |
-| **网络架构**      | 三层网络模型    | 接入层/汇聚层/核心层         | [[KB/3RD-PARTY/NETWORK/AC40_NETWORK_Guideline]] |
-| **交换设备**      | 按项目配置     | 支持 10G/25G/100G     | 按项目配置                                           |
-| **AC40 网络配置** | 参考配置      | AC40 集装箱网络端口定义及布线规范 | [[KB/3RD-PARTY/NETWORK/AC40_NETWORK_CONF.pdf]]  |
+| 类别 | 供应商/产品 | 说明 | 参考文档 |
+|------|-----------|------|---------|
+| **布线系统** | 引澜 | 结构化布线，商用成熟产品，可直接采购 | [[KB/3RD-PARTY/NETWORK/PRODUCTS_NETWORK]] |
+| **AC40 网络配置** | 参考配置 | AC40 集装箱网络端口定义及布线规范 | [[KB/3RD-PARTY/NETWORK/AC40_NETWORK_Guideline]] |
+
+### 5.3 网络架构速查
+
+| IT Zone | 推荐架构 | IB 需求 | 管理网络 |
+|---------|---------|--------|---------|
+| A32（独立）| 小型二层网络 | 可选 | 带内 + 带外 |
+| AC40（40ft）| 三层网络 | 推荐 | 带内 + 带外 |
+| DC45（45ft）| 三层 + IB 高速互联 | 必须（训练）| 带内 + 带外 |
 
 ---
 
-## 5. Manufacturing & Assembly — 制造与组装
+## 6. Manufacturing & Assembly — 制造与组装
 
 | 供应商 | 能力 | 备注 |
 |--------|------|------|
@@ -126,18 +148,20 @@ Category: Reference
 
 ---
 
-## 6. 引用规则
+## 7. 禁止事项
 
-> ⚠️ 团队在引用第三方产品时，必须使用本清单中的标准产品。
-> 如需引入清单以外的产品，必须经过 ATS 确认并更新本文件后方可使用。
-> 产品选型必须与 IT Zone 类型（AC40/DC45）匹配。
+- ❌ 禁止引入清单以外的第三方产品（须经 ATS 确认并更新本文件后方可使用）
+- ❌ 禁止冷却 Zone 与 IT Zone 容量不匹配
+- ❌ AC40/DC45 禁止纯干冷器作为唯一散热方式
+- ❌ 带外管理网络不得与带内管理网络共用物理链路
 
 ---
 
-## 7. 更新历史
+## 8. 更新历史
 
 | 日期 | 版本 | 变更内容 |
 |------|------|---------|
-| 2026-04-01 | V1.2 | 新增 Guideline 体系；BESS 目录独立，添加 Tesla Megapack 2 XL 和国轩产品文档；各 Zone 增加 Guideline 引用规则；同步更新 KB 路径引用 |
+| 2026-04-09 | V1.3 | 新增独立 Guideline 体系；冷却系统拆分为 Guideline（架构选型）+ 产品文档；网络系统拆分为 Guideline（IB/ROCE/带内/带外）+ 产品文档；Buildin 重命名为 UPS |
+| 2026-04-01 | V1.2 | 新增 Guideline 体系；BESS 目录独立，添加 Tesla Megapack 2 XL 和国轩产品文档 |
 | 2026-03-29 | V1.1 | 统一命名结构；添加 UPS 型号（9395XR-600/1500）；增加冷却 Zone 标准配置说明 |
 | 初始版本 | V1.0 | 初始第三方产品清单 |

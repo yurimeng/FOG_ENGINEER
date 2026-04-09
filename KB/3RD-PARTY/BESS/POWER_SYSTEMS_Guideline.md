@@ -1,11 +1,13 @@
 ---
 tags:
   - #workspace/engineer
-  - #type/reference
+  - #type/guideline
   - #domain/power
 ---
+适用对象: MDC 模块化数据中心集群（Power Zone）设计选型总则
+版本: V1.0（2026-04-09 统一 Guideline 标题格式）
 
-# Power Systems Knowledge
+# Power Systems Guideline — 电力系统设计原则
 
 ## 0. Power设计原则
 - IT ZONE自带UPS，提供5–10分钟切换（UPS内置于AC40/DC45）
@@ -17,7 +19,7 @@ tags:
 | **AC40** | EATON 9395XR-600 | 4 UPM | 600kW | ~10 分钟 |
 | **DC45** | EATON 9395XR-1500 | 10 UPM | 1500kW | ~8 分钟 |
 
-参考：[[KB/3RD-PARTY/Buildin/UPS_EATON_9395XR|KB/UPS_EATON_9395XR]]
+参考：[[KB/3RD-PARTY/UPS/UPS_EATON_9395XR|KB/UPS_EATON_9395XR]]
 
 ### BESS 连接方式
 Grid → BESS → IT Zone → IT
@@ -52,8 +54,8 @@ Grid → ATS → IT Zone → IT
 ## 4. BESS （后备电源）
 
 - 替代柴油发电机
-- TESLA MEGAPACK 2 或者 3
-- 国产的储能采用安徽国轩
+- TESLA MEGAPACK 2 或者 3：[[KB/3RD-PARTY/BESS/TESLA MEGAPACK 2 XL|KB/BESS/TESLA MEGAPACK 2 XL]]
+- 国产的储能采用安徽国轩：[[KB/3RD-PARTY/BESS/Gotion ESC480-125P261-UL|KB/BESS/Gotion ESC480]]
 
 
 ---

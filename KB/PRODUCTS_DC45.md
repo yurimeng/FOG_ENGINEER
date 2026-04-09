@@ -71,7 +71,8 @@ DC45 是 45ft 容器规格的直冷液冷（DLC）集装箱，支持 8 × 150kW 
 | 服务器进口温度 | 24°C |
 | CDU 配置 | 主 CDU 1.2MW Rack CDU × 1 + 可选 150kW In-Rack CDU |
 | 散热方式 | **Hybrid Cooling System**（干冷器 + DX 一体化）或 **热泵** |
-| **禁止** | 纯干冷器（无 DX）— 环境 >28°C 时无法满足散热需求 |
+| **禁止** | 纯干冷器（无 DX）— 环境 ≥28°C 时无法满足散热需求 |
+| 设计原则 | [[KB/3RD-PARTY/COOLING/COOLING_SYSTEM_Guideline]] |
 
 ### 5.2 风墙冷却部分
 
@@ -151,4 +152,4 @@ Grid / BESS → PDC → UPS (EATON 9395XR-1500) → PDC → Busbar
 | **DC45** | EATON 9395XR-1500 | 10 UPM | 150kW | 1500kW | ~46.9kW |
 
 电池型号均为 **EATON 93LiG2**（93Li92S-100Ah-3PBFA，332kW/柜）。
-参考：[[KB/3RD-PARTY/Buildin/UPS_EATON_9395XR|KB/UPS_EATON_9395XR]]
+参考：[[KB/3RD-PARTY/UPS/UPS_EATON_9395XR|KB/UPS_EATON_9395XR]]
