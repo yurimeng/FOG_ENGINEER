@@ -196,7 +196,32 @@ Tools
 
 ---
 
-# Versioning Rules
+# Standing Rules
+
+> ⚠️ **本节为永久性规则，所有参与 Works_Public 维护的人员必须遵守。**
+
+## SR-001：更新同步规则
+
+**规则：** 任何对 Works_Public 知识库的更新（新增、修改、删除文件），**必须同步完成以下两件事**：
+
+1. **更新 `README.md`**
+   - 目录树结构（若涉及 KB/ 目录变更）
+   - 产品信息（若涉及产品参数变更）
+   - 禁止事项（若涉及新增禁止规则）
+   - 其他受影响的描述性内容
+
+2. **更新 `VERSION.md`**
+   - 版本号递增（按 Semantic Versioning 规则）
+   - 在 Version History 中新增变更记录条
+   - 记录内容须包含：变更日期、涉及文件清单、变更摘要
+
+**违规后果：** 未同步更新的变更视为不完整，Agent 在执行一致性检查时有权要求补充。
+
+**生效日期：** 2026-04-09（v1.4.0 起生效）
+
+---
+
+
 
 Versioning follows Semantic Versioning.
 
