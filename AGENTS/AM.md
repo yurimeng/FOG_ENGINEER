@@ -7,7 +7,7 @@ tags:
 
 # Account Manager (AM) / 客户经理
 
-Document Version: v1.1 Last Updated: 2026-03-15
+Document Version: v1.2 Last Updated: 2026-04-10
 
 ------------------------------------------------------------------------
 
@@ -174,6 +174,58 @@ Works_Public/Projects/
 -   历史记录按时间倒序排列\
 -   更新项目后，同步更新 [[Projects/INDEX]]
 
+---
+
+## 3.5.1 Required Fields / 必填字段
+
+**每个项目的 Project_Record.md 必须包含以下字段：**
+
+| 字段 | 说明 | 必须/可选 |
+|------|------|----------|
+| 最终用户 (End User) | 终端客户名称 | 必须 |
+| EPC | 工程承包商 | 如有 |
+| 投资方 (Investor) | 项目投资方 | 如有 |
+| 中间人 (Intermediary) | 中间人/渠道 | 如有 |
+| 部署地点 (Location) | 项目部署位置 | 必须 |
+| 项目进度 (Stage) | 当前阶段 | 必须 |
+| 规模 (Scale) | IT Load / 容量 | 必须 |
+| 部署方式 (Deployment) | 室内/室外 | 必须 |
+| 电力情况 (Power) | 电力可用性（可链接飞书文档） | 必须 |
+| 最后交流时间 (Last Contact) | 最近沟通日期 | 必须 |
+| 最后交流进度 (Last Progress) | 最近沟通内容 | 必须 |
+
+### 项目进度阶段 / Stage Definitions
+
+| 阶段 | 说明 |
+|------|------|
+| Lead | 销售线索 |
+| Qualification | 客户筛选 |
+| Technical Discussion | 技术交流 |
+| NDA | 保密协议 |
+| TS | 技术方案 |
+| QUOTE | 报价阶段 |
+| Contract | 合同洽谈 |
+| Pay | 付款阶段 |
+| Closed-Won | 成功关闭 |
+| Closed-Lost | 失败关闭 |
+
+---
+
+## 3.5.2 Missing Fields Reminder / 缺失字段提醒
+
+**AM 必须定期检查项目必填字段完整性：**
+
+1. **创建新项目时**：确保 Project_Record 包含所有必填字段，缺失字段标注为"待补充"
+
+2. **每次项目更新时**：
+   - 检查必填字段是否已补充
+   - 更新 INDEX.md 中的字段状态表
+   - 如有新获取的信息，立即更新对应字段
+
+3. **每周检查**：AM 应检查 [[Projects/INDEX]] 中的必填字段状态表
+
+4. **缺失提醒**：如果项目缺少关键信息（最终用户、部署地点、电力情况等），AM 必须主动向客户/团队索取
+
 ### Example Entry
 
 2026‑03‑10
@@ -181,6 +233,24 @@ Works_Public/Projects/
 客户确认使用 AC40 架构\
 计划规模 3MW\
 下一步：准备初步方案
+
+---
+
+## 3.5.3 Obsidian CLI Usage / Obsidian CLI 使用方法
+
+```bash
+# 创建新项目
+obsidian-cli run --task create --note "Works_Public/Projects/[项目名]/Project_Record.md"
+
+# 更新项目文档
+obsidian-cli run --task update --note "Works_Public/Projects/[项目名]/Project_Record.md"
+
+# 更新索引
+obsidian-cli run --task update --note "Works_Public/Projects/INDEX.md"
+
+# 读取项目状态
+obsidian-cli run --task read --note "Works_Public/Projects/INDEX.md"
+```
 
 ------------------------------------------------------------------------
 
