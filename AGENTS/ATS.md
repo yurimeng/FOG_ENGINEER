@@ -1,16 +1,62 @@
 ---
 tags:
-  - 
-  - 
+  -
+  -
   -
 ---
 
-# # ATS — Architecture & Technical Sales
+# ⚠️ MANDATORY RULES / 强制规则
+
+**以下规则必须严格遵守，违反将导致系统错误：**
+
+---
+
+## Rule 1: Obsidian CLI 必须使用
+
+**所有与项目进度相关的文档操作，必须使用 Obsidian CLI，禁止直接读写文件。**
+
+强制执行的操作类型：
+- 更新 Project_Record.md（方案设计、选型结果）
+- 更新技术配置信息
+- 添加设计决策记录
+- 更新 [[Projects/INDEX.md]]
+
+### 正确方式 ✅
+```bash
+obsidian-cli run --task update --note "Works_Public/Projects/[项目名]/Project_Record.md"
+obsidian-cli run --task update --note "Works_Public/Projects/INDEX.md"
+```
+
+### 错误方式 ❌
+```
+直接使用 Read/Write/Edit 工具读写项目文档
+```
+
+---
+
+## Rule 2: 项目路径强制规范
+
+**所有项目文档必须存放在 `Works_Public/Projects/` 目录下。**
+
+---
+
+## Rule 3: INDEX 同步强制要求
+
+**每次更新项目文档后，必须同步更新 [[Projects/INDEX.md]]。**
+
+同步内容包括：
+- 技术配置变化
+- 产品选型结果
+- 设计方案更新
+
+---
+
+# ATS — Architecture & Technical Sales
 
 **⚠️ CRITICAL: This team does NOT provide prices, quotes, or cost estimates. See ./0.PRINCIPLES.md Principle 7.**
 
-Document Version: v1.2
-Last Updated: 2026-04-01
+Document Version: v1.3
+Last Updated: 2026-04-10
 
 ---
 
@@ -59,9 +105,9 @@ Producing final solution proposals
 ----
 # Project Documentation
 
-**⚠️ IMPORTANT: All project file operations MUST use Obsidian CLI (`obsidian-cli`) instead of direct file read/write.**
+**⚠️ MANDATORY: All project file operations MUST use Obsidian CLI (`obsidian-cli`) — NO direct file read/write.**
 
-所有项目文件操作必须通过 Obsidian CLI 执行，禁止直接读写文件。
+**强制要求：所有项目文件操作必须使用 Obsidian CLI，禁止直接读写文件。**
 
 ### Project Index
 
@@ -79,14 +125,27 @@ Works_Public/Projects/
     └── Project_Record.md        ← 主文档（每个项目只有一个）
 ```
 
+### Obsidian CLI Commands
+
+```bash
+# 更新项目文档（方案设计、选型结果）
+obsidian-cli run --task update --note "Works_Public/Projects/[项目名]/Project_Record.md"
+
+# 更新索引
+obsidian-cli run --task update --note "Works_Public/Projects/INDEX.md"
+
+# 读取项目状态
+obsidian-cli run --task read --note "Works_Public/Projects/[项目名]/Project_Record.md"
+```
+
 ### Rules
 
--   使用 Obsidian CLI 创建和更新项目文档\
+-   **必须使用 Obsidian CLI** 创建和更新项目文档\
 -   每个项目只保留一个主文档\
 -   所有更新写入同一个文件\
 -   新内容写在文档顶部\
 -   历史记录按时间倒序排列\
--   方案设计完成后，同步更新 [[Projects/INDEX]]
+-   **方案设计完成后，必须同步更新 [[Projects/INDEX]]**
 
 
 ---

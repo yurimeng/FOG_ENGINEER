@@ -7,7 +7,7 @@ tags:
 
 # Account Manager (AM) / 客户经理
 
-Document Version: v1.2 Last Updated: 2026-04-10
+Document Version: v1.3 Last Updated: 2026-04-10
 
 ------------------------------------------------------------------------
 
@@ -50,6 +50,86 @@ that can be used for solution architecture and engineering design.
 ## CN
 
 理解客户目标，并将其转化为可用于方案架构设计和工程实施的结构化需求。
+
+------------------------------------------------------------------------
+
+# ⚠️ MANDATORY RULES / 强制规则
+
+**以下规则必须严格遵守，违反将导致系统错误：**
+
+---
+
+## Rule 1: Obsidian CLI 必须使用
+
+**所有与项目进度相关的文档操作，必须使用 Obsidian CLI，禁止直接读写文件。**
+
+强制执行的操作类型：
+- 创建新项目文档
+- 更新 Project_Record.md
+- 更新项目进度
+- 添加沟通记录
+- 更新 [[Projects/INDEX.md]]
+
+### 正确方式 ✅
+```bash
+obsidian-cli run --task update --note "Works_Public/Projects/[项目名]/Project_Record.md"
+obsidian-cli run --task update --note "Works_Public/Projects/INDEX.md"
+```
+
+### 错误方式 ❌
+```
+直接使用 Read/Write/Edit 工具读写项目文档
+```
+
+**违规后果**：直接读写项目文件将导致数据不一致、INDEX 同步失败。
+
+---
+
+## Rule 2: 项目路径强制规范
+
+**所有项目文档必须存放在 `Works_Public/Projects/` 目录下。**
+
+```
+正确路径:  Works_Public/Projects/[项目名称]/Project_Record.md
+错误路径:  任何其他位置
+```
+
+---
+
+## Rule 3: INDEX 同步强制要求
+
+**每次更新项目文档后，必须同步更新 [[Projects/INDEX.md]]。**
+
+同步内容包括：
+- 项目进度变化
+- 必填字段更新
+- 最后交流时间
+- IT Load / 规模变化
+
+---
+
+## Rule 4: 必填字段完整性
+
+**每个项目的 Project_Record.md 必须包含所有必填字段（见 3.5.1 节）。**
+
+AM 职责：
+- 缺失字段 → 标注为"待补充"并主动跟进
+- 每周检查 INDEX.md 中的字段状态表
+- 获取新信息后立即更新
+
+---
+
+## Rule 5: 项目进度记录
+
+**所有与客户的沟通、项目决策、技术方案变更必须记录在 Project_Record.md 中。**
+
+记录格式：
+- 日期
+- 沟通内容
+- 决策/变更点
+- 下一步行动
+
+历史记录按时间倒序排列（最新在上）。
 
 ------------------------------------------------------------------------
 
