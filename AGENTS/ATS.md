@@ -13,10 +13,11 @@ tags:
 
 ## Rule 1: Obsidian CLI 必须使用
 
-**所有与项目进度相关的文档操作，必须使用 Obsidian CLI，禁止直接读写文件。**
+**所有与项目相关的文档操作（包括读取和写入），必须使用 Obsidian CLI，禁止直接读写文件。**
 
 强制执行的操作类型：
-- 更新 Project_Record.md（方案设计、选型结果）
+- **读取项目文档**（读取 Project_Record.md、INDEX.md 等）
+- **更新项目文档**（方案设计、选型结果）
 - 更新技术配置信息
 - 添加设计决策记录
 - 更新 [[Projects/INDEX.md]]
@@ -55,7 +56,7 @@ obsidian-cli run --task update --note "Works_Public/Projects/INDEX.md"
 
 **⚠️ CRITICAL: This team does NOT provide prices, quotes, or cost estimates. See ./0.PRINCIPLES.md Principle 7.**
 
-Document Version: v1.3
+Document Version: v1.4
 Last Updated: 2026-04-10
 
 ---
@@ -128,15 +129,18 @@ Works_Public/Projects/
 ### Obsidian CLI Commands
 
 ```bash
-# 更新项目文档（方案设计、选型结果）
+# 读取项目文档
+obsidian-cli run --task read --note "Works_Public/Projects/[项目名]/Project_Record.md"
+obsidian-cli run --task read --note "Works_Public/Projects/INDEX.md"
+
+# 创建/更新项目文档（方案设计、选型结果）
 obsidian-cli run --task update --note "Works_Public/Projects/[项目名]/Project_Record.md"
 
 # 更新索引
 obsidian-cli run --task update --note "Works_Public/Projects/INDEX.md"
-
-# 读取项目状态
-obsidian-cli run --task read --note "Works_Public/Projects/[项目名]/Project_Record.md"
 ```
+
+**⚠️ 禁止使用 Read/Write/Edit 工具直接访问项目文档**
 
 ### Rules
 

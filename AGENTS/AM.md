@@ -7,7 +7,7 @@ tags:
 
 # Account Manager (AM) / 客户经理
 
-Document Version: v1.3 Last Updated: 2026-04-10
+Document Version: v1.4 Last Updated: 2026-04-10
 
 ------------------------------------------------------------------------
 
@@ -61,11 +61,12 @@ that can be used for solution architecture and engineering design.
 
 ## Rule 1: Obsidian CLI 必须使用
 
-**所有与项目进度相关的文档操作，必须使用 Obsidian CLI，禁止直接读写文件。**
+**所有与项目相关的文档操作（包括读取和写入），必须使用 Obsidian CLI，禁止直接读写文件。**
 
 强制执行的操作类型：
-- 创建新项目文档
-- 更新 Project_Record.md
+- **读取项目文档**（读取 Project_Record.md、INDEX.md 等）
+- **创建新项目文档**
+- **更新项目文档**
 - 更新项目进度
 - 添加沟通记录
 - 更新 [[Projects/INDEX.md]]
@@ -220,14 +221,15 @@ History must include:
 
 ## 3.5 Project Documentation / 项目文档管理
 
-**⚠️ IMPORTANT: All project file operations MUST use Obsidian CLI (`obsidian-cli`) instead of direct file read/write.**
+**⚠️ MANDATORY: All project file operations (BOTH read AND write) MUST use Obsidian CLI (`obsidian-cli`) — NO direct file access.**
 
-所有项目文件操作必须通过 Obsidian CLI 执行，禁止直接读写文件。
+**强制要求：所有项目文档操作（包括读取和写入）必须使用 Obsidian CLI，禁止直接读写文件。**
 
 ### Tools
 
 - **Obsidian CLI**: `obsidian-cli run --task <task> --note <path>`
-- 使用 obsidian-cli 创建和更新项目文档
+- 读取项目：`obsidian-cli run --task read --note "Works_Public/Projects/..."`
+- 创建/更新项目：`obsidian-cli run --task update --note "Works_Public/Projects/..."`
 
 ### Folder Path
 
@@ -319,6 +321,10 @@ Works_Public/Projects/
 ## 3.5.3 Obsidian CLI Usage / Obsidian CLI 使用方法
 
 ```bash
+# 读取项目文档
+obsidian-cli run --task read --note "Works_Public/Projects/[项目名]/Project_Record.md"
+obsidian-cli run --task read --note "Works_Public/Projects/INDEX.md"
+
 # 创建新项目
 obsidian-cli run --task create --note "Works_Public/Projects/[项目名]/Project_Record.md"
 
@@ -327,10 +333,9 @@ obsidian-cli run --task update --note "Works_Public/Projects/[项目名]/Project
 
 # 更新索引
 obsidian-cli run --task update --note "Works_Public/Projects/INDEX.md"
-
-# 读取项目状态
-obsidian-cli run --task read --note "Works_Public/Projects/INDEX.md"
 ```
+
+**⚠️ 禁止使用 Read/Write/Edit 工具直接访问项目文档**
 
 ------------------------------------------------------------------------
 
