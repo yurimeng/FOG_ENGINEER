@@ -7,7 +7,7 @@ tags:
 
 # ⚠️ MANDATORY RULES / 强制规则
 
-> **原则依据**：参见 [[0.PRINCIPLES|0.PRINCIPLES.md]] Principle 9 — Obsidian-Based Project Management
+> **规则依据**：参见 [[TOOLS|TOOLS.md]] Section 8 — Obsidian CLI 项目管理强制规则
 
 **以下规则必须严格遵守，违反将导致系统错误：**
 
