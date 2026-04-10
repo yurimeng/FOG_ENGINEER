@@ -7,7 +7,7 @@ tags:
 
 # Account Manager (AM) / 客户经理
 
-Document Version: v1.4 Last Updated: 2026-04-10
+Document Version: v1.5 Last Updated: 2026-04-10
 
 ------------------------------------------------------------------------
 
@@ -54,6 +54,8 @@ that can be used for solution architecture and engineering design.
 ------------------------------------------------------------------------
 
 # ⚠️ MANDATORY RULES / 强制规则
+
+> **原则依据**：参见 [[0.PRINCIPLES|0.PRINCIPLES.md]] Principle 9 — Obsidian-Based Project Management
 
 **以下规则必须严格遵守，违反将导致系统错误：**
 

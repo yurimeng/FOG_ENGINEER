@@ -7,6 +7,8 @@ tags:
 
 # ⚠️ MANDATORY RULES / 强制规则
 
+> **原则依据**：参见 [[0.PRINCIPLES|0.PRINCIPLES.md]] Principle 9 — Obsidian-Based Project Management
+
 **以下规则必须严格遵守，违反将导致系统错误：**
 
 ---
@@ -56,7 +58,7 @@ obsidian-cli run --task update --note "Works_Public/Projects/INDEX.md"
 
 **⚠️ CRITICAL: This team does NOT provide prices, quotes, or cost estimates. See ./0.PRINCIPLES.md Principle 7.**
 
-Document Version: v1.4
+Document Version: v1.5
 Last Updated: 2026-04-10
 
 ---
