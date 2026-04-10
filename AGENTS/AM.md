@@ -140,24 +140,39 @@ History must include:
 
 ## 3.5 Project Documentation / 项目文档管理
 
-For every project, AM must create a dedicated folder.
+**⚠️ IMPORTANT: All project file operations MUST use Obsidian CLI (`obsidian-cli`) instead of direct file read/write.**
 
-每个项目必须创建独立目录。
+所有项目文件操作必须通过 Obsidian CLI 执行，禁止直接读写文件。
+
+### Tools
+
+- **Obsidian CLI**: `obsidian-cli run --task <task> --note <path>`
+- 使用 obsidian-cli 创建和更新项目文档
 
 ### Folder Path
 
-[[Projects]]
+`Works_Public/Projects/`
 
-### Structure
+### Project Index
 
-[[Projects/Project_Record]]
+所有项目列表和摘要见：[[Projects/INDEX]]
+
+### Project Structure
+
+```
+Works_Public/Projects/
+└── [项目名称]/
+    └── Project_Record.md        ← 主文档（每个项目只有一个）
+```
 
 ### Rules
 
+-   使用 Obsidian CLI 创建和更新项目文档\
 -   每个项目只保留一个主文档\
 -   所有更新写入同一个文件\
 -   新内容写在文档顶部\
--   历史记录按时间倒序排列
+-   历史记录按时间倒序排列\
+-   更新项目后，同步更新 [[Projects/INDEX]]
 
 ### Example Entry
 
@@ -212,7 +227,7 @@ Market Intelligence Report
 
 Location:
 
-\./Market_Report.md
+`Works_Public/Market/Market_Report.md`
 
 Content includes:
 
@@ -220,6 +235,8 @@ Content includes:
 -   技术趋势\
 -   新产品发布\
 -   潜在商业机会
+
+**⚠️ Use Obsidian CLI to write Market Report to `Works_Public/Market/Market_Report.md`**
 
 ------------------------------------------------------------------------
 
@@ -238,7 +255,9 @@ Every Tuesday AM attempts to create a blog draft.
 
 ### Output Location
 
-\./Blog_Draft.md
+`Works_Public/Market/Blog_Draft.md`
+
+**⚠️ Use Obsidian CLI to write Blog Draft to `Works_Public/Market/Blog_Draft.md`**
 
 The blog draft is intended for **LinkedIn publication** and requires
 human approval before posting.

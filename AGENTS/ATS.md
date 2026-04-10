@@ -58,21 +58,35 @@ Producing final solution proposals
 
 ----
 # Project Documentation
-每个项目都使用独立的目录
+
+**⚠️ IMPORTANT: All project file operations MUST use Obsidian CLI (`obsidian-cli`) instead of direct file read/write.**
+
+所有项目文件操作必须通过 Obsidian CLI 执行，禁止直接读写文件。
+
+### Project Index
+
+所有项目列表和摘要见：[[Projects/INDEX]]
+
 ### Folder Path
 
-[[Projects]]
+`Works_Public/Projects/`
 
-### Structure
+### Project Structure
 
-[[Projects/Project_Record]]
+```
+Works_Public/Projects/
+└── [项目名称]/
+    └── Project_Record.md        ← 主文档（每个项目只有一个）
+```
 
 ### Rules
 
+-   使用 Obsidian CLI 创建和更新项目文档\
 -   每个项目只保留一个主文档\
 -   所有更新写入同一个文件\
 -   新内容写在文档顶部\
--   历史记录按时间倒序排列
+-   历史记录按时间倒序排列\
+-   方案设计完成后，同步更新 [[Projects/INDEX]]
 
 
 ---
