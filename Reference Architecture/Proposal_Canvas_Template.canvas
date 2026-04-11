@@ -1,0 +1,40 @@
+{
+	"nodes":[
+		{"id":"cover","type":"text","x":0,"y":0,"width":400,"height":260,"content":"# {{PROJECT_NAME}}\n**{{CLIENT_NAME}}**  ·  {{DATE}}\n\n---\n\n> Fog Computing Inc\n> contact@fogcomputing.ai\n> +1 626 203 2925"},
+		{"id":"exec_summary","type":"text","x":450,"y":0,"width":500,"height":260,"content":"## Executive Summary\n\n{{EXECUTIVE_SUMMARY}}\n\n---\n\n**核心亮点：**\n- 🏗️ 模块化部署，4-6个月交付\n- ❄️ 超低PUE（低至 {{PUE_MIN}}）\n- ⚡ MW级可扩展\n- 🌐 边缘到集中全覆盖"},
+		{"id":"kpi_it_load","type":"text","x":1000,"y":0,"width":160,"height":120,"color":"4","content":"## IT Load\n### {{IT_LOAD}}\n**{{IT_LOAD_KW}}**"},
+		{"id":"kpi_facility","type":"text","x":1170,"y":0,"width":160,"height":120,"color":"4","content":"## Total Facility\n### {{FACILITY_LOAD}}\n**{{FACILITY_LOAD_KW}}**"},
+		{"id":"kpi_pue","type":"text","x":1000,"y":130,"width":160,"height":120,"color":"5","content":"## PUE Range\n### {{PUE_MIN}}–{{PUE_MAX}}\n*环境温度相关*"},
+		{"id":"kpi_deployment","type":"text","x":1170,"y":130,"width":160,"height":120,"color":"5","content":"## 交付周期\n### ~{{DEPLOYMENT_DAYS}}天\n*参考值，不作承诺*"},
+		{"id":"arch_flow_title","type":"text","x":0,"y":320,"width":240,"height":60,"color":"1","content":"## MDC Architecture\n### 模块化架构流程"},
+		{"id":"bess_node","type":"text","x":0,"y":400,"width":200,"height":130,"color":"3","content":"### ⚡ BESS\n储能系统\nGrid不稳定时选配\n小时级后备"},
+		{"id":"compute_node","type":"text","x":240,"y":400,"width":200,"height":130,"color":"3","content":"### 🖥️ Compute\n{{PRODUCT_MODEL}}\n{{COOLING_TYPE}}\n{{GPU_COUNT}} × {{GPU_TYPE}}"},
+		{"id":"cooling_node","type":"text","x":480,"y":400,"width":200,"height":130,"color":"3","content":"### ❄️ Cooling\n{{COOLING_SYSTEM}}\nDX: ≥{{DX_TEMP}}°C 启动\n{{COOLER_COUNT}}台干冷器"},
+		{"id":"network_node","type":"text","x":720,"y":400,"width":200,"height":130,"color":"3","content":"### 🌐 Network\n{{NETWORK_ARCH}}\n{{BANDWIDTH}}\n冗余链路: {{REDUNDANCY}}"},
+		{"id":"product_title","type":"text","x":1000,"y":320,"width":340,"height":60,"color":"1","content":"## 产品规格\n### {{PRODUCT_MODEL}} 详情"},
+		{"id":"product_card","type":"text","x":1000,"y":400,"width":340,"height":210,"color":"3","content":"**{{PRODUCT_MODEL}} ({{PRODUCT_SIZE}})**\n\n- IT 容量: **{{IT_CAPACITY}}**\n- 冷却方式: {{COOLING_TYPE}}\n- UPS: {{UPS_MODEL}} ({{UPS_BACKUP}})\n- 尺寸: {{DIMENSIONS}}\n- UL合规: {{UL_STATUS}}\n\n**主要配件：**\n{{MAIN_COMPONENTS}}"},
+		{"id":"cooling_title","type":"text","x":0,"y":670,"width":300,"height":60,"color":"1","content":"## 冷却架构\n### Hybrid Cooling System"},
+		{"id":"cooling_detail","type":"text","x":0,"y":750,"width":440,"height":170,"color":"3","content":"**干冷器 + DX 强制配置**\n\n| 指标 | 规格 |\n|------|------|\n| 自由冷却容量 | {{FREE_COOLING_KW}} |\n| 机械冷却容量 | {{MECH_COOLING_KW}} |\n| 配置 | {{COOLER_CONFIG}} |\n| 热管COP (自由冷却) | {{HEATPIPE_COP}} |\n| IPLV | {{IPLV}} |\n\n⚠️ 环境温度 ≥{{DX_TEMP}}°C 时 DX 自动启动"},
+		{"id":"cooling_rule","type":"text","x":460,"y":750,"width":220,"height":170,"color":"2","content":"**⚠️ 强制规则**\n\nAC40/AC45/DC45/MDC:\n**必须 Hybrid Cooling**\n禁止纯干冷器\n\nA32 环境<28°C:\n允许纯干冷器"},
+		{"id":"bess_title","type":"text","x":720,"y":670,"width":200,"height":60,"color":"1","content":"## BESS 系统\n### 可选配置"},
+		{"id":"bess_detail","type":"text","x":720,"y":750,"width":280,"height":170,"color":"3","content":"**{{BESS_MODEL}}**\n\n- 电池模块: {{BESS_CELL}}\n- 尺寸: {{BESS_SIZE}}\n- PCS: {{BESS_PCS}}\n- 冷却: {{BESS_COOLING}}\n- 消防: {{BESS_FIRE}}\n\n**使用场景:**\nGrid不稳定 / 削峰 / 孤岛运行"},
+		{"id":"timeline_title","type":"text","x":1020,"y":670,"width":320,"height":60,"color":"1","content":"## 部署计划\n### 时间线（参考值）"},
+		{"id":"timeline_detail","type":"text","x":1020,"y":750,"width":320,"height":170,"color":"3","content":"| 阶段 | 周期 |\n|------|------|\n| 合同签署 + 预付款 | ~30天 |\n| 制造 | ~90-180天 |\n| 海运 | ~45-50天 |\n| 现场部署 | ~30-45天 |\n\n**参考总周期**\n~{{DEPLOYMENT_DAYS}}天\n\n⚠️ 以上为参考值，不作交付承诺"},
+		{"id":"bom_title","type":"text","x":0,"y":980,"width":200,"height":60,"color":"1","content":"## 配置清单\n### BOM"},
+		{"id":"bom_table","type":"text","x":0,"y":1060,"width":680,"height":220,"color":"3","content":"| 类别 | 项目 | 规格 | 数量 | 备注 |\n|------|------|------|------|------|\n| IT Zone | {{IT_ITEM_1}} | {{IT_SPEC_1}} | {{IT_QTY_1}} | {{IT_NOTE_1}} |\n| IT Zone | {{IT_ITEM_2}} | {{IT_SPEC_2}} | {{IT_QTY_2}} | {{IT_NOTE_2}} |\n| Cooling Zone | {{COOL_ITEM_1}} | {{COOL_SPEC_1}} | {{COOL_QTY_1}} | {{COOL_NOTE_1}} |\n| Cooling Zone | {{COOL_ITEM_2}} | {{COOL_SPEC_2}} | {{COOL_QTY_2}} | {{COOL_NOTE_2}} |\n| Power | {{POWER_ITEM_1}} | {{POWER_SPEC_1}} | {{POWER_QTY_1}} | {{POWER_NOTE_1}} |\n| Power | {{POWER_ITEM_2}} | {{POWER_SPEC_2}} | {{POWER_QTY_2}} | {{POWER_NOTE_2}} |\n| Network | {{NET_ITEM}} | {{NET_SPEC}} | {{NET_QTY}} | {{NET_NOTE}} |"},
+		{"id":"terms_title","type":"text","x":720,"y":980,"width":200,"height":60,"color":"1","content":"## 商务条款\n### Terms & Conditions"},
+		{"id":"terms_detail","type":"text","x":720,"y":1060,"width":620,"height":220,"color":"3","content":"**付款方式：**\n- 合同签署: 60% 预付款\n- 交付时: 30%\n- 安装后: 10%\n\n**交付周期（参考）：**\nAC40/AC45: 90-120天\nDC45: 90-180天\n（以确认配置后为准）\n\n**质保：**\n{{WARRANTY_INFO}}\n\n**服务支持：**\n{{SERVICE_INFO}}"},
+		{"id":"compliance","type":"text","x":720,"y":1300,"width":280,"height":100,"color":"2","content":"## 合规认证\n**{{UL_STATUS}}**\n\n{{COMPLIANCE_LIST}}\n\n**认证路径：**\n{{COMPLIANCE_PATH}}"},
+		{"id":"risk","type":"text","x":1020,"y":1300,"width":320,"height":100,"color":"2","content":"## 主要风险\n**SPOF 清单**\n\n{{RISK_LIST}}\n\n**缓解措施：**\n{{RISK_MITIGATION}}"},
+		{"id":"contact","type":"text","x":0,"y":1300,"width":680,"height":100,"color":"4","content":"---\n## 联系我们\n\n**Fog Computing Inc**\n📧 contact@fogcomputing.ai\n📞 +1 626 203 2925\n🌐 fogcomputing.ai\n\n**客户经理：**\n{{AM_NAME}}\n📧 {{AM_EMAIL}}\n📞 {{AM_PHONE}}\n\n> 配置方案由 Fog Computing 工程团队提供。\n> 价格由商务团队根据确认配置单独核算。"}
+	],
+	"edges":[
+		{"id":"e1","fromNode":"bess_node","toNode":"compute_node","color":"2","fromSide":"right","toSide":"left"},
+		{"id":"e2","fromNode":"compute_node","toNode":"cooling_node","color":"2","fromSide":"right","toSide":"left"},
+		{"id":"e3","fromNode":"cooling_node","toNode":"network_node","color":"2","fromSide":"right","toSide":"left"},
+		{"id":"e4","fromNode":"cooling_detail","toNode":"cooling_rule","color":"1","fromSide":"right","toSide":"left"},
+		{"id":"e5","fromNode":"product_card","toNode":"kpi_it_load","color":"1","fromSide":"top","toSide":"bottom"},
+		{"id":"e6","fromNode":"bom_table","toNode":"terms_detail","color":"1","fromSide":"right","toSide":"left"},
+		{"id":"e7","fromNode":"risk","toNode":"contact","color":"1","fromSide":"left","toSide":"right"}
+	]
+}

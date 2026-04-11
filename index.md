@@ -28,7 +28,7 @@ Works_Public/
 ├── USER.md                    ← 用户信息 / User Profile
 ├── AGENTS.md                  ← Agent 角色总览 / Agent Roles Overview
 │
-├── AGENTS/                     ← 角色定义文件（8个）/ Agent Definition Files
+├── AGENTS/                     ← 角色定义文件（9个）/ Agent Definition Files
 │   ├── WORKFLOW.md             ← 工作流总览 / Workflow Overview
 │   ├── AM.md                   ← Account Manager / 客户经理
 │   ├── ATS.md                  ← Architecture & Technical Sales / 架构技术销售
@@ -37,16 +37,18 @@ Works_Public/
 │   ├── Layout Planner.md       ← 布局规划师 / Layout Planner
 │   ├── Cost Architect.md      ← 成本架构师 / Cost Architect
 │   ├── Compliance Officer.md   ← 合规官 / Compliance Officer
-│   └── Risk Auditor.md        ← 风险审计师 / Risk Auditor
+│   ├── Risk Auditor.md        ← 风险审计师 / Risk Auditor
+│   └── Market Researcher.md  ← 市场研究员 / Market Researcher
 │
 ├── KB/                         ← 知识库 / Knowledge Base
-│   ├── Guideline/              ← 各领域技术指南（6个）/ Domain Technical Guidelines
+│   ├── Guideline/              ← 各领域技术指南（7个）/ Domain Technical Guidelines
 │   │   ├── COOLING_SYSTEM_Guideline.md
 │   │   ├── POWER_SYSTEMS_Guideline.md
 │   │   ├── Compliance_Guideline.md
 │   │   ├── Cost_Guideline.md
 │   │   ├── Layout_Guideline.md
-│   │   └── Risk_Guideline.md
+│   │   ├── Risk_Guideline.md
+│   │   └── Marketing_Guideline.md
 │   │
 │   ├── 3RD-PARTY/             ← 第三方产品文档 / Third-Party Product Documents
 │   │   ├── 3rd Party List.md   ← 第三方供应商总览 / Supplier Directory
@@ -135,6 +137,7 @@ Works_Public/
 | 成本架构师 / Cost Architect | [[AGENTS/Cost Architect]] | `/KB/Guideline/Cost_Guideline` |
 | 合规官 / Compliance Officer | [[AGENTS/Compliance Officer]] | `/KB/Guideline/Compliance_Guideline` |
 | 风险审计师 / Risk Auditor | [[AGENTS/Risk Auditor]] | `/KB/Guideline/Risk_Guideline` |
+| 市场研究员 / Market Researcher | [[AGENTS/Market Researcher]] | `/KB/Guideline/Marketing_Guideline` |
 
 ---
 

@@ -109,6 +109,7 @@ Engineering agents focus on specific infrastructure domains.
 | Cost Architect | [[AGENTS/Cost Architect]] | 成本结构分析 | `/KB/Guideline/Cost_Guideline` |
 | Compliance Officer | [[AGENTS/Compliance Officer]] | 监管合规与认证 | `/KB/Guideline/Compliance_Guideline` |
 | Risk Auditor | [[AGENTS/Risk Auditor]] | 风险分析与审计 | `/KB/Guideline/Risk_Guideline` |
+| Market Researcher | [[AGENTS/Market Researcher]] | 市场情报与内容输出 | `/KB/Guideline/Marketing_Guideline` |
 
 ---
 

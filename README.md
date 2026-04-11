@@ -106,6 +106,7 @@ Works_Public/
 | Cost Architect | [[AGENTS/Cost Architect]] | CAPEX 分析、成本对比（非报价）|
 | Compliance Officer | [[AGENTS/Compliance Officer]] | 合规审查、认证、标准 |
 | Risk Auditor | [[AGENTS/Risk Auditor]] | 风险分析、SPOF 检测、工程红旗 |
+| Market Researcher | [[AGENTS/Market Researcher]] | 市场情报、行业监控、PR 内容输出 |
 
 详细角色协作流程，参见 [[AGENTS/WORKFLOW]]。
 
