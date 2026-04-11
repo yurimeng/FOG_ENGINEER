@@ -5,7 +5,7 @@ tags:
   - #process/am
 ---
 
-# Notion Client Management Workflow
+# Client Management Workflow
 
 ## 1. 目标
 

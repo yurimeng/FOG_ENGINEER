@@ -11,7 +11,7 @@ tags:
 > This tool is for commercial team use only.
 > **Engineering agents (AM, ATS, Cooling Engineer, Power Engineer, etc.) are strictly prohibited from using this tool or providing any pricing information to clients.**
 > All pricing inquiries must be redirected to the account manager.
-> Reference: ./0.PRINCIPLES.md Principle 7 — NO PRICE.
+> Reference: ./PRINCIPLES.md Principle 7 — NO PRICE.
 
 ## 1. 目标
 

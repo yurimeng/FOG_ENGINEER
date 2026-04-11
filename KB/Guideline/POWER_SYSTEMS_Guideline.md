@@ -142,5 +142,5 @@ IT负载:      xxx kW
 
 # 引用 / References
 
-本文件是 SOUL.md 和 0.PRINCIPLES.md 的补充文件。
+本文件是 SOUL.md 和 PRINCIPLES.md 的补充文件。
 所有 Agent 在进行电力相关沟通时，必须引用本文件。

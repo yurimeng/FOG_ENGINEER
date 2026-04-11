@@ -81,13 +81,16 @@ Last Updated: 2026-03-29
 
 ### 5.1 配电路径
 
+```
 Grid / BESS → PDC → UPS（9395XR-1500）→ PDC → Busbar（1600A）
     → Tap-off Unit（TOU，含 MCCB）→ DLC Racks → PDU → Server PSU
+```
 
 ---
 
 ## 6. 液冷系统架构
 
+```
 Hybrid Cooling System
         ↓
 Primary CDU（1.2MW）← DC45 内置
@@ -95,6 +98,7 @@ Primary CDU（1.2MW）← DC45 内置
 Rack CDU（150kW）← 可选，每柜一台
         ↓
 GPU Server（冷板）
+```
 
 ---
 
@@ -121,7 +125,7 @@ GPU Server（冷板）
 | 环境 >28°C | DX 强制启动 |
 | 禁止 | 纯干冷器 |
 
-参考：[[KB/3RD-PARTY/COOLING/COOLING_SYSTEM_Guideline|KB/3RD-PARTY/COOLING/COOLING_SYSTEM_Guideline]]
+参考：[[KB/3RD-PARTY/COOLING/COOLING_SYSTEM_SOLUTION|KB/COOLING_SYSTEM_SOLUTION]]
 
 ---
 
@@ -150,6 +154,7 @@ GPU Server（冷板）
 
 ## 11. 标准输出格式（团队引用模板）
 
+```
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 Reference Architecture — 1.2MW DLC AI Inference Unit
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -163,6 +168,7 @@ Redundancy:    UPS 模块 N+1 / 风墙 2+1（**IT Zone 本身无内部冗余**�
 Delivery:      约 195–305 天（制造90-180d + 海运45-50d + 部署30-45d）
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+```
 
 ---
 
@@ -170,5 +176,5 @@ Delivery:      约 195–305 天（制造90-180d + 海运45-50d + 部署30-45d�
 
 - DC45 完整规格：[[PRODUCTS_DC45|KB/PRODUCTS_DC45]]
 - MDC 组合标准：[[PRODUCTS_MDC|KB/PRODUCTS_MDC]]
-- 冷却方案：[[KB/3RD-PARTY/COOLING/COOLING_SYSTEM_Guideline|KB/3RD-PARTY/COOLING/COOLING_SYSTEM_Guideline]]
-- UPS 规格：[[KB/3RD-PARTY/UPS/UPS_EATON_9395XR|KB/3RD-PARTY/UPS/UPS_EATON_9395XR]]
+- 冷却方案：[[KB/3RD-PARTY/COOLING/COOLING_SYSTEM_SOLUTION|KB/COOLING_SYSTEM_SOLUTION]]
+- UPS 规格：[[KB/3RD-PARTY/Buildin/UPS_EATON_9395XR|KB/UPS_EATON_9395XR]]

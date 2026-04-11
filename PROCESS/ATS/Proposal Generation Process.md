@@ -1,83 +1,242 @@
-
 ---
 tags:
-  - #workspace/engineer
-  - #type/process
-  - #process/ats
+  - 
+  - 
+  -
 ---
 
-方案生成流程
+# Proposal Generation Process
+提案生成流程
 
----
-
-## 1 Purpose
-
-Generate a complete customer-facing infrastructure proposal.
-
-生成完整的客户方案。
+Document Version: v2.0
+Last Updated: 2026-04-11
+Change Log: v2.0 — 合并 Architecture Overview / Decision Tree / Design Principles
 
 ---
 
-## 2 Inputs
+## 1 目的
 
-Architecture design  
-Capacity planning (including IT load and total facility load)
-Cooling design
-**NO COST ESTIMATES — see Principle 7**
+将客户需求、工程分析转化为完整的客户交付方案文档。
 
-架构设计  
-容量规划  
-冷却设计  
-成本估算
+**核心原则：不输出任何价格/报价/成本估算。所有价格相关问题转 AM。**
 
 ---
 
-## 3 Process Steps
+## 2 前置条件
 
-1 Generate architecture diagram
+提案生成前必须完成以下输入：
 
-2 Prepare solution description
+| 输入 | 来源 | 状态检查 |
+|------|------|---------|
+| 客户需求（RFI）| AM | 必须完整 |
+| 架构选型 | ATS | 已确定 |
+| 容量规划 | ATS + Power Engineer | IT 负载和总负荷已澄清 |
+| 冷却设计 | Cooling Engineer | Hybrid Cooling System 已确定 |
+| 布局设计 | Layout Planner | 物理布置已确定 |
+| 合规清单 | Compliance Officer | UL/CE 等认证路径已确认 |
+| 风险清单 | Risk Auditor | SPOF 已识别 |
 
-3 Prepare configuration specification (product model, IT load, total facility load, PUE, redundancy)
-
-4 Prepare deployment timeline
-
----
-
-## 4 Outputs
-
-Customer solution proposal
-
-客户方案
-
----
-
-## 5 Deliverables
-
-Architecture diagram  
-System description
-**Configuration specification** (product, IT load, total facility load, PUE, cooling, power, redundancy)
-Deployment plan
-
-架构图  
-系统描述  
-成本估算  
-部署计划
+**关键澄清项：**
+- IT 负载 vs 整体电力负荷（见 [[Works_Public/KB/Guideline/POWER_SYSTEMS_Guideline|KB/POWER_LOAD]]）
+- UL 合规要求（影响选型：AC40 vs AC45）
+- 目标交付时间（参考周期 195-305 天）
+- Grid 稳定性（影响 BESS 配置）
 
 ---
 
-## 6 Risks
+## 3 提案输出目录
 
-Overly complex proposal
-Unclear load definitions (always clarify IT vs total facility load)
+每个项目必须建立独立目录：
+
+Projects/[项目名]/
+  Project_Record.md        # 项目主记录（必填）
+  RFI.md                   # 客户原始需求
+  Architecture/
+    01_Architecture_Selection.md
+    02_Capacity_Planning.md
+    03_Cooling_Design.md
+    04_Power_Design.md
+    05_Layout.md
+    diagrams/              # 架构图
+  BOM/
+    BOM_Config.md          # 物料配置清单（无价格）
+  Compliance/
+    Compliance_Checklist.md
+  Risk/
+    Risk_Register.md
+  Proposal/
+    Proposal_v[N].md      # 最终提案（从这里输出）
 
 ---
 
-## 7 ⚠️ Price Prohibition
+## 4 架构决策依据
 
-**This process does NOT output prices, cost estimates, or quotations.**
+提案生成前，ATS 必须确认以下配置决策。
 
-If asked about price:
-> "Configuration is handled by our engineering team. For pricing, please contact your account manager."
+### 4.1 计算冷却架构
 
-Any team member who provides price information is acting outside of system scope.
+| 条件 | 推荐方案 |
+|------|---------|
+| 单机柜功率密度 > 80kW | 浸没式（A32 / AC40 / AC45）|
+| 使用 OEM DLC 服务器 | DLC 直冷（DC45）|
+| 客户优先最低 PUE | 浸没式 |
+| 客户要求兼容标准服务器 | DLC |
+
+### 4.2 产品选型
+
+| 产品 | IT 容量 | 冷却 | UPS 放置 | UL |
+|------|---------|------|---------|-----|
+| A32 | 45-50kW | 浸没式 | 外置（客户自备）| — |
+| AC40 | 400kW | 浸没式 | 外置（客户自备）| 否 |
+| AC45 | 400kW | 浸没式 | 内置 | 是 |
+| DC45 | 1200kW | DLC 直冷 | 内置 | 是 |
+
+### 4.3 电力架构
+
+| 条件 | 推荐方案 |
+|------|---------|
+| 电网不稳定 | Grid + UPS + BESS |
+| 限制使用柴油发电机 | BESS 替代 |
+| 需要 >1 小时后备时间 | 发电机 |
+| 边缘默认 | Grid + UPS + BESS |
+
+**UPS 电池 ≠ BESS：**
+- UPS 电池（93LiG2）
+
+### 4.4 散热策略（强制规则）
+
+| 部署类型 | 规则 |
+|---------|------|
+| AC40 / AC45 / DC45 / MDC | **必须 Hybrid Cooling System**（禁止纯干冷器）|
+| A32 独立部署（环境 <28°C）| 允许纯干冷器 |
+| 环境温度 ≥28°C | DX 自动强制启动 |
+
+### 4.5 冗余策略
+
+| 场景 | 推荐冗余等级 |
+|------|------------|
+| 关键计算任务 | N+1 最低 |
+| 超大规模环境 | N+1 |
+| 金融/交易系统 | 2N |
+| 边缘默认 | N+1 |
+
+**⚠️ IT Zone 无内部冗余：** AC40 / AC45 / DC45 单台集装箱不含内部 N+1，冗余通过增加集装箱数量实现（系统级冗余）。
+
+### 4.6 基础设施形式
+
+| 条件 | 推荐方案 |
+|------|---------|
+| 部署周期 < 90 天 | 集装箱数据中心 |
+| 场地基础设施有限 | 集装箱数据中心 |
+| 超大规模园区 | 建筑数据中心 |
+
+---
+
+## 5 提案生成步骤
+
+### Step 1：生成架构图
+
+- 系统架构图（电力路径、冷却路径、网络路径）
+- 设备布置图（俯视图，含维护通道）
+- 热力图（冷却能力分布）
+
+工具：优先使用 Excalidraw 或 Mermaid，输出到 diagrams/ 目录。
+
+### Step 2：编写系统描述
+
+按以下结构编写：
+
+1. **项目概述** — 客户名称、项目名称、部署地点、目标算力规模（IT 负载）、总电力负荷（IT 负载 ÷ PUE）
+
+2. **推荐配置** — 推荐产品型号及理由、模块数量及组合方式、UL 合规状态
+
+3. **容量规格** — IT 负载（kW / MW）、总设施负荷（kW / MW）、PUE 范围（环境温度相关，不得写固定数字）、峰值功率
+
+4. **电力架构** — 市电接入配置、UPS 配置（型号、后备时间）、BESS 配置（如需要）、冗余等级
+
+5. **冷却架构** — 散热方式（Hybrid Cooling System：干冷器 + DX）、DX 强制启动温度（≥28°C）、管路规格
+
+6. **部署计划** — 合同签署约 30 天、制造约 90-180 天、海运约 45-50 天、现场部署约 30-45 天、**参考总周期约 195-305 天**（不作承诺）
+
+7. **合规路径** — UL 认证（如需要）及其他适用标准
+
+8. **风险清单** — 主要 SPOF 及缓解措施
+
+### Step 3：编写配置规格表
+
+| 项目 | 规格 |
+|------|------|
+| 产品型号 | AC40 / AC45 / DC45 / A32 / MDC |
+| 数量 | [N] 台 |
+| IT 负载 | [X] kW |
+| 总设施负荷 | [X] kW |
+| PUE 范围 | [X] - [Y] |
+| UPS 后备时间 | [X] 分钟 |
+| 冷却方式 | Hybrid Cooling System |
+| UL 合规 | 是 / 否 |
+| 尺寸 | 40ft / 45ft / 单柜 |
+| 网络接口 | [规格] |
+
+### Step 4：生成 BOM 配置清单
+
+BOM 输出配置清单（无价格），包含：
+- 产品型号
+- 数量
+- 主要配件规格（CDU、UPS 模块、电池柜、干冷器等）
+- 管路和接口规格
+
+| 类别 | 项目 | 规格 | 数量 | 备注 |
+|------|------|------|------|------|
+| IT Zone | AC45 集装箱 | 400kW，45ft，浸没式 | 2 | UPS 内置 |
+| Cooling Zone | 干冷器 | [规格] | 4 | |
+| Cooling Zone | DX 机组 | [规格] | 4 | 环境≥28°C 启动 |
+| Power | BESS | Tesla Megapack / 国轩 | 1 | Grid 不稳定时选配 |
+
+---
+
+## 6 提案版本管理
+
+- 初始版本：Proposal_v1.md
+- 每次修订：Proposal_v[N].md
+- 最终确认版：Proposal_v[N]_Final.md
+
+每次输出新版本时，更新 Project_Record.md 中的版本记录。
+
+---
+
+## 7 提案模板
+
+详见：[[Reference Architecture/Proposal_Template]]
+
+---
+
+## 8 价格禁止规则
+
+**本流程不输出任何价格、报价、成本估算。**
+
+如客户问及价格，统一回复：
+> "配置方案由我们的工程团队提供。价格由商务团队根据您确认的配置单独核算。请联系您的客户经理获取正式报价。感谢您的理解。"
+
+**这条规则没有例外。**
+
+---
+
+## 9 禁止事项
+
+- ❌ 提供任何价格、成本估算或报价
+- ❌ 推荐 A32 / AC40 / AC45 / DC45 / MDC 以外的产品
+- ❌ 将 IT 负载和整体电力负荷混用
+- ❌ 使用纯干冷器方案（AC40/AC45/DC45/MDC 必须配 DX；A32 独立部署在 <28°C 时除外）
+- ❌ PUE 写固定数字（必须输出范围，由环境温度决定）
+- ❌ 承诺交付时间（195-305 天仅供参考，不作承诺）
+- ❌ IT Zone 单台内部冗余设计（N+1/2N 通过增加集装箱数量实现）
+
+---
+
+## 10 关键风险
+
+1. **IT 负载 vs 总设施负荷混淆** — 所有数字必须明确标注是哪一种
+2. **PUE 固定数字** — PUE 必须输出范围，不得写固定数字
+3. **不承诺交付时间** — 交付周期仅供参考，不作承诺
+4. **Over-engineering** — 避免过度冗余设计，只提供必要配置
+5. **Over-complex proposal** — 提案结构清晰，不过度复杂

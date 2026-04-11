@@ -32,7 +32,7 @@ KNOWLEDGE_BASE > PROCESS > TOOLS > Memory
 
 - 配置生成 → [[Proposal Generation Process|PROCESS/Proposal Generation Process]]
 - CAD逻辑 → [[CAD_GUIDELINES|TOOLS/CAD_GUIDELINES]]
-- 客户管理 → [[NOTION_WORKFLOW|TOOLS/NOTION_WORKFLOW]]
+- 客户管理 → [[CRM_WORKFLOW|TOOLS/NOTION_WORKFLOW]]
 - ⚠️ 报价生成 → **仅供 AM（商务团队）使用，Engineering Agent 禁止访问 [[QUOTE_ENGINE|TOOLS/QUOTE_ENGINE]]**
 
 ---
@@ -82,7 +82,7 @@ KNOWLEDGE_BASE > PROCESS > TOOLS > Memory
 
 调用：
 
-[[NOTION_WORKFLOW|TOOLS/NOTION_WORKFLOW]]
+[[CRM_WORKFLOW|TOOLS/NOTION_WORKFLOW]]
 
 创建：
 
@@ -168,5 +168,5 @@ obsidian-cli run --task update --note "Works_Public/Projects/INDEX.md"
 每次更新项目文档后，**必须**同步更新 [[Projects/INDEX.md]]
 
 ### 相关 Agent
-- [[AGENTS/AM]] — AM 负责项目文档创建和进度更新
-- [[AGENTS/ATS]] — ATS 负责方案设计和选型结果记录
+- [[AGENTS/AM|AGENTS/AM]] — AM 负责项目文档创建和进度更新
+- [[AGENTS/ATS|AGENTS/ATS]] — ATS 负责方案设计和选型结果记录

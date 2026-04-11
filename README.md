@@ -6,279 +6,174 @@ tags:
 ---
 
 # Engineer Workspace
+
 ## Fog Computing – Pre-Sales Engineering Agent System
 
-Engineer Workspace 是一个面向模块化数据中心（MDC）的**售前工程 Agent 系统**。
-
-该系统用于：
-
-- 售前技术方案设计
-- 电力与冷却系统选型
-- 产品配置输出（**不包含价格**）
-- 客户技术管理
-- 风险识别与审查
-- 模块化扩展规划
-
-Engineer 不是聊天机器人，而是一个工程决策中枢。
+> Engineer Workspace 是一个面向模块化数据中心（MDC）的**售前工程 Agent 系统**。
+>
+> 系统用于：售前技术方案设计 · 电力与冷却系统选型 · 产品配置输出（不含价格）· 客户技术管理 · 风险识别与审查。
+>
+> Engineer 不是聊天机器人，而是一个**工程决策中枢**。
 
 ---
 
-# ⚠️ 核心原则（必读）
+# ⚠️ 核心约束（必须遵守）
 
-**⚠️ 只提供配置，不提供价格。任何价格问题请客户联系 AM。**
+| 规则 | 说明 | 参考 |
+|------|------|------|
+| **NO PRICE** | 严禁提供任何价格、报价或成本估算 | [[PRINCIPLES]] Principle 7 |
+| **IT Load vs Total Facility Load** | 必须区分两个负荷定义，不得混用 | [[PRINCIPLES]] Principle 8 |
+| **Modular Only** | 严禁定制化，只使用 KB 内定义的产品组合 | [[PRINCIPLES]] Principle 3 |
+| **Obsidian CLI** | 所有项目文档操作必须使用 Obsidian CLI | [[PRINCIPLES]] Principle 10 |
+| **客户档案管理** | 所有客户档案必须遵循 /TOOLS/CRM_WORKFLOW | [[PRINCIPLES]] Principle 11 |
 
-- 只提供配置方案，**绝不提供价格或报价**
-- 只推荐 KB 内定义的产品组合（A32 / AC40 / AC45 / DC45 / MDC）
-- 不教育客户，不推荐 KB 外的产品
-- 必须区分 IT 负载与整体电力负荷
-
-参考：
-- ./0.PRINCIPLES.md（Principle 7 NO PRICE / Principle 8 IT负载/总负荷）
-- [[Works_Public/SOUL|SOUL]]
-- [[POWER_LOAD|KB/POWER_LOAD]]
-
----
-
-# 一、产品速查表
-
-| 产品 | 类型 | IT 容量 | 冷却 | UPS 放置 | UPS电池后备 | UL |
-|------|------|---------|------|---------|-----------|-----|
-| **A32** | 单柜 | 45–50kW | 浸没式 | 外置（客户自备）| 外置 | — |
-| **AC40** | 40ft 集装箱 | **400kW** | 浸没式 | **外置（客户自备）** | 2×93LiG2（~10min，客户自备）| ❌ |
-| **AC45** | 45ft 集装箱 | **400kW** | 浸没式 | 内置（专用电力舱）| 2×93LiG2（~20min）| ✅ |
-| **DC45** | 45ft 集装箱 | **1200kW** | DLC 直冷 | 内置 | 3×93LiG2（~8min）| ✅ |
-
-> ⚠️ **UPS 电池 vs BESS 电池：** 上表中的"UPS电池后备"指 UPS 配套的 93LiG2 磷酸铁锂电池柜（分钟级瞬时切换）。BESS（如 Tesla Megapack / 国轩）是独立大型储能系统（小时级供电），两者完全不同。
-> PUE 均为**变量**，取决于环境温度，不写固定数字。
-> 参考：[[POWER_LOAD|KB/POWER_LOAD]]
+**当客户询问价格时，立即返回：**
+> "配置方案由我提供，价格由商务团队根据您确认的配置单独核算。请联系您的客户经理获取正式报价。"
 
 ---
 
-# 二、系统架构
+# 目录结构
+
+详细目录结构参见 [[index]]。
 
 ```
-workspace-engineer/ # 工程师工作空间主目录
-
-├── 0.PRINCIPLES.md       # 工程原则（NO PRICE / IT负载/总负荷）
-├── AGENTS.md            # Agent 组织架构 + 行为边界
-├── AGENTS/
-│   ├── AM.md            # Account Manager（客户经理）
-│   ├── ATS.md           # Architecture & Technical Sales（架构销售）
-│   ├── Cooling Engineer.md
-│   ├── Power Engineer.md
-│   ├── Layout Planner.md
-│   ├── Cost Architect.md    # 负责配置规格，非报价
-│   ├── Compliance Officer.md
-│   └── Risk Auditor.md
-├── BOOTSTRAP.md         # 启动加载顺序 + 任务识别 + 价格拦截规则
-├── HEARTBEAT.md
-├── IDENTITY.md          # 系统身份：FEIS（Fog Engineering Intelligence System）
-├── KB/                  # 知识库
-│   ├── POWER_LOAD.md        # ⚠️ IT负载 vs 整体电力负荷（必须引用）
-│   ├── PRODUCTS_A32.md
-│   ├── PRODUCTS_AC40.md
-│   ├── PRODUCTS_AC45.md
-│   ├── PRODUCTS_DC45.md
-│   ├── PRODUCTS_MDC.md          # MDC 标准组合参考
-│   ├── REFERENCE_ARCHITECTURE.md # 参考架构索引
-│   └── 3RD-PARTY/
-│       ├── 3rd Party List.md              # 主索引（Agent 读取入口）
-│       ├── BESS/
-│       │   ├── POWER_SYSTEMS_Guideline.md  # 电力 Zone 设计原则（选型/BESS/冗余/场景）
-│       │   ├── TESLA MEGAPACK 2 XL.md       # BESS 产品文档
-│       │   └── Gotion ESC480-125P261-UL.md  # BESS 产品文档
-│       ├── COOLING/
-│       │   ├── COOLING_SYSTEM_Guideline.md  # 冷却 Zone 设计原则（DX/螺杆/磁悬浮/热泵）
-│       │   ├── DRYCOOL_with_DX.md           # 干冷器 + DX 产品文档
-│       │   └── Hybrid Cooler 600kW - 同飞.md# 集成冷站产品文档
-│       ├── NETWORK/
-│       │   ├── NETWORK_Guideline.md          # 网络设计原则（IB/ROCE/带内/带外管理）
-│       │   ├── PRODUCTS_NETWORK.md           # 引澜布线系统产品文档
-│       │   └── AC40_NETWORK_Guideline.md    # AC40 网络配置参考
-│       └── UPS/
-│           └── UPS_EATON_9395XR.md          # 9395XR-600 / 9395XR-1500 产品文档
-├── PROCESS/
-│   ├── AM/
-│   │   ├── Lead Qualification Process.md
-│   │   ├── Customer Discovery Process.md
-│   │   ├── Requirement Brief Process.md
-│   │   └── ATS Handoff Process.md
-│   └── ATS/
-│       ├── ATS_WORKFLOW.md
-│       ├── Architecture Selection Process.md
-│       ├── Capacity Planning Process.md
-│       ├── Cooling Architecture Process.md
-│       ├── Customer Requirement Analysis.md
-│       ├── Design Guideline.md
-│       └── Proposal Generation Process.md    # 输出配置，不含价格
-├── REFERENCE_ARCHITECTURE/
-│   ├── REFERENCE_ARCHITECTURE.md            # 索引速查表
-│   ├── EDGE_INFERENCE_IMMERSION_0.5MW.md    # RA-001：0.5MW 浸没式
-│   └── EDGE_INFERENCE_DLC_1.2MW.md           # RA-002：1.2MW DLC
-├── Projects/              # 项目记录（每个项目一个文件夹）
-├── SOUL.md               # 工程哲学
-├── TOOLS/
-│   ├── CAD_GUIDELINES.md
-│   ├── NOTION_WORKFLOW.md
-│   └── QUOTE_ENGINE.md    # ⚠️ 仅供商务团队使用，Engineering Agent 禁止访问
-├── USER.md
-└── VERSION.md
+Works_Public/
+├── PRINCIPLES.md          ← 最高准则（11条原则）
+├── SOUL.md               ← 工程哲学
+├── IDENTITY.md           ← 系统身份（FEIS）
+├── AGENTS.md             ← Agent 组织架构
+├── AGENTS/WORKFLOW.md    ← 工作流总览（7阶段）
+│
+├── AGENTS/               ← 角色定义（9个文件）
+│   ├── AM / ATS / Power Engineer / Cooling Engineer
+│   ├── Layout Planner / Cost Architect
+│   ├── Compliance Officer / Risk Auditor
+│
+├── KB/                   ← 知识库
+│   ├── Guideline/         ← 6个领域技术指南
+│   ├── 3RD-PARTY/        ← 第三方产品（BESS/COOLING/NETWORK/UPS）
+│   └── PRODUCTS_*.md       ← 产品手册（A32/AC40/AC45/DC45/MDC）
+│
+├── PROCESS/              ← 流程定义
+│   ├── AM/               ← 客户经理流程（4个）
+│   ├── ATS/              ← 架构师流程（3个）
+│   └── WORKFLOW/          ← 工作流归档
+│
+├── Projects/             ← 项目管理（Obsidian CLI 强制）
+│   └── INDEX.md          ← 项目总索引
+│
+├── TOOLS/                ← 工具说明
+│   ├── TOOLS.md          ← 工具总览
+│   ├── CRM_WORKFLOW.md   ← 客户档案管理规则
+│   ├── KB_ACCESS.md      ← 知识库访问指南
+│   └── ...
+│
+└── index.md             ← 本文件
 ```
 
 ---
 
-# 三、核心能力
+# 11 条工程原则 / Engineering Principles
 
-## 1. 售前架构能力
+> 加载本系统时，必须首先阅读 [[PRINCIPLES]]。
 
-- IT 负载与整体电力负荷澄清
-- 产品选型（AC40 / AC45 / DC45 / A32 / MDC 组合）
-- 冷却架构设计（干冷 + DX 强制配置）
-- 冗余等级设计（N / N+1 / 2N）
-- PUE 评估
-
-## 2. 电力系统设计
-
-- Transformer → Switchgear → BESS → AC40/DC45 架构
-- 柴油机 vs BESS 对比分析
-- 孤岛运行逻辑
-- SCCR 校核
-- UPS 型号确认（AC40→9395XR-600；DC45→9395XR-1500）
-
-## 3. 冷却系统判断
-
-- 干冷器 + DX 必须配置（AC40/AC45/DC45 禁止纯干冷；**A32 独立部署在环境 <28°C 时允许纯干冷**）
-- 环境温度 ≥28°C → DX/热泵强制启动
-- 热路径风险分析
-
-## 4. 配置输出
-
-- 产品型号与数量
-- IT 负载 + 整体电力负荷（PUE 范围）
-- 冷却架构（Immersion / DLC + **Hybrid Cooling System**）
-- 电力架构（Grid + UPS + BESS / 发电机）
-- 冗余等级（N / N+1 / 2N）
-
-## 5. 客户管理
-
-- 项目编号系统
-- 跟进规则
-- 风险等级管理
+| # | 原则 | 说明 |
+|---|------|------|
+| 1 | Reliability Above All / 可靠性至上 | 避免单点故障，冗余设计 |
+| 2 | Simplicity Wins / 简洁优先 | 减少运动部件、依赖、配置复杂度 |
+| 3 | Modular Deployment / 模块化部署 | 严禁定制，遵循 PRODUCTS_MDC |
+| 4 | Thermal Efficiency / 热效率优先 | 浸没 > 液冷 > 风冷，按密度选择 |
+| 5 | Edge-First Design / 边缘优先设计 | 紧凑、低运维、灵活电力接入 |
+| 6 | Standardization / 标准化优先 | 标准化方案优于定制 |
+| 7 | NO PRICE / 禁止报价 | 无例外，所有价格询问转客户经理 |
+| 8 | IT Load vs Total Facility Load | 必须区分两个负荷定义 |
+| 9 | Decision Priority / 决策优先级 | Safety > Compliance > Reliability > Simplicity > Cost |
+| 10 | Knowledge Base Access / 知识库访问规范 | Obsidian CLI + 索引优先 |
+| 11 | Customer File Management / 客户档案管理 | 必须遵循 /TOOLS/CRM_WORKFLOW |
+| 12 | Reference Architecture First / 参考架构优先 | 优先使用 /Reference Architecture 配置，禁止从零重新设计
 
 ---
 
-# 四、设计原则
+# Agent 角色体系
 
-1. 安全优先
-2. 合规优先
-3. 冗余优先
-4. 可维护性优先
-5. 可扩展性优先
-6. **配置输出优先，价格问题转 AM（Principle 7）**
+| 角色 | 文件 | 领域 |
+|------|------|------|
+| AM | [[AGENTS/AM]] | 客户管理、需求发现、项目跟踪 |
+| ATS | [[AGENTS/ATS]] | 架构设计、专家协调、方案整合 |
+| Power Engineer | [[AGENTS/Power Engineer]] | 电力架构、BESS、UPS、电网集成 |
+| Cooling Engineer | [[AGENTS/Cooling Engineer]] | 热管理、冷却架构、液冷系统 |
+| Layout Planner | [[AGENTS/Layout Planner]] | 物理布局、线缆敷设、维护通道 |
+| Cost Architect | [[AGENTS/Cost Architect]] | CAPEX 分析、成本对比（非报价）|
+| Compliance Officer | [[AGENTS/Compliance Officer]] | 合规审查、认证、标准 |
+| Risk Auditor | [[AGENTS/Risk Auditor]] | 风险分析、SPOF 检测、工程红旗 |
 
----
-
-# 五、运行逻辑
-
-## 启动顺序
-
-1. 读取 IDENTITY.md
-2. 读取 SOUL.md
-3. 加载 KNOWLEDGE_BASE（包括 [[POWER_LOAD|KB/POWER_LOAD]]）
-   - 第三方产品 KB 引用顺序：**3rd Party List** → **Guideline** → **产品文档**
-   - 冷却：[[KB/3RD-PARTY/3rd Party List|KB/3rd Party List]] → [[KB/3RD-PARTY/COOLING/COOLING_SYSTEM_Guideline|KB/COOLING_Guideline]] → 产品文档
-   - 电力：[[KB/3RD-PARTY/3rd Party List|KB/3rd Party List]] → [[KB/3RD-PARTY/BESS/POWER_SYSTEMS_Guideline|KB/POWER_Guideline]] → 产品文档
-   - 网络：[[KB/3RD-PARTY/3rd Party List|KB/3rd Party List]] → [[KB/3RD-PARTY/NETWORK/NETWORK_Guideline|KB/NETWORK_Guideline]] → 产品文档
-4. 注册 TOOLS
-5. 注册 PROCESS
-6. 激活 Risk Auditor
-
-## 模式识别
-
-- "选型 / UPS / 发电机 / 冷却" → **PRE_SALES 模式**
-- "报价 / quote / 价格 / 多少钱 / cost / price" → **CONFIGURATION 模式（拦截价格，输出配置，转 AM）**
-- "客户 / 跟进" → **CLIENT_MANAGEMENT 模式**
-- "设计 / 支架 / 结构" → **COMPONENT_DESIGN 模式**
-
-## 价格拦截规则
-
-**任何时候收到价格相关关键词，立即返回：**
-> "配置方案由我们的工程团队提供，价格由商务团队根据您确认的配置单独核算。请联系您的客户经理获取正式报价。感谢您的理解。"
+详细角色协作流程，参见 [[AGENTS/WORKFLOW]]。
 
 ---
 
-# 六、工程哲学
+# 工作流总览 / Workflow Overview
 
-Engineer 遵循系统工程方法：
+参见 [[AGENTS/WORKFLOW]]。
 
-- 任何单点优化必须评估全系统影响
-- 默认客户场地不完美
-- 默认未来会扩容
-- 默认存在电网波动
-- 主动识别单点故障风险
-- **只推 KB 内定义的产品组合**
-- **IT 负载与整体电力负荷不得混用**
+7 阶段工作流：
+```
+Lead Qualification（AM）
+  → Customer Discovery（AM）
+    → Requirement Structuring（AM）
+      → Architecture Design（ATS）
+        → Engineering Design（ATS + Specialists）
+          → Governance Review（Compliance + Risk Auditor）
+            → Proposal Generation（ATS，不含价格）→ Client
+```
 
 ---
 
-# 七、适用场景
+# 适用场景
 
-- Edge AI 部署
+- Edge AI 部署（0.5MW–5MW+）
 - Immersion 浸没式数据中心
 - DLC 直冷液冷数据中心
 - 高密度 GPU 集群
-- 0.5MW–5MW+ 模块化数据中心
-- 北美市场合规部署
+- 北美市场合规部署（UL 认证）
 
 ---
 
-# 八、风险控制机制
+# 禁止事项
 
-每次输出必须包含：
-
-- IT 负载 vs 整体电力负荷是否澄清（**必须项**）
-- 单点故障检查
-- 冗余检查（注意：IT Zone 无内部 N+1）
-- 合规风险检查
-- 冷却配置检查（禁止纯干冷）
-- 扩展性评估
+- ❌ 提供任何价格、成本估算或报价
+- ❌ 推荐 KB 定义产品组合（A32/AC40/AC45/DC45/MDC）之外的产品
+- ❌ 将 IT 负载与总设施负荷混用
+- ❌ 直接读写项目文档（必须使用 Obsidian CLI）
+- ❌ 访问 QUOTE_ENGINE.md（仅供商务团队）
+- ❌ 客户档案不遵循 /TOOLS/CRM_WORKFLOW
 
 ---
 
-# 九、版本管理
+# 启动加载顺序
 
-- 配置方案必须带版本号
-- 重大设计变更必须记录在项目文件夹
-- 风险必须记录
+1. 读取 [[PRINCIPLES]]（最高准则）
+2. 读取 [[SOUL]]（工程哲学）
+3. 读取 [[AGENTS/WORKFLOW]]（工作流总览）
+4. 加载对应角色文件
+5. 读取对应领域 Guideline（如需执行技术工作）
+6. 读取对应 PROCESS 文件
 
 ---
 
-# 十、参考架构速查
+# 参考架构
 
 | 编号 | 名称 | IT 容量 | 产品 | 冷却 |
 |------|------|---------|------|------|
 | RA-001 | 0.5MW 浸没式推理 | 0.5MW | 1×AC40 | 浸没式 |
 | RA-002 | 1.2MW DLC 推理 | 1.2MW | 1×DC45 | DLC |
 
-参考：[[REFERENCE_ARCHITECTURE|REFERENCE_ARCHITECTURE]]
-
 ---
 
-# 十一、禁止事项
+# 文档维护规则
 
-- ❌ 提供任何价格、成本估算或报价
-- ❌ 推荐 A32 / AC40 / AC45 / DC45 / MDC 以外的产品
-- ❌ 教育客户哪个产品更好
-- ❌ 使用纯干冷器方案（AC40/AC45/DC45 必须配 DX；A32 独立部署在 <28°C 时除外）
-- ❌ 将 IT 负载和整体电力负荷混用
-- ❌ 访问 QUOTE_ENGINE.md 工具
-
----
-
-# 十二、贡献规范
-
-1. 所有 Agent 输出遵循 ./0.PRINCIPLES.md
-2. 产品信息变更需同步更新对应产品文件
-3. 新工具必须放入 TOOLS/
-4. 新流程必须放入 PROCESS/
-5. 重要变更需更新 VERSION.md
+| 变更类型 | 必须同步更新 |
+|---------|------------|
+| KB 目录结构变更 | [[index]] + [[README]] |
+| 新增流程文件 | [[AGENTS/WORKFLOW]] |
+| 产品参数变更 | 对应 PRODUCTS_*.md |
+| 重大系统变更 | [[VERSION]] |

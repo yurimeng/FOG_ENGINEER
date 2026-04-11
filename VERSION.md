@@ -9,11 +9,91 @@ tags:
 
 Workspace: Engineer Workspace
 Product: Fog Computing Engineering AI
-Version: v1.5.0
-Release Date: 2026-04-09
+Version: v1.6.0
+Release Date: 2026-04-10
 Status: Active Development
 
 Reference backup: ../KB_backup_20260409_v1.5.0
+
+---
+
+## v1.6.0 — Obsidian CLI 项目管理规范 (2026-04-10)
+
+### 重大变更：项目文档管理强制使用 Obsidian CLI
+
+**变更背景：** 原 Agent 直接读写项目文档，导致 INDEX 同步不一致、数据难以追踪。
+
+### 新增文件
+
+| 文件 | 类型 | 说明 |
+|------|------|------|
+| `Projects/INDEX.md` | NEW | 项目索引，包含必填字段状态表和项目总览 |
+| `Market/` | NEW | 市场报告和博客草稿目录 |
+
+### 核心规则新增
+
+| 规则 | 位置 | 说明 |
+|------|------|------|
+| Obsidian CLI 强制使用 | `TOOLS.md` Section 8 | 读取+写入项目文档必须通过 CLI |
+| MANDATORY RULES | `AGENTS/AM.md` | 5条强制规则，含 CLI 使用规范 |
+| MANDATORY RULES | `AGENTS/ATS.md` | 3条强制规则，含 CLI 使用规范 |
+| 必填字段清单 | `AGENTS/AM.md` Section 3.5.1 | 11个必填字段定义 |
+| 缺失字段提醒机制 | `AGENTS/AM.md` Section 3.5.2 | AM 必须定期检查并跟进 |
+
+### 项目必填字段规范
+
+每个 `Project_Record.md` 必须包含：
+
+| 字段 | 说明 | 必须/可选 |
+|------|------|----------|
+| 最终用户 | End User | 必须 |
+| EPC | 工程承包商 | 如有 |
+| 投资方 | Investor | 如有 |
+| 中间人 | Intermediary | 如有 |
+| 部署地点 | Location | 必须 |
+| 项目进度 | Stage | 必须 |
+| 规模 | Scale (IT Load) | 必须 |
+| 部署方式 | Indoor/Outdoor | 必须 |
+| 电力情况 | Power (可链接飞书) | 必须 |
+| 最后交流时间 | Last Contact Date | 必须 |
+| 最后交流进度 | Last Progress | 必须 |
+
+### 项目进度阶段定义
+
+```
+Lead → Qualification → Technical Discussion → NDA → TS → QUOTE → Contract → Pay → Closed-Won/Lost
+```
+
+### 文件更新清单
+
+| 文件 | 变更内容 |
+|------|---------|
+| `TOOLS.md` | 新增 Section 8 — Obsidian CLI 强制规则 |
+| `AGENTS/AM.md` (v1.5) | 新增 MANDATORY RULES；必填字段；缺失提醒机制 |
+| `AGENTS/ATS.md` (v1.5) | 新增 MANDATORY RULES；引用 TOOLS Section 8 |
+| `Projects/INDEX.md` | **新建** — 项目索引含状态表和模板 |
+| `Projects/Simple Mining/Project_Record.md` | 模板升级，新增必填字段状态表 |
+| `Projects/Crucible/Project_Record.md` | 模板升级，新增必填字段状态表 |
+| `README.md` | 完整重写，同步目录结构；新增第十二节项目管理规则 |
+
+### Obsidian CLI 命令
+
+```bash
+# 读取
+obsidian-cli run --task read --note "Works_Public/Projects/[项目名]/Project_Record.md"
+obsidian-cli run --task read --note "Works_Public/Projects/INDEX.md"
+
+# 写入
+obsidian-cli run --task update --note "Works_Public/Projects/[项目名]/Project_Record.md"
+obsidian-cli run --task update --note "Works_Public/Projects/INDEX.md"
+```
+
+### 市场文档路径
+
+| 文档 | 路径 |
+|------|------|
+| 市场报告 | `Works_Public/Market/Market_Report.md` |
+| 博客草稿 | `Works_Public/Market/Blog_Draft.md` |
 
 ---
 
