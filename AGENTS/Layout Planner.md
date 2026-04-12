@@ -197,3 +197,7 @@ Layout Planner 输出给 ATS 的内容：
 | Layout_Guideline | `/KB/Guideline/Layout_Guideline` | 布局技术指南（权威参考）|
 | 产品目录 | `/KB/` | 容器和机架尺寸参考 |
 | 相关专家输出 | ATS 整合输入 | 从 Power/Cooling 专家获取接口需求 |
+
+---
+
+*Document Version: v1.1 | Last Updated: 2026-04-12*

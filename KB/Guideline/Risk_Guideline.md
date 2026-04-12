@@ -155,3 +155,7 @@ Risk Auditor workflow:
 4. **Flag conflicts** — If project requirements conflict with this Guideline, escalate to ATS before proceeding
 
 > **Authority**: This Guideline defines the authoritative risk classification methodology. Do not downgrade risk levels to avoid escalation. If in doubt, escalate.
+
+---
+
+*Document Version: v1.1 | Last Updated: 2026-04-12*

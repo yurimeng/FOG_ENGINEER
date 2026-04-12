@@ -280,12 +280,12 @@ Before accessing any specific KB file, **always start from the appropriate index
 
 | When accessing... | Start from... |
 |---|---|
-| Works_Public structure | [[index]] |
-| AGENTS / roles | [[AGENTS]] |
+| Works_Public structure | [[FOG/index]] |
+| AGENTS / roles | [[FOG/AGENTS]] |
 | Domain guidelines | [[/KB/Guideline/index]] |
 | Product catalog | [[PRODUCTS_MDC]] |
 | Specific products | See zone index in Guideline |
-| Specific project | [[Projects/INDEX]] |
+| Specific project | [[FOG/Projects/INDEX]] |
 | Processes | See [[PROCESS/WORKFLOW/WORKFLOW]] |
 
 **Never jump directly to a deep file without first checking the relevant index.**
@@ -358,12 +358,12 @@ obsidian-cli run --task update --note "/KB/..."
 
 | 需要访问... | 从这里开始... |
 |---|---|
-| Works_Public 整体结构 | [[index]] |
-| AGENTS / 角色定义 | [[AGENTS]] |
+| Works_Public 整体结构 | [[FOG/index]] |
+| AGENTS / 角色定义 | [[FOG/AGENTS]] |
 | 领域技术指南 | [[/KB/Guideline/index]] |
 | 产品目录总览 | [[PRODUCTS_MDC]] |
 | 具体产品 | 从对应 Guideline 的索引区开始 |
-| 具体项目 | [[Projects/INDEX]] |
+| 具体项目 | [[FOG/Projects/INDEX]] |
 | 流程定义 | 参见 [[PROCESS/WORKFLOW/WORKFLOW]] |
 
 **严禁不经过索引直接跳转深层文件。**
@@ -451,3 +451,7 @@ Reference architectures represent validated, pre-engineered system configuration
 | RA-002 | Edge Inference — 直冷液冷 1.2MW | 1.2MW | 直冷液冷 | DC45 |
 
 **参考路径：** `[[Reference Architecture]]`
+
+---
+
+*Document Version: v1.1 | Last Updated: 2026-04-12*

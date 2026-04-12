@@ -39,3 +39,7 @@ tags:
 
 ## 6. Outputs / 输出
 - **Customer Requirement Notes (客户需求详细记录)** $\rightarrow$ 触发 $\rightarrow$ `Requirement Brief Process`
+
+---
+
+*Document Version: v1.1 | Last Updated: 2026-04-12*

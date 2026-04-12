@@ -23,7 +23,7 @@ tags:
 
 > ⚠️ **UPS 电池 vs BESS 电池：** 上表中"UPS电池"指 UPS 配套的 93LiG2 磷酸铁锂电池柜（分钟级瞬时切换后备）。BESS（如 Tesla Megapack / 国轩）是独立大型储能系统（小时级供电），两者完全不同。
 
-参考：[[KB/3RD-PARTY/UPS/UPS_EATON_9395XR|KB/UPS_EATON_9395XR]]
+参考：[[UPS_EATON_9395XR|KB/UPS_EATON_9395XR]]
 
 ### BESS 连接方式
 Grid → BESS → IT Zone → IT
@@ -58,8 +58,8 @@ Grid → ATS → IT Zone → IT
 ## 4. BESS （后备电源）
 
 - 替代柴油发电机
-- TESLA MEGAPACK 2 或者 3：[[KB/3RD-PARTY/BESS/TESLA MEGAPACK 2 XL|KB/BESS/TESLA MEGAPACK 2 XL]]
-- 国产的储能采用安徽国轩：[[KB/3RD-PARTY/BESS/Gotion ESC480-125P261-UL|KB/BESS/Gotion ESC480]]
+- TESLA MEGAPACK 2 或者 3：[[TESLA MEGAPACK 2 XL|KB/BESS/TESLA MEGAPACK 2 XL]]
+- 国产的储能采用安徽国轩：[[Gotion ESC480-125P261-UL|KB/BESS/Gotion ESC480]]
 
 
 ---
@@ -137,3 +137,7 @@ Grid → ATS → IT Zone → IT
 | >8小时供电  | 柴油机         |
 | 偏远矿区    | 柴油机         |
 | 极端高可靠需求 | BESS + 小型柴油 |
+
+---
+
+*Document Version: v1.1 | Last Updated: 2026-04-12*

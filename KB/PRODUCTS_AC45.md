@@ -7,7 +7,7 @@ tags:
 
 # AC45 – All-In-One Immersion Container (45ft, UL Compliant)
 适用对象：MDC（Modular Datacenter Cluster）标准计算单元 IT Zone
-版本：V1.0（2026-04-09 新增产品，45ft 浸没式，UPS 内置合规版）
+版本：V1.1（2026-04-09 新增产品，45ft 浸没式，UPS 内置合规版）
 
 ---
 
@@ -91,7 +91,7 @@ AC45 是 45ft 容器规格的浸没式液冷集装箱，支持 8 × 50kW A32 浸
 | 散热方式 | **Hybrid Cooling System**（干冷器 + DX 一体化）或 **热泵** |
 | 允许方式 | Hybrid Cooling System / 热泵 |
 | **禁止** | 纯干冷器（无 DX）— 环境 ≥28°C 时无法满足散热需求 |
-| 设计原则 | [[KB/3RD-PARTY/COOLING/COOLING_SYSTEM_Guideline]] |
+| 设计原则 | [[FOG/KB/3RD-PARTY/COOLING/COOLING_SYSTEM_Guideline]] |
 
 ### 5.2 电力舱散热
 
@@ -202,4 +202,8 @@ Grid / BESS → PDC → UPS (EATON 9395XR-600) → PDC → Tanks → PDU
 > ⚠️ **UPS 电池 vs BESS 电池：** 上表中"UPS 电池后备"指 UPS 配套的 93LiG2 磷酸铁锂电池柜（分钟级瞬时切换后备）。BESS（如 Tesla Megapack / 国轩）是独立大型储能系统（小时级供电），两者完全不同。
 
 UPS电池型号均为 **EATON 93LiG2**（93Li92S-100Ah-3PBFA，332kW/柜）。
-参考：[[KB/3RD-PARTY/UPS/UPS_EATON_9395XR|KB/UPS_EATON_9395XR]]
+参考：[[UPS_EATON_9395XR|KB/UPS_EATON_9395XR]]
+
+---
+
+*Document Version: v1.1 | Last Updated: 2026-04-12*

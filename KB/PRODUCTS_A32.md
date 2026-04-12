@@ -71,7 +71,7 @@ IT Load → Dielectric Fluid → Heat Exchanger → CDU → **Hybrid Cooling Sys
 > - **A32 独立部署**：作为单柜单元，低温区（<28°C）可使用纯干冷器，PUE 可低至 1.03
 > - **A32 在 AC40/DC45 集装箱内**：温度由外制冷系统（Hybrid Cooling System）统一动态调节，必须配置 DX/热泵，禁止纯干冷器
 
-设计原则参考：[[KB/3RD-PARTY/COOLING/COOLING_SYSTEM_Guideline]]
+设计原则参考：[[FOG/KB/3RD-PARTY/COOLING/COOLING_SYSTEM_Guideline]]
 
 ### 5.3 故障模式
 
@@ -130,3 +130,7 @@ INPUT → PDC → UPS（可选，外置） → A32 Tank → IT Servers
 | **AC45** | 45ft 集装箱（8×A32，UL 合规）| 400kW | 浸没式 |
 | **DC45** | 45ft 集装箱（8×DLC） | 1200kW | 直冷液冷 DLC |
 | **MDC** | 模块化集群（AC40+AC45+DC45） | 可达 5MW+ | 混合 |
+
+---
+
+*Document Version: v1.1 | Last Updated: 2026-04-12*

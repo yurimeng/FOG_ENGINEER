@@ -105,3 +105,7 @@ Rack → CDU → **Hybrid Cooling System**
 - 管路过长
 - 电缆过密
 - 冷却死角
+
+---
+
+*Document Version: v1.1 | Last Updated: 2026-04-12*

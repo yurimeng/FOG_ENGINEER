@@ -277,3 +277,7 @@ Category: BESS
   
 
 如果你做 **AI MDC + BESS**，这个会非常关键。
+
+---
+
+*Document Version: v1.1 | Last Updated: 2026-04-12*

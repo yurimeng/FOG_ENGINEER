@@ -34,7 +34,7 @@ tags:
 
 # 目录结构
 
-详细目录结构参见 [[index]]。
+详细目录结构参见 [[FOG/index]]。
 
 ```
 Works_Public/
@@ -98,23 +98,23 @@ Works_Public/
 
 | 角色 | 文件 | 领域 |
 |------|------|------|
-| AM | [[AGENTS/AM]] | 客户管理、需求发现、项目跟踪 |
-| ATS | [[AGENTS/ATS]] | 架构设计、专家协调、方案整合 |
-| Power Engineer | [[AGENTS/Power Engineer]] | 电力架构、BESS、UPS、电网集成 |
-| Cooling Engineer | [[AGENTS/Cooling Engineer]] | 热管理、冷却架构、液冷系统 |
-| Layout Planner | [[AGENTS/Layout Planner]] | 物理布局、线缆敷设、维护通道 |
-| Cost Architect | [[AGENTS/Cost Architect]] | CAPEX 分析、成本对比（非报价）|
-| Compliance Officer | [[AGENTS/Compliance Officer]] | 合规审查、认证、标准 |
-| Risk Auditor | [[AGENTS/Risk Auditor]] | 风险分析、SPOF 检测、工程红旗 |
-| Market Researcher | [[AGENTS/Market Researcher]] | 市场情报、行业监控、PR 内容输出 |
+| AM | [[AM]] | 客户管理、需求发现、项目跟踪 |
+| ATS | [[ATS]] | 架构设计、专家协调、方案整合 |
+| Power Engineer | [[Power Engineer]] | 电力架构、BESS、UPS、电网集成 |
+| Cooling Engineer | [[Cooling Engineer]] | 热管理、冷却架构、液冷系统 |
+| Layout Planner | [[Layout Planner]] | 物理布局、线缆敷设、维护通道 |
+| Cost Architect | [[Cost Architect]] | CAPEX 分析、成本对比（非报价）|
+| Compliance Officer | [[Compliance Officer]] | 合规审查、认证、标准 |
+| Risk Auditor | [[Risk Auditor]] | 风险分析、SPOF 检测、工程红旗 |
+| Market Researcher | [[Market Researcher]] | 市场情报、行业监控、PR 内容输出 |
 
-详细角色协作流程，参见 [[AGENTS/WORKFLOW]]。
+详细角色协作流程，参见 [[WORKFLOW]]。
 
 ---
 
 # 工作流总览 / Workflow Overview
 
-参见 [[AGENTS/WORKFLOW]]。
+参见 [[WORKFLOW]]。
 
 7 阶段工作流：
 ```
@@ -153,8 +153,8 @@ Lead Qualification（AM）
 # 启动加载顺序
 
 1. 读取 [[PRINCIPLES]]（最高准则）
-2. 读取 [[SOUL]]（工程哲学）
-3. 读取 [[AGENTS/WORKFLOW]]（工作流总览）
+2. 读取 [[FOG/SOUL]]（工程哲学）
+3. 读取 [[WORKFLOW]]（工作流总览）
 4. 加载对应角色文件
 5. 读取对应领域 Guideline（如需执行技术工作）
 6. 读取对应 PROCESS 文件
@@ -174,7 +174,11 @@ Lead Qualification（AM）
 
 | 变更类型 | 必须同步更新 |
 |---------|------------|
-| KB 目录结构变更 | [[index]] + [[README]] |
-| 新增流程文件 | [[AGENTS/WORKFLOW]] |
+| KB 目录结构变更 | [[FOG/index]] + [[README]] |
+| 新增流程文件 | [[WORKFLOW]] |
 | 产品参数变更 | 对应 PRODUCTS_*.md |
 | 重大系统变更 | [[VERSION]] |
+
+---
+
+*Document Version: v1.1 | Last Updated: 2026-04-12*

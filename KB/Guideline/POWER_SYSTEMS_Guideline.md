@@ -321,3 +321,7 @@ AI 数据中心正在被重新定义为：
 
 本文件是 SOUL.md 和 PRINCIPLES.md 的补充文件。
 所有 Agent 在进行电力相关沟通时，必须引用本文件。
+
+---
+
+*Document Version: v1.1 | Last Updated: 2026-04-12*

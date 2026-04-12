@@ -217,3 +217,7 @@ Cooling Engineer 输出给 ATS 的内容：
 | SOUL | `./SOUL` | 工程哲学 |
 | PRINCIPLES | `./PRINCIPLES` | 工程原则 |
 | COOLING 产品目录 | `/KB/3RD-PARTY/COOLING/` | 产品验证与选择 |
+
+---
+
+*Document Version: v1.1 | Last Updated: 2026-04-12*

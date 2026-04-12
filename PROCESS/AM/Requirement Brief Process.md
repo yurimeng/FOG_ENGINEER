@@ -58,3 +58,7 @@ tags:
 
 ## 6. Outputs / 输出
 - **Final Customer Requirement Brief (标准需求摘要)** $\rightarrow$ 交付给 $\rightarrow$ 方案设计团队 (ATS)。
+
+---
+
+*Document Version: v1.1 | Last Updated: 2026-04-12*

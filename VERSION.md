@@ -389,3 +389,7 @@ Recommended model capability:
 - reasoning LLM
 - tool calling
 - document retrieval
+
+---
+
+*Document Version: v1.1 | Last Updated: 2026-04-12*

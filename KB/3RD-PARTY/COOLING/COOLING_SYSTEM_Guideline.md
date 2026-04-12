@@ -17,7 +17,7 @@ Category: Cooling System Design Guideline
 > 具体产品参数请查阅各产品文档。
 
 引用顺序：
-1. [[KB/3RD-PARTY/COOLING/COOLING_SYSTEM_Guideline]] ← 本文档
+1. [[FOG/KB/3RD-PARTY/COOLING/COOLING_SYSTEM_Guideline]] ← 本文档
 2. 按架构类型查阅对应产品文档
 
 ---
@@ -76,10 +76,10 @@ Category: Cooling System Design Guideline
 
 | IT Zone | IT 容量 | 散热方式 | 配套产品文档 |
 |---------|---------|---------|------------|
-| A32（独立）| 45–50kW | 干冷器（低温）/ DX 或热泵（高温）| [[KB/3RD-PARTY/COOLING/DRYCOOL_with_DX]] |
-| AC40（40ft）| 400kW | Hybrid Cooling System（干冷+DX）或热泵 | [[KB/3RD-PARTY/COOLING/DRYCOOL_with_DX]] |
-| DC45（45ft）| 1200kW | Hybrid Cooling System（干冷+DX）或热泵 | [[KB/3RD-PARTY/COOLING/DRYCOOL_with_DX]] |
-| 大型集成冷站 | ≥600kW | 螺杆压缩机 / 磁悬浮 | [[KB/3RD-PARTY/COOLING/Hybrid Cooler 600kW - 同飞]] |
+| A32（独立）| 45–50kW | 干冷器（低温）/ DX 或热泵（高温）| [[DRYCOOL_with_DX]] |
+| AC40（40ft）| 400kW | Hybrid Cooling System（干冷+DX）或热泵 | [[DRYCOOL_with_DX]] |
+| DC45（45ft）| 1200kW | Hybrid Cooling System（干冷+DX）或热泵 | [[DRYCOOL_with_DX]] |
+| 大型集成冷站 | ≥600kW | 螺杆压缩机 / 磁悬浮 | [[Hybrid Cooler 600kW - 同飞]] |
 
 ---
 
@@ -139,8 +139,12 @@ Category: Cooling System Design Guideline
 
 ## 9. 参考文档
 
-- 干冷器 + DX 详细方案：[[KB/3RD-PARTY/COOLING/DRYCOOL_with_DX]]
-- 600kW 集成冷站（同飞）：[[KB/3RD-PARTY/COOLING/Hybrid Cooler 600kW - 同飞]]
-- AC40 产品规格：[[KB/PRODUCTS_AC40]]
-- DC45 产品规格：[[KB/PRODUCTS_DC45]]
-- A32 产品规格：[[KB/PRODUCTS_A32]]
+- 干冷器 + DX 详细方案：[[DRYCOOL_with_DX]]
+- 600kW 集成冷站（同飞）：[[Hybrid Cooler 600kW - 同飞]]
+- AC40 产品规格：[[PRODUCTS_AC40]]
+- DC45 产品规格：[[PRODUCTS_DC45]]
+- A32 产品规格：[[PRODUCTS_A32]]
+
+---
+
+*Document Version: v1.1 | Last Updated: 2026-04-12*

@@ -9,7 +9,7 @@ Category: Network Structured Cabling System
 适用对象: MDC 模块化数据中心集群（Network Zone）
 版本: V1.0（2026-04-09 纯产品文档版）
 
-> **本文档为引澜网络布线系统产品文档。网络设计原则请参考 [[KB/3RD-PARTY/NETWORK/NETWORK_Guideline]]。**
+> **本文档为引澜网络布线系统产品文档。网络设计原则请参考 [[NETWORK_Guideline]]。**
 
 ---
 
@@ -79,7 +79,11 @@ Category: Network Structured Cabling System
 
 ## 6. 参考标准
 
-- 网络系统设计原则：[[KB/3RD-PARTY/NETWORK/NETWORK_Guideline]]
-- AC40 网络配置参考：[[KB/3RD-PARTY/NETWORK/AC40_NETWORK_Guideline]]
-- AC40 产品规格：[[KB/PRODUCTS_AC40]]
-- DC45 产品规格：[[KB/PRODUCTS_DC45]]
+- 网络系统设计原则：[[NETWORK_Guideline]]
+- AC40 网络配置参考：[[AC40_NETWORK_Guideline]]
+- AC40 产品规格：[[PRODUCTS_AC40]]
+- DC45 产品规格：[[PRODUCTS_DC45]]
+
+---
+
+*Document Version: v1.1 | Last Updated: 2026-04-12*

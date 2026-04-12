@@ -79,3 +79,7 @@ Engineer 输出必须：
 - Edge AI Deployment
 - Immersion PUE 优势
 - 模块化扩展
+
+---
+
+*Document Version: v1.1 | Last Updated: 2026-04-12*

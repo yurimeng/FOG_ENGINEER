@@ -3,13 +3,12 @@ tags:
   - #type/guideline
   - #domain/cooling
 ---
-
 # COOLING SYSTEM Guideline / 冷却系统技术 Guideline
 
 Document Version: v1.0
 Last Updated: 2026-04-11
 Owner: Cooling Engineer
-Reference: [[Works_Public/AGENTS/Cooling Engineer]]
+Reference: [[Cooling Engineer]]
 
 ---
 
@@ -336,3 +335,7 @@ Cooling Engineer **MUST** escalate to ATS when:
 # G-19 Final Objective / 最终目标
 
 Deliver thermal management systems that enable reliable high-density computing while minimizing infrastructure complexity.
+
+---
+
+*Document Version: v1.1 | Last Updated: 2026-04-12*

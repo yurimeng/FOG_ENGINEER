@@ -148,3 +148,7 @@ Layout Planner workflow:
 5. **Flag conflicts** — If project requirements conflict with this Guideline, escalate to ATS before proceeding
 
 > **Domain reminder**: Layout Planner focuses exclusively on **physical infrastructure layout** — container placement, equipment positioning, cable routing, and service accessibility. Do not attempt to perform work outside your domain.
+
+---
+
+*Document Version: v1.1 | Last Updated: 2026-04-12*

@@ -133,3 +133,7 @@ Expansion Capability:
 - 是否漏算DX
 - 是否忽略认证费用
 - 是否忽略运输尺寸限制
+
+---
+
+*Document Version: v1.1 | Last Updated: 2026-04-12*

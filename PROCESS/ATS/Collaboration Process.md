@@ -63,7 +63,7 @@ Last Updated: 2026-04-11
 > 在收到完整信息前，无法进行准确的架构选型和容量规划。"
 
 **必须澄清的关键项：**
-- IT 负载 vs 整体电力负荷（见 [[Works_Public/KB/Guideline/POWER_SYSTEMS_Guideline|KB/POWER_LOAD]]）
+- IT 负载 vs 整体电力负荷（见 [[FOG/KB/Guideline/POWER_SYSTEMS_Guideline|KB/POWER_LOAD]]）
 - UL 合规是否必须
 - 目标部署时间是否现实（参考交付周期 195–305 天）
 - Grid 稳定性（是否需要 BESS）
@@ -147,3 +147,7 @@ Proposal
 2. **不承诺交付时间**：交付周期（195–305 天）仅供参考，不作承诺
 3. **IT 负载 vs 整体电力负荷**：必须在 RFI 阶段澄清，并在所有输出中明确区分
 4. **信息不完整不设计**：RFI 缺失关键项时，暂停设计，等待补充
+
+---
+
+*Document Version: v1.1 | Last Updated: 2026-04-12*

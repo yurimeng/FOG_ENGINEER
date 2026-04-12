@@ -40,3 +40,7 @@ Category: BESS
 
 Tesla Megapack 预订网站
 https://www.tesla.com/megapack/design
+
+---
+
+*Document Version: v1.1 | Last Updated: 2026-04-12*

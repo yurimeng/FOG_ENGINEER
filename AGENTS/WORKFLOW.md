@@ -22,13 +22,13 @@ Last Updated: 2026-03-10
 
 | Stage | 名称 EN | 名称 CN | 负责 Agent | 主要 Process | 输出 |
 |-------|--------|--------|-----------|-------------|------|
-| 1 | Lead Qualification | 销售机会筛选 | AM | [[PROCESS/AM/Lead Qualification Process]] | 合格项目机会 |
-| 2 | Customer Discovery | 客户需求发现 | AM | [[PROCESS/AM/Customer Discovery Process]] | 客户需求记录 |
-| 3 | Requirement Structuring | 需求结构化 | AM | [[PROCESS/AM/Requirement Brief Process]] | 客户需求摘要 |
-| 4 | Architecture Design | 架构设计 | ATS | [[PROCESS/ATS/Requirement Analysis]] | 架构蓝图 |
+| 1 | Lead Qualification | 销售机会筛选 | AM | [[Lead Qualification Process]] | 合格项目机会 |
+| 2 | Customer Discovery | 客户需求发现 | AM | [[Customer Discovery Process]] | 客户需求记录 |
+| 3 | Requirement Structuring | 需求结构化 | AM | [[Requirement Brief Process]] | 客户需求摘要 |
+| 4 | Architecture Design | 架构设计 | ATS | [[Requirement Analysis]] | 架构蓝图 |
 | 5 | Engineering Design | 工程设计 | ATS + Specialists | Specialist Guideline + PROCESS | 工程设计方案 |
 | 6 | Governance Review | 工程审查 | Compliance Officer + Risk Auditor | Compliance_Guideline + Risk_Guideline | 审核通过的工程方案 |
-| 7 | Proposal Generation | 方案输出 | ATS | [[PROCESS/ATS/Proposal Generation Process]] | 客户技术方案（不含价格） |
+| 7 | Proposal Generation | 方案输出 | ATS | [[Proposal Generation Process]] | 客户技术方案（不含价格） |
 
 ---
 
@@ -39,7 +39,7 @@ Last Updated: 2026-03-10
 | 项目 | 内容 |
 |------|------|
 | 负责 | AM |
-| Process | [[PROCESS/AM/Lead Qualification Process]] |
+| Process | [[Lead Qualification Process]] |
 | 目标 | 判断该项目是否值得投入资源 |
 | 输出 | Qualified Opportunity（合格项目机会） |
 
@@ -50,7 +50,7 @@ Last Updated: 2026-03-10
 | 项目 | 内容 |
 |------|------|
 | 负责 | AM |
-| Process | [[PROCESS/AM/Customer Discovery Process]] |
+| Process | [[Customer Discovery Process]] |
 | 目标 | 理解客户需求和限制条件 |
 | 输出 | Customer Requirement Notes（客户需求记录） |
 
@@ -61,7 +61,7 @@ Last Updated: 2026-03-10
 | 项目 | 内容 |
 |------|------|
 | 负责 | AM |
-| Process | [[PROCESS/AM/Requirement Brief Process]] |
+| Process | [[Requirement Brief Process]] |
 | 目标 | 将客户需求整理为结构化需求文档 |
 | 输出 | Customer Requirement Brief（客户需求摘要） |
 
@@ -72,11 +72,11 @@ Last Updated: 2026-03-10
 | 项目 | 内容 |
 |------|------|
 | 负责 | ATS |
-| Process | [[PROCESS/ATS/Requirement Analysis]] |
+| Process | [[Requirement Analysis]] |
 | 目标 | 确定最优基础设施架构 |
 | 输出 | Architecture Blueprint（架构蓝图） |
 
-ATS 进行架构选型后，通过 [[PROCESS/ATS/Collaboration Process]] 向各专家分派任务。
+ATS 进行架构选型后，通过 [[Collaboration Process]] 向各专家分派任务。
 
 ---
 
@@ -119,7 +119,7 @@ ATS 进行架构选型后，通过 [[PROCESS/ATS/Collaboration Process]] 向各�
 | 项目 | 内容 |
 |------|------|
 | 负责 | ATS |
-| Process | [[PROCESS/ATS/Proposal Generation Process]] |
+| Process | [[Proposal Generation Process]] |
 | 目标 | 生成客户技术方案（仅配置，不含价格） |
 | 输出 | 客户技术方案（IT负载、整体电力负荷、产品型号、PUE范围、冗余等级） |
 
@@ -177,3 +177,7 @@ Client
                 ▼
               Client
 ```
+
+---
+
+*Document Version: v1.1 | Last Updated: 2026-04-12*

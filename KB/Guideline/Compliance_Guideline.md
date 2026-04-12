@@ -124,3 +124,7 @@ Compliance Officer workflow:
 4. **Flag conflicts** — If project requirements conflict with this Guideline, escalate to ATS before proceeding
 
 > **Authority**: This Guideline is the authoritative reference for compliance domain decisions. Do not override these standards without ATS escalation.
+
+---
+
+*Document Version: v1.1 | Last Updated: 2026-04-12*

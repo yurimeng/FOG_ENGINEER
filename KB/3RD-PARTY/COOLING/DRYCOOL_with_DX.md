@@ -9,7 +9,7 @@ Category: Dry Cooler + DX Product Solution
 适用对象: MDC 模块化数据中心集群（Cooling Zone）标准散热方案
 版本: V1.0（2026-04-09 移除设计原则，保留产品方案）
 
-> **本文档为干冷器+DX 产品方案文档。选型前请先查阅 [[KB/3RD-PARTY/COOLING/COOLING_SYSTEM_Guideline]]（冷却系统设计原则）。
+> **本文档为干冷器+DX 产品方案文档。选型前请先查阅 [[FOG/KB/3RD-PARTY/COOLING/COOLING_SYSTEM_Guideline]]（冷却系统设计原则）。
 
 ---
 
@@ -19,7 +19,7 @@ Category: Dry Cooler + DX Product Solution
 
 每台 IT Zone 集装箱配置**一套独立**的干冷器 + DX 系统。
 
-> 设计原则、选型逻辑、温度触发阈值请参考：[[KB/3RD-PARTY/COOLING/COOLING_SYSTEM_Guideline]]
+> 设计原则、选型逻辑、温度触发阈值请参考：[[FOG/KB/3RD-PARTY/COOLING/COOLING_SYSTEM_Guideline]]
 
 ---
 
@@ -105,7 +105,11 @@ Category: Dry Cooler + DX Product Solution
 | DC45（1200kW IT）| 干冷器 + DX + 风墙（DC45 专用）|
 
 参考：
-- AC40 完整规格：[[KB/PRODUCTS_AC40]]
-- DC45 完整规格：[[KB/PRODUCTS_DC45]]
-- MDC 标准组合：[[KB/PRODUCTS_MDC]]
-- 冷却系统设计原则：[[KB/3RD-PARTY/COOLING/COOLING_SYSTEM_Guideline]]
+- AC40 完整规格：[[PRODUCTS_AC40]]
+- DC45 完整规格：[[PRODUCTS_DC45]]
+- MDC 标准组合：[[PRODUCTS_MDC]]
+- 冷却系统设计原则：[[FOG/KB/3RD-PARTY/COOLING/COOLING_SYSTEM_Guideline]]
+
+---
+
+*Document Version: v1.1 | Last Updated: 2026-04-12*

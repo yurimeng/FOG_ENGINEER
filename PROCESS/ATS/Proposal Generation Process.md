@@ -4,7 +4,6 @@ tags:
   - 
   -
 ---
-
 # Proposal Generation Process
 提案生成流程
 
@@ -37,7 +36,7 @@ Change Log: v2.0 — 合并 Architecture Overview / Decision Tree / Design Princ
 | 风险清单 | Risk Auditor | SPOF 已识别 |
 
 **关键澄清项：**
-- IT 负载 vs 整体电力负荷（见 [[Works_Public/KB/Guideline/POWER_SYSTEMS_Guideline|KB/POWER_LOAD]]）
+- IT 负载 vs 整体电力负荷（见 [[FOG/KB/Guideline/POWER_SYSTEMS_Guideline|KB/POWER_LOAD]]）
 - UL 合规要求（影响选型：AC40 vs AC45）
 - 目标交付时间（参考周期 195-305 天）
 - Grid 稳定性（影响 BESS 配置）
@@ -240,3 +239,7 @@ BOM 输出配置清单（无价格），包含：
 3. **不承诺交付时间** — 交付周期仅供参考，不作承诺
 4. **Over-engineering** — 避免过度冗余设计，只提供必要配置
 5. **Over-complex proposal** — 提案结构清晰，不过度复杂
+
+---
+
+*Document Version: v1.1 | Last Updated: 2026-04-12*

@@ -23,7 +23,7 @@ Category: Reference
 ## 2. Agent 引用规则（重要）
 
 > **Agent 在读取第三方产品时的标准顺序：**
-> 1. 查询 [[KB/3RD-PARTY/3rd Party List|3rd Party List]] ← 本文件
+> 1. 查询 [[3rd Party List|3rd Party List]] ← 本文件
 > 2. 查询对应类别的 **Guideline**（设计原则）
 > 3. 在子文件夹中查找合适的产品文档，匹配解决方案
 
@@ -37,14 +37,14 @@ Category: Reference
 
 | 文件 | 说明 |
 |------|------|
-| [[KB/3RD-PARTY/COOLING/COOLING_SYSTEM_Guideline]] | 冷却 Zone 选型原则：架构分类（DX/螺杆/磁悬浮/热泵）、环境温度策略、IT Zone 匹配规则、A32 纯干冷例外 |
+| [[FOG/KB/3RD-PARTY/COOLING/COOLING_SYSTEM_Guideline]] | 冷却 Zone 选型原则：架构分类（DX/螺杆/磁悬浮/热泵）、环境温度策略、IT Zone 匹配规则、A32 纯干冷例外 |
 
 ### 3.2 产品目录
 
 | 类别 | 产品 | 供应商 | 说明 | 参考文档 |
 |------|------|--------|------|---------|
-| **标准散热方案** | 干冷器 + DX 双冷源机组 | 泰铂 | 适用于 AC40/DC45 标准配置 | [[KB/3RD-PARTY/COOLING/DRYCOOL_with_DX]] |
-| **集成冷站** | 600kW 集成冷站 | 三河同飞 | 螺杆式压缩机，一体化热泵冷源 | [[KB/3RD-PARTY/COOLING/Hybrid Cooler 600kW - 同飞]] |
+| **标准散热方案** | 干冷器 + DX 双冷源机组 | 泰铂 | 适用于 AC40/DC45 标准配置 | [[DRYCOOL_with_DX]] |
+| **集成冷站** | 600kW 集成冷站 | 三河同飞 | 螺杆式压缩机，一体化热泵冷源 | [[Hybrid Cooler 600kW - 同飞]] |
 
 ### 3.3 架构类型速查
 
@@ -73,15 +73,15 @@ Category: Reference
 
 | 文件 | 说明 |
 |------|------|
-| [[KB/3RD-PARTY/BESS/POWER_SYSTEMS_Guideline]] | 电力 Zone 选型原则：BESS 选型逻辑、UPS 选型、冗余策略、场景推荐 |
+| [[FOG/KB/3RD-PARTY/BESS/POWER_SYSTEMS_Guideline]] | 电力 Zone 选型原则：BESS 选型逻辑、UPS 选型、冗余策略、场景推荐 |
 
 ### 4.2 UPS（IT Zone 标配）
 
 | IT Zone | UPS 型号 | 模块数 | 每模块 | 总功率 | 发热量 | UPS 放置 | UPS电池后备时间 | 参考文档 |
 |---------|---------|--------|--------|--------|--------|---------|--------------|---------|
-| **AC40** | EATON 9395XR-600 | 4 UPM | 150kW | 600kW | ~7.9kW | **外置（客户自备）** | ~10 分钟（客户自备 2×93LiG2） | [[KB/3RD-PARTY/UPS/UPS_EATON_9395XR]] |
-| **AC45** | EATON 9395XR-600 | 4 UPM | 150kW | 600kW | ~7.9kW | 内置（专用电力舱），UL 合规 | ~20 分钟（内置 2×93LiG2） | [[KB/3RD-PARTY/UPS/UPS_EATON_9395XR]] |
-| **DC45** | EATON 9395XR-1500 | 10 UPM | 150kW | 1500kW | ~46.9kW | 内置，UL 合规 | ~8 分钟（内置 3×93LiG2） | [[KB/3RD-PARTY/UPS/UPS_EATON_9395XR]] |
+| **AC40** | EATON 9395XR-600 | 4 UPM | 150kW | 600kW | ~7.9kW | **外置（客户自备）** | ~10 分钟（客户自备 2×93LiG2） | [[UPS_EATON_9395XR]] |
+| **AC45** | EATON 9395XR-600 | 4 UPM | 150kW | 600kW | ~7.9kW | 内置（专用电力舱），UL 合规 | ~20 分钟（内置 2×93LiG2） | [[UPS_EATON_9395XR]] |
+| **DC45** | EATON 9395XR-1500 | 10 UPM | 150kW | 1500kW | ~46.9kW | 内置，UL 合规 | ~8 分钟（内置 3×93LiG2） | [[UPS_EATON_9395XR]] |
 
 > 注：UPS 型号数字代表总 UPS 功率（kW）。9395XR-600 ≠ 600kVA，而是 4×150kW = 600kW。**AC40 UPS 及 UPS电池需客户外置自备；AC45/DC45 UPS 及 UPS电池内置于集装箱。**
 
@@ -98,8 +98,8 @@ Category: Reference
 
 | 品牌/型号 | 类型 | 适用场景 | 参考文档 |
 |----------|------|---------|---------|
-| TESLA Megapack 2 XL | 大型储能（集装箱级）| 城市边缘 / 高 ESG | [[KB/3RD-PARTY/BESS/TESLA MEGAPACK 2 XL]] |
-| 国轩 ESC480-125P261-UL | 工商业储能一体机 | 成本优化 / 国产方案 | [[KB/3RD-PARTY/BESS/Gotion ESC480-125P261-UL]] |
+| TESLA Megapack 2 XL | 大型储能（集装箱级）| 城市边缘 / 高 ESG | [[TESLA MEGAPACK 2 XL]] |
+| 国轩 ESC480-125P261-UL | 工商业储能一体机 | 成本优化 / 国产方案 | [[Gotion ESC480-125P261-UL]] |
 
 ### 4.5 电力设备
 
@@ -118,14 +118,14 @@ Category: Reference
 
 | 文件 | 说明 |
 |------|------|
-| [[KB/3RD-PARTY/NETWORK/NETWORK_Guideline]] | 网络设计原则：IB/ROCE 策略、带内/带外管理、网络拓扑选型、安全设计 |
+| [[NETWORK_Guideline]] | 网络设计原则：IB/ROCE 策略、带内/带外管理、网络拓扑选型、安全设计 |
 
 ### 5.2 产品目录
 
 | 类别 | 供应商/产品 | 说明 | 参考文档 |
 |------|-----------|------|---------|
-| **布线系统** | 引澜 | 结构化布线，商用成熟产品，可直接采购 | [[KB/3RD-PARTY/NETWORK/PRODUCTS_NETWORK]] |
-| **AC40 网络配置** | 参考配置 | AC40 集装箱网络端口定义及布线规范 | [[KB/3RD-PARTY/NETWORK/AC40_NETWORK_Guideline]] |
+| **布线系统** | 引澜 | 结构化布线，商用成熟产品，可直接采购 | [[PRODUCTS_NETWORK]] |
+| **AC40 网络配置** | 参考配置 | AC40 集装箱网络端口定义及布线规范 | [[AC40_NETWORK_Guideline]] |
 
 ### 5.3 网络架构速查
 
@@ -167,3 +167,7 @@ Category: Reference
 | 2026-04-01 | V1.2 | 新增 Guideline 体系；BESS 目录独立，添加 Tesla Megapack 2 XL 和国轩产品文档 |
 | 2026-03-29 | V1.1 | 统一命名结构；添加 UPS 型号（9395XR-600/1500）；增加冷却 Zone 标准配置说明 |
 | 初始版本 | V1.0 | 初始第三方产品清单 |
+
+---
+
+*Document Version: v1.1 | Last Updated: 2026-04-12*

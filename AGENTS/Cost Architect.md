@@ -198,3 +198,7 @@ Cost Architect 输出给 ATS 的内容：
 |------|------|------|
 | Cost_Guideline | `/KB/Guideline/Cost_Guideline` | 成本技术指南（权威参考）|
 | 相关专家输出 | ATS 整合输入 | 从 Power/Cooling/Layout 专家获取项目细节 |
+
+---
+
+*Document Version: v1.1 | Last Updated: 2026-04-12*

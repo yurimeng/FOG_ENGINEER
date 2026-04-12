@@ -71,7 +71,7 @@ Change Log: v1.1 — 合并 Site Constraint Analysis，扩充为客户需求 + �
 ### Step 1：收集客户需求（客户侧）
 
 1. 收集客户业务目标和算力需求
-2. 确认 IT 负载 vs 总设施负荷（**必须澄清**，见 [[Works_Public/KB/Guideline/POWER_SYSTEMS_Guideline|KB/POWER_LOAD]]）
+2. 确认 IT 负载 vs 总设施负荷（**必须澄清**，见 [[FOG/KB/Guideline/POWER_SYSTEMS_Guideline|KB/POWER_LOAD]]）
 3. 确认 UL 合规需求（影响选型：AC40 vs AC45）
 4. 确认部署模式和期望时间线
 5. 评估预算预期（仅供参考，不在方案中体现）
@@ -178,3 +178,7 @@ Change Log: v1.1 — 合并 Site Constraint Analysis，扩充为客户需求 + �
 3. **禁止纯干冷器方案**：Hybrid Cooling System 为强制配置
 4. **PUE 必须输出范围**：不得写固定数字，由环境温度决定
 5. **不输出价格**：需求分析阶段不涉及价格，成本相关转 AM
+
+---
+
+*Document Version: v1.1 | Last Updated: 2026-04-12*

@@ -93,7 +93,7 @@ Guideline 是技术决策的权威依据：
 
 # 4 📁 文档管理规则 / Document Management Rules
 
-> **规则依据**：参见 [[TOOLS/TOOLS|TOOLS/TOOLS.md]] Section 8 — Obsidian CLI 项目管理强制规则
+> **规则依据**：参见 [[_Platform/Tools/Tools|TOOLS/TOOLS.md]] Section 8 — Obsidian CLI 项目管理强制规则
 
 ---
 
@@ -105,7 +105,7 @@ Guideline 是技术决策的权威依据：
 - 读取项目文档（Project_Record.md、INDEX.md）
 - 更新项目文档（方案设计、选型结果）
 - 添加设计决策记录
-- 同步 [[Projects/INDEX.md]]
+- 同步 [[FOG/Projects/INDEX]]
 
 ### 正确方式 ✅
 ```bash
@@ -136,7 +136,7 @@ Works_Public/Projects/
 - 所有更新写入同一个文件
 - 新内容写在文档顶部
 - 历史记录按时间倒序排列（最新在上）
-- **方案设计完成后，必须同步更新 [[Projects/INDEX]]**
+- **方案设计完成后，必须同步更新 [[FOG/Projects/INDEX]]**
 
 ---
 
@@ -334,3 +334,7 @@ ATS 必须上报专家的情况：
 | 项目需求与 Guideline 冲突 | ATS 上报 AM |
 
 > ⚠️ **价格询问**：严禁提供价格估算。所有定价咨询必须转给客户经理。
+
+---
+
+*Document Version: v1.1 | Last Updated: 2026-04-12*

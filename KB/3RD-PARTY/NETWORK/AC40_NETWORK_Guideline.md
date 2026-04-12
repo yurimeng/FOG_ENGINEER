@@ -18,3 +18,7 @@ Category: Network Configuration
 ## 说明
 
 AC40 网络配置参考文档，包含 AC40 集装箱的网络架构、端口定义及布线规范。
+
+---
+
+*Document Version: v1.1 | Last Updated: 2026-04-12*

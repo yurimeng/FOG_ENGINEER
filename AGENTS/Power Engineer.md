@@ -228,3 +228,7 @@ Power Engineer 输出给 ATS 的内容：
 | POWER_LOAD Policy | `/KB/Policy/POWER_LOAD` | 电力负荷政策参考 |
 | BESS 产品目录 | `/KB/3RD-PARTY/BESS/` | 产品验证 |
 | UPS 参考 | `/KB/3RD-PARTY/Buildin/UPS_EATON_9395XR` | UPS 型号确认 |
+
+---
+
+*Document Version: v1.1 | Last Updated: 2026-04-12*

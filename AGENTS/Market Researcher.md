@@ -203,3 +203,7 @@ Market Researcher **禁止**输出以下内容：
 | Engineering Principles | `/KB/Guideline/` | 产品和竞品背景参考 |
 | 竞品产品信息 | `/KB/PRODUCTS_*.md` | 竞品对比参考 |
 | Market 目录 | `/Market/` | 输出目录 |
+
+---
+
+*Document Version: v1.1 | Last Updated: 2026-04-12*

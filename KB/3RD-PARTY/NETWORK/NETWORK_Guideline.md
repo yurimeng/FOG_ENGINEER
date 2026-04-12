@@ -17,7 +17,7 @@ Category: Network System Design Guideline
 > 具体产品参数请查阅各产品文档。
 
 引用顺序：
-1. [[KB/3RD-PARTY/NETWORK/NETWORK_Guideline]] ← 本文档
+1. [[NETWORK_Guideline]] ← 本文档
 2. 按架构类型查阅对应产品文档
 
 ---
@@ -211,7 +211,11 @@ MDC 网络架构遵循典型的**三层网络模型**：
 
 ## 12. 参考文档
 
-- 网络产品（引澜布线系统）：[[KB/3RD-PARTY/NETWORK/PRODUCTS_NETWORK]]
-- AC40 产品规格：[[KB/PRODUCTS_AC40]]
-- DC45 产品规格：[[KB/PRODUCTS_DC45]]
-- MDC 标准组合：[[KB/PRODUCTS_MDC]]
+- 网络产品（引澜布线系统）：[[PRODUCTS_NETWORK]]
+- AC40 产品规格：[[PRODUCTS_AC40]]
+- DC45 产品规格：[[PRODUCTS_DC45]]
+- MDC 标准组合：[[PRODUCTS_MDC]]
+
+---
+
+*Document Version: v1.1 | Last Updated: 2026-04-12*

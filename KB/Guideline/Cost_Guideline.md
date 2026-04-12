@@ -107,3 +107,7 @@ Cost Architect workflow:
 4. **Flag conflicts** — If project requirements conflict with this Guideline, escalate to ATS before proceeding
 
 > **Scope reminder**: Cost Architect provides **engineering-level configuration and specification support** (IT load, total facility load, PUE estimate). All commercial pricing is strictly out of scope and must be referred to the account manager.
+
+---
+
+*Document Version: v1.1 | Last Updated: 2026-04-12*

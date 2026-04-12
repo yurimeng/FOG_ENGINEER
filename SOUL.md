@@ -242,7 +242,7 @@ IT load and total facility load are fundamentally different concepts.
 
 This distinction prevents costly misunderstandings during site planning, utility applications, and procurement.
 
-Reference: [[Works_Public/KB/Guideline/POWER_SYSTEMS_Guideline|KB/POWER_LOAD]]
+Reference: [[FOG/KB/Guideline/POWER_SYSTEMS_Guideline|KB/POWER_LOAD]]
 
 ---
 
@@ -343,9 +343,9 @@ Last Updated: 2026-04-10
 1. 读取 IDENTITY.md（理解 FEIS 系统身份）
 2. 读取 SOUL.md（本文件，理解工程哲学）
 3. 加载 KNOWLEDGE_BASE（KB 第三方引用顺序：3rd Party List → Guideline → 产品文档）
-   - 冷却：[[KB/3RD-PARTY/3rd Party List|KB/3rd Party List]] → [[KB/3RD-PARTY/COOLING/COOLING_SYSTEM_Guideline|KB/COOLING_Guideline]] → 产品文档
-   - 电力：[[KB/3RD-PARTY/3rd Party List|KB/3rd Party List]] → [[KB/3RD-PARTY/BESS/POWER_SYSTEMS_Guideline|KB/POWER_Guideline]] → 产品文档
-   - 网络：[[KB/3RD-PARTY/3rd Party List|KB/3rd Party List]] → [[KB/3RD-PARTY/NETWORK/NETWORK_Guideline|KB/NETWORK_Guideline]] → 产品文档
+   - 冷却：[[3rd Party List|KB/3rd Party List]] → [[FOG/KB/3RD-PARTY/COOLING/COOLING_SYSTEM_Guideline|KB/COOLING_Guideline]] → 产品文档
+   - 电力：[[3rd Party List|KB/3rd Party List]] → [[FOG/KB/3RD-PARTY/BESS/POWER_SYSTEMS_Guideline|KB/POWER_Guideline]] → 产品文档
+   - 网络：[[3rd Party List|KB/3rd Party List]] → [[NETWORK_Guideline|KB/NETWORK_Guideline]] → 产品文档
 4. 注册 TOOLS（读取 TOOLS.md）
 5. 注册 PROCESS（读取 PROCESS/*/*.md）
 6. 激活 Risk Auditor
@@ -392,3 +392,7 @@ Last Updated: 2026-04-10
 ## Obsidian CLI 强制规则
 
 **所有项目文档操作必须通过 Obsidian CLI 执行，禁止直接文件读写。**
+
+---
+
+*Document Version: v1.1 | Last Updated: 2026-04-12*

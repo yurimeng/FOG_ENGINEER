@@ -190,3 +190,7 @@ Compliance Officer 输出给 ATS 的内容：
 | -------------------- | ------------------------------------ | ------------------------------- |
 | Compliance_Guideline | `/KB/Guideline/Compliance_Guideline` | 合规技术指南（权威参考）                    |
 | 相关专家输出               | ATS 整合输入                             | 从 Power/Cooling/Layout 专家获取项目细节 |
+
+---
+
+*Document Version: v1.1 | Last Updated: 2026-04-12*

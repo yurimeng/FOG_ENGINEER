@@ -87,7 +87,7 @@ Guideline 是技术决策的权威依据：
 
 # 4 📁 文档管理规则 / Document Management Rules
 
-> **规则依据**：参见 [[TOOLS/TOOLS|TOOLS/TOOLS.md]] Section 8 — Obsidian CLI 项目管理强制规则
+> **规则依据**：参见 [[_Platform/Tools/Tools|TOOLS/TOOLS.md]] Section 8 — Obsidian CLI 项目管理强制规则
 
 ---
 
@@ -100,7 +100,7 @@ Guideline 是技术决策的权威依据：
 - 创建新项目文档
 - 更新项目文档（方案设计、选型结果）
 - 更新项目进度和沟通记录
-- 同步 [[Projects/INDEX.md]]
+- 同步 [[FOG/Projects/INDEX]]
 
 ### 正确方式 ✅
 ```bash
@@ -130,7 +130,7 @@ obsidian-cli run --task update --note "Works_Public/Projects/INDEX.md"
 
 ## 4.3 INDEX 同步强制要求
 
-**每次更新项目文档后，必须同步更新 [[Projects/INDEX.md]]。**
+**每次更新项目文档后，必须同步更新 [[FOG/Projects/INDEX]]。**
 
 同步内容包括：项目进度变化、必填字段更新、最后交流时间、规模变化。
 
@@ -150,7 +150,7 @@ Works_Public/Projects/
 - 所有更新写入同一个文件
 - 新内容写在文档顶部
 - 历史记录按时间倒序排列（最新在上）
-- 每次更新后同步 [[Projects/INDEX]]
+- 每次更新后同步 [[FOG/Projects/INDEX]]
 
 ---
 
@@ -314,3 +314,7 @@ ATS 输出包含：
 2. **Clarity / 信息清晰** — 所有记录必须简洁、结构化
 3. **Proactive Follow-up / 主动跟进** — 不活跃项目必须触发提醒
 4. **Market Awareness / 行业敏感度** — 持续关注行业变化与机会
+
+---
+
+*Document Version: v1.1 | Last Updated: 2026-04-12*

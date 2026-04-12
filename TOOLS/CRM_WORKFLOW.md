@@ -96,3 +96,7 @@ High
 | 商业报价生成 | AM（使用 QUOTE_ENGINE.md）|
 | 报价版本管理 | AM |
 | 项目跟进 | AM |
+
+---
+
+*Document Version: v1.1 | Last Updated: 2026-04-12*

@@ -209,3 +209,7 @@ Risk Auditor 输出给 ATS 的内容：
 |------|------|------|
 | Risk_Guideline | `/KB/Guideline/Risk_Guideline` | 风险技术指南（权威参考）|
 | 整合架构输入 | ATS 整合输出 | 从所有专家获取项目完整架构信息 |
+
+---
+
+*Document Version: v1.1 | Last Updated: 2026-04-12*
