@@ -37,39 +37,45 @@ tags:
 详细目录结构参见 [[FOG/index]]。
 
 ```
-Works_Public/
-├── PRINCIPLES.md          ← 最高准则（11条原则）
+FOG/
 ├── SOUL.md               ← 工程哲学
 ├── IDENTITY.md           ← 系统身份（FEIS）
-├── AGENTS.md             ← Agent 组织架构
-├── AGENTS/WORKFLOW.md    ← 工作流总览（7阶段）
+├── PRINCIPLES.md          ← 11条工程原则
+├── VERSION.md            ← 版本记录
+├── USER.md               ← 用户画像
 │
-├── AGENTS/               ← 角色定义（9个文件）
-│   ├── AM / ATS / Power Engineer / Cooling Engineer
-│   ├── Layout Planner / Cost Architect
-│   ├── Compliance Officer / Risk Auditor
+├── AGENTS/               ← Agent 角色定义（9个）
+│   ├── AM.md / ATS.md / Power Engineer.md / Cooling Engineer.md
+│   ├── Layout Planner.md / Cost Architect.md
+│   ├── Compliance Officer.md / Risk Auditor.md / Market Researcher.md
+│   └── WORKFLOW.md       ← 工作流总览（7阶段）
 │
 ├── KB/                   ← 知识库
-│   ├── Guideline/         ← 6个领域技术指南
-│   ├── 3RD-PARTY/        ← 第三方产品（BESS/COOLING/NETWORK/UPS）
-│   └── PRODUCTS_*.md       ← 产品手册（A32/AC40/AC45/DC45/MDC）
+│   ├── Guideline/        ← 6大领域技术指南
+│   ├── 3RD-PARTY/       ← 第三方产品（BESS/Busbar/COOLING/NETWORK/UPS）
+│   ├── PRODUCTS_*.md     ← 产品手册（A32/AC40/AC45/DC45/MDC）
+│   └── KB_Relation.canvas
 │
 ├── PROCESS/              ← 流程定义
 │   ├── AM/               ← 客户经理流程（4个）
 │   ├── ATS/              ← 架构师流程（3个）
-│   └── WORKFLOW/          ← 工作流归档
+│   └── SUPPORT/          ← 支持流程
 │
-├── Projects/             ← 项目管理（Obsidian CLI 强制）
-│   └── INDEX.md          ← 项目总索引
+├── Reference Architecture/  ← 参考架构
+│
+├── Solutions Design/     ← 方案设计
 │
 ├── TOOLS/                ← 工具说明
-│   ├── TOOLS.md          ← 工具总览
-│   ├── CRM_WORKFLOW.md   ← 客户档案管理规则
+│   ├── TOOLS.md
+│   ├── CRM_WORKFLOW.md   ← 客户档案管理
 │   ├── KB_ACCESS.md      ← 知识库访问指南
-│   └── ...
+│   └── QUOTE_ENGINE.md   ← 报价引擎（商务专用）
 │
-└── index.md             ← 本文件
+├── index.md              ← 目录总索引
+└── README.md             ← 本文件
 ```
+
+> ⚠️ 以下目录被 `.gitignore` 忽略，不进入版本控制：Projects/、KB/BOM、Canvas/、Market/、HRBP、ResoucePool、SupplyChain、COST/
 
 ---
 
