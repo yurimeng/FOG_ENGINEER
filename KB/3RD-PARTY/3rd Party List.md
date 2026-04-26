@@ -105,7 +105,7 @@ Category: Reference
 
 | 品牌/供应商 | 产品 | 说明 |
 |------------|------|------|
-| SIEMENS | 母线 Busbar | DC45 内置，1600A |
+| SIEMENS | 母线 Busbar | DC45 内置，2500A |
 | SIEMENS | TOU（Tap-off Unit）| DC45 内置，含 MCCB |
 
 ---

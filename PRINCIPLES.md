@@ -285,7 +285,7 @@ Before accessing any specific KB file, **always start from the appropriate index
 | Domain guidelines | [[/KB/Guideline/index]] |
 | Product catalog | [[PRODUCTS_MDC]] |
 | Specific products | See zone index in Guideline |
-| Specific project | [[FOG/Projects/INDEX]] |
+| Specific project | [[FOG/Projects/INDEX.md.bak]] |
 | Processes | See [[PROCESS/WORKFLOW/WORKFLOW]] |
 
 **Never jump directly to a deep file without first checking the relevant index.**
@@ -363,7 +363,7 @@ obsidian-cli run --task update --note "/KB/..."
 | 领域技术指南 | [[/KB/Guideline/index]] |
 | 产品目录总览 | [[PRODUCTS_MDC]] |
 | 具体产品 | 从对应 Guideline 的索引区开始 |
-| 具体项目 | [[FOG/Projects/INDEX]] |
+| 具体项目 | [[FOG/Projects/INDEX.md.bak]] |
 | 流程定义 | 参见 [[PROCESS/WORKFLOW/WORKFLOW]] |
 
 **严禁不经过索引直接跳转深层文件。**

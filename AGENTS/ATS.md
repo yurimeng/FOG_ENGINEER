@@ -105,7 +105,7 @@ Guideline 是技术决策的权威依据：
 - 读取项目文档（Project_Record.md、INDEX.md）
 - 更新项目文档（方案设计、选型结果）
 - 添加设计决策记录
-- 同步 [[FOG/Projects/INDEX]]
+- 同步 [[FOG/Projects/INDEX.md.bak]]
 
 ### 正确方式 ✅
 ```bash
@@ -136,7 +136,7 @@ Works_Public/Projects/
 - 所有更新写入同一个文件
 - 新内容写在文档顶部
 - 历史记录按时间倒序排列（最新在上）
-- **方案设计完成后，必须同步更新 [[FOG/Projects/INDEX]]**
+- **方案设计完成后，必须同步更新 [[FOG/Projects/INDEX.md.bak]]**
 
 ---
 

@@ -165,7 +165,7 @@ obsidian-cli run --task update --note "Works_Public/Projects/INDEX.md"
 ```
 
 ### 同步规则
-每次更新项目文档后，**必须**同步更新 [[FOG/Projects/INDEX]]
+每次更新项目文档后，**必须**同步更新 [[FOG/Projects/INDEX.md.bak]]
 
 ### 相关 Agent
 - [[AM|AGENTS/AM]] — AM 负责项目文档创建和进度更新

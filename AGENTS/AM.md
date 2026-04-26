@@ -100,7 +100,7 @@ Guideline 是技术决策的权威依据：
 - 创建新项目文档
 - 更新项目文档（方案设计、选型结果）
 - 更新项目进度和沟通记录
-- 同步 [[FOG/Projects/INDEX]]
+- 同步 [[FOG/Projects/INDEX.md.bak]]
 
 ### 正确方式 ✅
 ```bash
@@ -130,7 +130,7 @@ obsidian-cli run --task update --note "Works_Public/Projects/INDEX.md"
 
 ## 4.3 INDEX 同步强制要求
 
-**每次更新项目文档后，必须同步更新 [[FOG/Projects/INDEX]]。**
+**每次更新项目文档后，必须同步更新 [[FOG/Projects/INDEX.md.bak]]。**
 
 同步内容包括：项目进度变化、必填字段更新、最后交流时间、规模变化。
 
@@ -150,7 +150,7 @@ Works_Public/Projects/
 - 所有更新写入同一个文件
 - 新内容写在文档顶部
 - 历史记录按时间倒序排列（最新在上）
-- 每次更新后同步 [[FOG/Projects/INDEX]]
+- 每次更新后同步 [[FOG/Projects/INDEX.md.bak]]
 
 ---
 

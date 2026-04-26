@@ -131,8 +131,20 @@ FOG/
 │   ├── TOOLS.md
 │   └── index.md
 │
-└── AGENTS.md
+└── Projects/                        ← 项目目录（与 Lark MDC Projects 同步）
+    ├── 00_项目前期信息采集和方案引导/
+    ├── 8th_Power/
+    ├── 29_Clutch_40MW/
+    ├── 32_Crucible_Corporation/
+    ├── RiCloud_San_Jose_B300_IB_NETWORK/
+    ├── Simple_Mining/
+    ├── BILT_Finland_70MW/
+    ├── 自建算力项目/
+    ├── 外发资料_最新/
+    └── index.md
 ```
+
+> 归档项目（Closed）已移至 Lark MDC Projects/Closed/，本地仅保留活跃项目。
 
 ---
 
@@ -144,7 +156,6 @@ FOG/
 |------|------|
 | `.DS_Store` | macOS 系统文件 |
 | `.openclaw/` | Obsidian 自动保存状态 |
-| `Projects/` | 项目管理文件 |
 | `KB/BOM` | 物料清单 |
 | `Canvas/` | Canvas 文件 |
 | `Market/` | 市场文件 |
@@ -154,6 +165,8 @@ FOG/
 | `COST` | 成本文件 |
 | `Index.md` | 大写版本索引 |
 
+> **注意**：`Projects/` 目录已从 gitignore 中移除，现与 Lark MDC Projects 目录同步（2026-04-17）。
+
 ---
 
-*Document Version: v1.0 | Last Updated: 2026-04-12*
+*Document Version: v1.1 | Last Updated: 2026-04-17*
