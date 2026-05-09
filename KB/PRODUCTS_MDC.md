@@ -44,7 +44,7 @@ Transformer → Switchgear → [Power Zone: BESS / Generator]
 | **A32** | 单柜 | 45–50kW | 浸没式 | 外置（客户自备）| 外置 | — |
 | **AC40** | 40ft 集装箱 | 400kW | 浸没式 | **外置（客户自备）**| 2×93LiG2（~10min，客户自备）| ❌ |
 | **AC45** | 45ft 集装箱 | 400kW | 浸没式 | 内置（专用电力舱）| 2×93LiG2（~20min）| ✅ |
-| **DC45** | 45ft 集装箱 | 1200kW | DLC | 内置 | 3×93LiG2（~8min）| ✅ |
+| **DC45** | 45ft 集装箱 | 1240kW | DLC | 内置 | 3×93LiG2（~8min）| ✅ |
 
 > ⚠️ **UPS 电池 vs BESS 电池：** 上表中"UPS电池后备"指 UPS 配套的 93LiG2 磷酸铁锂电池柜（分钟级瞬时切换后备）。BESS（如 Tesla Megapack / 国轩）是独立大型储能系统（小时级供电），两者完全不同。
 
@@ -90,7 +90,7 @@ Transformer → Switchgear → [Power Zone: BESS / Generator]
 |------|------|
 | 推荐产品 | DC45 或 AC40+DC45 混合 |
 | 数量 | 1–3 台 DC45，或混合组合 |
-| IT 容量 | 1200–3600kW |
+| IT 容量 | 1240–3720kW |
 | 冷却 | DLC（干冷 + DX）|
 | 电力 | Grid + UPS + BESS（推荐）|
 | 冗余 | N+1（Power Zone 可升级 2N）|

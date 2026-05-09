@@ -151,7 +151,7 @@ Grid / BESS → PDC → UPS (EATON 9395XR-600) → PDC → Tanks → PDU
 |------|----------|------|------|
 | 集装箱规格 | **45ft** | 40ft | 45ft |
 | 冷却类型 | **浸没式** | 浸没式 | DLC 直冷液冷 |
-| IT 容量 | **400kW** | 400kW | 1200kW |
+| IT 容量 | **400kW** | 400kW | 1240kW |
 | Tank/Rack 数量 | 8×A32 | 8×A32 | 8×DLC（150kW/柜）|
 | UPS 型号 | 9395XR-600 | 9395XR-600 | 9395XR-1500 |
 | UPS 放置 | **内置（专用电力舱）** | **外置（客户自备）** | 内置 |
@@ -167,7 +167,7 @@ Grid / BESS → PDC → UPS (EATON 9395XR-600) → PDC → Tanks → PDU
 > **选型建议：**
 > - 400kW + 无 UL 合规要求 → **AC40**（40ft，UPS及UPS电池外置，成本/尺寸最优）
 > - 400kW + 需要 UL 合规 → **AC45**（45ft，UPS及UPS电池内置，UL 认证）
-> - 1200kW DLC + UL 合规 → **DC45**（45ft，DLC 直冷，UPS及UPS电池内置，UL 认证）
+> - 1240kW DLC + UL 合规 → **DC45**（45ft，DLC 直冷，UPS及UPS电池内置，UL 认证）
 
 ---
 

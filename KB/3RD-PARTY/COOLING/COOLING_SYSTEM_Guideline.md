@@ -66,7 +66,7 @@ Category: Cooling System Design Guideline
 |---------|---------|------------|--------------|
 | **A32**（独立部署）| ~48–56kW | 纯干冷器（环境 <28°C）<br>DX / 热泵（环境 ≥28°C）| ✅ **允许**（仅限独立部署）|
 | **AC40**（40ft，400kW）| ~440–480kW | Hybrid Cooling System（干冷+DX）<br>热泵 | ❌ 禁止纯干冷 |
-| **DC45**（45ft，1200kW）| ~1380–1560kW | Hybrid Cooling System（干冷+DX）<br>热泵 | ❌ 禁止纯干冷 |
+| **DC45**（45ft，1240kW）| ~1390–1670kW | Hybrid Cooling System（干冷+DX）<br>热泵 | ❌ 禁止纯干冷 |
 
 > ⚠️ **关键区分：**
 > - **A32 独立部署**：作为单柜单元，低温区（<28°C）可使用纯干冷器，PUE 可低至 1.03
@@ -78,7 +78,7 @@ Category: Cooling System Design Guideline
 |---------|---------|---------|------------|
 | A32（独立）| 45–50kW | 干冷器（低温）/ DX 或热泵（高温）| [[DRYCOOL_with_DX]] |
 | AC40（40ft）| 400kW | Hybrid Cooling System（干冷+DX）或热泵 | [[DRYCOOL_with_DX]] |
-| DC45（45ft）| 1200kW | Hybrid Cooling System（干冷+DX）或热泵 | [[DRYCOOL_with_DX]] |
+| DC45（45ft）| 1240kW | Hybrid Cooling System（干冷+DX）或热泵 | [[DRYCOOL_with_DX]] |
 | 大型集成冷站 | ≥600kW | 螺杆压缩机 / 磁悬浮 | [[Hybrid Cooler 600kW - 同飞]] |
 
 ---

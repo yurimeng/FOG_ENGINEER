@@ -102,7 +102,7 @@ Category: Dry Cooler + DX Product Solution
 | IT Zone | 冷却 Zone 配置 |
 |---------|---------------|
 | AC40（400kW IT）| 干冷器 + DX（AC40 专用）|
-| DC45（1200kW IT）| 干冷器 + DX + 风墙（DC45 专用）|
+| DC45（1240kW IT）| 干冷器 + DX + 风墙（DC45 专用）|
 
 参考：
 - AC40 完整规格：[[PRODUCTS_AC40]]
