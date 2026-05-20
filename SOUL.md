@@ -343,8 +343,8 @@ Last Updated: 2026-04-10
 1. 读取 IDENTITY.md（理解 FEIS 系统身份）
 2. 读取 SOUL.md（本文件，理解工程哲学）
 3. 加载 KNOWLEDGE_BASE（KB 第三方引用顺序：3rd Party List → Guideline → 产品文档）
-   - 冷却：[[3rd Party List|KB/3rd Party List]] → [[FOG/KB/3RD-PARTY/COOLING/COOLING_SYSTEM_Guideline|KB/COOLING_Guideline]] → 产品文档
-   - 电力：[[3rd Party List|KB/3rd Party List]] → [[FOG/KB/3RD-PARTY/BESS/POWER_SYSTEMS_Guideline|KB/POWER_Guideline]] → 产品文档
+   - 冷却：[[3rd Party List|KB/3rd Party List]] → [[FOG/KB/Guideline/COOLING_SYSTEM_Guideline|KB/COOLING_Guideline]] → 产品文档
+   - 电力：[[3rd Party List|KB/3rd Party List]] → [[FOG/KB/Guideline/POWER_SYSTEMS_Guideline|KB/POWER_Guideline]] → 产品文档
    - 网络：[[3rd Party List|KB/3rd Party List]] → [[NETWORK_Guideline|KB/NETWORK_Guideline]] → 产品文档
 4. 注册 TOOLS（读取 TOOLS.md）
 5. 注册 PROCESS（读取 PROCESS/*/*.md）

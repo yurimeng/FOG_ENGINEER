@@ -9,7 +9,7 @@ tags:
 
 # EATON 9395XR UPS Series / 伊顿 9395XR UPS 系列
 
-> **本文档为 EATON 9395XR 系列 UPS 产品文档。UPS 选型原则请参考 [[POWER_SYSTEMS_Guideline|KB/3RD-PARTY/BESS/POWER_SYSTEMS_Guideline]]。**
+> **本文档为 EATON 9395XR 系列 UPS 产品文档。UPS 选型原则请参考 [[POWER_SYSTEMS_Guideline|KB/Guideline/POWER_SYSTEMS_Guideline]]。**
 
 ---
 

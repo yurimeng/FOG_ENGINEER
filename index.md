@@ -7,6 +7,7 @@ tags:
 # FOG / index
 
 - AGENTS/
+- Business_Documents/
 - COST/
 - Canvas/
 - HRBP/

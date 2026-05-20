@@ -23,7 +23,7 @@ Last Updated: 2026-05-09
 | 产品形态 | 1× DC45 集装箱 |
 | 冷却技术 | Direct Liquid Cooling（直冷液冷 DLC）|
 | 散热方式 | **Hybrid Cooling System**（干冷器+DX一体化）+ FCU |
-| 交付周期 | 约 195–305 天（含制造、海运、部署）|
+| 交付周期 | **~195–305 天（SOP 标准流程）** |
 
 ---
 
@@ -142,7 +142,7 @@ DC45 支持**不预装 DLC 机柜**，客户可后续自行安装原厂 OEM 机�
 | 环境 >28°C | DX 强制启动 |
 | 禁止 | 纯干冷器 |
 
-参考：[[FOG/KB/3RD-PARTY/COOLING/COOLING_SYSTEM_Guideline|KB/3RD-PARTY/COOLING/COOLING_SYSTEM_Guideline]]
+参考：[[FOG/KB/Guideline/COOLING_SYSTEM_Guideline|KB/Guideline/COOLING_SYSTEM_Guideline]]
 
 ---
 
@@ -182,7 +182,7 @@ Cooling:       DLC + Hybrid Cooling System + FCU（12×40kW 动态调整）
 Power:         Grid + UPS（9395XR-1500）+ BESS（可选）
 OEM Rack:      支持 SMCI/HPE/DELL/Lenovo（宽800×深1200×高2300mm）
 Redundancy:    UPS 模块 N+1 / FCU 动态配置（**IT Zone 本身无内部冗余**）
-Delivery:      约 195–305 天（制造90-180d + 海运45-50d + 部署30-45d）
+Delivery:      **~195–305 天**（SOP：场地勘测 2w + 方案设计 2w + 制造 16-20w + 运输 35-60d + 部署 30d）
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
@@ -192,7 +192,7 @@ Delivery:      约 195–305 天（制造90-180d + 海运45-50d + 部署30-45d�
 
 - DC45 完整规格：[[PRODUCTS_DC45|KB/PRODUCTS_DC45]]
 - MDC 组合标准：[[PRODUCTS_MDC|KB/PRODUCTS_MDC]]
-- 冷却方案：[[FOG/KB/3RD-PARTY/COOLING/COOLING_SYSTEM_Guideline|KB/3RD-PARTY/COOLING/COOLING_SYSTEM_Guideline]]
+- 冷却方案：[[FOG/KB/Guideline/COOLING_SYSTEM_Guideline|KB/Guideline/COOLING_SYSTEM_Guideline]]
 - UPS 规格：[[UPS_EATON_9395XR|KB/3RD-PARTY/UPS/UPS_EATON_9395XR]]
 - 冷却计算工具：https://dc45-cooling-calc.pages.dev/
 

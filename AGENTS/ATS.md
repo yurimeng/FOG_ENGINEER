@@ -67,7 +67,7 @@ PRINCIPLES 是整个系统的最高行为准则，定义工程哲学和核心价
 
 ---
 
-## §0-0: 遵守各自角色的 PROCESS 要求
+## §0-1: 遵守 Guideline 优先原则
 
 **ATS 在进行任何技术工作时，必须优先阅读 `/KB/Guideline/` 目录下的相关 Guideline 文件，并严格遵守其中的架构规则、选型原则和约束条件。**
 
@@ -99,33 +99,18 @@ Guideline 是技术决策的权威依据：
 
 ## 4.1 Obsidian CLI 强制使用
 
-**所有与项目相关的文档操作（包括读取和写入），必须使用 Obsidian CLI，禁止直接读写文件。**
+> 完整规则详见 [[PRINCIPLES]] **Principle 10 — Knowledge Base Access**。
 
-强制执行的操作类型：
-- 读取项目文档（Project_Record.md、INDEX.md）
-- 更新项目文档（方案设计、选型结果）
-- 添加设计决策记录
-- 同步 [[FOG/Projects/INDEX.md.bak]]
-
-### 正确方式 ✅
-```bash
-obsidian-cli run --task update --note "Works_Public/Projects/[项目名]/Project_Record.md"
-obsidian-cli run --task update --note "Works_Public/Projects/INDEX.md"
-```
-
-### 错误方式 ❌
-```
-直接使用 Read/Write/Edit 工具读写项目文档
-```
+所有项目相关的文档操作（读取 / 写入 / 更新）必须使用 Obsidian CLI，禁止直接使用 Read/Write/Edit 工具读写项目文档。操作示例以 PRINCIPLES P10 为准。
 
 ---
 
 ## 4.2 项目路径强制规范
 
-**所有项目文档必须存放在 `Works_Public/Projects/` 目录下。**
+**所有项目文档必须存放在 `Projects/` 目录下。**
 
 ```
-Works_Public/Projects/
+Projects/
 └── [项目名称]/
     └── Project_Record.md        ← 主文档（每个项目只有一个）
 ```
@@ -136,7 +121,7 @@ Works_Public/Projects/
 - 所有更新写入同一个文件
 - 新内容写在文档顶部
 - 历史记录按时间倒序排列（最新在上）
-- **方案设计完成后，必须同步更新 [[FOG/Projects/INDEX.md.bak]]**
+- **方案设计完成后，必须同步更新 [[Projects/project_list]]**
 
 ---
 
@@ -156,9 +141,9 @@ Works_Public/Projects/
 | Zone 类型                | Step 1 — Guideline                           | Step 2 — Products                         |
 | ---------------------- | -------------------------------------------- | ----------------------------------------- |
 | **Cooling Zone**       | `/KB/Guideline/COOLING_SYSTEM_Guideline`     | `/KB/3RD-PARTY/COOLING/`                  |
-| **Power Zone (BESS)**  | `/KB/3RD-PARTY/BESS/POWER_SYSTEMS_Guideline` | `/KB/3RD-PARTY/BESS/`                     |
-| **Network Zone**       | `/KB/NETWORK/AC40_NETWORK_Guideline`         | `/KB/3RD-PARTY/NETWORK/`                  |
-| **Built-in (IT Zone)** | —                                            | `/KB/3RD-PARTY/Buildin/UPS_EATON_9395XR` |
+| **Power Zone (BESS)**  | `/KB/Guideline/POWER_SYSTEMS_Guideline` | `/KB/3RD-PARTY/BESS/`                     |
+| **Network Zone**       | `/KB/Guideline/NETWORK_Guideline`            | `/KB/3RD-PARTY/NETWORK/`                  |
+| **Built-in (IT Zone)** | —                                            | `/KB/3RD-PARTY/UPS/Eaton/UPS_EATON_9395XR` |
 
 ### 产品选择规则
 

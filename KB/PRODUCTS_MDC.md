@@ -119,7 +119,7 @@ Transformer → Switchgear → [Power Zone: BESS / Generator]
 
 > ⚠️ **规则：不允许纯干冷器方案。** 无论 AC40 或 DC45，必须配置 Hybrid Cooling System（干冷器+DX一体化设备），确保环境温度 >28°C 时的散热能力。
 
-参考：[[FOG/KB/3RD-PARTY/COOLING/COOLING_SYSTEM_Guideline|KB/COOLING_SYSTEM_Guideline]]
+参考：[[FOG/KB/Guideline/COOLING_SYSTEM_Guideline|KB/COOLING_SYSTEM_Guideline]]
 
 ---
 
@@ -131,7 +131,7 @@ Transformer → Switchgear → [Power Zone: BESS / Generator]
 | **Grid + UPS + 柴油发电机** | 偏远地区 / 长时备电需求（>8h）| 机械发电、长时间运行 |
 | **Grid + UPS + BESS + 小型柴油** | 极端高可靠性需求 | BESS 覆盖瞬态 + 柴油兜底 |
 
-> 参考：[[FOG/KB/3RD-PARTY/BESS/POWER_SYSTEMS_Guideline|KB/POWER_SYSTEMS_Guideline]]
+> 参考：[[FOG/KB/Guideline/POWER_SYSTEMS_Guideline|KB/POWER_SYSTEMS_Guideline]]
 
 ---
 

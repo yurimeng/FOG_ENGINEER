@@ -27,7 +27,7 @@ DC45 是 45ft 容器规格的直冷液冷（DLC）集装箱，支持 8 × 150kW 
 | DLC 机柜    | 150kW                                                                |
 | DLC 机柜数量  | 8                                                                    |
 | 风冷机柜      | 40kW × 1                                                             |
-| 服务器进口温度   | 24°C                                                                 |
+| 服务器进口温度   | **26–28°C**（TCS 进水，CDU 二次侧供水至冷板）<!-- 原值: 24°C，2026-05-20 修订 --> |
 | Busbar 规格 | SIEMENS 2500A                                                        |
 | UPS       | EATON **9395XR-1500**，10 个功率模块（每模块 150kW），总功率 **1500kW**，发热量约 46.9kW |
 | 电池        | 3 个 93LiG2 机柜，每柜 332kW，共提供 **8 分钟**后备时间                              |
@@ -92,11 +92,11 @@ DC45 是 45ft 容器规格的直冷液冷（DLC）集装箱，支持 8 × 150kW 
 | 项目      | 参数                                                           |
 | ------- | ------------------------------------------------------------ |
 | 冷却方式    | Direct Liquid Cooling（冷板式液冷）                                 |
-| 服务器进口温度 | 24°C                                                         |
+| 服务器进口温度 | **26–28°C**（TCS 进水，CDU 二次侧供水至冷板）<!-- 原值: 24°C，2026-05-20 修订 --> |
 | CDU 配置  | 主 CDU 1.2MW Rack CDU × 1 + 可选 150kW In-Rack CDU              |
 | 散热方式    | **Hybrid Cooling System**（干冷器 + DX 一体化）或 **热泵**              |
 | **禁止**  | 纯干冷器（无 DX）— 环境 ≥28°C 时无法满足散热需求                               |
-| 设计原则    | ‹WIKILINK:FOG/KB/3RD-PARTY/COOLING/COOLING_SYSTEM_Guideline› |
+| 设计原则    | ‹WIKILINK:FOG/KB/Guideline/COOLING_SYSTEM_Guideline› |
 
 ### 5.2 FCU 散热部分
 

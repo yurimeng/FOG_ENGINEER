@@ -31,7 +31,7 @@ This Guideline defines:
 
 ## Step 2 — Review Product Catalog
 
-Reference `./KB/COOLING/` to select compatible cooling equipment.
+Reference `KB/3RD-PARTY/COOLING/` to select compatible cooling equipment.
 
 ## Step 3 — Perform Technical Analysis
 
@@ -82,6 +82,26 @@ Cooling Engineer has expertise in:
 - **Hybrid Cooling Architectures**
 
 Each technology has specific advantages and deployment conditions.
+
+## G-3.1 冷却架构分类 / Architecture Classification
+
+| 架构类型 | 压缩机方案 | 适用场景 | 优势 | 劣势 |
+|---------|-----------|---------|------|------|
+| **DX 方案** | 涡旋式压缩机 | 标准高温散热 | 全年可用、高温兜底 | DX 增加辅助功耗 |
+| **螺杆压缩机方案** | 螺杆式压缩机 | 大型集成冷站（≥300kW）| 能效高、可靠性强 | 成本较高、适合大型设备 |
+| **磁悬浮压缩机方案** | 磁悬浮变频压缩机 | 能效优先场景 | 极高能效、低噪音 | 成本高、技术要求高 |
+| **热泵方案** | 热泵机组 | 极寒或精确温控场景 | 可加热可制冷 | 能耗高于纯干冷器 |
+
+## G-3.2 按制冷量选型参考 / Capacity-based Selection
+
+| 制冷量范围 | 推荐架构 | 推荐压缩机 |
+|-----------|---------|----------|
+| <100kW | DX 方案 / 热泵 | 涡旋式 |
+| 100–300kW | DX 方案 / 热泵 | 涡旋式 / 螺杆式 |
+| 300–600kW | 螺杆压缩机方案 / DX 方案 | 螺杆式 |
+| >600kW | 螺杆压缩机方案 / 磁悬浮 | 螺杆式 / 磁悬浮 |
+
+> 注：以上为参考选型，实际方案根据项目需求和供应商能力确定。
 
 ---
 
@@ -147,6 +167,23 @@ DLC systems typically require:
 - DX is a mandatory component of the Hybrid Cooling System
 - Pure dry cooler mode is prohibited regardless of ambient temperature
 
+## Environment-based Operating Modes / 环境温度与运行模式
+
+### AC40 / AC45 / DC45（外制冷系统动态调节）
+
+| 环境温度 | 运行模式 | 说明 |
+|----------|---------|------|
+| <28°C | 干冷器优先，DX 关闭或低负荷 | 自然冷优先，能效最高 |
+| 28–35°C | 干冷器 + DX 共同运行 | 混合模式，PUE 中等 |
+| >35°C | DX 主导，干冷器辅助 | 高温兜底，确保散热 |
+
+### A32 独立部署运行模式
+
+| 环境温度 | 运行模式 | 说明 |
+|----------|---------|------|
+| <28°C | 纯干冷器（允许）| PUE 可低至 1.03 |
+| ≥28°C | DX 或热泵辅助 | 必须配置辅助散热 |
+
 ## Selection Factors
 
 - Climate conditions
@@ -207,9 +244,16 @@ Cooling Engineer must evaluate total thermal load.
 
 **Sizing rule:** Cooling capacity ≥ Peak IT heat load × 1.1 (minimum 10% margin)
 
-**PUE reference:**
-- ≤28°C ambient: PUE ~1.1–1.2 (DX off)
-- ≥28°C ambient: PUE ~1.2–1.4 (DX activated)
+**PUE 设计值参考 / PUE Reference (per IT Zone × ambient band):**
+
+| IT Zone | 低温区（干冷优先）| 高温区（DX 辅助）|
+|---------|-----------------|-----------------|
+| **A32**（独立部署）| ~1.03–1.05 | ~1.08–1.12 |
+| **AC40** | ~1.08–1.10 | ~1.15–1.20 |
+| **AC45** | ~1.10–1.12 | ~1.15–1.25 |
+| **DC45** | ~1.12–1.15 | ~1.25–1.35 |
+
+> PUE 受环境温度、负载率、散热方案等多因素影响，以上为参考值，禁止作为固定承诺数字。
 
 ---
 
@@ -254,14 +298,25 @@ Cooling architecture should remain stable across these conditions.
 
 # G-14 Product Selection / 产品选择
 
-Only products listed in `./KB/COOLING/` may be selected.
+Only products listed in `KB/3RD-PARTY/COOLING/` may be selected.
 
 | Product | Supplier | Key Specs | Reference |
 |---------|---------|-----------|----------|
-| DRYCOOL_with_DX | 泰铂 | 600kW class; IP55; C3防腐; 涡旋压缩机 | [[DRYCOOL_with_DX\|KB/COOLING/DRYCOOL_with_DX]] |
-| Hybrid Cooler 600kW | 三河同飞 | 600kW; 螺杆压缩机; -15°C~45°C; IP54 | [[Hybrid Cooler 600kW - 同飞\|KB/Hybrid Cooler 同飞]] |
+| DRYCOOL_with_DX | 泰铂 | 600kW class; IP55; C3防腐; 涡旋压缩机 | [[DRYCOOL_with_DX\|KB/3RD-PARTY/COOLING/DRYCOOL_with_DX]] |
+| Hybrid Cooler 600kW | 三河同飞 | 600kW; 螺杆压缩机; -15°C~45°C; IP54 | [[Hybrid Cooler 600kW - 同飞\|KB/3RD-PARTY/COOLING/Hybrid Cooler 600kW - 同飞]] |
 
-**If no product in `./KB/COOLING/` meets project requirements, escalate to ATS before proceeding.**
+**关键部件选型原则 / Component Selection Principles:**
+
+| 部件 | 选型要求 |
+|------|---------|
+| 压缩机 | 涡旋式（≤300kW）/ 螺杆式（≥300kW）/ 磁悬浮（能效优先）|
+| 风机 | EC 风机（如德国施乐佰）|
+| 水泵 | 变频控制，2+1 备份 |
+| 防护等级 | IP54 / IP55（按项目需求）|
+| 防腐等级 | C3（标准）/ C4/C5（定制）|
+| 控制方式 | 变频调节 + 自动判断自然冷优先 + 故障隔离报警 |
+
+**If no product in `KB/3RD-PARTY/COOLING/` meets project requirements, escalate to ATS before proceeding.**
 
 ---
 
@@ -285,7 +340,7 @@ This file is the authoritative source for:
 
 ## Step 2 — Product Verification
 
-Check `./KB/COOLING/` subfolder for product specs.
+Check `KB/3RD-PARTY/COOLING/` subfolder for product specs.
 
 ---
 
@@ -326,7 +381,7 @@ Cooling Engineer **MUST** escalate to ATS when:
 - Customer requests N+1 or 2N cooling redundancy
 - Water-constrained site requires cooling tower not in KB
 - IT Zone to Cooling Zone 1:1 pairing cannot be maintained
-- No product in `./KB/COOLING/` meets project requirements
+- No product in `KB/3RD-PARTY/COOLING/` meets project requirements
 
 **This Guideline is authoritative. If a proposed configuration contradicts it, flag and escalate — do not proceed independently.**
 

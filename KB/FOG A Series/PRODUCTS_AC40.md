@@ -69,7 +69,7 @@ AC40 是 40ft 容器规格的浸没式液冷集装箱，支持 8 × 50kW A32 浸
 | 散热方式 | **Hybrid Cooling System**（干冷器 + DX 一体化）或 **热泵** |
 | 允许方式 | Hybrid Cooling System / 热泵 |
 | **禁止** | 纯干冷器（无 DX）— 环境 ≥28°C 时无法满足散热需求 |
-| 设计原则 | [[FOG/KB/3RD-PARTY/COOLING/COOLING_SYSTEM_Guideline]] |
+| 设计原则 | [[FOG/KB/Guideline/COOLING_SYSTEM_Guideline]] |
 
 ### 5.2 风冷部分
 

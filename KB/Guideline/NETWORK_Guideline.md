@@ -7,7 +7,7 @@ tags:
 Supplier Name:
 Category: Network System Design Guideline
 适用对象: MDC 模块化数据中心集群（Network Zone）设计选型总则
-版本: V1.0（2026-04-09 独立 Guideline 版）
+版本: V1.2（2026-05-19 迁移至 KB/Guideline/ 统一归位）
 
 ---
 
@@ -17,8 +17,8 @@ Category: Network System Design Guideline
 > 具体产品参数请查阅各产品文档。
 
 引用顺序：
-1. [[NETWORK_Guideline]] ← 本文档
-2. 按架构类型查阅对应产品文档
+1. [[NETWORK_Guideline]] ← 本文档（位于 `KB/Guideline/`）
+2. 按架构类型查阅对应产品文档（位于 `KB/3RD-PARTY/NETWORK/`）
 
 ---
 
@@ -212,10 +212,13 @@ MDC 网络架构遵循典型的**三层网络模型**：
 ## 12. 参考文档
 
 - 网络产品（引澜布线系统）：[[PRODUCTS_NETWORK]]
+- AC40 网络端口配置：[[AC40_NETWORK_CONF|KB/3RD-PARTY/NETWORK/AC40_NETWORK_CONF]]（PDF 元数据伴侣）
 - AC40 产品规格：[[PRODUCTS_AC40]]
 - DC45 产品规格：[[PRODUCTS_DC45]]
 - MDC 标准组合：[[PRODUCTS_MDC]]
 
 ---
 
-*Document Version: v1.1 | Last Updated: 2026-04-12*
+*Document Version: v1.2 | Last Updated: 2026-05-19*
+
+> v1.2 变更：从 `KB/3RD-PARTY/NETWORK/NETWORK_Guideline.md` 迁移至 `KB/Guideline/NETWORK_Guideline.md`，与其他 Guideline 统一归位；引用路径同步更新。

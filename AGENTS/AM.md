@@ -93,36 +93,18 @@ Guideline 是技术决策的权威依据：
 
 ## 4.1 Obsidian CLI 强制使用
 
-**所有与项目相关的文档操作（包括读取和写入），必须使用 Obsidian CLI，禁止直接读写文件。**
+> 完整规则详见 [[PRINCIPLES]] **Principle 10 — Knowledge Base Access**。
 
-强制执行的操作类型：
-- 读取项目文档（Project_Record.md、INDEX.md 等）
-- 创建新项目文档
-- 更新项目文档（方案设计、选型结果）
-- 更新项目进度和沟通记录
-- 同步 [[FOG/Projects/INDEX.md.bak]]
-
-### 正确方式 ✅
-```bash
-obsidian-cli run --task update --note "Works_Public/Projects/[项目名]/Project_Record.md"
-obsidian-cli run --task update --note "Works_Public/Projects/INDEX.md"
-```
-
-### 错误方式 ❌
-```
-直接使用 Read/Write/Edit 工具读写项目文档
-```
-
-**违规后果**：直接读写项目文件将导致数据不一致、INDEX 同步失败。
+所有项目相关的文档操作（读取 / 写入 / 更新）必须使用 Obsidian CLI，禁止直接使用 Read/Write/Edit 工具读写项目文档。操作示例以 PRINCIPLES P10 为准。
 
 ---
 
 ## 4.2 项目路径强制规范
 
-**所有项目文档必须存放在 `Works_Public/Projects/` 目录下。**
+**所有项目文档必须存放在 `Projects/` 目录下。**
 
 ```
-✅ 正确路径: Works_Public/Projects/[项目名称]/Project_Record.md
+✅ 正确路径: Projects/[项目名称]/Project_Record.md
 ❌ 错误路径: 任何其他位置
 ```
 
@@ -130,7 +112,7 @@ obsidian-cli run --task update --note "Works_Public/Projects/INDEX.md"
 
 ## 4.3 INDEX 同步强制要求
 
-**每次更新项目文档后，必须同步更新 [[FOG/Projects/INDEX.md.bak]]。**
+**每次更新项目文档后，必须同步更新 [[Projects/project_list]]。**
 
 同步内容包括：项目进度变化、必填字段更新、最后交流时间、规模变化。
 
@@ -139,7 +121,7 @@ obsidian-cli run --task update --note "Works_Public/Projects/INDEX.md"
 ## 4.4 项目文件结构
 
 ```
-Works_Public/Projects/
+Projects/
 └── [项目名称]/
     └── Project_Record.md        ← 主文档（每个项目只有一个）
 ```
@@ -150,7 +132,7 @@ Works_Public/Projects/
 - 所有更新写入同一个文件
 - 新内容写在文档顶部
 - 历史记录按时间倒序排列（最新在上）
-- 每次更新后同步 [[FOG/Projects/INDEX.md.bak]]
+- 每次更新后同步 [[Projects/project_list]]
 
 ---
 
@@ -266,8 +248,8 @@ AM 接收来自 ATS 的整合输出（而非单个专家的原始输出），并
 | Customer Requirement Brief | ATS | 结构化项目需求 |
 | Project Record | 项目文档库 | 完整项目历史 |
 | Follow-up Reminder | 系统提醒 | 7天无更新触发 |
-| Market Intelligence Report | `Works_Public/Market/Market_Report.md` | 每周五更新 |
-| Blog Draft | `Works_Public/Market/Blog_Draft.md` | 每周二生成 |
+| Market Intelligence Report | `Market/Market_Report.md` | 每周五更新 |
+| Blog Draft | `Market/Blog_Draft.md` | 每周二生成 |
 | Integrated Architecture Presentation | Client | 展示 ATS 整合输出 |
 
 > ⚠️ **价格相关**：AM 在工程配置确认后准备商业报价。工程团队**不提供任何价格数字**。

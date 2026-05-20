@@ -37,7 +37,7 @@ Category: Reference
 
 | 文件 | 说明 |
 |------|------|
-| [[FOG/KB/3RD-PARTY/COOLING/COOLING_SYSTEM_Guideline]] | 冷却 Zone 选型原则：架构分类（DX/螺杆/磁悬浮/热泵）、环境温度策略、IT Zone 匹配规则、A32 纯干冷例外 |
+| [[FOG/KB/Guideline/COOLING_SYSTEM_Guideline]] | 冷却 Zone 选型原则：架构分类（DX/螺杆/磁悬浮/热泵）、环境温度策略、IT Zone 匹配规则、A32 纯干冷例外 |
 
 ### 3.2 产品目录
 
@@ -73,7 +73,7 @@ Category: Reference
 
 | 文件 | 说明 |
 |------|------|
-| [[FOG/KB/3RD-PARTY/BESS/POWER_SYSTEMS_Guideline]] | 电力 Zone 选型原则：BESS 选型逻辑、UPS 选型、冗余策略、场景推荐 |
+| [[FOG/KB/Guideline/POWER_SYSTEMS_Guideline]] | 电力 Zone 选型原则：BESS 选型逻辑、UPS 选型、冗余策略、场景推荐 |
 
 ### 4.2 UPS（IT Zone 标配）
 
@@ -125,7 +125,7 @@ Category: Reference
 | 类别 | 供应商/产品 | 说明 | 参考文档 |
 |------|-----------|------|---------|
 | **布线系统** | 引澜 | 结构化布线，商用成熟产品，可直接采购 | [[PRODUCTS_NETWORK]] |
-| **AC40 网络配置** | 参考配置 | AC40 集装箱网络端口定义及布线规范 | [[AC40_NETWORK_Guideline]] |
+| **AC40 网络配置** | 参考配置 | AC40 集装箱网络端口定义及布线规范 | [[AC40_NETWORK_CONF]] |
 
 ### 5.3 网络架构速查
 

@@ -71,7 +71,7 @@ IT Load → Dielectric Fluid → Heat Exchanger → CDU → **Hybrid Cooling Sys
 > - **A32 独立部署**：作为单柜单元，低温区（<28°C）可使用纯干冷器，PUE 可低至 1.03
 > - **A32 在 AC40/DC45 集装箱内**：温度由外制冷系统（Hybrid Cooling System）统一动态调节，必须配置 DX/热泵，禁止纯干冷器
 
-设计原则参考：[[FOG/KB/3RD-PARTY/COOLING/COOLING_SYSTEM_Guideline]]
+设计原则参考：[[FOG/KB/Guideline/COOLING_SYSTEM_Guideline]]
 
 ### 5.3 故障模式
 

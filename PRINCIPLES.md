@@ -7,8 +7,8 @@ tags:
 
 # Engineering Principles / 工程原则
 
-Document Version: v1.0
-Last Updated: 2026-03-10
+Document Version: v1.2
+Last Updated: 2026-05-19
 
 > **加载说明 / Loading Note**：所有 Agent 在加载后必须优先阅读本文档，并严格遵守其中所有原则。本文档是整个系统的最高行为准则。
 
@@ -216,6 +216,16 @@ When a client asks "how much power do I need":
 - 必须先确认是指 IT 负载还是总设施负荷
 - 所有输出必须同时标注两个数值
 
+### 参考示例 / Example
+
+| 产品 | IT Load | 估算 Total Facility Load（取决于 PUE） |
+|------|---------|--------------------------------------|
+| DC45（单柜）| 1240 kW | ~1390–1670 kW |
+| AC45（单柜）| 400 kW  | ~440–500 kW |
+| AC40（单柜）| 400 kW  | ~432–480 kW |
+
+> ⚠️ Total Facility Load 不是固定值，必须按现场环境温度 / 冷却架构计算 PUE 后给出。
+
 参考：[[/KB/Guideline/POWER_SYSTEMS_Guideline]]
 
 ---
@@ -285,7 +295,7 @@ Before accessing any specific KB file, **always start from the appropriate index
 | Domain guidelines | [[/KB/Guideline/index]] |
 | Product catalog | [[PRODUCTS_MDC]] |
 | Specific products | See zone index in Guideline |
-| Specific project | [[FOG/Projects/INDEX.md.bak]] |
+| Specific project | [[Projects/project_list]] |
 | Processes | See [[PROCESS/WORKFLOW/WORKFLOW]] |
 
 **Never jump directly to a deep file without first checking the relevant index.**
@@ -336,54 +346,6 @@ All operations on customer files must strictly comply with `/TOOLS/CRM_WORKFLOW`
 
 所有客户档案操作必须严格遵守 `/TOOLS/CRM_WORKFLOW`，没有任何例外。
 
-### 强制协议：Obsidian CLI
-
-所有知识库操作（包括读取文件、搜索内容、导航等）**必须使用 `obsidian-cli`**，禁止通过 Read/Write/Edit 工具直接访问 KB 文件。
-
-### 正确方式 ✅
-```bash
-obsidian-cli run --task read --note "/KB/..."
-obsidian-cli run --task search --query "关键词"
-obsidian-cli run --task update --note "/KB/..."
-```
-
-### 错误方式 ❌
-```
-直接使用 Read/Write/Edit 工具访问 KB 文件
-```
-
-### 索引优先原则
-
-在访问任何具体 KB 文件之前，**必须从相应的索引开始**：
-
-| 需要访问... | 从这里开始... |
-|---|---|
-| Works_Public 整体结构 | [[FOG/index]] |
-| AGENTS / 角色定义 | [[FOG/AGENTS]] |
-| 领域技术指南 | [[/KB/Guideline/index]] |
-| 产品目录总览 | [[PRODUCTS_MDC]] |
-| 具体产品 | 从对应 Guideline 的索引区开始 |
-| 具体项目 | [[FOG/Projects/INDEX.md.bak]] |
-| 流程定义 | 参见 [[PROCESS/WORKFLOW/WORKFLOW]] |
-
-**严禁不经过索引直接跳转深层文件。**
-
-### 知识库层级结构
-
-知识库组织如下，访问必须按顺序逐级进行：
-
-```
-index（总入口）
-  ├── AGENTS/           ← 角色定义
-  ├── KB/
-  │   ├── Guideline/    ← 先查索引 → 再查具体 Guideline
-  │   ├── 3RD-PARTY/   ← 先查 3rd Party List → 再查具体产品
-  │   └── PRODUCTS_*.md ← 先查 PRODUCTS_MDC → 再查具体型号
-  ├── PROCESS/          ← 先查 WORKFLOW → 再查具体流程
-  ├── Projects/         ← 先查 INDEX → 再查具体项目
-  └── TOOLS/            ← 先查 TOOLS.md → 再查具体工具
-```
-
 ---
 
 # Principle 12 — Reference Architecture First / 参考架构优先
@@ -415,7 +377,7 @@ Reference architectures represent validated, pre-engineered system configuration
 
 | ID | Name | IT Capacity | Cooling Type | Product |
 |---|---|---|---|---|
-| RA-001 | Edge Inference — Immersion 0.5MW | 0.5MW | Immersion | AC40 |
+| RA-001 | Edge Inference — Immersion 0.4MW | 0.4MW | Immersion | AC40 |
 | RA-002 | Edge Inference — DLC 1.2MW | 1.2MW | Direct Liquid Cooling | DC45 |
 
 **Reference path:** `[[Reference Architecture]]`
@@ -447,11 +409,13 @@ Reference architectures represent validated, pre-engineered system configuration
 
 | ID | 名称 | IT 容量 | 冷却类型 | 产品 |
 |---|---|---|---|---|
-| RA-001 | Edge Inference — 浸没式 0.5MW | 0.5MW | 浸没式 | AC40 |
+| RA-001 | Edge Inference — 浸没式 0.4MW | 0.4MW | 浸没式 | AC40 |
 | RA-002 | Edge Inference — 直冷液冷 1.2MW | 1.2MW | 直冷液冷 | DC45 |
 
 **参考路径：** `[[Reference Architecture]]`
 
 ---
 
-*Document Version: v1.1 | Last Updated: 2026-04-12*
+*Document Version: v1.2 | Last Updated: 2026-05-19*
+
+> v1.2 变更：修复 Principle 11 CN 部分错误复制 P10 的 KB Access 内容；在 Principle 8 补充 IT Load vs Total Facility Load 的具体数值示例。

@@ -7,8 +7,8 @@ tags:
 
 # Engineering Agent Organization / 工程 Agent 组织
 
-Document Version: v1.0
-Last Updated: 2026-04-11
+Document Version: v1.2
+Last Updated: 2026-05-19
 
 > **加载说明 / Loading Note**：加载本文件前，必须先阅读 [[PRINCIPLES]] 和 [[WORKFLOW]]。
 
@@ -154,4 +154,6 @@ Agents must prioritize：
 
 ---
 
-*Document Version: v1.1 | Last Updated: 2026-04-12*
+*Document Version: v1.2 | Last Updated: 2026-05-19*
+
+> v1.2 变更：与 FOG_Workspace_Summary v1.0 对齐核对，无内容变更；版本号 bump 用于声明已经过一致性核对。

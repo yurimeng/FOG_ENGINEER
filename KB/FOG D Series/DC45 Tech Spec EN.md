@@ -34,7 +34,7 @@ DC45 is a **45ft containerized modular data center with Direct Liquid Cooling (D
 | Item | Parameter |
 |------|-----------|
 | **Total IT Capacity** | **1240kW** |
-| DLC Racks | 8 × 155kW (155kW per rack) |
+| DLC Racks | 8 × 150kW (150kW per rack) |
 | Air-Cooled Rack | 1 × 40kW |
 | Server Inlet Temperature | 24°C |
 | Power Factor (UPS Output Side) | 0.9 |
@@ -44,7 +44,7 @@ DC45 is a **45ft containerized modular data center with Direct Liquid Cooling (D
 | Item | Value | Notes |
 |------|-------|-------|
 | **IT Load** | 1240kW | Actual server/GPU consumption |
-| **Total Facility Load** | ~1380–1560kW | Depends on PUE |
+| **Total Facility Load** | ~1390–1670kW | Depends on PUE |
 | **PUE (Low temp zone, dry cooler priority)** | ~1.12–1.15 | Low ambient temperature |
 | **PUE (High temp zone, DX-dominant)** | ~1.25–1.35 | High ambient temperature |
 
