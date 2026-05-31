@@ -9,7 +9,7 @@ Category: Reference
 
 # 3rd Party List — 第三方产品和解决方案参考清单
 
-版本：V1.3（2026-04-09 新增独立 Guideline 体系；冷却/网络拆分设计原则与产品文档）
+版本：V1.4（2026-05-22 新增 STULZ CeilAir、Vertiv RDHx、三河同飞 Chiller 规格需求书；补充冷却 Zone DESIGN/ 子目录；完善制造供应商说明）
 
 ---
 
@@ -39,12 +39,33 @@ Category: Reference
 |------|------|
 | [[FOG/KB/Guideline/COOLING_SYSTEM_Guideline]] | 冷却 Zone 选型原则：架构分类（DX/螺杆/磁悬浮/热泵）、环境温度策略、IT Zone 匹配规则、A32 纯干冷例外 |
 
+### 3.1.1 DESIGN/ 子目录
+
+| 文件 | 说明 |
+|------|------|
+| [[RDHX_Requirement]] | RDHx 技术规格需求书（规范 DC45 后门换热器选型与设计）|
+| [[CDU_Requirement]] | CDU 技术规格需求书（规范 AC40 浸没 CDU 和 DC45 DLC Rack CDU 选型）|
+| [[CRAH_Requirement]] | CRAH 技术规格需求书（规范 CRAH 选型与设计）|
+| [[Hybrid Chiller Requirement 技术规格需求书]] | DC45 大型 Hybrid Chiller 规格需求书（1200–1500kW）|
+
 ### 3.2 产品目录
 
 | 类别 | 产品 | 供应商 | 说明 | 参考文档 |
 |------|------|--------|------|---------|
-| **标准散热方案** | 干冷器 + DX 双冷源机组 | 泰铂 | 适用于 AC40/DC45 标准配置 | [[DRYCOOL_with_DX]] |
-| **集成冷站** | 600kW 集成冷站 | 三河同飞 | 螺杆式压缩机，一体化热泵冷源 | [[Hybrid Cooler 600kW - 同飞]] |
+| **干冷器 + DX** | Hybrid Cooling System（AC40/AC45 标准配置）| 泰铂 | 干冷器 + DX 双冷源，AC40/AC45 标配 | [[DRYCOOL_with_DX]] |
+| **集成冷站** | 600kW 集成冷站 | 三河同飞 | 螺杆式压缩机，一体化热泵冷源（**AC40 标配**）| [[Hybrid Cooler 600kW - 同飞]] |
+| **Hybrid Chiller** | 大型 Hybrid Chiller（DC45 专用）| 待全球招标 | 额定制冷量 1200–1500 kW（**DC45 标配，600kW 冷站不适用 DC45**）| [[Hybrid Chiller Requirement 技术规格需求书]] |
+| **CDU（AC40/AC45 浸没式）** | 内阻 Dual CDU | 三河同飞 / 待确认 | AC40/AC45 浸没回路，1+1 冗余 | [[CDU_Requirement]] |
+| **CDU（DC45 DLC）** | Rack CDU，≥1500kW | 待全球招标 | DC45 DLC 主回路，VFD 泵，2N/N+1 冗余 | [[CDU_Requirement]] |
+| **顶置空调** | STULZ OHS-084-DG-FC | STULZ | DC45 舱内残余热处理，9 台（PG25 兼容）| [[STULZ_CeilAir]] |
+| **后门换热器** | Vertiv DCD35 被动 RDHx | VERTIV | DC45 机柜后门余热回收，9 台 | [[RDHx - Vertiv]] |
+| **RDHx 规格** | RDHx 技术规格需求书 | — | 规范 RDHx 选型与设计要求 | [[RDHX_Requirement]] |
+| **CRAC 规格** | CRAH 技术规格需求书 | — | 规范 CRAH 选型与设计要求 | [[CRAH_Requirement]] |
+
+> ⚠️ **冷却系统容量匹配规则：**
+> - AC40（IT 400kW）→ 600kW 集成冷站 ✅
+> - DC45（IT 1240kW）→ 需要 1200–1500kW Hybrid Chiller，**600kW 冷站不满足 DC45 需求**
+> - 所有冷却产品选型须符合 [[FOG/KB/Guideline/COOLING_SYSTEM_Guideline]] 的架构分类与 IT Zone 匹配规则
 
 ### 3.3 架构类型速查
 
@@ -90,7 +111,6 @@ Category: Reference
 ### 4.3 UPS 电池系统
 
 | 品牌/型号 | 类型 | 每柜能量 | 每柜功率 | 适用 |
-|----------|------|---------|---------|------|
 |----------|------|---------|---------|------|
 | EATON 93LiG2（93Li92S-100Ah）| 磷酸铁锂 | 63.9kWh | 332kW | AC45 / DC45（内置）；AC40（客户自备，外置）|
 
@@ -143,10 +163,10 @@ Category: Reference
 |--------|------|------|
 | 三河同飞 | 冷却设备制造 | 参考供应商 |
 | DSBJ（东山精密）| 制造 | 参考供应商 |
-| 广东惠集 | 集装箱箱体制造 | **只做集装箱箱体**，其他所有件为客供，不做总集成 |
+| 广东惠集 | 集装箱箱体制造 | **只做箱体**，其他所有件为客供，**不做总集成** |
 | 惟远能源 | 标准件供应 | **只做标准件，不定制**；定制需另签研发合同；未做过 UPS 和算力机柜一体 |
 
-> ⚠️ 注意：广东惠集和惟远能源有明确的业务边界，方案设计时须注意不要超出其能力范围。
+> ⚠️ 注意：广东惠集（箱体）和惟远能源（标准件）有明确的业务边界，方案设计时须注意不要超出其能力范围。三河同飞专注冷却设备，DSBJ 专注制造。
 
 ---
 
@@ -163,6 +183,7 @@ Category: Reference
 
 | 日期 | 版本 | 变更内容 |
 |------|------|---------|
+| 2026-05-22 | V1.4 | 新增 STULZ CeilAir、Vertiv RDHx、Hybrid Chiller 规格需求书；补充冷却 Zone DESIGN/ 子目录；完善制造供应商说明；修复 UPS 电池表空行格式 |
 | 2026-04-09 | V1.3 | 新增独立 Guideline 体系；冷却系统拆分为 Guideline（架构选型）+ 产品文档；网络系统拆分为 Guideline（IB/ROCE/带内/带外）+ 产品文档；Buildin 重命名为 UPS |
 | 2026-04-01 | V1.2 | 新增 Guideline 体系；BESS 目录独立，添加 Tesla Megapack 2 XL 和国轩产品文档 |
 | 2026-03-29 | V1.1 | 统一命名结构；添加 UPS 型号（9395XR-600/1500）；增加冷却 Zone 标准配置说明 |

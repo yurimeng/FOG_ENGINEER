@@ -220,9 +220,9 @@ When a client asks "how much power do I need":
 
 | 产品 | IT Load | 估算 Total Facility Load（取决于 PUE） |
 |------|---------|--------------------------------------|
-| DC45（单柜）| 1240 kW | ~1390–1670 kW |
-| AC45（单柜）| 400 kW  | ~440–500 kW |
-| AC40（单柜）| 400 kW  | ~432–480 kW |
+| DC45（单柜）| 1240 kW | ~1325–1675 kW（PUE 1.07–1.35）|
+| AC45（单柜）| 400 kW  | ~408–500 kW（PUE 1.02–1.20）|
+| AC40（单柜）| 400 kW  | ~408–480 kW（PUE 1.02–1.20）|
 
 > ⚠️ Total Facility Load 不是固定值，必须按现场环境温度 / 冷却架构计算 PUE 后给出。
 

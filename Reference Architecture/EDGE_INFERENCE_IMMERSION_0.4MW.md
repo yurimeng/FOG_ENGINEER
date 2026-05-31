@@ -25,7 +25,7 @@ Last Updated: 2026-05-19
 | 产品形态 | 1× AC40 集装箱 |
 | 冷却技术 | 浸没式液冷（Immersion Cooling）|
 | 散热方式 | **Hybrid Cooling System**（干冷器+DX一体化）|
-| 交付周期 | **~195–305 天（SOP 标准流程）** |
+| 交付周期 | **~185–230 天（参考值）** |
 
 ---
 
@@ -34,8 +34,8 @@ Last Updated: 2026-05-19
 | 项目 | 数值 | 说明 |
 |------|------|------|
 | **IT 负载** | 400kW | 服务器、GPU 实际消耗 |
-| **整体电力负荷** | ~432–480kW | 取决于 PUE（PUE 约 1.08–1.20）|
-| PUE | **取决于环境温度** | 低温区 ~1.08–1.10；高温区（DX 运行）~1.15–1.20 |
+| **整体电力负荷** | ~408–480kW | 取决于 PUE（PUE 约 1.02–1.20）|
+| PUE | **取决于环境温度** | 低温区 ~1.02–1.08；高温区（DX 运行）~1.15–1.20 |
 
 ---
 
@@ -114,9 +114,9 @@ Last Updated: 2026-05-19
 
 | 环境条件 | 运行模式 | PUE 参考值 |
 |----------|---------|-----------|
-| 环境 <28°C | Hybrid Cooling（干冷优先）| ~1.08–1.10 |
-| 环境 28–35°C | Hybrid Cooling（DX 介入）| ~1.12–1.18 |
-| 环境 >35°C | Hybrid Cooling（DX 主导）| ~1.18–1.25 |
+| 环境 <28°C | Hybrid Cooling（干冷优先）| ~1.02–1.08 |
+| 环境 28–35°C | Hybrid Cooling（DX 介入）| ~1.08–1.15 |
+| 环境 >35°C | Hybrid Cooling（DX 主导）| ~1.15–1.20 |
 
 ---
 
@@ -127,12 +127,12 @@ Reference Architecture — 0.4MW Immersion AI Inference Unit
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 IT Load:       400kW（1×AC40）
-Total Load:    ~432–480kW（PUE≈1.08–1.20）
+Total Load:    ~408–480kW（PUE≈1.02–1.20）
 Product:       AC40（Immersion Container，40ft）
 Cooling:       Immersion + **Hybrid Cooling System**
 Power:         Grid + UPS（9395XR-600）+ BESS（可选）
 Redundancy:    UPS 模块 N+1 / CDU 1+1（**IT Zone 本身无内部冗余**）
-Delivery:      **~195–305 天**（SOP：场地勘测 2w + 方案设计 2w + 制造 16-20w + 运输 35-60d + 部署 30d）
+Delivery:      **~185–230 天**（参考值：现场勘测 15d + 商务准备 15d + 生产制造 90–120d + 运输 45–60d + 部署安装 10–20d）
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 

@@ -40,18 +40,18 @@ MDC zones: **Power Zone** (BESS / generator) → **IT Zone** (AC40 / AC45 / DC45
 PUE references (env-dependent — never quote as fixed):
 
 | Product | Low-temp region (drycooler-priority) | High-temp region (DX-assisted) |
-|---------|--------------------------------------|--------------------------------|
-| AC40 | ~1.08–1.10 | ~1.15–1.20 |
-| AC45 | ~1.10–1.12 | ~1.15–1.25 |
-| DC45 | ~1.12–1.15 | ~1.25–1.35 |
+| ------- | ------------------------------------ | ------------------------------ |
+| AC40    | ~1.02–1.08                           | ~1.15–1.20                     |
+| AC45    | ~1.02–1.08                           | ~1.15–1.20                     |
+| DC45    | ~1.07–1.15                           | ~1.25–1.35                     |
 
 UPS battery backup (rule-of-thumb, depends on actual load — UPS battery ≠ BESS, see Hard Rule #7):
 
-| IT Zone | UPS Model | UPS Power | Placement | Battery backup |
-|---------|-----------|-----------|-----------|----------------|
-| AC40 | EATON 9395XR-600 | 600 kW | External (customer) | ~10 min |
-| AC45 | EATON 9395XR-600 | 600 kW | Internal (UL) | ~20 min |
-| DC45 | EATON 9395XR-1500 | 1500 kW | Internal (UL) | ~8 min |
+| IT Zone | UPS Model         | UPS Power | Placement           | Battery backup |
+| ------- | ----------------- | --------- | ------------------- | -------------- |
+| AC40    | EATON 9395XR-600  | 600 kW    | External (customer) | ~10 min        |
+| AC45    | EATON 9395XR-600  | 600 kW    | Internal (UL)       | ~10 min        |
+| DC45    | EATON 9395XR-1500 | 1500 kW   | Internal (UL)       | ~8 min         |
 
 Cooling architecture quick-pick by capacity (for selection from approved vendors):
 

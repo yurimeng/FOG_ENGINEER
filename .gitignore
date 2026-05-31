@@ -1,11 +1,46 @@
+# OS artifacts
 .DS_Store
-.openclaw
-Projects/
-KB/BOM
+*.DS_Store
+
+# AI / Claude configuration — never commit
+.openclaw/
+memory/
+.claude/
+Token_Calc_AC40_DC45_Haiyan.xlsx
+generate_token_calc.py
+Token_Calc_AC40_DC45_Haiyan_Summary.md
+
+# Design / working files — ignore all intermediate design artifacts
+# Keep only finalized reference outputs (product specs, guidelines, RAs)
+**/DESIGN/
+**/DC45 三支路冷却重评估*
+**/RDHx Forest Heat Exchanger*
+**/DC45_Thermal_Assessment_6Sites.md
+**/DC45 Compliance Checklist*
+**/DC45 Power System Criteria.md
+**/DC45 Hydronic*
+**/DC45_External_Air_Makeup_PRD.md
+**/MDC Engineering Handbook*.md
+**/MDC_Engineering Handbook*.md
+**/DC45 BOM*
+**/BOM/
+
+# Third-party design specs (working files, not finalized product specs)
+**/COOLING/DESIGN/
+**/COOLING/*Requirement*
+**/RDHx - Vertiv.md
+**/STULZ_CeilAir.md
+**/UPS_EATON_9395XR.md
+
+# Business / cost / hr / market — not KB content
+Business_Documents/
 Canvas/
 Market/
-HRBP
-ResoucePool
-SupplyChain
-COST
-Index.md
+HRBP/
+ResoucePool/
+SupplyChain/
+COST/
+Projects/
+
+# Index files
+**/index.md

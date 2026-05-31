@@ -1,158 +1,206 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xl="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" version="1.1" viewBox="0 -2439 13716 4878" width="13716" height="4878">
+<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xl="http://www.w3.org/1999/xlink" viewBox="18.952921 -2393.4688 13716 4831.869" width="13716" height="4831.869">
   <defs>
     <radialGradient cx="0" cy="0" r="1" id="Gradient" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#333"/>
       <stop offset=".9277644" stop-color="#181818"/>
       <stop offset="1" stop-color="black"/>
     </radialGradient>
-    <radialGradient id="Obj_Gradient" xl:href="#Gradient" gradientTransform="translate(457.28726 1442.7707) scale(852.9304)"/>
-    <radialGradient id="Obj_Gradient_2" xl:href="#Gradient" gradientTransform="translate(1332.1638 1442.7707) scale(819.3192)"/>
-    <radialGradient id="Obj_Gradient_3" xl:href="#Gradient" gradientTransform="translate(2143.3403 1442.7707) scale(819.3192)"/>
-    <radialGradient id="Obj_Gradient_4" xl:href="#Gradient" gradientTransform="translate(2954.064 1442.7707) scale(819.3192)"/>
-    <radialGradient id="Obj_Gradient_5" xl:href="#Gradient" gradientTransform="translate(3764.3933 1442.7707) scale(819.3192)"/>
-    <radialGradient id="Obj_Gradient_6" xl:href="#Gradient" gradientTransform="translate(4504.38 1368.7707) scale(662.0045)"/>
-    <radialGradient id="Obj_Gradient_7" xl:href="#Gradient" gradientTransform="translate(5184.3666 1442.7707) scale(819.3192)"/>
-    <radialGradient id="Obj_Gradient_8" xl:href="#Gradient" gradientTransform="translate(5994.353 1442.7707) scale(819.3192)"/>
-    <radialGradient id="Obj_Gradient_9" xl:href="#Gradient" gradientTransform="translate(6804.042 1442.7707) scale(819.3192)"/>
-    <radialGradient id="Obj_Gradient_10" xl:href="#Gradient" gradientTransform="translate(7613.471 1442.7707) scale(819.3192)"/>
-    <radialGradient id="Obj_Gradient_11" xl:href="#Gradient" gradientTransform="translate(8424.014 1368.7707) scale(728.5774)"/>
-    <radialGradient id="Obj_Gradient_12" xl:href="#Gradient" gradientTransform="translate(9234.557 1368.7707) scale(728.5774)"/>
-    <radialGradient id="Obj_Gradient_13" xl:href="#Gradient" gradientTransform="translate(10327.655 1405.7707) scale(1110.2532)"/>
-    <radialGradient id="Obj_Gradient_14" xl:href="#Gradient" gradientTransform="translate(11867.018 1751.7707) scale(614.4894)"/>
-    <radialGradient id="Obj_Gradient_15" xl:href="#Gradient" gradientTransform="translate(12480.32 1751.7707) scale(614.4894)"/>
-    <radialGradient id="Obj_Gradient_16" xl:href="#Gradient" gradientTransform="translate(13092.892 1751.7707) scale(614.4894)"/>
+    <radialGradient id="Obj_Gradient" xl:href="#Gradient" gradientTransform="translate(476.2402 1442.7707) scale(852.9304)"/>
+    <radialGradient id="Obj_Gradient_2" xl:href="#Gradient" gradientTransform="translate(1351.1167 1442.7707) scale(819.3192)"/>
+    <radialGradient id="Obj_Gradient_3" xl:href="#Gradient" gradientTransform="translate(2162.2932 1442.7707) scale(819.3192)"/>
+    <radialGradient id="Obj_Gradient_4" xl:href="#Gradient" gradientTransform="translate(2973.0168 1442.7707) scale(819.3192)"/>
+    <radialGradient id="Obj_Gradient_5" xl:href="#Gradient" gradientTransform="translate(3783.3462 1442.7707) scale(819.3192)"/>
+    <radialGradient id="Obj_Gradient_6" xl:href="#Gradient" gradientTransform="translate(4523.333 1368.7707) scale(662.0045)"/>
+    <radialGradient id="Obj_Gradient_7" xl:href="#Gradient" gradientTransform="translate(5203.3196 1442.7707) scale(819.3192)"/>
+    <radialGradient id="Obj_Gradient_8" xl:href="#Gradient" gradientTransform="translate(6013.306 1442.7707) scale(819.3192)"/>
+    <radialGradient id="Obj_Gradient_9" xl:href="#Gradient" gradientTransform="translate(6822.9946 1442.7707) scale(819.3192)"/>
+    <radialGradient id="Obj_Gradient_10" xl:href="#Gradient" gradientTransform="translate(7632.4235 1442.7707) scale(819.3192)"/>
+    <radialGradient id="Obj_Gradient_11" xl:href="#Gradient" gradientTransform="translate(8442.966 1368.7707) scale(728.5774)"/>
+    <radialGradient id="Obj_Gradient_12" xl:href="#Gradient" gradientTransform="translate(9253.51 1368.7707) scale(728.5774)"/>
+    <radialGradient id="Obj_Gradient_13" xl:href="#Gradient" gradientTransform="translate(10346.608 1405.7707) scale(1110.2532)"/>
+    <radialGradient id="Obj_Gradient_14" xl:href="#Gradient" gradientTransform="translate(11885.971 1751.7707) scale(614.4894)"/>
+    <radialGradient id="Obj_Gradient_15" xl:href="#Gradient" gradientTransform="translate(12499.273 1751.7707) scale(614.4894)"/>
+    <radialGradient id="Obj_Gradient_16" xl:href="#Gradient" gradientTransform="translate(13111.845 1751.7707) scale(614.4894)"/>
     <linearGradient x1="0" x2="1" id="Gradient_2" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#76bdff"/>
       <stop offset="1" stop-color="#5070ff"/>
     </linearGradient>
-    <linearGradient id="Obj_Gradient_17" xl:href="#Gradient_2" gradientTransform="translate(13363.703 110.94531) rotate(90) scale(400)"/>
+    <linearGradient id="Obj_Gradient_17" xl:href="#Gradient_2" gradientTransform="translate(13382.656 110.94531) rotate(90) scale(400)"/>
   </defs>
-  <g id="TOP" stroke-opacity="1" fill="none" stroke-dasharray="none" stroke="none" fill-opacity="1">
+  <g id="TOP" fill-opacity="1" stroke-opacity="1" stroke-dasharray="none" stroke="none" fill="none">
     <title>TOP</title>
     <g id="TOP_Single">
       <title>Single</title>
-      <g id="Group_24">
+      <g id="Group_58">
         <g id="Graphic_23">
-          <rect x="0" y="0" width="13716" height="2438.4" fill="#ccc"/>
+          <rect x="18.952921" y="0" width="13716" height="2438.4" fill="#ccc"/>
         </g>
         <g id="Graphic_22">
-          <rect x="80" y="43.19995" width="13556" height="2352" fill="white"/>
+          <rect x="98.95292" y="43.19995" width="13556" height="2352" fill="white"/>
         </g>
         <g id="Graphic_21">
-          <path d="M 147.28726 998.7707 L 1037.2873 998.7707 C 1040.0487 998.7707 1042.2873 1001.0092 1042.2873 1003.7707 L 1042.2873 2193.7707 C 1042.2873 2196.532 1040.0487 2198.7707 1037.2873 2198.7707 L 147.28726 2198.7707 C 144.52584 2198.7707 142.28726 2196.532 142.28726 2193.7707 L 142.28726 1003.7707 C 142.28726 1001.0092 144.52584 998.7707 147.28726 998.7707 Z" fill="url(#Obj_Gradient)"/>
-          <text transform="translate(147.28726 1551.1507)" fill="white">
+          <path d="M 166.24018 998.7707 L 1056.2402 998.7707 C 1059.0016 998.7707 1061.2402 1001.0092 1061.2402 1003.7707 L 1061.2402 2193.7707 C 1061.2402 2196.532 1059.0016 2198.7707 1056.2402 2198.7707 L 166.24018 2198.7707 C 163.47876 2198.7707 161.24018 2196.532 161.24018 2193.7707 L 161.24018 1003.7707 C 161.24018 1001.0092 163.47876 998.7707 166.24018 998.7707 Z" fill="url(#Obj_Gradient)"/>
+          <text transform="translate(166.24018 1551.1507)" fill="white">
             <tspan font-family="Helvetica Neue" font-size="80" fill="white" x="260.52" y="76" xml:space="preserve">Main CDU</tspan>
           </text>
         </g>
         <g id="Graphic_20">
-          <path d="M 1057.1638 998.7707 L 1847.1638 998.7707 C 1849.9252 998.7707 1852.1638 1001.0092 1852.1638 1003.7707 L 1852.1638 2193.7707 C 1852.1638 2196.532 1849.9252 2198.7707 1847.1638 2198.7707 L 1057.1638 2198.7707 C 1054.4024 2198.7707 1052.1638 2196.532 1052.1638 2193.7707 L 1052.1638 1003.7707 C 1052.1638 1001.0092 1054.4024 998.7707 1057.1638 998.7707 Z" fill="url(#Obj_Gradient_2)"/>
-          <text transform="translate(1057.1638 1551.1507)" fill="white">
+          <path d="M 1076.1167 998.7707 L 1866.1167 998.7707 C 1868.8781 998.7707 1871.1167 1001.0092 1871.1167 1003.7707 L 1871.1167 2193.7707 C 1871.1167 2196.532 1868.8781 2198.7707 1866.1167 2198.7707 L 1076.1167 2198.7707 C 1073.3553 2198.7707 1071.1167 2196.532 1071.1167 2193.7707 L 1071.1167 1003.7707 C 1071.1167 1001.0092 1073.3553 998.7707 1076.1167 998.7707 Z" fill="url(#Obj_Gradient_2)"/>
+          <text transform="translate(1076.1167 1551.1507)" fill="white">
             <tspan font-family="Helvetica Neue" font-size="80" fill="white" x="213.48" y="76" xml:space="preserve">DLC Rack</tspan>
           </text>
         </g>
         <g id="Graphic_19">
-          <path d="M 1868.3403 998.7707 L 2658.3403 998.7707 C 2661.1017 998.7707 2663.3403 1001.0092 2663.3403 1003.7707 L 2663.3403 2193.7707 C 2663.3403 2196.532 2661.1017 2198.7707 2658.3403 2198.7707 L 1868.3403 2198.7707 C 1865.5789 2198.7707 1863.3403 2196.532 1863.3403 2193.7707 L 1863.3403 1003.7707 C 1863.3403 1001.0092 1865.5789 998.7707 1868.3403 998.7707 Z" fill="url(#Obj_Gradient_3)"/>
-          <text transform="translate(1868.3403 1551.1507)" fill="white">
+          <path d="M 1887.2932 998.7707 L 2677.2932 998.7707 C 2680.0546 998.7707 2682.2932 1001.0092 2682.2932 1003.7707 L 2682.2932 2193.7707 C 2682.2932 2196.532 2680.0546 2198.7707 2677.2932 2198.7707 L 1887.2932 2198.7707 C 1884.5318 2198.7707 1882.2932 2196.532 1882.2932 2193.7707 L 1882.2932 1003.7707 C 1882.2932 1001.0092 1884.5318 998.7707 1887.2932 998.7707 Z" fill="url(#Obj_Gradient_3)"/>
+          <text transform="translate(1887.2932 1551.1507)" fill="white">
             <tspan font-family="Helvetica Neue" font-size="80" fill="white" x="213.48" y="76" xml:space="preserve">DLC Rack</tspan>
           </text>
         </g>
         <g id="Graphic_18">
-          <path d="M 2679.0638 998.7707 L 3469.064 998.7707 C 3471.8253 998.7707 3474.064 1001.0092 3474.064 1003.7707 L 3474.064 2193.7707 C 3474.064 2196.532 3471.8253 2198.7707 3469.064 2198.7707 L 2679.0638 2198.7707 C 2676.3024 2198.7707 2674.0638 2196.532 2674.0638 2193.7707 L 2674.0638 1003.7707 C 2674.0638 1001.0092 2676.3024 998.7707 2679.0638 998.7707 Z" fill="url(#Obj_Gradient_4)"/>
-          <text transform="translate(2679.0638 1551.1507)" fill="white">
+          <path d="M 2698.0168 998.7707 L 3488.0168 998.7707 C 3490.778 998.7707 3493.0168 1001.0092 3493.0168 1003.7707 L 3493.0168 2193.7707 C 3493.0168 2196.532 3490.778 2198.7707 3488.0168 2198.7707 L 2698.0168 2198.7707 C 2695.2553 2198.7707 2693.0168 2196.532 2693.0168 2193.7707 L 2693.0168 1003.7707 C 2693.0168 1001.0092 2695.2553 998.7707 2698.0168 998.7707 Z" fill="url(#Obj_Gradient_4)"/>
+          <text transform="translate(2698.0168 1551.1507)" fill="white">
             <tspan font-family="Helvetica Neue" font-size="80" fill="white" x="213.48" y="76" xml:space="preserve">DLC Rack</tspan>
           </text>
         </g>
         <g id="Graphic_17">
-          <path d="M 3489.3933 998.7707 L 4279.3933 998.7707 C 4282.155 998.7707 4284.3933 1001.0092 4284.3933 1003.7707 L 4284.3933 2193.7707 C 4284.3933 2196.532 4282.155 2198.7707 4279.3933 2198.7707 L 3489.3933 2198.7707 C 3486.632 2198.7707 3484.3933 2196.532 3484.3933 2193.7707 L 3484.3933 1003.7707 C 3484.3933 1001.0092 3486.632 998.7707 3489.3933 998.7707 Z" fill="url(#Obj_Gradient_5)"/>
-          <text transform="translate(3489.3933 1551.1507)" fill="white">
+          <path d="M 3508.3462 998.7707 L 4298.346 998.7707 C 4301.1077 998.7707 4303.346 1001.0092 4303.346 1003.7707 L 4303.346 2193.7707 C 4303.346 2196.532 4301.1077 2198.7707 4298.346 2198.7707 L 3508.3462 2198.7707 C 3505.585 2198.7707 3503.3462 2196.532 3503.3462 2193.7707 L 3503.3462 1003.7707 C 3503.3462 1001.0092 3505.585 998.7707 3508.3462 998.7707 Z" fill="url(#Obj_Gradient_5)"/>
+          <text transform="translate(3508.3462 1551.1507)" fill="white">
             <tspan font-family="Helvetica Neue" font-size="80" fill="white" x="213.48" y="76" xml:space="preserve">DLC Rack</tspan>
           </text>
         </g>
         <g id="Graphic_16">
-          <path d="M 4299.38 998.7707 L 4889.38 998.7707 C 4892.1414 998.7707 4894.38 1001.0092 4894.38 1003.7707 L 4894.38 1993.7707 C 4894.38 1996.532 4892.1414 1998.7707 4889.38 1998.7707 L 4299.38 1998.7707 C 4296.6186 1998.7707 4294.38 1996.532 4294.38 1993.7707 L 4294.38 1003.7707 C 4294.38 1001.0092 4296.6186 998.7707 4299.38 998.7707 Z" fill="url(#Obj_Gradient_6)"/>
-          <text transform="translate(4299.38 1451.1507)" fill="white">
+          <path d="M 4318.333 998.7707 L 4908.333 998.7707 C 4911.0943 998.7707 4913.333 1001.0092 4913.333 1003.7707 L 4913.333 1993.7707 C 4913.333 1996.532 4911.0943 1998.7707 4908.333 1998.7707 L 4318.333 1998.7707 C 4315.5715 1998.7707 4313.333 1996.532 4313.333 1993.7707 L 4313.333 1003.7707 C 4313.333 1001.0092 4315.5715 998.7707 4318.333 998.7707 Z" fill="url(#Obj_Gradient_6)"/>
+          <text transform="translate(4318.333 1451.1507)" fill="white">
             <tspan font-family="Helvetica Neue" font-size="80" fill="white" x="129.08" y="76" xml:space="preserve">AIR Rack</tspan>
           </text>
         </g>
         <g id="Graphic_15">
-          <path d="M 4909.3666 998.7707 L 5699.3666 998.7707 C 5702.128 998.7707 5704.3666 1001.0092 5704.3666 1003.7707 L 5704.3666 2193.7707 C 5704.3666 2196.532 5702.128 2198.7707 5699.3666 2198.7707 L 4909.3666 2198.7707 C 4906.605 2198.7707 4904.3666 2196.532 4904.3666 2193.7707 L 4904.3666 1003.7707 C 4904.3666 1001.0092 4906.605 998.7707 4909.3666 998.7707 Z" fill="url(#Obj_Gradient_7)"/>
-          <text transform="translate(4909.3666 1551.1507)" fill="white">
+          <path d="M 4928.3196 998.7707 L 5718.3196 998.7707 C 5721.081 998.7707 5723.3196 1001.0092 5723.3196 1003.7707 L 5723.3196 2193.7707 C 5723.3196 2196.532 5721.081 2198.7707 5718.3196 2198.7707 L 4928.3196 2198.7707 C 4925.558 2198.7707 4923.3196 2196.532 4923.3196 2193.7707 L 4923.3196 1003.7707 C 4923.3196 1001.0092 4925.558 998.7707 4928.3196 998.7707 Z" fill="url(#Obj_Gradient_7)"/>
+          <text transform="translate(4928.3196 1551.1507)" fill="white">
             <tspan font-family="Helvetica Neue" font-size="80" fill="white" x="213.48" y="76" xml:space="preserve">DLC Rack</tspan>
           </text>
         </g>
         <g id="Graphic_14">
-          <path d="M 5719.353 998.7707 L 6509.353 998.7707 C 6512.115 998.7707 6514.353 1001.0092 6514.353 1003.7707 L 6514.353 2193.7707 C 6514.353 2196.532 6512.115 2198.7707 6509.353 2198.7707 L 5719.353 2198.7707 C 5716.592 2198.7707 5714.353 2196.532 5714.353 2193.7707 L 5714.353 1003.7707 C 5714.353 1001.0092 5716.592 998.7707 5719.353 998.7707 Z" fill="url(#Obj_Gradient_8)"/>
-          <text transform="translate(5719.353 1551.1507)" fill="white">
+          <path d="M 5738.306 998.7707 L 6528.306 998.7707 C 6531.068 998.7707 6533.306 1001.0092 6533.306 1003.7707 L 6533.306 2193.7707 C 6533.306 2196.532 6531.068 2198.7707 6528.306 2198.7707 L 5738.306 2198.7707 C 5735.545 2198.7707 5733.306 2196.532 5733.306 2193.7707 L 5733.306 1003.7707 C 5733.306 1001.0092 5735.545 998.7707 5738.306 998.7707 Z" fill="url(#Obj_Gradient_8)"/>
+          <text transform="translate(5738.306 1551.1507)" fill="white">
             <tspan font-family="Helvetica Neue" font-size="80" fill="white" x="213.48" y="76" xml:space="preserve">DLC Rack</tspan>
           </text>
         </g>
         <g id="Graphic_13">
-          <path d="M 6529.042 998.7707 L 7319.042 998.7707 C 7321.803 998.7707 7324.042 1001.0092 7324.042 1003.7707 L 7324.042 2193.7707 C 7324.042 2196.532 7321.803 2198.7707 7319.042 2198.7707 L 6529.042 2198.7707 C 6526.28 2198.7707 6524.042 2196.532 6524.042 2193.7707 L 6524.042 1003.7707 C 6524.042 1001.0092 6526.28 998.7707 6529.042 998.7707 Z" fill="url(#Obj_Gradient_9)"/>
-          <text transform="translate(6529.042 1551.1507)" fill="white">
+          <path d="M 6547.9946 998.7707 L 7337.995 998.7707 C 7340.756 998.7707 7342.995 1001.0092 7342.995 1003.7707 L 7342.995 2193.7707 C 7342.995 2196.532 7340.756 2198.7707 7337.995 2198.7707 L 6547.9946 2198.7707 C 6545.233 2198.7707 6542.9946 2196.532 6542.9946 2193.7707 L 6542.9946 1003.7707 C 6542.9946 1001.0092 6545.233 998.7707 6547.9946 998.7707 Z" fill="url(#Obj_Gradient_9)"/>
+          <text transform="translate(6547.9946 1551.1507)" fill="white">
             <tspan font-family="Helvetica Neue" font-size="80" fill="white" x="213.48" y="76" xml:space="preserve">DLC Rack</tspan>
           </text>
         </g>
         <g id="Graphic_12">
-          <path d="M 7338.471 998.7707 L 8128.471 998.7707 C 8131.232 998.7707 8133.471 1001.0092 8133.471 1003.7707 L 8133.471 2193.7707 C 8133.471 2196.532 8131.232 2198.7707 8128.471 2198.7707 L 7338.471 2198.7707 C 7335.709 2198.7707 7333.471 2196.532 7333.471 2193.7707 L 7333.471 1003.7707 C 7333.471 1001.0092 7335.709 998.7707 7338.471 998.7707 Z" fill="url(#Obj_Gradient_10)"/>
-          <text transform="translate(7338.471 1551.1507)" fill="white">
+          <path d="M 7357.4235 998.7707 L 8147.4235 998.7707 C 8150.185 998.7707 8152.4235 1001.0092 8152.4235 1003.7707 L 8152.4235 2193.7707 C 8152.4235 2196.532 8150.185 2198.7707 8147.4235 2198.7707 L 7357.4235 2198.7707 C 7354.662 2198.7707 7352.4235 2196.532 7352.4235 2193.7707 L 7352.4235 1003.7707 C 7352.4235 1001.0092 7354.662 998.7707 7357.4235 998.7707 Z" fill="url(#Obj_Gradient_10)"/>
+          <text transform="translate(7357.4235 1551.1507)" fill="white">
             <tspan font-family="Helvetica Neue" font-size="80" fill="white" x="213.48" y="76" xml:space="preserve">DLC Rack</tspan>
           </text>
         </g>
         <g id="Graphic_11">
-          <path d="M 8149.014 998.7707 L 8939.014 998.7707 C 8941.775 998.7707 8944.014 1001.0092 8944.014 1003.7707 L 8944.014 1993.7707 C 8944.014 1996.532 8941.775 1998.7707 8939.014 1998.7707 L 8149.014 1998.7707 C 8146.252 1998.7707 8144.014 1996.532 8144.014 1993.7707 L 8144.014 1003.7707 C 8144.014 1001.0092 8146.252 998.7707 8149.014 998.7707 Z" fill="url(#Obj_Gradient_11)"/>
-          <text transform="translate(8149.014 1451.1507)" fill="white">
+          <path d="M 8167.966 998.7707 L 8957.966 998.7707 C 8960.728 998.7707 8962.966 1001.0092 8962.966 1003.7707 L 8962.966 1993.7707 C 8962.966 1996.532 8960.728 1998.7707 8957.966 1998.7707 L 8167.966 1998.7707 C 8165.205 1998.7707 8162.966 1996.532 8162.966 1993.7707 L 8162.966 1003.7707 C 8162.966 1001.0092 8165.205 998.7707 8167.966 998.7707 Z" fill="url(#Obj_Gradient_11)"/>
+          <text transform="translate(8167.966 1451.1507)" fill="white">
             <tspan font-family="Helvetica Neue" font-size="80" fill="white" x="205.36" y="76" xml:space="preserve">PDC Cab I</tspan>
           </text>
         </g>
         <g id="Graphic_10">
-          <path d="M 8959.557 998.7707 L 9749.557 998.7707 C 9752.318 998.7707 9754.557 1001.0092 9754.557 1003.7707 L 9754.557 1993.7707 C 9754.557 1996.532 9752.318 1998.7707 9749.557 1998.7707 L 8959.557 1998.7707 C 8956.795 1998.7707 8954.557 1996.532 8954.557 1993.7707 L 8954.557 1003.7707 C 8954.557 1001.0092 8956.795 998.7707 8959.557 998.7707 Z" fill="url(#Obj_Gradient_12)"/>
-          <text transform="translate(8959.557 1451.1507)" fill="white">
+          <path d="M 8978.51 998.7707 L 9768.51 998.7707 C 9771.271 998.7707 9773.51 1001.0092 9773.51 1003.7707 L 9773.51 1993.7707 C 9773.51 1996.532 9771.271 1998.7707 9768.51 1998.7707 L 8978.51 1998.7707 C 8975.748 1998.7707 8973.51 1996.532 8973.51 1993.7707 L 8973.51 1003.7707 C 8973.51 1001.0092 8975.748 998.7707 8978.51 998.7707 Z" fill="url(#Obj_Gradient_12)"/>
+          <text transform="translate(8978.51 1451.1507)" fill="white">
             <tspan font-family="Helvetica Neue" font-size="80" fill="white" x="195" y="76" xml:space="preserve">PDC Cab II</tspan>
           </text>
         </g>
         <g id="Graphic_9">
-          <path d="M 9772.655 998.7707 L 11362.655 998.7707 C 11365.416 998.7707 11367.655 1001.0092 11367.655 1003.7707 L 11367.655 2093.7707 C 11367.655 2096.532 11365.416 2098.7707 11362.655 2098.7707 L 9772.655 2098.7707 C 9769.893 2098.7707 9767.655 2096.532 9767.655 2093.7707 L 9767.655 1003.7707 C 9767.655 1001.0092 9769.893 998.7707 9772.655 998.7707 Z" fill="url(#Obj_Gradient_13)"/>
-          <text transform="translate(9772.655 1501.1507)" fill="white">
+          <path d="M 9791.608 998.7707 L 11381.608 998.7707 C 11384.369 998.7707 11386.608 1001.0092 11386.608 1003.7707 L 11386.608 2093.7707 C 11386.608 2096.532 11384.369 2098.7707 11381.608 2098.7707 L 9791.608 2098.7707 C 9788.846 2098.7707 9786.608 2096.532 9786.608 2093.7707 L 9786.608 1003.7707 C 9786.608 1001.0092 9788.846 998.7707 9791.608 998.7707 Z" fill="url(#Obj_Gradient_13)"/>
+          <text transform="translate(9791.608 1501.1507)" fill="white">
             <tspan font-family="Helvetica Neue" font-size="80" fill="white" x="528.36" y="76" xml:space="preserve">UPS Controller</tspan>
           </text>
         </g>
         <g id="Group_5">
           <g id="Graphic_8">
-            <path d="M 11662.018 1418.7707 L 12252.018 1418.7707 C 12254.78 1418.7707 12257.018 1421.0092 12257.018 1423.7707 L 12257.018 2313.7707 C 12257.018 2316.532 12254.78 2318.7707 12252.018 2318.7707 L 11662.018 2318.7707 C 11659.257 2318.7707 11657.018 2316.532 11657.018 2313.7707 L 11657.018 1423.7707 C 11657.018 1421.0092 11659.257 1418.7707 11662.018 1418.7707 Z" fill="url(#Obj_Gradient_14)"/>
-            <text transform="translate(11662.018 1821.1507)" fill="white">
+            <path d="M 11680.971 1418.7707 L 12270.971 1418.7707 C 12273.733 1418.7707 12275.971 1421.0092 12275.971 1423.7707 L 12275.971 2313.7707 C 12275.971 2316.532 12273.733 2318.7707 12270.971 2318.7707 L 11680.971 2318.7707 C 11678.21 2318.7707 11675.971 2316.532 11675.971 2313.7707 L 11675.971 1423.7707 C 11675.971 1421.0092 11678.21 1418.7707 11680.971 1418.7707 Z" fill="url(#Obj_Gradient_14)"/>
+            <text transform="translate(11680.971 1821.1507)" fill="white">
               <tspan font-family="Helvetica Neue" font-size="80" fill="white" x="74.28" y="76" xml:space="preserve">UPS Battery</tspan>
             </text>
           </g>
           <g id="Graphic_7">
-            <path d="M 12275.32 1418.7707 L 12865.32 1418.7707 C 12868.081 1418.7707 12870.32 1421.0092 12870.32 1423.7707 L 12870.32 2313.7707 C 12870.32 2316.532 12868.081 2318.7707 12865.32 2318.7707 L 12275.32 2318.7707 C 12272.558 2318.7707 12270.32 2316.532 12270.32 2313.7707 L 12270.32 1423.7707 C 12270.32 1421.0092 12272.558 1418.7707 12275.32 1418.7707 Z" fill="url(#Obj_Gradient_15)"/>
-            <text transform="translate(12275.32 1821.1507)" fill="white">
+            <path d="M 12294.273 1418.7707 L 12884.273 1418.7707 C 12887.034 1418.7707 12889.273 1421.0092 12889.273 1423.7707 L 12889.273 2313.7707 C 12889.273 2316.532 12887.034 2318.7707 12884.273 2318.7707 L 12294.273 2318.7707 C 12291.511 2318.7707 12289.273 2316.532 12289.273 2313.7707 L 12289.273 1423.7707 C 12289.273 1421.0092 12291.511 1418.7707 12294.273 1418.7707 Z" fill="url(#Obj_Gradient_15)"/>
+            <text transform="translate(12294.273 1821.1507)" fill="white">
               <tspan font-family="Helvetica Neue" font-size="80" fill="white" x="74.28" y="76" xml:space="preserve">UPS Battery</tspan>
             </text>
           </g>
           <g id="Graphic_6">
-            <path d="M 12887.892 1418.7707 L 13477.892 1418.7707 C 13480.653 1418.7707 13482.892 1421.0092 13482.892 1423.7707 L 13482.892 2313.7707 C 13482.892 2316.532 13480.653 2318.7707 13477.892 2318.7707 L 12887.892 2318.7707 C 12885.13 2318.7707 12882.892 2316.532 12882.892 2313.7707 L 12882.892 1423.7707 C 12882.892 1421.0092 12885.13 1418.7707 12887.892 1418.7707 Z" fill="url(#Obj_Gradient_16)"/>
-            <text transform="translate(12887.892 1821.1507)" fill="white">
+            <path d="M 12906.845 1418.7707 L 13496.845 1418.7707 C 13499.606 1418.7707 13501.845 1421.0092 13501.845 1423.7707 L 13501.845 2313.7707 C 13501.845 2316.532 13499.606 2318.7707 13496.845 2318.7707 L 12906.845 2318.7707 C 12904.084 2318.7707 12901.845 2316.532 12901.845 2313.7707 L 12901.845 1423.7707 C 12901.845 1421.0092 12904.084 1418.7707 12906.845 1418.7707 Z" fill="url(#Obj_Gradient_16)"/>
+            <text transform="translate(12906.845 1821.1507)" fill="white">
               <tspan font-family="Helvetica Neue" font-size="80" fill="white" x="74.28" y="76" xml:space="preserve">UPS Battery</tspan>
             </text>
           </g>
         </g>
         <g id="Graphic_4">
-          <rect x="11380.753" y="43.19995" width="150" height="2352" fill="#dadada"/>
-          <rect x="11380.753" y="43.19995" width="150" height="2352" stroke="#6d5000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          <rect x="11399.706" y="43.19995" width="150" height="2352" fill="#dadada"/>
+          <rect x="11399.706" y="43.19995" width="150" height="2352" stroke="#6d5000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
         </g>
         <g id="Graphic_3">
-          <path d="M 13505.124 169.52411 C 13583.23 247.6289 13583.23 374.2617 13505.124 452.3665 C 13427.02 530.4717 13300.387 530.4717 13222.282 452.3665 C 13144.177 374.2617 13144.177 247.6289 13222.282 169.52411 C 13300.387 91.41891 13427.02 91.41891 13505.124 169.52411" fill="url(#Obj_Gradient_17)"/>
-          <path d="M 13505.124 169.52411 C 13583.23 247.6289 13583.23 374.2617 13505.124 452.3665 C 13427.02 530.4717 13300.387 530.4717 13222.282 452.3665 C 13144.177 374.2617 13144.177 247.6289 13222.282 169.52411 C 13300.387 91.41891 13427.02 91.41891 13505.124 169.52411" stroke="#3b7cd0" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
-          <text transform="translate(13208.703 262.9453)" fill="black">
+          <path d="M 13524.077 169.52411 C 13602.182 247.6289 13602.182 374.2617 13524.077 452.3665 C 13445.972 530.4717 13319.34 530.4717 13241.235 452.3665 C 13163.13 374.2617 13163.13 247.6289 13241.235 169.52411 C 13319.34 91.41891 13445.972 91.41891 13524.077 169.52411" fill="url(#Obj_Gradient_17)"/>
+          <path d="M 13524.077 169.52411 C 13602.182 247.6289 13602.182 374.2617 13524.077 452.3665 C 13445.972 530.4717 13319.34 530.4717 13241.235 452.3665 C 13163.13 374.2617 13163.13 247.6289 13241.235 169.52411 C 13319.34 91.41891 13445.972 91.41891 13524.077 169.52411" stroke="#3b7cd0" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+          <text transform="translate(13227.656 262.9453)" fill="black">
             <tspan font-family="Times" font-size="80" fill="black" x="23.867188" y="76" xml:space="preserve">FM-200</tspan>
           </text>
         </g>
         <g id="Graphic_2">
-          <rect x="4294.3933" y="1998.7707" width="600" height="200" fill="#ccc"/>
-          <text transform="translate(4299.3933 2050.1104)" fill="black">
+          <rect x="4313.346" y="1998.7707" width="600" height="200" fill="#ccc"/>
+          <text transform="translate(4318.346 2050.1104)" fill="black">
             <tspan font-family="Helvetica Neue" font-weight="bold" font-size="80" fill="black" x="185.36" y="78" xml:space="preserve">RDHx</tspan>
+          </text>
+        </g>
+        <g id="Graphic_49">
+          <rect x="1071.1167" y="2202.4688" width="800" height="180" fill="#ccc"/>
+          <text transform="translate(1076.1167 2243.8085)" fill="black">
+            <tspan font-family="Helvetica Neue" font-weight="bold" font-size="80" fill="black" x="285.36" y="78" xml:space="preserve">RDHx</tspan>
+          </text>
+        </g>
+        <g id="Graphic_51">
+          <rect x="1882.2932" y="2202.4688" width="800" height="180" fill="#ccc"/>
+          <text transform="translate(1887.2932 2243.8085)" fill="black">
+            <tspan font-family="Helvetica Neue" font-weight="bold" font-size="80" fill="black" x="285.36" y="78" xml:space="preserve">RDHx</tspan>
+          </text>
+        </g>
+        <g id="Graphic_52">
+          <rect x="2693.0168" y="2202.4688" width="800" height="180" fill="#ccc"/>
+          <text transform="translate(2698.0168 2243.8085)" fill="black">
+            <tspan font-family="Helvetica Neue" font-weight="bold" font-size="80" fill="black" x="285.36" y="78" xml:space="preserve">RDHx</tspan>
+          </text>
+        </g>
+        <g id="Graphic_53">
+          <rect x="3503.3462" y="2202.4688" width="800" height="180" fill="#ccc"/>
+          <text transform="translate(3508.3462 2243.8085)" fill="black">
+            <tspan font-family="Helvetica Neue" font-weight="bold" font-size="80" fill="black" x="285.36" y="78" xml:space="preserve">RDHx</tspan>
+          </text>
+        </g>
+        <g id="Graphic_57">
+          <rect x="4923.3196" y="2202.4688" width="800" height="180" fill="#ccc"/>
+          <text transform="translate(4928.3196 2243.8085)" fill="black">
+            <tspan font-family="Helvetica Neue" font-weight="bold" font-size="80" fill="black" x="285.36" y="78" xml:space="preserve">RDHx</tspan>
+          </text>
+        </g>
+        <g id="Graphic_56">
+          <rect x="5734.496" y="2202.4688" width="800" height="180" fill="#ccc"/>
+          <text transform="translate(5739.496 2243.8085)" fill="black">
+            <tspan font-family="Helvetica Neue" font-weight="bold" font-size="80" fill="black" x="285.36" y="78" xml:space="preserve">RDHx</tspan>
+          </text>
+        </g>
+        <g id="Graphic_55">
+          <rect x="6545.2196" y="2202.4688" width="800" height="180" fill="#ccc"/>
+          <text transform="translate(6550.2196 2243.8085)" fill="black">
+            <tspan font-family="Helvetica Neue" font-weight="bold" font-size="80" fill="black" x="285.36" y="78" xml:space="preserve">RDHx</tspan>
+          </text>
+        </g>
+        <g id="Graphic_54">
+          <rect x="7355.549" y="2202.4688" width="800" height="180" fill="#ccc"/>
+          <text transform="translate(7360.549 2243.8085)" fill="black">
+            <tspan font-family="Helvetica Neue" font-weight="bold" font-size="80" fill="black" x="285.36" y="78" xml:space="preserve">RDHx</tspan>
           </text>
         </g>
       </g>

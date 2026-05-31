@@ -23,7 +23,7 @@ Last Updated: 2026-05-09
 | 产品形态 | 1× DC45 集装箱 |
 | 冷却技术 | Direct Liquid Cooling（直冷液冷 DLC）|
 | 散热方式 | **Hybrid Cooling System**（干冷器+DX一体化）+ FCU |
-| 交付周期 | **~195–305 天（SOP 标准流程）** |
+| 交付周期 | **~185–230 天（参考值）** |
 
 ---
 
@@ -32,8 +32,8 @@ Last Updated: 2026-05-09
 | 项目 | 数值 | 说明 |
 |------|------|------|
 | **IT 负载** | 1240kW | 服务器、GPU 实际消耗 |
-| **整体电力负荷** | ~1390–1670kW | 取决于 PUE（PUE 约 1.12–1.35）|
-| PUE | **取决于环境温度** | 低温区 ~1.12–1.15；高温区 ~1.25–1.35 |
+| **整体电力负荷** | ~1325–1675kW | 取决于 PUE（PUE 约 1.07–1.35）|
+| PUE | **取决于环境温度** | 低温区 ~1.07–1.15；高温区 ~1.25–1.35 |
 
 ---
 
@@ -44,7 +44,7 @@ Last Updated: 2026-05-09
 | 服务器类型 | GPU 服务器（如 NVIDIA B300 等 DLC 兼容服务器）|
 | PSU 类型 | 单相 200–240V |
 | 冷却方式 | 冷板式直冷液冷（Cold Plate DLC）|
-| 服务器进口温度 | 24°C |
+| 服务器进口温度 | 26–28°C |
 | 负载特性 | 高动态（AI 负载）|
 
 ---
@@ -163,9 +163,9 @@ DC45 支持**不预装 DLC 机柜**，客户可后续自行安装原厂 OEM 机�
 
 | 环境条件 | 运行模式 | PUE 参考值 |
 |----------|---------|-----------|
-| 环境 <28°C | Hybrid Cooling（干冷优先）| ~1.12–1.15 |
-| 环境 28–35°C | Hybrid Cooling（DX介入）+ FCU | ~1.20–1.28 |
-| 环境 >35°C | Hybrid Cooling（DX主导）+ FCU | ~1.28–1.35 |
+| 环境 <28°C | Hybrid Cooling（干冷优先）| ~1.07–1.15 |
+| 环境 28–35°C | Hybrid Cooling（DX介入）+ FCU | ~1.15–1.25 |
+| 环境 >35°C | Hybrid Cooling（DX主导）+ FCU | ~1.25–1.35 |
 
 ---
 
@@ -176,13 +176,13 @@ Reference Architecture — 1.2MW DLC AI Inference Unit
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 IT Load:       1240kW（1×DC45）
-Total Load:    ~1380–1560kW（PUE≈1.15–1.30）
+Total Load:    ~1325–1675kW（PUE≈1.07–1.35）
 Product:       DC45（DLC Container，45ft）
 Cooling:       DLC + Hybrid Cooling System + FCU（12×40kW 动态调整）
 Power:         Grid + UPS（9395XR-1500）+ BESS（可选）
 OEM Rack:      支持 SMCI/HPE/DELL/Lenovo（宽800×深1200×高2300mm）
 Redundancy:    UPS 模块 N+1 / FCU 动态配置（**IT Zone 本身无内部冗余**）
-Delivery:      **~195–305 天**（SOP：场地勘测 2w + 方案设计 2w + 制造 16-20w + 运输 35-60d + 部署 30d）
+Delivery:      **~185–230 天**（参考值：现场勘测 15d + 商务准备 15d + 生产制造 90–120d + 运输 45–60d + 部署安装 10–20d）
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
