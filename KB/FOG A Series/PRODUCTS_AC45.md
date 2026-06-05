@@ -3,8 +3,8 @@ tags:
   - #workspace/engineer
   - #type/product
   - #product/ac45
+  - #MDC
 ---
-
 # AC45 – All-In-One Immersion Container (45ft, UL Compliant)
 适用对象：MDC（Modular Datacenter Cluster）标准计算单元 IT Zone
 版本：V1.1（2026-04-09 新增产品，45ft 浸没式，UPS 内置合规版）
@@ -89,7 +89,6 @@ AC45 是 45ft 容器规格的浸没式液冷集装箱，支持 8 × 50kW A32 浸
 | Tank 数量 | 8 |
 | 热交换器 | CDU（内置于 Tank），2N 冗余 |
 | 散热方式 | **Hybrid Cooling System**（干冷器 + DX 一体化）或 **热泵** |
-| 允许方式 | Hybrid Cooling System / 热泵 |
 | **禁止** | 纯干冷器（无 DX）— 环境 ≥28°C 时无法满足散热需求 |
 | 设计原则 | [[FOG/KB/Guideline/COOLING_SYSTEM_Guideline]] |
 
@@ -104,13 +103,17 @@ AC45 是 45ft 容器规格的浸没式液冷集装箱，支持 8 × 50kW A32 浸
 
 ### 5.3 风冷部分
 
-- 独立机柜 1 个（10kW）
-- 必须配置独立风冷空调，不与浸没冷却共用
+| 项目 | 参数 |
+|------|------|
+| 机柜数量 | 1 个（10kW）|
+| 散热要求 | 必须配置独立风冷空调，不与浸没冷却共用 |
 
 ### 5.4 水路冗余
 
-- 各 Tank 内置 CDU，无需独立 CDU
-- 整体 2N 冗余设计
+| 项目 | 参数 |
+|------|------|
+| CDU 架构 | 各 Tank 内置 CDU，无需独立 CDU |
+| 冗余设计 | 整体 2N 冗余设计 |
 
 ---
 
@@ -173,9 +176,11 @@ Grid / BESS → PDC → UPS (EATON 9395XR-600) → PDC → Tanks → PDU
 
 ## 9. 扩展逻辑
 
-- 可与 DC45 混合构建 MDC
-- 支持横向扩展（增加 AC45 数量）
-- 支持纵向扩展（增加单柜 GPU 密度，但需重新评估冷却）
+| 扩展方式 | 说明 |
+|---------|------|
+| 混合构建 MDC | 可与 DC45 混合构建 MDC |
+| 横向扩展 | 增加 AC45 数量 |
+| 纵向扩展 | 增加单柜 GPU 密度（需重新评估冷却）|
 
 ---
 
@@ -200,11 +205,7 @@ Grid / BESS → PDC → UPS (EATON 9395XR-600) → PDC → Tanks → PDU
 | **AC45** | EATON 9395XR-600 | 4 UPM | 150kW | 600kW | ~7.9kW | 内置（专用电力舱），UL 合规 | ~20 分钟（内置 2×93LiG2） |
 | **DC45** | EATON 9395XR-1500 | 10 UPM | 150kW | 1500kW | ~46.9kW | 内置，UL 合规 | ~8 分钟（内置 3×93LiG2） |
 
-> ⚠️ **UPS 电池 vs BESS 电池：** 上表中"UPS 电池后备"指 UPS 配套的 93LiG2 磷酸铁锂电池柜（分钟级瞬时切换后备）。BESS（如 Tesla Megapack / 国轩）是独立大型储能系统（小时级供电），两者完全不同。
+> ⚠️ **UPS 电池 vs BESS 电池：** 参见 [[FOG/KB/FOG A Series/PRODUCTS_AC45#8. AC45 vs AC40 vs DC45 对比|第 8 节对比表]] 的警告说明。
 
 UPS电池型号均为 **EATON 93LiG2**（93Li92S-100Ah-3PBFA，332kW/柜）。
 参考：[[UPS_EATON_9395XR|KB/UPS_EATON_9395XR]]
-
----
-
-*Document Version: v1.1 | Last Updated: 2026-04-12*

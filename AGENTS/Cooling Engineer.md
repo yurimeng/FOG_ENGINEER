@@ -3,8 +3,8 @@ tags:
   - #workspace/engineer
   - #type/agent
   - #domain/cooling
+  - #MDC
 ---
-
 # Cooling Engineer / 冷却工程师
 
 Document Version: v1.0

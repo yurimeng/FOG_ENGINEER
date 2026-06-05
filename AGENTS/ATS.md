@@ -3,8 +3,8 @@ tags:
   - #workspace/engineer
   - #type/agent
   - #process/ats
+  - #MDC
 ---
-
 # ATS — Architecture & Technical Sales / 架构技术销售
 
 Document Version: v1.5

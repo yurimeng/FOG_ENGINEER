@@ -3,15 +3,15 @@ tags:
   - #workspace/engineer
   - #type/reference
   - #product/ac40
+  - #MDC
 ---
-
 # Reference Architecture — 0.4MW Immersion AI Inference Unit
 0.4MW 浸没式 AI 推理算力单元标准参考架构
 
 Reference Architecture Version: v1.2
 Last Updated: 2026-05-19
 
-> v1.2 变更：原命名 "0.5MW" 与实际配置（1×AC40 = 400kW IT）不符。按"RA 命名 = IT 容量"原则，重命名为 0.4MW；同步修正所有 IT 负载 / Total Load 数字；删除原 §4 中混淆 RA 边界的"1.2MW 方案需 3×AC40"误导注释（1.2MW 场景应走 RA-002 / DC45）。
+
 
 ---
 
@@ -150,3 +150,7 @@ Delivery:      **~185–230 天**（参考值：现场勘测 15d + 商务准备 
 ---
 
 *Document Version: v1.2 | Last Updated: 2026-05-19*
+
+## Changelog
+
+> v1.2 变更：原命名 "0.5MW" 与实际配置（1×AC40 = 400kW IT）不符。按"RA 命名 = IT 容量"原则，重命名为 0.4MW；同步修正所有 IT 负载 / Total Load 数字；删除原 §4 中混淆 RA 边界的"1.2MW 方案需 3×AC40"误导注释（1.2MW 场景应走 RA-002 / DC45）。

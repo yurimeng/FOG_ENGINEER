@@ -1,10 +1,10 @@
 ---
 tags:
+  - #MDC
   - 
   - 
   -
----
-# Proposal Generation Process
+---# Proposal Generation Process
 提案生成流程
 
 Document Version: v2.0

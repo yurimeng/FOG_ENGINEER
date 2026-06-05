@@ -3,19 +3,39 @@ tags:
   - #workspace/engineer
   - #type/guideline
   - #domain/layout
+  - #MDC
 ---
-
 # Layout Guideline / 布局规划技术指南
 
-Document Version / 文档版本: v1.0
-Last Updated / 最后更新: 2026-03-10
-Source / 来源: `Works_Public/AGENTS/Layout Planner.md`
+| Field | Value |
+|---|---|
+| Document Version / 文档版本 | v1.2 |
+| Last Updated / 最后更新 | 2026-06-05 |
+| Source / 来源 | `Works_Public/AGENTS/Layout Planner.md` |
 
 ---
 
-## Container and Rack Placement Principles / 容器与机架布局原则
+## 速查 / Quick Reference
 
-### Core Layout Principles / 核心布局原则
+本 Guideline 定义 Layout Planner 在容器与机架布局、维护通道净空、线缆敷设、维护可达性、扩展规划及浸没/DLC 专项布局上的设计原则与约束。总体设计原则与跨 Agent 工作流详见 [[PRINCIPLE_Guideline]]。
+
+---
+
+## 章节速查 / Section Index
+
+| 章节 ID | 标题 | 一句话目的 |
+|---|---|---|
+| [[#§L-1 核心布局原则]] | 核心布局原则 | 可达性、隔离、热管理、线缆规范、扩展预留五大原则 |
+| [[#§L-2 维护通道净空]] | 维护通道净空 | 维护通道设计与最小净空要求 |
+| [[#§L-3 线缆敷设标准]] | 线缆敷设标准 | 电力 / 网络 / 控制线缆分桥架与冗余预留 |
+| [[#§L-4 维护可达性]] | 维护可达性 | 机架、浸没槽、CDU、备件可达性规则 |
+| [[#§L-5 扩展规划]] | 扩展规划 | 模块化扩容路径与空间预留要求 |
+| [[#§L-6 容器与机架布局]] | 容器与机架布局 | 容器、机架、浸没槽、DLC 机架的物理布局策略 |
+| [[#§L-7 工作流集成]] | 工作流集成 | Layout Planner 与 ATS 的协作流程与边界 |
+
+---
+
+## §L-1 核心布局原则 / Core Layout Principles
 
 | Principle | Requirement |
 |---|---|
@@ -25,9 +45,11 @@ Source / 来源: `Works_Public/AGENTS/Layout Planner.md`
 | **Cable Discipline / 线缆规范** | Power and network cables must be routed in an organized and maintainable manner. |
 | **Expansion Margin / 扩展预留** | Layouts must reserve space for future infrastructure growth. |
 
+相关章节：[[#§L-2 维护通道净空]] · [[#§L-3 线缆敷设标准]] · [[#§L-5 扩展规划]]
+
 ---
 
-## Service Corridor Clearance Requirements / 维护通道净空要求
+## §L-2 维护通道净空 / Service Corridor Clearance
 
 Maintenance corridors must be designed from the beginning and must support:
 
@@ -38,9 +60,11 @@ Maintenance corridors must be designed from the beginning and must support:
 
 > **Minimum clearance must be maintained** at all times. Corridors blocked by temporary equipment are non-compliant.
 
+相关合规要求参见 [[Compliance_Guideline#§C-5 容器数据中心合规]]。
+
 ---
 
-## Cable Routing Standards / 线缆敷设标准
+## §L-3 线缆敷设标准 / Cable Routing Standards
 
 Cable infrastructure must follow structured routing paths. Separate pathways should be considered for:
 
@@ -54,9 +78,11 @@ Cable infrastructure must follow structured routing paths. Separate pathways sho
 - Vertical and horizontal cable management must be planned together
 - Reserve **spare capacity** in cable trays for future expansion (minimum 30% spare)
 
+网络布线进一步要求详见 [[NETWORK_Guideline#§N-2 核心设计原则]]。
+
 ---
 
-## Maintenance Accessibility Rules / 维护可达性规则
+## §L-4 维护可达性 / Maintenance Accessibility
 
 - All rack-mounted equipment must be accessible from the front and rear
 - Immersion tanks require dedicated service clearance on at least two sides
@@ -64,9 +90,11 @@ Cable infrastructure must follow structured routing paths. Separate pathways sho
 - Spare parts storage must be planned within or adjacent to the equipment area
 - Equipment layout must support **single-technician maintenance** where possible
 
+运维风险关联参见 [[Risk_Guideline#§R-5 运维风险评估]]。
+
 ---
 
-## Expansion Planning Constraints / 扩展规划约束
+## §L-5 扩展规划 / Expansion Planning
 
 Layouts must support future expansion. Expansion strategies may include:
 
@@ -77,9 +105,13 @@ Layouts must support future expansion. Expansion strategies may include:
 
 > **Space planning must anticipate future infrastructure growth.** Layouts that cannot accommodate at least one future expansion cycle are non-compliant.
 
+扩展与成本风险评估参见 [[Risk_Guideline#§R-7 扩展与成本风险]]。
+
 ---
 
-## Container Infrastructure Layout / 容器基础设施布局
+## §L-6 容器与机架布局 / Container & Rack Layout
+
+### Container Infrastructure Layout / 容器基础设施布局
 
 Containerized deployments require highly optimized spatial planning.
 
@@ -92,9 +124,7 @@ Typical container components:
 
 > Layouts must ensure technicians can **safely access all equipment** without entering restricted or high-voltage zones.
 
----
-
-## Rack Layout Strategy / 机架布局策略
+### Rack Layout Strategy / 机架布局策略
 
 Rack placement must consider:
 
@@ -106,9 +136,7 @@ Rack placement must consider:
 | **Cable routing distance** | Keep horizontal cable runs under 100m for structured cabling |
 | **Hot/cold aisle alignment** | Strict hot-aisle/cold-aisle separation is mandatory for air-cooled zones |
 
----
-
-## Immersion Tank Placement / 浸没式液冷槽布局
+### Immersion Tank Placement / 浸没式液冷槽布局
 
 Immersion tanks require special layout considerations:
 
@@ -122,9 +150,7 @@ Immersion tanks require special layout considerations:
 
 > Adequate space must be reserved for **safe fluid management** and emergency response.
 
----
-
-## DLC Rack Layout / 直冷液冷机架布局
+### DLC Rack Layout / 直冷液冷机架布局
 
 DLC (Direct Liquid Cooling) racks require careful coordination between:
 
@@ -135,9 +161,11 @@ DLC (Direct Liquid Cooling) racks require careful coordination between:
 
 > Layouts must avoid pipe congestion and ensure **full serviceability of all connection points**.
 
+冷却架构与 IT Zone 匹配规则参见 [[COOLING_SYSTEM_Guideline#§G-8 IT Zone 与冷却区匹配]]；电力设备占地参见 [[POWER_SYSTEMS_Guideline#§P-2 产品对照表]]。
+
 ---
 
-## Workflow Integration / 工作流集成
+## §L-7 工作流集成 / Workflow Integration
 
 Layout Planner workflow:
 
@@ -149,6 +177,22 @@ Layout Planner workflow:
 
 > **Domain reminder**: Layout Planner focuses exclusively on **physical infrastructure layout** — container placement, equipment positioning, cable routing, and service accessibility. Do not attempt to perform work outside your domain.
 
+跨 Agent 工作流与上报机制详见 [[PRINCIPLE_Guideline]]。
+
 ---
 
-*Document Version: v1.1 | Last Updated: 2026-04-12*
+## Changelog
+
+### v1.2 — 2026-06-05
+- 章节 ID 与 [[PRINCIPLE_Guideline#§8 章节 ID 一致性表]] 对齐：所有章节增加 L-1 ~ L-7 前缀。
+- 新增「速查 / Quick Reference」与「章节速查 / Section Index」表。
+- 将原「Container Infrastructure Layout」「Rack Layout Strategy」「Immersion Tank Placement」「DLC Rack Layout」四节合并为 §L-6《容器与机架布局》，保留全部原始表格与内容。
+- 章节标题统一为「§L-X 中文标题 / English Title」格式。
+- 新增跨 Guideline 引用：Compliance §C-5、NETWORK §N-2、Risk §R-5/§R-7、COOLING §G-8、POWER §P-2。
+- 文件末尾新增 Changelog 区块（按 CLAUDE.md §6 规则）。
+
+### v1.1 — 2026-04-12
+- 初版结构调整。
+
+### v1.0 — 2026-03-10
+- 初稿，源自 `Works_Public/AGENTS/Layout Planner.md`。

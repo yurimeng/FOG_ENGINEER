@@ -2,8 +2,8 @@
 tags:
   - #workspace/firm
   - #type/marketing
+  - #MDC
 ---
-
 # Fog Computing  
 ## AI Infrastructure, Deployed at Power Speed
 

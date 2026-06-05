@@ -3,8 +3,8 @@ tags:
   - #workspace/engineer
   - #type/reference
   - #product/general
+  - #MDC
 ---
-
 # Site Reference Architecture — 标准场景气候手册
 
 > 本文档为 MDC 解决方案验证的标准参考场景。\

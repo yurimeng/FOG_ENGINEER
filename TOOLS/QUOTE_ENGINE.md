@@ -3,8 +3,8 @@ tags:
   - #workspace/engineer
   - #type/tool
   - #system/forbidden
+  - #MDC
 ---
-
 # Quote Engine – Engineering Pricing Structure
 
 > **⚠️ WARNING — Engineering Agent Access Prohibited**

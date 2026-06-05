@@ -4,8 +4,8 @@ tags:
   - #type/tool
   - #system/feis
   - #external/lark-cli
+  - #MDC
 ---
-
 # LARK_CLI.md — 飞书 CLI 工具注册
 
 ## 基本信息

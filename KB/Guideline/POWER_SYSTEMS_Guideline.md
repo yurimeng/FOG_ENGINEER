@@ -3,29 +3,52 @@ tags:
   - #workspace/engineer
   - #type/reference
   - #domain/power
+  - #MDC
 ---
-
 # POWER_SYSTEMS_Guideline — 电力系统设计原则
 
-Document Version: v1.2
-Last Updated: 2026-05-19
+| 字段 | 值 |
+|------|-----|
+| Document Version | v1.3 |
+| Last Updated | 2026-06-05 |
+| Source | FOG KB 内部 + Works_Public/Projects/Simple_Mining/DG vs BESS.md |
 
 > 本文件为 Power Zone 设计与选型的权威 Guideline，覆盖 IT 负载/整体负荷定义、UPS / BESS / 柴油机选型、DG vs BESS 战略与技术对比。Power Engineer 在执行任何电力工作前必须先阅读本文件。
 
 ---
 
-# 背景 / Background
+## 速查 / Quick Reference
+
+电力系统 Guideline：定义 IT Load vs Total Facility Load、UPS/BESS/DG 选型、拓扑与冗余规则。入口见 [[PRINCIPLE_Guideline]]；场景必读章节见 [[PRINCIPLE_Guideline#§4 Key Matrix — Agent × 场景 必读章节矩阵]]；章节 ID 短码见 [[PRINCIPLE_Guideline#§8 章节 ID 一致性表]]。
+
+---
+
+## 章节速查 / Section Index
+
+| ID | 标题 | 用途 |
+|----|------|------|
+| [[#P-1 IT 负载与整体电力负荷\|§P-1]] | IT 负载与整体电力负荷 | IT Load / Total Facility Load 精确定义、计算公式、典型问法 |
+| [[#P-2 产品对照表\|§P-2]] | 产品对照表 | A32 / AC40 / AC45 / DC45 IT 与整体负荷、冷却功耗对照 |
+| [[#P-3 关键规则\|§P-3]] | 关键规则 | 主动澄清、输出标注、不混用术语、Zone 关系 |
+| [[#P-4 典型混淆场景\|§P-4]] | 典型混淆场景 | 客户常见"X MW"话术的判别与工程师动作 |
+| [[#P-5 UPS 选型\|§P-5]] | UPS 选型 | EATON 9395XR 型号标准化、容量公式、UL 合规 |
+| [[#P-6 UPS 电池技术对比\|§P-6]] | UPS 电池技术对比 | VRLA / Li-ion / 超级电容对比 |
+| [[#P-7 柴油发电机选型\|§P-7]] | 柴油发电机选型 | DG 优势、顾虑、Standby/Prime rating、NFPA 110 |
+| [[#P-8 BESS 选型与 DG 对比\|§P-8]] | BESS 选型与 DG 对比 | BESS 优势、Grid Curtailment、Demand Response、选型决策表 |
+| [[#P-9 冗余结构与拓扑\|§P-9]] | 冗余结构与拓扑 | N / N+1 / 2N、Zone 冗余约束、Power Zone 拓扑 |
+
+---
+
+## P-1 IT 负载与整体电力负荷 (IT Load & Total Facility Load)
+
+### 背景 / Background
 
 在与客户沟通时，**IT负载**与**整体电力负荷**是两个完全不同的概念。
 客户通常询问的是"需要多少电"，但这个数字在不同语境下含义不同。
 
-本文件定义这两个术语的精确含义，并规定工程师团队在与客户沟通时必须主动确认的概念。
+本节定义这两个术语的精确含义，并规定工程师团队在与客户沟通时必须主动确认的概念。
 
----
-
-# 核心定义 / Core Definitions
-
-## IT负载 (IT Load)
+### IT 负载 (IT Load)
 
 **定义：** 服务器、GPU、存储等计算设备实际消耗的电力。
 
@@ -47,9 +70,7 @@ Last Updated: 2026-05-19
 - "我要建一个数据中心，容量多少？"
 - "买多少 GPU？"
 
----
-
-## 整体电力负荷 / Total Facility Load
+### 整体电力负荷 / Total Facility Load
 
 **定义：** 整个数据中心设施消耗的全部电力，包括 IT 设备、冷却、UPS、消防、照明等所有系统的总用电。
 
@@ -72,7 +93,7 @@ Last Updated: 2026-05-19
 
 ---
 
-# 产品对照表 / Product Reference Table
+## P-2 产品对照表 (Product Reference Table)
 
 | 产品 | IT负载 | 整体负荷（参考PUE） | 冷却系统功耗 | UPS损耗 |
 |------|--------|-------------------|------------|---------|
@@ -82,18 +103,20 @@ Last Updated: 2026-05-19
 
 > **注意：** 整体负荷不包括 BESS、变压器损耗、外部开关设备等 BOP（Balance of Plant）负荷。
 
+> 详细 IT Zone 形态见 [[PRINCIPLE_Guideline#§3 Zone 架构速查]]；IT↔Cooling 1:1 配对见 [[COOLING_SYSTEM_Guideline#G-8 IT Zone 与冷却区匹配]]。
+
 ---
 
-# 关键规则 / Critical Rules
+## P-3 关键规则 (Critical Rules)
 
-## 规则 1 — 必须主动澄清
+### 规则 1 — 必须主动澄清
 
 **任何时候收到客户询问电力需求，工程师必须先确认客户说的是 IT 负载还是整体电力负荷。**
 
 如果客户说"1.2MW"，必须追问：
 > "您说的 1.2MW 是指 IT 设备负载，还是整个数据中心设施的总用电负荷？"
 
-## 规则 2 — 输出时必须标注
+### 规则 2 — 输出时必须标注
 
 **所有方案输出中，电力数据必须明确标注 IT 负载和整体电力负荷。**
 
@@ -103,7 +126,7 @@ IT负载:      xxx kW
 整体电力负荷: xxx kW (PUE ≈ x.xx)
 ```
 
-## 规则 3 — 不混用术语
+### 规则 3 — 不混用术语
 
 **禁止将 IT 负载和整体电力负荷混用。**
 
@@ -113,52 +136,82 @@ IT负载:      xxx kW
 正确示例：
 > "系统 IT 负载 1.2MW，在 PUE 1.15 条件下，整体电力负荷约为 1.38MW。场地电力接入容量应按整体负荷设计。"
 
-## 规则 4 — IT Zone 与 Power Zone 的关系
+### 规则 4 — IT Zone 与 Power Zone 的关系
 
 | 区域 | 描述 | 对外输出 |
 |------|------|---------|
-| **IT Zone** (AC40/AC45/DC45) | 包含服务器；UPS（AC45/DC45 内置；AC40 外置客户自备）| IT 负载（客户算力需求） |
+| **IT Zone** (A32/AC40/AC45/DC45) | 包含服务器；UPS（AC45/DC45 内置；AC40 外置客户自备）| IT 负载（客户算力需求） |
 | **Cooling Zone** | **Hybrid Cooling System**（干冷器+DX一体化） | 不单独对外报价 |
 | **Power Zone** | BESS / 变压器 / 开关设备 | 容量规格（kW/MW） |
 
+> 负荷定义错误的级联影响见 [[Risk_Guideline#R-4 负荷定义风险]]。
+
 ---
 
-# 典型混淆场景 / Common Confusion Scenarios
+## P-4 典型混淆场景 (Common Confusion Scenarios)
 
-## 场景 1：客户说"1.2MW 集群"
+### 场景 1：客户说"1.2MW 集群"
 
 客户意图：通常指 IT 负载（GPU 算力）
 工程师动作：确认是否为 IT 负载；如果是，计算整体电力负荷（约 1.38–1.56MW）
 
-## 场景 2：客户说"场地有 2MW 电"
+### 场景 2：客户说"场地有 2MW 电"
 
 客户意图：通常指场地电力接入容量（整体负荷能力）
 工程师动作：计算可支持的 IT 负载（PUE=1.15 → IT ≈ 1.74MW）；推荐 AC40×4 或 DC45×1 配置
 
-## 场景 3：北美场地申请 Permit
+### 场景 3：北美场地申请 Permit
 
 客户意图：通常指整体电力容量（需申请 Utility 容量）
 工程师动作：必须输出整体电力负荷（kW），并说明 IT 负载（kW），供客户向 Utility 申请容量
 
 ---
 
-# DG vs BESS — 柴油发电机与储能系统对比
+## P-5 UPS 选型 (UPS Selection)
 
-> **来源**：Works_Public/Projects/Simple_Mining/DG vs BESS.md
->
-> 以下内容是从客户项目中提取的通用电力架构知识，已固化为知识库标准内容。
+> 本节为 Power Engineer 的 UPS 选型规则。设计前必须先满足前文 "[[#P-1 IT 负载与整体电力负荷|§P-1]]" 的澄清规则，再执行 UPS 选型。
+
+### Power 总体设计原则
+
+- AC45 / DC45：UPS 及 UPS 电池**内置**于集装箱，提供分钟级瞬时切换后备，UL 合规
+- AC40：UPS 及 UPS 电池**需客户外置自备**，AC40 本体不含 UPS
+
+### UPS 型号标准
+
+| IT Zone | UPS 型号 | 模块数 | 总功率 | UPS 放置 | UPS 电池后备时间 |
+|---------|----------|--------|--------|---------|--------------|
+| **AC40** | EATON 9395XR-600 | 4 UPM | 600kW | **外置（客户自备）** | ~10 分钟（客户自备 2×93LiG2）|
+| **AC45** | EATON 9395XR-600 | 4 UPM | 600kW | 内置（专用电力舱），UL 合规 | ~20 分钟（内置 2×93LiG2）|
+| **DC45** | EATON 9395XR-1500 | 10 UPM | 1500kW | 内置，UL 合规 | ~8 分钟（内置 3×93LiG2）|
+
+> ⚠️ UPS 型号数字 = kW（不是 kVA）。UPS 电池 ≠ BESS：UPS 电池是分钟级，BESS 是小时级。
+
+参考：[[UPS_EATON_9395XR|KB/3RD-PARTY/UPS/Eaton/UPS_EATON_9395XR]]
+
+### UPS 选型逻辑
+
+- **容量公式**：UPS 容量 ≥ IT Load ÷ PF × 1.2（AC45/DC45 已内置；AC40 需客户按此公式外置选型）
+- **型号标准化**：AC40/AC45 用 9395XR-600；DC45 用 9395XR-1500
+- **认证**：EATON 9395XR 系列已具备 UL 认证
+- **绑定约束**：UPS 型号与 IT Zone 强绑定，禁止替换。
 
 ---
 
-## 背景 / Background
+## P-6 UPS 电池技术对比 (UPS Battery Technology)
 
-在与客户讨论备用电力架构时，柴油发电机（DG）和电池储能系统（BESS）是两种主要方案。
+| 技术 | 特点 | 适用 |
+|------|------|------|
+| VRLA（阀控式铅酸）| 成本低、寿命短 | 极少使用 |
+| **Li-ion（磷酸铁锂，LiFePO4）** | 高循环寿命、安全、能量密度高 | **标配（EATON 93LiG2）** |
+| 超级电容 | 响应 / 切换时间 <1ms，容量极小 | 特殊场景，不作为主备电 |
 
-本节定义两者的对比框架，并解释在特定电网环境下（如 MISO 区域）的选型逻辑。
+> 储能合规要求见 [[Compliance_Guideline#C-3 储能系统合规]]。
 
 ---
 
-## 柴油发电机（DG）的核心优势
+## P-7 柴油发电机选型 (Diesel Generator Selection)
+
+### 柴油发电机（DG）的核心优势
 
 | 特性 | 说明 |
 |------|------|
@@ -168,9 +221,7 @@ IT负载:      xxx kW
 | 成本 | 最低的单位 kW 成本 |
 | 适用性 | 长时间断电（>6 小时）的场景 |
 
----
-
-## 柴油发电机（DG）的常见顾虑
+### 柴油发电机（DG）的常见顾虑
 
 客户对柴油发电机通常有 4 类顾虑：
 
@@ -181,9 +232,27 @@ IT负载:      xxx kW
 | **维护成本** | 定期测试运行；燃料长期储存变质；启动失败风险 |
 | **ESG / 碳排放** | 高碳排设备；与 AI 公司 Net Zero 和 ESG 指标冲突 |
 
+### DG 选型规则
+
+- **Standby rating**：备用工况额定（短期用）
+- **Prime rating**：连续工况额定（长期用）
+- **NFPA 110 Level 1**：关键负载的合规等级，必须满足
+
 ---
 
-## BESS 的核心优势
+## P-8 BESS 选型与 DG 对比 (BESS Selection & DG Comparison)
+
+> **来源**：Works_Public/Projects/Simple_Mining/DG vs BESS.md
+>
+> 以下内容是从客户项目中提取的通用电力架构知识，已固化为知识库标准内容。
+
+### 背景 / Background
+
+在与客户讨论备用电力架构时，柴油发电机（DG）和电池储能系统（BESS）是两种主要方案。
+
+本节定义两者的对比框架，并解释在特定电网环境下（如 MISO 区域）的选型逻辑。
+
+### BESS 的核心优势
 
 | 特性 | 说明 |
 |------|------|
@@ -193,9 +262,7 @@ IT负载:      xxx kW
 | ESG 友好 | 符合 Net Zero 和 ESG 目标 |
 | 场景灵活 | 适合短中期断电（分钟级到小时级） |
 
----
-
-## Grid Curtailment — 电网限电机制
+### Grid Curtailment — 电网限电机制
 
 ### 定义
 
@@ -231,9 +298,7 @@ GPU 无需停机。
 
 BESS 作为缓冲层，确保在电网限电期间 IT 负载持续运行。
 
----
-
-## Demand Response — 需求响应
+### Demand Response — 需求响应
 
 ### 两种参与模式
 
@@ -260,9 +325,7 @@ Reduce load 20–30%
 电网支付补偿
 ```
 
----
-
-## BESS + Curtailable Load — 新型架构趋势
+### BESS + Curtailable Load — 新型架构趋势
 
 ### 核心洞察
 
@@ -292,9 +355,16 @@ AI 数据中心正在被重新定义为：
 
 这是电力市场的一个重大变化，使 BESS 成为更有吸引力的选择。
 
----
+### BESS 选型产品清单
 
-## 选型决策框架
+BESS 用于替代或补充柴油发电机，连接方式 `Grid → BESS → IT Zone`。
+
+| 品牌 / 型号 | 适用场景 | 文档 |
+|------------|---------|------|
+| TESLA Megapack 2 XL | 大型 / 城市边缘 / 高 ESG | [[TESLA MEGAPACK 2 XL]] |
+| 国轩 ESC480-125P261-UL | 工商业 / 成本优化 / 国产方案 | [[Gotion ESC480-125P261-UL]] |
+
+### 选型决策框架
 
 ### 选型前提：评估电网环境
 
@@ -317,76 +387,7 @@ AI 数据中心正在被重新定义为：
 
 > ⚠️ **超过 6 小时的长时断电，BESS 经济性显著下降，应优先考虑 DG。**
 
----
-
-## 引用 / References
-
-本文件是 SOUL.md 和 PRINCIPLES.md 的补充文件。
-所有 Agent 在进行电力相关沟通时，必须引用本文件。
-
----
-
-# 电力系统选型详则 / Power System Selection Details
-
-> 本节为 Power Engineer 的技术选型规则。设计前必须先满足前文"IT Load vs Total Facility Load"的澄清规则，再执行选型。
-
-## 1. Power 总体设计原则
-
-- AC45 / DC45：UPS 及 UPS 电池**内置**于集装箱，提供分钟级瞬时切换后备，UL 合规
-- AC40：UPS 及 UPS 电池**需客户外置自备**，AC40 本体不含 UPS
-
-## 2. UPS 型号标准
-
-| IT Zone | UPS 型号 | 模块数 | 总功率 | UPS 放置 | UPS 电池后备时间 |
-|---------|----------|--------|--------|---------|--------------|
-| **AC40** | EATON 9395XR-600 | 4 UPM | 600kW | **外置（客户自备）** | ~10 分钟（客户自备 2×93LiG2）|
-| **AC45** | EATON 9395XR-600 | 4 UPM | 600kW | 内置（专用电力舱），UL 合规 | ~20 分钟（内置 2×93LiG2）|
-| **DC45** | EATON 9395XR-1500 | 10 UPM | 1500kW | 内置，UL 合规 | ~8 分钟（内置 3×93LiG2）|
-
-> ⚠️ UPS 型号数字 = kW（不是 kVA）。UPS 电池 ≠ BESS：UPS 电池是分钟级，BESS 是小时级。
-
-参考：[[UPS_EATON_9395XR|KB/3RD-PARTY/UPS/Eaton/UPS_EATON_9395XR]]
-
-## 3. UPS 选型逻辑
-
-- **容量公式**：UPS 容量 ≥ IT Load ÷ PF × 1.2（AC45/DC45 已内置；AC40 需客户按此公式外置选型）
-- **型号标准化**：AC40/AC45 用 9395XR-600；DC45 用 9395XR-1500
-- **认证**：EATON 9395XR 系列已具备 UL 认证
-
-## 4. UPS 电池技术对比
-
-| 技术 | 特点 | 适用 |
-|------|------|------|
-| VRLA（阀控式铅酸）| 成本低、寿命短 | 极少使用 |
-| **Li-ion（磷酸铁锂，LiFePO4）** | 高循环寿命、安全、能量密度高 | **标配（EATON 93LiG2）** |
-| 超级电容 | 响应 / 切换时间 <1ms，容量极小 | 特殊场景，不作为主备电 |
-
-## 5. 柴油发电机选型
-
-- **Standby rating**：备用工况额定（短期用）
-- **Prime rating**：连续工况额定（长期用）
-- **NFPA 110 Level 1**：关键负载的合规等级，必须满足
-
-## 6. BESS 选型
-
-BESS 用于替代或补充柴油发电机，连接方式 `Grid → BESS → IT Zone`。
-
-| 品牌 / 型号 | 适用场景 | 文档 |
-|------------|---------|------|
-| TESLA Megapack 2 XL | 大型 / 城市边缘 / 高 ESG | [[TESLA MEGAPACK 2 XL]] |
-| 国轩 ESC480-125P261-UL | 工商业 / 成本优化 / 国产方案 | [[Gotion ESC480-125P261-UL]] |
-
-## 7. 冗余结构
-
-| 等级 | 说明 |
-|------|------|
-| **N** | 无冗余 |
-| **N+1** | 标准冗余 |
-| **2N** | 完全双路冗余 |
-
-> Power Zone 可选 N+1 或 2N（需要额外的 Switchgear，成本增加）。IT Zone 和 Cooling Zone 不提供 N+1/2N 冗余。
-
-## 8. BESS vs 柴油发电机 — 系统级对比
+### BESS vs 柴油发电机 — 系统级对比
 
 | 对比维度 | BESS 方案（Grid → Switchgear → BESS → IT Zone）| 柴油发电机方案（Grid + ATS + Generator）|
 |---------|-------------------------------------------|------------------------------------|
@@ -408,7 +409,7 @@ BESS 用于替代或补充柴油发电机，连接方式 `Grid → BESS → IT Z
 | 并网收益可能性 | 有 | 无 |
 | Edge AI 适配性 | 非常适合 | 次优 |
 
-## 9. 系统行为对比
+### 系统行为对比
 
 | 层级 | BESS 架构行为 | 柴油机架构行为 |
 |------|---------------|---------------|
@@ -420,6 +421,55 @@ BESS 用于替代或补充柴油发电机，连接方式 `Grid → BESS → IT Z
 
 ---
 
-*Document Version: v1.2 | Last Updated: 2026-05-19*
+## P-9 冗余结构与拓扑 (Redundancy & Topology)
+
+### 冗余结构等级
+
+| 等级 | 说明 |
+|------|------|
+| **N** | 无冗余 |
+| **N+1** | 标准冗余 |
+| **2N** | 完全双路冗余 |
+
+> Power Zone 可选 N+1 或 2N（需要额外的 Switchgear，成本增加）。IT Zone 和 Cooling Zone 不提供 N+1/2N 冗余。详见 [[PRINCIPLE_Guideline#§1.5 Zone 冗余规则]]。
+
+### Zone 冗余约束
+
+| Zone | N+1 | 2N |
+|------|-----|----|
+| **IT Zone** | ❌ 不提供 | ❌ 不提供 |
+| **Cooling Zone** | ❌ 不提供 | ❌ 不提供 |
+| **Power Zone** | ✅ 允许（需额外 Switchgear） | ✅ 允许（需额外 Switchgear） |
+| **Network Zone** | ✅ 链路与设备级冗余 | 视项目需求 |
+
+> **关键**: 客户询问 N+1/2N 冷却或 IT 冗余时，**必须上报 ATS 而非自行承诺**。
+
+### 拓扑
+
+Power Zone 与 IT Zone 标准拓扑：
+- `Grid → BESS → IT Zone`（BESS 串联主供电路径，详见 [[#P-8 BESS 选型与 DG 对比|§P-8]]）
+- `Grid + ATS + DG`（DG 并联备用电源）
+- `Grid → BESS → IT Zone` 或 `Grid + ATS + DG`
+
+> Zone 间物理连接示意见 [[PRINCIPLE_Guideline#§3 Zone 架构速查]]。
+
+---
+
+### 引用 / References
+
+本文件是 SOUL.md 和 PRINCIPLES.md 的补充文件。
+所有 Agent 在进行电力相关沟通时，必须引用本文件。
+Key Matrix 中 Power Engineer 的必读章节见 [[PRINCIPLE_Guideline#§4 Key Matrix — Agent × 场景 必读章节矩阵]]（场景 S4）。
+
+---
+
+## Changelog
+
+> v1.3 变更（2026-06-05）：
+> - 章节 ID 对齐 [[PRINCIPLE_Guideline#§8 章节 ID 一致性表]]，采用 P-1 ~ P-9 体系；
+> - 新增 YAML frontmatter、Version/Last Updated/Source 元数据表、Quick Reference、Section Index；
+> - 各节标题加 ID 前缀（§P-1 IT 负载与整体电力负荷 / §P-2 产品对照表 / §P-3 关键规则 / §P-4 典型混淆场景 / §P-5 UPS 选型 / §P-6 UPS 电池技术对比 / §P-7 柴油发电机选型 / §P-8 BESS 选型与 DG 对比 / §P-9 冗余结构与拓扑）；
+> - 跨文件引用统一为 [[Filename#§ID 标题]] 形式，新增指向 [[PRINCIPLE_Guideline]] / [[COOLING_SYSTEM_Guideline#G-8 IT Zone 与冷却区匹配|COOLING_SYSTEM_Guideline §G-8]] / [[Risk_Guideline#R-4 负荷定义风险|Risk_Guideline §R-4]] / [[Compliance_Guideline#C-3 储能系统合规|Compliance_Guideline §C-3]] 的内部链接；
+> - §P-9 整合原"§7 冗余结构"内容并补全 Zone 冗余约束表与拓扑段。
 
 > v1.2 变更：合并原 KB/3RD-PARTY/BESS/POWER_SYSTEMS_Guideline 的技术选型详则（UPS 公式 / 电池技术 / 柴油机 / 冗余 / 系统对比表）；修正文件首行错误标题"POWER_LOAD.md"为正确的"POWER_SYSTEMS_Guideline"。

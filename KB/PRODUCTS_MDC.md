@@ -3,8 +3,8 @@ tags:
   - #workspace/engineer
   - #type/product
   - #product/mdc
+  - #MDC
 ---
-
 # MDC – Modular Datacenter Cluster
 模块化数据中心集群标准组合参考
 版本：V1.1（2026-03-29 统一结构版）

@@ -3,8 +3,8 @@ tags:
   - #workspace/engineer
   - #type/general
   - #product/general
+  - #MDC
 ---
-
 # KB_ACCESS.md — Obsidian CLI 操作规范
 
 > 本文件定义 FEIS 系统访问 Obsidian Vault 的标准命令集。

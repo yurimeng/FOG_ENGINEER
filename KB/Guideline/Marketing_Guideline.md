@@ -3,17 +3,36 @@ tags:
   - #workspace/engineer
   - #type/guideline
   - #process/market
+  - #MDC
 ---
-
 # Marketing Guideline / 市场研究技术指南
 
-Document Version: v1.0
-Last Updated: 2026-04-11
-Source / 来源: `Works_Public/AGENTS/Market Researcher.md`
+| Field | Value |
+|-------|-------|
+| Version | v1.1 |
+| Last Updated | 2026-06-05 |
+| Source / 来源 | `Works_Public/AGENTS/Market Researcher.md` |
 
 ---
 
-## 关注领域 / Focus Areas
+## 速查 / Quick Reference
+
+本指南覆盖 Market Researcher 的关注领域、市场周报与博客草稿结构、竞品研究框架及信息来源清单，用于驱动 `/Market/` 目录下的市场情报产出。所有内容须遵循 [[PRINCIPLE_Guideline]] 最高准则（特别是无价格、KB-only、不贬低竞品）。
+
+## 章节速查 / Section Index
+
+| ID | 章节 | 一句话说明 |
+|----|------|-----------|
+| [[#§M-1 关注领域 / Focus Areas]] | 关注领域 | Market Researcher 情报收集的 8 大领域 |
+| [[#§M-2 市场周报结构 / Market Report Structure]] | 市场周报结构 | 每周五输出 `Market_Report.md` 的章节模板 |
+| [[#§M-3 博客草稿结构 / Blog Draft Structure]] | 博客草稿结构 | 每周二输出 `Blog_Draft.md` 的模板、质量标准与主题优先级 |
+| [[#§M-4 竞品研究框架 / Competitor Research]] | 竞品研究框架 | 竞品监控维度与分析模板 |
+| [[#§M-5 信息来源 / Information Sources]] | 信息来源 | 7 类外部信息来源清单 |
+| [[#§M-6 禁止行为 / Prohibited Actions]] | 禁止行为 | Market Researcher 的红线行为清单 |
+
+---
+
+## M-1 关注领域 / Focus Areas
 
 Market Researcher 关注以下领域的情报收集：
 
@@ -28,9 +47,11 @@ Market Researcher 关注以下领域的情报收集：
 | **行业活动** | 展会、会议、行业报告发布 |
 | **边缘计算** | Edge AI、模块化数据中心市场 |
 
+> 关联章节：竞品维度详见 [[#§M-4 竞品研究框架 / Competitor Research]]；信息渠道详见 [[#§M-5 信息来源 / Information Sources]]。
+
 ---
 
-## 市场周报结构 / Market Report Structure
+## M-2 市场周报结构 / Market Report Structure
 
 **输出文件**：`/Market/Market_Report.md`
 **更新频率**：每周五
@@ -79,7 +100,7 @@ Market Researcher 关注以下领域的情报收集：
 
 ---
 
-## 博客草稿结构 / Blog Draft Structure
+## M-3 博客草稿结构 / Blog Draft Structure
 
 **输出文件**：`/Market/Blog_Draft.md`
 **更新频率**：每周二
@@ -132,7 +153,7 @@ Market Researcher 关注以下领域的情报收集：
 
 ---
 
-## 竞争对手研究框架 / Competitor Research Framework
+## M-4 竞品研究框架 / Competitor Research
 
 ### 监控维度
 
@@ -180,9 +201,11 @@ Market Researcher 关注以下领域的情报收集：
 [具体建议，1-3条]
 ```
 
+> 红线提醒：竞品分析仅供内部使用，输出客户面材料时严禁出现竞品贬低性语言，详见 [[#§M-6 禁止行为 / Prohibited Actions]]。
+
 ---
 
-## 信息来源清单 / Information Sources
+## M-5 信息来源 / Information Sources
 
 | 类型 | 来源 | 用途 |
 |------|------|------|
@@ -209,7 +232,7 @@ Market Researcher 工作流程：
 
 ---
 
-## 禁止行为 / Prohibited Actions
+## M-6 禁止行为 / Prohibited Actions
 
 | 禁止行为 | 说明 |
 |---------|------|
@@ -221,4 +244,13 @@ Market Researcher 工作流程：
 
 ---
 
-*Document Version: v1.1 | Last Updated: 2026-04-12*
+## Changelog
+
+- **2026-06-05 (v1.1)**
+  - 章节 ID 与 [[PRINCIPLE_Guideline#§8 章节 ID 一致性表]] 对齐：M-1 关注领域 / M-2 市场周报结构 / M-3 博客草稿结构 / M-4 竞品研究框架 / M-5 信息来源 / M-6 禁止行为。
+  - 结构归一化：H1 标题下新增 Version / Last Updated / Source 元数据表；顶部新增 速查 / Quick Reference 与 章节速查 / Section Index。
+  - 标题文案对齐 PRINCIPLE 规范：`竞争对手研究框架 → 竞品研究框架`、`信息来源清单 → 信息来源`。
+  - 在 §M-1、§M-4 增补到 §M-4、§M-5、§M-6 的内部交叉链接。
+  - 文件底部新增 `## Changelog`，原 footer 版本行迁入；将原 `*Document Version: v1.1 ...*` 行整合为元数据表。
+- **2026-04-12 (v1.0)**
+  - 初版发布；定义 Market Researcher 的关注领域、报告/博客模板、竞品框架、信息来源与禁止行为。

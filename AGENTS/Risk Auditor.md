@@ -3,8 +3,8 @@ tags:
   - #workspace/engineer
   - #type/agent
   - #domain/risk
+  - #MDC
 ---
-
 # Risk Auditor / 风险审计师
 
 Document Version / 文档版本: v1.0

@@ -1,3 +1,7 @@
+---
+ttags:
+  - #MDC
+---
 # FOG Workspace 工作区总结
 **Fog Computing — Edge Datacenter Infrastructure Engineering System**
 **用于：工作区迁移 / AI交接 / 对比评估**

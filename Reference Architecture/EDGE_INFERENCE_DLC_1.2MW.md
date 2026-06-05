@@ -3,8 +3,8 @@ tags:
   - #workspace/engineer
   - #type/reference
   - #product/dc45
+  - #MDC
 ---
-
 # Reference Architecture — 1.2MW DLC AI Inference Unit
 1.2MW 直冷液冷 AI 推理算力单元标准参考架构
 

@@ -3,8 +3,8 @@ tags:
   - #workspace/engineer
   - #type/agent
   - #process/market
+  - #MDC
 ---
-
 # Market Researcher / 市场研究员
 
 Document Version: v1.0

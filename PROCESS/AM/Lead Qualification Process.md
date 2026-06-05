@@ -3,14 +3,8 @@ tags:
   - #workspace/engineer
   - #type/process
   - #process/am
+  - #MDC
 ---
----
-tags:
-  - #workspace/engineer
-  - #type/process
-  - #process/am
----
-
 # Lead Qualification Process (销售线索筛选流程)
 
 ## 1. Purpose / 目的
