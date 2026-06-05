@@ -41,6 +41,17 @@ ResoucePool/
 SupplyChain/
 COST/
 Projects/
+Solutions Design/
+
+# Price / quote — filename match (defensive, no KB methodology files match)
+**/*价格*
+**/*报价*
+**/*Price*
+**/*Quote*
+**/*Pricing*
+
+# Workspace summary — internal snapshot, not part of KB
+FOG_Workspace_Summary.md
 
 # Index files
 **/index.md
