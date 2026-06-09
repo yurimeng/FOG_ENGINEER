@@ -87,3 +87,17 @@ Full role definitions and boundaries: `AGENTS/`. Process flows: `PROCESS/`.
 3. **Surgical changes** — touch only what's asked. No drive-by refactors of adjacent files.
 4. **Goal-driven execution** — define success criteria up front; verify before declaring done.
 5. These documents are all stored in Obsidian. References should not only use `[[...]]` links, but also be granular enough to point to the specific block level.
+
+---
+## 8. Version Management
+
+**Purpose:** Prevent token waste from accumulating historical content across iterations.
+
+**Rules:**
+- Always use versioned filenames: `spec_v1.md`, `cooling_calc_v2.md`, etc.
+- On each update, create a new version file — never append to the existing one
+- Each version file contains only core content: facts, decisions, open questions, and stakeholders
+
+**Archiving:**
+- Rename outdated versions by prefixing a dot to hide them: `spec_v1.md` → `.spec_v1.md`
+- Add an index entry to `CHANGELOG.md` for each archived version, including: version number, date, and a one-line summary of what changed

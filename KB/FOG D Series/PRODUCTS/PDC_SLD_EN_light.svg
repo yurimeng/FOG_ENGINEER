@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="700" viewBox="0 0 1200 700" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', Arial, sans-serif">
+
+  <!-- Background -->
+  <rect width="1200" height="700" fill="#f5f7fa"/>
+
+  <!-- Title bar -->
+  <rect x="0" y="0" width="1200" height="44" fill="#e8eef5"/>
+  <line x1="0" y1="44" x2="1200" y2="44" stroke="#b0c8e8" stroke-width="1"/>
+  <text x="600" y="17" text-anchor="middle" font-size="15" font-weight="bold" fill="#1a2a3a">PDC Electrical Single-Line Diagram (SLD)</text>
+  <text x="600" y="34" text-anchor="middle" font-size="11" fill="#4a6a8a">Input 415 Vac / 2500 A  |  Busway  |  Tap-off Units with MCCB</text>
+
+  <!-- Divider -->
+  <line x1="600" y1="44" x2="600" y2="700" stroke="#b0c8e8" stroke-width="1"/>
+
+  <!-- ============================================================ -->
+  <!-- LEFT: SLD -->
+  <!-- ============================================================ -->
+
+  <text x="300" y="62" text-anchor="middle" font-size="11" font-weight="bold" fill="#2a4a6a">Single-Line Diagram</text>
+
+  <defs>
+    <marker id="arrW" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M1 1L9 5L1 9" fill="none" stroke="#3a7bd5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <marker id="arrD" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+      <path d="M1 1L9 5L1 9" fill="none" stroke="#3a7bd5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <!-- Ground symbol -->
+  <line x1="295" y1="66" x2="295" y2="76" stroke="#3a7bd5" stroke-width="1.5"/>
+  <line x1="281" y1="76" x2="309" y2="76" stroke="#3a7bd5" stroke-width="1.5"/>
+  <line x1="285" y1="80" x2="305" y2="80" stroke="#3a7bd5" stroke-width="1.2"/>
+  <line x1="289" y1="84" x2="301" y2="84" stroke="#3a7bd5" stroke-width="1.0"/>
+
+  <!-- P1 Incoming Switchgear -->
+  <rect x="130" y="88" width="330" height="46" rx="6" fill="#e8eef5" stroke="#3a7bd5" stroke-width="1.5"/>
+  <text x="295" y="108" text-anchor="middle" font-size="13" font-weight="bold" fill="#1a3a7a">P1  Incoming Switchgear</text>
+  <text x="295" y="125" text-anchor="middle" font-size="10" fill="#4a6a9a">415 Vac · 2500 A · ACB · CT/PT · Energy Meter</text>
+
+  <!-- Down to junction -->
+  <line x1="295" y1="134" x2="295" y2="156" stroke="#3a7bd5" stroke-width="1.5"/>
+  <circle cx="295" cy="156" r="4" fill="#3a7bd5"/>
+
+  <!-- Left branch -->
+  <line x1="295" y1="156" x2="185" y2="156" stroke="#3a7bd5" stroke-width="1.5"/>
+  <line x1="185" y1="156" x2="185" y2="172" stroke="#3a7bd5" stroke-width="1.5"/>
+  <text x="152" y="169" text-anchor="middle" font-size="9" fill="#4a6a8a">2500A MCCB</text>
+  <path d="M174 172 Q185 181 196 172" stroke="#3a7bd5" stroke-width="1.3" fill="none"/>
+  <line x1="185" y1="181" x2="185" y2="200" stroke="#3a7bd5" stroke-width="1.5"/>
+
+  <!-- UPS/BESS -->
+  <rect x="72" y="200" width="46" height="34" rx="4" fill="#e8f5ec" stroke="#2d6a4f" stroke-width="1"/>
+  <text x="95" y="213" text-anchor="middle" font-size="9" font-weight="bold" fill="#2d6a4f">UPS</text>
+  <text x="95" y="225" text-anchor="middle" font-size="9" fill="#40916c">BESS</text>
+  <line x1="118" y1="217" x2="138" y2="217" stroke="#3a7bd5" stroke-width="1"/>
+
+  <!-- P2 UPS -->
+  <rect x="138" y="196" width="196" height="42" rx="6" fill="#e8f5ec" stroke="#2d6a4f" stroke-width="1.5"/>
+  <text x="236" y="215" text-anchor="middle" font-size="12" font-weight="bold" fill="#1a6a4a">P2  UPS</text>
+  <text x="236" y="230" text-anchor="middle" font-size="10" fill="#2d6a4f">ESS Mode · 2500A Output</text>
+
+  <!-- Right branch -->
+  <line x1="295" y1="156" x2="405" y2="156" stroke="#3a7bd5" stroke-width="1.5"/>
+  <line x1="405" y1="156" x2="405" y2="172" stroke="#3a7bd5" stroke-width="1.5"/>
+  <text x="438" y="169" text-anchor="middle" font-size="9" fill="#4a6a8a">2500A MCCB</text>
+  <path d="M394 172 Q405 181 416 172" stroke="#3a7bd5" stroke-width="1.3" fill="none"/>
+  <line x1="405" y1="181" x2="405" y2="200" stroke="#3a7bd5" stroke-width="1.5"/>
+
+  <!-- Locker -->
+  <rect x="380" y="200" width="54" height="32" rx="4" fill="#f0f0f8" stroke="#6a6a9a" stroke-width="1" stroke-dasharray="4,2"/>
+  <text x="407" y="213" text-anchor="middle" font-size="9" font-weight="bold" fill="#4a4a8a">LOCK</text>
+  <text x="407" y="225" text-anchor="middle" font-size="9" fill="#6a6a9a">Locker</text>
+
+  <!-- UPS output to P4 -->
+  <line x1="185" y1="238" x2="185" y2="262" stroke="#3a7bd5" stroke-width="1.5"/>
+  <line x1="185" y1="262" x2="295" y2="262" stroke="#3a7bd5" stroke-width="1.5"/>
+  <text x="210" y="257" font-size="9" fill="#4a6a8a">UPS output</text>
+  <circle cx="295" cy="262" r="4" fill="#3a7bd5"/>
+  <line x1="295" y1="262" x2="295" y2="276" stroke="#3a7bd5" stroke-width="1.5"/>
+
+  <!-- Locker to P4 junction -->
+  <line x1="407" y1="232" x2="407" y2="262" stroke="#6a6a9a" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <line x1="407" y1="262" x2="295" y2="262" stroke="#6a6a9a" stroke-width="1.5" stroke-dasharray="5,3"/>
+
+  <!-- P4 Busway Connector -->
+  <rect x="80" y="276" width="430" height="44" rx="6" fill="#e8eef5" stroke="#3a7bd5" stroke-width="1.5"/>
+  <text x="295" y="295" text-anchor="middle" font-size="13" font-weight="bold" fill="#1a3a7a">P4  PDC / Busway Connector</text>
+  <text x="295" y="311" text-anchor="middle" font-size="10" fill="#4a6a9a">2500 A · 415 Vac · Copper Plug-in Busway System</text>
+
+  <line x1="295" y1="320" x2="295" y2="334" stroke="#3a7bd5" stroke-width="1.5"/>
+
+  <!-- Busway bar -->
+  <rect x="70" y="334" width="460" height="14" rx="3" fill="#dde8f5" stroke="#3a7bd5" stroke-width="1"/>
+  <text x="62" y="344" text-anchor="end" font-size="9" fill="#4a6a8a">Busway</text>
+
+  <!-- Rack drop lines -->
+  <line x1="92"  y1="348" x2="92"  y2="364" stroke="#3a7bd5" stroke-width="0.9"/>
+  <line x1="130" y1="348" x2="130" y2="364" stroke="#3a7bd5" stroke-width="0.9"/>
+  <line x1="168" y1="348" x2="168" y2="364" stroke="#3a7bd5" stroke-width="0.9"/>
+  <line x1="206" y1="348" x2="206" y2="364" stroke="#3a7bd5" stroke-width="0.9"/>
+  <line x1="244" y1="348" x2="244" y2="364" stroke="#3a7bd5" stroke-width="0.9"/>
+  <line x1="282" y1="348" x2="282" y2="364" stroke="#3a7bd5" stroke-width="0.9"/>
+  <line x1="320" y1="348" x2="320" y2="364" stroke="#3a7bd5" stroke-width="0.9"/>
+  <line x1="358" y1="348" x2="358" y2="364" stroke="#3a7bd5" stroke-width="0.9"/>
+
+  <!-- TAP boxes - chillers -->
+  <rect x="79"  y="364" width="26" height="14" rx="2" fill="#dde8f5" stroke="#3a7bd5" stroke-width="0.7"/>
+  <rect x="117" y="364" width="26" height="14" rx="2" fill="#dde8f5" stroke="#3a7bd5" stroke-width="0.7"/>
+  <rect x="155" y="364" width="26" height="14" rx="2" fill="#dde8f5" stroke="#3a7bd5" stroke-width="0.7"/>
+  <rect x="193" y="364" width="26" height="14" rx="2" fill="#dde8f5" stroke="#3a7bd5" stroke-width="0.7"/>
+  <rect x="231" y="364" width="26" height="14" rx="2" fill="#dde8f5" stroke="#3a7bd5" stroke-width="0.7"/>
+  <rect x="269" y="364" width="26" height="14" rx="2" fill="#dde8f5" stroke="#3a7bd5" stroke-width="0.7"/>
+  <rect x="307" y="364" width="26" height="14" rx="2" fill="#dde8f5" stroke="#3a7bd5" stroke-width="0.7"/>
+  <rect x="345" y="364" width="26" height="14" rx="2" fill="#dde8f5" stroke="#3a7bd5" stroke-width="0.7"/>
+  <text x="92"  y="374" text-anchor="middle" font-size="8" fill="#2a4a6a">TAP</text>
+  <text x="130" y="374" text-anchor="middle" font-size="8" fill="#2a4a6a">TAP</text>
+  <text x="168" y="374" text-anchor="middle" font-size="8" fill="#2a4a6a">TAP</text>
+  <text x="206" y="374" text-anchor="middle" font-size="8" fill="#2a4a6a">TAP</text>
+  <text x="244" y="374" text-anchor="middle" font-size="8" fill="#2a4a6a">TAP</text>
+  <text x="282" y="374" text-anchor="middle" font-size="8" fill="#2a4a6a">TAP</text>
+  <text x="320" y="374" text-anchor="middle" font-size="8" fill="#2a4a6a">TAP</text>
+  <text x="358" y="374" text-anchor="middle" font-size="8" fill="#2a4a6a">TAP</text>
+
+  <line x1="92"  y1="378" x2="92"  y2="390" stroke="#3a7bd5" stroke-width="0.9" marker-end="url(#arrD)"/>
+  <line x1="130" y1="378" x2="130" y2="390" stroke="#3a7bd5" stroke-width="0.9" marker-end="url(#arrD)"/>
+  <line x1="168" y1="378" x2="168" y2="390" stroke="#3a7bd5" stroke-width="0.9" marker-end="url(#arrD)"/>
+  <line x1="206" y1="378" x2="206" y2="390" stroke="#3a7bd5" stroke-width="0.9" marker-end="url(#arrD)"/>
+  <line x1="244" y1="378" x2="244" y2="390" stroke="#3a7bd5" stroke-width="0.9" marker-end="url(#arrD)"/>
+  <line x1="282" y1="378" x2="282" y2="390" stroke="#3a7bd5" stroke-width="0.9" marker-end="url(#arrD)"/>
+  <line x1="320" y1="378" x2="320" y2="390" stroke="#3a7bd5" stroke-width="0.9" marker-end="url(#arrD)"/>
+  <line x1="358" y1="378" x2="358" y2="390" stroke="#3a7bd5" stroke-width="0.9" marker-end="url(#arrD)"/>
+
+  <!-- Rack boxes T1-T8 -->
+  <rect x="73"  y="390" width="38" height="46" rx="4" fill="#e8f5ec" stroke="#2d6a4f" stroke-width="1"/>
+  <rect x="111" y="390" width="38" height="46" rx="4" fill="#e8f5ec" stroke="#2d6a4f" stroke-width="1"/>
+  <rect x="149" y="390" width="38" height="46" rx="4" fill="#e8f5ec" stroke="#2d6a4f" stroke-width="1"/>
+  <rect x="187" y="390" width="38" height="46" rx="4" fill="#e8f5ec" stroke="#2d6a4f" stroke-width="1"/>
+  <rect x="225" y="390" width="38" height="46" rx="4" fill="#e8f5ec" stroke="#2d6a4f" stroke-width="1"/>
+  <rect x="263" y="390" width="38" height="46" rx="4" fill="#e8f5ec" stroke="#2d6a4f" stroke-width="1"/>
+  <rect x="301" y="390" width="38" height="46" rx="4" fill="#e8f5ec" stroke="#2d6a4f" stroke-width="1"/>
+  <rect x="339" y="390" width="38" height="46" rx="4" fill="#e8f5ec" stroke="#2d6a4f" stroke-width="1"/>
+
+  <text x="92"  y="404" text-anchor="middle" font-size="8.5" font-weight="bold" fill="#2d6a4f">Rack</text>
+  <text x="92"  y="415" text-anchor="middle" font-size="8" fill="#40916c">#1</text>
+  <text x="92"  y="427" text-anchor="middle" font-size="7.5" fill="#2d6a4f">150kW·200A</text>
+  <text x="130" y="404" text-anchor="middle" font-size="8.5" font-weight="bold" fill="#2d6a4f">Rack</text>
+  <text x="130" y="415" text-anchor="middle" font-size="8" fill="#40916c">#2</text>
+  <text x="130" y="427" text-anchor="middle" font-size="7.5" fill="#2d6a4f">150kW·200A</text>
+  <text x="168" y="404" text-anchor="middle" font-size="8.5" font-weight="bold" fill="#2d6a4f">Rack</text>
+  <text x="168" y="415" text-anchor="middle" font-size="8" fill="#40916c">#3</text>
+  <text x="168" y="427" text-anchor="middle" font-size="7.5" fill="#2d6a4f">150kW·200A</text>
+  <text x="206" y="404" text-anchor="middle" font-size="8.5" font-weight="bold" fill="#2d6a4f">Rack</text>
+  <text x="206" y="415" text-anchor="middle" font-size="8" fill="#40916c">#4</text>
+  <text x="206" y="427" text-anchor="middle" font-size="7.5" fill="#2d6a4f">150kW·200A</text>
+  <text x="244" y="404" text-anchor="middle" font-size="8.5" font-weight="bold" fill="#2d6a4f">Rack</text>
+  <text x="244" y="415" text-anchor="middle" font-size="8" fill="#40916c">#5</text>
+  <text x="244" y="427" text-anchor="middle" font-size="7.5" fill="#2d6a4f">150kW·200A</text>
+  <text x="282" y="404" text-anchor="middle" font-size="8.5" font-weight="bold" fill="#2d6a4f">Rack</text>
+  <text x="282" y="415" text-anchor="middle" font-size="8" fill="#40916c">#6</text>
+  <text x="282" y="427" text-anchor="middle" font-size="7.5" fill="#2d6a4f">150kW·200A</text>
+  <text x="320" y="404" text-anchor="middle" font-size="8.5" font-weight="bold" fill="#2d6a4f">Rack</text>
+  <text x="320" y="415" text-anchor="middle" font-size="8" fill="#40916c">#7</text>
+  <text x="320" y="427" text-anchor="middle" font-size="7.5" fill="#2d6a4f">150kW·200A</text>
+  <text x="358" y="404" text-anchor="middle" font-size="8.5" font-weight="bold" fill="#2d6a4f">Rack</text>
+  <text x="358" y="415" text-anchor="middle" font-size="8" fill="#40916c">#8</text>
+  <text x="358" y="427" text-anchor="middle" font-size="7.5" fill="#2d6a4f">150kW·200A</text>
+
+  <!-- Aux divider -->
+  <line x1="390" y1="334" x2="390" y2="460" stroke="#b0c8e8" stroke-width="0.8" stroke-dasharray="5,3"/>
+  <text x="393" y="332" font-size="8.5" fill="#6a8aaa">Auxiliary loads</text>
+
+  <!-- Aux drops -->
+  <line x1="418" y1="348" x2="418" y2="364" stroke="#3a7bd5" stroke-width="0.9"/>
+  <line x1="454" y1="348" x2="454" y2="364" stroke="#3a7bd5" stroke-width="0.9"/>
+  <line x1="490" y1="348" x2="490" y2="364" stroke="#3a7bd5" stroke-width="0.9"/>
+
+  <rect x="405" y="364" width="26" height="14" rx="2" fill="#dde8f5" stroke="#3a7bd5" stroke-width="0.7"/>
+  <rect x="441" y="364" width="26" height="14" rx="2" fill="#dde8f5" stroke="#3a7bd5" stroke-width="0.7"/>
+  <rect x="477" y="364" width="26" height="14" rx="2" fill="#dde8f5" stroke="#3a7bd5" stroke-width="0.7"/>
+  <text x="418" y="374" text-anchor="middle" font-size="8" fill="#2a4a6a">TAP</text>
+  <text x="454" y="374" text-anchor="middle" font-size="8" fill="#2a4a6a">TAP</text>
+  <text x="490" y="374" text-anchor="middle" font-size="8" fill="#2a4a6a">TAP</text>
+
+  <line x1="418" y1="378" x2="418" y2="390" stroke="#3a7bd5" stroke-width="0.9" marker-end="url(#arrD)"/>
+  <line x1="454" y1="378" x2="454" y2="390" stroke="#3a7bd5" stroke-width="0.9" marker-end="url(#arrD)"/>
+  <line x1="490" y1="378" x2="490" y2="390" stroke="#3a7bd5" stroke-width="0.9" marker-end="url(#arrD)"/>
+
+  <!-- Aux boxes -->
+  <rect x="396" y="390" width="44" height="46" rx="4" fill="#fef3e2" stroke="#b45309" stroke-width="1"/>
+  <text x="418" y="404" text-anchor="middle" font-size="8" font-weight="bold" fill="#b45309">Air-cooled</text>
+  <text x="418" y="415" text-anchor="middle" font-size="8" fill="#d97706">Fan Unit</text>
+  <text x="418" y="427" text-anchor="middle" font-size="8" fill="#92400e">T9 · 40kW</text>
+
+  <rect x="432" y="390" width="44" height="46" rx="4" fill="#fef3e2" stroke="#b45309" stroke-width="1"/>
+  <text x="454" y="404" text-anchor="middle" font-size="8" font-weight="bold" fill="#b45309">Main</text>
+  <text x="454" y="415" text-anchor="middle" font-size="8" fill="#d97706">CDU</text>
+  <text x="454" y="427" text-anchor="middle" font-size="8" fill="#92400e">T10 · 16kW</text>
+
+  <rect x="468" y="390" width="44" height="46" rx="4" fill="#fef3e2" stroke="#b45309" stroke-width="1"/>
+  <text x="490" y="404" text-anchor="middle" font-size="8" font-weight="bold" fill="#b45309">CRAH A/C</text>
+  <text x="490" y="415" text-anchor="middle" font-size="8" fill="#d97706">Group</text>
+  <text x="490" y="427" text-anchor="middle" font-size="8" fill="#92400e">T11 · 30kW</text>
+
+  <!-- Legend -->
+  <line x1="70" y1="452" x2="545" y2="452" stroke="#b0c8e8" stroke-width="0.8"/>
+  <text x="295" y="466" text-anchor="middle" font-size="10" font-weight="bold" fill="#2a4a6a">Legend</text>
+
+  <rect x="72" y="472" width="30" height="15" rx="2" fill="#dde8f5" stroke="#3a7bd5" stroke-width="0.7"/>
+  <text x="87"  y="483" text-anchor="middle" font-size="8" fill="#2a4a6a">TAP</text>
+  <text x="108" y="483" font-size="9" fill="#4a6a8a">Tap-off Unit (with MCCB)</text>
+
+  <path d="M202 472 Q210 480 218 472" stroke="#3a7bd5" stroke-width="1.2" fill="none"/>
+  <text x="225" y="483" font-size="9" fill="#4a6a8a">MCCB Breaker</text>
+
+  <rect x="305" y="472" width="30" height="15" rx="2" fill="#f0f0f8" stroke="#6a6a9a" stroke-width="0.7" stroke-dasharray="3,2"/>
+  <text x="320" y="483" text-anchor="middle" font-size="8" fill="#4a4a8a">LOCK</text>
+  <text x="342" y="483" font-size="9" fill="#4a6a8a">Mechanical Interlock</text>
+
+  <circle cx="82" cy="503" r="4.5" fill="#3a7bd5"/>
+  <text x="93" y="507" font-size="9" fill="#4a6a8a">Electrical node</text>
+
+  <line x1="180" y1="503" x2="220" y2="503" stroke="#3a7bd5" stroke-width="1.8"/>
+  <text x="226" y="507" font-size="9" fill="#4a6a8a">Main circuit</text>
+
+  <rect x="305" y="495" width="60" height="15" rx="2" fill="#dde8f5" stroke="#3a7bd5" stroke-width="0.8"/>
+  <text x="335" y="506" text-anchor="middle" font-size="8" fill="#2a4a6a">Busway trunking</text>
+
+  <!-- ============================================================ -->
+  <!-- RIGHT: Panel Schedule -->
+  <!-- ============================================================ -->
+
+  <text x="898" y="62" text-anchor="middle" font-size="11" font-weight="bold" fill="#2a4a6a">PDC Panel Schedule</text>
+
+  <!-- Table header -->
+  <rect x="614" y="68" width="574" height="22" rx="0" fill="#e8eef5"/>
+  <line x1="614" y1="90" x2="1188" y2="90" stroke="#b0c8e8" stroke-width="0.5"/>
+  <text x="638" y="83" font-size="10" font-weight="bold" fill="#2a4a6a">ID</text>
+  <text x="668" y="83" font-size="10" font-weight="bold" fill="#2a4a6a">Panel / Name</text>
+  <text x="858" y="83" font-size="10" font-weight="bold" fill="#2a4a6a">Key Components</text>
+  <text x="1152" y="83" text-anchor="end" font-size="10" font-weight="bold" fill="#2a4a6a">Rating</text>
+
+  <line x1="655"  y1="68" x2="655"  y2="340" stroke="#b0c8e8" stroke-width="0.5"/>
+  <line x1="848"  y1="68" x2="848"  y2="340" stroke="#b0c8e8" stroke-width="0.5"/>
+  <line x1="1120" y1="68" x2="1120" y2="340" stroke="#b0c8e8" stroke-width="0.5"/>
+
+  <!-- Rows -->
+  <!-- P1 -->
+  <rect x="614" y="90" width="574" height="28" fill="#ffffff"/>
+  <rect x="617" y="94" width="28" height="20" rx="3" fill="#3a7bd5"/>
+  <text x="631" y="108" text-anchor="middle" font-size="9" font-weight="bold" fill="#ffffff">P1</text>
+  <text x="660" y="108" font-size="10" font-weight="bold" fill="#1a2a3a">Incoming Switchgear</text>
+  <text x="852" y="108" font-size="9.5" fill="#4a6a8a">ACB + CT/PT + Energy Meter</text>
+  <text x="1152" y="108" text-anchor="end" font-size="9.5" fill="#1a2a3a">2500 A</text>
+  <line x1="614" y1="118" x2="1188" y2="118" stroke="#b0c8e8" stroke-width="0.5"/>
+
+  <!-- P2 -->
+  <rect x="614" y="118" width="574" height="28" fill="#f5f7fa"/>
+  <rect x="617" y="122" width="28" height="20" rx="3" fill="#3a7bd5"/>
+  <text x="631" y="136" text-anchor="middle" font-size="9" font-weight="bold" fill="#ffffff">P2</text>
+  <text x="660" y="136" font-size="10" font-weight="bold" fill="#1a2a3a">UPS Main Panel</text>
+  <text x="852" y="136" font-size="9.5" fill="#4a6a8a">Online double-conversion UPS + input MCCB 2500A</text>
+  <text x="1152" y="136" text-anchor="end" font-size="9.5" fill="#1a2a3a">2500 A</text>
+  <line x1="614" y1="146" x2="1188" y2="146" stroke="#b0c8e8" stroke-width="0.5"/>
+
+  <!-- P3 -->
+  <rect x="614" y="146" width="574" height="28" fill="#ffffff"/>
+  <rect x="617" y="150" width="28" height="20" rx="3" fill="#3a7bd5"/>
+  <text x="631" y="164" text-anchor="middle" font-size="9" font-weight="bold" fill="#ffffff">P3</text>
+  <text x="660" y="164" font-size="10" font-weight="bold" fill="#1a2a3a">Bypass Panel</text>
+  <text x="852" y="164" font-size="9.5" fill="#4a6a8a">MCCB 2500A + Locker Interlock + STS 2500A</text>
+  <text x="1152" y="164" text-anchor="end" font-size="9.5" fill="#1a2a3a">2500 A</text>
+  <line x1="614" y1="174" x2="1188" y2="174" stroke="#b0c8e8" stroke-width="0.5"/>
+
+  <!-- P4 -->
+  <rect x="614" y="174" width="574" height="28" fill="#f5f7fa"/>
+  <rect x="617" y="178" width="28" height="20" rx="3" fill="#3a7bd5"/>
+  <text x="631" y="192" text-anchor="middle" font-size="9" font-weight="bold" fill="#ffffff">P4</text>
+  <text x="660" y="192" font-size="10" font-weight="bold" fill="#1a2a3a">Busway / Busduct</text>
+  <text x="852" y="192" font-size="9.5" fill="#4a6a8a">Copper plug-in busway system + incoming breaker</text>
+  <text x="1152" y="192" text-anchor="end" font-size="9.5" fill="#1a2a3a">2500 A</text>
+  <line x1="614" y1="202" x2="1188" y2="202" stroke="#b0c8e8" stroke-width="0.5"/>
+
+  <!-- T1-T8 -->
+  <rect x="614" y="202" width="574" height="28" fill="#ffffff"/>
+  <rect x="617" y="206" width="42" height="20" rx="3" fill="#2d6a4f"/>
+  <text x="638" y="220" text-anchor="middle" font-size="8.5" font-weight="bold" fill="#ffffff">T1–T8</text>
+  <text x="666" y="220" font-size="10" font-weight="bold" fill="#1a2a3a">Tap-off: Water-cooled Rack ×8</text>
+  <text x="852" y="220" font-size="9.5" fill="#4a6a8a">Built-in MCCB 250A (recommended 315A)</text>
+  <text x="1152" y="220" text-anchor="end" font-size="9.5" fill="#1a2a3a">200 A</text>
+  <line x1="614" y1="230" x2="1188" y2="230" stroke="#b0c8e8" stroke-width="0.5"/>
+
+  <!-- T9 -->
+  <rect x="614" y="230" width="574" height="28" fill="#f5f7fa"/>
+  <rect x="617" y="234" width="28" height="20" rx="3" fill="#2d6a4f"/>
+  <text x="631" y="248" text-anchor="middle" font-size="9" font-weight="bold" fill="#ffffff">T9</text>
+  <text x="666" y="248" font-size="10" font-weight="bold" fill="#1a2a3a">Tap-off: Air-cooled Fan Unit</text>
+  <text x="852" y="248" font-size="9.5" fill="#4a6a8a">Built-in MCCB 100A</text>
+  <text x="1152" y="248" text-anchor="end" font-size="9.5" fill="#1a2a3a">63 A</text>
+  <line x1="614" y1="258" x2="1188" y2="258" stroke="#b0c8e8" stroke-width="0.5"/>
+
+  <!-- T10 -->
+  <rect x="614" y="258" width="574" height="28" fill="#ffffff"/>
+  <rect x="617" y="262" width="28" height="20" rx="3" fill="#2d6a4f"/>
+  <text x="631" y="276" text-anchor="middle" font-size="9" font-weight="bold" fill="#ffffff">T10</text>
+  <text x="666" y="276" font-size="10" font-weight="bold" fill="#1a2a3a">Tap-off: Main CDU</text>
+  <text x="852" y="276" font-size="9.5" fill="#4a6a8a">Built-in MCCB 63A</text>
+  <text x="1152" y="276" text-anchor="end" font-size="9.5" fill="#1a2a3a">32 A</text>
+  <line x1="614" y1="286" x2="1188" y2="286" stroke="#b0c8e8" stroke-width="0.5"/>
+
+  <!-- T11 -->
+  <rect x="614" y="286" width="574" height="28" fill="#f5f7fa"/>
+  <rect x="617" y="290" width="28" height="20" rx="3" fill="#2d6a4f"/>
+  <text x="631" y="304" text-anchor="middle" font-size="9" font-weight="bold" fill="#ffffff">T11</text>
+  <text x="666" y="304" font-size="10" font-weight="bold" fill="#1a2a3a">Tap-off: CRAH A/C Group</text>
+  <text x="852" y="304" font-size="9.5" fill="#4a6a8a">Built-in MCCB 100A + sub-distribution</text>
+  <text x="1152" y="304" text-anchor="end" font-size="9.5" fill="#1a2a3a">50 A</text>
+  <line x1="614" y1="314" x2="1188" y2="314" stroke="#b0c8e8" stroke-width="0.5"/>
+
+  <!-- Total row -->
+  <rect x="614" y="314" width="574" height="26" fill="#e8eef5"/>
+  <text x="660" y="330" font-size="10" font-weight="bold" fill="#1a3a7a">Total: 4 standalone panels + 11 Tap-off Units</text>
+  <text x="1152" y="330" text-anchor="end" font-size="9.5" fill="#2d6a4f">+ BESS battery (standalone)</text>
+  <line x1="614" y1="340" x2="1188" y2="340" stroke="#b0c8e8" stroke-width="0.5"/>
+
+  <!-- Load Summary -->
+  <text x="898" y="358" text-anchor="middle" font-size="11" font-weight="bold" fill="#2a4a6a">Load Summary</text>
+
+  <rect x="614" y="364" width="140" height="52" rx="4" fill="#e8f5ec" stroke="#2d6a4f" stroke-width="1.2"/>
+  <text x="684" y="382" text-anchor="middle" font-size="9" fill="#2d6a4f">Water-cooled Racks ×8</text>
+  <text x="684" y="404" text-anchor="middle" font-size="18" font-weight="bold" fill="#2d6a4f">1200 kW</text>
+
+  <rect x="762" y="364" width="130" height="52" rx="4" fill="#fef3e2" stroke="#b45309" stroke-width="1.2"/>
+  <text x="827" y="382" text-anchor="middle" font-size="9" fill="#b45309">Air-cooled Fan Unit</text>
+  <text x="827" y="404" text-anchor="middle" font-size="18" font-weight="bold" fill="#b45309">40 kW</text>
+
+  <rect x="900" y="364" width="120" height="52" rx="4" fill="#fef3e2" stroke="#b45309" stroke-width="1.2"/>
+  <text x="960" y="382" text-anchor="middle" font-size="9" fill="#b45309">CDU + CRAH</text>
+  <text x="960" y="404" text-anchor="middle" font-size="18" font-weight="bold" fill="#b45309">46 kW</text>
+
+  <rect x="1028" y="364" width="148" height="52" rx="4" fill="#e8eef5" stroke="#3a7bd5" stroke-width="1.5"/>
+  <text x="1102" y="382" text-anchor="middle" font-size="9" fill="#4a6a8a">Total Load</text>
+  <text x="1102" y="404" text-anchor="middle" font-size="18" font-weight="bold" fill="#1a3a7a">~1286 kW</text>
+
+  <text x="754"  y="395" text-anchor="middle" font-size="16" fill="#8ab4d4">+</text>
+  <text x="892"  y="395" text-anchor="middle" font-size="16" fill="#8ab4d4">+</text>
+  <text x="1020" y="395" text-anchor="middle" font-size="16" fill="#8ab4d4">=</text>
+
+  <!-- System Specs -->
+  <text x="898" y="438" text-anchor="middle" font-size="11" font-weight="bold" fill="#2a4a6a">System Specifications</text>
+
+  <rect x="614" y="444" width="574" height="22" fill="#ffffff"/>
+  <text x="630" y="459" font-size="9.5" fill="#4a6a8a">Input Voltage</text>
+  <text x="740" y="459" font-size="9.5" font-weight="bold" fill="#1a2a3a">415 Vac, 3-phase</text>
+  <text x="870" y="459" font-size="9.5" fill="#4a6a8a">System Capacity</text>
+  <text x="980" y="459" font-size="9.5" font-weight="bold" fill="#1a2a3a">2500 A</text>
+  <line x1="614" y1="466" x2="1188" y2="466" stroke="#b0c8e8" stroke-width="0.5"/>
+
+  <rect x="614" y="466" width="574" height="22" fill="#f5f7fa"/>
+  <text x="630" y="481" font-size="9.5" fill="#4a6a8a">UPS Mode</text>
+  <text x="740" y="481" font-size="9.5" font-weight="bold" fill="#1a2a3a">ESS (Energy Storage System)</text>
+  <text x="870" y="481" font-size="9.5" fill="#4a6a8a">Busway Type</text>
+  <text x="980" y="481" font-size="9.5" font-weight="bold" fill="#1a2a3a">Copper plug-in trunking</text>
+  <line x1="614" y1="488" x2="1188" y2="488" stroke="#b0c8e8" stroke-width="0.5"/>
+
+  <rect x="614" y="488" width="574" height="22" fill="#ffffff"/>
+  <text x="630" y="503" font-size="9.5" fill="#4a6a8a">Backup Storage</text>
+  <text x="740" y="503" font-size="9.5" font-weight="bold" fill="#1a2a3a">BESS (Battery Energy Storage, standalone)</text>
+  <text x="870" y="503" font-size="9.5" fill="#4a6a8a">Protection</text>
+  <text x="980" y="503" font-size="9.5" font-weight="bold" fill="#1a2a3a">ACB (P1) + MCCB (all feeders)</text>
+  <line x1="614" y1="510" x2="1188" y2="510" stroke="#b0c8e8" stroke-width="0.5"/>
+
+  <!-- Color Code -->
+  <text x="898" y="534" text-anchor="middle" font-size="11" font-weight="bold" fill="#2a4a6a">Color Code</text>
+
+  <rect x="630" y="542" width="12" height="12" rx="2" fill="#e8eef5" stroke="#3a7bd5" stroke-width="0.8"/>
+  <text x="648" y="553" font-size="9.5" fill="#4a6a8a">Main distribution panels (P1–P4)</text>
+
+  <rect x="800" y="542" width="12" height="12" rx="2" fill="#e8f5ec" stroke="#2d6a4f" stroke-width="0.8"/>
+  <text x="818" y="553" font-size="9.5" fill="#4a6a8a">Cooling tap-off units (T1–T8)</text>
+
+  <rect x="986" y="542" width="12" height="12" rx="2" fill="#fef3e2" stroke="#b45309" stroke-width="0.8"/>
+  <text x="1004" y="553" font-size="9.5" fill="#4a6a8a">Auxiliary tap-off units (T9–T11)</text>
+
+  <rect x="630" y="562" width="12" height="12" rx="2" fill="#e8f5ec" stroke="#2d6a4f" stroke-width="0.8"/>
+  <text x="648" y="573" font-size="9.5" fill="#4a6a8a">UPS / BESS system</text>
+
+  <!-- Bottom bar -->
+  <rect x="0" y="688" width="1200" height="12" fill="#e8eef5"/>
+  <line x1="0" y1="688" x2="1200" y2="688" stroke="#b0c8e8" stroke-width="0.8"/>
+  <text x="600" y="698" text-anchor="middle" font-size="8" fill="#6a8aaa">PDC Electrical SLD — English version — For reference only</text>
+
+  <!-- Outer border -->
+  <rect x="0.5" y="0.5" width="1199" height="699" fill="none" stroke="#b0c8e8" stroke-width="1"/>
+
+</svg>
