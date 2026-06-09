@@ -37,7 +37,6 @@ Business_Documents/
 Canvas/
 Market/
 HRBP/
-ResoucePool/
 SupplyChain/
 COST/
 Projects/
@@ -54,4 +53,43 @@ Solutions Design/
 FOG_Workspace_Summary.md
 
 # Index files
+# Match both nested index.md and root-level index.md (no directory prefix required)
 **/index.md
+/index.md
+
+# --- User-specified ignores ---
+# Top-level directories
+# Note: macOS APFS is case-insensitive at the filesystem layer but git pattern
+# matching is case-sensitive — list every case variant present in the repo.
+# `ResoucePool` is intentionally spelled with one 'r' to match the actual
+# on-disk directory name (do not "correct" without renaming the directory first).
+PROCESS/
+Process/
+process/
+ResoucePool/
+
+# Directories whose name contains "Design" (any case)
+**/Design*/
+
+# Hidden files (name starts with a dot)
+.*
+
+# Files whose name contains Draft / Drafts / Email / Review / 评估 / STD / bom
+# Note: Git pattern matching is case-sensitive on all platforms (even on macOS APFS
+# which is case-insensitive at the filesystem layer). List every case variant we
+# encounter in practice to avoid silent gaps.
+**/*Draft*
+**/*Drafts*
+**/*draft*
+**/*drafts*
+**/*Email*
+**/*email*
+**/*EMAIL*
+**/*Review*
+**/*review*
+**/*REVIEW*
+**/*评估*
+**/*STD*
+**/*std*
+**/*bom*
+**/*BOM*
