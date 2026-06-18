@@ -110,3 +110,17 @@ ResoucePool/
 # Pattern uses `?` to match the single trailing CR byte.
 Icon?
 **/Icon?
+
+# iCloud sync conflict markers (filename suffix " 2.<ext>")
+# When iCloud detects a sync conflict it creates a sibling file with " 2" appended.
+# These are always duplicates of the original — either byte-identical (sync glitch)
+# or pre-split stale versions (when the original was refactored into _blocks/).
+# Added 2026-06-18 after Phase F cleanup: 61 " 2" files removed, 0 tracked.
+**/* 2.md
+**/* 2.html
+**/* 2.pdf
+**/* 2.png
+**/* 2.jpg
+**/* 2.jpeg
+**/* 2.docx
+**/* 2.xlsx
