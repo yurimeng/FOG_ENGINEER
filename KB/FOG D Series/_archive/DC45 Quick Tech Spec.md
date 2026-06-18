@@ -1,6 +1,10 @@
 ---
 tags:
-  - #MDC
+  - "#MDC"
+  - "#type/design-spec"
+  - "#product/dc45"
+  - "#archive"
+
 ---
 > ⚠️ **ARCHIVED — SUPERSEDED** ⚠️
 > 本文档 (V1.3, 2026-05-09) 已被 [[../PRODUCTS/DC45 Tech Spec EN]] / [[../PRODUCTS/DC45 Tech Spec CN]] (V1.4, 2026-05-21) 取代。

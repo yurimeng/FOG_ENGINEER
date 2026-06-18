@@ -1,6 +1,9 @@
 ---
 tags:
-  - #MDC
+  - "#MDC"
+  - "#type/tool"
+  - "#cost"
+
 ---
 
 # Fog Computing TCO Calculator

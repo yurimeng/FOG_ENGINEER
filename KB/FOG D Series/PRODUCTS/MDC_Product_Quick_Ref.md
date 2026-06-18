@@ -1,11 +1,14 @@
 ---
 tags:
-  - #MDC
+  - "#MDC"
+  - "#type/reference"
+  - "#product/dc45"
+
 ---
 # MDC Product Quick Reference
 
 > **Audience:** 销售 / 方案架构师 / 客户经理。用于在 AC40 / AC45 / DC45 三个产品平台之间快速选型判断。
-> **配套产品文档:** [[DC45 Tech Spec EN]] / [[DC45 Tech Spec CN]] · [[../../FOG A Series/PRODUCTS_AC40]] · [[../../FOG A Series/PRODUCTS_AC45]]
+> **配套产品文档:** [[PUBLIC/Tech_Spec/DC45_Tech_Spec_EN]] / [[PUBLIC/Tech_Spec/DC45_Tech_Spec_CN]] · [[PUBLIC/Products/AC40]] · [[PUBLIC/Products/AC45]]
 > **注意:** DC45 IT 容量以 V1.4 (2026-05-21) 为准 (8×150kW + 1×40kW = 1240kW);本表"8×155kW"为 V1.2 旧值,已识别为冲突,详见 [[../DESIGN/STD_DC45#^std-2-1-it|STD §3 冲突 C2]]。
 
 ---
@@ -28,9 +31,9 @@ tags:
 
 详见各产品文档：
 
-- [[../../FOG A Series/PRODUCTS_AC40|KB/FOG A Series/PRODUCTS_AC40]]
-- [[../../FOG A Series/PRODUCTS_AC45|KB/FOG A Series/PRODUCTS_AC45]]
-- [[DC45 Tech Spec EN|KB/FOG D Series/PRODUCTS/DC45 Tech Spec EN]]
+- [[PUBLIC/Products/AC40|AC40]]
+- [[PUBLIC/Products/AC45|AC45]]
+- [[PUBLIC/Tech_Spec/DC45_Tech_Spec_EN|DC45 Tech Spec EN]]
 
 ---
 

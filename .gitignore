@@ -26,8 +26,11 @@ Token_Calc_AC40_DC45_Haiyan_Summary.md
 **/BOM/
 
 # Third-party design specs (working files, not finalized product specs)
+# Exception: keep _blocks/ subdirectories (block spec files for latest versions)
 **/COOLING/DESIGN/
-**/COOLING/*Requirement*
+!/**/COOLING/DESIGN/
+!/**/COOLING/DESIGN/_blocks/**
+**/COOLING/*Requirement*.md
 **/RDHx - Vertiv.md
 **/STULZ_CeilAir.md
 **/UPS_EATON_9395XR.md
@@ -69,7 +72,15 @@ process/
 ResoucePool/
 
 # Directories whose name contains "Design" (any case)
-**/Design*/
+# Exception: keep _blocks/ subdirectories (latest requirement block spec, e.g. V5/V3.2/V1.3)
+# Implementation: ignore .md files at depth 1-2 inside *Design*/ (i.e. top-level specs),
+# then re-include _blocks/ recursively so block spec files pass through to git.
+**/Design*/*.md
+**/Design*/*/*.md
+!**/Design*/_blocks/
+!**/Design*/_blocks/**
+!**/Design*/_blocks/*.md
+!**/Design*/_blocks/*/*.md
 
 # Hidden files (name starts with a dot)
 .*
