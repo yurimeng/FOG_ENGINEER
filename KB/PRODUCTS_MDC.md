@@ -49,10 +49,10 @@ Transformer → Switchgear → [Power Zone: BESS / Generator]
 > ⚠️ **UPS 电池 vs BESS 电池：** 上表中"UPS电池后备"指 UPS 配套的 93LiG2 磷酸铁锂电池柜（分钟级瞬时切换后备）。BESS（如 Tesla Megapack / 国轩）是独立大型储能系统（小时级供电），两者完全不同。
 
 参考：
-- AC40 详细规格：[[PRODUCTS_AC40|KB/PRODUCTS_AC40]]
-- AC45 详细规格：[[PRODUCTS_AC45|KB/PRODUCTS_AC45]]
-- DC45 详细规格：[[PRODUCTS_DC45|KB/PRODUCTS_DC45]]
-- A32 详细规格：[[PRODUCTS_A32|KB/PRODUCTS_A32]]
+- AC40 详细规格：[[PUBLIC/Products/AC40|AC40]]
+- AC45 详细规格：[[PUBLIC/Products/AC45|AC45]]
+- DC45 详细规格：[[PUBLIC/Tech_Spec/DC45_Tech_Spec_EN|DC45]]
+- A32 详细规格：[[PUBLIC/Products/A32|A32]]
 
 ---
 
@@ -119,7 +119,7 @@ Transformer → Switchgear → [Power Zone: BESS / Generator]
 
 > ⚠️ **规则：不允许纯干冷器方案。** 无论 AC40 或 DC45，必须配置 Hybrid Cooling System（干冷器+DX一体化设备），确保环境温度 >28°C 时的散热能力。
 
-参考：[[FOG/KB/Guideline/COOLING_SYSTEM_Guideline|KB/COOLING_SYSTEM_Guideline]]
+参考：[[KB/Guideline/COOLING_SYSTEM_Guideline]]
 
 ---
 
@@ -131,7 +131,7 @@ Transformer → Switchgear → [Power Zone: BESS / Generator]
 | **Grid + UPS + 柴油发电机** | 偏远地区 / 长时备电需求（>8h）| 机械发电、长时间运行 |
 | **Grid + UPS + BESS + 小型柴油** | 极端高可靠性需求 | BESS 覆盖瞬态 + 柴油兜底 |
 
-> 参考：[[FOG/KB/Guideline/POWER_SYSTEMS_Guideline|KB/POWER_SYSTEMS_Guideline]]
+> 参考：[[KB/Guideline/POWER_SYSTEMS_Guideline]]
 
 ---
 
