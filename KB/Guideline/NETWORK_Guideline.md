@@ -7,285 +7,53 @@ tags:
 ---
 # NETWORK SYSTEM Guideline / 网络系统设计 Guideline
 
-Document Version: v1.3
-Last Updated: 2026-06-05
-Source / 来源: 从 `KB/3RD-PARTY/NETWORK/NETWORK_Guideline.md` 迁移至 `KB/Guideline/NETWORK_Guideline.md`（v1.2, 2026-05-19），v1.3 章节 ID 归位与结构标准化。
+> **执行摘要**:本文档为网络系统设计原则(Network System Design Guideline),定义网络架构选型、IB/ROCE 策略、带内/带外管理原则和产品匹配规则。适用于 MDC 模块化数据中心集群(Network Zone)的设计选型。统一执行准则与章节 ID 体系见 [[PRINCIPLE_Guideline]]。
+
+## 文档导航
+
+| 块 | 主题 | 包含章节 |
+|----|------|---------|
+| [[_blocks/NETWORK_Guideline/01_N1_N2_Foundation]] | N-1/N-2 文件定位与核心设计原则 | N-1, N-2 |
+| [[_blocks/NETWORK_Guideline/02_N3_Architecture]] | N-3 网络架构选型 | N-3 |
+| [[_blocks/NETWORK_Guideline/03_N4_IB]] | N-4 IB 设计原则 | N-4 |
+| [[_blocks/NETWORK_Guideline/04_N5_ROCE]] | N-5 ROCE 设计原则 | N-5 |
+| [[_blocks/NETWORK_Guideline/05_N6_N7_N8_Management]] | N-6/N-7/N-8 管理网络(带内+带外+对比) | N-6, N-7, N-8 |
+| [[_blocks/NETWORK_Guideline/06_N9_N10_Zone_Security]] | N-9/N-10 网络与 IT Zone 匹配与安全设计 | N-9, N-10 |
+| [[_blocks/NETWORK_Guideline/07_N11_N12_Prohibitions_Refs]] | N-11/N-12 禁止事项与参考文档 | N-11, N-12 |
 
 ---
 
-## 速查 / Quick Reference
+## 1. 文件定位与核心设计原则
+![[_blocks/NETWORK_Guideline/01_N1_N2_Foundation]]
 
-> **本文档为网络系统设计原则（Guideline），定义网络架构选型、IB/ROCE 策略、带内/带外管理原则和产品匹配规则。** 适用于 MDC 模块化数据中心集群（Network Zone）的设计选型。统一执行准则与章节 ID 体系见 [[PRINCIPLE_Guideline]]。
+## 2. 网络架构选型
+![[_blocks/NETWORK_Guideline/02_N3_Architecture]]
 
-**引用顺序:**
-1. [[NETWORK_Guideline]] ← 本文档（位于 `KB/Guideline/`）
-2. 按架构类型查阅对应产品文档（位于 `KB/3RD-PARTY/NETWORK/`）
+## 3. IB 设计原则
+![[_blocks/NETWORK_Guideline/03_N4_IB]]
 
----
+## 4. ROCE 设计原则
+![[_blocks/NETWORK_Guideline/04_N5_ROCE]]
 
-## 章节速查 / Section Index
+## 5. 管理网络(带内+带外+对比)
+![[_blocks/NETWORK_Guideline/05_N6_N7_N8_Management]]
 
-| 章节 | 标题 | 一句话定位 |
-|------|------|-----------|
-| [[#N-1 文件定位]] | 文件定位 | 网络 Guideline 在 KB 体系中的位置与引用入口 |
-| [[#N-2 核心设计原则]] | 核心设计原则 | 分层架构、AI 优先、管理分离、高可靠冗余 |
-| [[#N-3 网络架构选型]] | 网络架构选型 | 三层网络模型与拓扑选型 |
-| [[#N-4 IB 设计原则]] | IB 设计原则 | InfiniBand 适用场景、参数与设计要点 |
-| [[#N-5 ROCE 设计原则]] | ROCE 设计原则 | RoCE 适用场景、版本与设计要点 |
-| [[#N-6 带内管理网络]] | 带内管理网络 | In-Band 管理定义、覆盖范围与 VLAN 规划 |
-| [[#N-7 带外管理网络]] | 带外管理网络 | OOB 管理定义、覆盖范围与设计要点 |
-| [[#N-8 带内 vs 带外管理对比]] | 带内 vs 带外管理对比 | 维度对比与双平面部署要求 |
-| [[#N-9 网络与 IT Zone 匹配]] | 网络与 IT Zone 匹配 | A32/AC40/DC45/MDC 集群的网络架构对应 |
-| [[#N-10 安全设计原则]] | 安全设计原则 | 网络分段、防火墙、IDS/IPS、加密、802.1X |
-| [[#N-11 禁止事项]] | 禁止事项 | OOB/IB 共用、单点链路、缺 BMC 等禁令 |
-| [[#N-12 参考文档]] | 参考文档 | 关联产品文档与规格引用 |
+## 6. 网络与 IT Zone 匹配与安全设计
+![[_blocks/NETWORK_Guideline/06_N9_N10_Zone_Security]]
 
----
-
-## N-1 文件定位
-
-> **本文档为网络系统设计原则（Guideline），定义网络架构选型、IB/ROCE 策略、带内/带外管理原则和产品匹配规则。**
-> 具体产品参数请查阅各产品文档。
-
-| 项目 | 说明 |
-|------|------|
-| **Supplier Name** | — |
-| **Category** | Network System Design Guideline |
-| **适用对象** | MDC 模块化数据中心集群（Network Zone）设计选型总则 |
-| **版本** | V1.3（2026-06-05 章节 ID 归位与结构标准化） |
-| **总入口** | 统一执行准则与章节 ID 体系见 [[PRINCIPLE_Guideline]] |
-
-**引用顺序**:
-1. [[NETWORK_Guideline]] ← 本文档（位于 `KB/Guideline/`）
-2. 按架构类型查阅对应产品文档（位于 `KB/3RD-PARTY/NETWORK/`）
-
-> 跨文件引用规范: 详见 [[PRINCIPLE_Guideline#§2 文件清单与章节 ID 体系]]。
-
----
-
-## N-2 核心设计原则
-
-| 原则 | 说明 |
-|------|------|
-| **分层架构** | 接入层 / 汇聚层 / 核心层三层模型 |
-| **AI 负载优先** | 网络设计优先满足 GPU 集群高速互联需求 |
-| **管理分离** | 带内管理网络与业务网络物理隔离 |
-| **高可靠冗余** | 关键链路和设备支持冗余配置 |
-
-> 详细分层实现见 [[#N-3 网络架构选型]]；管理分离与高可靠冗余见 [[#N-6 带内管理网络]]、[[#N-7 带外管理网络]]、[[#N-8 带内 vs 带外管理对比]]。
-
----
-
-## N-3 网络架构选型
-
-### N-3.1 三层网络模型
-
-MDC 网络架构遵循典型的**三层网络模型**:
-
-| 层级 | 功能 | 说明 |
-|------|------|------|
-| **接入层（Access）** | 服务器节点高速互联 | 交换机直接连接服务器，支持 10G/25G/100G |
-| **汇聚层（Aggregation）** | 跨服务器流量汇聚 | 聚合多个接入层交换机流量 |
-| **核心层（Core）** | 跨集群/外部连接 | 连接汇聚层与外部网络 |
-
-### N-3.2 网络拓扑选型
-
-| 拓扑类型 | 适用场景 | 优势 | 劣势 |
-|---------|---------|------|------|
-| **传统三层** | 中小型集群（<50节点）| 结构清晰，易管理 | 延迟较高 |
-| **Fat Tree** | 中大型集群 | 延迟低，可扩展 | 成本较高 |
-| **Dragonfly** | 超大规模集群（AI 训练）| 极低延迟，极高带宽 | 设计复杂 |
-
-> 拓扑选型与 IT Zone 形态的对应关系见 [[#N-9 网络与 IT Zone 匹配]]。
-
----
-
-## N-4 IB 设计原则
-
-### N-4.1 适用场景
-
-| 场景 | IB 必要性 |
-|------|----------|
-| **AI 训练集群**（大规模 GPU 互联）| 必须（NVIDIA GH200/GB200 等 NVLink 集群依赖 IB）|
-| **AI 推理集群** | 推荐（视延迟要求）|
-| **通用计算集群** | 可选（以太网可满足）|
-
-### N-4.2 IB 选型参数
-
-| 参数 | 参考值 |
-|------|-------|
-| 速率 | NDR 400G / HDR 200G / FDR 100G |
-| 交换机 | Quantum-2 / QM8700 系列 |
-| 线缆 | AOC / DAC 光缆 |
-| 网络直径 | 推荐 ≤3 跳（降低延迟）|
-
-### N-4.3 IB 网络设计要点
-
-- GPU 服务器间采用 IB 高速互联，优先选用 NDR 400G
-- IB 网络与以太网分开部署，通过网关互通
-- 交换机间采用全网状或部分网状连接，减少跳数
-- 子网管理器（SM）配置冗余
-
-> 与以太网 RDMA 替代方案的对比见 [[#N-5 ROCE 设计原则]]。
-
----
-
-## N-5 ROCE 设计原则
-
-### N-5.1 适用场景
-
-| 场景 | ROCE 必要性 |
-|------|------------|
-| **以太网环境下的 RDMA 需求** | 推荐（替代 IB 的低成本方案）|
-| **多租户云环境** | 推荐 |
-| **混合集群（IB + 以太网）**| 边界互通 |
-
-### N-5.2 ROCE 版本选型
-
-| 版本 | 说明 |
-|------|------|
-| **RoCEv1** | L2 层 RDMA，仅同一广播域内 |
-| **RoCEv2** | L3 层 RDMA，支持跨子网（推荐）|
-
-### N-5.3 ROCE 网络设计要点
-
-- **DCB（Differential Congestion Notification）必须开启**: PFC（Priority Flow Control）+ ECN（Explicit Congestion Notification）
-- 网络设备（交换机）必须支持 DCB
-- 推荐使用无损以太网（Lossless Ethernet）
-- 优先级队列规划：存储流量高优先级，AI 训练流量最高优先级
-
-> IB 与 RoCE 的协同部署边界见 [[#N-4 IB 设计原则]]。
-
----
-
-## N-6 带内管理网络（In-Band Management）
-
-### N-6.1 定义
-
-带内管理网络使用与业务流量**相同的网络路径**进行设备管理和监控。
-
-### N-6.2 覆盖范围
-
-| 设备类型 | 带内管理 | 说明 |
-|---------|---------|------|
-| 服务器 / GPU 节点 | ✅ 必须 | 通过业务网络管理 |
-| 存储设备 | ✅ 必须 | 存储管理平面 |
-| 以太网交换机 | ✅ 必须 | 交换机带内管理 |
-| IB 交换机 | ⚠️ 视需求 | 可通过 IB 网络管理 |
-| 冷却系统设备 | ✅ 必须 | CDU、干冷器等 |
-| 电力系统设备 | ✅ 必须 | UPS、BESS 等 |
-
-### N-6.3 带内管理 VLAN 规划
-
-| VLAN ID | 用途 | 优先级 |
-|---------|------|-------|
-| VLAN 10 | 业务网络（计算/存储）| 高 |
-| VLAN 20 | 带内管理 | 中 |
-| VLAN 30 | 监控/告警 | 低 |
-
-> 与 OOB 的对比与双平面部署要求见 [[#N-8 带内 vs 带外管理对比]]。
-
----
-
-## N-7 带外管理网络（Out-of-Band，OOB）
-
-### N-7.1 定义
-
-带外管理网络使用**独立物理网络**，与业务流量完全隔离，用于设备紧急管理和远程控制。
-
-### N-7.2 覆盖范围
-
-| 设备类型 | 带外管理 | 说明 |
-|---------|---------|------|
-| 服务器 / GPU 节点 | ✅ 必须（BMC/IPMI/iLO/IDRAC）| 物理隔离，紧急控制 |
-| 以太网交换机 | ✅ 必须（Console / OOB 端口）| 物理隔离，网络故障时仍可管理 |
-| IB 交换机 | ✅ 推荐（带外管理口）| 物理隔离 |
-| 冷却系统设备 | ✅ 推荐 | 物理隔离 |
-| 电力系统设备 | ✅ 必须 | 物理隔离，紧急停机 |
-
-### N-7.3 带外管理网络设计要点
-
-- 独立 VLAN，物理隔离于业务网络
-- 推荐使用小型 8 端口管理交换机汇聚
-- 支持远程 KVM、虚拟媒体、电源循环
-- BMC/IPMI/iLO/IDRAC 启用，配置独立管理 IP
-- Console 服务器用于串口管理
-
-> 与带内管理形成双平面，详见 [[#N-8 带内 vs 带外管理对比]]；禁止事项见 [[#N-11 禁止事项]]。
-
----
-
-## N-8 带内 vs 带外管理对比
-
-| 维度 | 带内管理（In-Band）| 带外管理（Out-of-Band）|
-|------|-----------------|---------------------|
-| 网络路径 | 与业务流量共用 | 独立物理网络 |
-| 网络故障时可用性 | ❌ 不可用 | ✅ 可用 |
-| 安全性 | 暴露于业务网络 | 物理隔离，更安全 |
-| 带宽占用 | 占用业务带宽 | 独立带宽 |
-| 部署成本 | 低 | 较高（独立网络）|
-| 典型用途 | 日常配置、监控 | 紧急控制、故障恢复 |
-
-> **设计要求:** 带内 + 带外**双平面部署**，互为备份，确保任何情况下均可管理设备。详见 [[#N-6 带内管理网络]] 与 [[#N-7 带外管理网络]]。
-
----
-
-## N-9 网络与 IT Zone 匹配
-
-| IT Zone | 推荐网络架构 | IB 需求 | 管理网络 |
-|---------|------------|--------|---------|
-| **A32**（独立）| 小型二层网络 | 可选 | 带内 + 带外 |
-| **AC40**（40ft）| 三层网络（接入/汇聚/核心）| 推荐（推理）| 带内 + 带外 |
-| **DC45**（45ft）| 三层网络 + IB 高速互联 | 必须（训练集群）| 带内 + 带外 |
-| **MDC 集群** | 多集群互联，大型 Fat Tree | 按集群需求 | 带内 + 带外 |
-
-> IT Zone 容量与 UPS 配置见 [[POWER_SYSTEMS_Guideline#§P-2 产品对照表]]；IT↔Cooling 配对见 [[COOLING_SYSTEM_Guideline#§G-8 IT Zone 与冷却区匹配]]。
-
----
-
-## N-10 安全设计原则
-
-| 安全措施 | 说明 |
-|---------|------|
-| 网络分段 | VLAN 隔离不同业务区域 |
-| 防火墙 | 边界部署，访问控制 |
-| IDS/IPS | 入侵检测与防御 |
-| 加密传输 | TLS/IPsec 加密管理流量 |
-| 802.1X | 接入层设备认证 |
-
-> 合规与认证要求汇总见 [[Compliance_Guideline#§C-7 认证要求汇总]]。
-
----
-
-## N-11 禁止事项
-
-- ❌ 带外管理网络不得与带内管理网络共用物理链路
-- ❌ IB 和以太网不得混用同一交换机（除非网关设备）
-- ❌ 禁止不带冗余的单点网络链路
-- ❌ 禁止不带 BMC/IPMI 的服务器入网
-
-> 上报触发条件见 [[PRINCIPLE_Guideline#§1.6 上报原则]] 与 SPOF 识别 [[Risk_Guideline#§R-2 单点故障识别]]。
-
----
-
-## N-12 参考文档
-
-- 网络产品（引澜布线系统）：[[PRODUCTS_NETWORK]]
-- AC40 网络端口配置：[[AC40_NETWORK_CONF|KB/3RD-PARTY/NETWORK/AC40_NETWORK_CONF]]（PDF 元数据伴侣）
-- AC40 产品规格：[[PRODUCTS_AC40]]
-- DC45 产品规格：[[PRODUCTS_DC45]]
-- MDC 标准组合：[[PRODUCTS_MDC]]
-- 索引与执行准则：[[PRINCIPLE_Guideline]]
-- 相关：[[COOLING_SYSTEM_Guideline]]、[[POWER_SYSTEMS_Guideline]]、[[Risk_Guideline]]、[[Compliance_Guideline]]
+## 7. 禁止事项与参考文档
+![[_blocks/NETWORK_Guideline/07_N11_N12_Prohibitions_Refs]]
 
 ---
 
 ## Changelog
 
-> v1.3 变更：章节 ID 归位与结构标准化（2026-06-05）。具体变更:
-> - **章节 ID 归位**: 12 个一级章节按 [[PRINCIPLE_Guideline#§8 章节 ID 一致性表]] 分配 N-1 ~ N-12 短码，标题后缀对齐：`文件定位` / `核心设计原则` / `网络架构选型` / `IB 设计原则` / `ROCE 设计原则` / `带内管理网络` / `带外管理网络` / `带内 vs 带外管理对比` / `网络与 IT Zone 匹配` / `安全设计原则` / `禁止事项` / `参考文档`。
-> - **结构标准化**: 新增 H1 标题、元数据（Version / Last Updated / Source）、速查（Quick Reference）、章节速查（Section Index）表；`## Changelog` 统一放置于文件末尾。
-> - **交叉链接**: 章节内新增 `[[#§ID 标题]]` 内联锚点；跨文件引用统一使用 `[[PRINCIPLE_Guideline#§X ...]]`、`[[POWER_SYSTEMS_Guideline#§P-2 ...]]`、`[[COOLING_SYSTEM_Guideline#§G-8 ...]]` 等 § 前缀短码格式。
-> - **内容**: 所有技术规则、表格、参数、禁令保持原样，未做删改。
+> v1.4 变更(2026-06-17):结构拆分。原 12 个 H2 章节拆分为 7 个独立块文件,存放于 `_blocks/NETWORK_Guideline/`。保留全部 N-1 ~ N-12 章节 ID 与交叉引用。frontmatter 不变。
 
-> v1.2 变更（2026-05-19）：从 `KB/3RD-PARTY/NETWORK/NETWORK_Guideline.md` 迁移至 `KB/Guideline/NETWORK_Guideline.md`，与其他 Guideline 统一归位；引用路径同步更新。
+> v1.3 变更:章节 ID 归位与结构标准化(2026-06-05)。具体变更:
+> - **章节 ID 归位**: 12 个一级章节按 [[PRINCIPLE_Guideline#§8 章节 ID 一致性表]] 分配 N-1 ~ N-12 短码。
+> - **结构标准化**: 新增 H1 标题、元数据(Version / Last Updated / Source)、速查(Quiqk Reference)、章节速查(Section Index)表;`## Changelog` 统一放置于文件末尾。
+> - **交叉链接**: 章节内新增 `[[#§ID 标题]]` 内联锚点;跨文件引用统一使用 `[[PRINCIPLE_Guideline#§X ...]]` 等 § 前缀短码格式。
+> - **内容**: 所有技术规则、表格、参数、禁令保持原样,未做删改。
+
+> v1.2 变更(2026-05-19):从 `KB/3RD-PARTY/NETWORK/NETWORK_Guideline.md` 迁移至 `KB/Guideline/NETWORK_Guideline.md`,与其他 Guideline 统一归位;引用路径同步更新。
