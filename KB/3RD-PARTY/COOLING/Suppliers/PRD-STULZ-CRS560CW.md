@@ -4,15 +4,15 @@ tags:
   - "#type/3rd-party"
   - "#product/cooling"
   - "#supplier/stulz"
-  - "#component/crah"
+  - "#component/inrow-cw"
   - "#model/CRS560CW"
   - "#product/l1800c45"
   - "#MDC"
 doc_version: v1.0
 supplier: STULZ
-category: CRAH — 房间级下送风冷冻水型精密空调（CW，全水盘管，无压缩机）
+category: STULZ CyberRow CW — 列间冷冻水空调（全水盘管，无压缩机）
 model: CRS 560 CW（非标版）
-applicable_zone: L1800C45（双环路 CRAH 侧 10/16 °C）
+applicable_zone: L1800C45（双环路 列间侧 10/16 °C）
 status: ✅ ATS approved（2026-08-30）
 audience: 人(销售/售前/选型工程师)
 source: StulzSelect Vers. 5.6.0 选型书 · 项目 CRS560CW · Charles.Wang · 2026-08-18 + 厂家外形图 page 1/1
@@ -21,9 +21,15 @@ source: StulzSelect Vers. 5.6.0 选型书 · 项目 CRS560CW · Charles.Wang · 
 # STULZ CRS 560 CW — 产品 PRD（ATS approved）
 
 > **Audience:** 销售 / 售前 / 选型工程师。
-> **本文档角色:** L1800C45 CRAH 侧已批准机型的参数镜像（datasheet mirror）+ 与现行 [[CRAH_Requirement V5]] 的工况差异对照。
+> **本文档角色:** L1800C45 列间侧已批准机型的参数镜像（datasheet mirror）+ 与现行 [[CRAH_Requirement V5]] 的工况差异对照。
 > **数据源:** StulzSelect Vers. 5.6.0 选型输出（项目 CRS560CW · 2026-08-18）+ 厂家外形尺寸图。**单一来源**，尚无第二源交叉验证。
-> **关键区别:** 本机型为 **CW 全水盘管**（冷冻水 10/16 °C，机内无压缩机、无制冷剂），与 KB 现有 [[PRD-STULZ-CeilAir]]（OHS-084-DG-FC 顶置自含式 DX）是**两种不同架构**，不构成替代关系。
+> ## 分类：这是列间机，不是 CRAH
+>
+> 本机型属 **STULZ CyberRow CW** 系列 —— **列间冷冻水空调**：600 mm 宽机柜嵌入机柜列，**左/右侧向送风**进冷/热通道，全水盘管、机内无压缩机无制冷剂。
+>
+> **「CRAH」这个词在本 KB 内只指 L1240C45 的吊顶机型**（[[PRD-STULZ-CeilAir|STULZ CeilAir OHS-084-DG-FC]]，顶置自含式 DX，见 [[CRAH_Requirement V5]]）。两者是完全不同的机型类别、不同的送风方式、不同的冷源架构，**不构成替代关系，术语也不可互换**。
+>
+> ⚠️ 站点仓库把 CW560/CW330 标为 `crahId` / "in-row CRAH" / "列间空调"，**分类词用错**（应为 CyberRow CW），需回站点修正。
 
 ## 文档导航
 
@@ -43,8 +49,8 @@ source: StulzSelect Vers. 5.6.0 选型书 · 项目 CRS560CW · Charles.Wang · 
 | 字段 | 内容 |
 |------|------|
 | 供应商 | STULZ（德） |
-| 产品类别 | 房间级下送风精密空调 · **CW 型**（全水盘管 + 两通调节阀，无压缩机） |
-| 适配产品线 | **L1800C45**（`L1800C45DR220`）—— 双环路中的 CRAH 侧 10/16 °C 回路 |
+| 产品类别 | **STULZ CyberRow CW** 列间冷冻水空调（全水盘管 + 两通调节阀，无压缩机） |
+| 适配产品线 | **L1800C45**（`L1800C45DR220`）—— 双环路中的 列间侧 10/16 °C 回路 |
 | 客户价值 | 冷源集中在室外冷站，箱内只走水，无制冷剂充注、无箱内压缩机噪声与维护点；与 GPU 暖水回路解耦 |
 | 评审状态 | ✅ **ATS approved（2026-08-30）** |
 
@@ -90,7 +96,7 @@ source: StulzSelect Vers. 5.6.0 选型书 · 项目 CRS560CW · Charles.Wang · 
 
 | # | 参数 | 数值 | 单位 | 备注 |
 |---|------|------|------|------|
-| 1 | 进口 / 出口温度 | 10.0 / 16.0 | °C | **对齐 L1800C45 CRAH 侧 10/16 °C** |
+| 1 | 进口 / 出口温度 | 10.0 / 16.0 | °C | **对齐 L1800C45 列间侧 10/16 °C** |
 | 2 | 流量 | 8.2 | m³/h | |
 | 3 | 介质 / 乙二醇浓度 | 水 / 0 | — / % | **纯水，无防冻液** |
 | 4 | CW 盘管压降 | 12 | kPa | |
@@ -121,14 +127,14 @@ source: StulzSelect Vers. 5.6.0 选型书 · 项目 CRS560CW · Charles.Wang · 
 
 | 决策项 | 推荐配置 | 备注 |
 |--------|----------|------|
-| 归属 SKU | L1800C45（`L1800C45DR220`） | 双环路 CRAH 侧 |
+| 归属 SKU | L1800C45（`L1800C45DR220`） | 双环路 列间侧 |
 | 单机能力 | 57.3 kW（净 54.7 kW） | 全显冷 |
-| 台数 / 冗余模型 | **待定（P0）** | 见 Q1 —— L1800C45 的 CRAH 侧热负荷尚未在 KB 内锁定 |
+| 台数 / 冗余模型 | **待定（P0）** | 见 Q1 —— L1800C45 的 列间侧热负荷尚未在 KB 内锁定 |
 | 部署条件 | 箱内室内型，下送风 | |
 | 水质 | 纯水（0% 乙二醇） | 与含 PG25 的 L1240C45 二次侧**不通用**，见 §4 |
 | 电制式 | 400 V / 50 Hz | 与 [[PRD-STULZ-CeilAir]] 的 60 Hz-only 限制**不同**，本机型无该市场准入阻塞 |
 
-> **IT Load vs Total Facility Load：** 本表 57.3 kW 为**单台机组冷量**，不是 IT 负荷也不是设施总负荷。L1800C45 的 1800 kW 为 IT 负荷，其中绝大部分由 GPU 冷板经 CDU 带走；CRAH 侧只承担残余风冷负荷。客户提「X MW」时按 CLAUDE.md Hard Rule 5 澄清口径。
+> **IT Load vs Total Facility Load：** 本表 57.3 kW 为**单台机组冷量**，不是 IT 负荷也不是设施总负荷。L1800C45 的 1800 kW 为 IT 负荷，其中绝大部分由 GPU 冷板经 CDU 带走；列间侧只承担残余风冷负荷。客户提「X MW」时按 CLAUDE.md Hard Rule 5 澄清口径。
 
 ---
 
@@ -150,7 +156,7 @@ source: StulzSelect Vers. 5.6.0 选型书 · 项目 CRS560CW · Charles.Wang · 
 ### 结论
 
 1. **不得**用本 PRD 覆盖或替代 [[CRAH_Requirement V5]] —— 两者服务不同 SKU。
-2. **L1800C45 尚无专属 CRAH Requirement**。在其建立前，本 PRD 是该 SKU CRAH 侧选型的唯一书面依据，台数 / 冗余 / 漂移三项处于未锁定状态（Q1、Q2）。
+2. **L1800C45 尚无专属 列间空调 Requirement**。在其建立前，本 PRD 是该 SKU 列间侧选型的唯一书面依据，台数 / 冗余 / 漂移三项处于未锁定状态（Q1、Q2）。
 3. 若后续决定为 L1800C45 建 `CRAH_Requirement V6`，应按 CLAUDE.md §8 新建版本文件，**不得**原地改写 V5。
 
 ^prd-stulz-crs560cw-delta
@@ -161,7 +167,7 @@ source: StulzSelect Vers. 5.6.0 选型书 · 项目 CRS560CW · Charles.Wang · 
 
 | # | 澄清项 | 优先级 | 状态 |
 |---|--------|--------|------|
-| Q1 | L1800C45 CRAH 侧总热负荷 = ? 由此定台数与冗余模型（N+1 / 2N） | **P0** | ⏳ 待 ATS / Cooling Engineer 出算 |
+| Q1 | L1800C45 列间侧总热负荷 = ? 由此定台数与冗余模型（N+1 / 2N） | **P0** | ⏳ 待 ATS / Cooling Engineer 出算 |
 | Q2 | 冷冻水 ±2 °C 漂移下的冷量衰减曲线（对标 V5 Branch 3 漂移分析方法） | P1 | ⏳ 待 STULZ 提供 |
 | Q3 | 集成加湿器是否选配？水质、补水与排水接口要求 | P1 | ⏳ 待 STULZ 确认 |
 | Q4 | 认证状态：CE / UL / CCC 覆盖情况与证书编号 | **P0** | ⏳ 待 STULZ 提供（[[PRD-STULZ-CeilAir]] 的 CE 缺席问题须逐机型确认，不可类推） |
@@ -184,7 +190,7 @@ source: StulzSelect Vers. 5.6.0 选型书 · 项目 CRS560CW · Charles.Wang · 
 - 选型总则：[[COOLING_SYSTEM_Guideline]]
 - 归属产品：[[KB/LIQUID/L1800C45/index|L1800C45]] · [[NAMING_MAP]]
 - 同 SKU 配套 CDU：[[PRD-STULZ-SCR14103W]]
-- 现行 CRAH 基线（**另一 SKU**）：[[CRAH_Requirement V5]] · [[PRD-STULZ-CeilAir]]
+- 现行 列间空调 基线（**另一 SKU**）：[[CRAH_Requirement V5]] · [[PRD-STULZ-CeilAir]]
 - 同域参考 PRD：[[PRD-Vertiv-RDHx]] · [[PRD-同飞-Chiller-600KW]] · [[PRD-泰铂-Chiller]]
 
 ---

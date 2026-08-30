@@ -31,8 +31,8 @@ Version: v1.1 | Date: 2026-08-30 | Full SKU ID: `L1800C45DR220` | Status: `shipp
 >
 > **v1.0 first release — notes (still valid):**
 > 1. This SKU has **no DESIGN/ engineering documentation yet.** Capacity, density, temperature levels and the power boundary are taken from the site's customer-facing wording (`PRODUCT-MATRIX.md` D-13 · `llms-full.txt`).
-> 2. Two cooling devices are ATS-approved with written vendor backing: CDU = **STULZ SCR 14103 W** ([[PRD-STULZ-SCR14103W]]), CRAH = **STULZ CRS 560 CW** ([[PRD-STULZ-CRS560CW]]). Those two PRDs are currently the only written basis for this SKU's cooling selection.
-> 3. **No L1800C45-specific CDU / CRAH Requirement exists.** The current [[CDU_Requirement V5]] / [[CRAH_Requirement V5]] are scoped to L1240C45 and **do not apply here** — temperatures run about 14 K higher, the fluid is pure water, and the connections are Tri-Clamp.
+> 2. Two cooling devices are ATS-approved with written vendor backing: CDU = **STULZ SCR 14103 W** ([[PRD-STULZ-SCR14103W]]), 列间空调 = **STULZ CRS 560 CW** ([[PRD-STULZ-CRS560CW]]). Those two PRDs are currently the only written basis for this SKU's cooling selection.
+> 3. **No L1800C45-specific CDU / 列间空调 Requirement exists.** The current [[CDU_Requirement V5]] / [[CRAH_Requirement V5]] are scoped to L1240C45 and **do not apply here** — temperatures run about 14 K higher, the fluid is pure water, and the connections are Tri-Clamp.
 > 4. Structural, environmental, network, fire and service fields are all ⏳ **#unconfirmed**, pending DESIGN/. **Do not backfill them from L1240C45.**
 
 ---
@@ -45,7 +45,7 @@ Version: v1.1 | Date: 2026-08-30 | Full SKU ID: `L1800C45DR220` | Status: `shipp
 | 2 | Product Positioning | ✅ |
 | 3 | IT Capacity (incl. IT Load vs Total Facility Load) | partly ⏳ |
 | 4 | Rack Specifications | mostly ⏳ |
-| 5 | Cooling System (dual loop: warm-water GPU + chilled-water CRAH) | ✅ equipment approved |
+| 5 | Cooling System (dual loop: warm-water GPU + CyberRow CW in-row units) | ✅ equipment approved |
 | 6 | Power Distribution (UPS outside the container) | partly ⏳ |
 | 7 | Structural Specifications | partly ⏳ |
 | 8 | Network & Cable Management | ⏳ |
@@ -87,10 +87,10 @@ The typical buyer already has the substation capacity — an MV feed on the camp
 | SKU | When to pick it | Governing constraint |
 |---|---|---|
 | [[L1240C45_Tech_Spec_EN\|L1240C45]] | The site has **no** separate electrical room and wants UPS + batteries + busbar to arrive with the container as one closed delivery | UPS **inside**, 150 kW per rack, single-loop three-branch TCS (PG25, 26–28 °C) |
-| **L1800C45 (this document)** | The site **already has** — or is willing to build — an electrical room, and wants maximum IT density per footprint | UPS **outside**, 220 kW per rack, dual loop (GPU 36–40 °C warm water + CRAH 10/16 °C chilled water) |
+| **L1800C45 (this document)** | The site **already has** — or is willing to build — an electrical room, and wants maximum IT density per footprint | UPS **outside**, 220 kW per rack, dual loop (GPU 36–40 °C warm water + 列间空调 10/16 °C chilled water) |
 | [[L450C20_Tech_Spec_EN\|L450C20]] | Sites a 45ft high-cube simply **cannot enter**: legacy buildings, rooftops, basements, height- or width-restricted haul routes | 20ft shell, 450 kW, dual loop, UPS outside |
 
-**The dual loop is this SKU's architectural watershed.** L1240C45 hangs cold plates, rear-door heat exchangers and ceiling units off a single 26–28 °C PG25 TCS. L1800C45 instead puts the GPU cold-plate load on a **36–40 °C warm-water** loop (long free-cooling hours on dry coolers outdoors) and gives the residual air-side load its own **independent 10/16 °C chilled-water** CRAH loop. The two loops are decoupled in fluid, temperature and hydraulics, and neither constrains the other — that is the system complexity you pay for pushing a rack to 220 kW, and it is also where the energy return comes from.
+**The dual loop is this SKU's architectural watershed.** L1240C45 hangs cold plates, rear-door heat exchangers and ceiling units off a single 26–28 °C PG25 TCS. L1800C45 instead puts the GPU cold-plate load on a **36–40 °C warm-water** loop (long free-cooling hours on dry coolers outdoors) and gives the residual air-side load its own **independent 10/16 °C chilled-water** in-row CW loop. The two loops are decoupled in fluid, temperature and hydraulics, and neither constrains the other — that is the system complexity you pay for pushing a rack to 220 kW, and it is also where the energy return comes from.
 
 > **No competitor comparison.** The table above compares SKUs within our own line only.
 
@@ -104,7 +104,7 @@ The typical buyer already has the substation capacity — an MV feed on the camp
 | Maximum rack density | **220 kW** (density code `R220`) | ✅ site |
 | Rack count and composition | **8× 220 kW liquid-cooled + 1× 40 kW air-cooled = 9 racks** | ✅ site Designer profile `l1800.json` |
 | GPU platforms | GB300 NVL72 · B300 HGX (SXM / NVLink) | ✅ site |
-| Liquid / air load split (φ_air) | ⏳ **#unconfirmed** — waiting on the Cooling Engineer for the dual-loop heat-split calculation (it sets the CRAH quantity, see [[PRD-STULZ-CRS560CW]] Q1), expected TBD | ⏳ |
+| Liquid / air load split (φ_air) | ⏳ **#unconfirmed** — waiting on the Cooling Engineer for the dual-loop heat-split calculation (it sets the 列间空调 quantity, see [[PRD-STULZ-CRS560CW]] Q1), expected TBD | ⏳ |
 
 > 🔶 **derived note (must not be quoted as a specification):** 1800 kW ÷ 220 kW per rack back-calculates to roughly 8–9 racks. Baseline §1.1 explicitly classifies that back-calculation as 🔶 derived and **it must not be issued to customers as a specification**.
 >
@@ -117,7 +117,7 @@ The typical buyer already has the substation capacity — an MV feed on the camp
 | Metric | Definition | L1800C45 value | Confidence |
 |---|---|---|---|
 | **IT Load** | Electrical power actually consumed by servers / GPUs, excluding all cooling and distribution losses | **1800 kW** | ✅ site |
-| **Total Facility Load** | IT Load + CDU pump power + CRAH fans + outdoor heat rejection + distribution losses + auxiliaries | **Varies with PUE — computed per site with the TCO / Designer at <https://mdcx.org>** | ✅ adjudicated |
+| **Total Facility Load** | IT Load + CDU pump power + 列间空调 fans + outdoor heat rejection + distribution losses + auxiliaries | **Varies with PUE — computed per site with the TCO / Designer at <https://mdcx.org>** | ✅ adjudicated |
 
 > **PUE is written `1.0x` everywhere (adjudicated by Yuri, 2026-08-30 · C-2 closed).** No fixed value, no range, no "typical value" — it is computed per site with the TCO / Designer at <https://mdcx.org>. L1240C45's former 1.15–1.20 / 1.07–1.35 figures are void, so **there is no PUE number to port across in the first place**.
 >
@@ -125,7 +125,7 @@ The typical buyer already has the substation capacity — an MV feed on the camp
 >
 > **Known component figures** (usable for engineering estimates, not a complete facility load):
 > - CDU pump set **20.0 kW per unit** (3 × CM 25-2 @ 6.7 kW, ✅ [[PRD-STULZ-SCR14103W]] §2.4) — unit count undetermined, so total pump power is undetermined
-> - CRAH total input **2.6 kW per unit** (i.e. fan power, ✅ [[PRD-STULZ-CRS560CW]] §2.1) — unit count undetermined, so total fan power is undetermined
+> - 列间空调 total input **2.6 kW per unit** (i.e. fan power, ✅ [[PRD-STULZ-CRS560CW]] §2.1) — unit count undetermined, so total fan power is undetermined
 
 ---
 
@@ -153,9 +153,9 @@ L1800C45 is a **dual-loop (`D`)** product. Two loops run in parallel inside the 
 | Loop | Load carried | Temperatures | Fluid | Terminal equipment |
 |---|---|---|---|---|
 | **Loop A — GPU-side warm water** | GPU / CPU cold-plate liquid load (the great majority of the IT heat) | **GPU cold-plate inlet 36–40 °C** ✅ adjudicated; outdoor-plant supply into the CDU primary side **32–36 °C**; CDU approach **+4 °C**. The approved CDU selection point FWS 36/46 °C · TCS 40/50 °C is the **hot-end design point** of that band | **Pure water, 0% glycol** | Cold plates + **STULZ SCR 14103 W** CDU |
-| **Loop B — CRAH-side chilled water** | Residual room air load (whatever the cold plates do not take, power modules, network gear, auxiliaries) | **10 / 16 °C chilled water** | **Pure water, 0% glycol** | **STULZ CRS 560 CW** room-level downflow precision air conditioners |
+| **Loop B — In-row CW chilled water** | Residual room air load (whatever the cold plates do not take, power modules, network gear, auxiliaries) | **10 / 16 °C chilled water** | **Pure water, 0% glycol** | **STULZ CRS 560 CW** room-level downflow precision air conditioners |
 
-**Why they have to be separate:** cold plates will happily take water in the 40 °C class; air-side terminals will not — dropping a 36 °C return down to a 21 °C supply requires coil water in the 10 °C class. Force both onto one loop and either the cold-plate side is stuck with cold water (throwing away free-cooling hours and driving up PUE) or the CRAH side runs short of capacity (supply temperature goes out of control). Decoupled, Loop A's 36–40 °C warm water can be rejected on dry coolers alone in most climates with mechanical cooling only as a topper, while Loop B carries a far smaller chilled-water load and a correspondingly smaller chiller. **That is the price of a 220 kW rack, and it is also the payoff.**
+**Why they have to be separate:** cold plates will happily take water in the 40 °C class; air-side terminals will not — dropping a 36 °C return down to a 21 °C supply requires coil water in the 10 °C class. Force both onto one loop and either the cold-plate side is stuck with cold water (throwing away free-cooling hours and driving up PUE) or the in-row CW side runs short of capacity (supply temperature goes out of control). Decoupled, Loop A's 36–40 °C warm water can be rejected on dry coolers alone in most climates with mechanical cooling only as a topper, while Loop B carries a far smaller chilled-water load and a correspondingly smaller chiller. **That is the price of a 220 kW rack, and it is also the payoff.**
 
 > ## Dual-loop GPU-side temperature chain (adjudicated by Yuri, 2026-08-30 · C-1 closed)
 >
@@ -171,7 +171,7 @@ L1800C45 is a **dual-loop (`D`)** product. Two loops run in parallel inside the 
 >
 > **Relationship to the approved STULZ SCR 14103 W selection sheet:** the selection sheet (FWS 36/46 °C · TCS 40/50 °C) takes the **hot-end design point** of that band, with an approach of exactly 4 °C, fully consistent with this ruling — **it is not a second set of temperatures, it is the same chain evaluated at the worst case**. See [[PRODUCT_SPEC_BASELINE#^baseline-liquid-cooling]].
 
-> **The cooling baselines are not interchangeable with L1240C45's.** L1240C45 is a single-loop three-branch TCS (PG25 · 26–28 °C · DN100 flanges · self-contained ceiling DX). L1800C45 sits roughly 14 K higher, uses **pure water**, terminates the CDU in **Tri-Clamp** fittings, and uses an all-water **CW-type CRAH with no compressor**. See the delta tables in [[PRD-STULZ-SCR14103W]] §4 and [[PRD-STULZ-CRS560CW]] §4.
+> **The cooling baselines are not interchangeable with L1240C45's.** L1240C45 is a single-loop three-branch TCS (PG25 · 26–28 °C · DN100 flanges · self-contained ceiling DX). L1800C45 sits roughly 14 K higher, uses **pure water**, terminates the CDU in **Tri-Clamp** fittings, and uses an all-water **CW-type 列间空调 with no compressor**. See the delta tables in [[PRD-STULZ-SCR14103W]] §4 and [[PRD-STULZ-CRS560CW]] §4.
 
 ^sec-5-dual-loop
 
@@ -206,7 +206,7 @@ Plate heat exchangers isolate the primary FWS (site / dry-cooler side) from the 
 
 ^sec-5-cdu
 
-### 5.3 Loop B — CRAH: STULZ CRS 560 CW ✅ ATS approved (2026-08-30)
+### 5.3 Loop B — 列间空调: STULZ CRS 560 CW ✅ ATS approved (2026-08-30)
 
 Room-level downflow chilled-water precision air conditioner: **all-water coil plus a two-way control valve, no compressor and no refrigerant charge inside the unit.** Full parameters in [[PRD-STULZ-CRS560CW]].
 
@@ -229,7 +229,7 @@ Room-level downflow chilled-water precision air conditioner: **all-water coil pl
 | Electrical supply | **400 V / 50 Hz / 3Ph / N / PE** — free of the 60 Hz / missing-CE blocker seen on [[PRD-STULZ-CeilAir]] | ✅ selection sheet |
 | Water connections | 1 inlet + 1 outlet, **1.5" male thread**, lower side of the unit (centres 608 / 763 mm above the base) | ✅ vendor drawing |
 | Altitude basis | 0 m — any non-zero altitude requires re-selection | ✅ selection sheet |
-| **Unit count and redundancy model (N+1 / 2N)** | ⏳ **#unconfirmed** — waiting on ATS / Cooling Engineer to lock the L1800C45 CRAH-side total heat load before quantities can be set ([[PRD-STULZ-CRS560CW]] Q1, P0), expected TBD | ⏳ |
+| **Unit count and redundancy model (N+1 / 2N)** | ⏳ **#unconfirmed** — waiting on ATS / Cooling Engineer to lock the L1800C45 in-row CW total heat load before quantities can be set ([[PRD-STULZ-CRS560CW]] Q1, P0), expected TBD | ⏳ |
 | Capacity decay curve under ±2 °C chilled-water drift | ⏳ **#unconfirmed** — waiting on STULZ to supply it ([[PRD-STULZ-CRS560CW]] Q2), expected TBD | ⏳ |
 | Whether the integrated humidifier is fitted / water and drain requirements | ⏳ **#unconfirmed** — waiting on STULZ to confirm ([[PRD-STULZ-CRS560CW]] Q3), expected TBD | ⏳ |
 | Change list of the "non-standard variant" against the catalogue unit | ⏳ **#unconfirmed** — waiting on a written statement from STULZ ([[PRD-STULZ-CRS560CW]] Q7), expected TBD | ⏳ |
@@ -241,11 +241,11 @@ Room-level downflow chilled-water precision air conditioner: **all-water coil pl
 | Item | Parameter | Confidence |
 |---|---|---|
 | Loop A outdoor heat-rejection form | Dry-cooler-led (36/46 °C warm water gives long free-cooling hours), with mechanical topping at peak-climate sites | 🔶 derived — an engineering judgement drawn from the FWS 36/46 °C warm-water level; design value, subject to final selection |
-| Loop B outdoor heat-rejection form | Chiller plant (10/16 °C chilled water) | 🔶 derived — an engineering judgement drawn from the CRAH-side 10/16 °C level; design value, subject to final selection |
+| Loop B outdoor heat-rejection form | Chiller plant (10/16 °C chilled water) | 🔶 derived — an engineering judgement drawn from the in-row CW 10/16 °C level; design value, subject to final selection |
 | Total outdoor heat-rejection baseline | ⏳ **#unconfirmed** — waiting on the Cooling Engineer for the dual-loop outdoor heat balance (it must yield two separate figures, one per loop), expected TBD | ⏳ |
 | PUE | **`1.0x`** — no fixed value, no range, no "typical value". Computed per site with the TCO / Designer at <https://mdcx.org>. Qualitatively: climates where dry coolers reject heat year-round sit at the low end, hotter sites need a hybrid chiller and PUE moves up — **but no number is given** | ✅ adjudicated |
 | Control strategy and GPU interlocks | ⏳ **#unconfirmed** — waiting on L1800C45 `DESIGN/` for the control strategy (flow floors, GPU throttle thresholds, dual-loop failure transfer), expected TBD | ⏳ |
-| CDU / CRAH control point lists | ⏳ **#unconfirmed** — waiting on STULZ for Modbus / BACnet point lists and the CIOS telemetry integration ([[PRD-STULZ-SCR14103W]] Q6 · [[PRD-STULZ-CRS560CW]] Q5), expected TBD | ⏳ |
+| CDU / 列间空调 control point lists | ⏳ **#unconfirmed** — waiting on STULZ for Modbus / BACnet point lists and the CIOS telemetry integration ([[PRD-STULZ-SCR14103W]] Q6 · [[PRD-STULZ-CRS560CW]] Q5), expected TBD | ⏳ |
 
 > **Do not cite L1240C45's "outdoor heat-rejection baseline ≥ 1700 kW".** That figure is the sum for 1240 kW IT on a single-loop PG25 system plus nine ceiling DX compressors' input. Load composition, temperature levels and terminal types all differ here.
 
@@ -277,7 +277,7 @@ Moving the UPS out buys back three things:
 | 800 V HVDC | **Roadmap Q3 2026, not shipping today** — disclosable, not committable | ✅ site |
 | In-container busbar | ⏳ **#unconfirmed** — waiting on the Power Engineer to select the in-container busbar (its rating depends on the site PDC feeder size and the rack count, neither of which is locked), expected TBD | ⏳ |
 | Per-rack distribution (TOU / MCB ratings) | ⏳ **#unconfirmed** — waiting on the Power Engineer's distribution design; rack count and actual per-rack draw are undetermined, so no ratings can be stated, expected TBD | ⏳ |
-| Cooling-equipment supply | CDU 3Ph/N/PE 380 V/50 Hz (pump set 20.0 kW per unit) · CRAH 400 V/50 Hz/3Ph/N/PE (2.6 kW per unit) — **quantities undetermined, totals undetermined** | ✅ per-unit / ⏳ totals |
+| Cooling-equipment supply | CDU 3Ph/N/PE 380 V/50 Hz (pump set 20.0 kW per unit) · 列间空调 400 V/50 Hz/3Ph/N/PE (2.6 kW per unit) — **quantities undetermined, totals undetermined** | ✅ per-unit / ⏳ totals |
 | Power factor | ⏳ **#unconfirmed** — waiting on the Power Engineer (the UPS is off-container, so the value follows the site's UPS model), expected TBD | ⏳ |
 
 > **Do not borrow any of L1240C45's SIEMENS 2500A busbar, EATON 9395XR-1500 UPS or 3 × 93LiG2 batteries.** Those are selections inside a "UPS in the container" architecture and are incompatible with this SKU's power boundary.
@@ -296,9 +296,9 @@ Moving the UPS out buys back three things:
 | Loaded weight (with IT) | ⏳ **#unconfirmed** — waiting on the L1800C45 `DESIGN/` structural load calculation and the factory weigh-out, expected TBD | ⏳ |
 | Enclosure rating | ⏳ **#unconfirmed** — waiting on the L1800C45 `DESIGN/` compliance checklist, expected TBD | ⏳ |
 
-> **Do not borrow L1240C45's "~16 T empty / ~20–25 T loaded".** This SKU has no UPS and no batteries (lighter) but adds a CDU (1,175 kg operating per unit), CRAHs (254 kg per unit) and two independent pipework systems (heavier). The net direction has not been computed and cannot be assumed.
+> **Do not borrow L1240C45's "~16 T empty / ~20–25 T loaded".** This SKU has no UPS and no batteries (lighter) but adds a CDU (1,175 kg operating per unit), 列间空调s (254 kg per unit) and two independent pipework systems (heavier). The net direction has not been computed and cannot be assumed.
 >
-> **Known fixed load items** (usable as inputs to a floor-loading check, not as a container weight): CDU operating weight **1,175 kg per unit** (✅), CRAH dry weight **254 kg per unit** (✅). Quantities undetermined.
+> **Known fixed load items** (usable as inputs to a floor-loading check, not as a container weight): CDU operating weight **1,175 kg per unit** (✅), 列间空调 dry weight **254 kg per unit** (✅). Quantities undetermined.
 
 ---
 
@@ -320,10 +320,10 @@ Moving the UPS out buys back three things:
 |---|---|---|
 | Operating temperature range | ⏳ **#unconfirmed** — waiting on the L1800C45 `DESIGN/` compliance checklist, expected TBD | ⏳ |
 | Operating humidity range | ⏳ **#unconfirmed** — waiting on the L1800C45 `DESIGN/` compliance checklist, expected TBD | ⏳ |
-| Operating altitude | ⏳ **#unconfirmed** — waiting on `DESIGN/`; note the CRAH selection basis is **0 m altitude** and any non-zero site requires STULZ to re-run the selection ([[PRD-STULZ-CRS560CW]] §2.1 · Q6), expected TBD | ⏳ |
+| Operating altitude | ⏳ **#unconfirmed** — waiting on `DESIGN/`; note the in-row CW selection basis is **0 m altitude** and any non-zero site requires STULZ to re-run the selection ([[PRD-STULZ-CRS560CW]] §2.1 · Q6), expected TBD | ⏳ |
 | Whole-unit certification path (UL / CE / TUV) | ⏳ **#unconfirmed** — waiting on the Compliance Officer for the L1800C45 whole-unit certification path, expected TBD | ⏳ |
 | CDU component certification (CE / UL / CCC and certificate numbers) | ⏳ **#unconfirmed** — waiting on STULZ to supply them ([[PRD-STULZ-SCR14103W]] Q4, P0), expected TBD | ⏳ |
-| CRAH component certification (CE / UL / CCC and certificate numbers) | ⏳ **#unconfirmed** — waiting on STULZ to supply them ([[PRD-STULZ-CRS560CW]] Q4, P0), expected TBD | ⏳ |
+| 列间空调 component certification (CE / UL / CCC and certificate numbers) | ⏳ **#unconfirmed** — waiting on STULZ to supply them ([[PRD-STULZ-CRS560CW]] Q4, P0), expected TBD | ⏳ |
 
 > ⚠️ **Certification does not transfer by analogy.** [[PRD-STULZ-CeilAir]] is the precedent for "same vendor, CE absent"; certificate numbers must be obtained model by model. The CRS 560 CW's 400 V / 50 Hz supply is free of CeilAir's market-access blocker, but **that is not the same as holding CE**.
 
@@ -337,7 +337,7 @@ Moving the UPS out buys back three things:
 | CIOS open-source core | Apache-2.0 — **roadmap**; disclosable, not committable as delivered capability | ✅ site |
 | Digital twin | **NVIDIA Omniverse**, live state projected onto the 3D model | ✅ site |
 | DCM (compute marketplace) | **Roadmap · MVP in development** — **must not be committed to customers as a delivered capability** | ✅ site |
-| CDU / CRAH telemetry points and integration | ⏳ **#unconfirmed** — waiting on STULZ for Modbus / BACnet point lists ([[PRD-STULZ-SCR14103W]] Q6 · [[PRD-STULZ-CRS560CW]] Q5), expected TBD | ⏳ |
+| CDU / 列间空调 telemetry points and integration | ⏳ **#unconfirmed** — waiting on STULZ for Modbus / BACnet point lists ([[PRD-STULZ-SCR14103W]] Q6 · [[PRD-STULZ-CRS560CW]] Q5), expected TBD | ⏳ |
 | BMS integration protocol | ⏳ **#unconfirmed** — waiting on L1800C45 `DESIGN/` for the monitoring architecture, expected TBD | ⏳ |
 
 ---
@@ -406,14 +406,14 @@ This document, and every KB product document, **contains no price information** 
 | **Electrical infrastructure the site must provide** | **UPS / batteries / PDC supplied by the site** (see §6.1 — this is the SKU's boundary definition) | ✅ site |
 | Cooling interfaces the site must provide | Two independent services: **Loop A warm water (36/46 °C class)** plus **Loop B chilled water (10/16 °C)**. They cannot be combined | ✅ derived from the approved selection duty points |
 | CDU connection type | 4 × DN100 **Tri-Clamp** (DIN 32676-B), **top exit** — site pipework must be matched with sanitary clamps, not flanges | ✅ vendor drawing |
-| CRAH connection type | 1 inlet + 1 outlet, **1.5" male thread** | ✅ vendor drawing |
+| 列间空调 connection type | 1 inlet + 1 outlet, **1.5" male thread** | ✅ vendor drawing |
 | Freight & customs | Buyer's responsibility; **no duration is committed** | ✅ adjudicated |
 | On-site installation & commissioning | **Not committed** | ✅ adjudicated |
 | Ground load capacity | ⏳ **#unconfirmed** — depends on the loaded weight (see §7, undetermined); waiting on the structural load calculation, expected TBD | ⏳ |
 | Ground levelness | ⏳ **#unconfirmed** — waiting on L1800C45 `DESIGN/`, expected TBD | ⏳ |
 | Maintenance clearances | ⏳ **#unconfirmed** — waiting on the Layout Planner; note that the top-exit CDU connection scheme has not yet been reconciled with the 900 mm upper-module lift ([[PRD-STULZ-SCR14103W]] Q5), expected TBD | ⏳ |
 | Site climate suitability | ⏳ **#unconfirmed** — both primary and secondary sides run **pure water with no antifreeze**, so cold-site boundaries cannot be set until the freeze-protection strategy exists ([[PRD-STULZ-SCR14103W]] Q3, P0), expected TBD | ⏳ |
-| Noise boundary | CRAH sound power 87.8 dB(A) / 67.6 dB(A) at 2 m per unit; **multi-unit superposition and shell attenuation pending a Layout review** | ✅ per-unit / ⏳ combined |
+| Noise boundary | 列间空调 sound power 87.8 dB(A) / 67.6 dB(A) at 2 m per unit; **multi-unit superposition and shell attenuation pending a Layout review** | ✅ per-unit / ⏳ combined |
 
 ---
 
@@ -432,11 +432,11 @@ This document, and every KB product document, **contains no price information** 
 | GPU platforms | GB300 NVL72 · B300 HGX (SXM / NVLink) | ✅ site |
 | Loops | **Dual loop (`D`)** | ✅ site |
 | Loop A (GPU side) | **GPU cold-plate inlet 36–40 °C**; outdoor-plant supply 32–36 °C; CDU approach +4 °C. The approved CDU duty point FWS 36/46 · TCS 40/50 °C is the hot-end design point | ✅ adjudicated / selection sheet |
-| Loop B (CRAH side) | **10 / 16 °C chilled water** | ✅ site |
+| Loop B (in-row CW side) | **10 / 16 °C chilled water** | ✅ site |
 | Secondary fluid | **Pure water, 0% glycol** | ✅ selection sheet |
 | **CDU** | **STULZ SCR 14103 W** · 1200 kW per unit · 103.8 m³/h · Tri-Clamp DN100 top exit · 20.0 kW pump set | ✅ ATS approved |
-| **CRAH** | **STULZ CRS 560 CW** · 57.3 kW per unit (net 54.7) · 11,200 m³/h · 8.2 m³/h · 52 kPa · 400 V/50 Hz | ✅ ATS approved |
-| CDU / CRAH quantities and redundancy | ⏳ **#unconfirmed** — waiting on ATS / Cooling Engineer calculations (Q1 in both PRDs, both P0), expected TBD | ⏳ |
+| **列间空调** | **STULZ CRS 560 CW** · 57.3 kW per unit (net 54.7) · 11,200 m³/h · 8.2 m³/h · 52 kPa · 400 V/50 Hz | ✅ ATS approved |
+| CDU / 列间空调 quantities and redundancy | ⏳ **#unconfirmed** — waiting on ATS / Cooling Engineer calculations (Q1 in both PRDs, both P0), expected TBD | ⏳ |
 | Outdoor heat-rejection baseline | ⏳ **#unconfirmed** — waiting on the Cooling Engineer's dual-loop heat balance, expected TBD | ⏳ |
 | PUE | **`1.0x`** — computed per site with the TCO / Designer at <https://mdcx.org>; no fixed value and no range | ✅ adjudicated |
 | **UPS boundary** | **Outside the container** (UPS / batteries / PDC supplied by the site) — **a configuration, not a downgrade** | ✅ site |
@@ -458,6 +458,6 @@ This document, and every KB product document, **contains no price information** 
 
 | Version | Date | Summary |
 |---|---|---|
-| v1.2 | 2026-08-30 | Absorbed the site audit: rack build fixed at 8× 220 kW liquid + 1× 40 kW air = 9 racks, CDU at 2× SCR 14103 W, CRAH at 4× CRS 560 CW (site `l1800.json`). Unit counts move from ⏳ to ✅; redundancy models remain ⏳ |
+| v1.2 | 2026-08-30 | Absorbed the site audit: rack build fixed at 8× 220 kW liquid + 1× 40 kW air = 9 racks, CDU at 2× SCR 14103 W, 列间空调 at 4× CRS 560 CW (site `l1800.json`). Unit counts move from ⏳ to ✅; redundancy models remain ⏳ |
 | v1.1 | 2026-08-30 | **Yuri's four rulings of 2026-08-30 propagated ([[PRODUCT_SPEC_BASELINE]] v2.0).** (1) **The dual-loop GPU-side temperature chain is fixed**: outdoor-plant supply 32–36 °C → CDU approach +4 °C → GPU cold-plate inlet **36–40 °C**; the former "GPU 36–45 °C" ceiling of 45 becomes 40 (§2 / §5.1 / §14), with a note that the approved STULZ SCR 14103 W selection sheet (FWS 36/46 · TCS 40/50) is the **hot-end design point** of that chain and is consistent with the ruling; the former ⛔ becomes ✅ adjudicated. (2) **PUE is written `1.0x` everywhere** and Total Facility Load becomes "varies with PUE, computed per site with the TCO / Designer at <https://mdcx.org>" (§3.1 / §5.4 / §14); the former ⏳ becomes ✅, and the §3 IT Load vs Total Facility Load distinction is retained as a hard rule. (3) **Lead time is unified to 120 days EXW for the first batch and 90 days EXW for Scale, counted from order placement**, with a new dummy-load burn-in period of 5–30 days (Supermicro recommendation, outside the EXW commitment); the commercial, freight and installation segments carry no commitment. The §12.2 ⛔ two-basis table and "~185–230 days", and the four-phase cycle and "3–4 weeks on-site installation & commissioning" rows in §12.3 and §13, are **deleted**. (4) **Warranty is unified to core components for one year from EXW plus an annual service fee thereafter**, with ONSITE / NBD / 9×5 / 24×7 response levels governed by the Invoice (§12.3 / §14). |
 | v1.0 | 2026-08-30 | First release. L1800C45 English Tech Spec built on the 14-section structure of [[L1240C45_Tech_Spec_EN]], as a single file preserving anchors `^sec-1-layout` … `^sec-14-summary`. All figures sourced from [[PRODUCT_SPEC_BASELINE]]; cooling equipment parameters mirrored from the ATS-approved [[PRD-STULZ-SCR14103W]] and [[PRD-STULZ-CRS560CW]]. Structural / environmental / network / fire / service fields marked ⏳ line by line per [[UNCONFIRMED_Convention]], each naming who is waited on, for what, and by when; §12 records the ⛔ lead-time basis conflict as it stands; §6.1 states positively that an external UPS is a configuration, not a downgrade; §3.1 explicitly separates IT Load from Total Facility Load. **No figure was borrowed from L1240C45.** Section numbering, anchors and table row counts match [[L1800C45_Tech_Spec_CN]] one-for-one. |

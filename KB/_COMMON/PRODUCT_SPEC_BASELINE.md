@@ -45,6 +45,25 @@ source_of_truth:
 
 ^baseline-overview
 
+## 0.1 冷却末端术语（规范，不得混用）
+
+液冷线有**两种完全不同的末端机型**，此前 vault 与站点都把它们混称「CRAH」，2026-08-30 起按下表严格区分：
+
+| 术语 | 指什么 | 用在哪个 SKU | 机型 | 送风方式 | 冷源 |
+|---|---|---|---|---|---|
+| **CRAH（吊顶机型）** | 顶置自含式 DX 精密空调 | **仅 L1240C45** | STULZ CeilAir **OHS-084-DG-FC** | 顶置下送 | 机内压缩机 + PG25 水冷冷凝 |
+| **CyberRow CW（列间冷冻水空调）** | 列间式全水盘管机组 | **L1800C45 · L450C20** | STULZ **CRS 560 CW**（CW560）· **CRS 330 CW**（CW330） | 嵌入机柜列，左/右侧向送风 | 无压缩机，直接接 10/16 °C 冷冻水 |
+
+**三条硬规则：**
+
+1. **「CRAH」只指 L1240C45 的吊顶机型。** 写 L1800C45 / L450C20 的末端时用「列间空调」或「CyberRow CW」，中英文均不得用 CRAH。
+2. **两者不可互相替代。** [[CRAH_Requirement V5]] 的 scope 只覆盖吊顶 DX 机型；[[CRAH_Replacement_RFQ_Spec V1]] 已论证列间/房间级 CW 型在 L1240C45 的 TCS 26 °C 单点工况下**物理不可行**（换热温差仅 6 K）。反向同理：吊顶 DX 机型不进双环路 SKU。
+3. **文件名 `CRAH_Requirement V5` 保留原名**（它确实是吊顶机型的需求书），但其正文 scope 须写明「仅 L1240C45 吊顶机型」。
+
+> ⚠️ **站点仓库分类词用错，需修正：** `DLC/src/data/profiles/*.json` 的字段名是 `crahId` / `crahCount`，`docs/CLAIMS.md` C33 写 *"in-row CRAH"*，产品页中文写「列间空调」而英文写 `CRAH` —— 三处都把 CyberRow CW 归到 CRAH 名下。见 §6 · KC-16。
+
+^baseline-terminology
+
 ## 1. Liquid Cooling 线
 
 ### 1.1 容量与密度
@@ -71,10 +90,10 @@ source_of_truth:
 | CDU 温升（approach） | ≥4 °C（[[CDU_Requirement V5]]） | **+4 °C** ✅ 裁定 | **+4 °C** ✅ 裁定 | ✅ |
 | CRAH 侧温位 | 无独立 CRAH 环路（Branch 3 走 TCS 冷凝） | **10 / 16 °C 冷冻水** | **10 / 16 °C 冷冻水** | ✅ 站点 |
 | 二次侧介质 | **PG25**（25% 丙二醇） | **纯水 0%** | ⏳ **#unconfirmed** —— 等 L450C20 DESIGN 或 CW330 选型书，预期 TBD | ✅ KB / ✅ 选型书 / ⏳ |
-| 末端构成 | 冷板 + 9× RDHX + 9× 顶置 DX | 冷板 + CW 型 CRAH | ⏳ **#unconfirmed** —— 等 L450C20 DESIGN，预期 TBD | ✅ KB / ✅ 选型书 / ⏳ |
+| 末端构成 | 冷板 + 9× RDHX + 9× 顶置 DX **CRAH** | 冷板 + **CyberRow CW 列间空调** | ⏳ **#unconfirmed** —— 等 L450C20 DESIGN，预期 TBD | ✅ KB / ✅ 选型书 / ⏳ |
 | CDU 选型 | ≥1500 kW（[[CDU_Requirement V5]]，**未定型号**，状态见 §4）⛔ 见 KC-10 | **STULZ SCR 14103 W** ✅ ATS approved | **STULZ SCR 14103 W** ✅ 站点 profile | ⛔ / ✅ / ✅ |
 | CRAH 选型 | 9× STULZ OHS-084-DG-FC（**⏳ 正在 review**，CE / 50 Hz 阻塞）⛔ 见 KC-10 | **STULZ CRS 560 CW**（CW560）✅ ATS approved | **STULZ CRS 330 CW**（CW330）✅ 归属已定 · ⏳ 规格待厂家（2026-08-31），见 [[PRD-STULZ-CW330]] | ⛔ / ✅ / ✅ |
-| **CDU / CRAH 台数与冗余** | CDU 1 台（≥1500 kW）· CRAH 9 台（N，无 N+1） | **CDU 2× SCR 14103 W · CRAH 4× CRS 560 CW** | **CDU 1× SCR 14103 W · CRAH 2× CRS 330 CW（N+1）** | ✅ 站点 Designer profile |
+| **CDU / 列间空调台数与冗余** | CDU 1 台（≥1500 kW）· 列间空调 9 台（N，无 N+1） | **CDU 2× SCR 14103 W · 列间空调 4× CRS 560 CW** | **CDU 1× SCR 14103 W · 列间空调 2× CRS 330 CW（N+1）** | ✅ 站点 Designer profile |
 | 室外侧排热基线 | ≥1700 kW | ⏳ **#unconfirmed** —— 等 L1800C45 DESIGN，预期 TBD | ⏳ **#unconfirmed** —— 等 L450C20 DESIGN，预期 TBD | ✅ KB / ⏳ / ⏳ |
 | PUE | **1.0x** —— 不给固定值，随场地环境计算（[[#^baseline-pue\|见 §2.2 裁定]]） | **1.0x** | **1.0x** | ✅ 裁定 |
 
@@ -96,9 +115,9 @@ source_of_truth:
 
 > **L1240C45 与另两个 SKU 的冷却基线不可互换。** [[CDU_Requirement V5]]（FWS 22/32 · TCS 26/36 · PG25 · DN100 法兰）与 [[CRAH_Requirement V5]]（自含式 DX · PG25 冷凝）的 scope **只覆盖 L1240C45**。L1800C45 温位整体高约 14 K、介质为纯水、接口为 Tri-Clamp。详见 [[PRD-STULZ-SCR14103W]] §4 与 [[PRD-STULZ-CRS560CW]] §4。
 >
-> ✅ **CDU / CRAH 台数与冗余于 2026-08-30 站点审计取到确定值**（`DLC/src/data/profiles/l1800.json:25-28` · `l450.json:25-28`）。[[PRD-STULZ-SCR14103W]] Q1 与 [[PRD-STULZ-CW330]] Q5 据此关闭。
+> ✅ **CDU / 列间空调台数与冗余于 2026-08-30 站点审计取到确定值**（`DLC/src/data/profiles/l1800.json:25-28` · `l450.json:25-28`）。[[PRD-STULZ-SCR14103W]] Q1 与 [[PRD-STULZ-CW330]] Q5 据此关闭。
 >
-> **L1800C45 / L450C20 仍没有专属 CRAH / CDU Requirement。** 两个 SKU 的冷却侧只有 PRD 与站点 profile，**没有需求书基线**。这是当前最大的工程文档缺口 —— 两者共用同一条温位链与同一 CRAH 侧 10/16 °C 回路，可以合并成一份覆盖「无 UPS 的 DLC 解决方案」的 `CRAH_Requirement V6` + `CDU_Requirement V6`。
+> **L1800C45 / L450C20 仍没有专属 列间空调 / CDU Requirement。** 两个 SKU 的冷却侧只有 PRD 与站点 profile，**没有需求书基线**。这是当前最大的工程文档缺口 —— 两者共用同一条温位链与同一 列间侧 10/16 °C 回路，可以合并成一份覆盖「无 UPS 的 DLC 解决方案」的 `CRAH_Requirement V6` + `CDU_Requirement V6`。
 
 ^baseline-liquid-cooling
 
@@ -272,18 +291,18 @@ source_of_truth:
 | SKU | 环路 | 设备 | 型号 | 状态 | 文档 |
 |---|---|---|---|---|---|
 | **L1800C45** | GPU 侧 | CDU | STULZ SCR 14103 W | ✅ **ATS approved** 2026-08-30 | [[PRD-STULZ-SCR14103W]] |
-| **L1800C45** | CRAH 侧 | CW 精密空调 | STULZ CRS 560 CW | ✅ **ATS approved** 2026-08-30 | [[PRD-STULZ-CRS560CW]] |
-| **L450C20** | CRAH 侧 | CW 精密空调 | STULZ **CW330** | ✅ **归属已定** 2026-08-30 · ⏳ 规格参数待厂家提供（预期 2026-08-31） | [[PRD-STULZ-CW330]] |
+| **L1800C45** | 列间侧 | CW 精密空调 | STULZ CRS 560 CW | ✅ **ATS approved** 2026-08-30 | [[PRD-STULZ-CRS560CW]] |
+| **L450C20** | 列间侧 | CW 精密空调 | STULZ **CW330** | ✅ **归属已定** 2026-08-30 · ⏳ 规格参数待厂家提供（预期 2026-08-31） | [[PRD-STULZ-CW330]] |
 | L1240C45 | Branch 2 | RDHX | VERTIV CoolLoop DCD35 | ⏳ 正在 review（Q1 待 VERTIV） | [[PRD-Vertiv-RDHx]] |
 | L1240C45 | Branch 3 | 顶置 DX | STULZ OHS-084-DG-FC | ⏳ 正在 review（**CE / 50 Hz 市场准入阻塞**） | [[PRD-STULZ-CeilAir]] |
 | L1240C45 | Branch 3 替代 | 卧式自含水冷 DX | 未定（Vertiv / HiRef / 国产 CE 线） | ⏳ RFQ 阶段 | [[CRAH_Replacement_RFQ_Spec V1]] |
 | L1240C45 | 室外侧 | Hybrid Chiller | TICA TAMFV430.3ALF5 | ✅ **ATS Full Pass** 2026-06-11 | [[TICA_TAMFV430.3ALF5_Hybrid_Chiller_Configuration_Review_V2.3]] |
 
-> ## CW 型 CRAH 的产品族归属（2026-08-30 Yuri 裁定）
+> ## CyberRow CW 列间空调 的产品族归属（2026-08-30 Yuri 裁定）
 >
 > **CW330 与 CW560（CRS 560 CW）同属「无 UPS 的 DLC 解决方案」族** —— 即 **L1800C45 + L450C20** 这两个双环路、UPS 在箱外的液冷 SKU。CW560 已定 L1800C45，**CW330 归 L450C20**。
 >
-> 两者共用同一条 GPU 侧温位链（外冷源 32–36 °C → CDU +4 °C → GPU 36–40 °C）与同一 CRAH 侧 10/16 °C 冷冻水回路，差别只在容量档。这也意味着两个 SKU 的 CRAH 侧可以共用一份需求书基线 —— 见 §1.2 末的文档缺口说明。
+> 两者共用同一条 GPU 侧温位链（外冷源 32–36 °C → CDU +4 °C → GPU 36–40 °C）与同一 列间侧 10/16 °C 冷冻水回路，差别只在容量档。这也意味着两个 SKU 的 列间侧可以共用一份需求书基线 —— 见 §1.2 末的文档缺口说明。
 
 > **「已批」与「正在 review」不是同一状态，本节是这两个词的唯一裁判。** §1.2 的选型行若与本节冲突，以本节为准。完整准入清单见 [[3rd Party List]] → [[02_Cooling_Zone]]。
 
@@ -349,6 +368,7 @@ source_of_truth:
 | **KC-13** | **交期起算点两说。** 站点 Claims C3/C4 写 *"from receipt of down payment"*（自收到首付款）；2026-08-30 裁定写"自**下单**起算"。差一个付款动作，直接影响合同违约认定 | 六 SKU §12 · 合同条款 | 商务 + 法务 |
 | **KC-14** | **浸没线设施水温位至少四套并存。** 本表 §2.2（I400C45）32/37 °C · [[RA-001_Immersion_0.4MW]] 32–35 / 35–38 °C · [[RA-003_Immersion_0.2MW_All-in-One]] §5.1 FWS 31–33 / 38–40 °C（油侧 35 / 42–45 °C）· 站点 Designer 另有算法 | 三个浸没 SKU 的冷却节 | Cooling Engineer |
 | **KC-15** | **L1240C45 冷却末端构成两套。** 本表 §1.2 与 Tech Spec 写「冷板 + 9× RDHX + 9× 顶置 DX」；[[RA-002_Liquid_1.2MW]] §4/§8 写「FCU 12× 40 kW = 480 kW」，且主 CDU 写 1.2 MW 而非 ≥1500 kW（差 300 kW，影响 TOU 整定） | L1240C45 冷却与配电 | ATS + Cooling Engineer |
+| **KC-16** | **站点把两种末端机型混称 CRAH，且 L1240C45 的末端配错。** ① 分类词：`crahId`/`crahCount` 字段名、`CLAIMS.md` C33 的 *"in-row CRAH"*、产品页英文 `CRAH` —— 全部把 CyberRow CW 列间机归到 CRAH 名下（见 §0.1）。② **更严重：** `DLC/src/data/profiles/dc45.json` 的 plant 块给 **L1240C45** 配了 `crs560cw` × 2，但 L1240C45 用的是吊顶 DX（OHS-084-DG-FC），**列间 CW 机型在该 SKU 工况下物理不可行**（[[CRAH_Replacement_RFQ_Spec V1]]）。站点 Designer 据此出的 L1240C45 冷却数是错的 | 站点 Designer 出数 · 12 张 RD 页 · L1240C45 全部冷却口径 | ATS + 站点侧 |
 | **KC-7** | **`I50TS` 码本身是 ⏳，却是三个 ✅ shipped SKU 的构成单元。** 一个不能引用的组件码，让任何浸没 Tech Spec 的槽体规格节都无法写成干净的 ✅ | 三个浸没 SKU 的槽体节 | 站点侧（写入 Alias registry） |
 
 ^baseline-conflicts
@@ -359,7 +379,8 @@ source_of_truth:
 
 | 版本 | 日期 | 变更 |
 |---|---|---|
-| **v2.1** | **2026-08-30** | **吸收 MDCX 站点仓库审计结果。** 站点 Designer 数据层已有确定值，按"本表永远跟随站点"规则从 ⏳ 转 ✅：L1800C45 = 8×220 kW 液冷 + 1×40 kW 风冷、CDU 2× SCR 14103 W、CRAH 4× CRS 560 CW；L450C20 = 3×150 kW 无风冷柜、CDU 1× SCR 14103 W、CRAH 2× **CRS 330 CW（N+1）**；I200C20 有 5 kW 风冷柜、推荐 180 kW。关闭 KC-3（风冷柜算设施不算 IT，站点 `tco-power.js` 口径）与 KC-4（I200C20 确有风冷柜）；KC-5 前提更正（站点 `ulCompliant: false` 是明确否定，非未披露）；KC-6 重写（256 已对客发布，须裁定追认或撤下）。新增 KC-10…KC-15 六条站点↔KB 冲突。冲突编号加 `KC-` 前缀，与站点 Claims 台账 `Cn` 分离。§5 同步清单补 Reference_Architecture 与 Products/_blocks 两项（本次漏更根因） |
+| **v2.2** | **2026-08-30** | **末端术语规范化（Yuri 澄清）。** 新增 §0.1：CRAH（吊顶 DX，仅 L1240C45）与 CyberRow CW（列间冷冻水，L1800C45 / L450C20）严格区分，中英文均不得混用。全 vault 18 份文件的错标已改。新增 KC-16 记录站点侧两处问题：分类词混用，以及 `dc45.json` 给 L1240C45 错配 CRS 560 CW（列间机在该 SKU 工况物理不可行） |
+| **v2.1** | **2026-08-30** | **吸收 MDCX 站点仓库审计结果。** 站点 Designer 数据层已有确定值，按"本表永远跟随站点"规则从 ⏳ 转 ✅：L1800C45 = 8×220 kW 液冷 + 1×40 kW 风冷、CDU 2× SCR 14103 W、列间空调 4× CRS 560 CW；L450C20 = 3×150 kW 无风冷柜、CDU 1× SCR 14103 W、列间空调 2× **CRS 330 CW（N+1）**；I200C20 有 5 kW 风冷柜、推荐 180 kW。关闭 KC-3（风冷柜算设施不算 IT，站点 `tco-power.js` 口径）与 KC-4（I200C20 确有风冷柜）；KC-5 前提更正（站点 `ulCompliant: false` 是明确否定，非未披露）；KC-6 重写（256 已对客发布，须裁定追认或撤下）。新增 KC-10…KC-15 六条站点↔KB 冲突。冲突编号加 `KC-` 前缀，与站点 Claims 台账 `Cn` 分离。§5 同步清单补 Reference_Architecture 与 Products/_blocks 两项（本次漏更根因） |
 | **v2.0** | **2026-08-30** | **Yuri 裁定关闭 5 条冲突。** KC-1 双环路 GPU 侧温位链落定（外冷源 32–36 °C → CDU +4 °C → GPU 36–40 °C，STULZ 选型书为该带热端设计点；站点 45 应改 40）；KC-2 PUE 全线改写 `1.0x` 并指向 <https://mdcx.org> 计算，L1240C45 的 1.15–1.20 与浸没线的 1.05 一并作废；KC-8 交期统一为首批 120 天 EXW / Scale 90 天 EXW，商务·运输·安装一律不承诺，新增假负载运行期 5–30 天（Supermicro 建议）；KC-9 质保统一为核心部件 EXW 起一年 + 按年服务费，ONSITE/NBD/24×7 以 Invoice 为准；CW330 归属落定 L450C20（与 CW560 同属无 UPS 的 DLC 族）。§5 新增「需回站点仓库修正的三项」反向同步清单。剩余待裁 KC-3…KC-7 |
 | v1.1 | 2026-08-30 | 按两轮 Tech Spec 编写中发现的问题回填：新增 §6 未裁定冲突登记簿（KC-1…KC-9）；§1.2 "已批"改"选型"并与 §4 状态对齐（L1240C45 的 RDHX / CeilAir 实为正在 review）；新增 CDU/CRAH 台数与冗余行；L1800C45 外形由 🔶 降为 ⏳（上部模块 900 mm 抬升未澄清）；L450C20 补标准箱 vs High Cube 缺口；补浸没线供电制式缺口、10 kW 风冷柜归属、I200C20 交换机位置、I400C40 UL 状态、质保与 SLA 来源缺失；补整箱二次侧流量 🔶；A32 全部改 [[I50TS]]；补齐全部空白置信度格；§5 同步清单补 CLAUDE.md、块文件、Guideline、External 版 |
 | v1.0 | 2026-08-30 | 首版。从站点 `PRODUCT-MATRIX.md` 与 `llms-full.txt` 提取六 SKU 全字段；按 [[UNCONFIRMED_Convention]] 四级置信度逐字段标注；建立下游同步清单 |

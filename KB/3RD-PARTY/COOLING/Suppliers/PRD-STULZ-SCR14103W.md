@@ -145,7 +145,7 @@ source: STULZ SCR14103W 技术参数表（选型输出）+ 厂家外形图 SCR14
 | 接口形式 | Tri-Clamp 4"（卫生级卡箍），非法兰 | 与 L1240C45 的 DN100 法兰基线不同，见 §4 |
 | 安装朝向 | 接口顶出 | 影响箱内上部管路空间与 L1800C45 上部模块 900 mm 抬升的协调，见 Q5 |
 
-> **IT Load vs Total Facility Load：** 1200 kW 为 **CDU 换热容量**，非 IT 负荷、非设施总负荷。L1800C45 的 1800 kW 是 IT 负荷；设施总负荷另计泵功（本机 20 kW/台）、CRAH、室外冷源与辅助。客户提「X MW」时按 CLAUDE.md Hard Rule 5 澄清口径。
+> **IT Load vs Total Facility Load：** 1200 kW 为 **CDU 换热容量**，非 IT 负荷、非设施总负荷。L1800C45 的 1800 kW 是 IT 负荷；设施总负荷另计泵功（本机 20 kW/台）、列间空调、室外冷源与辅助。客户提「X MW」时按 CLAUDE.md Hard Rule 5 澄清口径。
 
 ---
 
@@ -172,7 +172,7 @@ source: STULZ SCR14103W 技术参数表（选型输出）+ 厂家外形图 SCR14
 ### 结论
 
 1. **不得**用本 PRD 覆盖或替代 [[CDU_Requirement V5]] —— 两者服务不同 SKU、不同温位体系。
-2. 温位整体上移 14 K 是 L1800C45 双环路设计的必然结果（暖水 GPU 回路 + 独立 10/16 CRAH 回路），不是选型放宽。
+2. 温位整体上移 14 K 是 L1800C45 双环路设计的必然结果（暖水 GPU 回路 + 独立 10/16 列间冷冻水回路），不是选型放宽。
 3. **L1800C45 尚无专属 CDU Requirement**。在其建立前，本 PRD 是该 SKU CDU 选型的唯一书面依据；台数 / 冗余 / 二次侧扬程余量三项处于未锁定状态（Q1、Q2）。
 4. 若后续为 L1800C45 建 `CDU_Requirement V6`，按 CLAUDE.md §8 新建版本文件，**不得**原地改写 V5。
 
@@ -207,7 +207,7 @@ source: STULZ SCR14103W 技术参数表（选型输出）+ 厂家外形图 SCR14
 - 准入入口：[[3rd Party List]] · [[02_Cooling_Zone]]
 - 选型总则：[[COOLING_SYSTEM_Guideline]]
 - 归属产品：[[KB/LIQUID/L1800C45/index|L1800C45]] · [[NAMING_MAP]]
-- 同 SKU 配套 CRAH：[[PRD-STULZ-CRS560CW]]
+- 同 SKU 配套 列间空调：[[PRD-STULZ-CRS560CW]]
 - 现行 CDU 基线（**另一 SKU**）：[[CDU_Requirement V5]]
 - 相关需求书：[[RDHX_Requirement V5]] · [[Hybrid Chiller Requirement V5]]
 

@@ -54,17 +54,17 @@ sku_id: L450C20DR150
 
 **这个产品的存在理由，是一扇门。** 45ft High Cube 是 13.7 米长、近 3 米高的钢箱，它进不去很多地方：层高三米出头的老厂房、只有货梯的屋顶机房、限高涵洞之后的园区、乡道拐角转不过来的山地站点、吊车站位摆不开的密集城区。这些场地不缺电、也不缺需求，缺的是一条 45ft 箱能通过的物理路径。L450C20 用 20ft 标准箱型，把运输、吊装与通过性全部拉回最普通的一档。
 
-**代价我们直说：单位算力成本高于 45ft 机型。** 双环路的 CDU、CRAH、两套管路、控制、消防与监控是固定投入，摊在 450 kW 上必然高于摊在 1240 kW 或 1800 kW 上。**这不是缺陷，这是为「塞得进那个舱位」付的钱。** 如果贵方场地能进 45ft 箱，我们会建议选 45ft 机型；选择 L450C20 的正当理由只有一个 —— 45ft 进不去。
+**代价我们直说：单位算力成本高于 45ft 机型。** 双环路的 CDU、列间空调、两套管路、控制、消防与监控是固定投入，摊在 450 kW 上必然高于摊在 1240 kW 或 1800 kW 上。**这不是缺陷，这是为「塞得进那个舱位」付的钱。** 如果贵方场地能进 45ft 箱，我们会建议选 45ft 机型；选择 L450C20 的正当理由只有一个 —— 45ft 进不去。
 
-同时请注意：**L450C20 不是大箱的减配版。** 它与 [[L1800C45_Tech_Spec_External|L1800C45]] 同为双环路架构、同样的 GPU 侧暖水 + CRAH 侧冷冻水温位体系，密度码 `R150` 与 [[L1240C45_Tech_Spec_External|L1240C45]] 相同。它是换了箱型重新排的产品。
+同时请注意：**L450C20 不是大箱的减配版。** 它与 [[L1800C45_Tech_Spec_External|L1800C45]] 同为双环路架构、同样的 GPU 侧暖水 + 列间侧冷冻水温位体系，密度码 `R150` 与 [[L1240C45_Tech_Spec_External|L1240C45]] 相同。它是换了箱型重新排的产品。
 
 **English:** L450C20 is a 20ft dual-loop direct-liquid-cooled containerized data center — up to 150 kW per rack and 450 kW IT per container.
 
 **The reason this product exists is a doorway.** A 45ft High Cube is a steel box 13.7 m long and nearly 3 m tall, and there are many places it cannot enter: legacy buildings with barely three metres of clear height, rooftop plant rooms served only by a goods lift, campuses behind a height-restricted underpass, hill sites where a rural bend cannot be negotiated, dense urban plots where a crane has nowhere to stand. Those sites are short of neither power nor demand — they are short of a physical route a 45ft box can travel. L450C20 uses a 20ft standard shell to put transport, lifting and access back into the most ordinary category there is.
 
-**We will say the cost plainly: cost per unit of compute is higher than on the 45ft machines.** A dual-loop CDU, CRAH, two pipework systems, controls, fire protection and monitoring are fixed investments; amortised over 450 kW they are necessarily higher than over 1240 kW or 1800 kW. **That is not a defect; it is the price of fitting through the opening.** If your site can take a 45ft container we will recommend a 45ft machine. There is exactly one legitimate reason to choose L450C20: a 45ft container cannot get in.
+**We will say the cost plainly: cost per unit of compute is higher than on the 45ft machines.** A dual-loop CDU, 列间空调, two pipework systems, controls, fire protection and monitoring are fixed investments; amortised over 450 kW they are necessarily higher than over 1240 kW or 1800 kW. **That is not a defect; it is the price of fitting through the opening.** If your site can take a 45ft container we will recommend a 45ft machine. There is exactly one legitimate reason to choose L450C20: a 45ft container cannot get in.
 
-Note also that **L450C20 is not a stripped-down large container.** It shares the dual-loop architecture and the GPU warm-water / CRAH chilled-water scheme with [[L1800C45_Tech_Spec_External|L1800C45]], and shares the `R150` density code with [[L1240C45_Tech_Spec_External|L1240C45]]. It is a different shell, laid out from scratch.
+Note also that **L450C20 is not a stripped-down large container.** It shares the dual-loop architecture and the GPU warm-water / 列间空调 chilled-water scheme with [[L1800C45_Tech_Spec_External|L1800C45]], and shares the `R150` density code with [[L1240C45_Tech_Spec_External|L1240C45]]. It is a different shell, laid out from scratch.
 
 ---
 
@@ -81,7 +81,7 @@ Note also that **L450C20 is not a stripped-down large container.** It shares the
 **中文：** 这两个数不是一回事，谈容量前必须先对齐口径。
 
 - **IT Load（IT 负荷）＝ 450 kW** —— 服务器与 GPU 实际消耗的电功率，不含任何冷却与配电损耗。本文档中所有「450 kW」均指 IT Load。
-- **Total Facility Load（设施总负荷）＝ IT Load ＋ 冷却系统（CDU 泵、CRAH 风机、室外冷源）＋ 配电损耗 ＋ 辅助负荷。** 该数值随 **PUE** 变化，取决于站点气候与室外冷源方案，**必须逐站点计算** —— 入口为 <https://mdcx.org> 的 TCO / Designer。
+- **Total Facility Load（设施总负荷）＝ IT Load ＋ 冷却系统（CDU 泵、列间空调 风机、室外冷源）＋ 配电损耗 ＋ 辅助负荷。** 该数值随 **PUE** 变化，取决于站点气候与室外冷源方案，**必须逐站点计算** —— 入口为 <https://mdcx.org> 的 TCO / Designer。
 - **PUE = `1.0x`** —— 不给固定值、不给区间。干冷器可全年排热的气候落在低端，更热的站点需加混合冷机、PUE 相应上移；具体数值请用 <https://mdcx.org> 按贵站点气候条件计算。
 
 站点侧的变电申请、进线容量与开关柜选型必须按 Total Facility Load 计算，不能按 IT Load 计算。若贵方的「X MW」指的是电网侧可用容量，请在方案对齐会上明确说明，我方据此反算可支持的 IT 容量。
@@ -89,7 +89,7 @@ Note also that **L450C20 is not a stripped-down large container.** It shares the
 **English:** These are two different numbers and the basis must be aligned before any capacity discussion.
 
 - **IT Load = 450 kW** — the electrical power actually consumed by servers and GPUs, excluding all cooling and distribution losses. Every "450 kW" in this document refers to IT Load.
-- **Total Facility Load = IT Load + cooling (CDU pumps, CRAH fans, outdoor heat rejection) + distribution losses + auxiliaries.** The figure varies with **PUE** and depends on site climate and the outdoor heat-rejection scheme, so it **must be computed per site** — use the TCO / Designer at <https://mdcx.org>.
+- **Total Facility Load = IT Load + cooling (CDU pumps, 列间空调 fans, outdoor heat rejection) + distribution losses + auxiliaries.** The figure varies with **PUE** and depends on site climate and the outdoor heat-rejection scheme, so it **must be computed per site** — use the TCO / Designer at <https://mdcx.org>.
 - **PUE = `1.0x`** — no fixed value and no range. Climates where dry coolers reject heat year-round sit at the low end; hotter sites need a hybrid chiller and PUE moves up accordingly. For a figure, run your site's climate through <https://mdcx.org>.
 
 Utility applications, incoming feeder capacity and switchgear selection on the site side must be sized on Total Facility Load, not on IT Load. If your "X MW" refers to available grid capacity, please say so at the solution alignment meeting and we will work backwards to the supportable IT capacity.
@@ -119,13 +119,13 @@ Utility applications, incoming feeder capacity and switchgear selection on the s
 | 回路 / Loop | 承担负荷 / Load carried | 温位 / Temperatures |
 |---|---|---|
 | **回路 A —— GPU 侧暖水 / Loop A — GPU-side warm water** | GPU / CPU 冷板液冷负荷（绝大部分 IT 热量）/ Cold-plate liquid load (the great majority of IT heat) | **GPU 冷板进水 36–40 °C**；外冷源出水 32–36 °C；CDU approach +4 °C · **GPU cold-plate inlet 36–40 °C**; outdoor-plant supply 32–36 °C; CDU approach +4 °C |
-| **回路 B —— CRAH 侧冷冻水 / Loop B — CRAH-side chilled water** | 机房残余风冷负荷 / Residual room air load | **10 / 16 °C 冷冻水 / chilled water** |
+| **回路 B —— 列间侧冷冻水 / Loop B — In-row CW chilled water** | 机房残余风冷负荷 / Residual room air load | **10 / 16 °C 冷冻水 / chilled water** |
 
-**为什么分成两条：** 冷板可以吃 40 °C 量级的水，风冷末端不行 —— 要把机房回风降到可用的送风温度，盘管进水必须在 10 °C 量级。并在同一条回路上，要么冷板侧被迫用冷水、浪费自然冷却时数并拉高 PUE，要么 CRAH 侧冷量不足。解耦之后，回路 A 的 36–40 °C 暖水在绝大多数气候下可由干冷器直接排掉，机械制冷只作补充；回路 B 的冷冻水负荷则小得多。
+**为什么分成两条：** 冷板可以吃 40 °C 量级的水，风冷末端不行 —— 要把机房回风降到可用的送风温度，盘管进水必须在 10 °C 量级。并在同一条回路上，要么冷板侧被迫用冷水、浪费自然冷却时数并拉高 PUE，要么 列间侧冷量不足。解耦之后，回路 A 的 36–40 °C 暖水在绝大多数气候下可由干冷器直接排掉，机械制冷只作补充；回路 B 的冷冻水负荷则小得多。
 
 **在 20ft 箱体里实现双环路，是本产品的核心工程工作：** 两套泵组、两套管路、两组外部接口、两套定压补水，全部要排进约六米长的箱内。这也是本产品的设备选型必须针对 20ft 单独完成、不能从 45ft 机型平移的原因。
 
-**Why two loops:** cold plates will take water in the 40 °C class; air-side terminals will not — bringing room return air down to a usable supply temperature requires coil water in the 10 °C class. On a single loop, either the cold-plate side is forced onto cold water — throwing away free-cooling hours and raising PUE — or the CRAH side runs short of capacity. Decoupled, Loop A's 36–40 °C warm water can be rejected on dry coolers alone in most climates with mechanical cooling only as a topper, while Loop B carries a far smaller chilled-water load.
+**Why two loops:** cold plates will take water in the 40 °C class; air-side terminals will not — bringing room return air down to a usable supply temperature requires coil water in the 10 °C class. On a single loop, either the cold-plate side is forced onto cold water — throwing away free-cooling hours and raising PUE — or the in-row CW side runs short of capacity. Decoupled, Loop A's 36–40 °C warm water can be rejected on dry coolers alone in most climates with mechanical cooling only as a topper, while Loop B carries a far smaller chilled-water load.
 > **GPU 侧温位链：** 外冷源（干冷器）出水 **32–36 °C** → 进 CDU 一次侧 → CDU 板换 approach **+4 °C** → **GPU 冷板进水 36–40 °C**。
 > ***GPU-side temperature chain:*** *outdoor plant (dry cooler) supply **32–36 °C** → CDU primary side → plate-HX approach **+4 °C** → **GPU cold-plate inlet 36–40 °C**.*
 
@@ -141,10 +141,10 @@ Utility applications, incoming feeder capacity and switchgear selection on the s
 | 回路 B 室外冷源 / Loop B heat rejection | 冷水机组（10/16 °C 冷冻水）—— **设计值，以最终选型为准** / Chiller plant (10/16 °C chilled water) — **design value, subject to final selection** |
 
 | CDU | **1× STULZ SCR 14103 W** |
-| CRAH | **2× STULZ CRS 330 CW，N+1 冗余 / 2× STULZ CRS 330 CW, N+1** |
+| 列间空调 | **2× STULZ CRS 330 CW，N+1 冗余 / 2× STULZ CRS 330 CW, N+1** |
 
-> CDU 与 CRAH 的单台容量参数，以及室外侧排热基线，在技术澄清阶段随热力计算与选型书一并提供。站点 PUE 请用 <https://mdcx.org> 的 TCO / Designer 按贵站点气候条件计算。
-> CDU and CRAH models, capacities, quantities and redundancy models, together with the outdoor heat-rejection baseline, are provided with the thermal calculations and selection sheets during technical clarification. For the site PUE, run your site's climate through the TCO / Designer at <https://mdcx.org>.
+> CDU 与 列间空调 的单台容量参数，以及室外侧排热基线，在技术澄清阶段随热力计算与选型书一并提供。站点 PUE 请用 <https://mdcx.org> 的 TCO / Designer 按贵站点气候条件计算。
+> CDU and In-row CW models, capacities, quantities and redundancy models, together with the outdoor heat-rejection baseline, are provided with the thermal calculations and selection sheets during technical clarification. For the site PUE, run your site's climate through the TCO / Designer at <https://mdcx.org>.
 
 ^sec-5-crah
 
@@ -263,7 +263,7 @@ If you want the boundary outside but do not intend to build the electrical infra
 | 环路 / Loops | 双环路 / Dual loop（`D`） |
 | 回路 A / Loop A | GPU 冷板进水 36–40 °C；外冷源出水 32–36 °C；CDU approach +4 °C · GPU cold-plate inlet 36–40 °C; outdoor-plant supply 32–36 °C; CDU approach +4 °C |
 | PUE | **`1.0x`** —— 逐站点用 <https://mdcx.org> 计算 · computed per site at <https://mdcx.org> |
-| 回路 B / Loop B | CRAH 侧 10 / 16 °C 冷冻水 · CRAH-side 10 / 16 °C chilled water |
+| 回路 B / Loop B | 列间侧 10 / 16 °C 冷冻水 · in-row CW 10 / 16 °C chilled water |
 | UPS 边界 / UPS boundary | **箱外，由场站提供 · Outside the container, supplied by the site** |
 | 供电制式 / Supply voltages | 380 / 400 / 415 / 480 V AC（800 V HVDC 为 Roadmap Q3 2026 · roadmap Q3 2026） |
 | 软件 / Software | CIOS（含 / included）· NVIDIA Omniverse 数字孪生（含 / included） |

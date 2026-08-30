@@ -134,14 +134,14 @@ Transformer → Switchgear → [Power Zone: BESS / Generator]
 |---------|---------------|----------|
 | I400C45 / I400C40 / I200C20（浸没式）| **Hybrid Cooling System**（干冷器+DX一体化）| 每台独立配置 |
 | L1240C45（液冷·单环路）| **Hybrid Chiller** ≥1600 kW（TICA TAMFV430.3ALF5 已 ATS Full Pass）+ 三支路 TCS PG25 | 每台独立配置 |
-| L1800C45（液冷·双环路）| GPU 侧 **STULZ SCR 14103 W** CDU + CRAH 侧 **STULZ CRS 560 CW**（均 ✅ ATS approved）· 室外侧 ⏳ | ⏳ 台数与冗余未定 |
-| L450C20（液冷·双环路）| ⏳ **#unconfirmed** —— CRAH 疑为 [[PRD-STULZ-CW330\|CW330]]，等厂家参数（2026-08-31）与 ATS 指定归属 | ⏳ |
+| L1800C45（液冷·双环路）| GPU 侧 **STULZ SCR 14103 W** CDU + 列间侧 **STULZ CRS 560 CW**（均 ✅ ATS approved）· 室外侧 ⏳ | ⏳ 台数与冗余未定 |
+| L450C20（液冷·双环路）| ⏳ **#unconfirmed** —— 列间空调 疑为 [[PRD-STULZ-CW330\|CW330]]，等厂家参数（2026-08-31）与 ATS 指定归属 | ⏳ |
 
 > ⚠️ **规则：不允许纯干冷器方案。** 浸没线必须配置 Hybrid Cooling System（干冷器+DX一体化），确保环境温度 >28°C 时的散热能力。**唯一例外是 [[I50TS]] 单槽的纯干冷场景**，见 [[COOLING_SYSTEM_Guideline]]。
 >
 > ⚠️ **600kW 集成冷站不适用液冷线。** L1240C45（IT 1240kW）需 ≥1600kW Hybrid Chiller。容量匹配规则见 [[02_Cooling_Zone]]。
 >
-> ⚠️ **L1800C45 / L450C20 尚无专属 CRAH / CDU Requirement**，冷却侧目前只有 PRD、没有需求书基线。这是当前最大的工程文档缺口。
+> ⚠️ **L1800C45 / L450C20 尚无专属 列间空调 / CDU Requirement**，冷却侧目前只有 PRD、没有需求书基线。这是当前最大的工程文档缺口。
 
 参考：[[COOLING_SYSTEM_Guideline]]
 

@@ -78,7 +78,7 @@ Within the product line: choose [[L1240C45_Tech_Spec_External|L1240C45]] (150 kW
 **中文：** 这两个数不是一回事，谈容量前必须先对齐口径。
 
 - **IT Load（IT 负荷）＝ 1800 kW** —— 服务器与 GPU 实际消耗的电功率，不含任何冷却与配电损耗。本文档中所有「1800 kW」均指 IT Load。
-- **Total Facility Load（设施总负荷）＝ IT Load ＋ 冷却系统（CDU 泵、CRAH 风机、室外冷源）＋ 配电损耗 ＋ 辅助负荷。** 该数值随 **PUE** 变化，取决于站点气候与室外冷源方案，**必须逐站点计算** —— 入口为 <https://mdcx.org> 的 TCO / Designer。
+- **Total Facility Load（设施总负荷）＝ IT Load ＋ 冷却系统（CDU 泵、列间空调 风机、室外冷源）＋ 配电损耗 ＋ 辅助负荷。** 该数值随 **PUE** 变化，取决于站点气候与室外冷源方案，**必须逐站点计算** —— 入口为 <https://mdcx.org> 的 TCO / Designer。
 - **PUE = `1.0x`** —— 不给固定值、不给区间。干冷器可全年排热的气候落在低端，更热的站点需加混合冷机、PUE 相应上移；具体数值请用 <https://mdcx.org> 按贵站点气候条件计算。
 
 站点侧的变电申请、进线容量与开关柜选型必须按 Total Facility Load 计算，不能按 IT Load 计算。若贵方的「X MW」指的是电网侧可用容量，请在方案对齐会上明确说明，我方据此反算可支持的 IT 容量。
@@ -86,7 +86,7 @@ Within the product line: choose [[L1240C45_Tech_Spec_External|L1240C45]] (150 kW
 **English:** These are two different numbers and the basis must be aligned before any capacity discussion.
 
 - **IT Load = 1800 kW** — the electrical power actually consumed by servers and GPUs, excluding all cooling and distribution losses. Every "1800 kW" in this document refers to IT Load.
-- **Total Facility Load = IT Load + cooling (CDU pumps, CRAH fans, outdoor heat rejection) + distribution losses + auxiliaries.** The figure varies with **PUE** and depends on site climate and the outdoor heat-rejection scheme, so it **must be computed per site** — use the TCO / Designer at <https://mdcx.org>.
+- **Total Facility Load = IT Load + cooling (CDU pumps, 列间空调 fans, outdoor heat rejection) + distribution losses + auxiliaries.** The figure varies with **PUE** and depends on site climate and the outdoor heat-rejection scheme, so it **must be computed per site** — use the TCO / Designer at <https://mdcx.org>.
 - **PUE = `1.0x`** — no fixed value and no range. Climates where dry coolers reject heat year-round sit at the low end; hotter sites need a hybrid chiller and PUE moves up accordingly. For a figure, run your site's climate through <https://mdcx.org>.
 
 Utility applications, incoming feeder capacity and switchgear selection on the site side must be sized on Total Facility Load, not on IT Load. If your "X MW" refers to available grid capacity, please say so at the solution alignment meeting and we will work backwards to the supportable IT capacity.
@@ -117,11 +117,11 @@ Utility applications, incoming feeder capacity and switchgear selection on the s
 | 回路 / Loop | 承担负荷 / Load carried | 温位 / Temperatures | 介质 / Fluid |
 |---|---|---|---|
 | **回路 A —— GPU 侧暖水 / Loop A — GPU-side warm water** | GPU / CPU 冷板液冷负荷（绝大部分 IT 热量）/ Cold-plate liquid load (the great majority of IT heat) | **GPU 冷板进水 36–40 °C**；外冷源出水 32–36 °C；CDU approach +4 °C · **GPU cold-plate inlet 36–40 °C**; outdoor-plant supply 32–36 °C; CDU approach +4 °C | 纯水，0% 乙二醇 / Pure water, 0% glycol |
-| **回路 B —— CRAH 侧冷冻水 / Loop B — CRAH-side chilled water** | 机房残余风冷负荷 / Residual room air load | **10 / 16 °C 冷冻水 / chilled water** | 纯水，0% 乙二醇 / Pure water, 0% glycol |
+| **回路 B —— 列间侧冷冻水 / Loop B — In-row CW chilled water** | 机房残余风冷负荷 / Residual room air load | **10 / 16 °C 冷冻水 / chilled water** | 纯水，0% 乙二醇 / Pure water, 0% glycol |
 
-**为什么分成两条：** 冷板可以吃 40 °C 量级的水，风冷末端不行 —— 要把机房回风从 36 °C 降到 21 °C 送风，盘管进水必须在 10 °C 量级。并在同一条回路上，要么冷板侧被迫用冷水、浪费自然冷却时数并拉高 PUE，要么 CRAH 侧冷量不足、送风温度失控。解耦之后，回路 A 的 36–40 °C 暖水在绝大多数气候下可由干冷器直接排掉，机械制冷只作补充；回路 B 的冷冻水负荷则小得多，冷机容量随之下降。这是把单柜密度做到 220 kW 的必要条件，也是能耗上的回报。
+**为什么分成两条：** 冷板可以吃 40 °C 量级的水，风冷末端不行 —— 要把机房回风从 36 °C 降到 21 °C 送风，盘管进水必须在 10 °C 量级。并在同一条回路上，要么冷板侧被迫用冷水、浪费自然冷却时数并拉高 PUE，要么 列间侧冷量不足、送风温度失控。解耦之后，回路 A 的 36–40 °C 暖水在绝大多数气候下可由干冷器直接排掉，机械制冷只作补充；回路 B 的冷冻水负荷则小得多，冷机容量随之下降。这是把单柜密度做到 220 kW 的必要条件，也是能耗上的回报。
 
-**Why two loops:** cold plates will take water in the 40 °C class; air-side terminals will not — dropping a 36 °C return to a 21 °C supply requires coil water in the 10 °C class. On a single loop, either the cold-plate side is forced onto cold water — throwing away free-cooling hours and raising PUE — or the CRAH side runs short of capacity and supply temperature goes out of control. Decoupled, Loop A's 36–40 °C warm water can be rejected on dry coolers alone in most climates with mechanical cooling only as a topper, while Loop B carries a far smaller chilled-water load and a correspondingly smaller chiller. This is the precondition for a 220 kW rack, and it is where the energy return comes from.
+**Why two loops:** cold plates will take water in the 40 °C class; air-side terminals will not — dropping a 36 °C return to a 21 °C supply requires coil water in the 10 °C class. On a single loop, either the cold-plate side is forced onto cold water — throwing away free-cooling hours and raising PUE — or the in-row CW side runs short of capacity and supply temperature goes out of control. Decoupled, Loop A's 36–40 °C warm water can be rejected on dry coolers alone in most climates with mechanical cooling only as a topper, while Loop B carries a far smaller chilled-water load and a correspondingly smaller chiller. This is the precondition for a 220 kW rack, and it is where the energy return comes from.
 > **GPU 侧温位链：** 外冷源（干冷器）出水 **32–36 °C** → 进 CDU 一次侧 → CDU 板换 approach **+4 °C** → **GPU 冷板进水 36–40 °C**。
 > ***GPU-side temperature chain:*** *outdoor plant (dry cooler) supply **32–36 °C** → CDU primary side → plate-HX approach **+4 °C** → **GPU cold-plate inlet 36–40 °C**.*
 
@@ -155,7 +155,7 @@ Plate heat exchangers isolate the primary FWS (site / dry-cooler side) from the 
 > 冗余模型按项目可用性目标确定，在技术澄清阶段提供。
 > Unit count and redundancy model (N+1 / 2N) follow the project's IT capacity and availability target, and are provided during technical clarification.
 
-### 5.3 回路 B —— CRAH / Loop B — CRAH ^sec-5-crah
+### 5.3 回路 B —— 列间空调 / Loop B — 列间空调 ^sec-5-crah
 
 房间级下送风冷冻水型精密空调：全水盘管 + 两通调节阀，机内无压缩机、无制冷剂充注。
 Room-level downflow chilled-water precision air conditioner: all-water coil plus a two-way control valve, no compressor and no refrigerant charge inside the unit.
@@ -180,10 +180,10 @@ Room-level downflow chilled-water precision air conditioner: all-water coil plus
 | 水管接口 / Water connections | 进 / 出各 1 只 1.5" 外螺纹 · 1 inlet + 1 outlet, 1.5" male thread |
 | 选型海拔基准 / Altitude basis of selection | 0 m —— 非 0 海拔站点重新选型 / non-zero altitude sites are re-selected |
 
-| CRAH 台数 / CRAH units | **4× STULZ CRS 560 CW** |
+| 列间空调台数 / in-row CW units | **4× STULZ CRS 560 CW** |
 
-> 冗余模型按项目 CRAH 侧热负荷确定，在技术澄清阶段提供。
-> Unit count and redundancy model follow the project's CRAH-side heat load and are provided during technical clarification.
+> 冗余模型按项目 列间侧热负荷确定，在技术澄清阶段提供。
+> Unit count and redundancy model follow the project's in-row CW heat load and are provided during technical clarification.
 
 ### 5.4 室外侧 / Outdoor side
 
@@ -219,13 +219,13 @@ If you want the boundary outside but do not intend to build the electrical infra
 
 ### 6.2 配电参数 / Distribution parameters
 
-| 项目 / Item | 参数 / Parameter |
-|---|---|
-| UPS 边界 / UPS boundary | **箱外，由场站提供 UPS / 电池 / PDC** · **Outside the container; UPS / batteries / PDC supplied by the site** |
-| 供电制式 / Supply voltages | **380 / 400 / 415 / 480 V AC** |
-| 800 V HVDC | Roadmap Q3 2026，今日不供货 / roadmap Q3 2026, not shipping today |
-| CDU 供电 / CDU supply | 3Ph / N / PE / 380 V / 50 Hz（泵组 20.0 kW/台 · pump set 20.0 kW per unit） |
-| CRAH 供电 / CRAH supply | 400 V / 50 Hz / 3Ph / N / PE（2.6 kW/台 · per unit） |
+| 项目 / Item              | 参数 / Parameter                                                                                      |
+| ---------------------- | --------------------------------------------------------------------------------------------------- |
+| UPS 边界 / UPS boundary  | **箱外，由场站提供 UPS / 电池 / PDC** · **Outside the container; UPS / batteries / PDC supplied by the site** |
+| 供电制式 / Supply voltages | **380 / 400 / 415 / 480 V AC**                                                                      |
+| 800 V HVDC             | Roadmap Q3 2026，今日不供货 / roadmap Q3 2026, not shipping today                                         |
+| CDU 供电 / CDU supply    | 3Ph / N / PE / 380 V / 50 Hz（泵组 20.0 kW/台 · pump set 20.0 kW per unit）                              |
+| 列间空调 供电 / 列间空调 supply  | 400 V / 50 Hz / 3Ph / N / PE（2.6 kW/台 · per unit）                                                   |
 
 ---
 
@@ -237,7 +237,7 @@ If you want the boundary outside but do not intend to build the electrical infra
 | 外形尺寸（L × W × H）/ Exterior dimensions | **13,716 × 2,438 × 2,992 mm** —— **设计值，以最终图纸为准 / design value, subject to final drawings** |
 | 上部模块高度 / Upper module height | 900 mm（一次侧互联总管内收 / primary-side interconnect headers pulled inboard） |
 | CDU 运行重量 / CDU operating weight | 1,175 kg / 台 · per unit |
-| CRAH 干重 / CRAH dry weight | 254 kg / 台 · per unit |
+| 列间空调 干重 / 列间空调 dry weight | 254 kg / 台 · per unit |
 
 > 空箱重、满载重与地基荷载要求随最终配置确定，在技术澄清阶段随结构荷载计算提供。
 > Empty weight, loaded weight and foundation loading requirements follow the final configuration and are provided with the structural load calculations during technical clarification.
@@ -290,10 +290,10 @@ If you want the boundary outside but do not intend to build the electrical infra
 | 场站须提供的电力设施 / Electrical infrastructure to be provided by the site | **UPS / 电池 / PDC**（见 §6.1）· **UPS / batteries / PDC** (see §6.1) |
 | 场站须提供的冷却接口 / Cooling interfaces to be provided by the site | **两路独立**：回路 A 暖水（外冷源出水 32–36 °C，GPU 冷板进水 36–40 °C；选型点 FWS 36/46 °C）+ 回路 B 冷冻水（10/16 °C）。两路不可合并 · **Two independent services**: Loop A warm water (outdoor-plant supply 32–36 °C, GPU cold-plate inlet 36–40 °C; duty point FWS 36/46 °C) and Loop B chilled water (10/16 °C). They cannot be combined |
 | CDU 接口形式 / CDU connection type | 4 × DN100 **Tri-Clamp**（DIN 32676-B），顶部出线；场站侧按卫生级卡箍配对，非法兰 · 4 × DN100 **Tri-Clamp** (DIN 32676-B), top exit; site pipework matched with sanitary clamps, not flanges |
-| CRAH 接口形式 / CRAH connection type | 进 / 出各 1 只 1.5" 外螺纹 · 1 inlet + 1 outlet, 1.5" male thread |
+| 列间空调 接口形式 / 列间空调 connection type | 进 / 出各 1 只 1.5" 外螺纹 · 1 inlet + 1 outlet, 1.5" male thread |
 | 现场安装与调试 / On-site installation & commissioning | 不予承诺 / Not committed |
 | 运费与清关 / Freight & customs | 买方自理，不予承诺周期 / Buyer's responsibility; no duration committed |
-| 噪声（CRAH 单台）/ Noise (per CRAH unit) | 声功率 87.8 dB(A) · 2 m 声压 67.6 dB(A) · Sound power 87.8 dB(A) · 67.6 dB(A) at 2 m |
+| 噪声（列间空调 单台）/ Noise (per in-row CW unit) | 声功率 87.8 dB(A) · 2 m 声压 67.6 dB(A) · Sound power 87.8 dB(A) · 67.6 dB(A) at 2 m |
 
 > 地基承载、地面平整度、维护净距与多机噪声叠加随最终配置与布置确定，在技术澄清阶段提供。
 > Foundation loading, ground levelness, maintenance clearances and multi-unit noise superposition follow the final configuration and layout, and are provided during technical clarification.
@@ -313,10 +313,10 @@ If you want the boundary outside but do not intend to build the electrical infra
 | 环路 / Loops | 双环路 / Dual loop（`D`） |
 | 回路 A / Loop A | GPU 冷板进水 36–40 °C；外冷源出水 32–36 °C；CDU approach +4 °C；选型点 FWS 36/46 · TCS 40/50 °C（热端设计点）· GPU cold-plate inlet 36–40 °C; outdoor-plant supply 32–36 °C; CDU approach +4 °C; duty point FWS 36/46 · TCS 40/50 °C (hot-end design point) |
 | PUE | **`1.0x`** —— 逐站点用 <https://mdcx.org> 计算 · computed per site at <https://mdcx.org> |
-| 回路 B / Loop B | CRAH 侧 10 / 16 °C 冷冻水 · CRAH-side 10 / 16 °C chilled water |
+| 回路 B / Loop B | 列间侧 10 / 16 °C 冷冻水 · in-row CW 10 / 16 °C chilled water |
 | 介质 / Fluid | 纯水，0% 乙二醇 · Pure water, 0% glycol |
 | CDU | STULZ SCR 14103 W · 1200 kW/台 · 103.8 m³/h · Tri-Clamp DN100 顶出 · 泵组 20.0 kW · per unit / top exit / 20.0 kW pump set |
-| CRAH | STULZ CRS 560 CW · 57.3 kW/台（净 54.7）· 11,200 m³/h · 8.2 m³/h · 52 kPa · 400 V/50 Hz |
+| 列间空调 | STULZ CRS 560 CW · 57.3 kW/台（净 54.7）· 11,200 m³/h · 8.2 m³/h · 52 kPa · 400 V/50 Hz |
 | UPS 边界 / UPS boundary | **箱外，由场站提供 · Outside the container, supplied by the site** |
 | 供电制式 / Supply voltages | 380 / 400 / 415 / 480 V AC（800 V HVDC 为 Roadmap Q3 2026 · roadmap Q3 2026） |
 | 软件 / Software | CIOS（含 / included）· NVIDIA Omniverse 数字孪生（含 / included） |
@@ -332,4 +332,4 @@ If you want the boundary outside but do not intend to build the electrical infra
 | 版本 / Version | 日期 / Date | 变更摘要 / Summary |
 |---|---|---|
 | v1.1 | 2026-08-30 | **按 2026-08-30 Yuri 四条裁定更新（[[PRODUCT_SPEC_BASELINE]] v2.0）。** ① **双环路 GPU 侧温位链**：外冷源出水 32–36 °C → CDU approach +4 °C → GPU 冷板进水 **36–40 °C**（原「36–45 °C」上限 45 改 40，§5 / §13 / §14）。 ② **PUE 一律写 `1.0x`** —— 不给固定值、不给区间、不给「典型值」，逐站点用 <https://mdcx.org>（TCO / Designer）计算；Total Facility Load 的具体区间一并作废，改为「随 PUE 变化，逐站点计算」，但 IT Load vs Total Facility Load 的口径区分保留。 ③ **交期**写入正式承诺：首批 **120 天 EXW**、Scale **90 天 EXW**（自下单起算），假负载运行期 **5–30 天**（Supermicro 建议，**不含在 EXW 承诺内**）；商务 / 运输 / 安装**一律不予承诺**；删除「以商务合同为准」的占位写法与四阶段时间轴、「现场安装与调试 3–4 周」。 ④ **质保**写入正式承诺：核心部件**自 EXW 起一年**，后续年份**按年收取服务费**；ONSITE / NBD / 9×5 / 24×7 等响应级别条款**以 Invoice 为准**，本版不定义（原「1 年 / 9×5 NBD」已删除）。 本版仍不含任何价格数字，也不含任何未确认或源冲突标记。 · Updated to Yuri's four rulings of 2026-08-30: adjudicated GPU-side temperatures where applicable; PUE stated as `1.0x` and computed per site at <https://mdcx.org>; lead time committed as 120 days EXW first batch / 90 days EXW Scale with a 5–30 day dummy-load burn-in outside the EXW commitment and no commitment on the commercial, freight or installation segments; warranty committed as core components for one year from EXW plus an annual service fee, with response levels governed by the Invoice. No pricing and no unconfirmed-or-conflicted markers anywhere. |
-| v1.0 | 2026-08-30 | 首版对外输出版（中英双语单文件）。本版收录已定型的产品参数、已批准的双环路 CDU / CRAH 选型参数，以及标注为「设计值」的工程推导值；仍在工程定型中的布局图、网络、环境与合规、消防与安全四节不在本版收录范围，已在导航表标注，相关参数在技术澄清阶段提供。§3 显式区分 IT Load 与 Total Facility Load；§6 说明 UPS 置于箱外的边界设计。交期以商务合同为准，全文不含交期数字与价格数字。锚点 `^sec-2-positioning` … `^sec-14-summary` 保留；本版为单文件，块拆分待需要时再做。 · First external edition (bilingual, single file). It carries the fixed product parameters, the approved dual-loop CDU / CRAH selection data, and engineering values explicitly labelled as design values; Layout, Network, Environmental & Compliance and Fire Protection are outside its scope, flagged in the navigation table, and provided during technical clarification. §3 separates IT Load from Total Facility Load; §6 explains the external UPS boundary. Lead time is governed by the commercial contract; no lead-time figures and no pricing appear anywhere. |
+| v1.0 | 2026-08-30 | 首版对外输出版（中英双语单文件）。本版收录已定型的产品参数、已批准的双环路 CDU / 列间空调选型参数，以及标注为「设计值」的工程推导值；仍在工程定型中的布局图、网络、环境与合规、消防与安全四节不在本版收录范围，已在导航表标注，相关参数在技术澄清阶段提供。§3 显式区分 IT Load 与 Total Facility Load；§6 说明 UPS 置于箱外的边界设计。交期以商务合同为准，全文不含交期数字与价格数字。锚点 `^sec-2-positioning` … `^sec-14-summary` 保留；本版为单文件，块拆分待需要时再做。 · First external edition (bilingual, single file). It carries the fixed product parameters, the approved dual-loop CDU / in-row CW selection data, and engineering values explicitly labelled as design values; Layout, Network, Environmental & Compliance and Fire Protection are outside its scope, flagged in the navigation table, and provided during technical clarification. §3 separates IT Load from Total Facility Load; §6 explains the external UPS boundary. Lead time is governed by the commercial contract; no lead-time figures and no pricing appear anywhere. |
