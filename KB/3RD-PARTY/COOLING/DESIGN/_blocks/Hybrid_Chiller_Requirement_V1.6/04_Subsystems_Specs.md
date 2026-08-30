@@ -101,7 +101,7 @@ source_anchors: []
 
 ## 10. 冷冻水泵规格与冗余要求（**FWS 主泵 — Chiller 集成**） ^chiller-10-fws-pump
 
-> **【V1.5 锁定】本节冷冻水泵 = DC45 系统中的 FWS 主泵（Facility Water System / 一次侧 / 站点 EG 回路 / CDU 板换一次侧）。归属决策由 [[../../FOG D Series/DESIGN/DC45 Hydronic & Thermal Design Criteria|Hydronic Criteria Rev.C]] §9.2 锁定：FWS 主泵由 Chiller 集成提供（CDU 不自带一次泵）。**
+> **【V1.5 锁定】本节冷冻水泵 = DC45 系统中的 FWS 主泵（Facility Water System / 一次侧 / 站点 EG 回路 / CDU 板换一次侧）。归属决策由 [[../../LIQUID/L1240C45/DESIGN/L1240C45 Hydronic & Thermal Design Criteria|Hydronic Criteria Rev.C]] §9.2 锁定：FWS 主泵由 Chiller 集成提供（CDU 不自带一次泵）。**
 
 - **冗余配置：允许供应商采用不同的冗余策略，包括但不限于定时切换主备泵。** 推荐 2N 配置（双泵并联，各自运行在 50% 额定负载）：
   - 正常工况：两台泵同时运行，各承担 50% 流量
@@ -117,7 +117,7 @@ source_anchors: []
 
 ### 10.1 一次侧管路联动要求（V1.6 新增，2026-06-06）
 
-> **设计前提**：Chiller FWS 出水温度 22°C 精度 ±0.5°C 不应被一次侧管路温度漂移污染。供应商须知悉下游一次侧管路（Chiller↔CDU 最长 100m，分段 DN200 主干 95m 户外 + DN100 CDU 接入段 5m IT zone 内）的保温要求，详见 [[../../FOG D Series/DESIGN/DC45 三支路冷却重评估 V4|V4]] §8 锁定的 9 条 Criteria（C-PIPE-00 ~ 08）：
+> **设计前提**：Chiller FWS 出水温度 22°C 精度 ±0.5°C 不应被一次侧管路温度漂移污染。供应商须知悉下游一次侧管路（Chiller↔CDU 最长 100m，分段 DN200 主干 95m 户外 + DN100 CDU 接入段 5m IT zone 内）的保温要求，详见 [[../../LIQUID/L1240C45/DESIGN/L1240C45 三支路冷却重评估 V4|V4]] §8 锁定的 9 条 Criteria（C-PIPE-00 ~ 08）：
 
 - **管路保温层**：≥ 50 mm 岩棉（k ≤ 0.040 W/(m·K)）或 ≥ 30 mm PIR/PUR 闭孔泡沫（k ≤ 0.022 W/(m·K) 等效热阻）；DN200 + DN100 同等保温，变径处不留热桥
 - **户外护壳**：DN200 户外段 0.5 mm 不锈钢护壳 / 0.8 mm 铝皮；UAE/Thailand 加 0.1 mm 防潮层

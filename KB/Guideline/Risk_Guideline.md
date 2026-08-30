@@ -13,28 +13,28 @@ tags:
 
 | 块 | 主题 | 包含章节 |
 |----|------|---------|
-| [[_blocks/Risk_Guideline/01_R1_R2_Classification_SPOF]] | R-1/R-2 风险分级与单点故障识别 | R-1, R-2 |
-| [[_blocks/Risk_Guideline/02_R3_R4_RedFlags_Load]] | R-3/R-4 工程红旗与负荷定义风险 | R-3, R-4 |
-| [[_blocks/Risk_Guideline/03_R5_R6_Operations_Deployment]] | R-5/R-6 运维与部署风险评估 | R-5, R-6 |
-| [[_blocks/Risk_Guideline/04_R7_Scalability_Cost]] | R-7 扩展与成本风险 | R-7 |
-| [[_blocks/Risk_Guideline/05_Workflow_Integration]] | 工作流集成 | — |
+| [[01_R1_R2_Classification_SPOF]] | R-1/R-2 风险分级与单点故障识别 | R-1, R-2 |
+| [[02_R3_R4_RedFlags_Load]] | R-3/R-4 工程红旗与负荷定义风险 | R-3, R-4 |
+| [[03_R5_R6_Operations_Deployment]] | R-5/R-6 运维与部署风险评估 | R-5, R-6 |
+| [[04_R7_Scalability_Cost]] | R-7 扩展与成本风险 | R-7 |
+| [[05_Workflow_Integration]] | 工作流集成 | — |
 
 ---
 
 ## 1. 风险分级与单点故障识别
-![[_blocks/Risk_Guideline/01_R1_R2_Classification_SPOF]]
+![[01_R1_R2_Classification_SPOF]]
 
 ## 2. 工程红旗与负荷定义风险
-![[_blocks/Risk_Guideline/02_R3_R4_RedFlags_Load]]
+![[02_R3_R4_RedFlags_Load]]
 
 ## 3. 运维与部署风险评估
-![[_blocks/Risk_Guideline/03_R5_R6_Operations_Deployment]]
+![[03_R5_R6_Operations_Deployment]]
 
 ## 4. 扩展与成本风险
-![[_blocks/Risk_Guideline/04_R7_Scalability_Cost]]
+![[04_R7_Scalability_Cost]]
 
 ## 5. 工作流集成
-![[_blocks/Risk_Guideline/05_Workflow_Integration]]
+![[05_Workflow_Integration]]
 
 ---
 

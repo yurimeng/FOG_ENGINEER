@@ -29,9 +29,9 @@ source_anchors:
 ## N-12 参考文档
 
 - 网络产品（引澜布线系统）：[[PRODUCTS_NETWORK]]
-- AC40 网络端口配置：[[AC40_NETWORK_CONF|KB/3RD-PARTY/NETWORK/AC40_NETWORK_CONF]]（PDF 元数据伴侣）
-- AC40 产品规格：[[AC40]]
-- DC45 产品规格：[[PRODUCTS_DC45]]
-- MDC 标准组合：[[PRODUCTS_MDC]]
+- AC40 网络端口配置：[[I400C40_NETWORK_CONF|KB/3RD-PARTY/NETWORK/I400C40_NETWORK_CONF]]（PDF 元数据伴侣）
+- AC40 产品规格：[[I400C40]]
+- DC45 产品规格：[[PRODUCTS_L1240C45]]
+- MDC 标准组合：[[_COMMON/PRODUCTS_MDC]]
 - 索引与执行准则：[[PRINCIPLE_Guideline]]
 - 相关：[[COOLING_SYSTEM_Guideline]]、[[POWER_SYSTEMS_Guideline]]、[[Risk_Guideline]]、[[Compliance_Guideline]]

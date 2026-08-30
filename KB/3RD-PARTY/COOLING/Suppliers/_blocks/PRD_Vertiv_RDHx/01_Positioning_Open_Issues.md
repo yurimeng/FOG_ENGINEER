@@ -1,17 +1,17 @@
 ---
-title: "01_Positioning_Open_Issues — 品牌定位 + Q1–Q6"
-parent: "[[../../PRD-Vertiv-RDHx]]"
+title: 01_Positioning_Open_Issues — 品牌定位 + Q1–Q6
+parent: "[[PRD-Vertiv-RDHx]]"
 order: 1
 tags:
   - "#workspace/engineer"
   - "#type/prd"
   - "#product/RDHx"
   - "#thermal"
-  - #MDC
+  - 
 created: 2026-06-18
-source_file: "KB/3RD-PARTY/COOLING/Suppliers/PRD-Vertiv-RDHx.md"
+source_file: KB/3RD-PARTY/COOLING/Suppliers/PRD-Vertiv-RDHx.md
 source_anchors:
-  - "品牌定位"
+  - 品牌定位
 ---
 
 # 品牌定位与应用场景

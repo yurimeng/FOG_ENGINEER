@@ -7,8 +7,8 @@ tags:
 ---
 # Engineering Principles / 工程原则
 
-Document Version: v1.2
-Last Updated: 2026-05-19
+Document Version: v1.3
+Last Updated: 2026-08-30
 
 > **加载说明 / Loading Note**：所有 Agent 在加载后必须优先阅读本文档，并严格遵守其中所有原则。本文档是整个系统的最高行为准则。
 
@@ -64,7 +64,7 @@ Whenever possible:
 
 Infrastructure must be modular. No customization at all.
 
-Must follow [[PRODUCTS_MDC]] for all product specifications.
+Must follow [[_COMMON/PRODUCTS_MDC]] for all product specifications.
 
 Advantages:
 - Faster deployment
@@ -75,7 +75,7 @@ Advantages:
 
 基础设施必须是模块化的。严禁任何定制化。
 
-所有产品规格必须遵循 [[PRODUCTS_MDC]]。
+所有产品规格必须遵循 [[_COMMON/PRODUCTS_MDC]]。
 
 优势：
 - 部署更快
@@ -220,9 +220,11 @@ When a client asks "how much power do I need":
 
 | 产品 | IT Load | 估算 Total Facility Load（取决于 PUE） |
 |------|---------|--------------------------------------|
-| DC45（单柜）| 1240 kW | ~1325–1675 kW（PUE 1.07–1.35）|
-| AC45（单柜）| 400 kW  | ~408–500 kW（PUE 1.02–1.20）|
-| AC40（单柜）| 400 kW  | ~408–480 kW（PUE 1.02–1.20）|
+| L1240C45（单箱）| 1240 kW | 随 PUE 变化，逐站点用 <https://mdcx.org> 计算 |
+| I400C45（单箱）| 400 kW  | ~408–500 kW（PUE 1.02–1.20）|
+| I400C40（单箱）| 400 kW  | ~408–480 kW（PUE 1.02–1.20）|
+
+> L1800C45 / L450C20 / I200C20 的 Total Facility Load 尚无来源，见 [[PRODUCT_SPEC_BASELINE]] §3.4（⏳ `#unconfirmed`），**不得自行推算后对客**。
 
 > ⚠️ Total Facility Load 不是固定值，必须按现场环境温度 / 冷却架构计算 PUE 后给出。
 
@@ -290,12 +292,12 @@ Before accessing any specific KB file, **always start from the appropriate index
 
 | When accessing... | Start from... |
 |---|---|
-| Works_Public structure | [[FOG/index]] |
-| AGENTS / roles | [[FOG/AGENTS]] |
+| Works_Public structure | [[MDC/index]] |
+| AGENTS / roles | [[MDC/AGENTS]] |
 | Domain guidelines | [[/KB/Guideline/index]] |
-| Product catalog | [[PRODUCTS_MDC]] |
+| Product catalog | [[_COMMON/PRODUCTS_MDC]] |
 | Specific products | See zone index in Guideline |
-| Specific project | [[Projects/project_list]] |
+| Specific project | [[project_list]] |
 | Processes | See [[PROCESS/WORKFLOW/WORKFLOW]] |
 
 **Never jump directly to a deep file without first checking the relevant index.**
@@ -377,8 +379,9 @@ Reference architectures represent validated, pre-engineered system configuration
 
 | ID | Name | IT Capacity | Cooling Type | Product |
 |---|---|---|---|---|
-| RA-001 | Edge Inference — Immersion 0.4MW | 0.4MW | Immersion | AC40 |
-| RA-002 | Edge Inference — DLC 1.2MW | 1.2MW | Direct Liquid Cooling | DC45 |
+| RA-001 | Edge Inference — Immersion 0.4MW | 0.4MW | Immersion Cooling | I400C40 |
+| RA-002 | Edge Inference — Liquid Cooling 1.2MW | 1.2MW | Liquid Cooling | L1240C45 |
+| RA-003 | Edge Inference — Immersion 0.2MW All-in-One | 0.2MW | Immersion Cooling | I200C20 |
 
 **Reference path:** `[[Reference Architecture]]`
 
@@ -409,13 +412,22 @@ Reference architectures represent validated, pre-engineered system configuration
 
 | ID | 名称 | IT 容量 | 冷却类型 | 产品 |
 |---|---|---|---|---|
-| RA-001 | Edge Inference — 浸没式 0.4MW | 0.4MW | 浸没式 | AC40 |
-| RA-002 | Edge Inference — 直冷液冷 1.2MW | 1.2MW | 直冷液冷 | DC45 |
+| RA-001 | Edge Inference — 浸没式 0.4MW | 0.4MW | Immersion Cooling | I400C40 |
+| RA-002 | Edge Inference — 液冷 1.2MW | 1.2MW | Liquid Cooling | L1240C45 |
+| RA-003 | Edge Inference — 浸没式 0.2MW All-in-One | 0.2MW | Immersion Cooling | I200C20 |
 
 **参考路径：** `[[Reference Architecture]]`
 
 ---
 
-*Document Version: v1.2 | Last Updated: 2026-05-19*
+*Document Version: v1.3 | Last Updated: 2026-08-30*
 
 > v1.2 变更：修复 Principle 11 CN 部分错误复制 P10 的 KB Access 内容；在 Principle 8 补充 IT Load vs Total Facility Load 的具体数值示例。
+
+---
+
+## Changelog
+
+| 版本 | 日期 | 变更 |
+|---|---|---|
+| v1.3 | 2026-08-30 | 产品口径对齐 2026-08-30 基线：Principle 8 示例表 SKU 改用新码（DC45→L1240C45 · AC45→I400C45 · AC40→I400C40）并加另三个 SKU 的 `#unconfirmed` 提示；Principle 12 EN/CN 参考架构表产品列改用新码、冷却类型改用产品线名，补 RA-003。六 SKU 全部 `shipped`（站点 `docs/PRODUCT-MATRIX.md` §5 D-19 gate · 2026-08-27）。 |

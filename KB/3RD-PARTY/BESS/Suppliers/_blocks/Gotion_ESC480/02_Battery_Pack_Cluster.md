@@ -1,17 +1,17 @@
 ---
-title: "02_Battery_Pack_Cluster — §3 电池系统"
-parent: "[[../../Gotion ESC480-125P261-UL]]"
+title: 02_Battery_Pack_Cluster — §3 电池系统
+parent: "[[Gotion ESC480-125P261-UL]]"
 order: 2
 tags:
   - "#workspace/engineer"
   - "#type/bess-prd"
   - "#product/BESS"
   - "#power"
-  - #MDC
+  - 
 created: 2026-06-18
-source_file: "KB/3RD-PARTY/BESS/Suppliers/Gotion ESC480-125P261-UL.md"
+source_file: KB/3RD-PARTY/BESS/Suppliers/Gotion ESC480-125P261-UL.md
 source_anchors:
-  - "§3"
+  - §3
 ---
 
 # §3. 电池系统参数

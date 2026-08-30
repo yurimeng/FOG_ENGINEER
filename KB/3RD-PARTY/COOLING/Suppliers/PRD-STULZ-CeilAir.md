@@ -26,48 +26,48 @@ audience: 人(销售/售前/选型工程师)
 
 | 章节 | 主题 |
 |------|------|
-| §1 | [[_blocks/PRD_STULZ_CeilAir/01_品牌定位\|品牌定位与应用场景]] |
-| §2 | [[_blocks/PRD_STULZ_CeilAir/02_认证警示\|认证警示(必读,影响市场准入)]] |
-| §3 | [[_blocks/PRD_STULZ_CeilAir/03_参数表\|OHS-084-DG-FC 核心参数表]] |
-| §4 | [[_blocks/PRD_STULZ_CeilAir/04_选型与验证\|选型建议 + 验证记录]] |
-| §5 | [[_blocks/PRD_STULZ_CeilAir/05_澄清项\|关键澄清项 Q1-Q7]] |
-| §6 | [[_blocks/PRD_STULZ_CeilAir/06_引用\|引用]] |
+| §1 | [[MDC/KB/3RD-PARTY/COOLING/Suppliers/_blocks/PRD_STULZ_CeilAir/01_品牌定位\|品牌定位与应用场景]] |
+| §2 | [[02_认证警示\|认证警示(必读,影响市场准入)]] |
+| §3 | [[03_参数表\|OHS-084-DG-FC 核心参数表]] |
+| §4 | [[04_选型与验证\|选型建议 + 验证记录]] |
+| §5 | [[05_澄清项\|关键澄清项 Q1-Q7]] |
+| §6 | [[06_引用\|引用]] |
 
 ---
 
 ## 1. 品牌定位与应用场景
 
-![[_blocks/PRD_STULZ_CeilAir/01_品牌定位]]
+![[MDC/KB/3RD-PARTY/COOLING/Suppliers/_blocks/PRD_STULZ_CeilAir/01_品牌定位]]
 
 ---
 
 ## 2. 认证警示(必读,影响市场准入)
 
-![[_blocks/PRD_STULZ_CeilAir/02_认证警示]]
+![[02_认证警示]]
 
 ---
 
 ## 3. OHS-084-DG-FC 核心参数表
 
-![[_blocks/PRD_STULZ_CeilAir/03_参数表]]
+![[03_参数表]]
 
 ---
 
 ## 4. 选型建议 + 验证记录(交叉对照)
 
-![[_blocks/PRD_STULZ_CeilAir/04_选型与验证]]
+![[04_选型与验证]]
 
 ---
 
 ## 5. 关键澄清项(Q1-Q7)
 
-![[_blocks/PRD_STULZ_CeilAir/05_澄清项]]
+![[05_澄清项]]
 
 ---
 
 ## 6. 引用
 
-![[_blocks/PRD_STULZ_CeilAir/06_引用]]
+![[06_引用]]
 
 ---
 

@@ -28,8 +28,8 @@ audience: 人(销售/售前/选型工程师)
 
 | 块 | 内容 |
 |----|------|
-| [[_blocks/Gotion_ESC480/01_System_Composition]] | §1 系统概述 / §2 系统组成 |
-| [[_blocks/Gotion_ESC480/02_Battery_Pack_Cluster]] | §3 电池系统参数(电芯 / 电池包 / 电池簇) |
-| [[_blocks/Gotion_ESC480/03_PCS_Grid_Off_Grid]] | §4 PCS 储能变流器参数(直流 / 交流并网 / 离网 / 其他) |
-| [[_blocks/Gotion_ESC480/04_BMS_Thermal_Fire_Safety]] | §5 BMS / §6 热管理 / §7 除湿 / §8 消防 |
-| [[_blocks/Gotion_ESC480/05_Environment_Changelog]] | §9 环境与安装条件 / Changelog |
+| [[01_System_Composition]] | §1 系统概述 / §2 系统组成 |
+| [[02_Battery_Pack_Cluster]] | §3 电池系统参数(电芯 / 电池包 / 电池簇) |
+| [[03_PCS_Grid_Off_Grid]] | §4 PCS 储能变流器参数(直流 / 交流并网 / 离网 / 其他) |
+| [[04_BMS_Thermal_Fire_Safety]] | §5 BMS / §6 热管理 / §7 除湿 / §8 消防 |
+| [[05_Environment_Changelog]] | §9 环境与安装条件 / Changelog |

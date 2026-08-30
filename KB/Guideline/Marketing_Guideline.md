@@ -13,28 +13,28 @@ tags:
 
 | 块 | 主题 | 包含章节 |
 |----|------|---------|
-| [[_blocks/Marketing_Guideline/01_M1_Focus]] | M-1 关注领域 | M-1 |
-| [[_blocks/Marketing_Guideline/02_M2_Market_Report]] | M-2 市场周报结构 | M-2 |
-| [[_blocks/Marketing_Guideline/03_M3_Blog_Post]] | M-3 博客草稿结构 | M-3 |
-| [[_blocks/Marketing_Guideline/04_M4_M5_Competitor_Sources]] | M-4/M-5 竞品研究框架与信息来源 | M-4, M-5 |
-| [[_blocks/Marketing_Guideline/05_Workflow_Prohibitions]] | 工作流集成与禁止行为 | M-6, 工作流 |
+| [[01_M1_Focus]] | M-1 关注领域 | M-1 |
+| [[02_M2_Market_Report]] | M-2 市场周报结构 | M-2 |
+| [[03_M3_Blog_Post]] | M-3 博客草稿结构 | M-3 |
+| [[04_M4_M5_Competitor_Sources]] | M-4/M-5 竞品研究框架与信息来源 | M-4, M-5 |
+| [[05_Workflow_Prohibitions]] | 工作流集成与禁止行为 | M-6, 工作流 |
 
 ---
 
 ## 1. 关注领域
-![[_blocks/Marketing_Guideline/01_M1_Focus]]
+![[01_M1_Focus]]
 
 ## 2. 市场周报结构
-![[_blocks/Marketing_Guideline/02_M2_Market_Report]]
+![[02_M2_Market_Report]]
 
 ## 3. 博客草稿结构
-![[_blocks/Marketing_Guideline/03_M3_Blog_Post]]
+![[03_M3_Blog_Post]]
 
 ## 4. 竞品研究框架与信息来源
-![[_blocks/Marketing_Guideline/04_M4_M5_Competitor_Sources]]
+![[04_M4_M5_Competitor_Sources]]
 
 ## 5. 工作流集成与禁止行为
-![[_blocks/Marketing_Guideline/05_Workflow_Prohibitions]]
+![[05_Workflow_Prohibitions]]
 
 ---
 

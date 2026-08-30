@@ -18,9 +18,9 @@ tags:
 
 | 块 | 内容 |
 |----|------|
-| [[_blocks/PRINCIPLE_Guideline/01_Positioning]] | §0 文件定位 / 与 SOUL & AGENTS 关系 |
-| [[_blocks/PRINCIPLE_Guideline/02_Cross_Rules]] | §1 跨 Guideline 通用强制规则 (无价格 / KB-only / 负荷澄清 / 两步查询 / Zone 冗余 / 上报原则) |
-| [[_blocks/PRINCIPLE_Guideline/03_File_Index]] | §2 文件清单与章节 ID 体系 |
+| [[MDC/KB/Guideline/_blocks/PRINCIPLE_Guideline/01_Positioning]] | §0 文件定位 / 与 SOUL & AGENTS 关系 |
+| [[02_Cross_Rules]] | §1 跨 Guideline 通用强制规则 (无价格 / KB-only / 负荷澄清 / 两步查询 / Zone 冗余 / 上报原则) |
+| [[03_File_Index]] | §2 文件清单与章节 ID 体系 |
 | [[_blocks/PRINCIPLE_Guideline/04_Key_Matrix]] | §4 Key Matrix — Agent × 场景 必读章节矩阵 |
 | [[_blocks/PRINCIPLE_Guideline/05_Escalation_Conflict_Maintenance]] | §5 上报决策树 / §6 冲突处理 / §7 维护规则 |
 | [[_blocks/PRINCIPLE_Guideline/06_Section_ID_Cross_Reference]] | §8 章节 ID 一致性表 |

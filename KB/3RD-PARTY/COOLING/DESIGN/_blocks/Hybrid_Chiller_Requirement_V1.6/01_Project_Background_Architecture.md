@@ -27,7 +27,7 @@ DC45 采用 Direct-to-Chip（DtC）液冷技术，为高密度 GPU/AI 加速计�
 - **介质边界：** Chiller 一次侧（本规格书覆盖）= EG；**CDU 板式换热器为介质隔离边界**；CDU 二次侧 = PG25 25% 丙二醇（见 [[CDU_Requirement]] v2.1，不在本规格书范围）
 - 冷却方式：Direct-to-Chip（板式换热器直接连接服务器冷板）
 - 末端设备（CDU 二次侧三支路）：① 8 台 GB300 NVL72 DLC 液冷机架（Branch 1）② 9 台 VERTIV DCD35/50 RDHX 后门（Branch 2）③ 9 台 STULZ OHS-084-DG-FC CeilAir 顶置 CRAH 冷凝侧（Branch 3）
-- **Chiller 功能：** 为 CDU 一次侧（外部 TCS）提供稳定冷冻水供应，覆盖 CDU 全部三支路总散热（S-Max 1350 kW + 板换/管损/泵热 ≈ 1400 kW，含余量按 ≥ 1,600 kW 设计；S-Max 数值按 [[../../FOG D Series/DESIGN/DC45 三支路冷却重评估 V4|V4 锁定]] §4.4 / §6.2，对应 TCS 26°C 单点 + 4°C CDU 板换接近温差）
+- **Chiller 功能：** 为 CDU 一次侧（外部 TCS）提供稳定冷冻水供应，覆盖 CDU 全部三支路总散热（S-Max 1350 kW + 板换/管损/泵热 ≈ 1400 kW，含余量按 ≥ 1,600 kW 设计；S-Max 数值按 [[../../LIQUID/L1240C45/DESIGN/L1240C45 三支路冷却重评估 V4|V4 锁定]] §4.4 / §6.2，对应 TCS 26°C 单点 + 4°C CDU 板换接近温差）
 
 ---
 

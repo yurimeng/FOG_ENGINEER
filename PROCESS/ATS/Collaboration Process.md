@@ -63,9 +63,9 @@ Last Updated: 2026-04-11
 > 在收到完整信息前，无法进行准确的架构选型和容量规划。"
 
 **必须澄清的关键项：**
-- IT 负载 vs 整体电力负荷（见 [[FOG/KB/Guideline/POWER_SYSTEMS_Guideline|KB/POWER_LOAD]]）
+- IT 负载 vs 整体电力负荷（见 [[POWER_SYSTEMS_Guideline|KB/POWER_LOAD]]）
 - UL 合规是否必须
-- 目标部署时间是否现实（参考交付周期 185–230 天）
+- 目标部署时间是否现实（参考交付周期 首批 120 天 EXW / Scale 90 天 EXW；商务·运输·安装不承诺；假负载运行期 5–30 天
 - Grid 稳定性（是否需要 BESS）
 
 ### 3.3 提案交付
@@ -144,10 +144,13 @@ Proposal
 ## 7 关键约束
 
 1. **不输出价格**：所有价格/报价问题转 AM
-2. **不承诺交付时间**：交付周期（185–230 天）仅供参考，不作承诺
+2. **不承诺交付时间**：交付周期（首批 120 天 EXW / Scale 90 天 EXW；商务·运输·安装不承诺；假负载运行期 5–30 天
 3. **IT 负载 vs 整体电力负荷**：必须在 RFI 阶段澄清，并在所有输出中明确区分
 4. **信息不完整不设计**：RFI 缺失关键项时，暂停设计，等待补充
 
 ---
 
 *Document Version: v1.1 | Last Updated: 2026-04-12*
+
+
+> ✅ **2026-08-30 Yuri 裁定已传导。** 交期只承诺 EXW（首批 120 天 / Scale 90 天，自下单起算），商务·运输·安装一律不承诺，另有假负载运行期 5–30 天（Supermicro 建议，不含在 EXW 内）；PUE 一律写 `1.0x`，逐站点用 <https://mdcx.org> 计算；质保为核心部件 EXW 起一年 + 按年服务费，ONSITE/NBD/24×7 以 Invoice 为准。基准：[[PRODUCT_SPEC_BASELINE]]。

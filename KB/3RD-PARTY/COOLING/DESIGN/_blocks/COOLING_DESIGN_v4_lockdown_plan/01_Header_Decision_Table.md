@@ -16,7 +16,7 @@ source_anchors: []
 
 | 项 | 你已锁定 | 待你抉择 | 我建议 |
 |---|---|---|---|
-| 应用基线 | DC45_Thermal_Assessment_6Sites（V2.0 / 6 站点 / 1240 kW IT）| — | 沿用，PUE 数值待 v4 重算 |
+| 应用基线 | L1240C45_Thermal_Assessment_6Sites（V2.0 / 6 站点 / 1240 kW IT）| — | 沿用，PUE 数值待 v4 重算 |
 | 整体散热架构 | DC45 三支路重评估 2026-05-21（Rev 11）三支路 | — | 沿用三支路骨架 |
 | 三支路命名 | Rack / CRAH / RDHx（对应 Rev 11 的 DLC / CeilAir / RDHx）| — | 已对齐 |
 | 共享 TCS | **是**（单 TCS 二次侧服务三支路）| — | 与 v3.0 / 计算公式.md §4 一致 |
@@ -33,8 +33,8 @@ source_anchors: []
 
 | 路径 | 当前版本 | v4 状态 |
 |---|---|---|
-| `KB/FOG D Series/DESIGN/DC45_Thermal_Assessment_6Sites.md` | V2.0（2026-05-22）| **基线沿用**，§2.4 / §3.4 / §4.x / §8 各站点表中 FWS 26–28°C 需在 v4 重算 PUE 后联动改 |
-| `KB/FOG D Series/DESIGN/DC45 三支路冷却重评估 2026-05-21.md` | Rev 11 | **架构骨架沿用**，§1.3 / §2.x / §3.x / §4.x 中 TCS 26–28°C 全部需联动改 |
+| `KB/LIQUID/L1240C45/DESIGN/L1240C45_Thermal_Assessment_6Sites.md` | V2.0（2026-05-22）| **基线沿用**，§2.4 / §3.4 / §4.x / §8 各站点表中 FWS 26–28°C 需在 v4 重算 PUE 后联动改 |
+| `KB/LIQUID/L1240C45/DESIGN/L1240C45 三支路冷却重评估 2026-05-21.md` | Rev 11 | **架构骨架沿用**，§1.3 / §2.x / §3.x / §4.x 中 TCS 26–28°C 全部需联动改 |
 
 ### 1.2 COOLING/DESIGN 目录全集
 

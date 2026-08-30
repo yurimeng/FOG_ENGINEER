@@ -1,17 +1,17 @@
 ---
-title: "03_PCS_Grid_Off_Grid — §4 PCS 储能变流器"
-parent: "[[../../Gotion ESC480-125P261-UL]]"
+title: 03_PCS_Grid_Off_Grid — §4 PCS 储能变流器
+parent: "[[Gotion ESC480-125P261-UL]]"
 order: 3
 tags:
   - "#workspace/engineer"
   - "#type/bess-prd"
   - "#product/BESS"
   - "#power"
-  - #MDC
+  - 
 created: 2026-06-18
-source_file: "KB/3RD-PARTY/BESS/Suppliers/Gotion ESC480-125P261-UL.md"
+source_file: KB/3RD-PARTY/BESS/Suppliers/Gotion ESC480-125P261-UL.md
 source_anchors:
-  - "§4"
+  - §4
 ---
 
 # §4. PCS 储能变流器参数

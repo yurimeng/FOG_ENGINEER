@@ -1,0 +1,58 @@
+---
+tags:
+  - #workspace/engineer
+  - #type/product
+  - #product/i50ts
+  - #MDC
+---
+# A32 – Scalable Immersion Cooling Tank
+适用对象：AC40 / AC45 / DC45 / 独立边缘部署的浸没式液冷算力单元
+版本：V1.4（2026-06-10 统一 ΔT=8K / Tank 流量 / 纯干冷判据 ≤24°C）
+
+---
+
+## 文档导航
+
+| # | 块 | 用途 |
+|---|----|------|
+| 1 | 产品定位 + 核心参数 + IT 负荷 | §1–§3：标品定位、参数表、服务器兼容、IT 负荷 |
+| 2 | 机柜详情 | §4：32RU / OCP / Dual CDU |
+| 3 | 冷却架构（含二次侧散热校核） | §5.1–§5.4：热力路径、散热选型、故障模式、二次侧流量 |
+| 4 | 电力路径 | §6：INPUT → PDC → UPS → A32 |
+| 5 | 适用场景 + 扩展逻辑 + 与 AC40/DC45 关系 | §7–§9：禁/适场景、扩展、上下游 |
+| 6 | CDU 结构 + 控制系统 + 配电器件 | §10–§12：CDU / 监控 / PDU |
+
+---
+
+## 1. 产品定位 + 核心参数 + IT 负荷
+
+![[PUBLIC/Products/_blocks/PRODUCTS_I50TS/01_Product_Position_And_Params]]
+
+## 2. 机柜详情
+
+![[02_Cabinet_Details]]
+
+## 3. 冷却架构（含二次侧散热校核）
+
+![[PUBLIC/Products/_blocks/PRODUCTS_I50TS/03_Cooling_Architecture]]
+
+## 4. 电力路径
+
+![[04_Power_Path]]
+
+## 5. 适用场景 + 扩展逻辑 + 与 AC40/DC45 关系
+
+![[05_Use_Cases_And_Relationships]]
+
+## 6. CDU 结构 + 控制系统 + 配电器件
+
+![[06_CDU_Control_PDU]]
+
+---
+
+## Changelog
+
+- **V1.4 (2026-06-10)** — 统一 Series A 参数冲突：二次侧明确为「进油 ≤35°C / 出油 ≈43°C / ΔT=8K」（标品运行工况，原 §2 与 §5.1「进/出油温 ≤35」含糊写法已修正），一次侧标注 ΔT=5K；§5.4 增补整箱 8×Tank 合计流量（360kW ≈87.8 m³/h / 400kW ≈97.6 m³/h），作为 AC40/AC45 单一引用源；§5.2 散热判据由「仅 Hybrid Chiller / 纯干冷暂不支持」改为「站点历史最高干球 ≤24°C → 纯干冷器（Free Cooling），>24°C → Hybrid Chiller」，与 [[COOLING_SYSTEM_Guideline#§G-7 热排放系统 (Heat Rejection Systems)|COOLING Guideline §G-7]] 对齐。
+- **V1.3 (2026-06-09)** — 在 §11 控制系统之后嵌入 `![[I400C40_NETWORK_CONF.pdf]]`（原始档案），与 `[[I400C40_NETWORK_CONF]]` 文本引用并列；SVG 草稿未引用（按 SVG 不准确约束）。
+- **V1.2 (2026-06-09)** — 从飞书《HPC 标品定义》提取工程参数：补充设计工况（湿球28℃/一次侧32-37/二次侧进液≤35 ΔT=8）、冷却液（Castrol DC20 / Shell S5LV）、服务器兼容性（EIA 19″/21″/OCP，深度1000mm，4090/A100/H100）、二次侧散热校核公式、CDU 结构、控制系统、PDU 规格；修正外制冷口径为「仅 Hybrid Chiller，纯干冷暂不支持（待热力学仿真）」；散热改为推荐 45kW / 最大 50kW。
+- **V1.1 (2026-04-12)** — 统一结构版

@@ -21,7 +21,7 @@ audience: 工程师 + AI(读), 商务 + 售前(用)
 
 | 块 | 内容 |
 |----|------|
-| [[_blocks/STD_Supplier/01_Positioning]] | §0 标准定位 |
-| [[_blocks/STD_Supplier/02_Supplier_Table_Cooling_Power]] | §1 供应商管理体系表 (冷却 + 电力子系统) |
-| [[_blocks/STD_Supplier/03_Cross_Ref_Status_Maintenance]] | §2 交叉引用 / §3 状态管理规则 / §4 旧版本归档 |
-| [[_blocks/STD_Supplier/04_Changelog]] | §5 Changelog |
+| [[MDC/KB/3RD-PARTY/_blocks/STD_Supplier/01_Positioning]] | §0 标准定位 |
+| [[02_Supplier_Table_Cooling_Power]] | §1 供应商管理体系表 (冷却 + 电力子系统) |
+| [[03_Cross_Ref_Status_Maintenance]] | §2 交叉引用 / §3 状态管理规则 / §4 旧版本归档 |
+| [[04_Changelog]] | §5 Changelog |

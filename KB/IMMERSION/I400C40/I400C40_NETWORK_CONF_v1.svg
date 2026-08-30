@@ -1,0 +1,167 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1020" viewBox="0 0 1500 1020" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <defs>
+    <symbol id="srvGroup" viewBox="0 0 232 104">
+      <rect x="1" y="1" width="230" height="102" rx="8" fill="#eef1f8" stroke="#3a3f4c" stroke-width="1.6"/>
+      <g fill="#ffffff" stroke="#3a3f4c" stroke-width="1.2">
+        <rect x="12"  y="12" width="20" height="80" rx="4"/>
+        <rect x="39"  y="12" width="20" height="80" rx="4"/>
+        <rect x="66"  y="12" width="20" height="80" rx="4"/>
+        <rect x="93"  y="12" width="20" height="80" rx="4"/>
+        <rect x="120" y="12" width="20" height="80" rx="4"/>
+        <rect x="147" y="12" width="20" height="80" rx="4"/>
+        <rect x="174" y="12" width="20" height="80" rx="4"/>
+        <rect x="201" y="12" width="20" height="80" rx="4"/>
+      </g>
+    </symbol>
+    <symbol id="leafPair" viewBox="0 0 34 104">
+      <rect x="1"  y="1" width="14" height="102" rx="5" fill="#ffffff" stroke="#3a3f4c" stroke-width="1.4"/>
+      <rect x="19" y="1" width="14" height="102" rx="5" fill="#ffffff" stroke="#3a3f4c" stroke-width="1.4"/>
+    </symbol>
+    <marker id="arrR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10z" fill="#d9534f"/>
+    </marker>
+    <marker id="arrP" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10z" fill="#7c6fd0"/>
+    </marker>
+    <marker id="arrY" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10z" fill="#d4a72c"/>
+    </marker>
+    <marker id="arrK" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10z" fill="#3a3f4c"/>
+    </marker>
+  </defs>
+
+  <rect width="1500" height="1020" fill="#fafbfd"/>
+  <text x="30" y="34" font-size="20" font-weight="600" fill="#1d2330">AC40 Network Configuration</text>
+  <text x="30" y="56" font-size="12" fill="#7a8194">FOG A Series · 8 × A32 (64 servers) · v1</text>
+
+  <!-- ============ TOP ROW: server groups + leaf pairs ============ -->
+  <text x="42" y="100" font-size="13" font-weight="600" fill="#1d2330">A32</text>
+  <use href="#srvGroup" x="30"  y="110" width="232" height="104"/>
+  <use href="#leafPair" x="274" y="110" width="34"  height="104"/>
+  <use href="#srvGroup" x="320" y="110" width="232" height="104"/>
+  <use href="#srvGroup" x="610" y="110" width="232" height="104"/>
+  <use href="#leafPair" x="854" y="110" width="34"  height="104"/>
+  <use href="#srvGroup" x="900" y="110" width="232" height="104"/>
+
+  <!-- ============ BOTTOM ROW ============ -->
+  <use href="#srvGroup" x="30"  y="430" width="232" height="104"/>
+  <use href="#leafPair" x="274" y="430" width="34"  height="104"/>
+  <use href="#srvGroup" x="320" y="430" width="232" height="104"/>
+  <use href="#srvGroup" x="610" y="430" width="232" height="104"/>
+  <use href="#leafPair" x="854" y="430" width="34"  height="104"/>
+  <use href="#srvGroup" x="900" y="430" width="232" height="104"/>
+
+  <!-- ============ RIGHT: central switch stack ============ -->
+  <text x="1320" y="120" font-size="10.5" fill="#7a8194" text-anchor="middle">Edgecore DCS511 / Celestica DS4000 / Asterfusion CX732Q</text>
+  <g font-size="12" font-weight="600" fill="#1d2330" text-anchor="middle">
+    <rect x="1240" y="132" width="160" height="40" rx="6" fill="#eef1f8" stroke="#3a3f4c" stroke-width="1.6"/>
+    <text x="1320" y="157">SPINE SWITCH A</text>
+    <rect x="1240" y="184" width="160" height="40" rx="6" fill="#eef1f8" stroke="#3a3f4c" stroke-width="1.6"/>
+    <text x="1320" y="209">SPINE SWITCH B</text>
+    <rect x="1240" y="252" width="160" height="40" rx="6" fill="#eef1f8" stroke="#3a3f4c" stroke-width="1.6"/>
+    <text x="1320" y="277">25G SWITCH</text>
+    <rect x="1240" y="330" width="160" height="40" rx="6" fill="#eef1f8" stroke="#3a3f4c" stroke-width="1.6"/>
+    <text x="1320" y="355">1000MB SWITCH</text>
+  </g>
+  <!-- 25G switch <-> 1000MB switch link -->
+  <path d="M1320 292 L1320 330" fill="none" stroke="#7c6fd0" stroke-width="2.5" marker-start="url(#arrP)" marker-end="url(#arrP)"/>
+
+  <!-- ============ SERVER -> LEAF red fan-in (400G DAC) ============ -->
+  <g stroke="#d9534f" stroke-width="1.6" fill="none" opacity="0.9">
+    <path d="M52 214 q0 26 26 26 h180 q26 0 26 -26"/>
+    <path d="M106 214 q0 18 18 18 h142 q18 0 18 -18"/>
+    <path d="M160 214 q0 10 10 10 h104 q10 0 10 -10"/>
+    <path d="M342 214 q0 26 -26 26 h-1 q-24 0 -24 -26"/>
+    <path d="M396 214 q0 32 -32 32 h-55 q-18 0 -18 -32"/>
+    <path d="M450 214 q0 38 -38 38 h-109 q-12 0 -12 -38"/>
+    <path d="M52 534 q0 26 26 26 h180 q26 0 26 -26"/>
+    <path d="M160 534 q0 10 10 10 h104 q10 0 10 -10"/>
+    <path d="M396 534 q0 32 -32 32 h-55 q-18 0 -18 -32"/>
+  </g>
+  <g fill="#d9534f">
+    <circle cx="52" cy="214" r="3"/><circle cx="106" cy="214" r="3"/><circle cx="160" cy="214" r="3"/>
+    <circle cx="342" cy="214" r="3"/><circle cx="396" cy="214" r="3"/><circle cx="450" cy="214" r="3"/>
+    <circle cx="52" cy="534" r="3"/><circle cx="160" cy="534" r="3"/><circle cx="396" cy="534" r="3"/>
+  </g>
+
+  <!-- ============ LEAF -> SPINE (2*400G each, red) ============ -->
+  <g stroke="#d9534f" stroke-width="3" fill="none">
+    <path d="M871 214 L871 252 L1160 252 L1160 152 L1240 152" marker-end="url(#arrR)"/>
+    <path d="M871 430 L871 392 L1180 392 L1180 204 L1240 204" marker-end="url(#arrR)"/>
+  </g>
+  <circle cx="871" cy="214" r="4.5" fill="#d9534f"/>
+  <circle cx="871" cy="430" r="4.5" fill="#d9534f"/>
+  <text x="1230" y="144" text-anchor="end" font-size="13" font-weight="600" fill="#1d2330">2*400G</text>
+  <text x="1230" y="196" text-anchor="end" font-size="13" font-weight="600" fill="#1d2330">2*400G</text>
+
+  <!-- ============ 25G management (purple) ============ -->
+  <g stroke="#7c6fd0" stroke-width="2.5" fill="none">
+    <path d="M291 110 q0 -30 30 -30 h670 q30 0 30 30" opacity="0.85"/>
+    <path d="M291 430 q0 -30 30 -30 h670 q30 0 30 30" opacity="0.85"/>
+    <path d="M1021 322 L1021 272 L1240 272" marker-end="url(#arrP)"/>
+  </g>
+  <text x="1130" y="262" font-size="13" font-weight="600" fill="#1d2330">25G AOC</text>
+
+  <!-- ============ Out-band CAT6 (yellow) from bottom-right group ============ -->
+  <g stroke="#d4a72c" stroke-width="2" fill="none">
+    <path d="M922 534 q0 36 36 36 h300 q42 0 42 -64 v-136" marker-end="url(#arrY)"/>
+    <path d="M949 534 q0 28 28 28"/>
+    <path d="M976 534 q0 20 20 20"/>
+    <path d="M1003 534 q0 12 12 12"/>
+    <path d="M1030 534 q0 12 -6 12"/>
+    <path d="M1057 534 q0 20 -14 20"/>
+    <path d="M1084 534 q0 28 -22 28"/>
+    <path d="M1111 534 q0 36 -30 36"/>
+  </g>
+
+  <!-- ============ Center annotations ============ -->
+  <g text-anchor="middle">
+    <text x="560" y="300" font-size="19" font-weight="700" fill="#1d2330">400GB ROCE LEAF SWITCHES</text>
+    <text x="560" y="324" font-size="14" fill="#1d2330">Arista 7368X4 / Celestica DS4000 / Asterfusion CX732Q</text>
+    <text x="560" y="346" font-size="14" fill="#1d2330">32 * 400GB</text>
+    <text x="560" y="390" font-size="17" font-weight="700" fill="#1d2330">25GB In-Band Management Network</text>
+    <text x="560" y="412" font-size="14" fill="#1d2330">32 * 25GB</text>
+  </g>
+  <path d="M362 318 L291 318 M758 318 L829 318" stroke="#3a3f4c" stroke-width="1.3" stroke-dasharray="3 3" fill="none" marker-end="url(#arrK)"/>
+  <path d="M398 385 L291 385 M722 385 L829 385" stroke="#7c6fd0" stroke-width="1.3" stroke-dasharray="3 3" fill="none" marker-end="url(#arrP)"/>
+
+  <!-- ============ Legend ============ -->
+  <g font-size="14" font-weight="600" fill="#1d2330">
+    <circle cx="60" cy="640" r="4.5" fill="#d9534f"/>
+    <path d="M60 640 L240 640" stroke="#d9534f" stroke-width="3" marker-end="url(#arrR)"/>
+    <text x="115" y="630">400 GB DAC</text>
+    <path d="M50 700 L240 700" stroke="#7c6fd0" stroke-width="2.5" marker-start="url(#arrP)" marker-end="url(#arrP)"/>
+    <text x="118" y="690">25 GB DAC</text>
+    <path d="M50 760 L240 760" stroke="#d4a72c" stroke-width="3" marker-end="url(#arrY)"/>
+    <text x="100" y="750">1000MB CAT6</text>
+  </g>
+
+  <!-- ============ BOM table ============ -->
+  <g font-size="12.5" fill="#1d2330">
+    <rect x="360" y="612" width="780" height="32" fill="#e3e8f2" stroke="#3a3f4c" stroke-width="1.4"/>
+    <g font-weight="700">
+      <text x="372" y="633">Module</text>
+      <text x="552" y="633">Usage</text>
+      <text x="892" y="633">Qty</text>
+      <text x="972" y="633">Tech Spec</text>
+    </g>
+    <g stroke="#3a3f4c" stroke-width="1">
+      <rect x="360" y="644" width="780" height="320" fill="#ffffff"/>
+      <path d="M360 676h780 M360 708h780 M360 740h780 M360 772h780 M360 804h780 M360 836h780 M360 868h780 M360 900h780 M360 932h780"/>
+      <path d="M540 612v352 M880 612v352 M960 612v352"/>
+    </g>
+    <g>
+      <text x="372" y="665">400GB ROCE LEAF</text><text x="552" y="665">Business Network</text><text x="892" y="665">4</text><text x="972" y="665">32*400GB</text>
+      <text x="372" y="697">SPINE</text><text x="552" y="697">Business Network, SPINE + ECMP</text><text x="892" y="697">2</text><text x="972" y="697">32*400GB</text>
+      <text x="372" y="729">25G Switch</text><text x="552" y="729">In-Band Management Network</text><text x="892" y="729">5</text><text x="972" y="729">32*25G</text>
+      <text x="372" y="761">1000MB Switch</text><text x="552" y="761">Out-Band Management Network</text><text x="892" y="761">2</text><text x="972" y="761">48*1000MB</text>
+      <text x="372" y="793">400G DAC</text><text x="552" y="793">SERVER-LEAF</text><text x="892" y="793">64</text><text x="972" y="793">&#8804;3m</text>
+      <text x="372" y="825">400G AOC</text><text x="552" y="825">LEAF-SPINE</text><text x="892" y="825">16</text><text x="972" y="825">~20m</text>
+      <text x="372" y="857">25G DAC</text><text x="552" y="857">SERVER-In-Band ACCESS POINT</text><text x="892" y="857">64</text><text x="972" y="857">&#8804;5m</text>
+      <text x="372" y="889">25G AOC</text><text x="552" y="889">25G AP-Central</text><text x="892" y="889">4</text><text x="972" y="889">~20m</text>
+      <text x="372" y="921">25G DAC</text><text x="552" y="921">1000MB SWITCH to 25G Central</text><text x="892" y="921">4</text><text x="972" y="921">&#8804;1m</text>
+      <text x="372" y="953">CAT 6</text><text x="552" y="953">SERVER TO 1000M SWITCH</text><text x="892" y="953">64</text>
+    </g>
+  </g>
+</svg>

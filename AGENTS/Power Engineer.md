@@ -105,7 +105,7 @@ Guideline 是技术决策的权威依据：
 ### Guideline 权威内容
 
 - BESS vs Diesel Generator 选型逻辑
-- UPS 选型规则（AC40 → 9395XR-600；DC45 → 9395XR-1500）
+- UPS 选型规则（I400C45 → 9395XR-600；L1240C45 → 9395XR-1500）⛔ 见下方 §UPS 边界注
 - 电网集成与 BESS 连接拓扑（Grid → BESS → IT Zone → IT）
 - 场景化推荐（城市/ESG → BESS；偏远/长时断电 → 柴油）
 - 冗余策略（N / N+1 / 2N）
@@ -126,8 +126,10 @@ Guideline 是技术决策的权威依据：
 |------|--------|---------|---------|
 | Megapack 2 XL | Tesla | 2hr: 1927kW/3854kWh; 4hr: 979kW/3916kWh; IP66; UL9540 | `/KB/3RD-PARTY/BESS/TESLA Megapack 2 XL` |
 | ESC480-125P261-UL | 国轩高科 | 261kWh; 125kW PCS; 液冷; IP55 | `/KB/3RD-PARTY/BESS/Gotion ESC480` |
-| AC40 内置 UPS | EATON | 9395XR-600 (4×150kW) | `/KB/3RD-PARTY/Buildin/UPS_EATON_9395XR` |
-| DC45 内置 UPS | EATON | 9395XR-1500 (10×150kW) | `/KB/3RD-PARTY/Buildin/UPS_EATON_9395XR` |
+| I400C45 内置 UPS | EATON | 9395XR-600 (4×150kW) | `/KB/3RD-PARTY/Buildin/UPS_EATON_9395XR` |
+| L1240C45 内置 UPS | EATON | 9395XR-1500 (10×150kW) | `/KB/3RD-PARTY/Buildin/UPS_EATON_9395XR` |
+
+> ⛔ **UPS 边界注（2026-08-30）：** 本表原写「AC40 内置 UPS」。按 [[NAMING_MAP]]，AC40 → **I400C40**；但 [[PRODUCT_SPEC_BASELINE]] §2.3 载明 **I400C40 的 UPS 在箱外（客户自备 600 kW）**，箱内 600 kW EATON 属 **I400C45**。故此处按基准表归到 I400C45，原「AC40 内置」的归属**待 ATS 复核**（⏳ `#unconfirmed`）。六 SKU 中仅 L1240C45 与 I400C45 为箱内 UPS，其余四个 SKU 电力边界在箱外。
 
 ### 强制规则
 
@@ -210,7 +212,7 @@ Power Engineer 输出给 ATS 的内容：
 |--------|------|
 | 电力架构推荐 | Grid + BESS / Diesel / Hybrid |
 | BESS 型号与数量 | 从 `/KB/3RD-PARTY/BESS/` 选择 |
-| UPS 型号确认 | AC40 → EATON 9395XR-600；DC45 → EATON 9395XR-1500 |
+| UPS 型号确认 | I400C45 → EATON 9395XR-600；L1240C45 → EATON 9395XR-1500；L1800C45 / L450C20 / I400C40 / I200C20 电力边界在箱外，UPS 由场站/客户提供 |
 | 电网集成策略 | Grid → BESS → IT Zone → IT |
 | 电力冗余等级 | N / N+1 / 2N |
 | 负荷计算摘要 | IT load + 冷却负荷 + 辅助负荷 |
@@ -231,4 +233,12 @@ Power Engineer 输出给 ATS 的内容：
 
 ---
 
-*Document Version: v1.1 | Last Updated: 2026-04-12*
+*Document Version: v1.2 | Last Updated: 2026-08-30*
+
+---
+
+## Changelog
+
+| 版本 | 日期 | 变更 |
+|---|---|---|
+| v1.2 | 2026-08-30 | 产品口径对齐 2026-08-30 基线：UPS 选型规则、内置 UPS 参考表、输出项「UPS 型号确认」的 SKU 改用新码，并按 [[PRODUCT_SPEC_BASELINE]] §2.3 标出箱内/箱外电力边界。原「AC40 内置 UPS」与基准表冲突，已加 ⛔ 边界注，归属待 ATS 复核。六 SKU 全部 `shipped`（站点 `docs/PRODUCT-MATRIX.md` §5 D-19 gate · 2026-08-27）。 |

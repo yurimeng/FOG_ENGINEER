@@ -13,28 +13,28 @@ tags:
 
 | 块 | 主题 | 包含章节 |
 |----|------|---------|
-| [[_blocks/Layout_Guideline/01_L1_L2_Principles_Clearance]] | L-1/L-2 核心布局原则与维护通道净空 | L-1, L-2 |
-| [[_blocks/Layout_Guideline/02_L3_L4_Cables_Access]] | L-3/L-4 线缆敷设与维护可达性 | L-3, L-4 |
-| [[_blocks/Layout_Guideline/03_L5_Expansion]] | L-5 扩展规划 | L-5 |
-| [[_blocks/Layout_Guideline/04_L6_Container_Rack]] | L-6 容器与机架布局 | L-6 |
-| [[_blocks/Layout_Guideline/05_L7_Workflow]] | L-7 工作流集成 | L-7 |
+| [[01_L1_L2_Principles_Clearance]] | L-1/L-2 核心布局原则与维护通道净空 | L-1, L-2 |
+| [[02_L3_L4_Cables_Access]] | L-3/L-4 线缆敷设与维护可达性 | L-3, L-4 |
+| [[03_L5_Expansion]] | L-5 扩展规划 | L-5 |
+| [[04_L6_Container_Rack]] | L-6 容器与机架布局 | L-6 |
+| [[05_L7_Workflow]] | L-7 工作流集成 | L-7 |
 
 ---
 
 ## 1. 核心布局原则与维护通道净空
-![[_blocks/Layout_Guideline/01_L1_L2_Principles_Clearance]]
+![[01_L1_L2_Principles_Clearance]]
 
 ## 2. 线缆敷设与维护可达性
-![[_blocks/Layout_Guideline/02_L3_L4_Cables_Access]]
+![[02_L3_L4_Cables_Access]]
 
 ## 3. 扩展规划
-![[_blocks/Layout_Guideline/03_L5_Expansion]]
+![[03_L5_Expansion]]
 
 ## 4. 容器与机架布局
-![[_blocks/Layout_Guideline/04_L6_Container_Rack]]
+![[04_L6_Container_Rack]]
 
 ## 5. 工作流集成
-![[_blocks/Layout_Guideline/05_L7_Workflow]]
+![[05_L7_Workflow]]
 
 ---
 

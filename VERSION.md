@@ -9,11 +9,50 @@ tags:
 
 Workspace: Engineer Workspace
 Product: Fog Computing Engineering AI
-Version: v1.6.0
-Release Date: 2026-04-10
+Version: v1.7.0
+Release Date: 2026-08-30
 Status: Active Development
 
 Reference backup: ../KB_backup_20260409_v1.5.0
+
+---
+
+## v1.7.0 — 产品口径基线同步 (2026-08-30)
+
+### 变更背景
+
+站点仓库 `docs/PRODUCT-MATRIX.md` §5 的 **D-19 Publish gate（2026-08-27）** 一次性放行了原为 `draft` 的 **I200C20 / L1800C45 / L450C20**。**六个 SKU 现全部 `shipped`。** 治理层与导航层文件此前仍写 draft、并沿用旧名列举，本次统一。
+
+### 现行产品口径（唯一权威：站点 `docs/PRODUCT-MATRIX.md` + `docs/rules/NAMING.md`；KB 侧映射见 `KB/NAMING_MAP.md`）
+
+| 线 | 线码 | SKU（全部 `shipped`） |
+|---|---|---|
+| Liquid Cooling | `L` | L1240C45 · L1800C45 · L450C20 |
+| Immersion Cooling | `I` | I400C45 · I400C40 · I200C20 |
+| 浸没槽体组件 | — | I50TS（非 SKU，站点 Alias registry 未收录 ⏳ `#unconfirmed`） |
+
+旧名映射：DC45 → L1240C45 · AC45 → I400C45 · AC40 → I400C40 · AC20 → I200C20 · A32 → I50TS。
+
+### 涉及文件
+
+| 文件 | 变更摘要 |
+|------|---------|
+| `CLAUDE.md` | §2 产品表状态全部改 shipped；补 D-19 说明与基准文档指引 |
+| `_navigation.md` | §2 产品 KB 入口改为两线六 SKU + LIQUID/IMMERSION index 入口；§3 IT-vs-Total 例子改用 L1240C45 |
+| `hot.md` | KB 子区入口补两线六 SKU 与旧名对照；新增 2026-08-30 状态段（六 SKU 全 shipped + `#unconfirmed` 规范） |
+| `README.md` | 目录树、禁止事项产品列举、参考架构表改用新码（补 RA-003） |
+| `PUBLIC/README.md` | 目录结构表对齐现有六 SKU Tech Spec / Products / RA-003 |
+| `PRINCIPLES.md` | P8 示例表、P12 EN/CN 参考架构表改用新码 |
+| `SOUL.md` | §8 Hybrid 示例、§13 产品配置列举改用新码 |
+| `AGENTS/ATS.md` · `AGENTS/Cooling Engineer.md` · `AGENTS/Power Engineer.md` · `AGENTS/Market Researcher.md` | 产品列举与 UPS 归属表改用新码；Power Engineer 加 UPS 箱内/箱外边界 ⛔ 注 |
+| `Document Tree.md` · `_graph_index.md` · `FOG_Workspace_Summary.md` | 现行结构/导航描述改用新码；版本史与迁移记录中的旧名保留 |
+
+### 未改动（历史记录，按 `KB/NAMING_MAP.md` §4 保留原样）
+
+- 本文件 v1.0.0–v1.6.0 各版本条目中的旧名（AC45 / AC40 / DC45 / A32 / AC20）——属发布历史事实记录
+- `MIGRATION_2026-08-17_KB_Naming.md` 全文 · `_archive/` 下全部内容
+- `Projects/` 下的项目名与项目事实、供应商往来描述中的旧名
+- 文件名本身（未重命名任何文件）
 
 ---
 
@@ -137,14 +176,14 @@ AC45 是 45ft 浸没式液冷集装箱，IT 容量 400kW（与 AC40 相同），
 
 | 文件 | 变更内容 |
 |------|---------|
-| `KB/PRODUCTS_AC45.md` | **新建**，完整产品文档，含与 AC40/DC45 对比表 |
+| `KB/PRODUCTS_I400C45.md` | **新建**，完整产品文档，含与 AC40/DC45 对比表 |
 | `KB/3RD-PARTY/3rd Party List.md` | UPS 对比表新增 AC45 行，含后备时间列 |
-| `README.md` | 产品速查表新增 AC45 行；目录树新增 PRODUCTS_AC45.md；禁止事项补充 AC45 |
+| `README.md` | 产品速查表新增 AC45 行；目录树新增 PRODUCTS_I400C45.md；禁止事项补充 AC45 |
 | `VERSION.md` | 新增 v1.5.0 版本记录 |
-| `KB/PRODUCTS_AC40.md` | 补充 AC45 vs AC40 vs DC45 三方对比 |
-| `KB/PRODUCTS_DC45.md` | 补充 AC45 vs DC45 关系描述 |
-| `KB/PRODUCTS_A32.md` | 关系表补充 AC45 |
-| `KB/PRODUCTS_MDC.md` | IT Zone 表格补充 AC45；冷却 Zone 配置补充 AC45 |
+| `KB/PRODUCTS_I400C40.md` | 补充 AC45 vs AC40 vs DC45 三方对比 |
+| `KB/PRODUCTS_L1240C45.md` | 补充 AC45 vs DC45 关系描述 |
+| `KB/PRODUCTS_I50TS.md` | 关系表补充 AC45 |
+| `KB/_COMMON/PRODUCTS_MDC.md` | IT Zone 表格补充 AC45；冷却 Zone 配置补充 AC45 |
 
 ### 选型原则更新
 
@@ -192,9 +231,9 @@ AC45 是 45ft 浸没式液冷集装箱，IT 容量 400kW（与 AC40 相同），
 - README.md：KB 目录树更新；KB Agent 引用规则写入 BOOTSTRAP 说明；A32 例外规则写入禁止事项
 - VERSION.md：本版本记录
 - 3rd Party List.md → V1.3
-- PRODUCTS_AC40.md：冷却部分 → 指向新 Guideline；UPS 链接 → UPS/
-- PRODUCTS_DC45.md：冷却部分 → 指向新 Guideline；UPS 链接 → UPS/
-- PRODUCTS_A32.md：明确"独立部署 vs 集装箱部署"区分；A32 例外规则写入产品文档
+- PRODUCTS_I400C40.md：冷却部分 → 指向新 Guideline；UPS 链接 → UPS/
+- PRODUCTS_L1240C45.md：冷却部分 → 指向新 Guideline；UPS 链接 → UPS/
+- PRODUCTS_I50TS.md：明确"独立部署 vs 集装箱部署"区分；A32 例外规则写入产品文档
 - PRODUCTS_MDC.md：冷却参考链接 → 新 Guideline
 - BESS/POWER_SYSTEMS_Guideline.md：标题/格式/BESS wiki-link 全部更新
 - Buildin/ → UPS/：目录重命名，UPS_EATON_9395XR.md 迁移完成
@@ -215,7 +254,7 @@ AC45 是 45ft 浸没式液冷集装箱，IT 容量 400kW（与 AC40 相同），
 - AC40/DC45 作为容器**无内部冗余设计**，不能通过增加服务器实现冗余
 - UPS 模块内部 N+1（单模块故障不影响运行）≠ IT Zone 级别冗余
 - IT Zone 冗余通过增加集装箱数量实现（系统级冗余）
-- 涉及文件：PRODUCTS_AC40.md, PRODUCTS_DC45.md, PRODUCTS_MDC.md, Reference Architecture (both), DESIGN_GUIDELINE.md
+- 涉及文件：PRODUCTS_I400C40.md, PRODUCTS_L1240C45.md, PRODUCTS_MDC.md, Reference Architecture (both), DESIGN_GUIDELINE.md
 
 ### Cooling Naming — Hybrid Cooling System 统一命名
 - "干冷器 + DX"（两个独立设备）→ "**Hybrid Cooling System**"（一个集成设备）
@@ -230,9 +269,9 @@ AC45 是 45ft 浸没式液冷集装箱，IT 容量 400kW（与 AC40 相同），
 ## v1.2.0 — Product Information Unification (2026-03-29)
 
 ### Product Files Restructured
-- PRODUCTS_AC40.md: 结构统一；UPS 型号更正为 9395XR-600；PUE 改为变量；新增 IT负载/整体电力负荷对照表
-- PRODUCTS_DC45.md: 结构统一；UPS 型号更正为 9395XR-1500；PUE 改为变量；新增 IT负载/整体电力负荷对照表
-- PRODUCTS_A32.md: 结构统一；PUE 改为变量；扩展逻辑补充完整；与 AC40/DC45 关系表
+- PRODUCTS_I400C40.md: 结构统一；UPS 型号更正为 9395XR-600；PUE 改为变量；新增 IT负载/整体电力负荷对照表
+- PRODUCTS_L1240C45.md: 结构统一；UPS 型号更正为 9395XR-1500；PUE 改为变量；新增 IT负载/整体电力负荷对照表
+- PRODUCTS_I50TS.md: 结构统一；PUE 改为变量；扩展逻辑补充完整；与 AC40/DC45 关系表
 - PRODUCTS_MDC.md: 全面重写；新增标准配置参考（Small/Medium/Large）；冗余规则明确（IT Zone 无内部 N+1）；Power/Cooling Zone 标准配置
 
 ### Third-Party Products Unified
@@ -393,4 +432,4 @@ Recommended model capability:
 
 ---
 
-*Document Version: v1.1 | Last Updated: 2026-04-12*
+*Document Version: v1.2 | Last Updated: 2026-08-30*

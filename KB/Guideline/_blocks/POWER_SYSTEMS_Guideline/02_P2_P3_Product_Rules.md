@@ -18,7 +18,7 @@ source_anchors: []
 |------|--------|-------------------|------------|---------|
 | **A32** (单柜) | 45–50kW | ~46–56kW (PUE≈1.03–1.12) | ~2–4kW | 含于IT Zone内 |
 | **AC40** | 400kW IT | ~408–480kW (PUE≈1.02–1.20) | ~8–80kW | 含于IT Zone内 |
-| **DC45** | 1240kW IT | ~1325–1675kW (PUE≈1.07–1.35) | ~85–435kW | 含于IT Zone内 |
+| **L1240C45** | 1240kW IT | 随 PUE 变化，逐站点用 <https://mdcx.org> 计算 | ~85–435kW | 含于IT Zone内 |
 
 > **注意：** 整体负荷不包括 BESS、变压器损耗、外部开关设备等 BOP（Balance of Plant）负荷。
 
@@ -64,3 +64,6 @@ IT负载:      xxx kW
 | **Power Zone** | BESS / 变压器 / 开关设备 | 容量规格（kW/MW） |
 
 > 负荷定义错误的级联影响见 [[Risk_Guideline#R-4 负荷定义风险]]。
+
+
+> ✅ **2026-08-30 Yuri 裁定已传导。** 交期只承诺 EXW（首批 120 天 / Scale 90 天，自下单起算），商务·运输·安装一律不承诺，另有假负载运行期 5–30 天（Supermicro 建议，不含在 EXW 内）；PUE 一律写 `1.0x`，逐站点用 <https://mdcx.org> 计算；质保为核心部件 EXW 起一年 + 按年服务费，ONSITE/NBD/24×7 以 Invoice 为准。基准：[[PRODUCT_SPEC_BASELINE]]。

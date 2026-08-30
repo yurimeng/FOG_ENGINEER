@@ -71,7 +71,7 @@ Change Log: v1.1 — 合并 Site Constraint Analysis，扩充为客户需求 + �
 ### Step 1：收集客户需求（客户侧）
 
 1. 收集客户业务目标和算力需求
-2. 确认 IT 负载 vs 总设施负荷（**必须澄清**，见 [[FOG/KB/Guideline/POWER_SYSTEMS_Guideline|KB/POWER_LOAD]]）
+2. 确认 IT 负载 vs 总设施负荷（**必须澄清**，见 [[POWER_SYSTEMS_Guideline|KB/POWER_LOAD]]）
 3. 确认 UL 合规需求（影响选型：AC40 vs AC45）
 4. 确认部署模式和期望时间线
 5. 评估预算预期（仅供参考，不在方案中体现）
@@ -163,7 +163,7 @@ Change Log: v1.1 — 合并 Site Constraint Analysis，扩充为客户需求 + �
 |------|------|---------|
 | 信息不完整 | RFI 缺失关键信息导致设计偏差 | 上游流程中必须完整填写输入清单 |
 | IT 负载 vs 总负荷混淆 | 选型和容量规划错误 | Step 2 必须明确澄清并输出两个数字 |
-| 不现实的交付时间 | 客户期望与实际周期不符（185–230 天）| 在需求阶段明确告知参考周期 |
+| 不现实的交付时间 | 客户期望与实际周期不符（首批 120 天 EXW / Scale 90 天 EXW；商务·运输·安装不承诺；假负载运行期 5–30 天| 在需求阶段明确告知参考周期 |
 | Grid 不稳定 | 电力中断影响可用性 | 评估后推荐 BESS 配置 |
 | 极端气候 | 环境温度超出设计范围 | 冷却设计必须基于极端温度，PUE 范围标注 |
 | 法规审批延误 | 当地法规导致项目延期 | 提前识别合规路径和审批周期 |
@@ -182,3 +182,6 @@ Change Log: v1.1 — 合并 Site Constraint Analysis，扩充为客户需求 + �
 ---
 
 *Document Version: v1.1 | Last Updated: 2026-04-12*
+
+
+> ✅ **2026-08-30 Yuri 裁定已传导。** 交期只承诺 EXW（首批 120 天 / Scale 90 天，自下单起算），商务·运输·安装一律不承诺，另有假负载运行期 5–30 天（Supermicro 建议，不含在 EXW 内）；PUE 一律写 `1.0x`，逐站点用 <https://mdcx.org> 计算；质保为核心部件 EXW 起一年 + 按年服务费，ONSITE/NBD/24×7 以 Invoice 为准。基准：[[PRODUCT_SPEC_BASELINE]]。

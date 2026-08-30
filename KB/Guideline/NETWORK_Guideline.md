@@ -13,36 +13,36 @@ tags:
 
 | 块 | 主题 | 包含章节 |
 |----|------|---------|
-| [[_blocks/NETWORK_Guideline/01_N1_N2_Foundation]] | N-1/N-2 文件定位与核心设计原则 | N-1, N-2 |
-| [[_blocks/NETWORK_Guideline/02_N3_Architecture]] | N-3 网络架构选型 | N-3 |
-| [[_blocks/NETWORK_Guideline/03_N4_IB]] | N-4 IB 设计原则 | N-4 |
-| [[_blocks/NETWORK_Guideline/04_N5_ROCE]] | N-5 ROCE 设计原则 | N-5 |
-| [[_blocks/NETWORK_Guideline/05_N6_N7_N8_Management]] | N-6/N-7/N-8 管理网络(带内+带外+对比) | N-6, N-7, N-8 |
-| [[_blocks/NETWORK_Guideline/06_N9_N10_Zone_Security]] | N-9/N-10 网络与 IT Zone 匹配与安全设计 | N-9, N-10 |
-| [[_blocks/NETWORK_Guideline/07_N11_N12_Prohibitions_Refs]] | N-11/N-12 禁止事项与参考文档 | N-11, N-12 |
+| [[01_N1_N2_Foundation]] | N-1/N-2 文件定位与核心设计原则 | N-1, N-2 |
+| [[02_N3_Architecture]] | N-3 网络架构选型 | N-3 |
+| [[03_N4_IB]] | N-4 IB 设计原则 | N-4 |
+| [[04_N5_ROCE]] | N-5 ROCE 设计原则 | N-5 |
+| [[05_N6_N7_N8_Management]] | N-6/N-7/N-8 管理网络(带内+带外+对比) | N-6, N-7, N-8 |
+| [[06_N9_N10_Zone_Security]] | N-9/N-10 网络与 IT Zone 匹配与安全设计 | N-9, N-10 |
+| [[07_N11_N12_Prohibitions_Refs]] | N-11/N-12 禁止事项与参考文档 | N-11, N-12 |
 
 ---
 
 ## 1. 文件定位与核心设计原则
-![[_blocks/NETWORK_Guideline/01_N1_N2_Foundation]]
+![[01_N1_N2_Foundation]]
 
 ## 2. 网络架构选型
-![[_blocks/NETWORK_Guideline/02_N3_Architecture]]
+![[02_N3_Architecture]]
 
 ## 3. IB 设计原则
-![[_blocks/NETWORK_Guideline/03_N4_IB]]
+![[03_N4_IB]]
 
 ## 4. ROCE 设计原则
-![[_blocks/NETWORK_Guideline/04_N5_ROCE]]
+![[04_N5_ROCE]]
 
 ## 5. 管理网络(带内+带外+对比)
-![[_blocks/NETWORK_Guideline/05_N6_N7_N8_Management]]
+![[05_N6_N7_N8_Management]]
 
 ## 6. 网络与 IT Zone 匹配与安全设计
-![[_blocks/NETWORK_Guideline/06_N9_N10_Zone_Security]]
+![[06_N9_N10_Zone_Security]]
 
 ## 7. 禁止事项与参考文档
-![[_blocks/NETWORK_Guideline/07_N11_N12_Prohibitions_Refs]]
+![[07_N11_N12_Prohibitions_Refs]]
 
 ---
 

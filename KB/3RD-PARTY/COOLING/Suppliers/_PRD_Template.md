@@ -94,8 +94,8 @@ status: 模板
 
 ## §6 引用与参考
 
-- 见 [[KB/3RD-PARTY/3rd Party List]] — 供应商准入
-- 见 [[KB/Guideline/COOLING_SYSTEM_Guideline]] — 冷却域选型原则
+- 见 [[3rd Party List]] — 供应商准入
+- 见 [[COOLING_SYSTEM_Guideline]] — 冷却域选型原则
 - 见同域参考 PRD: [[PRD-同飞-Chiller-600KW]] · [[PRD-泰铂-Chiller]] · [[PRD-Vertiv-RDHx]] · [[PRD-STULZ-CeilAir]]
 
 ---

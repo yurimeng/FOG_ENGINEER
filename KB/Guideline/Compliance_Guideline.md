@@ -13,28 +13,28 @@ tags:
 
 | 块 | 主题 | 包含章节 |
 |----|------|---------|
-| [[_blocks/Compliance_Guideline/01_C1_C2_Scope_Standards]] | C-1/C-2 适用范围与关键标准 | C-1, C-2 |
-| [[_blocks/Compliance_Guideline/02_C3_C4_BESS_DC]] | C-3/C-4 储能系统与数据中心合规 | C-3, C-4 |
-| [[_blocks/Compliance_Guideline/03_C5_C6_Container_Risk]] | C-5/C-6 容器数据中心与合规风险识别 | C-5, C-6 |
-| [[_blocks/Compliance_Guideline/04_C7_Certifications]] | C-7 认证要求汇总 | C-7 |
-| [[_blocks/Compliance_Guideline/05_C8_Workflow]] | C-8 工作流集成 | C-8 |
+| [[01_C1_C2_Scope_Standards]] | C-1/C-2 适用范围与关键标准 | C-1, C-2 |
+| [[02_C3_C4_BESS_DC]] | C-3/C-4 储能系统与数据中心合规 | C-3, C-4 |
+| [[03_C5_C6_Container_Risk]] | C-5/C-6 容器数据中心与合规风险识别 | C-5, C-6 |
+| [[04_C7_Certifications]] | C-7 认证要求汇总 | C-7 |
+| [[05_C8_Workflow]] | C-8 工作流集成 | C-8 |
 
 ---
 
 ## 1. 适用范围与关键标准
-![[_blocks/Compliance_Guideline/01_C1_C2_Scope_Standards]]
+![[01_C1_C2_Scope_Standards]]
 
 ## 2. 储能系统与数据中心合规
-![[_blocks/Compliance_Guideline/02_C3_C4_BESS_DC]]
+![[02_C3_C4_BESS_DC]]
 
 ## 3. 容器数据中心与合规风险识别
-![[_blocks/Compliance_Guideline/03_C5_C6_Container_Risk]]
+![[03_C5_C6_Container_Risk]]
 
 ## 4. 认证要求汇总
-![[_blocks/Compliance_Guideline/04_C7_Certifications]]
+![[04_C7_Certifications]]
 
 ## 5. 工作流集成
-![[_blocks/Compliance_Guideline/05_C8_Workflow]]
+![[05_C8_Workflow]]
 
 ---
 

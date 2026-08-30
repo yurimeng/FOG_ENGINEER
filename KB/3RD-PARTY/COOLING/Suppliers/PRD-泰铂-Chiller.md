@@ -28,34 +28,34 @@ audience: 人(销售/售前/选型工程师)
 
 | 章节 | 主题 |
 |------|------|
-| §1 | [[_blocks/PRD_泰铂_Chiller/01_品牌定位\|品牌定位 + 方案定位]] |
-| §2 | [[_blocks/PRD_泰铂_Chiller/02_技术参数与运行模式\|技术参数 + 运行模式 + 部件配置]] |
-| §3 | [[_blocks/PRD_泰铂_Chiller/03_冗余与IT_Zone匹配\|冗余设计 + IT Zone 匹配]] |
-| §4 | [[_blocks/PRD_泰铂_Chiller/04_引用与备注\|引用 + 备注 + 版本]] |
+| §1 | [[MDC/KB/3RD-PARTY/COOLING/Suppliers/_blocks/PRD_泰铂_Chiller/01_品牌定位\|品牌定位 + 方案定位]] |
+| §2 | [[02_技术参数与运行模式\|技术参数 + 运行模式 + 部件配置]] |
+| §3 | [[03_冗余与IT_Zone匹配\|冗余设计 + IT Zone 匹配]] |
+| §4 | [[04_引用与备注\|引用 + 备注 + 版本]] |
 
 ---
 
 ## 1. 品牌定位 + 方案定位
 
-![[_blocks/PRD_泰铂_Chiller/01_品牌定位]]
+![[MDC/KB/3RD-PARTY/COOLING/Suppliers/_blocks/PRD_泰铂_Chiller/01_品牌定位]]
 
 ---
 
 ## 2. 技术参数 + 运行模式
 
-![[_blocks/PRD_泰铂_Chiller/02_技术参数与运行模式]]
+![[02_技术参数与运行模式]]
 
 ---
 
 ## 3. 冗余设计 + IT Zone 匹配
 
-![[_blocks/PRD_泰铂_Chiller/03_冗余与IT_Zone匹配]]
+![[03_冗余与IT_Zone匹配]]
 
 ---
 
 ## 4. 引用 + 备注 + 版本
 
-![[_blocks/PRD_泰铂_Chiller/04_引用与备注]]
+![[04_引用与备注]]
 
 ---
 

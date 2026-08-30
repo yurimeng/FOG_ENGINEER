@@ -19,7 +19,7 @@ source_anchors:
 
 # §5. Network Zone — 网络系统
 
-> **V1.5 状态:** 网络类文档整体迁移至 [[../../KB/FOG A Series/Design/|FOG A Series/Design/]],此处不再列出(参见 `[[../../KB/FOG A Series/index]]`)。
+> **V1.5 状态:** 网络类文档整体迁移至 [[KB/IMMERSION/_line/index|IMMERSION/_line/]],此处不再列出(参见 `[[KB/IMMERSION/index]]`)。
 > 网络 Zone 选型原则:见 Guideline(已删除)→ 当前由各 IT Zone 设计文档自带。
 
 ---

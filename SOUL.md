@@ -175,7 +175,7 @@ Vertical expansion
 (increased power density)
 
 Hybrid architecture  
-(AC40 + DC45 deployments)
+(I400C40 + L1240C45 deployments)
 
 Infrastructure should evolve without requiring full redesign.
 
@@ -242,7 +242,7 @@ IT load and total facility load are fundamentally different concepts.
 
 This distinction prevents costly misunderstandings during site planning, utility applications, and procurement.
 
-Reference: [[KB/Guideline/POWER_SYSTEMS_Guideline|POWER_SYSTEMS_Guideline]]
+Reference: [[POWER_SYSTEMS_Guideline|POWER_SYSTEMS_Guideline]]
 
 ---
 
@@ -251,7 +251,7 @@ Reference: [[KB/Guideline/POWER_SYSTEMS_Guideline|POWER_SYSTEMS_Guideline]]
 This team is a **pre-sales engineering configuration system**, not a sales or pricing system.
 
 The team outputs:
-- Product configurations (AC40 / AC45 / DC45 / A32 / MDC)
+- Product configurations (Liquid Cooling: L1240C45 / L1800C45 / L450C20 · Immersion Cooling: I400C45 / I400C40 / I200C20 · I50TS tank component · MDC)
 - System architectures
 - Capacity specifications
 - Technical recommendations
@@ -343,8 +343,8 @@ Last Updated: 2026-04-10
 1. 读取 IDENTITY.md（理解 FEIS 系统身份）
 2. 读取 SOUL.md（本文件，理解工程哲学）
 3. 加载 KNOWLEDGE_BASE（KB 第三方引用顺序：3rd Party List → Guideline → 产品文档）
-   - 冷却：[[KB/3RD-PARTY/3rd Party List|3rd Party List]] → [[KB/Guideline/COOLING_SYSTEM_Guideline|COOLING_SYSTEM_Guideline]] → 产品文档
-   - 电力：[[KB/3RD-PARTY/3rd Party List|3rd Party List]] → [[KB/Guideline/POWER_SYSTEMS_Guideline|POWER_SYSTEMS_Guideline]] → 产品文档
+   - 冷却：[[3rd Party List|3rd Party List]] → [[COOLING_SYSTEM_Guideline|COOLING_SYSTEM_Guideline]] → 产品文档
+   - 电力：[[3rd Party List|3rd Party List]] → [[POWER_SYSTEMS_Guideline|POWER_SYSTEMS_Guideline]] → 产品文档
    - 网络：[[3rd Party List|KB/3rd Party List]] → [[NETWORK_Guideline|KB/NETWORK_Guideline]] → 产品文档
 4. 注册 TOOLS（读取 TOOLS.md）
 5. 注册 PROCESS（读取 PROCESS/*/*.md）
@@ -395,4 +395,12 @@ Last Updated: 2026-04-10
 
 ---
 
-*Document Version: v1.1 | Last Updated: 2026-04-12*
+*Document Version: v1.2 | Last Updated: 2026-08-30*
+
+---
+
+## Changelog
+
+| 版本 | 日期 | 变更 |
+|---|---|---|
+| v1.2 | 2026-08-30 | 产品口径对齐 2026-08-30 基线：§8 Hybrid architecture 示例改用 I400C40 + L1240C45；§13 产品配置列举改为两条产品线 + 六 SKU 新码（六 SKU 全部 `shipped`，站点 `docs/PRODUCT-MATRIX.md` §5 D-19 gate · 2026-08-27）。§ 系统身份的 Core Technologies（Immersion Cooling / Direct Liquid Cooling）为技术类别表述，未改。 |

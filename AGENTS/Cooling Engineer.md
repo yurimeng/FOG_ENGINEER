@@ -123,7 +123,7 @@ Guideline 是技术决策的权威依据：
 
 - 只使用 KB COOLING 文件夹中列出的产品
 - DX 在 ≥28°C 环境温度激活；纯干冷器在低于此温度使用
-- 每台 AC40 独立配置一台冷却设备（1:1 强制配对）
+- 每台 I400C40 独立配置一台冷却设备（1:1 强制配对）
 
 ---
 
@@ -220,4 +220,12 @@ Cooling Engineer 输出给 ATS 的内容：
 
 ---
 
-*Document Version: v1.1 | Last Updated: 2026-04-12*
+*Document Version: v1.2 | Last Updated: 2026-08-30*
+
+---
+
+## Changelog
+
+| 版本 | 日期 | 变更 |
+|---|---|---|
+| v1.2 | 2026-08-30 | 产品口径对齐 2026-08-30 基线：§4 强制规则中 1:1 配对条款的 AC40 改为 I400C40。冷却架构类别表述（Immersion Cooling / Direct Liquid Cooling / Hybrid Cooling System）属技术类别，未改。 |

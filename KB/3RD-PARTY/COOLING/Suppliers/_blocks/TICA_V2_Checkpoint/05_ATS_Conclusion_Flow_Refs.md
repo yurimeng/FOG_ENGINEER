@@ -74,7 +74,7 @@ source_anchors: []
 - 厂家历史投标资料：`[[风冷磁浮冷水机组技术参数表&配置表]]`（CSV 1 · 系统参数）· `[[自然冷却风冷螺杆式冷水机组]]`（CSV 2 · 配置 BOM）
 - **技术规格基线**：`[[Hybrid Chiller Requirement V5]]` Checkpoint（2026-06-06）
 - 归档基线（详尽法规对比 / 17 项澄清问题保留）：`.Hybrid Chiller Requirement V1.6.md`（点前缀归档）
-- 治理基线：`[[../../FOG D Series/DESIGN/DC45 Hydronic & Thermal Design Criteria|Rev.C]]` §9.2
+- 治理基线：`[[../../LIQUID/L1240C45/DESIGN/L1240C45 Hydronic & Thermal Design Criteria|Rev.C]]` §9.2
 - 上游 CDU：`[[CDU_Requirement V5]]`
 - 配套邮件草稿：`[[TICA_Clarification_Email_Drafts]]`
 - 3rd Party 清单：`KB/3RD-PARTY/3rd Party List.md`（当前不含 TICA）

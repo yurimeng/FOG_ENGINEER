@@ -41,7 +41,7 @@ source_anchors: []
 | DC45(1240kW IT) | 干冷器 + DX + 风墙(DC45 专用) |
 
 参考:
-- AC40 完整规格:[[PUBLIC/Products/AC40|AC40]]
-- DC45 完整规格:[[PUBLIC/Tech_Spec/DC45_Tech_Spec_EN|DC45]]
-- MDC 标准组合:[[KB/PRODUCTS_MDC]]
-- 冷却系统设计原则:[[KB/Guideline/COOLING_SYSTEM_Guideline]]
+- AC40 完整规格:[[I400C40|I400C40]]
+- DC45 完整规格:[[L1240C45_Tech_Spec_EN|L1240C45]]
+- MDC 标准组合:[[_COMMON/PRODUCTS_MDC]]
+- 冷却系统设计原则:[[COOLING_SYSTEM_Guideline]]

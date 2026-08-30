@@ -1,25 +1,25 @@
 ---
-title: "03_Selection_Changelog — 选型建议 + Changelog"
-parent: "[[../../PRD-Vertiv-RDHx]]"
+title: 03_Selection_Changelog — 选型建议 + Changelog
+parent: "[[PRD-Vertiv-RDHx]]"
 order: 3
 tags:
   - "#workspace/engineer"
   - "#type/prd"
   - "#product/RDHx"
   - "#thermal"
-  - #MDC
+  - 
 created: 2026-06-18
-source_file: "KB/3RD-PARTY/COOLING/Suppliers/PRD-Vertiv-RDHx.md"
+source_file: KB/3RD-PARTY/COOLING/Suppliers/PRD-Vertiv-RDHx.md
 source_anchors:
-  - "选型建议"
-  - "Changelog"
+  - 选型建议
+  - Changelog
 ---
 
 # 选型建议(供售前参考)
 
 | IT Zone | 推荐型号 | 数量 | 备注 |
 |---------|----------|------|------|
-| **DC45**(DLC 三支路 Branch 2) | DCD35 被动型 / 600mm 宽 / 2000 或 2200mm 高 | **9 套** | 单门实际吸热 **~ 22 kW @ TCS 26°C 单点**（ε=0.55 ε-NTU 实算，吸热 55%）;详见 [[../../DESIGN/RDHX_Requirement#^rdhx-3-1-locked]] 与 [[../../../FOG D Series/DESIGN/DC45 三支路冷却重评估 V4]] §3.2 |
+| **DC45**(DLC 三支路 Branch 2) | DCD35 被动型 / 600mm 宽 / 2000 或 2200mm 高 | **9 套** | 单门实际吸热 **~ 22 kW @ TCS 26°C 单点**（ε=0.55 ε-NTU 实算，吸热 55%）;详见 [[../../DESIGN/RDHX_Requirement#^rdhx-3-1-locked]] 与 [[../../../LIQUID/L1240C45/DESIGN/L1240C45 三支路冷却重评估 V4]] §3.2 |
 | 其他场景(若有)| DCD50 被动型 / 800mm 宽 | 待评估 | 单门设计吸热取决于 GPU 排气温度与 TCS 进水 |
 
 > ⚠️ **吸热数字的两种口径**：

@@ -1,0 +1,146 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2270" height="700" viewBox="0 0 2270 700" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="dimA" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10z" fill="#8a5fb8"/>
+    </marker>
+    <symbol id="tank" viewBox="0 0 266 96">
+      <rect x="1" y="1" width="264" height="94" fill="#eef1f8" stroke="#3a3f4c" stroke-width="1.6"/>
+    </symbol>
+    <!-- pipe tap pair (supply+return stubs to a tank) -->
+    <symbol id="tap" viewBox="0 0 28 14">
+      <path d="M4 1 L4 13 M10 1 L10 13" stroke="#d9534f" stroke-width="2"/>
+      <path d="M18 1 L18 13 M24 1 L24 13" stroke="#4a78d0" stroke-width="2"/>
+    </symbol>
+  </defs>
+
+  <rect width="2270" height="700" fill="#fafbfd"/>
+  <text x="1135" y="42" font-size="22" font-weight="600" fill="#1d2330" text-anchor="middle" letter-spacing="3">Pipeline Layout</text>
+  <text x="30" y="42" font-size="12" fill="#7a8194">AC45 · FOG A Series · v1 · dims in mm</text>
+
+  <!-- ============ Container shell (extended vs AC40) ============ -->
+  <rect x="205" y="195" width="1910" height="330" fill="none" stroke="#2a8f8f" stroke-width="2.5"/>
+  <rect x="213" y="203" width="1894" height="314" fill="none" stroke="#2a8f8f" stroke-width="1"/>
+  <!-- corner castings -->
+  <g fill="#ffffff" stroke="#2a8f8f" stroke-width="1.5">
+    <rect x="199" y="189" width="26" height="14" rx="3"/><rect x="2090" y="189" width="26" height="14" rx="3"/>
+    <rect x="199" y="517" width="26" height="14" rx="3"/><rect x="2090" y="517" width="26" height="14" rx="3"/>
+  </g>
+  <!-- left end double doors (open) -->
+  <g fill="none" stroke="#2a8f8f" stroke-width="1.2">
+    <path d="M205 195 L130 285 A 118 118 0 0 1 205 312" stroke-dasharray="4 3"/>
+    <path d="M205 525 L130 435 A 118 118 0 0 0 205 408" stroke-dasharray="4 3"/>
+  </g>
+  <!-- personnel door (top wall, right) -->
+  <g fill="none" stroke="#3a3f4c" stroke-width="1.6">
+    <path d="M1355 195 L1355 75 A 120 120 0 0 1 1475 195"/>
+    <path d="M1355 195 L1355 80" stroke-width="3"/>
+  </g>
+
+  <!-- ============ Tanks: top row ============ -->
+  <use href="#tank" x="232" y="207" width="266" height="96"/>
+  <use href="#tank" x="508" y="207" width="266" height="96"/>
+  <use href="#tank" x="784" y="207" width="266" height="96"/>
+  <use href="#tank" x="1060" y="207" width="266" height="96"/>
+  <!-- ============ Tanks: bottom row ============ -->
+  <use href="#tank" x="232" y="417" width="266" height="96"/>
+  <use href="#tank" x="508" y="417" width="266" height="96"/>
+  <use href="#tank" x="784" y="417" width="266" height="96"/>
+  <use href="#tank" x="1060" y="417" width="266" height="96"/>
+  <g font-size="16" fill="#2f9e44" text-anchor="middle" letter-spacing="1">
+    <text x="365" y="262">TANK(32U)</text><text x="641" y="262">TANK(32U)</text>
+    <text x="917" y="262">TANK(32U)</text><text x="1193" y="262">TANK(32U)</text>
+    <text x="365" y="472">TANK(32U)</text><text x="641" y="472">TANK(32U)</text>
+    <text x="917" y="472">TANK(32U)</text><text x="1193" y="472">TANK(32U)</text>
+  </g>
+
+  <!-- ============ Switch boxes (between tanks) ============ -->
+  <g fill="#e8c84a" stroke="#9a8420" stroke-width="1">
+    <rect x="499" y="207" width="8" height="96"/><rect x="1051" y="207" width="8" height="96"/>
+    <rect x="499" y="417" width="8" height="96"/><rect x="1051" y="417" width="8" height="96"/>
+  </g>
+  <path d="M540 155 L505 207" stroke="#c2557a" stroke-width="1.2" fill="none"/>
+  <text x="545" y="150" font-size="14" fill="#c2557a" letter-spacing="1">Switch box</text>
+
+  <!-- ============ Central pipe corridor ============ -->
+  <rect x="228" y="318" width="1190" height="84" rx="14" fill="none" stroke="#4a78d0" stroke-width="2.5"/>
+  <rect x="240" y="330" width="1166" height="60" rx="10" fill="none" stroke="#d9534f" stroke-width="2.5"/>
+  <!-- taps to each tank, top and bottom -->
+  <use href="#tap" x="262" y="304" width="28" height="14"/><use href="#tap" x="448" y="304" width="28" height="14"/>
+  <use href="#tap" x="538" y="304" width="28" height="14"/><use href="#tap" x="724" y="304" width="28" height="14"/>
+  <use href="#tap" x="814" y="304" width="28" height="14"/><use href="#tap" x="1000" y="304" width="28" height="14"/>
+  <use href="#tap" x="1090" y="304" width="28" height="14"/><use href="#tap" x="1276" y="304" width="28" height="14"/>
+  <use href="#tap" x="262" y="402" width="28" height="14"/><use href="#tap" x="448" y="402" width="28" height="14"/>
+  <use href="#tap" x="538" y="402" width="28" height="14"/><use href="#tap" x="724" y="402" width="28" height="14"/>
+  <use href="#tap" x="814" y="402" width="28" height="14"/><use href="#tap" x="1000" y="402" width="28" height="14"/>
+  <use href="#tap" x="1090" y="402" width="28" height="14"/><use href="#tap" x="1276" y="402" width="28" height="14"/>
+  <!-- riser to plant (right end of corridor) -->
+  <path d="M1366 402 L1366 525 M1380 402 L1380 525" stroke="#4a78d0" stroke-width="2.5"/>
+  <path d="M1352 390 L1352 525" stroke="#d9534f" stroke-width="2.5"/>
+
+  <!-- ============ Right-end equipment ============ -->
+  <g font-size="15" fill="#1d2330" text-anchor="middle">
+    <rect x="1880" y="207" width="140" height="86" fill="#eef1f8" stroke="#3a3f4c" stroke-width="1.6"/>
+    <text x="1950" y="255" letter-spacing="1">IT Rack</text>
+    <rect x="1455" y="450" width="66" height="63" fill="#eef1f8" stroke="#3a3f4c" stroke-width="1.6"/>
+    <text x="1488" y="487">GFS</text>
+    <rect x="1526" y="412" width="80" height="101" fill="#eef1f8" stroke="#3a3f4c" stroke-width="1.6"/>
+    <text x="1566" y="468">PDC1</text>
+    <rect x="1611" y="412" width="155" height="101" fill="#eef1f8" stroke="#3a3f4c" stroke-width="1.6"/>
+    <text x="1688" y="468">PDC2</text>
+    <rect x="2092" y="290" width="112" height="120" fill="#eef1f8" stroke="#3a3f4c" stroke-width="1.6"/>
+    <text x="2148" y="356" letter-spacing="1">CRAC</text>
+  </g>
+  <!-- IT rack swing / PDC fold marks -->
+  <path d="M1880 207 L1846 250 A 55 55 0 0 0 1880 264" fill="none" stroke="#3a3f4c" stroke-width="1" stroke-dasharray="4 3"/>
+  <path d="M1526 412 L1566 396 L1606 412 M1611 412 L1666 392 L1700 412" fill="none" stroke="#3a3f4c" stroke-width="1"/>
+
+  <!-- ============ UPS + Battery block (tight against PDC2 and right wall) ============ -->
+  <g text-anchor="middle">
+    <rect x="1766" y="390" width="177" height="123" fill="#fdf3e3" stroke="#3a3f4c" stroke-width="1.6"/>
+    <text x="1854" y="448" font-size="15" font-weight="600" fill="#1d2330">UPS</text>
+    <text x="1854" y="468" font-size="11" fill="#7a8194">1300 × 904</text>
+    <rect x="1943" y="411" width="82" height="102" fill="#fdf3e3" stroke="#3a3f4c" stroke-width="1.6"/>
+    <text x="1984" y="458" font-size="13" font-weight="600" fill="#1d2330">BAT</text>
+    <text x="1984" y="476" font-size="9.5" fill="#7a8194">600×750</text>
+    <rect x="2025" y="411" width="82" height="102" fill="#fdf3e3" stroke="#3a3f4c" stroke-width="1.6"/>
+    <text x="2066" y="458" font-size="13" font-weight="600" fill="#1d2330">BAT</text>
+    <text x="2066" y="476" font-size="9.5" fill="#7a8194">600×750</text>
+  </g>
+
+  <!-- ============ Dimensions ============ -->
+  <g stroke="#8a5fb8" stroke-width="1.2" fill="none">
+    <path d="M232 175 L498 175" marker-start="url(#dimA)" marker-end="url(#dimA)"/>
+    <path d="M232 207 L232 168 M498 207 L498 168"/>
+    <path d="M100 207 L100 303" marker-start="url(#dimA)" marker-end="url(#dimA)"/>
+    <path d="M100 318 L100 402" marker-start="url(#dimA)" marker-end="url(#dimA)"/>
+    <path d="M100 417 L100 448" marker-start="url(#dimA)" marker-end="url(#dimA)"/>
+    <path d="M232 207 L92 207 M232 303 L92 303 M228 318 L92 318 M228 402 L92 402 M232 417 L92 417 M232 448 L92 448"/>
+    <path d="M2020 250 L2115 250" marker-start="url(#dimA)" marker-end="url(#dimA)"/>
+    <path d="M2040 293 L2040 411" marker-start="url(#dimA)" marker-end="url(#dimA)"/>
+    <!-- UPS / battery widths under bottom wall -->
+    <path d="M1766 549 L1943 549" marker-start="url(#dimA)" marker-end="url(#dimA)"/>
+    <path d="M1943 549 L2025 549" marker-start="url(#dimA)" marker-end="url(#dimA)"/>
+    <path d="M2025 549 L2107 549" marker-start="url(#dimA)" marker-end="url(#dimA)"/>
+    <path d="M1766 521 L1766 556 M1943 521 L1943 556 M2025 521 L2025 556 M2107 521 L2107 556"/>
+  </g>
+  <g font-size="14" fill="#8a5fb8" text-anchor="middle">
+    <text x="365" y="166">1950</text>
+    <text x="86" y="259" transform="rotate(-90 86 259)">740</text>
+    <text x="86" y="364" transform="rotate(-90 86 364)">733</text>
+    <text x="86" y="435" transform="rotate(-90 86 435)">100</text>
+    <text x="2067" y="243">600</text>
+    <text x="2054" y="352" transform="rotate(-90 2054 352)">896</text>
+    <text x="1854" y="572">1300</text>
+    <text x="1984" y="572">600</text>
+    <text x="2066" y="572">600</text>
+  </g>
+
+  <!-- ============ Legend ============ -->
+  <g font-size="13" fill="#1d2330">
+    <path d="M232 600 L292 600" stroke="#d9534f" stroke-width="2.5"/><text x="300" y="605">Coolant supply</text>
+    <path d="M430 600 L490 600" stroke="#4a78d0" stroke-width="2.5"/><text x="498" y="605">Coolant return</text>
+    <rect x="630" y="592" width="16" height="16" fill="#e8c84a" stroke="#9a8420"/><text x="654" y="605">Switch box</text>
+    <path d="M790 600 L850 600" stroke="#2a8f8f" stroke-width="2.5"/><text x="858" y="605">Container shell</text>
+    <rect x="1010" y="592" width="16" height="16" fill="#fdf3e3" stroke="#3a3f4c"/><text x="1034" y="605">UPS / Battery</text>
+  </g>
+</svg>

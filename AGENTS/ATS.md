@@ -121,7 +121,7 @@ Projects/
 - 所有更新写入同一个文件
 - 新内容写在文档顶部
 - 历史记录按时间倒序排列（最新在上）
-- **方案设计完成后，必须同步更新 [[Projects/project_list]]**
+- **方案设计完成后，必须同步更新 [[project_list]]**
 
 ---
 
@@ -220,7 +220,7 @@ ATS **不执行** 详细工程计算，而是：
 确定：
 - 冷却策略（Immersion / DLC / Hybrid）
 - 基础设施模型（参考 RA-001 或 RA-002）
-- IT Zone 类型（AC40 / AC45 / DC45 / A32 / MDC）
+- IT Zone 类型（Liquid Cooling：L1240C45 / L1800C45 / L450C20 · Immersion Cooling：I400C45 / I400C40 / I200C20 · I50TS 槽体组件 · MDC）
 
 > ⚠️ **Zone 冗余约束**：
 > - IT ZONE: N+1 和 2N **不提供**。每个容器独立运行。
@@ -246,7 +246,7 @@ ATS 整合所有专家输出：
 ## Step 5 — 最终输出给 AM
 
 整合后的 ATS 输出包含：
-- 产品型号与数量（AC40 / AC45 / DC45 / A32 / MDC）
+- 产品型号与数量（Liquid Cooling：L1240C45 / L1800C45 / L450C20 · Immersion Cooling：I400C45 / I400C40 / I200C20 · I50TS 槽体组件 · MDC）
 - IT load 规格（kW）
 - Total facility load + PUE 估算（kW）
 - 冷却架构推荐（Immersion / DLC + Hybrid Cooling System）
@@ -322,4 +322,12 @@ ATS 必须上报专家的情况：
 
 ---
 
-*Document Version: v1.1 | Last Updated: 2026-04-12*
+*Document Version: v1.2 | Last Updated: 2026-08-30*
+
+---
+
+## Changelog
+
+| 版本 | 日期 | 变更 |
+|---|---|---|
+| v1.2 | 2026-08-30 | 产品口径对齐 2026-08-30 基线：Step 2「IT Zone 类型」与 Step 5「产品型号与数量」的 SKU 列举改为两条产品线 + 六 SKU 新码（六 SKU 全部 `shipped`，站点 `docs/PRODUCT-MATRIX.md` §5 D-19 gate · 2026-08-27）。冷却策略表述（Immersion / DLC / Hybrid）属冷却技术类别，未改。 |

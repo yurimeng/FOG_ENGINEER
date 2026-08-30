@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "skills": {
+    "dashi-ppt": {
+      "source": "chuspeeism/dashi-ppt-skill",
+      "sourceType": "github",
+      "skillPath": "skills/dashi-ppt/SKILL.md",
+      "computedHash": "0013d821a8c741a7229a8ff18ce443b82621580ee34f6a0fae794fd62fd0a705"
+    }
+  }
+}

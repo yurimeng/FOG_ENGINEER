@@ -63,43 +63,43 @@ tags:
 
 ## 1. §G-1 强制工作流程 + §G-2 热工工程范围
 
-![[_blocks/COOLING_SYSTEM_Guideline/01_G1_G2_Workflow_Scope]]
+![[01_G1_G2_Workflow_Scope]]
 
 ## 2. §G-3 支持的冷却技术 + §G-4 冷却架构优先级
 
-![[_blocks/COOLING_SYSTEM_Guideline/02_G3_G4_Tech_Priority]]
+![[02_G3_G4_Tech_Priority]]
 
 ## 3. §G-5 浸没式冷却 + §G-6 直冷液冷
 
-![[_blocks/COOLING_SYSTEM_Guideline/03_G5_G6_Immersion_DLC]]
+![[03_G5_G6_Immersion_DLC]]
 
 ## 4. §G-7 热排放系统
 
-![[_blocks/COOLING_SYSTEM_Guideline/04_G7_Heat_Rejection]]
+![[04_G7_Heat_Rejection]]
 
 ## 5. §G-8 IT Zone 配对 + §G-9 环境设计
 
-![[_blocks/COOLING_SYSTEM_Guideline/05_G8_G9_ZoneMatch_Env]]
+![[05_G8_G9_ZoneMatch_Env]]
 
 ## 6. §G-10 热负荷计算 + §G-11 冗余策略
 
-![[_blocks/COOLING_SYSTEM_Guideline/06_G10_G11_Load_Redundancy]]
+![[06_G10_G11_Load_Redundancy]]
 
 ## 7. §G-12 容器冷却 + §G-13 极端条件
 
-![[_blocks/COOLING_SYSTEM_Guideline/07_G12_G13_Container_Extreme]]
+![[07_G12_G13_Container_Extreme]]
 
 ## 8. §G-14 产品选择 + §G-15 KB 查询与验证
 
-![[_blocks/COOLING_SYSTEM_Guideline/08_G14_G15_Product_Lookup]]
+![[08_G14_G15_Product_Lookup]]
 
 ## 9. §G-16 验证清单
 
-![[_blocks/COOLING_SYSTEM_Guideline/09_G16_Checklist]]
+![[09_G16_Checklist]]
 
 ## 10. §G-17 警告 + §G-18 上报 + §G-19 最终目标
 
-![[_blocks/COOLING_SYSTEM_Guideline/10_G17_G18_G19_Warn_Escalation_Goal]]
+![[10_G17_G18_G19_Warn_Escalation_Goal]]
 
 ---
 

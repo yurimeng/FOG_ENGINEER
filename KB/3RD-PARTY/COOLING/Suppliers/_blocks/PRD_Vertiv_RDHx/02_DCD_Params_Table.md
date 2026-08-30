@@ -1,17 +1,17 @@
 ---
-title: "02_DCD_Params_Table — DCD 35/50 参数对比表"
-parent: "[[../../PRD-Vertiv-RDHx]]"
+title: 02_DCD_Params_Table — DCD 35/50 参数对比表
+parent: "[[PRD-Vertiv-RDHx]]"
 order: 2
 tags:
   - "#workspace/engineer"
   - "#type/prd"
   - "#product/RDHx"
   - "#thermal"
-  - #MDC
+  - 
 created: 2026-06-18
-source_file: "KB/3RD-PARTY/COOLING/Suppliers/PRD-Vertiv-RDHx.md"
+source_file: KB/3RD-PARTY/COOLING/Suppliers/PRD-Vertiv-RDHx.md
 source_anchors:
-  - "^prd-vertiv-table"
+  - ^prd-vertiv-table
 ---
 
 # DCD 35/50 被动散热系统参数对比表 ^prd-vertiv-table

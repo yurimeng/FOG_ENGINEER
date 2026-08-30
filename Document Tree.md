@@ -6,8 +6,8 @@ tags:
   - #system/feis
   - #MDC
 created: 2026-06-18
-last_updated: 2026-06-18
-doc_version: v0.1
+last_updated: 2026-08-30
+doc_version: v0.2
 audience: Yuri（仅内部 review 用）
 status: draft — 待 review
 ---
@@ -17,6 +17,9 @@ status: draft — 待 review
 > **本文件性质**:导航 + 重新组织建议文档。**不是命令**。用户 review 之后才决定是否 re-org。
 > **范围**:仅盘点、不修改任何其他文件。
 > **生成日期**:2026-06-18
+>
+> ⚠️ **2026-08-30 产品口径说明:** 本文件 §2 目录树与 §4 清单的产品命名已对齐现行基线 —— 两条产品线 **Liquid Cooling**(`L`)L1240C45 · L1800C45 · L450C20 与 **Immersion Cooling**(`I`)I400C45 · I400C40 · I200C20,**六 SKU 全部 `shipped`**(站点 `docs/PRODUCT-MATRIX.md` §5 D-19 gate · 2026-08-27),另有 I50TS 浸没槽体组件。命名基准 [[NAMING_MAP]]。
+> **§5–§10 的重组建议、行动项与决策请求仍是 2026-06-18 的时点记录**,其中的旧名(A Series / D Series / DC45 Tech Spec 路径等)与已失效路径**保留原样**,不回溯改写。文件名本身一律未改。
 
 ---
 
@@ -72,13 +75,13 @@ status: draft — 待 review
 │   │   ├── _blocks/                  ← 3rd_Party_List / STD_Supplier 块
 │   │   ├── COOLING/(DESIGN/ + Suppliers/ + _blocks/)
 │   │   ├── POWER/(UPS/ + Busbar/ + BESS/ + _blocks/)
-│   ├── FOG A Series/                 ← A32 / AC40 / AC45
-│   │   ├── PRODUCTS_A32.md · PRODUCTS_AC40.md · PRODUCTS_AC45.md
-│   │   ├── Design/                   ← A32 Flow / AC40 Layout / NET 文档
-│   │   ├── _blocks/PRODUCTS_A32|A40|A45/(01..07)
+│   ├── IMMERSION/                 ← Immersion Cooling 线:I400C45 / I400C40 / I200C20 + I50TS(槽体组件)
+│   │   ├── PRODUCTS_I50TS.md · PRODUCTS_I400C40.md · PRODUCTS_I400C45.md
+│   │   ├── Design/                   ← I50TS Flow / I400C40 Layout / NET 文档
+│   │   ├── _blocks/PRODUCTS_I50TS|A40|A45/(01..07)
 │   │   └── index.md
-│   ├── FOG D Series/                 ← DC45
-│   │   ├── PRODUCTS/(DC45 Tech Spec EN/CN · DC45_MDC_BOM · Racks.png)
+│   ├── LIQUID/L1240C45/                 ← Liquid Cooling 线(线内另有 L1800C45 / L450C20);以下为 L1240C45 子树
+│   │   ├── PRODUCTS/(L1240C45 Tech Spec EN/CN · L1240C45_MDC_BOM · Racks.png)
 │   │   ├── PRODUCTS/(MDC Engineering Handbook External · MDC_Product_Quick_Ref)
 │   │   ├── DESIGN/(Design 准则 + Compliance + Hydronic + Thermal + BOM)
 │   │   ├── DESIGN/_blocks/
@@ -149,8 +152,8 @@ status: draft — 待 review
 
 | 分类 | 数量级别 | 触达对象 | review 严格度 | 代表目录 |
 |------|----------|----------|---------------|----------|
-| **External** | ~20+ 文件 | 客户 / 投资者 / 媒体 | 严格(每篇外发前过审) | `KB/FOG A Series/PRODUCTS_*.md` · `KB/FOG D Series/PRODUCTS/DC45 Tech Spec*` · `Reference Architecture/` · `Projects/外发资料_最新/` · `Business_Documents/PITCH DECK Flyer.md` · `Projects/PQTech/采访稿_新版.md` |
-| **Internal** | ~200+ 文件 | 团队 + AI Agent | 中等 | `KB/Guideline/` · `KB/3RD-PARTY/` · `KB/FOG D Series/DESIGN/` · `Projects/<name>/Project_Record.md` · `Business_Documents/*MSA/MASTER/APPENDIX` · `Market/` · `HRBP/` |
+| **External** | ~20+ 文件 | 客户 / 投资者 / 媒体 | 严格(每篇外发前过审) | `KB/IMMERSION/PRODUCTS_*.md` · `KB/LIQUID/L1240C45/PRODUCTS/DC45 Tech Spec*` · `Reference Architecture/` · `Projects/外发资料_最新/` · `Business_Documents/PITCH DECK Flyer.md` · `Projects/PQTech/采访稿_新版.md` |
+| **Internal** | ~200+ 文件 | 团队 + AI Agent | 中等 | `KB/Guideline/` · `KB/3RD-PARTY/` · `KB/LIQUID/L1240C45/DESIGN/` · `Projects/<name>/Project_Record.md` · `Business_Documents/*MSA/MASTER/APPENDIX` · `Market/` · `HRBP/` |
 | **Meta/Admin** | ~15 文件 | Yuri + AI | 低(自用) | `CLAUDE.md` · `PRINCIPLES.md` · `SOUL.md` · `AGENTS.md` · `PROCESS/` · `TOOLS/` · `FOG_Workspace_Summary.md` |
 
 > **关键判断**:"External" 不等于"已发布",而是"理论上可发布"。多数情况下已经过 Yuri 审阅定稿,任何改动都需要重新 review。
@@ -161,24 +164,24 @@ status: draft — 待 review
 
 | # | 当前路径 | 用途 | External? | 建议去留 |
 |---|---------|------|-----------|---------|
-| E01 | `KB/FOG A Series/PRODUCTS_A32.md` | A32 标品 PRD 对外 | ✅ | 保留 External;位置 OK |
-| E02 | `KB/FOG A Series/PRODUCTS_AC40.md` | AC40 标品 PRD 对外 | ✅ | 保留 External;位置 OK |
-| E03 | `KB/FOG A Series/PRODUCTS_AC45.md` | AC45 标品 PRD 对外 | ✅ | 保留 External;位置 OK |
-| E04 | `KB/FOG D Series/PRODUCTS/DC45 Tech Spec EN.md` | DC45 Tech Spec 英文 | ✅ | 保留 External;**位置混乱**(见 §5.1) |
-| E05 | `KB/FOG D Series/PRODUCTS/DC45 Tech Spec CN.md` | DC45 Tech Spec 中文 | ✅ | 保留 External;**位置混乱** |
-| E06 | `KB/FOG D Series/PRODUCTS/MDC Engineering Handbook External.md` | 对外工程手册 | ✅ | 保留 External |
-| E07 | `KB/FOG D Series/PRODUCTS/MDC_Product_Quick_Ref.md` | 三平台快速对比 | ✅ | 保留 External(快速参考) |
+| E01 | `KB/IMMERSION/PRODUCTS_I50TS.md` | I50TS 槽体组件 PRD 对外 | ✅ | 保留 External;位置 OK |
+| E02 | `KB/IMMERSION/PRODUCTS_I400C40.md` | I400C40 标品 PRD 对外 | ✅ | 保留 External;位置 OK |
+| E03 | `KB/IMMERSION/PRODUCTS_I400C45.md` | I400C45 标品 PRD 对外 | ✅ | 保留 External;位置 OK |
+| E04 | `KB/LIQUID/L1240C45/PRODUCTS/L1240C45 Tech Spec EN.md` | L1240C45 Tech Spec 英文 | ✅ | 保留 External;**位置混乱**(见 §5.1) |
+| E05 | `KB/LIQUID/L1240C45/PRODUCTS/L1240C45 Tech Spec CN.md` | L1240C45 Tech Spec 中文 | ✅ | 保留 External;**位置混乱** |
+| E06 | `KB/_COMMON/MDC Engineering Handbook External.md` | 对外工程手册 | ✅ | 保留 External |
+| E07 | `KB/_COMMON/MDC_Product_Quick_Ref.md` | 三平台快速对比 | ✅ | 保留 External(快速参考) |
 | E08 | `Reference Architecture/EDGE_INFERENCE_IMMERSION_0.4MW.md` | RA-001 对外 | ✅ | 保留 External;位置 OK |
 | E09 | `Reference Architecture/EDGE_INFERENCE_DLC_1.2MW.md` | RA-002 对外 | ✅ | 保留 External;位置 OK |
 | E10 | `Reference Architecture/Site_Reference_Climate_Standard.md` | 三站点 + 6 站点气候 | ✅ | 保留 External(可作 appendix) |
-| E11 | `Projects/外发资料_最新/DC45 Tech Spec CN.md` | CN Tech Spec V1.3 旧副本 | ⚠️ | **与 E04 重复**;建议删除(已 E04 标注"最新版 V1.4 见 KB/") |
-| E12 | `Projects/外发资料_最新/DC45 Tech Spec EN.md` | EN Tech Spec V1.3 旧副本 | ⚠️ | **与 E04 重复**;建议删除 |
+| E11 | `Projects/外发资料_最新/L1240C45 Tech Spec CN.md` | CN Tech Spec V1.3 旧副本 | ⚠️ | **与 E04 重复**;建议删除(已 E04 标注"最新版 V1.4 见 KB/") |
+| E12 | `Projects/外发资料_最新/L1240C45 Tech Spec EN.md` | EN Tech Spec V1.3 旧副本 | ⚠️ | **与 E04 重复**;建议删除 |
 | E13 | `Business_Documents/PITCH DECK Flyer.md` | 对外 pitch | ✅ | 保留 External;**位置错位**(在 Business_Documents/) |
 | E14 | `Projects/PQTech/采访稿_新版.md` | 媒体采访稿 | ✅ | 保留 External;在 Projects/ 合理 |
 | E15 | `Market/Market_Report.md` | 市场周报 | ✅ | 保留 External(若每周发布) |
 | E16 | `Market/Diablo_400_市场分析报告.md` | Diablo 400 市场分析 | ✅ | 保留 External |
-| E17 | `KB/FOG A Series/Design/PRODUCTS_NETWORK.md` | 产品网络配置 | ⚠️ | Internal;非 External(对内设计) |
-| E18 | `KB/FOG D Series/PRODUCTS/DC45_MDC_BOM.md` | DC45 BOM | ⚠️ | **可对外**(若脱敏),目前混在 External 目录 |
+| E17 | `KB/IMMERSION/_line/PRODUCTS_NETWORK.md` | 产品网络配置 | ⚠️ | Internal;非 External(对内设计) |
+| E18 | `KB/LIQUID/L1240C45/PRODUCTS/L1240C45_MDC_BOM.md` | L1240C45 BOM | ⚠️ | **可对外**(若脱敏),目前混在 External 目录 |
 
 > **判定规则**:文件有 "External" / "Handbook External" 字样、或明确是 Tech Spec / RA / Pitch / 采访稿 / 市场报告 → External。其他是 Internal。
 
@@ -209,12 +212,12 @@ status: draft — 待 review
 | I17 | `KB/3RD-PARTY/UPS/Suppliers/Eaton/*(gitignored)` | Eaton UPS datasheet | ✅ | 保留 |
 | I18 | `KB/3RD-PARTY/Busbar/Suppliers/Siemens/*(gitignored)` | Siemens 母线 | ✅ | 保留 |
 | I19 | `KB/3RD-PARTY/_blocks/*` | 3rd Party 块 | ✅ | 保留 |
-| I20 | `KB/FOG A Series/Design/*` | A 系列设计稿 | ✅ | 保留(部分 gitignored) |
-| I21 | `KB/FOG A Series/_blocks/PRODUCTS_*/` | A 系列 PRD 块 | ✅ | 保留 |
-| I22 | `KB/FOG D Series/DESIGN/*` | D 系列设计稿 | ✅ | 保留(部分 gitignored) |
-| I23 | `KB/FOG D Series/DESIGN/_blocks/*` | D 系列设计块 | ✅ | 保留 |
-| I24 | `KB/FOG D Series/_archive/*` | 旧版归档 | ✅ | 保留(归档不删) |
-| I25 | `KB/PRODUCTS_MDC.md` | MDC 旧版总览 | ⚠️ | **疑似过期**;review 后决定保留/归档 |
+| I20 | `KB/IMMERSION/_line/*` | A 系列设计稿 | ✅ | 保留(部分 gitignored) |
+| I21 | `KB/IMMERSION/_blocks/PRODUCTS_*/` | A 系列 PRD 块 | ✅ | 保留 |
+| I22 | `KB/LIQUID/L1240C45/DESIGN/*` | D 系列设计稿 | ✅ | 保留(部分 gitignored) |
+| I23 | `KB/LIQUID/L1240C45/DESIGN/_blocks/*` | D 系列设计块 | ✅ | 保留 |
+| I24 | `KB/LIQUID/L1240C45/_archive/*` | 旧版归档 | ✅ | 保留(归档不删) |
+| I25 | `KB/_COMMON/PRODUCTS_MDC.md` | MDC 旧版总览 | ⚠️ | **疑似过期**;review 后决定保留/归档 |
 | I26 | `KB/MDC Power Flow.png` | MDC 电力流图 | ✅ | 保留(被引用) |
 | I27 | `KB/index.md` | KB 顶层 index | ✅ | 保留 |
 | I28 | `KB/3RD-PARTY/COOLING/DESIGN/.计算公式.md` | 计算公式(隐藏) | ✅ | 保留 |
@@ -245,7 +248,7 @@ status: draft — 待 review
 | P18 | `Projects/自建算力项目/` | 占位 | ⚠️ | 长期空,review 是否删除占位 |
 | P19 | `Projects/外发资料_最新/index.md` | 外发目录索引 | ✅ | **位置应改为 External/** |
 | P20 | `Projects/PQTech/采访稿_新版.md` | 媒体稿 | ✅ External | 见 E14 |
-| P21 | `Projects/外发资料_最新/DC45 Tech Spec CN/EN.md` | 旧版副本 | ⚠️ | **与 E04/E05 重复,建议删除** |
+| P21 | `Projects/外发资料_最新/L1240C45 Tech Spec CN/EN.md` | 旧版副本 | ⚠️ | **与 E04/E05 重复,建议删除** |
 
 ### 5.3 Business / HR / Market / Resource / Canvas
 
@@ -286,7 +289,7 @@ status: draft — 待 review
 | L02 | `FOG_Workspace_Summary.md`(根级) | 内部快照,**散落根级** | 移到 `Admin/` 或 `_internal/` |
 | L03 | `index.md`(根级) | 根级 index | **不要移**;这是 Obsidian 入口 |
 | L04 | `CLAUDE.md` · `PRINCIPLES.md` · `SOUL.md` · `IDENTITY.md` · `USER.md` · `HEARTBEAT.md` · `VERSION.md`(根级) | 元规则 | **不要移**;Yuri 的私人生效点 |
-| L05 | `KB/PRODUCTS_MDC.md` | 旧版 MDC 总览 | review 后决定保留/归档 |
+| L05 | `KB/_COMMON/PRODUCTS_MDC.md` | 旧版 MDC 总览 | review 后决定保留/归档 |
 
 ---
 
@@ -316,13 +319,13 @@ status: draft — 待 review
 ### 7.1 当前结构问题(明确)
 
 1. **External 文档散落多处**:
-   - `KB/FOG D Series/PRODUCTS/DC45 Tech Spec CN/EN.md` —— 对外 Tech Spec 放在 KB/ 内部 PRODUCTS/ 目录,容易误以为是 Internal
+   - `KB/LIQUID/L1240C45/PRODUCTS/L1240C45 Tech Spec CN/EN.md` —— 对外 Tech Spec 放在 KB/ 内部 PRODUCTS/ 目录,容易误以为是 Internal
    - `Business_Documents/PITCH DECK Flyer.md` —— 商务合同目录下混入对外 pitch
    - `Reference Architecture/` —— 顶层目录命名暗示是设计参考,但实际 RA 是对外发布件
-   - `Projects/外发资料_最新/DC45 Tech Spec CN/EN.md` —— **与 KB 官方版重复**(E11/E12)
+   - `Projects/外发资料_最新/L1240C45 Tech Spec CN/EN.md` —— **与 KB 官方版重复**(E11/E12)
 
 2. **Internal 文档混入 External 区**:
-   - `KB/FOG D Series/PRODUCTS/MDC Engineering Handbook External.md` —— 同目录下的 `MDC_Product_Quick_Ref.md` 和 `DC45_MDC_BOM.md` 是 Internal/半 External,**混在一起难以区分**
+   - `KB/_COMMON/MDC Engineering Handbook External.md` —— 同目录下的 `MDC_Product_Quick_Ref.md` 和 `L1240C45_MDC_BOM.md` 是 Internal/半 External,**混在一起难以区分**
 
 3. **散落的根级文件**:
    - `AGENTS.md`(根级)—— 散落根级,内容是 AGENTS/ 简介,易与 `AGENTS/index.md` 混淆
@@ -339,9 +342,9 @@ status: draft — 待 review
    - `KB/3RD-PARTY/Busbar/Suppliers/`(根 `Suppliers/index.md` 缺失)
 
 6. **重复文档**:
-   - `Projects/外发资料_最新/DC45 Tech Spec CN/EN.md` 是 V1.3 旧版,KB 已有 V1.4
-   - `KB/FOG D Series/_archive/PRODUCTS_DC45.md` 是旧版 PRD(已归档,合理)
-   - `KB/PRODUCTS_MDC.md` 与 `KB/FOG D Series/PRODUCTS/index.md` 范围可能重叠
+   - `Projects/外发资料_最新/L1240C45 Tech Spec CN/EN.md` 是 V1.3 旧版,KB 已有 V1.4
+   - `KB/LIQUID/L1240C45/_archive/PRODUCTS_L1240C45.md` 是旧版 PRD(已归档,合理)
+   - `KB/_COMMON/PRODUCTS_MDC.md` 与 `KB/LIQUID/L1240C45/PRODUCTS/index.md` 范围可能重叠
 
 7. **合同 vs 工程文档的混淆**:
    - `MSA Draft CN/EN.md` 已正确归位到 `Business_Documents/`,但 `Projects/外发资料_最新/index.md` 第 16-18 行仍有 MSA 引用(应清理)
@@ -372,7 +375,7 @@ status: draft — 待 review
 │   └── _archive/              ← 全局归档
 │
 ├── External/                  ← 对外发布(新顶层目录)
-│   ├── Tech_Spec/             ← DC45 Tech Spec EN/CN
+│   ├── Tech_Spec/             ← L1240C45 Tech Spec EN/CN
 │   ├── Reference_Architecture/← RA-001 / RA-002
 │   ├── Pitch/                 ← PITCH DECK Flyer
 │   ├── Datasheet/             ← 各产品 datasheet
@@ -413,11 +416,11 @@ status: draft — 待 review
 
 | #   | 要移动的文件                                                          | 目标路径                                          | 理由                       | 风险                     | 优先级 |
 | --- | --------------------------------------------------------------- | --------------------------------------------- | ------------------------ | ---------------------- | --- |
-| M01 | `KB/FOG D Series/PRODUCTS/DC45 Tech Spec EN.md`                 | `External/Tech_Spec/DC45_Tech_Spec_EN.md`     | External 应在 External/ 目录 | 高 — 大量 `[[...]]` 引用需更新 | 🔴  |
-| M02 | `KB/FOG D Series/PRODUCTS/DC45 Tech Spec CN.md`                 | `External/Tech_Spec/DC45_Tech_Spec_CN.md`     | 同上                       | 高                      | 🔴  |
+| M01 | `KB/LIQUID/L1240C45/PRODUCTS/L1240C45 Tech Spec EN.md`                 | `External/Tech_Spec/L1240C45_Tech_Spec_EN.md`     | External 应在 External/ 目录 | 高 — 大量 `[[...]]` 引用需更新 | 🔴  |
+| M02 | `KB/LIQUID/L1240C45/PRODUCTS/L1240C45 Tech Spec CN.md`                 | `External/Tech_Spec/L1240C45_Tech_Spec_CN.md`     | 同上                       | 高                      | 🔴  |
 | M03 | `Business_Documents/PITCH DECK Flyer.md`                        | `External/Pitch/PITCH_DECK_Flyer.md`          | Pitch 是对外                | 中 — 少量 `[[...]]` 引用    | 🟡  |
-| M04 | `Projects/外发资料_最新/DC45 Tech Spec CN.md`                         | **删除**                                        | 重复(M01/M02 的 V1.4 已替代)   | 低 — index.md 已标注旧版     | 🟢  |
-| M05 | `Projects/外发资料_最新/DC45 Tech Spec EN.md`                         | **删除**                                        | 重复                       | 低                      | 🟢  |
+| M04 | `Projects/外发资料_最新/L1240C45 Tech Spec CN.md`                         | **删除**                                        | 重复(M01/M02 的 V1.4 已替代)   | 低 — index.md 已标注旧版     | 🟢  |
+| M05 | `Projects/外发资料_最新/L1240C45 Tech Spec EN.md`                         | **删除**                                        | 重复                       | 低                      | 🟢  |
 | M06 | `Projects/外发资料_最新/index.md`                                     | `External/index.md` 或删除(已无内容)                 | 目录已空                     | 低                      | 🟢  |
 | M07 | `Market/Market_Report.md`                                       | `External/Marketing/Market_Report.md`         | 外部周报                     | 中                      | 🟡  |
 | M08 | `Market/Diablo_400_市场分析报告.md`                                   | `External/Marketing/Diablo_400_市场分析报告.md`     | 外部报告                     | 中                      | 🟡  |
@@ -425,10 +428,10 @@ status: draft — 待 review
 | M10 | `Projects/PQTech/采访稿_新版.md`                                     | `External/Media/PQTech_采访稿.md`                | 媒体稿                      | 中                      | 🟡  |
 | M11 | `AGENTS.md`(根级)                                                 | `AGENTS/_overview.md` 或合并到 `AGENTS/index.md`  | 散落根级                     | 中 — `[[AGENTS]]` 引用    | 🟡  |
 | M12 | `FOG_Workspace_Summary.md`(根级)                                  | `Admin/FOG_Workspace_Summary.md`              | 内部快照                     | 低 — gitignored         | 🟢  |
-| M13 | `KB/PRODUCTS_MDC.md`                                            | **review** — 决定保留/归档                          | 疑似过期                     | 中                      | 🟡  |
-| M14 | `KB/FOG D Series/PRODUCTS/MDC_Product_Quick_Ref.md`             | `External/Datasheet/MDC_Product_Quick_Ref.md` | 快速参考对外                   | 中                      | 🟡  |
-| M15 | `KB/FOG D Series/PRODUCTS/MDC Engineering Handbook External.md` | `External/Pitch/MDC_Engineering_Handbook.md`  | 已是 External              | 中                      | 🟡  |
-| M16 | `KB/FOG D Series/PRODUCTS/DC45_MDC_BOM.md`                      | `External/Datasheet/DC45_MDC_BOM.md`          | BOM 对外                   | 中                      | 🟡  |
+| M13 | `KB/_COMMON/PRODUCTS_MDC.md`                                            | **review** — 决定保留/归档                          | 疑似过期                     | 中                      | 🟡  |
+| M14 | `KB/_COMMON/MDC_Product_Quick_Ref.md`             | `External/Datasheet/MDC_Product_Quick_Ref.md` | 快速参考对外                   | 中                      | 🟡  |
+| M15 | `KB/_COMMON/MDC Engineering Handbook External.md` | `External/Pitch/MDC_Engineering_Handbook.md`  | 已是 External              | 中                      | 🟡  |
+| M16 | `KB/LIQUID/L1240C45/PRODUCTS/L1240C45_MDC_BOM.md`                      | `External/Datasheet/L1240C45_MDC_BOM.md`          | BOM 对外                   | 中                      | 🟡  |
 | M17 | `Projects/自建算力项目/`(空 index)                                     | **review** — 决定保留/删除                          | 长期空目录                    | 极低                     | 🟢  |
 | M18 | `KB/3RD-PARTY/UPS/Suppliers/index.md`(缺失)                       | **创建** 占位                                     | 保持目录一致                   | 极低                     | 🟢  |
 | M19 | `KB/3RD-PARTY/Busbar/Suppliers/index.md`(缺失)                    | **创建** 占位                                     | 同上                       | 极低                     | 🟢  |
@@ -438,8 +441,8 @@ status: draft — 待 review
 
 | 引用类型 | 估计数量 | 处理方式 |
 |----------|----------|----------|
-| `[[DC45_Tech_Spec_EN]]` 内部引用 | 10+ 处(M01) | 全部更新为目标路径,或保持文件名 + 移动(只需更新 index.md) |
-| `[[DC45_Tech_Spec_CN]]` 内部引用 | 10+ 处(M02) | 同上 |
+| `[[L1240C45_Tech_Spec_EN]]` 内部引用 | 10+ 处(M01) | 全部更新为目标路径,或保持文件名 + 移动(只需更新 index.md) |
+| `[[L1240C45_Tech_Spec_CN]]` 内部引用 | 10+ 处(M02) | 同上 |
 | `[[MSA Draft CN]]` / `[[MSA Draft EN]]` 引用 | 2 处(P19) | 已在 `Business_Documents/`,无需改;清理 index.md 残留 |
 | `[[PITCH_DECK_Flyer]]` 引用 | 待扫 | 移到 `External/Pitch/` 后更新 |
 | `[[EDGE_INFERENCE_*.md]]` 引用 | 待扫 | 移到 `External/Reference_Architecture/` 后更新 |
@@ -454,7 +457,7 @@ status: draft — 待 review
 - [ ] **M07/M08 移动**:确认 Market/ 目录定位(Marketing Guideline 仍引用旧路径)
 - [ ] **M09 移动**:扫描 `[[EDGE_INFERENCE_*.md]]` 引用
 - [ ] **M11 移动**:扫描 `[[AGENTS]]` 引用(根级)vs `[[AGENTS/index]]`(目录)
-- [ ] **M13 决定**:review `KB/PRODUCTS_MDC.md` 是否过期
+- [ ] **M13 决定**:review `KB/_COMMON/PRODUCTS_MDC.md` 是否过期
 - [ ] **gitignore 检查**:确认 M01-M03/M07-M10 的目标文件不在 gitignored 列表(如 design 文件、.md 后缀过滤等)
 - [ ] **External 目录**:在 git 中是否需独立 .gitignore 规则?目前根 .gitignore 不限制 `External/`
 - [ ] **CN/EN 同步**:EN/CN 配对文件必须同步移动、同步发布、版本号一致
@@ -464,7 +467,7 @@ status: draft — 待 review
 > **关键提示**:`.gitignore` 屏蔽区改动不入 git,无副作用;git 跟踪区改动会进 git,需要 review。
 
 - **gitignored(改动安全)**:DESIGN/、COOLING/DESIGN/、Busbar/Suppliers/、UPS/Suppliers/、Business_Documents/、Canvas/、Market/、HRBP/、COST/、Projects/、Solutions Design/、FOG_Workspace_Summary.md、Token_Calc_*.xlsx、generate_token_calc.py、memory/、.openclaw/、.claude/
-- **git 跟踪(改动需 review)**:KB/ 下的大部分 Guideline / 3rd Party List / STD_Supplier / FOG A Series / FOG D Series / _archive / Reference Architecture(部分)、AGENTS/、PROCESS/、TOOLS/、CLAUDE.md、PRINCIPLES.md、SOUL.md、IDENTITY.md、USER.md、HEARTBEAT.md、VERSION.md
+- **git 跟踪(改动需 review)**:KB/ 下的大部分 Guideline / 3rd Party List / STD_Supplier / IMMERSION / LIQUID/L1240C45 / _archive / Reference Architecture(部分)、AGENTS/、PROCESS/、TOOLS/、CLAUDE.md、PRINCIPLES.md、SOUL.md、IDENTITY.md、USER.md、HEARTBEAT.md、VERSION.md
 
 ---
 
@@ -507,7 +510,7 @@ Yuri 看完后,决定:
 2. **是否采纳全部建议?还是只采纳 Phase 1?** YES
 3. **是否有其他文档想重新归类?** YES
 4. **新顶层 `External/` 目录名是否合适?**(备选:`Public/` / `Outbound/` / `_external/`) PUBLIC
-5. **`KB/FOG D Series/PRODUCTS/DC45 Tech Spec` 路径是否拆分为 External/?** —— 这是改动最大的部分 YES
+5. **`KB/LIQUID/L1240C45/PRODUCTS/DC45 Tech Spec` 路径是否拆分为 External/?** —— 这是改动最大的部分 YES
 
 ---
 
@@ -516,3 +519,4 @@ Yuri 看完后,决定:
 | Version | Date | Summary |
 |---------|------|---------|
 | v0.1 | 2026-06-18 | 初稿:扫描 vault 全量文件,生成 External/Internal 分类与重新组织建议,等待 Yuri review。 |
+| v0.2 | 2026-08-30 | 产品口径对齐 2026-08-30 基线:§2 目录树 IMMERSION / LIQUID 注释改为两条产品线 + 六 SKU 新码;§4 External 清单 E01–E05 / E18 的用途列改用新码。§5–§10 重组建议与决策请求、`_archive/` 描述、文件名(含 `Token_Calc_AC40_DC45_Haiyan.xlsx`)中的旧名作为时点记录保留。 |

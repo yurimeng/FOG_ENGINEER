@@ -25,6 +25,6 @@ audience: 人(销售/售前/选型工程师)
 
 | 块 | 内容 |
 |----|------|
-| [[_blocks/PRD_Vertiv_RDHx/01_Positioning_Open_Issues]] | 品牌定位与应用场景 + 待澄清 Q1–Q6 |
-| [[_blocks/PRD_Vertiv_RDHx/02_DCD_Params_Table]] | DCD 35/50 被动散热系统参数对比表 (^prd-vertiv-table) |
-| [[_blocks/PRD_Vertiv_RDHx/03_Selection_Changelog]] | 选型建议 + Changelog |
+| [[01_Positioning_Open_Issues]] | 品牌定位与应用场景 + 待澄清 Q1–Q6 |
+| [[02_DCD_Params_Table]] | DCD 35/50 被动散热系统参数对比表 (^prd-vertiv-table) |
+| [[03_Selection_Changelog]] | 选型建议 + Changelog |

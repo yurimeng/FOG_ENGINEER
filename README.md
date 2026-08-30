@@ -34,7 +34,7 @@ tags:
 
 # 目录结构
 
-详细目录结构参见 [[FOG/index]]。
+详细目录结构参见 [[MDC/index]]。
 
 ```
 FOG/
@@ -53,7 +53,10 @@ FOG/
 ├── KB/                   ← 知识库
 │   ├── Guideline/        ← 6大领域技术指南
 │   ├── 3RD-PARTY/       ← 第三方产品（BESS/Busbar/COOLING/NETWORK/UPS）
-│   ├── PRODUCTS_*.md     ← 产品手册（A32/AC40/AC45/DC45/MDC）
+│   ├── LIQUID/           ← Liquid Cooling 线（L1240C45 / L1800C45 / L450C20）
+│   ├── IMMERSION/        ← Immersion Cooling 线（I400C45 / I400C40 / I200C20 / I50TS 槽体组件）
+│   ├── _COMMON/          ← 跨产品：PRODUCTS_MDC.md / PRODUCT_SPEC_BASELINE.md / UNCONFIRMED_Convention.md
+│   ├── NAMING_MAP.md     ← 旧名 ↔ 新名映射（命名基准）
 │   └── KB_Relation.canvas
 │
 ├── PROCESS/              ← 流程定义
@@ -148,7 +151,7 @@ Lead Qualification（AM）
 # 禁止事项
 
 - ❌ 提供任何价格、成本估算或报价
-- ❌ 推荐 KB 定义产品组合（A32/AC40/AC45/DC45/MDC）之外的产品
+- ❌ 推荐 KB 定义产品组合（Liquid Cooling：L1240C45 / L1800C45 / L450C20；Immersion Cooling：I400C45 / I400C40 / I200C20；I50TS 槽体组件；MDC）之外的产品
 - ❌ 将 IT 负载与总设施负荷混用
 - ❌ 直接读写项目文档（必须使用 Obsidian CLI）
 - ❌ 访问 QUOTE_ENGINE.md（仅供商务团队）
@@ -159,7 +162,7 @@ Lead Qualification（AM）
 # 启动加载顺序
 
 1. 读取 [[PRINCIPLES]]（最高准则）
-2. 读取 [[FOG/SOUL]]（工程哲学）
+2. 读取 [[MDC/SOUL]]（工程哲学）
 3. 读取 [[WORKFLOW]]（工作流总览）
 4. 加载对应角色文件
 5. 读取对应领域 Guideline（如需执行技术工作）
@@ -171,8 +174,9 @@ Lead Qualification（AM）
 
 | 编号 | 名称 | IT 容量 | 产品 | 冷却 |
 |------|------|---------|------|------|
-| RA-001 | 0.4MW 浸没式推理 | 0.4MW | 1×AC40 | 浸没式 |
-| RA-002 | 1.2MW DLC 推理 | 1.2MW | 1×DC45 | DLC |
+| RA-001 | 0.4MW 浸没式推理 | 0.4MW | 1×I400C40 | Immersion Cooling |
+| RA-002 | 1.2MW 液冷推理 | 1.2MW | 1×L1240C45 | Liquid Cooling |
+| RA-003 | 0.2MW 浸没式 All-in-One | 0.2MW | 1×I200C20 | Immersion Cooling |
 
 ---
 
@@ -180,11 +184,51 @@ Lead Qualification（AM）
 
 | 变更类型 | 必须同步更新 |
 |---------|------------|
-| KB 目录结构变更 | [[FOG/index]] + [[README]] |
+| KB 目录结构变更 | [[MDC/index]] + [[MDC/README]] |
 | 新增流程文件 | [[WORKFLOW]] |
 | 产品参数变更 | 对应 PRODUCTS_*.md |
 | 重大系统变更 | [[VERSION]] |
 
 ---
 
-*Document Version: v1.1 | Last Updated: 2026-04-12*
+# 知识图谱与自动导航
+
+FOG 工作区已经自动生成了**结构化知识图谱**，存在 `graphify-out/` 下：
+
+| 文件 | 大小 | 用途 |
+|------|------|------|
+| `graph.json` | 622KB | 713 节点 / 711 links / 87 community / 41 hyperedges（AST-only 生成，0 token cost） |
+| `GRAPH_REPORT.md` | 39KB | 人类可读报告，含 God Nodes / Surprising Connections |
+| `.graphify_labels.json` | 3KB | community id → 名字映射 |
+| `manifest.json` | 59KB | 每个 .md 的 mtime + ast_hash（变更检测） |
+| `graph.html` | 553KB | 可视化图谱，浏览器打开 |
+| `.tools/gen_graph_index.py` | — | 重生成 _graph_index.md 表格的脚本 |
+| `.tools/graph_query.py` | — | 命令行查询：`community / type / search / file / relation / summary` |
+
+**导航入口：**
+- [[hot]] — 最近上下文摘要（任何会话先读）
+- [[_navigation]] — 跨子域导航总图
+- [[_graph_index]] — 87 community 全量表（按节点数降序）
+
+**重新生成图谱：**
+```bash
+cd FOG && graphify update .   # AST-only, 0 token cost
+python3 FOG/.tools/gen_graph_index.py FOG/graphify-out   # 重生成表格
+```
+
+**双层分工：**
+- **语义层**（wiki）：README / IDENTITY / SOUL / PRINCIPLES / AGENTS / hot / _navigation —— "是什么 / 为什么"，Claude 维护
+- **结构层**（graph）：graph.json / GRAPH_REPORT —— "哪些文件/节点互引"，AST 自动生成
+- **冲突规则**：wiki 正文 vs graph 节点标签冲突 → **以 wiki 为准**；graph 显示两文件互引但 README 没说 → **看 graph**
+
+---
+
+*Document Version: v1.2 | Last Updated: 2026-08-30*
+
+---
+
+## Changelog
+
+| Version | Date | Summary |
+|---------|------|---------|
+| v1.2 | 2026-08-30 | 产品口径对齐 2026-08-30 基线：目录结构改为两条产品线（LIQUID / IMMERSION / _COMMON / NAMING_MAP）；「禁止事项」产品组合列举改用六 SKU 新码；参考架构表产品列改用新码并补 RA-003。六 SKU 全部 `shipped`（站点 `docs/PRODUCT-MATRIX.md` §5 D-19 gate · 2026-08-27）。 |

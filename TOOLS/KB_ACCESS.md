@@ -27,7 +27,7 @@ tags:
 | 操作 | 命令 | 示例 |
 |------|------|------|
 | 浏览目录 | `obsidian-cli list <相对路径>` | `obsidian-cli list Works_Public/KB` |
-| 读取文件 | `obsidian-cli print "相对路径/文件名"` | `obsidian-cli print "Works_Public/KB/PRODUCTS_A32.md"` |
+| 读取文件 | `obsidian-cli print "相对路径/文件名"` | `obsidian-cli print "Works_Public/KB/PRODUCTS_I50TS.md"` |
 | 模糊搜索 | `obsidian-cli search "关键词"` | `obsidian-cli search "AC45"` |
 | 内容搜索 | `obsidian-cli search-content "关键词"` | `obsidian-cli search-content "BESS"` |
 | 打开笔记 | `obsidian-cli open "相对路径/文件名"` | `obsidian-cli open "Works_Public/AGENTS.md"` |
@@ -40,14 +40,14 @@ tags:
 
 ```
 正确：相对路径，以工作空间根目录为基准
-   Works_Public/KB/PRODUCTS_A32.md
+   Works_Public/KB/PRODUCTS_I50TS.md
    Works_Confidential/ResourcePool/备件清单.md
 
 错误：以 vault 根目录为基准
-   YurimengKB/Works_Public/KB/PRODUCTS_A32.md
+   YurimengKB/Works_Public/KB/PRODUCTS_I50TS.md
 
 错误：绝对路径
-   /Users/yuri/YurimengKB/Works_Public/KB/PRODUCTS_A32.md
+   /Users/yuri/YurimengKB/Works_Public/KB/PRODUCTS_I50TS.md
 ```
 
 ---

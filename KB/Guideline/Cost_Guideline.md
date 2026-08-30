@@ -13,24 +13,24 @@ tags:
 
 | 块 | 主题 | 包含章节 |
 |----|------|---------|
-| [[_blocks/Cost_Guideline/01_K1_K2_Method_Categories]] | K-1/K-2 成本建模方法与 CAPEX 分类 | K-1, K-2 |
-| [[_blocks/Cost_Guideline/02_K3_Architecture_Comparison]] | K-3 架构成本对比 | K-3 |
-| [[_blocks/Cost_Guideline/03_K4_K5_Priority_Edge]] | K-4/K-5 成本优化优先级与边缘部署经济 | K-4, K-5 |
-| [[_blocks/Cost_Guideline/04_K6_Workflow]] | K-6 工作流集成 | K-6 |
+| [[01_K1_K2_Method_Categories]] | K-1/K-2 成本建模方法与 CAPEX 分类 | K-1, K-2 |
+| [[02_K3_Architecture_Comparison]] | K-3 架构成本对比 | K-3 |
+| [[03_K4_K5_Priority_Edge]] | K-4/K-5 成本优化优先级与边缘部署经济 | K-4, K-5 |
+| [[04_K6_Workflow]] | K-6 工作流集成 | K-6 |
 
 ---
 
 ## 1. 成本建模方法与 CAPEX 分类
-![[_blocks/Cost_Guideline/01_K1_K2_Method_Categories]]
+![[01_K1_K2_Method_Categories]]
 
 ## 2. 架构成本对比
-![[_blocks/Cost_Guideline/02_K3_Architecture_Comparison]]
+![[02_K3_Architecture_Comparison]]
 
 ## 3. 成本优化优先级与边缘部署经济
-![[_blocks/Cost_Guideline/03_K4_K5_Priority_Edge]]
+![[03_K4_K5_Priority_Edge]]
 
 ## 4. 工作流集成
-![[_blocks/Cost_Guideline/04_K6_Workflow]]
+![[04_K6_Workflow]]
 
 ---
 

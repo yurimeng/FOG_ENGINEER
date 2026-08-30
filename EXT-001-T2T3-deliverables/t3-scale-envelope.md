@@ -35,7 +35,7 @@ tags:
 
 KB 内无「未来站点数目标」这一业务规划数字。可见线索（均非目标值）：
 
-- 财务模型 `KB/FOG D Series/DESIGN/model.html` 以 **3 sites（USA-TX / UAE / Finland）** 为算例（DC45 DLC + AC45 浸没，3 站 × 2 冷却类型）。〔来源: model.html L553/L895/L978；置信度: confirmed（这是建模算例，非规划目标）〕
+- 财务模型 `KB/LIQUID/L1240C45/DESIGN/model.html` 以 **3 sites（USA-TX / UAE / Finland）** 为算例（DC45 DLC + AC45 浸没，3 站 × 2 冷却类型）。〔来源: model.html L553/L895/L978；置信度: confirmed（这是建模算例，非规划目标）〕
 - Hybrid Chiller / Thermal 评估覆盖 **6 个气候站点**（Dubai / Chiang Mai / Texas / Kemi / Astana，Astana 已移出 TICA 考核）。〔来源: Hybrid Chiller Requirement V5 §1 / 附录 A；置信度: confirmed（设计气候包络，非签约站点）〕
 - 在跑项目（`Projects/`）含 Simple_Mining、RiCloud、Orb2（归档）等，单项目可含多站点（Simple_Mining RFI：「Several sites from 5–200 MW」）。〔来源: Projects/Simple_Mining/RFI.md L26；置信度: confirmed〕
 
@@ -47,7 +47,7 @@ KB 内无「未来站点数目标」这一业务规划数字。可见线索（�
 
 **答案（estimated）：典型 1–4 pod，最大无硬性上限（横向并联扩展）。**
 
-推算依据（MDC 最小节点规格表，`KB/PRODUCTS_MDC.md` §4）：
+推算依据（MDC 最小节点规格表，`KB/_COMMON/PRODUCTS_MDC.md` §4）：
 
 | 规模等级 | IT 容量 | 典型 pod 配置 |
 |---|---|---|
@@ -186,7 +186,7 @@ KB 内无「未来站点数目标」这一业务规划数字。可见线索（�
 
 **答案（estimated）：** 财务模型出现「**100Gbps committed**」承诺带宽线索，正式值与可靠性指标 TBD。
 
-- `KB/FOG D Series/DESIGN/model.html` L761：「100Gbps committed」承诺带宽（按月计入 OpEx）。〔来源: model.html；置信度: estimated——为财务建模参数，非网络设计规格〕
+- `KB/LIQUID/L1240C45/DESIGN/model.html` L761：「100Gbps committed」承诺带宽（按月计入 OpEx）。〔来源: model.html；置信度: estimated——为财务建模参数，非网络设计规格〕
 - 网络出口由集成商「引澜」结构化布线提供，支持 10/25/100/400G 升级，IPv4/IPv6 双栈，预留 IB 升级。〔来源: PRODUCTS_NETWORK.md §2/§4；置信度: confirmed（能力，非具体出口值）〕
 - 上云通道可靠性（SLA、双路由、冗余）：**KB 无记录 → TBD**。
 

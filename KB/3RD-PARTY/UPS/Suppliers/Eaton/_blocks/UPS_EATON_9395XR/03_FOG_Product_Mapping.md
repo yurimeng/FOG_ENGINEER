@@ -22,4 +22,4 @@ source_anchors:
 | **AC45** | 内置（专用电力舱）| 内置（专用电力舱）| 需要 UL 合规 |
 | **DC45** | 内置 | 内置 | 1240kW 大功率，UL 合规 |
 
-参考：[[PUBLIC/Products/AC40|AC40]] | [[PUBLIC/Products/AC45|AC45]] | [[PUBLIC/Tech_Spec/DC45_Tech_Spec_EN|DC45]]
+参考：[[I400C40|I400C40]] | [[I400C45|I400C45]] | [[L1240C45_Tech_Spec_EN|L1240C45]]

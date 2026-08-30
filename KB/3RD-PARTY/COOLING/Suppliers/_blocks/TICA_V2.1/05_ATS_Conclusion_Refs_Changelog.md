@@ -56,7 +56,7 @@ source_anchors: []
 - **本版主源**：`[[TICA技术澄清应答汇总V1]]`（厂家应答 xlsx · 2026-06-11 收到 · 已存本目录）
 - 厂家配置主源：`[[TICA风冷磁浮冷水机组技术参数表&配置表]]`（xlsx · 2026-06-06）
 - 技术规格基线：`[[Hybrid Chiller Requirement V5]]` Checkpoint（2026-06-06）
-- 治理基线：`[[../../FOG D Series/DESIGN/DC45 Hydronic & Thermal Design Criteria|Rev.C]]` §9.2
+- 治理基线：`[[../../LIQUID/L1240C45/DESIGN/L1240C45 Hydronic & Thermal Design Criteria|Rev.C]]` §9.2
 - 上游 CDU：`[[CDU_Requirement V5]]`
 - 第一轮澄清邮件：`[[TICA_Clarification_Email_Drafts]]`
 - 3rd Party 清单：`KB/3RD-PARTY/3rd Party List.md`（当前不含 TICA）

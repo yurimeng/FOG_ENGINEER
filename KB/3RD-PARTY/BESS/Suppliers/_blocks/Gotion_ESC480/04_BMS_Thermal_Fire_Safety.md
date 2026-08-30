@@ -1,20 +1,20 @@
 ---
-title: "04_BMS_Thermal_Fire_Safety — §5 §6 §7 §8"
-parent: "[[../../Gotion ESC480-125P261-UL]]"
+title: 04_BMS_Thermal_Fire_Safety — §5 §6 §7 §8
+parent: "[[Gotion ESC480-125P261-UL]]"
 order: 4
 tags:
   - "#workspace/engineer"
   - "#type/bess-prd"
   - "#product/BESS"
   - "#power"
-  - #MDC
+  - 
 created: 2026-06-18
-source_file: "KB/3RD-PARTY/BESS/Suppliers/Gotion ESC480-125P261-UL.md"
+source_file: KB/3RD-PARTY/BESS/Suppliers/Gotion ESC480-125P261-UL.md
 source_anchors:
-  - "§5"
-  - "§6"
-  - "§7"
-  - "§8"
+  - §5
+  - §6
+  - §7
+  - §8
 ---
 
 # §5. BMS 系统参数

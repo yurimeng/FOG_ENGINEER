@@ -16,12 +16,21 @@ source_anchors: []
 
 Only products listed in `KB/3RD-PARTY/COOLING/` may be selected.
 
-| Product | Supplier | Key Specs | Reference |
-|---------|---------|-----------|----------|
-| DRYCOOL_with_DX | 泰铂 | 600kW class; IP55; C3防腐; 涡旋压缩机 | [[PRD-泰铂-Chiller\|KB/3RD-PARTY/COOLING/DRYCOOL_with_DX]] |
-| Hybrid Cooler 600kW | 三河同飞 | 600kW; 螺杆压缩机; -15°C~45°C; IP54 | [[PRD-同飞-Chiller-600KW\|KB/3RD-PARTY/COOLING/Hybrid Cooler 600kW - 同飞]] |
+**权威清单是 [[3rd Party List]] → [[02_Cooling_Zone]]。** 下表是速查视图，状态以该清单为准。
 
-> 备注：上述两条 PRD 链接的源文件当前不在 `KB/3RD-PARTY/COOLING/`（已迁移或拆分）。引用前请用 `KB/3RD-PARTY/3rd Party List.md` 重新定位最新 supplier 目录。
+| Product | Supplier | 适配 SKU | Key Specs | 状态 | Reference |
+|---------|---------|---------|-----------|------|----------|
+| Hybrid Chiller TAMFV430.3ALF5 | TICA(天加) | L1240C45 | ≥1600 kW; 磁悬浮; FWS 22→32 °C | ✅ ATS Full Pass 2026-06-11 | [[TICA_TAMFV430.3ALF5_Hybrid_Chiller_Configuration_Review_V2.3]] |
+| CDU SCR 14103 W | STULZ | **L1800C45** | 1200 kW; FWS 36/46 °C; TCS 40/50 °C; 板换×2 + 泵×3; Tri-Clamp 4" | ✅ ATS approved 2026-08-30 | [[PRD-STULZ-SCR14103W]] |
+| CRAH CRS 560 CW | STULZ | **L1800C45** | 57.3 kW 全显冷; 冷冻水 10/16 °C; 11,200 m³/h; 400V/50Hz | ✅ ATS approved 2026-08-30 | [[PRD-STULZ-CRS560CW]] |
+| CRAH CW330 | STULZ | ⏳ 待定（疑 L450C20） | ⏳ 全部参数未到 | ⏳ **#unconfirmed** —— 厂家预期 2026-08-31 提供 | [[PRD-STULZ-CW330]] |
+| RDHX CoolLoop DCD35 | VERTIV | L1240C45 | 被动式; 35 kW 标称; DN25; ε ≈ 0.55 | ⏳ 正在 review | [[PRD-Vertiv-RDHx]] |
+| CeilAir OHS-084-DG-FC | STULZ | L1240C45 | 顶置自含 DX + FC; PG25 冷凝 | ⏳ 正在 review（**CE / 50 Hz 缺席，欧洲/亚太 50 Hz 客户闭环前不得报价**） | [[PRD-STULZ-CeilAir]] |
+| DRYCOOL_with_DX | ~~泰铂~~ | — | 600kW class; IP55; C3防腐; 涡旋压缩机 | ⛔ 已移出 2026-06-16（未走正式 ATS 评审） | [[PRD-泰铂-Chiller\|历史归档]] |
+| Hybrid Cooler 600kW | ~~三河同飞~~ | — | 600kW; 螺杆压缩机; -15°C~45°C; IP54 | ⛔ 已移出 2026-06-16（同上） | [[PRD-同飞-Chiller-600KW\|历史归档]] |
+
+> ⚠️ **⛔ 已移出与 ⏳ #unconfirmed 的产品不得进入 BOM 或方案。** 移出项重新引入须走正式 ATS 评审 + Risk/Compliance 评估。
+> ⚠️ **L1800C45 / L450C20 尚无专属 CRAH / CDU Requirement**，选型目前只有 PRD、无需求书基线。规格取值见 [[PRODUCT_SPEC_BASELINE]] §1.2。
 
 **关键部件选型原则 / Component Selection Principles:**
 
@@ -58,4 +67,6 @@ This file is the authoritative source for:
 
 ### Step 2 — Product Verification
 
-Check `KB/3RD-PARTY/COOLING/` subfolder for product specs. Vendor 范围以 [[KB/3RD-PARTY/3rd Party List]] 为准。
+Check `KB/3RD-PARTY/COOLING/Suppliers/` for product specs. Vendor 范围以 [[3rd Party List]] 为准。
+
+> **Step 3 — 置信度核查（2026-08-30 新增）：** 引用任何参数前，确认它在源文档中不是 ⏳ `#unconfirmed` 或 ⛔ `conflict`。规则见 [[UNCONFIRMED_Convention]]；产品侧参数以 [[PRODUCT_SPEC_BASELINE]] 为准。

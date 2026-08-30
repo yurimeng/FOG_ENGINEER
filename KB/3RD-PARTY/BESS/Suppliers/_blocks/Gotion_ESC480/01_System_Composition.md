@@ -1,18 +1,18 @@
 ---
-title: "01_System_Composition — §1 §2"
-parent: "[[../../Gotion ESC480-125P261-UL]]"
+title: 01_System_Composition — §1 §2
+parent: "[[Gotion ESC480-125P261-UL]]"
 order: 1
 tags:
   - "#workspace/engineer"
   - "#type/bess-prd"
   - "#product/BESS"
   - "#power"
-  - #MDC
+  - 
 created: 2026-06-18
-source_file: "KB/3RD-PARTY/BESS/Suppliers/Gotion ESC480-125P261-UL.md"
+source_file: KB/3RD-PARTY/BESS/Suppliers/Gotion ESC480-125P261-UL.md
 source_anchors:
-  - "§1"
-  - "§2"
+  - §1
+  - §2
 ---
 
 # ESC480-125P261-UL 储能一体机技术参数 ^prd-gotion-specs

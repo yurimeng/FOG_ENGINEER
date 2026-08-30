@@ -55,31 +55,31 @@ tags:
 
 ## 1. §P-1 IT 负载与整体电力负荷
 
-![[_blocks/POWER_SYSTEMS_Guideline/01_P1_IT_vs_Total]]
+![[01_P1_IT_vs_Total]]
 
 ## 2. §P-2 产品对照表 + §P-3 关键规则
 
-![[_blocks/POWER_SYSTEMS_Guideline/02_P2_P3_Product_Rules]]
+![[02_P2_P3_Product_Rules]]
 
 ## 3. §P-4 典型混淆场景 + §P-5 UPS 选型
 
-![[_blocks/POWER_SYSTEMS_Guideline/03_P4_P5_Confusion_UPS]]
+![[03_P4_P5_Confusion_UPS]]
 
 ## 4. §P-6 UPS 电池技术 + §P-7 柴油发电机选型
 
-![[_blocks/POWER_SYSTEMS_Guideline/04_P6_P7_Battery_DG]]
+![[04_P6_P7_Battery_DG]]
 
 ## 5. §P-8 BESS 选型与 DG 对比（上）
 
-![[_blocks/POWER_SYSTEMS_Guideline/05_P8_BESS_DG_Comparison]]
+![[05_P8_BESS_DG_Comparison]]
 
 ## 6. §P-8 BESS 选型决策 + 系统级对比（下）
 
-![[_blocks/POWER_SYSTEMS_Guideline/06_P8_BESS_Selection_Decision]]
+![[06_P8_BESS_Selection_Decision]]
 
 ## 7. §P-9 冗余结构与拓扑
 
-![[_blocks/POWER_SYSTEMS_Guideline/07_P9_Redundancy_Topology]]
+![[07_P9_Redundancy_Topology]]
 
 ---
 

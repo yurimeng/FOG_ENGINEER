@@ -1,0 +1,1612 @@
+{
+  "AGENTS.md": {
+    "mtime": 1780680119.429267,
+    "ast_hash": "1fc3ac39a3c1aa2b489af1efd4bff424",
+    "semantic_hash": "1fc3ac39a3c1aa2b489af1efd4bff424"
+  },
+  "AGENTS/AM.md": {
+    "mtime": 1785147485.6890674,
+    "ast_hash": "97b34d3663fcc24f70c2d49e96cdcc49",
+    "semantic_hash": ""
+  },
+  "AGENTS/ATS.md": {
+    "mtime": 1785147485.6905768,
+    "ast_hash": "0ea86f33a5cdc3bc83fb3f747cf34172",
+    "semantic_hash": ""
+  },
+  "AGENTS/Compliance Officer.md": {
+    "mtime": 1780680119.473509,
+    "ast_hash": "15509e824d31e44fb441e117e1c56966",
+    "semantic_hash": "15509e824d31e44fb441e117e1c56966"
+  },
+  "AGENTS/Cooling Engineer.md": {
+    "mtime": 1780680119.4728434,
+    "ast_hash": "c76fe3adb8f9f4b701bc865bb82b80ff",
+    "semantic_hash": "c76fe3adb8f9f4b701bc865bb82b80ff"
+  },
+  "AGENTS/Cost Architect.md": {
+    "mtime": 1780680119.471823,
+    "ast_hash": "f934bb8eb974bbaebf1f4ffb77894b2c",
+    "semantic_hash": "f934bb8eb974bbaebf1f4ffb77894b2c"
+  },
+  "AGENTS/Layout Planner.md": {
+    "mtime": 1780680119.4713743,
+    "ast_hash": "27efeca937c260e08b40fbbd9599afeb",
+    "semantic_hash": "27efeca937c260e08b40fbbd9599afeb"
+  },
+  "AGENTS/Market Researcher.md": {
+    "mtime": 1780680119.4730308,
+    "ast_hash": "cbf31e0ef3879d53ac3225975a376530",
+    "semantic_hash": "cbf31e0ef3879d53ac3225975a376530"
+  },
+  "AGENTS/Power Engineer.md": {
+    "mtime": 1780680119.4721427,
+    "ast_hash": "8ac765f9f0bc95886b4c9a8733d251f7",
+    "semantic_hash": "8ac765f9f0bc95886b4c9a8733d251f7"
+  },
+  "AGENTS/Risk Auditor.md": {
+    "mtime": 1780680119.471091,
+    "ast_hash": "469c58fc2f3eda8f9915b0899b98ced5",
+    "semantic_hash": "469c58fc2f3eda8f9915b0899b98ced5"
+  },
+  "AGENTS/WORKFLOW.md": {
+    "mtime": 1780680119.471621,
+    "ast_hash": "751e28af46e0e4af61c3ae2eb038f977",
+    "semantic_hash": "751e28af46e0e4af61c3ae2eb038f977"
+  },
+  "AGENTS/_index.md": {
+    "mtime": 1785147485.691255,
+    "ast_hash": "3459b5361b899c6b9632467b75c9719a",
+    "semantic_hash": ""
+  },
+  "CLAUDE.md": {
+    "mtime": 1780707224.9609892,
+    "ast_hash": "c952bcb509a59b45bd09fc47ec93686c",
+    "semantic_hash": "c952bcb509a59b45bd09fc47ec93686c"
+  },
+  "Document Tree.md": {
+    "mtime": 1781750383.913871,
+    "ast_hash": "6e601d40d8dac2f072e9fef1685b6004",
+    "semantic_hash": "6e601d40d8dac2f072e9fef1685b6004"
+  },
+  "EXT-001-T2T3-deliverables/t2-model-configs.yaml": {
+    "mtime": 1781181597.6907098,
+    "ast_hash": "a36b638790148b878a9bab200a305594",
+    "semantic_hash": "a36b638790148b878a9bab200a305594"
+  },
+  "EXT-001-T2T3-deliverables/t2t3-open-questions.md": {
+    "mtime": 1781704776.3819273,
+    "ast_hash": "fd3be415be362d8562133d18adf6b39d",
+    "semantic_hash": "fd3be415be362d8562133d18adf6b39d"
+  },
+  "EXT-001-T2T3-deliverables/t3-scale-envelope.md": {
+    "mtime": 1781704776.3821814,
+    "ast_hash": "1c626283284ab9db85c01da466947a8e",
+    "semantic_hash": "1c626283284ab9db85c01da466947a8e"
+  },
+  "HEARTBEAT.md": {
+    "mtime": 1780680119.4262125,
+    "ast_hash": "7a77ae130572f34b7229aba7ceb4d188",
+    "semantic_hash": "7a77ae130572f34b7229aba7ceb4d188"
+  },
+  "IDENTITY.md": {
+    "mtime": 1780680119.42598,
+    "ast_hash": "d08d94ec448956179ea332f2adc60f79",
+    "semantic_hash": "d08d94ec448956179ea332f2adc60f79"
+  },
+  "KB/3RD-PARTY/3rd Party List.md": {
+    "mtime": 1785147485.692838,
+    "ast_hash": "d951621dfa1aa8c3a7e94303abe945bd",
+    "semantic_hash": ""
+  },
+  "KB/3RD-PARTY/BESS/Suppliers/Gotion ESC480-125P261-UL.md": {
+    "mtime": 1785147485.694702,
+    "ast_hash": "e277d149f37842a1580f9934e8479416",
+    "semantic_hash": ""
+  },
+  "KB/3RD-PARTY/BESS/Suppliers/TESLA MEGAPACK 2 XL.md": {
+    "mtime": 1780680119.4461672,
+    "ast_hash": "657b750f8619cc207f9ab213112e09f6",
+    "semantic_hash": "657b750f8619cc207f9ab213112e09f6"
+  },
+  "KB/3RD-PARTY/BESS/Suppliers/_blocks/Gotion_ESC480/01_System_Composition.md": {
+    "mtime": 1785147485.698737,
+    "ast_hash": "c44724db8e8d36d6b4c288be7e7f9ba7",
+    "semantic_hash": ""
+  },
+  "KB/3RD-PARTY/BESS/Suppliers/_blocks/Gotion_ESC480/02_Battery_Pack_Cluster.md": {
+    "mtime": 1785147485.7107275,
+    "ast_hash": "9fad119dbfd53a6147d87a267f53de1d",
+    "semantic_hash": ""
+  },
+  "KB/3RD-PARTY/BESS/Suppliers/_blocks/Gotion_ESC480/03_PCS_Grid_Off_Grid.md": {
+    "mtime": 1785147485.71259,
+    "ast_hash": "5af7314e0a54dd350c3ee7ff1ddc0a1c",
+    "semantic_hash": ""
+  },
+  "KB/3RD-PARTY/BESS/Suppliers/_blocks/Gotion_ESC480/04_BMS_Thermal_Fire_Safety.md": {
+    "mtime": 1785147485.713866,
+    "ast_hash": "594dc73d4b13b129eeab281616b4d37c",
+    "semantic_hash": ""
+  },
+  "KB/3RD-PARTY/BESS/Suppliers/_blocks/Gotion_ESC480/05_Environment_Changelog.md": {
+    "mtime": 1785147485.7156353,
+    "ast_hash": "fd9404d4c49d027fa71801de091fb3e3",
+    "semantic_hash": ""
+  },
+  "KB/3RD-PARTY/COOLING/Suppliers/CHANGELOG.md": {
+    "mtime": 1781521514.465714,
+    "ast_hash": "daa7d04ee5314211dd695620e85a549e",
+    "semantic_hash": "daa7d04ee5314211dd695620e85a549e"
+  },
+  "KB/3RD-PARTY/COOLING/Suppliers/PRD-STULZ-CeilAir.md": {
+    "mtime": 1785147485.7293813,
+    "ast_hash": "657257b4413ee01cfe72daf837dddb48",
+    "semantic_hash": ""
+  },
+  "KB/3RD-PARTY/COOLING/Suppliers/PRD-Vertiv-RDHx.md": {
+    "mtime": 1785147485.730119,
+    "ast_hash": "f54a7e4cd13bcede24dd6703e3e1603b",
+    "semantic_hash": ""
+  },
+  "KB/3RD-PARTY/COOLING/Suppliers/PRD-\u540c\u98de-Chiller-600KW.md": {
+    "mtime": 1785147485.7308338,
+    "ast_hash": "07c34ffb4f519d730db848e1f3cc83c9",
+    "semantic_hash": ""
+  },
+  "KB/3RD-PARTY/COOLING/Suppliers/PRD-\u6cf0\u94c2-Chiller.md": {
+    "mtime": 1785147485.7318046,
+    "ast_hash": "21386922e391b7c3d43ba3074c690a31",
+    "semantic_hash": ""
+  },
+  "KB/3RD-PARTY/COOLING/Suppliers/_PRD_Template.md": {
+    "mtime": 1785147485.7357442,
+    "ast_hash": "b05afeefba58d31c7ec38f4be796c85e",
+    "semantic_hash": ""
+  },
+  "KB/3RD-PARTY/COOLING/Suppliers/_blocks/PRD_STULZ_CeilAir/01_\u54c1\u724c\u5b9a\u4f4d.md": {
+    "mtime": 1781747390.7772639,
+    "ast_hash": "617961dfc566ebf314b065c5e1376d6b",
+    "semantic_hash": "617961dfc566ebf314b065c5e1376d6b"
+  },
+  "KB/3RD-PARTY/COOLING/Suppliers/_blocks/PRD_STULZ_CeilAir/02_\u8ba4\u8bc1\u8b66\u793a.md": {
+    "mtime": 1781746938.2529314,
+    "ast_hash": "84fc22354c455fceb6217c9d3470a163",
+    "semantic_hash": "84fc22354c455fceb6217c9d3470a163"
+  },
+  "KB/3RD-PARTY/COOLING/Suppliers/_blocks/PRD_STULZ_CeilAir/03_\u53c2\u6570\u8868.md": {
+    "mtime": 1781747390.77756,
+    "ast_hash": "ca6996c4d20ee62ee72deb8eac12d739",
+    "semantic_hash": "ca6996c4d20ee62ee72deb8eac12d739"
+  },
+  "KB/3RD-PARTY/COOLING/Suppliers/_blocks/PRD_STULZ_CeilAir/04_\u9009\u578b\u4e0e\u9a8c\u8bc1.md": {
+    "mtime": 1781746938.2530658,
+    "ast_hash": "6f41dbd9a700803df9e6d8624e5c979c",
+    "semantic_hash": "6f41dbd9a700803df9e6d8624e5c979c"
+  },
+  "KB/3RD-PARTY/COOLING/Suppliers/_blocks/PRD_STULZ_CeilAir/05_\u6f84\u6e05\u9879.md": {
+    "mtime": 1781746938.253149,
+    "ast_hash": "b81af2442b20489ade3d33eae1ef65ac",
+    "semantic_hash": "b81af2442b20489ade3d33eae1ef65ac"
+  },
+  "KB/3RD-PARTY/COOLING/Suppliers/_blocks/PRD_STULZ_CeilAir/06_\u5f15\u7528.md": {
+    "mtime": 1781746938.2532196,
+    "ast_hash": "f9f738dcf5366a15a6c4981b40a22cea",
+    "semantic_hash": "f9f738dcf5366a15a6c4981b40a22cea"
+  },
+  "KB/3RD-PARTY/COOLING/Suppliers/_blocks/PRD_Vertiv_RDHx/01_Positioning_Open_Issues.md": {
+    "mtime": 1785147485.736596,
+    "ast_hash": "9cb298fb55ce7a4b274501ecc1f68ffa",
+    "semantic_hash": ""
+  },
+  "KB/3RD-PARTY/COOLING/Suppliers/_blocks/PRD_Vertiv_RDHx/02_DCD_Params_Table.md": {
+    "mtime": 1785147485.7376375,
+    "ast_hash": "1149481347c58372be285ef921433542",
+    "semantic_hash": ""
+  },
+  "KB/3RD-PARTY/COOLING/Suppliers/_blocks/PRD_Vertiv_RDHx/03_Selection_Changelog.md": {
+    "mtime": 1785147485.7384222,
+    "ast_hash": "2a8c47134b06023797c9eb59362c1bd3",
+    "semantic_hash": ""
+  },
+  "KB/3RD-PARTY/COOLING/Suppliers/_blocks/PRD_\u540c\u98de_Chiller_600KW/01_\u54c1\u724c\u5b9a\u4f4d.md": {
+    "mtime": 1785147485.7389476,
+    "ast_hash": "1806d35bdfcf03458909b2ee41626a3d",
+    "semantic_hash": ""
+  },
+  "KB/3RD-PARTY/COOLING/Suppliers/_blocks/PRD_\u540c\u98de_Chiller_600KW/02_\u6280\u672f\u53c2\u6570\u8868.md": {
+    "mtime": 1781711097.900927,
+    "ast_hash": "99419883cac4e10133b815ea351f890a",
+    "semantic_hash": "99419883cac4e10133b815ea351f890a"
+  },
+  "KB/3RD-PARTY/COOLING/Suppliers/_blocks/PRD_\u540c\u98de_Chiller_600KW/03_\u6f84\u6e05\u9879\u4e0e\u5907\u6ce8.md": {
+    "mtime": 1781711112.3428042,
+    "ast_hash": "d68e390642b026cd8df95a9629afb0d3",
+    "semantic_hash": "d68e390642b026cd8df95a9629afb0d3"
+  },
+  "KB/3RD-PARTY/COOLING/Suppliers/_blocks/PRD_\u540c\u98de_Chiller_600KW/04_\u5f15\u7528\u4e0e\u53c2\u8003.md": {
+    "mtime": 1785147485.7395406,
+    "ast_hash": "de1e764d6f95895bcbeeefdf21eb05ed",
+    "semantic_hash": ""
+  },
+  "KB/3RD-PARTY/COOLING/Suppliers/_blocks/PRD_\u6cf0\u94c2_Chiller/01_\u54c1\u724c\u5b9a\u4f4d.md": {
+    "mtime": 1785147485.7399814,
+    "ast_hash": "1fd725dfbcc07a35625d124da3cd4077",
+    "semantic_hash": ""
+  },
+  "KB/3RD-PARTY/COOLING/Suppliers/_blocks/PRD_\u6cf0\u94c2_Chiller/02_\u6280\u672f\u53c2\u6570\u4e0e\u8fd0\u884c\u6a21\u5f0f.md": {
+    "mtime": 1781711131.6492224,
+    "ast_hash": "e9be161427b6a27439f1edd36d90f276",
+    "semantic_hash": "e9be161427b6a27439f1edd36d90f276"
+  },
+  "KB/3RD-PARTY/COOLING/Suppliers/_blocks/PRD_\u6cf0\u94c2_Chiller/03_\u5197\u4f59\u4e0eIT_Zone\u5339\u914d.md": {
+    "mtime": 1785147485.7405992,
+    "ast_hash": "5511cc340d774ac48ba7eab50650ca8e",
+    "semantic_hash": ""
+  },
+  "KB/3RD-PARTY/COOLING/Suppliers/_blocks/PRD_\u6cf0\u94c2_Chiller/04_\u5f15\u7528\u4e0e\u5907\u6ce8.md": {
+    "mtime": 1785147485.7411573,
+    "ast_hash": "f45a9176e0b2fb3060dac2121e13d5e6",
+    "semantic_hash": ""
+  },
+  "KB/3RD-PARTY/COOLING/Suppliers/_blocks/TICA_V1_Archive/01_Snapshot_v1.4_Summary.md": {
+    "mtime": 1781744245.5141652,
+    "ast_hash": "04801d1a13286d47d27d5fade0b78a55",
+    "semantic_hash": "04801d1a13286d47d27d5fade0b78a55"
+  },
+  "KB/3RD-PARTY/COOLING/Suppliers/_blocks/TICA_V1_Archive/03_CrossCheck_v1.2_Closure_v1.3.md": {
+    "mtime": 1781744282.7604427,
+    "ast_hash": "00b4c40323427fe5810e207e1b237cbc",
+    "semantic_hash": "00b4c40323427fe5810e207e1b237cbc"
+  },
+  "KB/3RD-PARTY/COOLING/Suppliers/_blocks/TICA_V1_Archive/04_V5_Mapping_QList.md": {
+    "mtime": 1781744336.6709528,
+    "ast_hash": "77d547787b2629b46bf8e9ffeba42697",
+    "semantic_hash": "77d547787b2629b46bf8e9ffeba42697"
+  },
+  "KB/3RD-PARTY/COOLING/Suppliers/_blocks/TICA_V1_Archive/05_ATS_Conclusion_Actions_Refs.md": {
+    "mtime": 1781744366.7667778,
+    "ast_hash": "c6e1e271f642843683e5de9e5b428a21",
+    "semantic_hash": "c6e1e271f642843683e5de9e5b428a21"
+  },
+  "KB/3RD-PARTY/COOLING/Suppliers/_blocks/TICA_V2.1/01_Snapshot_Kemi_Scope.md": {
+    "mtime": 1781744488.8915484,
+    "ast_hash": "44b608bc05310a711ebd5121152c4b7e",
+    "semantic_hash": "44b608bc05310a711ebd5121152c4b7e"
+  },
+  "KB/3RD-PARTY/COOLING/Suppliers/_blocks/TICA_V2.1/02_VendorReply_Check_P0_P1.md": {
+    "mtime": 1781744507.2344127,
+    "ast_hash": "65d276b5d075bfaa81222643314ed7ae",
+    "semantic_hash": "65d276b5d075bfaa81222643314ed7ae"
+  },
+  "KB/3RD-PARTY/COOLING/Suppliers/_blocks/TICA_V2.1/03_Completion_Items_Scope_Impact.md": {
+    "mtime": 1781744517.9801338,
+    "ast_hash": "b29c5ac9a6820e7a2643a80831eaba34",
+    "semantic_hash": "b29c5ac9a6820e7a2643a80831eaba34"
+  },
+  "KB/3RD-PARTY/COOLING/Suppliers/_blocks/TICA_V2.1/04_Clarifications_Recommendations.md": {
+    "mtime": 1781744536.294436,
+    "ast_hash": "ac1761968dab4077099b193a88583c26",
+    "semantic_hash": "ac1761968dab4077099b193a88583c26"
+  },
+  "KB/3RD-PARTY/COOLING/Suppliers/_blocks/TICA_V2.1/05_ATS_Conclusion_Refs_Changelog.md": {
+    "mtime": 1781744552.6161723,
+    "ast_hash": "52099f88eece1deef5963814cd6b334c",
+    "semantic_hash": "52099f88eece1deef5963814cd6b334c"
+  },
+  "KB/3RD-PARTY/COOLING/Suppliers/_blocks/TICA_V2.2/01_Snapshot_FullPass_Kemi.md": {
+    "mtime": 1781744563.8241293,
+    "ast_hash": "4f22d5a8e6b90fde0413dcd06c9d8d00",
+    "semantic_hash": "4f22d5a8e6b90fde0413dcd06c9d8d00"
+  },
+  "KB/3RD-PARTY/COOLING/Suppliers/_blocks/TICA_V2.2/02_VendorReply_Check.md": {
+    "mtime": 1781744588.7920218,
+    "ast_hash": "482dc26abae996cc1be195c4b50e9496",
+    "semantic_hash": "482dc26abae996cc1be195c4b50e9496"
+  },
+  "KB/3RD-PARTY/COOLING/Suppliers/_blocks/TICA_V2.2/03_Clarifications_P1Followup.md": {
+    "mtime": 1781744611.6342554,
+    "ast_hash": "022927dc034fa42a3ec2c36c7b834541",
+    "semantic_hash": "022927dc034fa42a3ec2c36c7b834541"
+  },
+  "KB/3RD-PARTY/COOLING/Suppliers/_blocks/TICA_V2.2/04_ATS_FullPass_Refs_Changelog.md": {
+    "mtime": 1781744633.889815,
+    "ast_hash": "379f064c2e2e3600c30f25e05fe924c4",
+    "semantic_hash": "379f064c2e2e3600c30f25e05fe924c4"
+  },
+  "KB/3RD-PARTY/COOLING/Suppliers/_blocks/TICA_V2_Checkpoint/01_Snapshot_Snapshot.md": {
+    "mtime": 1781744374.2912784,
+    "ast_hash": "03bf91190eeac76830cbf22d36ea0959",
+    "semantic_hash": "03bf91190eeac76830cbf22d36ea0959"
+  },
+  "KB/3RD-PARTY/COOLING/Suppliers/_blocks/TICA_V2_Checkpoint/02_Config_CrossRef_Tables.md": {
+    "mtime": 1781744409.9932578,
+    "ast_hash": "3b4e277a74de3fed792b5ff9240396e5",
+    "semantic_hash": "3b4e277a74de3fed792b5ff9240396e5"
+  },
+  "KB/3RD-PARTY/COOLING/Suppliers/_blocks/TICA_V2_Checkpoint/03_Q_Mapping_TotalTable.md": {
+    "mtime": 1781744436.996194,
+    "ast_hash": "01143ddae2b7872d2d8d2b66183b76bf",
+    "semantic_hash": "01143ddae2b7872d2d8d2b66183b76bf"
+  },
+  "KB/3RD-PARTY/COOLING/Suppliers/_blocks/TICA_V2_Checkpoint/04_Clarifications_Actions.md": {
+    "mtime": 1781744457.6696079,
+    "ast_hash": "95044030cccf4d8ac736b7eb99e9e783",
+    "semantic_hash": "95044030cccf4d8ac736b7eb99e9e783"
+  },
+  "KB/3RD-PARTY/COOLING/Suppliers/_blocks/TICA_V2_Checkpoint/05_ATS_Conclusion_Flow_Refs.md": {
+    "mtime": 1781744479.4719684,
+    "ast_hash": "2f33d2cef091995b780dd132a775b921",
+    "semantic_hash": "2f33d2cef091995b780dd132a775b921"
+  },
+  "KB/3RD-PARTY/UPS/Suppliers/Eaton/_blocks/UPS_EATON_9395XR/01_Overview_Module_Design.md": {
+    "mtime": 1781744386.4143612,
+    "ast_hash": "80d87207ad336b91d705386ae0cf37a7",
+    "semantic_hash": "80d87207ad336b91d705386ae0cf37a7"
+  },
+  "KB/3RD-PARTY/UPS/Suppliers/Eaton/_blocks/UPS_EATON_9395XR/02_Interfaces_Battery.md": {
+    "mtime": 1781744390.2904649,
+    "ast_hash": "26c3ee243de5ee6a78c93c08c07838c5",
+    "semantic_hash": "26c3ee243de5ee6a78c93c08c07838c5"
+  },
+  "KB/3RD-PARTY/UPS/Suppliers/Eaton/_blocks/UPS_EATON_9395XR/03_FOG_Product_Mapping.md": {
+    "mtime": 1785147485.7453084,
+    "ast_hash": "7f5a236ff24bff1dce2312c3db41505e",
+    "semantic_hash": ""
+  },
+  "KB/3RD-PARTY/UPS/Suppliers/Eaton/_blocks/UPS_EATON_9395XR/04_Reference_Documents.md": {
+    "mtime": 1781744395.3896086,
+    "ast_hash": "26942725592bd63def2fb0f6911abe11",
+    "semantic_hash": "26942725592bd63def2fb0f6911abe11"
+  },
+  "KB/3RD-PARTY/_blocks/3rd_Party_List/01_Overview_Agent_Reference.md": {
+    "mtime": 1781744271.1227458,
+    "ast_hash": "518dcb6fbfcd51af9be3e1e0907f57c8",
+    "semantic_hash": "518dcb6fbfcd51af9be3e1e0907f57c8"
+  },
+  "KB/3RD-PARTY/_blocks/3rd_Party_List/02_Cooling_Zone.md": {
+    "mtime": 1785147485.7463923,
+    "ast_hash": "626ac68cdc618321a3b3dcf71c4e656f",
+    "semantic_hash": ""
+  },
+  "KB/3RD-PARTY/_blocks/3rd_Party_List/03_Power_Zone.md": {
+    "mtime": 1785147485.7471168,
+    "ast_hash": "0f0e6225c0b347df6554554d442d062f",
+    "semantic_hash": ""
+  },
+  "KB/3RD-PARTY/_blocks/3rd_Party_List/04_Manufacturing_Prohibitions_Network.md": {
+    "mtime": 1781744298.973741,
+    "ast_hash": "560be9e2a059900ea69bbb5e2a94f3eb",
+    "semantic_hash": "560be9e2a059900ea69bbb5e2a94f3eb"
+  },
+  "KB/3RD-PARTY/_blocks/3rd_Party_List/05_Changelog.md": {
+    "mtime": 1785147485.747712,
+    "ast_hash": "7e42cf555aa2447259cf9585496fb168",
+    "semantic_hash": ""
+  },
+  "KB/FOG D Series/PRODUCTS/DC45 Tech Spec CN.md": {
+    "mtime": 1785147485.7586634,
+    "ast_hash": "dd78fdd3f0bbe81a8417617f5f7f2927",
+    "semantic_hash": ""
+  },
+  "KB/FOG D Series/PRODUCTS/DC45 Tech Spec EN.md": {
+    "mtime": 1785147485.7594547,
+    "ast_hash": "c4635d26b407a568fc43158f931c397e",
+    "semantic_hash": ""
+  },
+  "KB/FOG D Series/PRODUCTS/MDC_Product_Quick_Ref.md": {
+    "mtime": 1785147485.7609277,
+    "ast_hash": "37c0cd9ce3aab24b88b745989a9bd08b",
+    "semantic_hash": ""
+  },
+  "KB/FOG D Series/PRODUCTS/_blocks/MDC_Engineering_Handbook_External/01_Industry_Problem.md": {
+    "mtime": 1785147485.7615354,
+    "ast_hash": "85d63ff2542217b74245918588164f1e",
+    "semantic_hash": ""
+  },
+  "KB/FOG D Series/PRODUCTS/_blocks/MDC_Engineering_Handbook_External/02_MDC_Philosophy.md": {
+    "mtime": 1785147485.7622035,
+    "ast_hash": "b019e3c2424bb1389208f4c76d0caed1",
+    "semantic_hash": ""
+  },
+  "KB/FOG D Series/PRODUCTS/_blocks/MDC_Engineering_Handbook_External/03_System_Design_Principles.md": {
+    "mtime": 1785147485.7627475,
+    "ast_hash": "8c05ac07cd18041da067fbfa8ed2c84e",
+    "semantic_hash": ""
+  },
+  "KB/FOG D Series/PRODUCTS/_blocks/MDC_Engineering_Handbook_External/04_Architecture.md": {
+    "mtime": 1781746938.253853,
+    "ast_hash": "ad8bbc8ff2a422dc2db439a5bb2fca7c",
+    "semantic_hash": "ad8bbc8ff2a422dc2db439a5bb2fca7c"
+  },
+  "KB/FOG D Series/PRODUCTS/_blocks/MDC_Engineering_Handbook_External/05_Deployment.md": {
+    "mtime": 1785147485.7634985,
+    "ast_hash": "30e1bc9b07b47fa07df67f4fd1451cd9",
+    "semantic_hash": ""
+  },
+  "KB/FOG D Series/PRODUCTS/_blocks/MDC_Engineering_Handbook_External/06_Engineering_Doctrine.md": {
+    "mtime": 1781746938.2541637,
+    "ast_hash": "498d75de9bc289898ef59ab9f4b8c7be",
+    "semantic_hash": "498d75de9bc289898ef59ab9f4b8c7be"
+  },
+  "KB/FOG D Series/PRODUCTS/_blocks/MDC_Engineering_Handbook_External/07_Architecture_Map.md": {
+    "mtime": 1781746938.2542539,
+    "ast_hash": "5043e73cdcda23cd0510555a0bb9974d",
+    "semantic_hash": "5043e73cdcda23cd0510555a0bb9974d"
+  },
+  "KB/FOG D Series/PRODUCTS/_blocks/MDC_Engineering_Handbook_External/08_Product_Definitions.md": {
+    "mtime": 1785147485.764581,
+    "ast_hash": "c1ba67a0a5f28652466d68772cf39acc",
+    "semantic_hash": ""
+  },
+  "KB/FOG D Series/_archive/DC45 Quick Tech Spec.md": {
+    "mtime": 1785147485.7915359,
+    "ast_hash": "b7d21215b12050b86a6a08633b0c3491",
+    "semantic_hash": ""
+  },
+  "KB/FOG D Series/_archive/PRODUCTS_DC45.md": {
+    "mtime": 1785147485.7975395,
+    "ast_hash": "ae8f743d29aa6209be04a793a53b82bd",
+    "semantic_hash": ""
+  },
+  "KB/FOG D Series/_archive/_blocks/DC45_TriBranch_2026-05-21/01_Executive_Summary.md": {
+    "mtime": 1781744655.4194133,
+    "ast_hash": "c33c4cdfcff8116b7d7f740d5c456504",
+    "semantic_hash": "c33c4cdfcff8116b7d7f740d5c456504"
+  },
+  "KB/FOG D Series/_archive/_blocks/DC45_TriBranch_2026-05-21/02_Design_Baseline_Boundaries.md": {
+    "mtime": 1781744675.0241556,
+    "ast_hash": "47f33ea2777937ac4eba5c95602e30c4",
+    "semantic_hash": "47f33ea2777937ac4eba5c95602e30c4"
+  },
+  "KB/FOG D Series/_archive/_blocks/DC45_TriBranch_2026-05-21/03_Air_HeatModel_RDHX_eNTU.md": {
+    "mtime": 1781744694.0030148,
+    "ast_hash": "182489219f45e295561ed7609ea17cfa",
+    "semantic_hash": "182489219f45e295561ed7609ea17cfa"
+  },
+  "KB/FOG D Series/_archive/_blocks/DC45_TriBranch_2026-05-21/04_AirCooled_RDHX_CeilAir_Ability.md": {
+    "mtime": 1781744719.7999852,
+    "ast_hash": "bca0f26b0b8d1ce466616546e016c52b",
+    "semantic_hash": "bca0f26b0b8d1ce466616546e016c52b"
+  },
+  "KB/FOG D Series/_archive/_blocks/DC45_TriBranch_2026-05-21/05_Hydraulics_TriBranch_Pump.md": {
+    "mtime": 1781744752.3399897,
+    "ast_hash": "d1803d0fa54bc5e6eca56c6cf0c0b555",
+    "semantic_hash": "d1803d0fa54bc5e6eca56c6cf0c0b555"
+  },
+  "KB/FOG D Series/_archive/_blocks/DC45_TriBranch_2026-05-21/06_Engineering_Conclusion_Open.md": {
+    "mtime": 1781744767.6370018,
+    "ast_hash": "a450c5fe82bb6cddfeb91c5dde6e5163",
+    "semantic_hash": "a450c5fe82bb6cddfeb91c5dde6e5163"
+  },
+  "KB/FOG D Series/_archive/_blocks/DC45_TriBranch_2026-05-21/07_SingleCDU_3Branch_Rev8.md": {
+    "mtime": 1781744805.8665757,
+    "ast_hash": "8c8cc9fa5a4c5d9a00500aa974eddc29",
+    "semantic_hash": "8c8cc9fa5a4c5d9a00500aa974eddc29"
+  },
+  "KB/FOG D Series/_archive/_blocks/DC45_TriBranch_2026-05-21/08_Manifold_Appendix_Changelog.md": {
+    "mtime": 1781744844.8789372,
+    "ast_hash": "e78235108d4498b7259e7078a57b4374",
+    "semantic_hash": "e78235108d4498b7259e7078a57b4374"
+  },
+  "KB/Guideline/COOLING_SYSTEM_Guideline.md": {
+    "mtime": 1785147485.8045743,
+    "ast_hash": "189ca8d9b278436a9638cbeace8c14bb",
+    "semantic_hash": ""
+  },
+  "KB/Guideline/Compliance_Guideline.md": {
+    "mtime": 1785147485.8053606,
+    "ast_hash": "4883125acb1161f08f4b4500a9c19a95",
+    "semantic_hash": ""
+  },
+  "KB/Guideline/Cost_Guideline.md": {
+    "mtime": 1785147485.8060431,
+    "ast_hash": "a3a43570a3b106c0f1d0aab11f5ffa12",
+    "semantic_hash": ""
+  },
+  "KB/Guideline/Layout_Guideline.md": {
+    "mtime": 1785147485.8068058,
+    "ast_hash": "127149eae5df3592fbc101635cc4ecd0",
+    "semantic_hash": ""
+  },
+  "KB/Guideline/Marketing_Guideline.md": {
+    "mtime": 1785147485.8073409,
+    "ast_hash": "757689a062d023544bdcd38c868f1f51",
+    "semantic_hash": ""
+  },
+  "KB/Guideline/NETWORK_Guideline.md": {
+    "mtime": 1785147485.8080313,
+    "ast_hash": "796a396ab8faab71551c3a2c2f500533",
+    "semantic_hash": ""
+  },
+  "KB/Guideline/POWER_SYSTEMS_Guideline.md": {
+    "mtime": 1785147485.8085828,
+    "ast_hash": "90f5a3b29cc3a00ed6430d2495a85025",
+    "semantic_hash": ""
+  },
+  "KB/Guideline/PRINCIPLE_Guideline.md": {
+    "mtime": 1785147485.8093514,
+    "ast_hash": "d89a45f7b0b29e5d64d33601ea124329",
+    "semantic_hash": ""
+  },
+  "KB/Guideline/Risk_Guideline.md": {
+    "mtime": 1785147485.810042,
+    "ast_hash": "7a20cdfbc6f7e517e0356ef7aca91cc5",
+    "semantic_hash": ""
+  },
+  "KB/Guideline/_blocks/COOLING_SYSTEM_Guideline/01_G1_G2_Workflow_Scope.md": {
+    "mtime": 1781742155.0668395,
+    "ast_hash": "d6dc6c281a0f0d95ea4caab80da5a145",
+    "semantic_hash": "d6dc6c281a0f0d95ea4caab80da5a145"
+  },
+  "KB/Guideline/_blocks/COOLING_SYSTEM_Guideline/02_G3_G4_Tech_Priority.md": {
+    "mtime": 1781742162.4057894,
+    "ast_hash": "094088863364883af95eabec692b212b",
+    "semantic_hash": "094088863364883af95eabec692b212b"
+  },
+  "KB/Guideline/_blocks/COOLING_SYSTEM_Guideline/03_G5_G6_Immersion_DLC.md": {
+    "mtime": 1781742167.0047822,
+    "ast_hash": "97cfe3838f28dcfce66a405d1a492ad6",
+    "semantic_hash": "97cfe3838f28dcfce66a405d1a492ad6"
+  },
+  "KB/Guideline/_blocks/COOLING_SYSTEM_Guideline/04_G7_Heat_Rejection.md": {
+    "mtime": 1781742174.1161795,
+    "ast_hash": "572051f6421b85179b355bd78a308a37",
+    "semantic_hash": "572051f6421b85179b355bd78a308a37"
+  },
+  "KB/Guideline/_blocks/COOLING_SYSTEM_Guideline/05_G8_G9_ZoneMatch_Env.md": {
+    "mtime": 1781742181.06036,
+    "ast_hash": "3f03d14b2c82e6795599ee4702a7edcc",
+    "semantic_hash": "3f03d14b2c82e6795599ee4702a7edcc"
+  },
+  "KB/Guideline/_blocks/COOLING_SYSTEM_Guideline/06_G10_G11_Load_Redundancy.md": {
+    "mtime": 1781742186.8379471,
+    "ast_hash": "63207af8e2c041606a756d8bf7184e0c",
+    "semantic_hash": "63207af8e2c041606a756d8bf7184e0c"
+  },
+  "KB/Guideline/_blocks/COOLING_SYSTEM_Guideline/07_G12_G13_Container_Extreme.md": {
+    "mtime": 1781742191.4532561,
+    "ast_hash": "ccc7b0f6dc7c4b8e2d1868d2765708d1",
+    "semantic_hash": "ccc7b0f6dc7c4b8e2d1868d2765708d1"
+  },
+  "KB/Guideline/_blocks/COOLING_SYSTEM_Guideline/08_G14_G15_Product_Lookup.md": {
+    "mtime": 1785147485.810752,
+    "ast_hash": "ab785ad00efa5d4a5490fde554becc85",
+    "semantic_hash": ""
+  },
+  "KB/Guideline/_blocks/COOLING_SYSTEM_Guideline/09_G16_Checklist.md": {
+    "mtime": 1781742205.0664997,
+    "ast_hash": "20d1acdcddd4dc79f6632781f54c26aa",
+    "semantic_hash": "20d1acdcddd4dc79f6632781f54c26aa"
+  },
+  "KB/Guideline/_blocks/COOLING_SYSTEM_Guideline/10_G17_G18_G19_Warn_Escalation_Goal.md": {
+    "mtime": 1781742211.0642343,
+    "ast_hash": "d3dae8d6e3429f2dc7e92fd2ed6d8229",
+    "semantic_hash": "d3dae8d6e3429f2dc7e92fd2ed6d8229"
+  },
+  "KB/Guideline/_blocks/Compliance_Guideline/01_C1_C2_Scope_Standards.md": {
+    "mtime": 1781711145.5954058,
+    "ast_hash": "37aaed4e1c76516c5274dfdd08114db1",
+    "semantic_hash": "37aaed4e1c76516c5274dfdd08114db1"
+  },
+  "KB/Guideline/_blocks/Compliance_Guideline/02_C3_C4_BESS_DC.md": {
+    "mtime": 1781711150.876198,
+    "ast_hash": "e1c76fcfa1cb0a2d0afac9245e49fea3",
+    "semantic_hash": "e1c76fcfa1cb0a2d0afac9245e49fea3"
+  },
+  "KB/Guideline/_blocks/Compliance_Guideline/03_C5_C6_Container_Risk.md": {
+    "mtime": 1781711154.2833714,
+    "ast_hash": "d06dc93c846a6b5bcc8e6fbc5372470c",
+    "semantic_hash": "d06dc93c846a6b5bcc8e6fbc5372470c"
+  },
+  "KB/Guideline/_blocks/Compliance_Guideline/04_C7_Certifications.md": {
+    "mtime": 1781711157.9219842,
+    "ast_hash": "6fed9f90ac9b9074e80ed70f491fad7b",
+    "semantic_hash": "6fed9f90ac9b9074e80ed70f491fad7b"
+  },
+  "KB/Guideline/_blocks/Compliance_Guideline/05_C8_Workflow.md": {
+    "mtime": 1781711160.9005895,
+    "ast_hash": "c29d99baad8193a7046bb72b282da2d0",
+    "semantic_hash": "c29d99baad8193a7046bb72b282da2d0"
+  },
+  "KB/Guideline/_blocks/Cost_Guideline/01_K1_K2_Method_Categories.md": {
+    "mtime": 1781711188.5628605,
+    "ast_hash": "ce75e8f1df9133fad0d8037de25bae38",
+    "semantic_hash": "ce75e8f1df9133fad0d8037de25bae38"
+  },
+  "KB/Guideline/_blocks/Cost_Guideline/02_K3_Architecture_Comparison.md": {
+    "mtime": 1781711192.527439,
+    "ast_hash": "2145a371c73c7c17f3362238ac301a88",
+    "semantic_hash": "2145a371c73c7c17f3362238ac301a88"
+  },
+  "KB/Guideline/_blocks/Cost_Guideline/03_K4_K5_Priority_Edge.md": {
+    "mtime": 1781711196.7644455,
+    "ast_hash": "fc8ea6176294bf4d8672924a88e1d6d5",
+    "semantic_hash": "fc8ea6176294bf4d8672924a88e1d6d5"
+  },
+  "KB/Guideline/_blocks/Cost_Guideline/04_K6_Workflow.md": {
+    "mtime": 1781711199.2935486,
+    "ast_hash": "8bee1ddba2e8b7cc4b3b216539ed9f69",
+    "semantic_hash": "8bee1ddba2e8b7cc4b3b216539ed9f69"
+  },
+  "KB/Guideline/_blocks/Layout_Guideline/01_L1_L2_Principles_Clearance.md": {
+    "mtime": 1781711167.4588392,
+    "ast_hash": "b9bcb9e34414074fec4c795777ce01d4",
+    "semantic_hash": "b9bcb9e34414074fec4c795777ce01d4"
+  },
+  "KB/Guideline/_blocks/Layout_Guideline/02_L3_L4_Cables_Access.md": {
+    "mtime": 1781711171.341526,
+    "ast_hash": "893770e53f6b259ba49075271cc0ac54",
+    "semantic_hash": "893770e53f6b259ba49075271cc0ac54"
+  },
+  "KB/Guideline/_blocks/Layout_Guideline/03_L5_Expansion.md": {
+    "mtime": 1781711173.4410737,
+    "ast_hash": "c0ef555055f29518786a76a7948a1cae",
+    "semantic_hash": "c0ef555055f29518786a76a7948a1cae"
+  },
+  "KB/Guideline/_blocks/Layout_Guideline/04_L6_Container_Rack.md": {
+    "mtime": 1781711179.3476934,
+    "ast_hash": "0a9c524a94c2245f6e2f4fe1921ad634",
+    "semantic_hash": "0a9c524a94c2245f6e2f4fe1921ad634"
+  },
+  "KB/Guideline/_blocks/Layout_Guideline/05_L7_Workflow.md": {
+    "mtime": 1781711182.1064973,
+    "ast_hash": "1375b04242621a40341b6693a658b200",
+    "semantic_hash": "1375b04242621a40341b6693a658b200"
+  },
+  "KB/Guideline/_blocks/Marketing_Guideline/01_M1_Focus.md": {
+    "mtime": 1781711204.3320987,
+    "ast_hash": "7fb6021e90267451f70d65231b60b432",
+    "semantic_hash": "7fb6021e90267451f70d65231b60b432"
+  },
+  "KB/Guideline/_blocks/Marketing_Guideline/02_M2_Market_Report.md": {
+    "mtime": 1781711207.831417,
+    "ast_hash": "c06e92b14f83b413bd8525266eec5c4d",
+    "semantic_hash": "c06e92b14f83b413bd8525266eec5c4d"
+  },
+  "KB/Guideline/_blocks/Marketing_Guideline/03_M3_Blog_Post.md": {
+    "mtime": 1781711212.7888577,
+    "ast_hash": "2becae7cf5a55787ca1790f945fdfbb8",
+    "semantic_hash": "2becae7cf5a55787ca1790f945fdfbb8"
+  },
+  "KB/Guideline/_blocks/Marketing_Guideline/04_M4_M5_Competitor_Sources.md": {
+    "mtime": 1781711218.6662238,
+    "ast_hash": "0a0b47e7d45323f3482865072fa5399d",
+    "semantic_hash": "0a0b47e7d45323f3482865072fa5399d"
+  },
+  "KB/Guideline/_blocks/Marketing_Guideline/05_Workflow_Prohibitions.md": {
+    "mtime": 1781711221.2414083,
+    "ast_hash": "75943690e9cb52aef50732d7597f140f",
+    "semantic_hash": "75943690e9cb52aef50732d7597f140f"
+  },
+  "KB/Guideline/_blocks/NETWORK_Guideline/01_N1_N2_Foundation.md": {
+    "mtime": 1781711086.1120439,
+    "ast_hash": "037c5588749774fed7153972f9d7cd18",
+    "semantic_hash": "037c5588749774fed7153972f9d7cd18"
+  },
+  "KB/Guideline/_blocks/NETWORK_Guideline/02_N3_Architecture.md": {
+    "mtime": 1781711090.1823232,
+    "ast_hash": "2497184b204b172c27e31f18c99fdb0b",
+    "semantic_hash": "2497184b204b172c27e31f18c99fdb0b"
+  },
+  "KB/Guideline/_blocks/NETWORK_Guideline/03_N4_IB.md": {
+    "mtime": 1781711094.6226268,
+    "ast_hash": "825fd2a7057c7a634727ee494e87ba95",
+    "semantic_hash": "825fd2a7057c7a634727ee494e87ba95"
+  },
+  "KB/Guideline/_blocks/NETWORK_Guideline/04_N5_ROCE.md": {
+    "mtime": 1781711098.088312,
+    "ast_hash": "d6badbf9d2c44f93993a138ce7ecf52f",
+    "semantic_hash": "d6badbf9d2c44f93993a138ce7ecf52f"
+  },
+  "KB/Guideline/_blocks/NETWORK_Guideline/05_N6_N7_N8_Management.md": {
+    "mtime": 1781711105.3952851,
+    "ast_hash": "30e79b88b75572e0e42431dc61e32255",
+    "semantic_hash": "30e79b88b75572e0e42431dc61e32255"
+  },
+  "KB/Guideline/_blocks/NETWORK_Guideline/06_N9_N10_Zone_Security.md": {
+    "mtime": 1781711109.7361505,
+    "ast_hash": "197a5e2ea8cf6c5c76f14ed20012472b",
+    "semantic_hash": "197a5e2ea8cf6c5c76f14ed20012472b"
+  },
+  "KB/Guideline/_blocks/NETWORK_Guideline/07_N11_N12_Prohibitions_Refs.md": {
+    "mtime": 1781750383.9583738,
+    "ast_hash": "edb9995a72906c0c13fa3d76014f38b2",
+    "semantic_hash": "edb9995a72906c0c13fa3d76014f38b2"
+  },
+  "KB/Guideline/_blocks/POWER_SYSTEMS_Guideline/01_P1_IT_vs_Total.md": {
+    "mtime": 1781742241.3394213,
+    "ast_hash": "5780cde1bbc27b47992ea316e92fc407",
+    "semantic_hash": "5780cde1bbc27b47992ea316e92fc407"
+  },
+  "KB/Guideline/_blocks/POWER_SYSTEMS_Guideline/02_P2_P3_Product_Rules.md": {
+    "mtime": 1781742249.966043,
+    "ast_hash": "12a00daacb0afcba456330cc89f014ed",
+    "semantic_hash": "12a00daacb0afcba456330cc89f014ed"
+  },
+  "KB/Guideline/_blocks/POWER_SYSTEMS_Guideline/03_P4_P5_Confusion_UPS.md": {
+    "mtime": 1781742259.0613132,
+    "ast_hash": "67f8447357617c2152c64d2860c92fde",
+    "semantic_hash": "67f8447357617c2152c64d2860c92fde"
+  },
+  "KB/Guideline/_blocks/POWER_SYSTEMS_Guideline/04_P6_P7_Battery_DG.md": {
+    "mtime": 1781742266.9624324,
+    "ast_hash": "d56cdc317b0039932ffeabbdfcedf5a2",
+    "semantic_hash": "d56cdc317b0039932ffeabbdfcedf5a2"
+  },
+  "KB/Guideline/_blocks/POWER_SYSTEMS_Guideline/05_P8_BESS_DG_Comparison.md": {
+    "mtime": 1781742276.2903662,
+    "ast_hash": "e84d479276df14ce59834df3904d3dca",
+    "semantic_hash": "e84d479276df14ce59834df3904d3dca"
+  },
+  "KB/Guideline/_blocks/POWER_SYSTEMS_Guideline/06_P8_BESS_Selection_Decision.md": {
+    "mtime": 1781742287.1138182,
+    "ast_hash": "8047c5631aec609fd4e5dd4443c13a06",
+    "semantic_hash": "8047c5631aec609fd4e5dd4443c13a06"
+  },
+  "KB/Guideline/_blocks/POWER_SYSTEMS_Guideline/07_P9_Redundancy_Topology.md": {
+    "mtime": 1781742293.8599095,
+    "ast_hash": "48b75f1ff2d5af1cceb3d62599cc209b",
+    "semantic_hash": "48b75f1ff2d5af1cceb3d62599cc209b"
+  },
+  "KB/Guideline/_blocks/PRINCIPLE_Guideline/01_Positioning.md": {
+    "mtime": 1781744185.115426,
+    "ast_hash": "c54dcc8e58b77290962d185b2201d8a7",
+    "semantic_hash": "c54dcc8e58b77290962d185b2201d8a7"
+  },
+  "KB/Guideline/_blocks/PRINCIPLE_Guideline/02_Cross_Rules.md": {
+    "mtime": 1781744191.9193606,
+    "ast_hash": "5c27216e9969e14680c6933a19a891d2",
+    "semantic_hash": "5c27216e9969e14680c6933a19a891d2"
+  },
+  "KB/Guideline/_blocks/PRINCIPLE_Guideline/03_File_Index.md": {
+    "mtime": 1781744198.4802556,
+    "ast_hash": "dccc8e7b36d8d9ceea673bafa40c18db",
+    "semantic_hash": "dccc8e7b36d8d9ceea673bafa40c18db"
+  },
+  "KB/Guideline/_blocks/PRINCIPLE_Guideline/04_Key_Matrix_Part1.md": {
+    "mtime": 1781744217.2193222,
+    "ast_hash": "9de10e3a2a1fe7834cbd29d3e65b1555",
+    "semantic_hash": "9de10e3a2a1fe7834cbd29d3e65b1555"
+  },
+  "KB/Guideline/_blocks/PRINCIPLE_Guideline/05_Key_Matrix_Part2.md": {
+    "mtime": 1781744231.0499525,
+    "ast_hash": "7855cab79d3bf02da8fb0cc6474389d3",
+    "semantic_hash": "7855cab79d3bf02da8fb0cc6474389d3"
+  },
+  "KB/Guideline/_blocks/PRINCIPLE_Guideline/06_Escalation_Conflict_Maintenance.md": {
+    "mtime": 1781744236.6916215,
+    "ast_hash": "e9eb78b30cee294cb5aafc081dd603d5",
+    "semantic_hash": "e9eb78b30cee294cb5aafc081dd603d5"
+  },
+  "KB/Guideline/_blocks/PRINCIPLE_Guideline/07_Section_ID_Cross_Reference.md": {
+    "mtime": 1781744250.2337344,
+    "ast_hash": "3b3626498b846832c57866b385bb49a1",
+    "semantic_hash": "3b3626498b846832c57866b385bb49a1"
+  },
+  "KB/Guideline/_blocks/Risk_Guideline/01_R1_R2_Classification_SPOF.md": {
+    "mtime": 1781711123.0925763,
+    "ast_hash": "1c9a459c0fb4a4b36b50e42533a869bd",
+    "semantic_hash": "1c9a459c0fb4a4b36b50e42533a869bd"
+  },
+  "KB/Guideline/_blocks/Risk_Guideline/02_R3_R4_RedFlags_Load.md": {
+    "mtime": 1781711128.6943333,
+    "ast_hash": "e03b9bf3a72dbe248cb54fae0b3edeb5",
+    "semantic_hash": "e03b9bf3a72dbe248cb54fae0b3edeb5"
+  },
+  "KB/Guideline/_blocks/Risk_Guideline/03_R5_R6_Operations_Deployment.md": {
+    "mtime": 1781711131.587153,
+    "ast_hash": "287590b1fcac0e9f8441a23f7c1f74fd",
+    "semantic_hash": "287590b1fcac0e9f8441a23f7c1f74fd"
+  },
+  "KB/Guideline/_blocks/Risk_Guideline/04_R7_Scalability_Cost.md": {
+    "mtime": 1781711135.4473972,
+    "ast_hash": "73fe0be6455ada93a5392efd733e4c80",
+    "semantic_hash": "73fe0be6455ada93a5392efd733e4c80"
+  },
+  "KB/Guideline/_blocks/Risk_Guideline/05_Workflow_Integration.md": {
+    "mtime": 1781711137.9389148,
+    "ast_hash": "2a4922641c1309bcc3060c98715ca078",
+    "semantic_hash": "2a4922641c1309bcc3060c98715ca078"
+  },
+  "KB/PRODUCTS_MDC.md": {
+    "mtime": 1785147485.8113985,
+    "ast_hash": "a05dab2f56e3967be515de8546e15345",
+    "semantic_hash": ""
+  },
+  "PRINCIPLES.md": {
+    "mtime": 1785147485.8122232,
+    "ast_hash": "1d02454cd60da113875daf03ea9c7469",
+    "semantic_hash": ""
+  },
+  "PUBLIC/Media/PQTech_Interview_v2.md": {
+    "mtime": 1785147485.8194635,
+    "ast_hash": "618c31b761f7f090f78b73961b58ad45",
+    "semantic_hash": ""
+  },
+  "PUBLIC/Media/_blocks/PQTech_Interview/01_Opening_Philosophy.md": {
+    "mtime": 1781750456.8142488,
+    "ast_hash": "7bad603085e4f9bb0a89e9e9e9c44be6",
+    "semantic_hash": "7bad603085e4f9bb0a89e9e9e9c44be6"
+  },
+  "PUBLIC/Media/_blocks/PQTech_Interview/02_Technical_High_Ground.md": {
+    "mtime": 1781750456.8137112,
+    "ast_hash": "5d0e88e812e35da1c7acfb32246a9cb6",
+    "semantic_hash": "5d0e88e812e35da1c7acfb32246a9cb6"
+  },
+  "PUBLIC/Media/_blocks/PQTech_Interview/03_Globalization_Strategy.md": {
+    "mtime": 1781750456.8141155,
+    "ast_hash": "75a7de7c0c8007e98db643837718048a",
+    "semantic_hash": "75a7de7c0c8007e98db643837718048a"
+  },
+  "PUBLIC/Media/_blocks/PQTech_Interview/04_Edge_Computing_Vision.md": {
+    "mtime": 1781750456.8143685,
+    "ast_hash": "cb1204492f3d125b7d12698320029040",
+    "semantic_hash": "cb1204492f3d125b7d12698320029040"
+  },
+  "PUBLIC/Media/_blocks/PQTech_Interview/05_Outline_References.md": {
+    "mtime": 1781750456.8139498,
+    "ast_hash": "845a76f41a0c2fed087e320a557dfdc4",
+    "semantic_hash": "845a76f41a0c2fed087e320a557dfdc4"
+  },
+  "PUBLIC/Pitch/PITCH_DECK_Flyer.md": {
+    "mtime": 1780680119.4285972,
+    "ast_hash": "1b90701157fba0a5cad12c976305f889",
+    "semantic_hash": "1b90701157fba0a5cad12c976305f889"
+  },
+  "PUBLIC/Products/A32.md": {
+    "mtime": 1785147485.8200722,
+    "ast_hash": "64ae779e172bc94ee39c5b3f49be5b7c",
+    "semantic_hash": ""
+  },
+  "PUBLIC/Products/AC40.md": {
+    "mtime": 1785147485.820835,
+    "ast_hash": "b5ce2ccadae22df335aa3c6999bd8759",
+    "semantic_hash": ""
+  },
+  "PUBLIC/Products/AC45.md": {
+    "mtime": 1785147485.8216393,
+    "ast_hash": "6db0418d2ced1a7add426c7da0d0f0ae",
+    "semantic_hash": ""
+  },
+  "PUBLIC/Products/_blocks/PRODUCTS_A32/01_Product_Position_And_Params.md": {
+    "mtime": 1781754404.0462627,
+    "ast_hash": "5017e6a3219c6d558365c33df1580692",
+    "semantic_hash": "5017e6a3219c6d558365c33df1580692"
+  },
+  "PUBLIC/Products/_blocks/PRODUCTS_A32/02_Cabinet_Details.md": {
+    "mtime": 1781750573.2938356,
+    "ast_hash": "50fdcc9da9af2e11fdefb853cf53e1ed",
+    "semantic_hash": "50fdcc9da9af2e11fdefb853cf53e1ed"
+  },
+  "PUBLIC/Products/_blocks/PRODUCTS_A32/03_Cooling_Architecture.md": {
+    "mtime": 1785147485.8222241,
+    "ast_hash": "4b6df2117518da85cc6bdd805960eb28",
+    "semantic_hash": ""
+  },
+  "PUBLIC/Products/_blocks/PRODUCTS_A32/04_Power_Path.md": {
+    "mtime": 1781750573.2939386,
+    "ast_hash": "8bfdc913d17f51f26e0ee9ac97f59a80",
+    "semantic_hash": "8bfdc913d17f51f26e0ee9ac97f59a80"
+  },
+  "PUBLIC/Products/_blocks/PRODUCTS_A32/05_Use_Cases_And_Relationships.md": {
+    "mtime": 1781750573.2942846,
+    "ast_hash": "289146053da0f8c28de27a193cfd2bd1",
+    "semantic_hash": "289146053da0f8c28de27a193cfd2bd1"
+  },
+  "PUBLIC/Products/_blocks/PRODUCTS_A32/06_CDU_Control_PDU.md": {
+    "mtime": 1785147485.8228652,
+    "ast_hash": "0b5c774e2a0b80e3574e172df3fc75ed",
+    "semantic_hash": ""
+  },
+  "PUBLIC/Products/_blocks/PRODUCTS_AC40/01_Product_Position_And_Params.md": {
+    "mtime": 1785147485.8234127,
+    "ast_hash": "c206ed3f3d2a0f0f9ba2c624676bca00",
+    "semantic_hash": ""
+  },
+  "PUBLIC/Products/_blocks/PRODUCTS_AC40/02_Cabinet_And_Cooling.md": {
+    "mtime": 1785147485.8245473,
+    "ast_hash": "7df8a8a56c6db79012e7be14ceb3aa7b",
+    "semantic_hash": ""
+  },
+  "PUBLIC/Products/_blocks/PRODUCTS_AC40/03_Power_Path_Redundancy.md": {
+    "mtime": 1781750573.2929442,
+    "ast_hash": "706c4f1cc4b57e46b0173b500c84a1bf",
+    "semantic_hash": "706c4f1cc4b57e46b0173b500c84a1bf"
+  },
+  "PUBLIC/Products/_blocks/PRODUCTS_AC40/04_Delivery_Expansion_UPS.md": {
+    "mtime": 1781750573.2933948,
+    "ast_hash": "aebc447544253b0f5fa372e3a2f1f081",
+    "semantic_hash": "aebc447544253b0f5fa372e3a2f1f081"
+  },
+  "PUBLIC/Products/_blocks/PRODUCTS_AC40/05_Compat_Lifting_Electrical.md": {
+    "mtime": 1785147485.825489,
+    "ast_hash": "d155f74c60bc59584a564f213d455d5f",
+    "semantic_hash": ""
+  },
+  "PUBLIC/Products/_blocks/PRODUCTS_AC40/06_Optional_UPS_BESS.md": {
+    "mtime": 1781750573.293139,
+    "ast_hash": "4bf9f130cc3d2a7fb18875f1b9ff5b2c",
+    "semantic_hash": "4bf9f130cc3d2a7fb18875f1b9ff5b2c"
+  },
+  "PUBLIC/Products/_blocks/PRODUCTS_AC45/01_Product_Position_And_Params.md": {
+    "mtime": 1785147485.8303719,
+    "ast_hash": "f1fd23d3a370be5ca22b366572b72f40",
+    "semantic_hash": ""
+  },
+  "PUBLIC/Products/_blocks/PRODUCTS_AC45/02_Cabinet_Layout.md": {
+    "mtime": 1781750573.295504,
+    "ast_hash": "a8b55cc32eb0535ee8e353f043c3821d",
+    "semantic_hash": "a8b55cc32eb0535ee8e353f043c3821d"
+  },
+  "PUBLIC/Products/_blocks/PRODUCTS_AC45/03_Cooling_Architecture.md": {
+    "mtime": 1785147485.834769,
+    "ast_hash": "4f1f2eefe8e75646309a733bf05e7867",
+    "semantic_hash": ""
+  },
+  "PUBLIC/Products/_blocks/PRODUCTS_AC45/04_Power_Path_Redundancy_Compare.md": {
+    "mtime": 1785147485.8388982,
+    "ast_hash": "2ac85a7ed2e5205b5a264cd18a297f31",
+    "semantic_hash": ""
+  },
+  "PUBLIC/Products/_blocks/PRODUCTS_AC45/05_Expansion_Delivery_Compat.md": {
+    "mtime": 1785147485.842905,
+    "ast_hash": "a648e66cb4d3da561ef1f2e0afe4757b",
+    "semantic_hash": ""
+  },
+  "PUBLIC/Products/_blocks/PRODUCTS_AC45/06_UPS_BESS_Options.md": {
+    "mtime": 1785147485.843737,
+    "ast_hash": "932caf8997390fdf93f7aab4b587a139",
+    "semantic_hash": ""
+  },
+  "PUBLIC/Products/_blocks/PRODUCTS_AC45/07_Electrical_Load.md": {
+    "mtime": 1785147485.844382,
+    "ast_hash": "93d001cd6615eb9cb6cab667276e26ec",
+    "semantic_hash": ""
+  },
+  "PUBLIC/README.md": {
+    "mtime": 1785147485.8450186,
+    "ast_hash": "0f5aea92979abf8217cad20c8fa55f88",
+    "semantic_hash": ""
+  },
+  "PUBLIC/Reference_Architecture/RA-001_Immersion_0.4MW.md": {
+    "mtime": 1785147485.8457325,
+    "ast_hash": "ddfb82e5b923e3fee8d7d30e64c3c24e",
+    "semantic_hash": ""
+  },
+  "PUBLIC/Reference_Architecture/RA-002_DLC_1.2MW.md": {
+    "mtime": 1785147485.8463173,
+    "ast_hash": "aa1232359bee7b8116ff9d2f436e9270",
+    "semantic_hash": ""
+  },
+  "PUBLIC/Reference_Architecture/Site_Reference_Climate_Standard.md": {
+    "mtime": 1780680119.4856782,
+    "ast_hash": "554b4ba1316c3fbe28b004b2d38c4f35",
+    "semantic_hash": "554b4ba1316c3fbe28b004b2d38c4f35"
+  },
+  "PUBLIC/Tech_Spec/DC45_Tech_Spec_CN.md": {
+    "mtime": 1785147485.8479357,
+    "ast_hash": "99044a38873c22129103c3641dc3d505",
+    "semantic_hash": ""
+  },
+  "PUBLIC/Tech_Spec/DC45_Tech_Spec_EN.md": {
+    "mtime": 1785147485.84846,
+    "ast_hash": "4fac8c4299a25e6e84ef0c72ab38f01f",
+    "semantic_hash": ""
+  },
+  "PUBLIC/Tech_Spec/_blocks/DC45_Tech_Spec_CN/01_Sec1_Layout.md": {
+    "mtime": 1785147485.8493524,
+    "ast_hash": "5b6a21f0083ea62d5598761d33c93ae2",
+    "semantic_hash": ""
+  },
+  "PUBLIC/Tech_Spec/_blocks/DC45_Tech_Spec_CN/02_Sec2_Positioning.md": {
+    "mtime": 1781750383.9873438,
+    "ast_hash": "203306e1806d45601c111d8aa58ae0fb",
+    "semantic_hash": "203306e1806d45601c111d8aa58ae0fb"
+  },
+  "PUBLIC/Tech_Spec/_blocks/DC45_Tech_Spec_CN/03_Sec3_IT_Capacity.md": {
+    "mtime": 1781750383.9870706,
+    "ast_hash": "fbf44e71a3159914176758db51232707",
+    "semantic_hash": "fbf44e71a3159914176758db51232707"
+  },
+  "PUBLIC/Tech_Spec/_blocks/DC45_Tech_Spec_CN/04_Sec4_Rack_Spec.md": {
+    "mtime": 1781750383.9878943,
+    "ast_hash": "0d66da81a4a79d869b6b6ccd743849a4",
+    "semantic_hash": "0d66da81a4a79d869b6b6ccd743849a4"
+  },
+  "PUBLIC/Tech_Spec/_blocks/DC45_Tech_Spec_CN/05_Sec5_Cooling.md": {
+    "mtime": 1781750383.9882212,
+    "ast_hash": "49073ce1f54af7d042d3ad9a9d8fc3b7",
+    "semantic_hash": "49073ce1f54af7d042d3ad9a9d8fc3b7"
+  },
+  "PUBLIC/Tech_Spec/_blocks/DC45_Tech_Spec_CN/06_Sec6_Power.md": {
+    "mtime": 1781750383.9872246,
+    "ast_hash": "84fe052c1a29d92aa444140f44f62a66",
+    "semantic_hash": "84fe052c1a29d92aa444140f44f62a66"
+  },
+  "PUBLIC/Tech_Spec/_blocks/DC45_Tech_Spec_CN/07_Sec7_Structural.md": {
+    "mtime": 1781750383.9886234,
+    "ast_hash": "28a4ffe901c588eb601b3a25fc170168",
+    "semantic_hash": "28a4ffe901c588eb601b3a25fc170168"
+  },
+  "PUBLIC/Tech_Spec/_blocks/DC45_Tech_Spec_CN/08_Sec8_Network.md": {
+    "mtime": 1781750383.9877555,
+    "ast_hash": "8e3da1de076d520bf2d1a09954dfa9a1",
+    "semantic_hash": "8e3da1de076d520bf2d1a09954dfa9a1"
+  },
+  "PUBLIC/Tech_Spec/_blocks/DC45_Tech_Spec_CN/09_Sec9_Environment.md": {
+    "mtime": 1781750383.9883559,
+    "ast_hash": "ed0d3c5006aedc0e1cbdfbd5f75fb34d",
+    "semantic_hash": "ed0d3c5006aedc0e1cbdfbd5f75fb34d"
+  },
+  "PUBLIC/Tech_Spec/_blocks/DC45_Tech_Spec_CN/10_Sec10_Monitoring.md": {
+    "mtime": 1781750383.9874876,
+    "ast_hash": "f35687f6ccdd75bb8a1f1eb3938cb39f",
+    "semantic_hash": "f35687f6ccdd75bb8a1f1eb3938cb39f"
+  },
+  "PUBLIC/Tech_Spec/_blocks/DC45_Tech_Spec_CN/11_Sec11_Fire.md": {
+    "mtime": 1781750383.9876103,
+    "ast_hash": "6fead975225d12ec6d4ef3090c3e1444",
+    "semantic_hash": "6fead975225d12ec6d4ef3090c3e1444"
+  },
+  "PUBLIC/Tech_Spec/_blocks/DC45_Tech_Spec_CN/12_Sec12_Service.md": {
+    "mtime": 1781750383.988508,
+    "ast_hash": "286c5e27f21b4a01d09296f3f1c53be6",
+    "semantic_hash": "286c5e27f21b4a01d09296f3f1c53be6"
+  },
+  "PUBLIC/Tech_Spec/_blocks/DC45_Tech_Spec_CN/13_Sec13_Site.md": {
+    "mtime": 1781750383.9887364,
+    "ast_hash": "7348ffe63a60e0099c9c218f1852e11f",
+    "semantic_hash": "7348ffe63a60e0099c9c218f1852e11f"
+  },
+  "PUBLIC/Tech_Spec/_blocks/DC45_Tech_Spec_CN/14_Sec14_Summary.md": {
+    "mtime": 1781750383.986961,
+    "ast_hash": "cb1ea8b8049661a6d3819c175894d4c8",
+    "semantic_hash": "cb1ea8b8049661a6d3819c175894d4c8"
+  },
+  "PUBLIC/Tech_Spec/_blocks/DC45_Tech_Spec_EN/01_Sec1_Layout.md": {
+    "mtime": 1785147485.8497787,
+    "ast_hash": "eeda7c951a31292c144b7376abc48a35",
+    "semantic_hash": ""
+  },
+  "PUBLIC/Tech_Spec/_blocks/DC45_Tech_Spec_EN/02_Sec2_Positioning.md": {
+    "mtime": 1781750383.9852588,
+    "ast_hash": "ca9d0fbb9b4837581139c5b4855492f8",
+    "semantic_hash": "ca9d0fbb9b4837581139c5b4855492f8"
+  },
+  "PUBLIC/Tech_Spec/_blocks/DC45_Tech_Spec_EN/03_Sec3_IT_Capacity.md": {
+    "mtime": 1781750383.9844804,
+    "ast_hash": "1b9946bf55e6117287d79e6335519818",
+    "semantic_hash": "1b9946bf55e6117287d79e6335519818"
+  },
+  "PUBLIC/Tech_Spec/_blocks/DC45_Tech_Spec_EN/04_Sec4_Rack_Spec.md": {
+    "mtime": 1781750383.985923,
+    "ast_hash": "38b6747ce3a83f282d58ee65433db629",
+    "semantic_hash": "38b6747ce3a83f282d58ee65433db629"
+  },
+  "PUBLIC/Tech_Spec/_blocks/DC45_Tech_Spec_EN/05_Sec5_Cooling.md": {
+    "mtime": 1781750383.9862087,
+    "ast_hash": "72982eb998acf4db669b7ff9b764e4ee",
+    "semantic_hash": "72982eb998acf4db669b7ff9b764e4ee"
+  },
+  "PUBLIC/Tech_Spec/_blocks/DC45_Tech_Spec_EN/06_Sec6_Power.md": {
+    "mtime": 1781750383.9850261,
+    "ast_hash": "694fa0abf84fe9cf07c5255735a24c9a",
+    "semantic_hash": "694fa0abf84fe9cf07c5255735a24c9a"
+  },
+  "PUBLIC/Tech_Spec/_blocks/DC45_Tech_Spec_EN/07_Sec7_Structural.md": {
+    "mtime": 1781750383.986642,
+    "ast_hash": "f79472233c22a1d24834bea2336e267a",
+    "semantic_hash": "f79472233c22a1d24834bea2336e267a"
+  },
+  "PUBLIC/Tech_Spec/_blocks/DC45_Tech_Spec_EN/08_Sec8_Network.md": {
+    "mtime": 1781750383.9857373,
+    "ast_hash": "cd46d30443b198c302fee48eee54d39b",
+    "semantic_hash": "cd46d30443b198c302fee48eee54d39b"
+  },
+  "PUBLIC/Tech_Spec/_blocks/DC45_Tech_Spec_EN/09_Sec9_Environment.md": {
+    "mtime": 1781750383.9863796,
+    "ast_hash": "e867bf2d72a4c391bdf3d4eff7ccd403",
+    "semantic_hash": "e867bf2d72a4c391bdf3d4eff7ccd403"
+  },
+  "PUBLIC/Tech_Spec/_blocks/DC45_Tech_Spec_EN/10_Sec10_Monitoring.md": {
+    "mtime": 1781750383.9854343,
+    "ast_hash": "7e2505ea61424f865fc9249c16ec6587",
+    "semantic_hash": "7e2505ea61424f865fc9249c16ec6587"
+  },
+  "PUBLIC/Tech_Spec/_blocks/DC45_Tech_Spec_EN/11_Sec11_Fire.md": {
+    "mtime": 1781750383.9856026,
+    "ast_hash": "8a2a33b1d396583a0c2254d0486d7168",
+    "semantic_hash": "8a2a33b1d396583a0c2254d0486d7168"
+  },
+  "PUBLIC/Tech_Spec/_blocks/DC45_Tech_Spec_EN/12_Sec12_Service.md": {
+    "mtime": 1781750383.9864926,
+    "ast_hash": "82905f41ba4fb1edac9e709f67007eed",
+    "semantic_hash": "82905f41ba4fb1edac9e709f67007eed"
+  },
+  "PUBLIC/Tech_Spec/_blocks/DC45_Tech_Spec_EN/13_Sec13_Site.md": {
+    "mtime": 1781750383.9867678,
+    "ast_hash": "1fe556b6f3c0de7c26d889771e79e7b6",
+    "semantic_hash": "1fe556b6f3c0de7c26d889771e79e7b6"
+  },
+  "PUBLIC/Tech_Spec/_blocks/DC45_Tech_Spec_EN/14_Sec14_Summary.md": {
+    "mtime": 1781750383.984221,
+    "ast_hash": "0695e1dc60ad6d26d5d4c00d50c4190e",
+    "semantic_hash": "0695e1dc60ad6d26d5d4c00d50c4190e"
+  },
+  "README.md": {
+    "mtime": 1785147485.8625422,
+    "ast_hash": "cb0aa30aa5a8d06aa31ce4c7c05ed035",
+    "semantic_hash": ""
+  },
+  "Reference Architecture/EDGE_INFERENCE_DLC_1.2MW.md": {
+    "mtime": 1785234561.1538794,
+    "ast_hash": "343b346b3f378b360d96cc839ce7ae9f",
+    "semantic_hash": ""
+  },
+  "Reference Architecture/EDGE_INFERENCE_IMMERSION_0.4MW.md": {
+    "mtime": 1785234561.1537414,
+    "ast_hash": "be8a719f936bbfe124503974195a236c",
+    "semantic_hash": ""
+  },
+  "Reference Architecture/Site_Reference_Climate_Standard.md": {
+    "mtime": 1785234522.4597154,
+    "ast_hash": "a1b74564a8ed0a1a5ae7edd005933daf",
+    "semantic_hash": ""
+  },
+  "SOUL.md": {
+    "mtime": 1785147485.8747916,
+    "ast_hash": "1f533a9963b93f8b1dbd92945a9ac1dd",
+    "semantic_hash": ""
+  },
+  "TOOLS/CAD_GUIDELINES.md": {
+    "mtime": 1780680119.430302,
+    "ast_hash": "39a63611d128895c589d36bafba33761",
+    "semantic_hash": "39a63611d128895c589d36bafba33761"
+  },
+  "TOOLS/CRM_WORKFLOW.md": {
+    "mtime": 1780680119.4306922,
+    "ast_hash": "5f37fd5f08464c46163656c4757b66a7",
+    "semantic_hash": "5f37fd5f08464c46163656c4757b66a7"
+  },
+  "TOOLS/KB_ACCESS.md": {
+    "mtime": 1780680119.4300537,
+    "ast_hash": "d36acee3ce92f700b8921cbb52ddc89f",
+    "semantic_hash": "d36acee3ce92f700b8921cbb52ddc89f"
+  },
+  "TOOLS/LARK_CLI.md": {
+    "mtime": 1780680119.4311776,
+    "ast_hash": "f09e00ebdcb755e8596271657dfd1c1b",
+    "semantic_hash": "f09e00ebdcb755e8596271657dfd1c1b"
+  },
+  "TOOLS/QUOTE_ENGINE.md": {
+    "mtime": 1780680119.431451,
+    "ast_hash": "5124a6897e1fd56300f3cece0c29b369",
+    "semantic_hash": "5124a6897e1fd56300f3cece0c29b369"
+  },
+  "TOOLS/TCO Calculator.md": {
+    "mtime": 1781746993.3494618,
+    "ast_hash": "440c7b08403f3bf7da3f3d6edea64c2c",
+    "semantic_hash": "440c7b08403f3bf7da3f3d6edea64c2c"
+  },
+  "TOOLS/TOOLS.md": {
+    "mtime": 1780680119.4317122,
+    "ast_hash": "7d1cfb99d98e8bccd6c49dc39831ce7a",
+    "semantic_hash": "7d1cfb99d98e8bccd6c49dc39831ce7a"
+  },
+  "USER.md": {
+    "mtime": 1780680119.4280615,
+    "ast_hash": "99a59af8330d5b7f868a7c0e82513e5b",
+    "semantic_hash": "99a59af8330d5b7f868a7c0e82513e5b"
+  },
+  "VERSION.md": {
+    "mtime": 1780680119.4269428,
+    "ast_hash": "fe2fbc93ee3adaa149e78df0b8381903",
+    "semantic_hash": "fe2fbc93ee3adaa149e78df0b8381903"
+  },
+  "KB/3RD-PARTY/Busbar/Suppliers/Siemens/White-Paper-Busbar.pdf": {
+    "mtime": 1776007541.731493,
+    "ast_hash": "94d7db7828514d9819a7eaf79b7e685d",
+    "semantic_hash": "94d7db7828514d9819a7eaf79b7e685d"
+  },
+  "KB/3RD-PARTY/Busbar/Suppliers/Siemens/XL-F-Product-Spec.pdf": {
+    "mtime": 1776007541.786056,
+    "ast_hash": "188a83d4d05db822d2a7126a6f0558e9",
+    "semantic_hash": "188a83d4d05db822d2a7126a6f0558e9"
+  },
+  "KB/3RD-PARTY/Busbar/Suppliers/Siemens/XL-III-Dense-Busbar.pdf": {
+    "mtime": 1776007541.8072007,
+    "ast_hash": "4384cb2e3238a0b48c13e127681a7fa3",
+    "semantic_hash": "4384cb2e3238a0b48c13e127681a7fa3"
+  },
+  "KB/3RD-PARTY/COOLING/Suppliers/STULZ_CeilAir_Engineering_Manual.pdf": {
+    "mtime": 1778500366.6623867,
+    "ast_hash": "50d492a1f3f55a94603b39842fb464d6",
+    "semantic_hash": "50d492a1f3f55a94603b39842fb464d6"
+  },
+  "KB/3RD-PARTY/COOLING/Suppliers/TICA Response file/\u9644\u4ef6\u4e09 \u4e09\u66dc\u79d1\u6280\u7eb3\u7c73\u6d82\u5c42\u4e2d\u6027\u76d0\u96fe3000\u5c0f\u65f6\u6d4b\u8bd5\u62a5\u544a.PDF": {
+    "mtime": 1781507129.4587219,
+    "ast_hash": "560916ea33f0aa72c896207986c7f445",
+    "semantic_hash": "560916ea33f0aa72c896207986c7f445"
+  },
+  "KB/3RD-PARTY/COOLING/Suppliers/TICA Response file/\u9644\u4ef6\u4e8c 194.59@33.24 \u6570\u636e\u8868_Atmos_GIGA-BXC_80_160-30_2-400.pdf": {
+    "mtime": 1781507094.9646409,
+    "ast_hash": "5c49ea5202115b4d8971d26a97026abf",
+    "semantic_hash": "5c49ea5202115b4d8971d26a97026abf"
+  },
+  "KB/3RD-PARTY/COOLING/Suppliers/TICA Response file/\u9644\u4ef6\u56db \u4e09\u901a\u8776\u9600\u53c2\u6570.pdf": {
+    "mtime": 1781507141.7781873,
+    "ast_hash": "83583d8899d0c4ab01c80f0ddb8192b2",
+    "semantic_hash": "83583d8899d0c4ab01c80f0ddb8192b2"
+  },
+  "KB/3RD-PARTY/UPS/Suppliers/Eaton/9395XR-1500-Chinese-Manual.pdf": {
+    "mtime": 1776007541.818977,
+    "ast_hash": "01c3cb73ea9a9a9671ee90bd16e884c0",
+    "semantic_hash": "01c3cb73ea9a9a9671ee90bd16e884c0"
+  },
+  "KB/3RD-PARTY/UPS/Suppliers/Eaton/9395XR-1500-Rear-Exhaust-Connections.pdf": {
+    "mtime": 1776007541.8255022,
+    "ast_hash": "2ac0d65dc38dec6d20ccbf8322c44627",
+    "semantic_hash": "2ac0d65dc38dec6d20ccbf8322c44627"
+  },
+  "KB/3RD-PARTY/UPS/Suppliers/Eaton/9395XR-1500-Top-Exhaust-Dimensions.pdf": {
+    "mtime": 1776007541.827751,
+    "ast_hash": "4787cbb01ff448a27585298fd17c130c",
+    "semantic_hash": "4787cbb01ff448a27585298fd17c130c"
+  },
+  "KB/3RD-PARTY/UPS/Suppliers/Eaton/9395XR-1500-Wiring-Diagram.pdf": {
+    "mtime": 1776007541.8298492,
+    "ast_hash": "0a3243e84670a7724f58fda6fac2929b",
+    "semantic_hash": "0a3243e84670a7724f58fda6fac2929b"
+  },
+  "KB/3RD-PARTY/UPS/Suppliers/Eaton/93Li-G2-Battery-Brochure.pdf": {
+    "mtime": 1776007541.8319879,
+    "ast_hash": "271aa3cb72235a48d364c30511026cfa",
+    "semantic_hash": "271aa3cb72235a48d364c30511026cfa"
+  },
+  "KB/FOG A Series/Design/AC40_NETWORK_CONF.pdf": {
+    "mtime": 1776007360.4699714,
+    "ast_hash": "11b42cc68844686fecab0bf69ac4f6d4",
+    "semantic_hash": "11b42cc68844686fecab0bf69ac4f6d4"
+  },
+  "KB/FOG A Series/Design/A32 Flow.png": {
+    "mtime": 1780973539.7173584,
+    "ast_hash": "cc90f0be13d66e616c945feda02339d7",
+    "semantic_hash": "cc90f0be13d66e616c945feda02339d7"
+  },
+  "KB/FOG A Series/Design/A32 Flow_v1.svg": {
+    "mtime": 1781070641.9529583,
+    "ast_hash": "069fa3738003a5277d221d1535e0f037",
+    "semantic_hash": "069fa3738003a5277d221d1535e0f037"
+  },
+  "KB/FOG A Series/Design/AC40 Layout.png": {
+    "mtime": 1780973663.5776916,
+    "ast_hash": "59b5612802a0d89844a2efa2a0fe3394",
+    "semantic_hash": "59b5612802a0d89844a2efa2a0fe3394"
+  },
+  "KB/FOG A Series/Design/AC40 Layout_v1.svg": {
+    "mtime": 1781070387.2544734,
+    "ast_hash": "454c56fdb000e97dca53022a7bbf1e18",
+    "semantic_hash": "454c56fdb000e97dca53022a7bbf1e18"
+  },
+  "KB/FOG A Series/Design/AC40_NETWORK_CONF_v1.svg": {
+    "mtime": 1781070681.7275665,
+    "ast_hash": "b47b1f692e30ec16bd804dce3ed3d020",
+    "semantic_hash": "b47b1f692e30ec16bd804dce3ed3d020"
+  },
+  "KB/FOG A Series/Design/AC45 Layout_v1.svg": {
+    "mtime": 1781071179.4723752,
+    "ast_hash": "6102945fb810a9e0933139e97264d609",
+    "semantic_hash": "6102945fb810a9e0933139e97264d609"
+  },
+  "KB/FOG D Series/DC45 Layout/FRONT.jpg": {
+    "mtime": 1779368782.596952,
+    "ast_hash": "b61456a3e3666dcecfd8a6bf7ea25838",
+    "semantic_hash": "b61456a3e3666dcecfd8a6bf7ea25838"
+  },
+  "KB/FOG D Series/DC45 Layout/FRONT.svg": {
+    "mtime": 1778292990.962313,
+    "ast_hash": "cd5af9d36e20e2b4f4632d4e5928e5b4",
+    "semantic_hash": "cd5af9d36e20e2b4f4632d4e5928e5b4"
+  },
+  "KB/FOG D Series/DC45 Layout/SIDE.jpg": {
+    "mtime": 1779368755.678209,
+    "ast_hash": "17b1c5bf00d52069398bf7059070e48d",
+    "semantic_hash": "17b1c5bf00d52069398bf7059070e48d"
+  },
+  "KB/FOG D Series/DC45 Layout/SIDE.png": {
+    "mtime": 1779368624.598864,
+    "ast_hash": "2c69564224ca6fecbbade6079e68c22d",
+    "semantic_hash": "2c69564224ca6fecbbade6079e68c22d"
+  },
+  "KB/FOG D Series/DC45 Layout/TOP.svg": {
+    "mtime": 1779368416.950114,
+    "ast_hash": "f37e61900e9f1bf843252ae59c405062",
+    "semantic_hash": "f37e61900e9f1bf843252ae59c405062"
+  },
+  "KB/FOG D Series/PRODUCTS/DC45 Racks.png": {
+    "mtime": 1776007360.4716687,
+    "ast_hash": "c4505cd62bd8ebd5d4c7519064d490af",
+    "semantic_hash": "c4505cd62bd8ebd5d4c7519064d490af"
+  },
+  "KB/FOG D Series/PRODUCTS/PDC_SLD_EN_dark.svg": {
+    "mtime": 1778590028.596224,
+    "ast_hash": "2d28c5493ad7991d89ae101fb13ca89d",
+    "semantic_hash": "2d28c5493ad7991d89ae101fb13ca89d"
+  },
+  "KB/FOG D Series/PRODUCTS/PDC_SLD_EN_light.svg": {
+    "mtime": 1778590028.6099489,
+    "ast_hash": "4bd900c76700a0e24f3665d3d008e1f5",
+    "semantic_hash": "4bd900c76700a0e24f3665d3d008e1f5"
+  },
+  "KB/MDC Power Flow.png": {
+    "mtime": 1776007360.4727335,
+    "ast_hash": "239c95012684acac1679e811b6eaac52",
+    "semantic_hash": "239c95012684acac1679e811b6eaac52"
+  },
+  "econ2.py": {
+    "mtime": 1785230482.3480175,
+    "ast_hash": "4137e1066b9cd7ec93f4869bacf12642",
+    "semantic_hash": ""
+  },
+  "elec.py": {
+    "mtime": 1785230482.3491,
+    "ast_hash": "9ca6e29502967306a271aa4349b5ecea",
+    "semantic_hash": ""
+  },
+  "model.py": {
+    "mtime": 1785230482.345938,
+    "ast_hash": "ea6897befad06b0e0a28a181d6f62964",
+    "semantic_hash": ""
+  },
+  "opt2.py": {
+    "mtime": 1785230482.346945,
+    "ast_hash": "0fd4082e06161dad2898ea0320886edf",
+    "semantic_hash": ""
+  },
+  "skills-lock.json": {
+    "mtime": 1785232536.0111625,
+    "ast_hash": "f5034bf513b0c64204c43435ab2f671c",
+    "semantic_hash": ""
+  },
+  "Factory/\u534f\u8bae\u6761\u6b3e\u901f\u67e5_\u4e00\u9875\u7eb8_v1.md": {
+    "mtime": 1785148615.934229,
+    "ast_hash": "7cfa0cb6b3ef4977223312df5adf86e4",
+    "semantic_hash": ""
+  },
+  "Factory/\u5382\u623f\u514d\u88c5\u88c5\u4fee\u4e0e\u884c\u8f66\u6807\u51c6_\u534f\u8bae\u9644\u4ef6_v1.md": {
+    "mtime": 1785148594.929517,
+    "ast_hash": "95189e9dad9c7ad3974785f2ae59b6c7",
+    "semantic_hash": ""
+  },
+  "KB/3RD-PARTY/COOLING/Suppliers/TAMFV570.4AFC5-TX-USA-evaluation.md": {
+    "mtime": 1782450308.0932975,
+    "ast_hash": "9c5c34eca53fd18687871e5ce57b29c3",
+    "semantic_hash": ""
+  },
+  "PUBLIC/Reference_Architecture/RA-003_Immersion_0.2MW_All-in-One.md": {
+    "mtime": 1785147485.847178,
+    "ast_hash": "967a08dfab50e0fd2bcb010474f0489c",
+    "semantic_hash": ""
+  },
+  "Reference Architecture/EDGE-AI_ALL-IN-ONE.md": {
+    "mtime": 1785147485.8635027,
+    "ast_hash": "3ab313fa48ea981beefaebb31fd217c1",
+    "semantic_hash": ""
+  },
+  "Reference Architecture/EDGE-AI_ALL-IN-ONE_Delivery.md": {
+    "mtime": 1785147485.8641634,
+    "ast_hash": "b6347852471dffd664259954e099ddd7",
+    "semantic_hash": ""
+  },
+  "Reference Architecture/EDGE_AI_A32x2_H3C_R5500_G6_100kW_Customized_Delivery.md": {
+    "mtime": 1785147485.865047,
+    "ast_hash": "ae52c42219c25c234a500c5ab0732a26",
+    "semantic_hash": ""
+  },
+  "Reference Architecture/EDGE_AI_A32x2_H3C_R5500_G6_100kW_Customized_v1.md": {
+    "mtime": 1785147485.8707795,
+    "ast_hash": "4f082477f00c1410fd79054812719b31",
+    "semantic_hash": ""
+  },
+  "Reference Architecture/Edge_AI_All-in-One_Stack.md": {
+    "mtime": 1785147485.8731246,
+    "ast_hash": "148d4544872d5f24e192986e32003f41",
+    "semantic_hash": ""
+  },
+  "Reference Architecture/Edge_AI_All-in-One_Stack_Delivery.md": {
+    "mtime": 1785147485.8739378,
+    "ast_hash": "d6837a8c82c2fd6c6e90f59f1c8fdb5a",
+    "semantic_hash": ""
+  },
+  "_graph_index.md": {
+    "mtime": 1782296784.7010787,
+    "ast_hash": "e8281d9350833fd918b42b36bcf2d32d",
+    "semantic_hash": ""
+  },
+  "_navigation.md": {
+    "mtime": 1785147485.8755531,
+    "ast_hash": "b6502e14b12c1b6eebb7367c2e171426",
+    "semantic_hash": ""
+  },
+  "hot.md": {
+    "mtime": 1785147485.8767817,
+    "ast_hash": "1100b60cf4fb848cdbdc45eaada84c9e",
+    "semantic_hash": ""
+  },
+  "\u79bb\u804c\u4ea4\u63a5\u6e05\u5355\u4e0e\u6a21\u677f.md": {
+    "mtime": 1783330993.6576035,
+    "ast_hash": "d84ed5c2280b62f6935de91094320c64",
+    "semantic_hash": ""
+  },
+  "Factory/\u6d78\u6ca1\u5f0f\u6db2\u51b7\u7b97\u529b\u8231\u9879\u76ee\u53ef\u78140604v2.pdf": {
+    "mtime": 1785147673.9420826,
+    "ast_hash": "e5ee9d14f1897d1686c482c5d94e95e0",
+    "semantic_hash": ""
+  },
+  "KB/3RD-PARTY/COOLING/Suppliers/TAMFV570.4AFC5-2MW \u78c1\u60ac\u6d6e-de.pdf": {
+    "mtime": 1782449635.2788994,
+    "ast_hash": "fdd20df349dc46e8dbdccab681bd983b",
+    "semantic_hash": ""
+  },
+  "KB/3RD-PARTY/COOLING/Suppliers/TAMFV570.4AFC5-2MW \u78c1\u60ac\u6d6e.pdf": {
+    "mtime": 1782448905.0150046,
+    "ast_hash": "0b1c0ec57514525647d5d2285f53d356",
+    "semantic_hash": ""
+  },
+  "Factory/assets/fig00_zone_map_source.png": {
+    "mtime": 1785149090.6532407,
+    "ast_hash": "6b49452f3a863ce7177e2d3b59b7342b",
+    "semantic_hash": ""
+  },
+  "Factory/assets/fig01_zones_process.png": {
+    "mtime": 1785149090.549478,
+    "ast_hash": "c801967769d6b88043a5101869727c17",
+    "semantic_hash": ""
+  },
+  "Factory/assets/fig02_door_clearance.png": {
+    "mtime": 1785149090.3988636,
+    "ast_hash": "3051bb4f51575fd833417bdbeb12ae17",
+    "semantic_hash": ""
+  },
+  "Factory/assets/fig03_crane_scheme_A.png": {
+    "mtime": 1785149090.452167,
+    "ast_hash": "ee493287fdc4b07e64847b144e9bfa76",
+    "semantic_hash": ""
+  },
+  "Factory/assets/fig04_box_height.png": {
+    "mtime": 1785149090.4974473,
+    "ast_hash": "a2ff1a51affba24a5517a9c07431d377",
+    "semantic_hash": ""
+  },
+  "Factory/assets/fig05_process_steps.png": {
+    "mtime": 1785149090.596027,
+    "ast_hash": "a6df2dd15bd3d79660674cdb82194dfe",
+    "semantic_hash": ""
+  },
+  "Factory/assets/fig06_finish_matrix.png": {
+    "mtime": 1785149090.6524053,
+    "ast_hash": "6fba2001a021d2fc04cae14d13251510",
+    "semantic_hash": ""
+  },
+  "Factory/\u5382\u623f\u529f\u80fd\u5206\u533a\u793a\u610f\u56fe_slide1.png": {
+    "mtime": 1785148250.913623,
+    "ast_hash": "6b49452f3a863ce7177e2d3b59b7342b",
+    "semantic_hash": ""
+  },
+  "Reference Architecture/_assets/20250528-170509.164-1.jpg": {
+    "mtime": 1748423057.0,
+    "ast_hash": "77e8ef03c932e3d3228de99b2b8e9fe6",
+    "semantic_hash": ""
+  },
+  "Reference Architecture/_assets/20250528-170509.164-10.jpg": {
+    "mtime": 1748423055.0,
+    "ast_hash": "8707bd3dc2bdb55239ecf4b89cd45101",
+    "semantic_hash": ""
+  },
+  "Reference Architecture/_assets/20250528-170509.164-11.jpg": {
+    "mtime": 1748423055.0,
+    "ast_hash": "0a0fa3a981f3f8ecb67f1f5a402a0314",
+    "semantic_hash": ""
+  },
+  "Reference Architecture/_assets/20250528-170509.164-12.jpg": {
+    "mtime": 1748423056.0,
+    "ast_hash": "653e1323ad0c031747c352e22903f9d3",
+    "semantic_hash": ""
+  },
+  "Reference Architecture/_assets/20250528-170509.164-13.jpg": {
+    "mtime": 1748423056.0,
+    "ast_hash": "ac3e7c4f0bb0478f00506eebcc42cac5",
+    "semantic_hash": ""
+  },
+  "Reference Architecture/_assets/20250528-170509.164-2.jpg": {
+    "mtime": 1748423057.0,
+    "ast_hash": "57b8e903c26414196fb833930609e185",
+    "semantic_hash": ""
+  },
+  "Reference Architecture/_assets/20250528-170509.164-3.jpg": {
+    "mtime": 1748423055.0,
+    "ast_hash": "96d24f947a32ec8b813e8589fe27bab4",
+    "semantic_hash": ""
+  },
+  "Reference Architecture/_assets/20250528-170509.164-4.jpg": {
+    "mtime": 1748423057.0,
+    "ast_hash": "165dc0992600f378b4cd190599eff94a",
+    "semantic_hash": ""
+  },
+  "Reference Architecture/_assets/20250528-170509.164-5.jpg": {
+    "mtime": 1748423057.0,
+    "ast_hash": "b0897fdf7d6b2366a6b3e6d216477d2b",
+    "semantic_hash": ""
+  },
+  "Reference Architecture/_assets/20250528-170509.164-7.jpg": {
+    "mtime": 1748423055.0,
+    "ast_hash": "e62c6b5d692381373ba9537145de7ee3",
+    "semantic_hash": ""
+  },
+  "Reference Architecture/_assets/20250528-170509.164-8.jpg": {
+    "mtime": 1748423054.0,
+    "ast_hash": "f19cbf31f02f6ec8c2aeeddd07f42213",
+    "semantic_hash": ""
+  },
+  "Reference Architecture/_assets/20250528-170509.164-9.jpg": {
+    "mtime": 1748423054.0,
+    "ast_hash": "214c81d56cee04fb36f843d5a0952909",
+    "semantic_hash": ""
+  },
+  "Reference Architecture/_assets/AC20-Stack Back.png": {
+    "mtime": 1783863215.3385067,
+    "ast_hash": "1cc0ffd158416b695c6c6b24389d152b",
+    "semantic_hash": ""
+  },
+  "Reference Architecture/_assets/AC20-Stack Front.png": {
+    "mtime": 1783863215.3460698,
+    "ast_hash": "abe4f4f69df2b5830110f1f1be00f272",
+    "semantic_hash": ""
+  },
+  "Reference Architecture/_assets/AC20-Stack Y-View.png": {
+    "mtime": 1783863215.3518467,
+    "ast_hash": "3c94880e2adf376ba2f669466e29f14b",
+    "semantic_hash": ""
+  },
+  "Reference Architecture/_assets/AC20_All-in-One_external.png.png": {
+    "mtime": 1783844100.430409,
+    "ast_hash": "bbfed9c1db2d527b6d7d62da9ca3a7cd",
+    "semantic_hash": ""
+  },
+  "Reference Architecture/_assets/AC20_LAYOUT.PNG.png": {
+    "mtime": 1783844317.681,
+    "ast_hash": "9278cfba81625606e174d3365160d5a2",
+    "semantic_hash": ""
+  },
+  "Reference Architecture/_assets/\u53f3\u89c6\u56fe.696.png": {
+    "mtime": 1747125706.0,
+    "ast_hash": "21fd8fd38adb3b04f8a67f20cc7f08ad",
+    "semantic_hash": ""
+  },
+  "Reference Architecture/_assets/\u540e\u89c6\u56fe.694.png": {
+    "mtime": 1747125384.0,
+    "ast_hash": "118d6f6118931c7ef5d0200cc719a891",
+    "semantic_hash": ""
+  },
+  "Reference Architecture/_assets/\u5de6\u89c6\u56fe.697.png": {
+    "mtime": 1747125824.0,
+    "ast_hash": "1b66c3e26b2d28a892b7c81f8d1a4a83",
+    "semantic_hash": ""
+  },
+  "Reference Architecture/_assets/\u5e95\u89c6\u56fe.699.png": {
+    "mtime": 1747126204.0,
+    "ast_hash": "424c44a3c509853f83cee21b7007e8ef",
+    "semantic_hash": ""
+  },
+  "Reference Architecture/_assets/\u900f\u89c6\u56fe.702.png": {
+    "mtime": 1747282058.0,
+    "ast_hash": "c9f0034fee2ef41379177894094a8fb1",
+    "semantic_hash": ""
+  },
+  "Reference Architecture/_assets/\u9876\u89c6\u56fe.698.png": {
+    "mtime": 1747189218.0,
+    "ast_hash": "669fce6c1b8fc92fc61cc06cbe7c5e54",
+    "semantic_hash": ""
+  }
+}

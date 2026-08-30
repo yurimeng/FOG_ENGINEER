@@ -34,19 +34,19 @@ source_anchors:
 
 | 文件 | 说明 |
 |------|------|
-| [[../../UPS/Suppliers/Eaton/UPS_EATON_9395XR]] | EATON 9395XR 系列 UPS(AC40/AC45/DC45 全覆盖)|
+| [[UPS_EATON_9395XR]] | EATON 9395XR 系列 UPS(AC40/AC45/DC45 全覆盖)|
 | `UPS/Suppliers/Eaton/*.pdf` | EATON 9395XR / 93LiG2 电池组 datasheet |
-| [[../../BESS/Suppliers/TESLA MEGAPACK 2 XL]] | Tesla Megapack 兆瓦级 BESS |
-| [[../../BESS/Suppliers/Gotion ESC480-125P261-UL]] | 国轩工商业储能一体机 |
+| [[TESLA MEGAPACK 2 XL]] | Tesla Megapack 兆瓦级 BESS |
+| [[Gotion ESC480-125P261-UL]] | 国轩工商业储能一体机 |
 | `Busbar/Suppliers/Siemens/*.pdf` | Siemens XL-III / XL-F 母线 datasheet |
 
 ## 4.2 UPS（IT Zone 标配）
 
 | IT Zone | UPS 型号 | 模块数 | 每模块 | 总功率 | 发热量 | UPS 放置 | UPS电池后备时间 | 参考文档 | 状态 |
 |---------|---------|--------|--------|--------|--------|---------|--------------|---------|------|
-| **AC40** | EATON 9395XR-600 | 4 UPM | 150kW | 600kW | ~7.9kW | **外置(客户自备)** | ~10 分钟(客户自备 2×93LiG2) | [[../../UPS/Suppliers/Eaton/UPS_EATON_9395XR]] | ✅ |
-| **AC45** | EATON 9395XR-600 | 4 UPM | 150kW | 600kW | ~7.9kW | 内置(专用电力舱),UL 合规 | ~20 分钟(内置 2×93LiG2) | [[../../UPS/Suppliers/Eaton/UPS_EATON_9395XR]] | ✅ |
-| **DC45** | EATON 9395XR-1500 | 10 UPM | 150kW | 1500kW | ~46.9kW | 内置,UL 合规 | ~8 分钟(内置 3×93LiG2) | [[../../UPS/Suppliers/Eaton/UPS_EATON_9395XR]] | ✅ |
+| **AC40** | EATON 9395XR-600 | 4 UPM | 150kW | 600kW | ~7.9kW | **外置(客户自备)** | ~10 分钟(客户自备 2×93LiG2) | [[UPS_EATON_9395XR]] | ✅ |
+| **AC45** | EATON 9395XR-600 | 4 UPM | 150kW | 600kW | ~7.9kW | 内置(专用电力舱),UL 合规 | ~20 分钟(内置 2×93LiG2) | [[UPS_EATON_9395XR]] | ✅ |
+| **DC45** | EATON 9395XR-1500 | 10 UPM | 150kW | 1500kW | ~46.9kW | 内置,UL 合规 | ~8 分钟(内置 3×93LiG2) | [[UPS_EATON_9395XR]] | ✅ |
 
 > 注：UPS 型号数字代表总 UPS 功率(kW)。9395XR-600 ≠ 600kVA,而是 4×150kW = 600kW。**AC40 UPS 及 UPS电池需客户外置自备;AC45/DC45 UPS 及 UPS电池内置于集装箱。**
 
@@ -62,8 +62,8 @@ source_anchors:
 
 | 品牌/型号 | 类型 | 适用场景 | 参考文档 | 状态 |
 |----------|------|---------|---------|------|
-| TESLA Megapack 2 XL | 大型储能(集装箱级)| 城市边缘 / 高 ESG | [[../../BESS/Suppliers/TESLA MEGAPACK 2 XL]] | ✅ |
-| 国轩 ESC480-125P261-UL | 工商业储能一体机 | 成本优化 / 国产方案 | [[../../BESS/Suppliers/Gotion ESC480-125P261-UL]] | ✅ |
+| TESLA Megapack 2 XL | 大型储能(集装箱级)| 城市边缘 / 高 ESG | [[TESLA MEGAPACK 2 XL]] | ✅ |
+| 国轩 ESC480-125P261-UL | 工商业储能一体机 | 成本优化 / 国产方案 | [[Gotion ESC480-125P261-UL]] | ✅ |
 
 ## 4.5 电力设备
 

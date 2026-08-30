@@ -9,13 +9,13 @@
 #   unknown   = 文档未记录，标 TBD，已进入 t2t3-open-questions.md
 # 铁律：无编造数字。每个非 TBD 数字都带 source + confidence。
 # 数据来源说明：
-#   AC40 → KB/FOG A Series/PRODUCTS_AC40.md (V1.4, 2026-06-10)
-#   AC45 → KB/FOG A Series/PRODUCTS_AC45.md (V1.3, 2026-06-10)
-#   A32  → KB/FOG A Series/PRODUCTS_A32.md  (V1.4, 2026-06-10)  [浸没槽单柜，AC 系列内部组件]
-#   DC45 → KB/FOG D Series/PRODUCTS/DC45 Tech Spec EN.md (V1.4, 2026-05-21)
+#   AC40 → KB/IMMERSION/PRODUCTS_I400C40.md (V1.4, 2026-06-10)
+#   AC45 → KB/IMMERSION/PRODUCTS_I400C45.md (V1.3, 2026-06-10)
+#   A32  → KB/IMMERSION/PRODUCTS_I50TS.md  (V1.4, 2026-06-10)  [浸没槽单柜，AC 系列内部组件]
+#   DC45 → KB/LIQUID/L1240C45/PRODUCTS/L1240C45 Tech Spec EN.md (V1.4, 2026-05-21)
 #   Chiller → KB/3RD-PARTY/COOLING/DESIGN/Hybrid Chiller Requirement V5.md (2026-06-06)
 #            + KB/3RD-PARTY/COOLING/Suppliers/TICA_..._Configuration_Review_V2.2.md
-#   电气负荷 → KB/FOG A Series/Design/AC40 工作负荷.md (415VAC 计算书, 引于 PRODUCTS_AC40 §13)
+#   电气负荷 → KB/IMMERSION/I400C40/I400C40 工作负荷.md (415VAC 计算书, 引于 PRODUCTS_I400C40 §13)
 #   网络/监控 → DC45 Tech Spec §10 + A32 §11 控制系统 + DC45 Compliance Checklist
 # =============================================================================
 
@@ -58,25 +58,25 @@ models:
   # ===========================================================================
   - model: AC40
     marketing_name: ""          # {来源: 无, 置信度: unknown} 见 naming_crosswalk
-    series: immersion           # {来源: PRODUCTS_AC40 §1, 置信度: confirmed}
-    container: 40ft             # {来源: PRODUCTS_AC40 §1, 置信度: confirmed}
+    series: immersion           # {来源: PRODUCTS_I400C40 §1, 置信度: confirmed}
+    container: 40ft             # {来源: PRODUCTS_I400C40 §1, 置信度: confirmed}
     rated_power_kw:
       value: "推荐 360 / 最大 400"
-      source: PRODUCTS_AC40 §2 核心参数
+      source: PRODUCTS_I400C40 §2 核心参数
       confidence: confirmed
     rated_cooling_kw:
       value: "≥ 360（8×A32，推荐45/最大50kW each）；外制冷由配对 Hybrid Cooling System 承担"
-      source: PRODUCTS_AC40 §2 / §5；MDC §6（冷却 1:1）
+      source: PRODUCTS_I400C40 §2 / §5；MDC §6（冷却 1:1）
       confidence: confirmed
     total_facility_load_kw:
       value: "~400–480（取决于 PUE 与环境温度）"
-      source: PRODUCTS_AC40 §3
+      source: PRODUCTS_I400C40 §3
       confidence: confirmed
     structure:
       tank:
         value: 8
         detail: "8 × A32 浸没槽（50kW/柜）"
-        source: PRODUCTS_AC40 §2 / §5.1
+        source: PRODUCTS_I400C40 §2 / §5.1
         confidence: confirmed
       node_per_tank:
         value: "TBD（随服务器单机功耗变化；推算 4–10）"
@@ -97,45 +97,45 @@ models:
       cdu:
         value: "16（每 Tank 内置 2×CDU，1+1 / 2N 冗余 → 8×2）"
         detail: "单 CDU = 2泵 + 1板换 + 1压力传感器 + 电子三通阀 + 过滤器"
-        source: A32 §2 / §10 CDU 结构；PRODUCTS_AC40 §5.1
+        source: A32 §2 / §10 CDU 结构；PRODUCTS_I400C40 §5.1
         confidence: confirmed
       air_cooled_cabinet:
         value: "1（10kW 风冷机柜，独立空调）"
-        source: PRODUCTS_AC40 §5.2
+        source: PRODUCTS_I400C40 §5.2
         confidence: confirmed
       ups:
         value: "1 × EATON 9395XR-600（4 功率模块 ×150kW = 600kW，内部 N+1）"
         placement: "外置（客户自备）—— 不含在 AC40 本体内"
-        source: PRODUCTS_AC40 §2 / §10
+        source: PRODUCTS_I400C40 §2 / §10
         confidence: confirmed
       ups_battery:
         value: "2 × 93LiG2（332kW/柜，~10min 后备，外置客户自备）"
-        source: PRODUCTS_AC40 §2 / §10
+        source: PRODUCTS_I400C40 §2 / §10
         confidence: confirmed
         note: "UPS 电池（分钟级）≠ BESS（小时级，Power Zone）"
       busbar:
         value: "TBD（AC 系列文档未提母线；配电经 PDC1 + IT-PDC1 + IT-PDC2 三柜，非母线架构）"
-        source: PRODUCTS_AC40 §6.1 / §13 配电拓扑
+        source: PRODUCTS_I400C40 §6.1 / §13 配电拓扑
         confidence: estimated   # AC 系列用配电柜而非 busbar，母线为 DC45 特征
       tou_per_busbar:
         value: "N/A（AC40 无母线/TOU；负载经 IT-PDC1/2 直配各 Tank）"
-        source: PRODUCTS_AC40 §13
+        source: PRODUCTS_I400C40 §13
         confidence: confirmed
       pdc:
         value: "3 配电柜：动力配电柜 PDC1 + IT 配电柜 IT-PDC1 + IT-PDC2"
-        source: PRODUCTS_AC40 §13（415VAC 负荷计算书）
+        source: PRODUCTS_I400C40 §13（415VAC 负荷计算书）
         confidence: confirmed
       pdu_per_rack:
         value: "2 / Tank（正面双路供电，对应双路市电/U电）"
-        source: A32 §12 配电器件 / PRODUCTS_AC40 §6.1
+        source: A32 §12 配电器件 / PRODUCTS_I400C40 §6.1
         confidence: confirmed
       ats:
         value: "1（两路输入「U电 + 市电」经 ATS 切换）"
-        source: PRODUCTS_AC40 §6.1
+        source: PRODUCTS_I400C40 §6.1
         confidence: confirmed
       switch:
         value: "8（IT-PDC1 负荷表「交换机 QTY=8」；网络设备由集成商「引澜」提供）"
-        source: PRODUCTS_AC40 §13.2 / PRODUCTS_NETWORK.md
+        source: PRODUCTS_I400C40 §13.2 / PRODUCTS_NETWORK.md
         confidence: confirmed
     sensors:
       leak:
@@ -176,21 +176,21 @@ models:
     container: 45ft
     rated_power_kw:
       value: 400
-      source: PRODUCTS_AC45 §2
+      source: PRODUCTS_I400C45 §2
       confidence: confirmed
     rated_cooling_kw:
       value: "≥ 400（8×A32 @50kW）；外制冷由配对 Hybrid Cooling System 承担"
-      source: PRODUCTS_AC45 §2 / §5；MDC §6
+      source: PRODUCTS_I400C45 §2 / §5；MDC §6
       confidence: confirmed
     total_facility_load_kw:
       value: "~440–500（取决于 PUE；含电力舱 UPS 发热 ~7.9kW）"
-      source: PRODUCTS_AC45 §3
+      source: PRODUCTS_I400C45 §3
       confidence: confirmed
     structure:
       tank:
         value: 8
         detail: "8 × A32（50kW/柜）"
-        source: PRODUCTS_AC45 §2
+        source: PRODUCTS_I400C45 §2
         confidence: confirmed
       node_per_tank:
         value: "TBD（同 AC40，随单机功耗 ≈4–8）"
@@ -207,36 +207,36 @@ models:
         confidence: confirmed
       cdu:
         value: "16（8 Tank × 2 CDU，2N）"
-        source: A32 §10 / PRODUCTS_AC45 §5.1
+        source: A32 §10 / PRODUCTS_I400C45 §5.1
         confidence: confirmed
       air_cooled_cabinet:
         value: "1（10kW）"
-        source: PRODUCTS_AC45 §5.3
+        source: PRODUCTS_I400C45 §5.3
         confidence: confirmed
       ups:
         value: "1 × EATON 9395XR-600（4×150kW = 600kW，内部 N+1）"
         placement: "内置专用电力舱（与 IT Zone 物理隔离），满足 UL"
-        source: PRODUCTS_AC45 §2 / §11.1 / §13
+        source: PRODUCTS_I400C45 §2 / §11.1 / §13
         confidence: confirmed
       ups_battery:
         value: "2 × 93LiG2（332kW/柜，共664kW，~20min 后备，内置电力舱）"
-        source: PRODUCTS_AC45 §2 / §13
+        source: PRODUCTS_I400C45 §2 / §13
         confidence: confirmed
       power_bay:
         value: "1 电力舱（独立散热通道，独立进/排风）"
-        source: PRODUCTS_AC45 §4 / §5.2
+        source: PRODUCTS_I400C45 §4 / §5.2
         confidence: confirmed
       busbar:
         value: "TBD（同 AC40，配电经 PDC1 + IT-PDC1/2，非母线）"
-        source: PRODUCTS_AC45 §12
+        source: PRODUCTS_I400C45 §12
         confidence: estimated
       tou_per_busbar:
         value: "N/A（无母线/TOU）"
-        source: PRODUCTS_AC45 §12
+        source: PRODUCTS_I400C45 §12
         confidence: confirmed
       pdc:
         value: "3（PDC1 + IT-PDC1 + IT-PDC2）+ 电力舱配电"
-        source: PRODUCTS_AC45 §12 / §13
+        source: PRODUCTS_I400C45 §12 / §13
         confidence: confirmed
       pdu_per_rack:
         value: "2 / Tank（双路供电）"
@@ -244,11 +244,11 @@ models:
         confidence: confirmed
       ats:
         value: "1（双路市电/U电 → ATS → UPS）"
-        source: PRODUCTS_AC45 §13
+        source: PRODUCTS_I400C45 §13
         confidence: confirmed
       switch:
         value: "8（IT-PDC1 负荷表「交换机 QTY=8」）"
-        source: PRODUCTS_AC45 §12.2
+        source: PRODUCTS_I400C45 §12.2
         confidence: confirmed
     sensors:
       leak:
@@ -319,20 +319,20 @@ models:
     rated_power_kw:
       value: 1240
       detail: "8 × 150kW DLC rack + 1 × 40kW 风冷 rack"
-      source: DC45 Tech Spec EN §3 / §14（V1.4 权威值；旧 8×155kW 已弃用）
+      source: L1240C45 Tech Spec EN §3 / §14（V1.4 权威值；旧 8×155kW 已弃用）
       confidence: confirmed
     rated_cooling_kw:
       value: "CDU ≥1500；室外侧散热基线 ≥1700；TCS 总散热 S-Max ≈1352"
-      source: DC45 Tech Spec EN §5.1 / §5.2 / §14
+      source: L1240C45 Tech Spec EN §5.1 / §5.2 / §14
       confidence: confirmed
     total_facility_load_kw:
       value: "~1325–1675（取决于 PUE 1.07–1.35）"
-      source: DC45 Tech Spec EN §3
+      source: L1240C45 Tech Spec EN §3
       confidence: confirmed
     structure:
       rack:
         value: "9（8 DLC @150kW + 1 风冷 @40kW），48U / 1200深 / 800宽"
-        source: DC45 Tech Spec EN §3 / §4
+        source: L1240C45 Tech Spec EN §3 / §4
         confidence: confirmed
       node_per_rack:
         value: "TBD（随 SXM 整机功耗变化；推算 ~10/rack @150kW）"
@@ -352,48 +352,48 @@ models:
       cold_plate_manifold:
         value: "2/rack（冷板≤100）或 3/rack（>100，NVL72级）→ 整箱 16–24"
         detail: "每 manifold 20–50 支路，1.6–2.1 L/min/支路，入口 PICV + 流量计"
-        source: DC45 Tech Spec EN §4.1
+        source: L1240C45 Tech Spec EN §4.1
         confidence: confirmed
       cdu:
         value: "1 主 CDU（Branch1，≥1500kW，二次流量≥175 m³/h，VFD 二次泵，2N 或 N+1）"
-        source: DC45 Tech Spec EN §5.2 / §14
+        source: L1240C45 Tech Spec EN §5.2 / §14
         confidence: confirmed
       rdhx:
         value: "9 × VERTIV CoolLoop DCD35（被动后门换热器，DN25；8 在 DLC 后门 + 1 在风冷后门）"
         detail: "单台名义 35kW（max 66kW），最大风量 11200 m³/h，最大水流 5.3 m³/h"
-        source: DC45 Tech Spec EN §5.3
+        source: L1240C45 Tech Spec EN §5.3
         confidence: confirmed
       ceilair:
         value: "9 × STULZ OHS-084-DG-FC（吊顶自带 DX + 自由冷，EG/PG 兼容）"
         detail: "单台名义 25.6kW；9台共顶载 ~2250kg（需结构核算）；顶部无 N+1"
-        source: DC45 Tech Spec EN §5.4 / §5.6
+        source: L1240C45 Tech Spec EN §5.4 / §5.6
         confidence: confirmed
       ups:
         value: "1 × EATON 9395XR-1500（10 功率模块 ×150kW = 1500kW，内部 N+1）"
         placement: "内置"
-        source: DC45 Tech Spec EN §14；PRODUCTS_AC40 §10 对照表
+        source: L1240C45 Tech Spec EN §14；PRODUCTS_I400C40 §10 对照表
         confidence: confirmed
       ups_battery:
         value: "3 × 93LiG2（~8min 后备，内置）"
-        source: DC45 Tech Spec EN §14
+        source: L1240C45 Tech Spec EN §14
         confidence: confirmed
       busbar:
         value: "1 套 SIEMENS 2500A 封闭插接母线（含末端进线箱）"
-        source: DC45 Tech Spec EN §6.1 / §14
+        source: L1240C45 Tech Spec EN §6.1 / §14
         confidence: confirmed
       tou_per_busbar:
         value: "19（8 DLC rack@250A + 1 风冷@100A + 1 主CDU@50A + 9 CeilAir@20A + 1 组 TCS主泵/RDHX控制@32A）"
         note: "电流/MCB 为 V1.4 上限估算，Power Engineer 须按实际铭牌核定"
-        source: DC45 Tech Spec EN §6.1 TOU 配置表
+        source: L1240C45 Tech Spec EN §6.1 TOU 配置表
         confidence: confirmed
       pdu_per_rack:
         value: "1（60A 415V，24位 C19 输出，液磁断路器，后置）"
-        source: DC45 Tech Spec EN §6.2
+        source: L1240C45 Tech Spec EN §6.2
         confidence: confirmed
-        note: "DC45_MDC_BOM 标 250A MCCB / 24位C39，与 Tech Spec 60A/C19 存在差异 → Q-N3"
+        note: "L1240C45_MDC_BOM 标 250A MCCB / 24位C39，与 Tech Spec 60A/C19 存在差异 → Q-N3"
       incoming_switchgear:
         value: "1 面进线开关柜（主断/CT/计量）+ 1 面 UPS 主柜 + 1 面旁路柜"
-        source: DC45 Tech Spec EN §6.1
+        source: L1240C45 Tech Spec EN §6.1
         confidence: confirmed
       fws_main_pump:
         value: "由配对 Hybrid Chiller 集成（CDU 不自带一次泵）"
@@ -405,36 +405,36 @@ models:
         confidence: unknown
     sensors:
       leak:
-        value: "node 级冷板水路漏液探测（必须）；但 DC45_MDC_BOM 未列 → 合规 P2 待补；数量/定位型 TBD"
+        value: "node 级冷板水路漏液探测（必须）；但 L1240C45_MDC_BOM 未列 → 合规 P2 待补；数量/定位型 TBD"
         source: MDC Engineering Handbook L935；DC45 Compliance Checklist 2.5 漏液行（"BOM未列"）
         confidence: estimated
       temp_humidity:
         value: "CDU 进水侧 PT100（22±0.5°C 漂移监测）；室外干球/湿球（IP65）；温湿度传感器（UL 61010-1 待回填）；具体数量 TBD"
-        source: DC45 三支路 V4 L1080；DC45_External_Air_Makeup_PRD §214；Compliance Checklist L391
+        source: DC45 三支路 V4 L1080；L1240C45_External_Air_Makeup_PRD §214；Compliance Checklist L391
         confidence: estimated
       h2:
         value: "UPS 电池舱顶 H₂ 浓度传感器（催化燃烧式 0–100% LEL，2N）"
-        source: DC45_External_Air_Makeup_PRD §90 / §216
+        source: L1240C45_External_Air_Makeup_PRD §90 / §216
         confidence: confirmed
       door:
         value: "检修门开关 + 人员存在传感器；门禁刷卡/人脸（UL 294/EN 60839）"
-        source: DC45_External_Air_Makeup_PRD §184；DC45 Tech Spec EN §11
+        source: L1240C45_External_Air_Makeup_PRD §184；L1240C45 Tech Spec EN §11
         confidence: confirmed
       smoke_fire:
         value: "ASSD/VESDA 吸气式烟雾探测（EN 54-20）+ 火警主机 + 手报 + 声光；FM-200(HFC-227ea) 灭火；NFPA72 烟+热双交叉"
-        source: DC45 Tech Spec EN §11；Compliance Checklist §1.5
+        source: L1240C45 Tech Spec EN §11；Compliance Checklist §1.5
         confidence: confirmed
       flow:
         value: "每 cold-plate manifold 入口流量计；各支路 PICV；CDU/RDHX/CeilAir 支路流量监测（联动 GPU 降载阈值）"
-        source: DC45 Tech Spec EN §4.1 / §5.6
+        source: L1240C45 Tech Spec EN §4.1 / §5.6
         confidence: confirmed
       electrical:
         value: "电压/电流/功率监测（PDU 面板 + UPS 状态 + EPO 回路）"
-        source: DC45 Tech Spec EN §10
+        source: L1240C45 Tech Spec EN §10
         confidence: confirmed
     protocols:
       value: "PLC-based MODBUS / TCP-IP；远程 SNMP / Web；BMS 集成 MODBUS"
-      source: DC45 Tech Spec EN §10
+      source: L1240C45 Tech Spec EN §10
       confidence: confirmed
     notes: "三支路 TCS（PG25）冷却；UL 组件级认证 + 整机需现场 TUV。母线/TOU 为 DC45 特征（AC 系列无）。"
 

@@ -95,12 +95,12 @@ AM → Client
 
 | 入口 | 引用 | 去向 |
 |------|------|------|
-| PRINCIPLES P8 | [[KB/Guideline/POWER_SYSTEMS_Guideline]] | IT Load vs Total Load |
-| PRINCIPLES P10 | [[AGENTS]] [[KB/PRODUCTS]] | Index-First |
-| ATS §4.3 | [[KB/Guideline/COOLING_SYSTEM_Guideline]] | Zone 两步查询 |
+| PRINCIPLES P8 | [[POWER_SYSTEMS_Guideline]] | IT Load vs Total Load |
+| PRINCIPLES P10 | [[MDC/AGENTS]] [[KB/PRODUCTS]] | Index-First |
+| ATS §4.3 | [[COOLING_SYSTEM_Guideline]] | Zone 两步查询 |
 | ATS §5.2 | 6 专家 Guideline 速查表 | 专家调度 |
 | AM §4.1 | [[_Platform/Tools/Tools]] | Obsidian CLI |
-| Collaboration §3.1 | [[KB/Guideline/POWER_SYSTEMS_Guideline]] | RFI 必澄清项 |
+| Collaboration §3.1 | [[POWER_SYSTEMS_Guideline]] | RFI 必澄清项 |
 
 ---
 
