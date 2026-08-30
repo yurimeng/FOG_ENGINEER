@@ -230,8 +230,9 @@ L1800C45 是**双环路（`D`）**产品。箱内并行运行两条在介质、�
 | 供电 | **400 V / 50 Hz / 3Ph / N / PE** —— 无 [[PRD-STULZ-CeilAir]] 的 60 Hz / CE 缺席阻塞 | ✅ 选型书 |
 | 水管接口 | 进 / 出各 1 只 **1.5" 外螺纹**，机组侧下部（中心距底 608 / 763 mm） | ✅ 外形图 |
 | 海拔基准 | 0 m —— 非 0 海拔须重新选型 | ✅ 选型书 |
-| **台数** | **4× STULZ CRS 560 CW** | ✅ 站点 Designer profile `l1800.json:27-28` |
-| 冗余模型 | ⏳ **#unconfirmed** —— 4 台是 N 还是 3+1，等 Cooling Engineer 锁定 列间侧总热负荷后定（[[PRD-STULZ-CRS560CW]] Q1），预期 TBD | ⏳ |
+| **台数与机型** | **2× STULZ CRS 560 CW + 6× STULZ CRS 330 CW**（混配，共 8 台） —— 净冷量合计 2×54.7 + 6×33 = **307.4 kW** | ✅ Yuri 确认 2026-08-30 |
+| 冗余模型 | ⏳ **#unconfirmed** —— 8 台混配的冗余归属（大机小机各自是 N 还是 N+1）未定，等 Cooling Engineer 出算书（[[PRD-STULZ-CRS560CW]] Q1），预期 TBD | ⏳ |
+| 排布逻辑 | 8 台列间机对应 9 个机柜位（8 液冷 + 1 风冷），嵌在机柜之间；台数由**排布**决定，不是热负荷除单机容量 | 🔶 derived |
 | 冷冻水 ±2 °C 漂移下的冷量衰减曲线 | ⏳ **#unconfirmed** —— 等 STULZ 提供（[[PRD-STULZ-CRS560CW]] Q2），预期 TBD | ⏳ |
 | 集成加湿器是否选配 / 水质与排水要求 | ⏳ **#unconfirmed** —— 等 STULZ 确认（[[PRD-STULZ-CRS560CW]] Q3），预期 TBD | ⏳ |
 | 「非标版」相对标准机型的改动清单 | ⏳ **#unconfirmed** —— 等 STULZ 书面说明（[[PRD-STULZ-CRS560CW]] Q7），预期 TBD | ⏳ |
@@ -437,7 +438,7 @@ L1800C45 的 UPS、电池与 PDC **置于集装箱之外，由场站提供**。�
 | 二次侧介质 | **纯水，0% 乙二醇** | ✅ 选型书 |
 | **CDU** | **STULZ SCR 14103 W** · 1200 kW/台 · 103.8 m³/h · Tri-Clamp DN100 顶出 · 泵组 20.0 kW | ✅ ATS approved |
 | **列间空调** | **STULZ CRS 560 CW** · 57.3 kW/台（净 54.7）· 11,200 m³/h · 8.2 m³/h · 52 kPa · 400 V/50 Hz | ✅ ATS approved |
-| CDU / 列间空调台数 | **CDU 2× SCR 14103 W · 列间空调 4× CRS 560 CW** | ✅ 站点 Designer profile |
+| CDU / 列间空调台数 | **CDU 2× SCR 14103 W · 列间空调 **2× STULZ CRS 560 CW + 6× STULZ CRS 330 CW**（混配，共 8 台）** | ✅ Yuri 确认 |
 | CDU / 列间空调 冗余模型 | ⏳ **#unconfirmed** —— 等 Cooling Engineer 算书，预期 TBD | ⏳ |
 | 室外侧排热基线 | ⏳ **#unconfirmed** —— 等 Cooling Engineer 双环路热平衡计算，预期 TBD | ⏳ |
 | PUE | **`1.0x`** —— 逐站点用 <https://mdcx.org>（TCO / Designer）计算，不给固定值与区间 | ✅ 裁定 |
@@ -460,6 +461,7 @@ L1800C45 的 UPS、电池与 PDC **置于集装箱之外，由场站提供**。�
 
 | 版本 | 日期 | 变更摘要 |
 |---|---|---|
+| v1.3 | 2026-08-30 | 列间空调实配确认（Yuri）：**2× CRS 560 CW + 6× CRS 330 CW，共 8 台、307.4 kW**。站点 profile 的 `crs560cw × 4` 写法作废；补排布逻辑说明 |
 | v1.2 | 2026-08-30 | 吸收站点审计：机柜定 8× 220 kW 液冷 + 1× 40 kW 风冷 = 9 柜、CDU 定 2× SCR 14103 W、列间空调 定 4× CRS 560 CW（站点 `l1800.json`）。台数从 ⏳ 转 ✅，冗余模型仍 ⏳ |
 | v1.1 | 2026-08-30 | **传导 2026-08-30 Yuri 四条裁定（[[PRODUCT_SPEC_BASELINE]] v2.0）。** ① **双环路 GPU 侧温位链落定**：外冷源出水 32–36 °C → CDU approach +4 °C → GPU 冷板进水 **36–40 °C**；原「GPU 36–45 °C」上限 45 改 40（§2 / §5.1 / §14），并说明已批 STULZ SCR 14103 W 选型书（FWS 36/46 · TCS 40/50）是这条链的**热端设计点**、与裁定一致；原 ⛔ 改 ✅ 裁定。② **PUE 一律写 `1.0x`**，Total Facility Load 改为「随 PUE 变化，逐站点用 <https://mdcx.org>（TCO / Designer）计算」（§3.1 / §5.4 / §14），原 ⏳ 改 ✅；§3 的 IT Load vs Total Facility Load 概念区分按硬规则保留。③ **交期统一为首批 120 天 EXW / Scale 90 天 EXW（自下单起算）**，新增假负载运行期 5–30 天（Supermicro 建议，不含在 EXW 承诺内），商务 / 运输 / 安装一律不予承诺；**删除** §12.2 的 ⛔ 双口径表与 ~185–230 天、§12.3 与 §13 的四阶段周期与「现场安装与调试 3–4 周」。④ **质保统一为核心部件自 EXW 起一年 + 后续年份按年收取服务费**，ONSITE / NBD / 9×5 / 24×7 等响应级别一律以 Invoice 为准（§12.3 / §14）。 |
 | v1.0 | 2026-08-30 | 首版。按 [[L1240C45_Tech_Spec_EN]] 的 14 节结构建立 L1800C45 中文 Tech Spec，单文件形式、保留 `^sec-1-layout` … `^sec-14-summary` 锚点。全部数值取自 [[PRODUCT_SPEC_BASELINE]]；冷却设备参数镜像自 ATS approved 的 [[PRD-STULZ-SCR14103W]] 与 [[PRD-STULZ-CRS560CW]]。按 [[UNCONFIRMED_Convention]] 对结构 / 环境 / 网络 / 消防 / 服务五组字段逐行标 ⏳ 并写明等谁、等什么、预期时点；§12 如实记录交期 ⛔ 口径冲突；§6.1 正面表述「UPS 箱外是配置不是降级」；§3.1 显式区分 IT Load 与 Total Facility Load。**未从 L1240C45 借用任何数值。** |

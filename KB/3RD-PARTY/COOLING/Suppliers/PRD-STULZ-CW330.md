@@ -12,7 +12,7 @@ doc_version: v0.2
 supplier: STULZ
 category: STULZ CyberRow CW — 列间冷冻水空调
 model: CW330（站点组件目录记为 CRS 330 CW）
-applicable_zone: L450C20（L450C20DR150）· 列间侧 10/16 °C —— 2026-08-30 Yuri 裁定
+applicable_zone: L1800C45（6 台，与 CRS 560 CW × 2 混配）· L450C20（2 台 N+1）—— 2026-08-30 Yuri 确认
 status: ⏳ #unconfirmed —— 规格参数未到，厂家预期 2026-08-31（周一）提供
 audience: 人(销售/售前/选型工程师)
 source: 暂无。本文档为占位骨架，等待厂家选型书与外形图
@@ -22,7 +22,12 @@ source: 暂无。本文档为占位骨架，等待厂家选型书与外形图
 
 > ## ⏳ 本文档整份为 `#unconfirmed`
 >
-> **归属已定（2026-08-30 Yuri 裁定）：** 本机型归 **[[KB/LIQUID/L450C20/index|L450C20]]**（`L450C20DR150`）列间侧，**2 台 N+1**。
+> **归属已定（2026-08-30 Yuri 确认）：本机型同时用于两个 SKU。**
+>
+> | SKU | 台数 | 配置 |
+> |---|---|---|
+> | **L1800C45** | **6 台** | 与 **CRS 560 CW × 2** 混配，共 8 台列间机 |
+> | **L450C20** | **2 台** | N+1，单台承载全负荷 |
 >
 > **仍未知的是规格参数** —— 除型号代号与台数外，热工 / 风机 / 水力 / 物理电气四组参数全部待厂家提供。
 >
@@ -55,7 +60,7 @@ source: 暂无。本文档为占位骨架，等待厂家选型书与外形图
 | 站点组件目录型号 | **CRS 330 CW**（`DLC/src/data/components/crah/crs330cw.json`） | ✅ 站点 |
 | 站点已记净冷量 | **33 kW**（gross 36 kW） | ⚠️ 站点标注为 *user-supplied 2026-08-28*，非厂家选型书。风量 6,750 m³/h、风机 1.57 kW、冷冻水流量 4.74 m³/h **全部是按 33/54.7 的比例从 CRS 560 CW 缩放推导**，站点自己写着 *"Replace all three with a WinPlan selection before quoting"* |
 | 标称容量档 | ⏳ **#unconfirmed** —— 若沿用 CRS560CW 的命名规律（560 ↔ 57.3 kW），330 或对应 ≈33 kW，**此为命名推测，不是工程结论，不得引用**。等厂家选型书，预期 2026-08-31 | ⏳ |
-| **归属 SKU** | **L450C20** · 列间侧 · **2 台 N+1** | ✅ 裁定 + 站点 profile |
+| **归属 SKU** | **L1800C45（6 台）· L450C20（2 台 N+1）** | ✅ Yuri 确认 2026-08-30 |
 
 ### 归属 SKU —— 已裁定 ✅
 
@@ -196,8 +201,8 @@ source: 暂无。本文档为占位骨架，等待厂家选型书与外形图
 - 规格基准：[[PRODUCT_SPEC_BASELINE]] §1.2 · §4
 - 同架构参照 PRD：[[PRD-STULZ-CRS560CW]]（**填表时逐字段对照**）
 - 同 SKU 族配套 CDU：[[PRD-STULZ-SCR14103W]]
-- 归属产品：[[KB/LIQUID/L450C20/index|L450C20]]（2 台 N+1）
-- 同族 SKU 的 列间空调：[[PRD-STULZ-CRS560CW]]（L1800C45，4 台）
+- 归属产品：[[KB/LIQUID/L1800C45/index|L1800C45]]（6 台）· [[KB/LIQUID/L450C20/index|L450C20]]（2 台 N+1）
+- 同箱混配的大机型：[[PRD-STULZ-CRS560CW]]（L1800C45 内 2 台）
 - 排除依据：[[CRAH_Replacement_RFQ_Spec V1]]（CW 型在 L1240C45 工况物理不可行）
 - 选型总则：[[COOLING_SYSTEM_Guideline]]
 
@@ -207,5 +212,6 @@ source: 暂无。本文档为占位骨架，等待厂家选型书与外形图
 
 | Version | Date | Summary |
 |---------|------|---------|
+| v0.3 | 2026-08-30 | 适用范围扩为**两个 SKU**：L1800C45 6 台（与 CRS 560 CW × 2 混配）+ L450C20 2 台（N+1）。Yuri 2026-08-30 确认 |
 | v0.2 | 2026-08-30 | **归属落定：L450C20 列间侧、2 台 N+1**（Yuri 裁定「CW330/CW560 同属无 UPS 的 DLC 解决方案」+ 站点 `DLC/src/data/profiles/l450.json:27-28` 与组件目录 `crs330cw.json` 双重佐证）。Q1、Q5 关闭；Q2（2 台能否进 20ft）升为头号风险。规格参数仍全部待厂家提供 |
 | v0.1 | 2026-08-30 | 占位骨架建立。厂家参数未到（预期 2026-08-31 周一）。§2 四组参数表按 [[PRD-STULZ-CRS560CW]] 结构预置以便逐字段比对；§1 记录归属 SKU 的倾向判断（L450C20）与三条依据，并明确标为推理非来源；依据 [[CRAH_Replacement_RFQ_Spec V1]] 排除 L1240C45；§5 建收料清单 8 项；§6 列 Q1–Q8，其中 Q1–Q4 为 P0 |

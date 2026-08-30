@@ -180,7 +180,7 @@ Room-level downflow chilled-water precision air conditioner: all-water coil plus
 | 水管接口 / Water connections | 进 / 出各 1 只 1.5" 外螺纹 · 1 inlet + 1 outlet, 1.5" male thread |
 | 选型海拔基准 / Altitude basis of selection | 0 m —— 非 0 海拔站点重新选型 / non-zero altitude sites are re-selected |
 
-| 列间空调台数 / in-row CW units | **4× STULZ CRS 560 CW** |
+| 列间空调 / In-row CW | **2× STULZ CRS 560 CW + 6× STULZ CRS 330 CW**（共 8 台）<br>2× STULZ CRS 560 CW + 6× STULZ CRS 330 CW (8 units total) |
 
 > 冗余模型按项目 列间侧热负荷确定，在技术澄清阶段提供。
 > Unit count and redundancy model follow the project's in-row CW heat load and are provided during technical clarification.

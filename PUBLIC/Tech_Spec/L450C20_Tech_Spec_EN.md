@@ -30,9 +30,9 @@ Version: v1.1 | Date: 2026-08-30 | Full SKU ID: `L450C20DR150` | Status: `shippe
 > - **Warranty (C-9 closed):** core components for **one year from EXW**, annual service fee thereafter; ONSITE / NBD / 9×5 / 24×7 response levels are **governed by the Invoice** and are neither committed to nor defined here.
 >
 > **v1.0 first release — read this first (still valid):**
-> 1. **L450C20 has the thinnest written basis of the three liquid-cooling SKUs.** The site's customer-facing pages disclose exactly four things: 450 kW IT capacity, 150 kW rack density, the dual-loop temperature levels (GPU 36–40 °C ✅ adjudicated 2026-08-30 / 列间空调 10/16 °C), and the UPS being outside the container. **Every other field has no source.**
-> 2. This SKU has **no DESIGN/ engineering documentation**. Cooling selection is fixed as to model and count (CDU 1× STULZ SCR 14103 W; 列间空调 2× STULZ CRS 330 CW / CW330, N+1), but **the CW330's per-unit ratings have not yet arrived from the vendor** — see [[PRD-STULZ-CW330]].
-> 3. **Do not copy cooling parameters from [[L1800C45_Tech_Spec_EN|L1800C45]].** Both are dual loop at the same nominal temperatures, but L1800C45's SCR 14103 W (1200 kW per unit) and CRS 560 CW (57.3 kW per unit) were selected for 1800 kW in a 45ft shell; neither the capacity class nor the physical envelope fits a 20ft container. Baseline §1.2 marks CDU, 列间空调, secondary fluid and terminal composition for L450C20 as ⏳ across the board.
+> 1. **L450C20 has the thinnest written basis of the three liquid-cooling SKUs.** The site's customer-facing pages disclose exactly four things: 450 kW IT capacity, 150 kW rack density, the dual-loop temperature levels (GPU 36–40 °C ✅ adjudicated 2026-08-30 / in-row CW 10/16 °C), and the UPS being outside the container. **Every other field has no source.**
+> 2. This SKU has **no DESIGN/ engineering documentation**. Cooling selection is fixed as to model and count (CDU 1× STULZ SCR 14103 W; in-row CW 2× STULZ CRS 330 CW / CW330, N+1), but **the CW330's per-unit ratings have not yet arrived from the vendor** — see [[PRD-STULZ-CW330]].
+> 3. **Do not copy cooling parameters from [[L1800C45_Tech_Spec_EN|L1800C45]].** Both are dual loop at the same nominal temperatures, but L1800C45's SCR 14103 W (1200 kW per unit) and CRS 560 CW (57.3 kW per unit) were selected for 1800 kW in a 45ft shell; neither the capacity class nor the physical envelope fits a 20ft container. Baseline §1.2 marks CDU, in-row CW, secondary fluid and terminal composition for L450C20 as ⏳ across the board.
 > 4. **Do not copy anything from [[L1240C45_Tech_Spec_EN|L1240C45]].** That is a different system entirely — single loop, UPS inside, 45ft.
 
 ---
@@ -82,9 +82,9 @@ A 45ft High Cube is a steel box 13.7 m long and 2.99 m tall. There are many plac
 
 L450C20 is built for exactly that: a 20ft standard shell, which puts transport, lifting and access back into the most ordinary category there is.
 
-**State the cost up front: it is more expensive per kW.** A dual-loop CDU, 列间空调, two pipework systems, controls, fire protection and monitoring — those fixed costs are amortised over 450 kW instead of 1240 kW or 1800 kW, so unit cost is necessarily higher. **That is not a defect; that is the price of fitting through the opening.** If a customer's site can take a 45ft container, they should buy a 45ft container. The only legitimate reason to choose L450C20 is that a 45ft container cannot get in.
+**State the cost up front: it is more expensive per kW.** A dual-loop CDU, in-row CW, two pipework systems, controls, fire protection and monitoring — those fixed costs are amortised over 450 kW instead of 1240 kW or 1800 kW, so unit cost is necessarily higher. **That is not a defect; that is the price of fitting through the opening.** If a customer's site can take a 45ft container, they should buy a 45ft container. The only legitimate reason to choose L450C20 is that a 45ft container cannot get in.
 
-> **Do not describe this SKU as a stripped-down version.** L450C20 shares the dual-loop architecture and the GPU warm-water / 列间空调 chilled-water scheme with L1800C45, and shares the `R150` density code with L1240C45. It is not a big container cut in half — it is a different shell, laid out from scratch.
+> **Do not describe this SKU as a stripped-down version.** L450C20 shares the dual-loop architecture and the GPU warm-water / in-row CW chilled-water scheme with L1800C45, and shares the `R150` density code with L1240C45. It is not a big container cut in half — it is a different shell, laid out from scratch.
 
 **Division of labour against the other two SKUs on the line:**
 
@@ -119,7 +119,7 @@ L450C20 is built for exactly that: a 20ft standard shell, which puts transport, 
 | Metric | Definition | L450C20 value | Confidence |
 |---|---|---|---|
 | **IT Load** | Electrical power actually consumed by servers / GPUs, excluding all cooling and distribution losses | **450 kW** | ✅ site |
-| **Total Facility Load** | IT Load + CDU pump power + 列间空调 fans + outdoor heat rejection + distribution losses + auxiliaries | **Varies with PUE — computed per site with the TCO / Designer at <https://mdcx.org>** | ✅ adjudicated |
+| **Total Facility Load** | IT Load + CDU pump power + in-row CW fans + outdoor heat rejection + distribution losses + auxiliaries | **Varies with PUE — computed per site with the TCO / Designer at <https://mdcx.org>** | ✅ adjudicated |
 
 > **PUE is written `1.0x` everywhere (adjudicated by Yuri, 2026-08-30 · C-2 closed).** No fixed value, no range, no "typical value". Facility load varies with PUE and is **computed per site with the TCO / Designer at <https://mdcx.org>** — that is the route to take when a customer needs a facility load for a utility application, **not a back-of-envelope conversion at PUE 1.15 or similar**.
 >
@@ -149,7 +149,7 @@ L450C20 is a **dual-loop (`D`)** product, sharing the architectural pattern of [
 | Loop | Load carried | Temperatures | Fluid | Terminal equipment |
 |---|---|---|---|---|
 | **Loop A — GPU-side warm water** | GPU / CPU cold-plate liquid load (the great majority of the IT heat) | **GPU cold-plate inlet 36–40 °C** ✅ adjudicated; outdoor-plant supply into the CDU primary side **32–36 °C**; CDU approach **+4 °C** | ⏳ **#unconfirmed** — waiting on the L450C20 CDU selection sheet to fix the secondary fluid (pure water / PG / EG), expected TBD | ⏳ CDU unselected |
-| **Loop B — In-row CW chilled water** | Residual room air load (whatever the cold plates do not take, power modules, network gear, auxiliaries) | **10 / 16 °C chilled water** | ⏳ **#unconfirmed** — waiting on the CW330 selection sheet to fix the heat-transfer medium and glycol concentration, expected 2026-08-31 | ✅ 列间空调 fixed at 2× CRS 330 CW (N+1) |
+| **Loop B — In-row CW chilled water** | Residual room air load (whatever the cold plates do not take, power modules, network gear, auxiliaries) | **10 / 16 °C chilled water** | ⏳ **#unconfirmed** — waiting on the CW330 selection sheet to fix the heat-transfer medium and glycol concentration, expected 2026-08-31 | ✅ in-row CW fixed at 2× CRS 330 CW (N+1) |
 
 **Why they have to be separate:** cold plates will happily take water in the 40 °C class; air-side terminals will not — bringing room return air down to a usable supply temperature requires coil water in the 10 °C class. Force both onto one loop and either the cold-plate side is stuck with cold water (throwing away free-cooling hours and driving up PUE) or the in-row CW side runs short of capacity. Decoupled, Loop A's 36–40 °C warm water can be rejected on dry coolers alone in most climates, while Loop B carries a far smaller chilled-water load.
 
@@ -186,7 +186,7 @@ L450C20 is a **dual-loop (`D`)** product, sharing the architectural pattern of [
 
 > ⚠️ **Do not quote any figure from [[PRD-STULZ-SCR14103W]].** That SCR 14103 W is 1200 kW per unit, 2,090 × 900 × 1,200 mm, 1,175 kg operating, selected for 1800 kW in a 45ft shell. 450 kW needs an entirely different capacity class, and the space and load headroom in a 20ft shell is not comparable.
 
-### 5.3 Loop B — 列间空调 (room side)
+### 5.3 Loop B — in-row CW (room side)
 
 | Item | Parameter | Confidence |
 |---|---|---|
@@ -243,7 +243,7 @@ A 20ft container's internal length is about 44% of a 45ft High Cube's. Fit compu
 | 800 V HVDC | **Roadmap Q3 2026, not shipping today** — disclosable, not committable | ✅ site |
 | In-container busbar | ⏳ **#unconfirmed** — waiting on the Power Engineer to select the in-container busbar (its rating depends on the site PDC feeder size and the rack count, neither of which is locked), expected TBD | ⏳ |
 | Per-rack distribution (TOU / MCB ratings) | ⏳ **#unconfirmed** — waiting on the Power Engineer's distribution design; rack count and actual per-rack draw are undetermined, so no ratings can be stated, expected TBD | ⏳ |
-| Cooling-equipment supply | ⏳ **#unconfirmed** — neither CDU nor 列间空调 is selected; waiting on the Cooling Engineer to complete the selection and state pump and fan power, expected TBD | ⏳ |
+| Cooling-equipment supply | ⏳ **#unconfirmed** — neither CDU nor in-row CW is selected; waiting on the Cooling Engineer to complete the selection and state pump and fan power, expected TBD | ⏳ |
 | Power factor | ⏳ **#unconfirmed** — waiting on the Power Engineer (the UPS is off-container, so the value follows the site's UPS model), expected TBD | ⏳ |
 
 ---
@@ -281,9 +281,9 @@ A 20ft container's internal length is about 44% of a 45ft High Cube's. Fit compu
 |---|---|---|
 | Operating temperature range | ⏳ **#unconfirmed** — waiting on the L450C20 `DESIGN/` compliance checklist, expected TBD | ⏳ |
 | Operating humidity range | ⏳ **#unconfirmed** — waiting on the L450C20 `DESIGN/` compliance checklist, expected TBD | ⏳ |
-| Operating altitude | ⏳ **#unconfirmed** — waiting on the L450C20 `DESIGN/` compliance checklist; altitude correction must be rechecked once the 列间空调 is selected, expected TBD | ⏳ |
+| Operating altitude | ⏳ **#unconfirmed** — waiting on the L450C20 `DESIGN/` compliance checklist; altitude correction must be rechecked once the in-row CW is selected, expected TBD | ⏳ |
 | Whole-unit certification path (UL / CE / TUV) | ⏳ **#unconfirmed** — waiting on the Compliance Officer for the L450C20 whole-unit certification path, expected TBD | ⏳ |
-| CDU / 列间空调 component certification | ⏳ **#unconfirmed** — the equipment is unselected, so no certificates can be requested yet; once selected, waiting on the vendors for model-by-model CE / UL / CCC certificate numbers, expected TBD | ⏳ |
+| CDU / in-row CW component certification | ⏳ **#unconfirmed** — the equipment is unselected, so no certificates can be requested yet; once selected, waiting on the vendors for model-by-model CE / UL / CCC certificate numbers, expected TBD | ⏳ |
 
 > ⚠️ **Certification does not transfer by analogy** — neither from the L1240C45 / L1800C45 whole-unit paths, nor from another model by the same vendor ([[PRD-STULZ-CeilAir]] is the precedent for CE being absent).
 
@@ -297,7 +297,7 @@ A 20ft container's internal length is about 44% of a 45ft High Cube's. Fit compu
 | CIOS open-source core | Apache-2.0 — **roadmap**; disclosable, not committable as delivered capability | ✅ site |
 | Digital twin | **NVIDIA Omniverse**, live state projected onto the 3D model | ✅ site |
 | DCM (compute marketplace) | **Roadmap · MVP in development** — **must not be committed to customers as a delivered capability** | ✅ site |
-| CDU / 列间空调 telemetry points and integration | ⏳ **#unconfirmed** — the equipment is unselected; once selected, waiting on the vendors for Modbus / BACnet point lists, expected TBD | ⏳ |
+| CDU / in-row CW telemetry points and integration | ⏳ **#unconfirmed** — the equipment is unselected; once selected, waiting on the vendors for Modbus / BACnet point lists, expected TBD | ⏳ |
 | BMS integration protocol | ⏳ **#unconfirmed** — waiting on L450C20 `DESIGN/` for the monitoring architecture, expected TBD | ⏳ |
 
 ---
@@ -373,7 +373,7 @@ This document, and every KB product document, **contains no price information** 
 | Ground levelness | ⏳ **#unconfirmed** — waiting on L450C20 `DESIGN/`, expected TBD | ⏳ |
 | Maintenance clearances | ⏳ **#unconfirmed** — waiting on the Layout Planner; service space inside a 20ft shell is tight and may require more clearance outside the container, expected TBD | ⏳ |
 | Site climate suitability | ⏳ **#unconfirmed** — the secondary fluid is undetermined (see §5.2); waiting on the CDU selection sheet and an ATS freeze-protection decision before cold-site boundaries can be judged, expected TBD | ⏳ |
-| Noise boundary | ⏳ **#unconfirmed** — the 列间空调 is unselected; waiting on the vendor selection sheet for sound power and sound pressure data, expected TBD | ⏳ |
+| Noise boundary | ⏳ **#unconfirmed** — the in-row CW is unselected; waiting on the vendor selection sheet for sound power and sound pressure data, expected TBD | ⏳ |
 
 ---
 
@@ -395,7 +395,7 @@ This document, and every KB product document, **contains no price information** 
 | Loop B (in-row CW side) | **10 / 16 °C chilled water** | ✅ site |
 | Secondary fluid | ⏳ **#unconfirmed** — waiting on the CDU selection sheet, expected TBD | ⏳ |
 | CDU | ⏳ **#unconfirmed** — no ATS-approved model yet; waiting on a Cooling Engineer selection plus the admission process, expected TBD | ⏳ |
-| 列间空调 | **2× STULZ CRS 330 CW (CW330), N+1** — model and count fixed; ⏳ per-unit ratings pending, expected 2026-08-31, see [[PRD-STULZ-CW330]] | ✅ / ⏳ |
+| in-row CW | **2× STULZ CRS 330 CW (CW330), N+1** — model and count fixed; ⏳ per-unit ratings pending, expected 2026-08-31, see [[PRD-STULZ-CW330]] | ✅ / ⏳ |
 | Terminal composition | ⏳ **#unconfirmed** — waiting on `DESIGN/`, expected TBD | ⏳ |
 | Outdoor heat-rejection baseline | ⏳ **#unconfirmed** — waiting on the Cooling Engineer's dual-loop heat balance, expected TBD | ⏳ |
 | PUE | **`1.0x`** — computed per site with the TCO / Designer at <https://mdcx.org>; no fixed value and no range | ✅ adjudicated |
@@ -419,5 +419,5 @@ This document, and every KB product document, **contains no price information** 
 | Version | Date | Summary |
 |---|---|---|
 | v1.1 | 2026-08-30 | **Yuri's four rulings of 2026-08-30 propagated ([[PRODUCT_SPEC_BASELINE]] v2.0).** (1) **The dual-loop GPU-side temperature chain is fixed**: outdoor-plant supply 32–36 °C → CDU approach +4 °C → GPU cold-plate inlet **36–40 °C**; the former "GPU 36–45 °C" ceiling of 45 becomes 40 (header note / §5.1 / §5.2 / §5.4 / §13 / §14), with a note that this SKU shares the chain with L1800C45 and that the approved STULZ SCR 14103 W selection sheet is its **hot-end design point** (its capacity and envelope still may not be borrowed). (2) **PUE is written `1.0x` everywhere** and Total Facility Load becomes "varies with PUE, computed per site with the TCO / Designer at <https://mdcx.org>" (§3.1 / §5.4 / §14); the former ⏳ becomes ✅, and the §3 IT Load vs Total Facility Load distinction is retained as a hard rule. (3) **Lead time is unified to 120 days EXW for the first batch and 90 days EXW for Scale, counted from order placement**, with a new dummy-load burn-in period of 5–30 days (Supermicro recommendation, outside the EXW commitment); the commercial, freight and installation segments carry no commitment. The §12.2 ⛔ two-basis table and "~185–230 days", and the four-phase cycle and "3–4 weeks on-site installation & commissioning" rows in §12.3 and §13, are **deleted**. (4) **Warranty is unified to core components for one year from EXW plus an annual service fee thereafter**, with ONSITE / NBD / 9×5 / 24×7 response levels governed by the Invoice (§12.3 / §14). |
-| v1.1 | 2026-08-30 | Absorbed Yuri's adjudication and the site audit: 列间空调 fixed at 2× STULZ CRS 330 CW (CW330) N+1, CDU at 1× SCR 14103 W, rack build at 3 liquid-cooled racks with no air rack (site `l450.json`); added the network-equipment placement note arising from the absent air rack and the "two units into 20 ft" risk flag |
-| v1.0 | 2026-08-30 | First release. L450C20 English Tech Spec built on the 14-section structure of [[L1240C45_Tech_Spec_EN]], as a single file preserving anchors `^sec-1-layout` … `^sec-14-summary`. All figures sourced from [[PRODUCT_SPEC_BASELINE]]; the site discloses only IT capacity, rack density, dual-loop temperatures and the power boundary, so every other field is marked ⏳ line by line per [[UNCONFIRMED_Convention]], each naming who is waited on, for what, and by when. §5 records the 列间空调 as suspected at first release ([[PRD-STULZ-CW330]]); §12 records the ⛔ lead-time basis conflict as it stands; §6.1 states positively that an external UPS is a configuration, not a downgrade; §3.1 explicitly separates IT Load from Total Facility Load; §7 forbids quoting the unconfirmed 20ft ISO nominal envelope. **No figure was borrowed from L1240C45 or L1800C45.** Section numbering, anchors and table row counts match [[L450C20_Tech_Spec_CN]] one-for-one. |
+| v1.1 | 2026-08-30 | Absorbed Yuri's adjudication and the site audit: in-row CW fixed at 2× STULZ CRS 330 CW (CW330) N+1, CDU at 1× SCR 14103 W, rack build at 3 liquid-cooled racks with no air rack (site `l450.json`); added the network-equipment placement note arising from the absent air rack and the "two units into 20 ft" risk flag |
+| v1.0 | 2026-08-30 | First release. L450C20 English Tech Spec built on the 14-section structure of [[L1240C45_Tech_Spec_EN]], as a single file preserving anchors `^sec-1-layout` … `^sec-14-summary`. All figures sourced from [[PRODUCT_SPEC_BASELINE]]; the site discloses only IT capacity, rack density, dual-loop temperatures and the power boundary, so every other field is marked ⏳ line by line per [[UNCONFIRMED_Convention]], each naming who is waited on, for what, and by when. §5 records the in-row CW as suspected at first release ([[PRD-STULZ-CW330]]); §12 records the ⛔ lead-time basis conflict as it stands; §6.1 states positively that an external UPS is a configuration, not a downgrade; §3.1 explicitly separates IT Load from Total Facility Load; §7 forbids quoting the unconfirmed 20ft ISO nominal envelope. **No figure was borrowed from L1240C45 or L1800C45.** Section numbering, anchors and table row counts match [[L450C20_Tech_Spec_CN]] one-for-one. |

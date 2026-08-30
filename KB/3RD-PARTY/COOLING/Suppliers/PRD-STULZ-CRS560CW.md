@@ -199,4 +199,5 @@ source: StulzSelect Vers. 5.6.0 选型书 · 项目 CRS560CW · Charles.Wang · 
 
 | Version | Date | Summary |
 |---------|------|---------|
+| v1.1 | 2026-08-30 | 台数确认：L1800C45 内 **2 台**，与 [[PRD-STULZ-CW330\|CRS 330 CW]] × 6 混配共 8 台（Yuri 2026-08-30）。原站点 profile 的「单一机型 4 台」作废 |
 | v1.0 | 2026-08-30 | 初版（ATS approved）。基于 StulzSelect 5.6.0 选型书 + 厂家外形图提取热工 / 风机 / 水力 / 物理电气四组参数；新增 §4 与 CRAH_Requirement V5 的架构差异对照（CW vs DX · 纯水 vs PG25 · 10/16 vs TCS 26 · 50 Hz vs 60 Hz）；列 Q1–Q7，其中 Q1（台数/冗余）与 Q4（认证）为 P0。 |
