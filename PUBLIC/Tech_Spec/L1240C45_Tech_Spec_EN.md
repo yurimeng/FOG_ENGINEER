@@ -8,14 +8,14 @@ doc_version: v1.6
 updated: 2026-08-30
 sku_id: L1240C45SUR150
 ---
-# L1240C45 — Tech Spec
+# L1240C45 — Tech Spec ^mdc-0423c170df
 **PowerPod with Direct Liquid Cooling (45ft Container)**
 
-> **SKU identity:** short alias **L1240C45** · full SKU ID `L1240C45SUR150` · product line **Liquid Cooling (L)** · status **shipped**. Naming baseline: [[NAMING_MAP]].
+> **SKU identity:** short alias **L1240C45** · full SKU ID `L1240C45SUR150` · product line **Liquid Cooling (L)** · status **shipped**. Naming baseline: [[NAMING_MAP]]. ^mdc-42d4aeb0ee
 >
 > **Audience:** This document is a sales / pre-sales deliverable. Target readers: customers, account managers, solution architects. Parameters are normative; if any value conflicts with engineering design, escalate to [[STD_L1240C45|STD_L1240C45]] for the unified reference. Parameter source of truth: V1.4 (2026-05-21).
 >
-> **Source of truth:** product parameters follow [[PRODUCT_SPEC_BASELINE]] (six-SKU baseline table); **where this document disagrees with it, the baseline table governs**. Engineering-parameter disputes specific to L1240C45 still escalate through [[STD_L1240C45]].
+> **Source of truth:** product parameters follow [[PRODUCT_SPEC_BASELINE]] (six-SKU baseline table); **where this document disagrees with it, the baseline table governs**. Engineering-parameter disputes specific to L1240C45 still escalate through [[STD_L1240C45]]. ^mdc-1d63d1fd9f
 >
 > **Three companion editions:** English internal (this file) · 中文内部版 [[L1240C45_Tech_Spec_CN]] · external edition [[L1240C45_Tech_Spec_External]]
 >
@@ -25,7 +25,7 @@ sku_id: L1240C45SUR150
 
 Version: V1.6 | Date: 2026-08-30 | Parameter baseline: V1.4 (2026-05-21)
 
-> **V1.4 Update (per the then-current Three-Branch Cooling Reassessment V4; V4 is now dot-archived — the current revision is [[KB/LIQUID/L1240C45/DESIGN/L1240C45 三支路冷却重评估 V5|Three-Branch Cooling Reassessment V5]]):**
+> **V1.4 Update (per the then-current Three-Branch Cooling Reassessment V4; V4 is now dot-archived — the current revision is [[KB/LIQUID/L1240C45/DESIGN/L1240C45 三支路冷却重评估 V5|Three-Branch Cooling Reassessment V5]]):** ^mdc-e4c1ed5d81
 > 1. CDU spec uprated: heat-rejection ≥ 1500 kW / secondary flow ≥ 175 m³/h / secondary head ≥ 220 kPa / VFD secondary pump / 2N or N+1 redundancy
 > 2. TCS coolant locked as **PG25** (25% propylene glycol solution); TCS inlet 26–28°C
 > 3. Three-branch cooling architecture defined: primary CDU cold plates / 9× VERTIV DCD35 passive RDHX / 9× STULZ OHS-084-DG-FC ceiling units
@@ -51,7 +51,7 @@ Version: V1.6 | Date: 2026-08-30 | Parameter baseline: V1.4 (2026-05-21)
 | 11 | Fire Protection & Safety | [[PUBLIC/Tech_Spec/_blocks/L1240C45_Tech_Spec_EN/11_Sec11_Fire\|11_Sec11_Fire]] |
 | 12 | Service & Support | [[PUBLIC/Tech_Spec/_blocks/L1240C45_Tech_Spec_EN/12_Sec12_Service\|12_Sec12_Service]] |
 | 13 | Site & Installation Requirements | [[PUBLIC/Tech_Spec/_blocks/L1240C45_Tech_Spec_EN/13_Sec13_Site\|13_Sec13_Site]] |
-| 14 | L1240C45 Key Specifications Summary | [[PUBLIC/Tech_Spec/_blocks/L1240C45_Tech_Spec_EN/14_Sec14_Summary\|14_Sec14_Summary]] |
+| 14 | L1240C45 Key Specifications Summary | [[PUBLIC/Tech_Spec/_blocks/L1240C45_Tech_Spec_EN/14_Sec14_Summary\|14_Sec14_Summary]] ^mdc-2959af9a87 |
 
 ---
 

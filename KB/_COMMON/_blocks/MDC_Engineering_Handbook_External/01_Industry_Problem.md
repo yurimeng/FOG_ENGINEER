@@ -199,4 +199,4 @@ Modular Data Center(MDC)是一种针对AI Factory场景设计的算力基础设�
 
 从而更好地满足 **AI Factory时代的算力需求**。
 
-> **关联文档:** [[I400C40|I400C40]] · [[L1240C45_Tech_Spec_EN|L1240C45 Tech Spec EN]] · [[RA-002_Liquid_1.2MW|RA-002]]
+> **关联文档:** [[I400C40|I400C40]] · [[L1240C45_Tech_Spec_EN|L1240C45 Tech Spec EN]] · [[RA-002_Liquid_1.2MW|RA-002]] ^mdc-bc01584732

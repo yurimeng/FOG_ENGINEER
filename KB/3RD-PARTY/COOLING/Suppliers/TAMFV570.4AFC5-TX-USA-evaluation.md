@@ -402,7 +402,7 @@ archived_versions:
 | 2 | **ETL 认证范围澄清** | (a) ETL 控制号 / 适用标准 (UL 1995 vs UL 60335-2-40 vs UL 60335-2-89); (b) 是否 cETLus 覆盖 (加拿大双标); (c) 铭牌样品图; (d) ETL 是否覆盖 NFPA 70 接线 / NEC 现场验收; (e) ETL 与 AHRI 550/590 是否双重认证 | ⏳ |
 | 3 | FCC Part 15 EMC | 提供 EMI 测试报告 | ⏳ |
 | 4 | BACnet/IP BMS 网关 | 选配价格 / 协议点表 | ⏳ |
-| 5 | TX 现场参考项目 | TICA 在 TX / 美国已交付的 ≥1 MW 磁悬浮 chiller 项目 (地点 / 客户 / 容量) | ⏳ |
+| 5 | TX 现场参考项目 | TICA 在 TX / 美国已交付的 ≥1 MW 磁悬浮 chiller 项目 (地点 / 客户 / 容量) | ⏳ ^mdc-d3a21da23a |
 | 6 | R513A 长寿命合规 | 同平台是否提供 R-1234ze 派生型号? 制冷量衰减? 价格调整? | ⏳ |
 
 ### 5.3 备注
@@ -421,7 +421,7 @@ archived_versions:
 - 同厂家姊妹型号评审: [[TICA_TAMFV430.3ALF5_Hybrid_Chiller_Configuration_Review_V2.3]] — V2.3 ATS Conditional Pass, 430RT hybrid 风冷, 已积累 35 项澄清项 / 4 类综合建议, 本评估 P0 清单可借鉴
 - 冷却域 Guideline: [[../../Guideline/COOLING_SYSTEM_Guideline]]
 - 第三方供应商准入: [[../3rd Party List]] V1.9 — 当前 TICA 不在列, 本评估为引入候选
-- DC45 治理基线: [[../../LIQUID/L1240C45/DESIGN/L1240C45 Hydronic & Thermal Design Criteria]]
+- DC45 治理基线: [[../../LIQUID/L1240C45/DESIGN/L1240C45 Hydronic & Thermal Design Criteria]] ^mdc-33f06361f0
 - 法规参考:
   - EPA AIM Act (2020) — HFC 削减法案
   - NFPA 70 / NEC 2023 — 电气接线

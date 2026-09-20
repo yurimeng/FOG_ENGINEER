@@ -17,7 +17,7 @@ source_anchors:
 
 | Item | Requirement |
 |------|-------------|
-| Floor loading | Support **operating weight** (~22–30T class + dynamic; **structural calc rules**) ⏳ **#unconfirmed** (legacy AC40 V1.4, not covered by the baseline table; waiting on I400C40 DESIGN/ documents, expected TBD) |
+| Floor loading | Support **operating weight** (~22–30T class + dynamic; **structural calc rules**) ⏳ **#unconfirmed** (legacy AC40 V1.4, not covered by the baseline table; waiting on I400C40 DESIGN/ documents, expected TBD) ^mdc-a5b433c558 |
 | Levelness | **±0.5°** |
 | Clearances | Service, lift, piping, fire access |
 | Cooling | One outdoor plant per box: dry cooler **or** Hybrid; hydraulic design required |
@@ -33,9 +33,9 @@ Prefer extreme DB ≤24°C for dry-cooler PUE; hot/humid sites need Hybrid + DX 
 
 ### Zone boundaries
 
-| Zone | Relation to I400C40 |
+| Zone | Relation to I400C40 ^mdc-9d7375a68b |
 |------|------------------|
-| IT Zone | **I400C40 itself** |
+| IT Zone | **I400C40 itself** ^mdc-cd20664941 |
 | Cooling Zone | Outdoor plant 1:1 — not fully inside 40ft envelope |
 | Power Zone | External UPS/batteries, BESS, genset, switchyard |
 

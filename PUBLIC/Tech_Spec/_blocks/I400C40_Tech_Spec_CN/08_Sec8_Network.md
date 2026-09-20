@@ -26,9 +26,9 @@ source_anchors:
 | 网络设备 | 交换机 / 防火墙等由项目或集成商配置；MDC 提供机柜空间与电源接口 |
 
 ![[I400C40_NETWORK_CONF_v1.svg]]
-*I400C40 网络与监控配置示意*
+*I400C40 网络与监控配置示意* ^mdc-34774a045a
 
-参考：[[KB/IMMERSION/I400C40/I400C40_NETWORK_CONF]] · [[NETWORK_Guideline]] · [[KB/IMMERSION/_line/PRODUCTS_NETWORK]]
+参考：[[KB/IMMERSION/I400C40/I400C40_NETWORK_CONF]] · [[NETWORK_Guideline]] · [[KB/IMMERSION/_line/PRODUCTS_NETWORK]] ^mdc-376dd89d6b
 
 ### 8.1 布线能力（项目集成）
 

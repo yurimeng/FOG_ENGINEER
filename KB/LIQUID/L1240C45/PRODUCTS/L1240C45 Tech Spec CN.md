@@ -2,12 +2,12 @@
 tags:
   - #MDC
 ---
-# DC45 — Quick Tech Spec
+# DC45 — Quick Tech Spec ^mdc-be69708e40
 **PowerPod with Direct Liquid Cooling (45ft Container)**
 
 > ## ⚠️ 本文件是副本，不是现行版本
 >
-> L1240C45 的现行 Tech Spec 在 **`PUBLIC/Tech_Spec/`**，共三版：
+> L1240C45 的现行 Tech Spec 在 **`PUBLIC/Tech_Spec/`**，共三版： ^mdc-b7b862fc6c
 > [[L1240C45_Tech_Spec_CN|CN]] · [[L1240C45_Tech_Spec_EN|EN]] · [[L1240C45_Tech_Spec_External|对外版（唯一可直发客户）]]
 >
 > 本副本已同步 2026-08-30 的四条裁定以免误用，但**不再单独维护**。改产品参数请改 `PUBLIC/Tech_Spec/` 与 [[PRODUCT_SPEC_BASELINE]]。
@@ -15,11 +15,11 @@ tags:
 
 > **受众说明：** 本文档为销售 / 售前交付物,目标读者:客户、客户经理、方案架构师。参数为准绳值;如与工程设计冲突,以 [[STD_L1240C45|STD_L1240C45]] 统一参数表为准。参数基准:V1.4 (2026-05-21)。
 >
-> **English version:** [[MDC/KB/LIQUID/L1240C45/PRODUCTS/L1240C45 Tech Spec EN]]
+> **English version:** [[MDC/KB/LIQUID/L1240C45/PRODUCTS/L1240C45 Tech Spec EN]] ^mdc-7a2a70a300
 
 版本：V1.4 | 日期：2026-05-21
 
-> **V1.4 更新（基于 [[../DESIGN/L1240C45 三支路冷却重评估 V4|L1240C45 三支路冷却重评估 V4]]）：**
+> **V1.4 更新（基于 [[../DESIGN/L1240C45 三支路冷却重评估 V4|L1240C45 三支路冷却重评估 V4]]）：** ^mdc-e05e223ea4
 > 1. CDU 选型上修：换热 ≥ 1500 kW / 二次侧流量 ≥ 175 m³/h / 二次侧扬程 ≥ 220 kPa / 二次泵变频 / 2N 或 N+1 冗余
 > 2. TCS 循环液锁定为 **PG25**（25% 丙二醇水溶液），TCS 进水 26–28°C
 > 3. 三支路冷却架构明确：主 CDU 冷板 / 9× VERTIV DCD35 被动 RDHX / 9× STULZ OHS-084-DG-FC 顶置空调
@@ -43,11 +43,11 @@ tags:
 
 ## 2. 产品定位 ^sec-2-positioning
 
-DC45 是 **45ft 集装箱规格的直冷液冷（DLC）模块化数据中心**，采用冷板式液冷技术（Direct Liquid Cooling），适用于超大算力 AI 集群高密度部署。
+DC45 是 **45ft 集装箱规格的直冷液冷（DLC）模块化数据中心**，采用冷板式液冷技术（Direct Liquid Cooling），适用于超大算力 AI 集群高密度部署。 ^mdc-0162bc3c2b
 
 ![[PDC_SLD_EN_light.svg|SuOCbROt9ozRtAxyvDrcBiXnnqc.png]]
 
-> **冷却架构**：DC45 采用 **TCS PG25 三支路并联** 冷却架构，所有热量统一通过 TCS 二次环路送至室外侧（混合干冷器 + DX）：
+> **冷却架构**：DC45 采用 **TCS PG25 三支路并联** 冷却架构，所有热量统一通过 TCS 二次环路送至室外侧（混合干冷器 + DX）： ^mdc-21de904c6e
 > - **Branch 1 — 主 CDU 冷板回路**：8 × DLC 机柜 73% 液冷热量
 > - **Branch 2 — 9× 被动 RDHX**：吸收机柜后门 47–55% 排风热
 > - **Branch 3 — 9× 顶置 STULZ OHS-084-DG-FC**：处理机房残余空气热 + UPS/辅助热
@@ -99,7 +99,7 @@ DC45 是 **45ft 集装箱规格的直冷液冷（DLC）模块化数据中心**�
 | 每 manifold 分支数 | 20–50 |
 | 每分支设计流量 | **1.6–2.1 L/min**（在 1–3 L/min 规格内 30%+ 余量） |
 | 每 manifold 入口 | **PICV（压差独立流量阀）+ 流量计**（防双 manifold 间不平衡） |
-| 总 manifold 数量 (DC45 整机) | **16–24 个**（8 rack × 2–3 manifold/rack） |
+| 总 manifold 数量 (DC45 整机) | **16–24 个**（8 rack × 2–3 manifold/rack） ^mdc-e1cdf9d1e8 |
 | 不平衡率 | ≤ 10%（单 manifold 内）/ ≤ 15%（含 manifold 间） |
 
 ---
@@ -143,7 +143,7 @@ DC45 是 **45ft 集装箱规格的直冷液冷（DLC）模块化数据中心**�
 | 单台最大风量 | 11,200 m³/h |
 | 单台最大水流量 | 5.3 m³/h |
 | 接口管径 | DN25（1"） |
-| 工作温度范围 | datasheet 10–40°C 进风 ⚠️ DC45 S-Max 工况 41–48°C 超规 1–8°C，Vertiv 复核中 |
+| 工作温度范围 | datasheet 10–40°C 进风 ⚠️ DC45 S-Max 工况 41–48°C 超规 1–8°C，Vertiv 复核中 ^mdc-54dca1338e |
 | 实际吸热比例（TCS 26–28°C） | 47–55% （ε ≈ 0.55 被动型物理上限） |
 | Branch 2 设计流量（PG25） | ≈ 21 m³/h |
 | Branch 2 ΔP | 36–62 kPa |
@@ -154,7 +154,7 @@ DC45 是 **45ft 集装箱规格的直冷液冷（DLC）模块化数据中心**�
 |------|------|
 | 数量与型号 | **9 × STULZ OHS-084-DG-FC**（自含式 DX + 自由冷却回路，EG/PG 兼容） |
 | 单台标称总冷量 | 25.6 kW（80°F DB / 67°F WB / 50% RH） |
-| 单台显冷（DC45 实际工况，PG25 27°C） | ≈ 26 kW（含 +13% PG25 上扬 + +10% 回风温度修正 + +5% 低湿度修正） |
+| 单台显冷（DC45 实际工况，PG25 27°C） | ≈ 26 kW（含 +13% PG25 上扬 + +10% 回风温度修正 + +5% 低湿度修正） ^mdc-51b0ca12de |
 | 9 台总显冷估算 | ≈ 234 kW |
 | 单台压缩机输入 | 8.2 kW（datasheet）/ ≈ 6.4 kW（PG25 27°C 上扬后） |
 | 单台冷凝液流量 | **5.41 m³/h**（23.8 GPM，datasheet 锁定） |
@@ -182,7 +182,7 @@ DC45 是 **45ft 集装箱规格的直冷液冷（DLC）模块化数据中心**�
 | **RDHX 支路** | 单台 RDHX 流量 < 1.5 m³/h → 该 rack GPU 降算力 + 告警 |
 | **CeilAir 支路** | Branch 3 流量 < 40 m³/h → 告警 + 顶送风温度上升监控 |
 | **CeilAir 冗余** | 9 台顶部安装位已用尽，无 N+1；失效预案靠 GPU 降载 |
-| **自由冷却（FC）** | -FC 变体含自由冷却回路；DC45 TCS 范围 26–28°C 高于典型 FC 触发阈值（< 10°C），常态下不激活 |
+| **自由冷却（FC）** | -FC 变体含自由冷却回路；DC45 TCS 范围 26–28°C 高于典型 FC 触发阈值（< 10°C），常态下不激活 ^mdc-51130a32ba |
 
 ---
 
@@ -229,7 +229,7 @@ DC45 是 **45ft 集装箱规格的直冷液冷（DLC）模块化数据中心**�
 
 | 产品 | 输入规格 | 输出接口 | 保护 |
 |------|---------|---------|------|
-| **DC45** | 60A 415V | 24位 C19 | 液磁空开 |
+| **DC45** | 60A 415V | 24位 C19 | 液磁空开 ^mdc-845637ca2e |
 | HP POD 240a | 30A / 60A 415V 3Ø | C13 / C19 可选 | 标准 MCCB |
 
 ---
@@ -381,7 +381,7 @@ DC45 是 **45ft 集装箱规格的直冷液冷（DLC）模块化数据中心**�
 
 | 版本 | 日期 | 变更摘要 |
 |------|------|---------|
-| V1.4 | 2026-05-21 | 同步 [[DESIGN/L1240C45 三支路冷却重评估 2026-05-21\|Rev 11 三支路冷却重评估]]：CDU 上修至 ≥1500 kW / ≥175 m³/h / ≥220 kPa（VFD + 2N/N+1）；TCS 介质锁定 PG25；锁定 9× DCD35 RDHX + 9× STULZ OHS-084-DG-FC；新增 §5 冷却系统、§4.1 冷板 manifold；室外侧基线 ≥1700 kW |
+| V1.4 | 2026-05-21 | 同步 [[DESIGN/L1240C45 三支路冷却重评估 2026-05-21\|Rev 11 三支路冷却重评估]]：CDU 上修至 ≥1500 kW / ≥175 m³/h / ≥220 kPa（VFD + 2N/N+1）；TCS 介质锁定 PG25；锁定 9× DCD35 RDHX + 9× STULZ OHS-084-DG-FC；新增 §5 冷却系统、§4.1 冷板 manifold；室外侧基线 ≥1700 kW ^mdc-42caebd3ec |
 | V1.3 | 2026-05-09 | 服务器进水温度由 24°C 修订为 26–28°C（TCS 范围） |
 
 ---

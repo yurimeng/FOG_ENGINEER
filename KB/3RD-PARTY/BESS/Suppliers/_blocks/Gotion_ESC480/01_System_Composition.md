@@ -7,7 +7,7 @@ tags:
   - "#type/bess-prd"
   - "#product/BESS"
   - "#power"
-  - 
+  -
 created: 2026-06-18
 source_file: KB/3RD-PARTY/BESS/Suppliers/Gotion ESC480-125P261-UL.md
 source_anchors:

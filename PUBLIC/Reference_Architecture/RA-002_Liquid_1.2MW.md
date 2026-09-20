@@ -11,7 +11,7 @@ tags:
 Reference Architecture Version: v1.3
 Last Updated: 2026-08-30
 
-> **数据源 / Source of truth：** 本文全部产品参数以 [[PRODUCT_SPEC_BASELINE]]（六 SKU 规格基准表 v2.0）为准 —— **本文任一数值与基准表冲突时，以基准表为准**。本 RA 对应 SKU：**L1240C45**。
+> **数据源 / Source of truth：** 本文全部产品参数以 [[PRODUCT_SPEC_BASELINE]]（六 SKU 规格基准表 v2.0）为准 —— **本文任一数值与基准表冲突时，以基准表为准**。本 RA 对应 SKU：**L1240C45**。 ^mdc-c0611c6d55
 >
 > **置信度标注规则见 [[UNCONFIRMED_Convention]] §2：** ✅ 已确认 · 🔶 derived 我方推导 · ⏳ #unconfirmed 待证实 · ⛔ conflict 源冲突。带 ⏳ / ⛔ 的行**不得对客外发**（[[UNCONFIRMED_Convention]] §5）。
 
@@ -24,7 +24,7 @@ Last Updated: 2026-08-30
 | 项目 | 内容 |
 |------|------|
 | IT 容量 | **1.2MW（1240kW）** |
-| 产品形态 | 1× DC45 集装箱 |
+| 产品形态 | 1× DC45 集装箱 ^mdc-4e75d5594d |
 | 冷却技术 | Direct Liquid Cooling（直冷液冷 DLC）|
 | 散热方式 | **Hybrid Cooling System**（干冷器+DX一体化）+ FCU |
 | 交期 | **首批 120 天 EXW · Scale（扩容批次）90 天 EXW**，自下单起算；另有**假负载运行期 5–30 天**（不含在 EXW 承诺内）；商务 / 运输 / 安装**一律不予承诺**。见 [[PRODUCT_SPEC_BASELINE]] §3.1 |
@@ -41,7 +41,7 @@ Last Updated: 2026-08-30
 
 > **这两个数不是一回事，谈容量前必须先对齐口径。** 站点侧的变电申请、进线容量与开关柜选型必须按 **Total Facility Load** 计算，不能按 IT Load 计算；客户口中的「X MW」须先澄清指的是哪一个（[[PRODUCT_SPEC_BASELINE]] §3.4 · [[CLAUDE.md]] Hard Rule 5）。
 >
-> **PUE 一律写 `1.0x`**（2026-08-30 Yuri 裁定 · 关闭 C-2；基准表中 L1240C45 原载的 PUE 区间一并作废）。定性可说：可全年自然冷却的气候落在低端，更热的站点 DX / 机械制冷介入、PUE 相应上移 —— **但不给具体数**。原「按环境温度给 PUE 区间」与「整体电力负荷给 kW 区间」两种写法**均已作废**（作废的具体数值见文末 Changelog）。
+> **PUE 一律写 `1.0x`**（2026-08-30 Yuri 裁定 · 关闭 C-2；基准表中 L1240C45 原载的 PUE 区间一并作废）。定性可说：可全年自然冷却的气候落在低端，更热的站点 DX / 机械制冷介入、PUE 相应上移 —— **但不给具体数**。原「按环境温度给 PUE 区间」与「整体电力负荷给 kW 区间」两种写法**均已作废**（作废的具体数值见文末 Changelog）。 ^mdc-6cb0c30546
 
 ---
 
@@ -59,9 +59,9 @@ Last Updated: 2026-08-30
 
 ## 4. 产品配置
 
-本方案使用 **1× DC45**：
+本方案使用 **1× DC45**： ^mdc-c96ae21980
 
-| 项目 | DC45 参数 |
+| 项目 | DC45 参数 ^mdc-fec4e0220f |
 |------|-----------|
 | IT 容量 | 1240kW（8×150kW DLC Racks + 1×40kW 风冷）|
 | 风冷辅助 | 40kW × 1 |
@@ -70,7 +70,7 @@ Last Updated: 2026-08-30
 | 主 CDU | 1.2MW Rack CDU × 1 |
 | 备用 CDU | 150kW In-Rack CDU（可选）|
 | FCU | **12×40kW**（根据环境温度动态调整），18–25°C |
-| 冷却 | 干冷器 + DX（每台 DC45 独立配置）|
+| 冷却 | 干冷器 + DX（每台 DC45 独立配置） ^mdc-2e46910e63 |
 | Busbar | SIEMENS 2500A |
 
 ---
@@ -81,9 +81,9 @@ Last Updated: 2026-08-30
 |------|------|
 | 输入电压 | 415V AC / 3P + N + PE |
 | 频率 | 50/60Hz |
-| UPS | EATON 9395XR-1500（10 UPM，1500kW），内置于 DC45 |
-| UPS 电池 | 3× EATON 93LiG2，内置于 DC45，约 8 分钟后备（**UPS 电池**，与 BESS 电池完全不同）|
-| BESS（推荐）| Grid → BESS → DC45 |
+| UPS | EATON 9395XR-1500（10 UPM，1500kW），内置于 DC45 ^mdc-1ab8741541 |
+| UPS 电池 | 3× EATON 93LiG2，内置于 DC45，约 8 分钟后备（**UPS 电池**，与 BESS 电池完全不同） ^mdc-a9bd517b8f |
+| BESS（推荐）| Grid → BESS → DC45 ^mdc-475d0159d3 |
 | 母线 | SIEMENS 2500A 封闭式母线 |
 | 分支方式 | Tap-off 插接，每机柜 250A |
 
@@ -100,7 +100,7 @@ Grid / BESS → PDC → UPS（9395XR-1500）→ PDC → Busbar（2500A）
 
 Hybrid Cooling System
         ↓
-Primary CDU（1.2MW）← DC45 内置
+Primary CDU（1.2MW）← DC45 内置 ^mdc-c62561f9f0
         ↓
 Rack CDU（150kW）← 可选，每柜一台
         ↓
@@ -127,7 +127,7 @@ GPU Server（冷板）
 
 ## 7.1 原厂 OEM 机柜适配
 
-DC45 支持**不预装 DLC 机柜**，客户可后续自行安装原厂 OEM 机柜。
+DC45 支持**不预装 DLC 机柜**，客户可后续自行安装原厂 OEM 机柜。 ^mdc-105f35b5fb
 
 | 项目 | 参数 |
 |------|------|
@@ -137,7 +137,7 @@ DC45 支持**不预装 DLC 机柜**，客户可后续自行安装原厂 OEM 机�
 | 兼容品牌 | SMCI（超微）、HPE（慧与）、DELL（戴尔）、Lenovo（联想）等标准 19 英寸机柜 |
 | 适配方式 | 预留液冷歧管（Manifold）接口和配电接口，支持后装 |
 
-> **注意：** 原厂 OEM 机柜需自行确认与 DC45 液冷管路的兼容性。
+> **注意：** 原厂 OEM 机柜需自行确认与 DC45 液冷管路的兼容性。 ^mdc-e8ef738211
 
 ---
 
@@ -161,8 +161,8 @@ DC45 支持**不预装 DLC 机柜**，客户可后续自行安装原厂 OEM 机�
 | **UPS 模块** | 9395XR-1500 内置 10 个功率模块，内部 N+1（单模块故障不影响运行）|
 | **CDU** | 主 CDU + 可选 In-Rack CDU（可选 1+1 配置）|
 | **FCU** | 12 台中根据环境温度调整运行数量（部分 FCU 故障不影响整体）|
-| **IT Zone（DC45）** | **无内部冗余** — 单台 DC45 独立运行 |
-| **MDC 系统级** | 多台 DC45 并联 → 系统级冗余（由集装箱数量决定）|
+| **IT Zone（DC45）** | **无内部冗余** — 单台 DC45 独立运行 ^mdc-6f8661e98e |
+| **MDC 系统级** | 多台 DC45 并联 → 系统级冗余（由集装箱数量决定） ^mdc-d683ccd830 |
 | **Power Zone** | 可选 N+1/2N | 需要额外 Switchgear |
 
 ---
@@ -186,10 +186,10 @@ DC45 支持**不预装 DLC 机柜**，客户可后续自行安装原厂 OEM 机�
 Reference Architecture — 1.2MW DLC AI Inference Unit
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-IT Load:       1240kW（1×DC45）
+IT Load:       1240kW（1×DC45） ^mdc-732516b0dc
 Total Load:    随 PUE 变化，逐站点用 https://mdcx.org 计算（不给区间）
 PUE:           1.0x（逐站点计算，不给固定值）
-Product:       DC45（DLC Container，45ft）
+Product:       DC45（DLC Container，45ft） ^mdc-ef3d6abb58
 Cooling:       DLC + Hybrid Cooling System + FCU（12×40kW 动态调整）
 Power:         Grid + UPS（9395XR-1500）+ BESS（可选）
 OEM Rack:      支持 SMCI/HPE/DELL/Lenovo（宽800×深1200×高2300mm）
@@ -206,7 +206,7 @@ Warranty:      核心部件自 EXW 起 1 年 + 后续按年服务费
 
 ## 12. 参考文档
 
-- DC45 完整规格：[[PRODUCTS_L1240C45|KB/PRODUCTS_L1240C45]]
+- DC45 完整规格：[[PRODUCTS_L1240C45|KB/PRODUCTS_L1240C45]] ^mdc-273c4539e0
 - MDC 组合标准：[[_COMMON/PRODUCTS_MDC|KB/_COMMON/_COMMON/PRODUCTS_MDC]]
 - 冷却方案：[[COOLING_SYSTEM_Guideline]]
 - UPS 规格：[[UPS_EATON_9395XR|Eaton 9395XR]]

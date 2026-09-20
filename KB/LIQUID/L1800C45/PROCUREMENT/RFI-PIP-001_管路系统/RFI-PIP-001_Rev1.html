@@ -1,0 +1,780 @@
+<!doctype html><html lang='zh-CN'><head><meta charset='utf-8'><title>RFI-PIP-001 Rev.1 管路系统询价</title><style>@page { size: A4; margin: 16mm 14mm 16mm 14mm; }
+body{font-family:"Noto Sans CJK SC","Noto Sans CJK","Source Han Sans SC","PingFang SC",sans-serif;font-size:10.2pt;line-height:1.55;color:#16191d;margin:0;}
+h1{font-size:18pt;margin:0 0 6pt;padding-bottom:6pt;border-bottom:2.5pt solid #0f3d5c;color:#0f3d5c;}
+h2{font-size:13pt;margin:16pt 0 6pt;color:#0f3d5c;border-left:4pt solid #0f3d5c;padding-left:7pt;}
+h3{font-size:11.2pt;margin:11pt 0 4pt;color:#22557a;}
+h4{font-size:10.4pt;margin:9pt 0 3pt;color:#22557a;}
+table{border-collapse:collapse;width:100%;margin:7pt 0 10pt;font-size:8.9pt;}
+th{background:#0f3d5c;color:#fff;text-align:left;padding:4pt 6pt;border:0.5pt solid #0f3d5c;font-weight:600;}
+td{padding:3.5pt 6pt;border:0.5pt solid #c3ccd4;vertical-align:top;}
+tr:nth-child(even) td{background:#f4f7f9;}
+blockquote{margin:7pt 0;padding:6pt 10pt;background:#fff7e6;border-left:3.5pt solid #d98b00;}
+blockquote p{margin:3pt 0;}
+code{background:#eef2f5;padding:0.5pt 3pt;border-radius:2pt;font-size:8.8pt;font-family:"DejaVu Sans Mono",monospace;}
+hr{border:0;border-top:0.6pt solid #c3ccd4;margin:12pt 0;}
+ul,ol{margin:5pt 0 5pt 16pt;padding:0;} li{margin:2pt 0;}
+strong{color:#0b2c44;} p{margin:5pt 0;}
+</style></head><body><h1>RFI-PIP-001　45 尺液冷算力模块　上部模块（TOP Add-on）管路系统　询价与技术要求</h1>
+<table>
+<thead>
+<tr>
+<th>项</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>文件编号</td>
+<td>RFI-PIP-001　<strong>Rev.1</strong>（取代 Rev.0，2026-09-04）</td>
+</tr>
+<tr>
+<td>日期</td>
+<td>2026-09-11</td>
+</tr>
+<tr>
+<td>采购主体</td>
+<td>潘氏未来（上海）算力科技有限公司（英文 MDCX）；境外签约主体 PAN'S FUTURE HOLDING TECH GROUP CO., LIMITED</td>
+</tr>
+<tr>
+<td>项目</td>
+<td>45 尺液冷算力模块　上部模块（TOP Add-on）管路系统</td>
+</tr>
+<tr>
+<td>询价性质</td>
+<td>RFI（技术方案 + 预算报价），后续按本文件转 RFQ / 技术确认书</td>
+</tr>
+<tr>
+<td>数据基准</td>
+<td>三维模型 <code>TOP Add-on.STD</code>（2026-09-04 版），坐标系 = 模块坐标系，单位 mm；<strong>几何以随附 STEP AP214 为最终判据</strong></td>
+</tr>
+<tr>
+<td>回复要求</td>
+<td>见 §10、§11；请在收到后 3 个工作日内确认参与意向，10 个工作日内提交技术方案与报价</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Rev.1 修订说明</strong>：① 管道表 HT 回路外径由 OD104 更正为 <strong>OD134（DN125）</strong>；② 随附图纸由单张 GA 图改为 <strong>8 张 A1 分张图</strong>（DXF + PDF）；③ 阀门操作件补充刚性阀杆延长的构造与"不接受链条阀"条款；④ 补充供货边界、安装方式、下引支管与阀门标识的细化说明；⑤ 随附《设备材料清单（询价用）》Excel。</p>
+</blockquote>
+<hr />
+<h2>1. 项目背景与本次询价定位</h2>
+<p>本项目为 45 尺标准箱体的液冷 AI 算力模块。箱体上方设<strong>上部模块（TOP Add-on）</strong>，内部分为<strong>管路舱</strong>与<strong>电力舱</strong>两个独立舱室；本文件仅针对<strong>管路舱内的全部管路系统</strong>询价。电力舱的母线与插接开关系统另行询价，不在本文件范围。</p>
+<p>上部模块随箱体在<strong>浙江嘉兴海盐 世赫 3# 厂房（算力集装箱总装与联调基地）</strong>完成总装与联调后整体发运。该厂房<strong>厂内不动火</strong>，因此本系统必须以<strong>预制成套、整体发货、现场机械连接</strong>的方式交付（详见 §8、§9）。</p>
+<hr />
+<h2>2. 询价范围与供货边界</h2>
+<h3>2.1 供货范围（含）</h3>
+<table>
+<thead>
+<tr>
+<th>分项</th>
+<th>内容</th>
+<th>数量</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A. 一次侧总管</td>
+<td>DN150 供/回总管、弯头、三通、法兰、快接接头、自动排气装置、吊架</td>
+<td>2 条，全长 ~13.5 m</td>
+</tr>
+<tr>
+<td>B. 二次侧高温回路（HT）</td>
+<td>OD134 供/回主管（两端蛇形过渡）、弯头、法兰接管、落地支架</td>
+<td>2 条，全长 ~11.6 m</td>
+</tr>
+<tr>
+<td>C. 二次侧低温回路（LT）</td>
+<td>OD114.3 供/回总管、隔离阀、旁通止回、快接接头、落地支架</td>
+<td>2 条，全长 ~13.1 m</td>
+</tr>
+<tr>
+<td>D. 设备下引支管</td>
+<td>液冷机柜 16 支（DN65）、列间空调 16 支（DN40）、CDU 8 支（DN100）</td>
+<td><strong>40 支（＝立管根数）</strong></td>
+</tr>
+<tr>
+<td>E. <strong>阀门</strong></td>
+<td>隔离阀 40 只、止回阀 1 只、自动排气阀 2 套、排气隔离球阀 2 只</td>
+<td>45 件</td>
+</tr>
+<tr>
+<td>F. 阀门操作件</td>
+<td>刚性阀杆延长、支座、轮毂、锥齿轮箱、Ø140 手轮，全部手轮位于同一操作面</td>
+<td>40 套</td>
+</tr>
+<tr>
+<td>G. <strong>底板连接件（穿甲板快接法兰）</strong></td>
+<td>与设备对接的穿甲板快接法兰组件，法兰面标高 EL.+2938</td>
+<td>40 只</td>
+</tr>
+<tr>
+<td>H. 阀门标识</td>
+<td>阀门标牌 170 × 110（40 块）+ 标牌梁 13416 × 120 × 120（1 根）</td>
+<td>41 件</td>
+</tr>
+<tr>
+<td>I. 支吊架</td>
+<td>一次侧吊架 10 付（M16 吊杆 + Ø215 管夹）、HT 落地支架 6 付、LT 落地支架 8 付</td>
+<td>24 付</td>
+</tr>
+<tr>
+<td>J. 附件</td>
+<td>全部密封件、紧固件、防松件、绝热（如报价含）、色标与标识、随机备件</td>
+<td>成套</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>分项、位号、规格、材质要求与数量详见随附 <strong>《设备材料清单（询价用）》</strong>。清单只给配置口径与技术要求，<strong>不含金额</strong>；「厂家建议 / 单价 / 合价」三列由贵司填报。</p>
+</blockquote>
+<h3>2.2 不在本次范围（由 MDCX 提供或另行采购）</h3>
+<ul>
+<li>上部模块结构框架、甲板、围护板、检修口</li>
+<li>CDU、列间空调、液冷机柜、Manifold 等设备本体（设备侧接口由 MDCX 提供接口图）</li>
+<li>消防管路与消防甲板快接法兰（模型中 2 只 Ø146 法兰仅为占位，by others）</li>
+<li>电力舱母线、插接开关、电缆</li>
+<li>冷源与站侧管路</li>
+</ul>
+<blockquote>
+<p><strong>供货边界界面</strong>
+- <strong>上界面</strong>：止于上部模块内的一次侧快接接头（4 只 / 2 对）与 LT 快接接头（4 只 / 2 对）；接头以外至冷源的站侧管路不在范围。
+- <strong>下界面</strong>：止于<strong>穿甲板快接法兰的下法兰面（EL.+2938）</strong>。法兰面以下（设备舱内）的软管与设备接口不在范围。
+- CDU 二次侧的隔离由 CDU 自带阀承担，上部模块内不设 CDU 二次侧隔离阀。</p>
+</blockquote>
+<hr />
+<h2>3. 随附文件（本 RFI 附件）</h2>
+<table>
+<thead>
+<tr>
+<th>文件</th>
+<th>内容</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>MDCX-TA-PIP-GA-01 … 08</code>（DXF ×8）+ <code>MDCX_TA_Piping_GA_Rev1.pdf</code></td>
+<td>总布置图 Rev.1，8 张 A1</td>
+<td>GA-01～03 平面/立面分 3 段 1:8；GA-04/05 典型断面 1:5 + 管道表 + 阀门表；GA-06 支吊架详图 1:2.5；GA-07 甲板开孔与穿甲板法兰定位 1:20 + 42 只坐标表；GA-08 操作面立面 1:20 + 阀牌详图 1:2 + 图例说明</td>
+</tr>
+<tr>
+<td><code>MDCX_TA_Piping_RFI_step.zip</code></td>
+<td>STEP AP214 装配体（解压约 66 MB）</td>
+<td>662 个实体，带装配树与颜色，mm 单位，模块坐标系；<strong>几何最终判据</strong></td>
+</tr>
+<tr>
+<td><code>MDCX_TA_Piping_RFI.blend</code></td>
+<td>Blender 三维模型，仅含本次询价范围</td>
+<td>父级已烘焙，保留世界坐标，按 8 个总成分集合</td>
+</tr>
+<tr>
+<td><code>MDCX_TA_Piping_设备材料清单_询价用.xlsx</code></td>
+<td>设备材料清单（询价用）+ 随附文件清单</td>
+<td>报价直接在该表填写</td>
+</tr>
+</tbody>
+</table>
+<p>3D 文件分组（STEP 装配树同名）：<code>PRIMARY_HEADER_DN150</code>（53）· <code>HT_LOOP</code>（26）· <code>LT_LOOP</code>（76）· <code>EQ_DROP_DLC</code>（96）· <code>EQ_DROP_CW</code>（96）· <code>CDU_DROP</code>（32）· <code>DECK_QC_FLANGE</code>（42）· <code>VALVE_TAG</code>（81），合计 502 件。</p>
+<blockquote>
+<p>说明：3D 模型中的<strong>手轮为示意造型</strong>（外形 Ø140 × 19 准确，辐条形式示意）；阀体、压力表组为<strong>包络尺寸</strong>建模，实际结构由厂家按选型提供，但<strong>外形包络不得超出模型给定尺寸</strong>（净距见 §6）。图纸为 GA 级，管件明细、焊缝、壁厚由贵司在深化设计中确定并报审。</p>
+</blockquote>
+<hr />
+<h2>4. 系统技术规格</h2>
+<h3>4.1 总体</h3>
+<table>
+<thead>
+<tr>
+<th>项</th>
+<th>参数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>系统坐标包络</td>
+<td>x 11 … 13706 · y −9875 … −8819（<strong>管路舱净宽 1056</strong>）· z +2938 … +4216</td>
+</tr>
+<tr>
+<td>舱内可用净高</td>
+<td>甲板面 EL.+2938 至舱顶结构面 EL.+4216 = <strong>1278 mm</strong></td>
+</tr>
+<tr>
+<td>操作方式</td>
+<td><strong>管路舱仅从下方检修口进入，所有阀门手轮朝向同一操作面，Ø140 手轮中心标高 EL.+3090</strong></td>
+</tr>
+<tr>
+<td>服务设备</td>
+<td>液冷机柜 8 台（EQ_02/04/06/08/12/14/16/18）· 列间空调 8 台（EQ_03/05/07/09/11/13/15/17）· CDU 2 台（EQ_01 / EQ_19）· 空调箱 1 台（EQ_10，无管路下引）</td>
+</tr>
+<tr>
+<td>设备柜心 x</td>
+<td>711 / 1536 / 2111 / 2686 / 3261 / 3836 / 4411 / 4986 / 5661 / 6261 / 6861 / 7536 / 8111 / 8686 / 9261 / 9836 / 10411 / 10986 / 11811</td>
+</tr>
+</tbody>
+</table>
+<h3>4.2 管道表（模型实测外径）</h3>
+<table>
+<thead>
+<tr>
+<th>线号</th>
+<th>服务对象</th>
+<th>规格（外径）</th>
+<th>中心标高 / 位置</th>
+<th>长度</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PRI-S</td>
+<td>一次侧供水（冷源 → CDU）</td>
+<td><strong>OD 168.3（DN150）</strong></td>
+<td>EL.+3612，y −9700</td>
+<td>x 351 … 13536</td>
+</tr>
+<tr>
+<td>PRI-R</td>
+<td>一次侧回水</td>
+<td><strong>OD 168.3（DN150）</strong></td>
+<td>EL.+3830，y −9700</td>
+<td>x 176 … 13706</td>
+</tr>
+<tr>
+<td>HT-S</td>
+<td>二次侧高温供水（机柜冷板）</td>
+<td><strong>OD 134（DN125）</strong></td>
+<td>直管 CL EL.+3227，y −9457；两端蛇形过渡后下接 CDU 二次侧法兰</td>
+<td>x 746 … 11980</td>
+</tr>
+<tr>
+<td>HT-R</td>
+<td>二次侧高温回水</td>
+<td><strong>OD 134（DN125）</strong></td>
+<td>直管 CL EL.+3411，y −9457；两端蛇形过渡</td>
+<td>x 336 … 11570</td>
+</tr>
+<tr>
+<td>LT-S</td>
+<td>二次侧低温供水（列间空调）</td>
+<td><strong>OD 114.3（DN100）</strong></td>
+<td>EL.+3242（下），y −8971</td>
+<td>x 320 … 13436</td>
+</tr>
+<tr>
+<td>LT-R</td>
+<td>二次侧低温回水</td>
+<td><strong>OD 114.3（DN100）</strong></td>
+<td>EL.+3456（上），同 y</td>
+<td>x 320 … 13436</td>
+</tr>
+<tr>
+<td>DROP-DLC</td>
+<td>液冷机柜下引，8 柜 × 供/回</td>
+<td><strong>OD 76.1（DN65）</strong></td>
+<td>立管 EL.+3125…+3227，下接甲板法兰面 EL.+2938，柜心 ±185</td>
+<td>16 支</td>
+</tr>
+<tr>
+<td>DROP-CW</td>
+<td>列间空调下引，8 台 × 供/回</td>
+<td><strong>OD 48.3（DN40）</strong></td>
+<td>立管 EL.+3125…+3242，下接甲板法兰面 EL.+2938，柜心 ±150</td>
+<td>16 支</td>
+</tr>
+<tr>
+<td>DROP-CDU</td>
+<td>CDU 一次侧进/出 + 二次侧供/回</td>
+<td><strong>DN100 口径</strong></td>
+<td>EQ_01、EQ_19 各 4 路</td>
+<td>8 支</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>"40 支"为<strong>下引立管的根数</strong>。每支下引支管：下端接穿甲板快接法兰（法兰连接）→ 中间串联一只隔离阀（阀体包络 129.2 × 129.2 × 130，EL.+2995…+3125）→ 立管 → 上端与总管<strong>焊接支接</strong>（三通全部落在直段，厂内完成）。</p>
+<p>⚠ <strong>需厂家复核并在报价中明确</strong>：以上为模型几何外径；<strong>壁厚、材质与压力等级</strong>请按 §4.3 工况与 §5 材料要求提出建议值，并说明是否建议调整管径。</p>
+</blockquote>
+<h3>4.3 设计工况</h3>
+<table>
+<thead>
+<tr>
+<th>回路</th>
+<th>介质</th>
+<th>供 / 回水温</th>
+<th>设计流量</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>一次侧 PRI</td>
+<td>冷冻水</td>
+<td>冷源出水 36 °C</td>
+<td>按设计热负荷 1.8 MW</td>
+<td>CDU 一次侧进水 36 °C</td>
+</tr>
+<tr>
+<td>二次侧 HT</td>
+<td>冷板冷却液</td>
+<td><strong>供水 40 °C，ΔT 14 K</strong></td>
+<td><strong>56.4 m³/h</strong>（8 × 117.5 L/min @40 °C）</td>
+<td>冷板进水 40 °C = 冷源 36 + CDU 逼近度 4；45 °C 为声明包络</td>
+</tr>
+<tr>
+<td>二次侧 LT</td>
+<td>冷冻水</td>
+<td><strong>10 / 15 °C</strong>，进风 37 °C</td>
+<td>按列间总冷量 329 kW</td>
+<td>列间空调单机水侧压降约 94 kPa</td>
+</tr>
+<tr>
+<td>一次侧设计压力</td>
+<td>—</td>
+<td>建议 1.0 MPa</td>
+<td>—</td>
+<td>待厂家确认</td>
+</tr>
+<tr>
+<td>二次侧运行压力上限</td>
+<td>—</td>
+<td><strong>72 psig ≈ 0.50 MPa（设备厂家硬限值，不得超越）</strong></td>
+<td>—</td>
+<td>见 §10 Q4</td>
+</tr>
+</tbody>
+</table>
+<h3>4.4 阀门与主要附件表</h3>
+<table>
+<thead>
+<tr>
+<th>位号</th>
+<th>型式</th>
+<th>规格</th>
+<th>数量</th>
+<th>要求</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IV-DLC</td>
+<td>支管隔离阀</td>
+<td>DN65 / OD76.1</td>
+<td>16</td>
+<td>阀体包络 129.2 × 129.2 × 130；刚性阀杆延长至操作面 + Ø140 手轮</td>
+</tr>
+<tr>
+<td>IV-CW</td>
+<td>支管隔离阀</td>
+<td>DN40 / OD48.3</td>
+<td>16</td>
+<td>同上，阀体包络同 IV-DLC</td>
+</tr>
+<tr>
+<td>IV-CDU</td>
+<td>CDU 一次侧隔离阀</td>
+<td>DN100</td>
+<td>4</td>
+<td>阀体包络 153.6 × 156 × 120；<strong>阀前阀后各设压力表</strong>（表组包络 62.4 × 52.5 × 124）</td>
+</tr>
+<tr>
+<td>IV-LT</td>
+<td>LT 总管隔离阀</td>
+<td>DN100</td>
+<td>4</td>
+<td>阀体 Ø118.4 × 170。<strong>LT-S 2 只：阀杆朝下 → 锥齿轮箱 70³ → 水平阀杆 → 手轮</strong>（所选阀型须允许阀杆朝下，蝶阀可，闸阀/截止阀不宜）；<strong>LT-R 2 只：水平阀杆 → 锥齿轮箱 A 60³ → 立杆 Ø24 × 311 → 锥齿轮箱 B 50³ → 手轮</strong></td>
+</tr>
+<tr>
+<td>CV-LT</td>
+<td>LT 旁通止回阀</td>
+<td>DN65</td>
+<td>1</td>
+<td>对夹式，两侧法兰 Ø144 × 16，x≈6250</td>
+</tr>
+<tr>
+<td>AAV</td>
+<td>自动排气阀 + 隔离球阀</td>
+<td>DN25</td>
+<td>2 + 2</td>
+<td>装于一次侧供/回总管最高点，本体 Ø90 × 100</td>
+</tr>
+<tr>
+<td>QC-PRI</td>
+<td>一次侧快接接头</td>
+<td>DN150 级</td>
+<td>4（2 对）</td>
+<td>本体 Ø245 × 140，卡套 Ø267 × 45，母头侧带防尘盖</td>
+</tr>
+<tr>
+<td>QC-LT</td>
+<td>LT 快接接头</td>
+<td>DN100 级</td>
+<td>4（2 对）</td>
+<td>本体 Ø167.2 × 140，卡套 Ø182.6 × 45，母头侧带防尘盖</td>
+</tr>
+</tbody>
+</table>
+<p><strong>共计隔离阀 40 只</strong>（16 + 16 + 4 + 4），止回 1，排气 2 套 + 球阀 2。</p>
+<p><strong>材质</strong>：阀体 SS304（CF8）或 SS316L（CF3M）；阀杆不锈钢；阀座、填料、垫片等密封件须与冷却介质相容并注明牌号；<strong>严禁铝、镀锌件、铜及铜合金（含黄铜阀芯、青铜阀座）</strong>。
+<strong>接口</strong>：因现场不动火且要求可机械拆装，二次侧阀门建议采用<strong>对夹式或法兰连接</strong>；如采用焊接式阀，焊接须在厂内完成，现场界面仍须为法兰 / 快接。请逐位号明确接口型式、法兰标准与密封面、公称压力等级，并核对阀体外形是否落在给定包络内。</p>
+<h3>4.5 阀门操作件（刚性阀杆延长）</h3>
+<blockquote>
+<p><strong>本项目不接受链条（chain-wheel）操作阀。</strong> 管路舱净高仅 1278 mm、仅可自下方检修口进入，链条无法定位手轮标高，存在缠绕与误操作风险，且与"全部手轮位于同一操作面"的可达性要求冲突。如贵司认为某位号确无法采用刚性延长，须在技术方案阶段书面提出并给出替代方案报审。</p>
+</blockquote>
+<p>构造（见 GA-04 / GA-05 / GA-08）：
+- 支管阀（32 只）与 CDU 阀（4 只）：阀杆水平延长 Ø24（长约 559）+ 支座 36 × 36 × 63 + 轮毂 Ø40 × 24 + <strong>Ø140 × 19 手轮</strong>；
+- LT 总管阀（4 只）：经锥齿轮箱换向后接同规格手轮（见 §4.4 IV-LT）；
+- 全部 <strong>40 只手轮中心落在 EL.+3090 同一水平线、同一竖向操作面</strong>（手轮面 y ≈ −8831）；
+- 三维模型中的阀杆支座仅为占位，其<strong>生根方式（落甲板 / 挂标牌梁 / 挂舱壁）由贵司在技术方案中提出</strong>并报审；
+- 须可在<strong>不拆管</strong>的情况下更换阀杆延长件；出厂须逐只做开关试验并记录手轮操作力矩，单手可操作。</p>
+<h3>4.6 底板连接件（穿甲板快接法兰）——本次询价重点</h3>
+<table>
+<thead>
+<tr>
+<th>位号</th>
+<th>对接设备</th>
+<th>法兰外径 × 高</th>
+<th>数量</th>
+<th>位置</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>QCF-DLC</td>
+<td>液冷机柜供/回</td>
+<td><strong>Ø166.2 × 115</strong></td>
+<td>16</td>
+<td>8 台机柜柜心 ±185</td>
+</tr>
+<tr>
+<td>QCF-CW</td>
+<td>列间空调供/回</td>
+<td><strong>Ø138.4 × 115</strong></td>
+<td>16</td>
+<td>8 台空调柜心 ±150</td>
+</tr>
+<tr>
+<td>QCF-CDU</td>
+<td>CDU 一次侧进/出 + 二次侧供/回</td>
+<td><strong>Ø194 × 115（一次侧）/ Ø194 × 120（二次侧）</strong></td>
+<td>8</td>
+<td>EQ_01、EQ_19 各 4</td>
+</tr>
+<tr>
+<td>QCF-FIRE</td>
+<td>消防（by others，仅占位）</td>
+<td>Ø146 × 115</td>
+<td>2</td>
+<td>消防舱，不供货</td>
+</tr>
+</tbody>
+</table>
+<p>42 只坐标见 GA-07 坐标表。要求：</p>
+<ol>
+<li><strong>法兰面标高统一 EL.+2938</strong>（甲板上表面），上下平面度与同轴度须保证甲板下方软管快接一次对中；请给出允许偏差与是否需要浮动补偿结构；</li>
+<li>每只连接件须包含：穿板法兰本体、甲板密封垫、压紧法兰、紧固件、<strong>防误插结构或色标/标识</strong>；</li>
+<li>连接件须能在<strong>甲板下方单人操作完成拆装</strong>，不得要求从管路舱侧配合；</li>
+<li>所有 40 只按同一系列设计，仅口径不同，密封件通用；</li>
+<li>需给出<strong>拆装扭矩、密封件寿命与更换周期</strong>；</li>
+<li>甲板开孔尺寸与固定螺栓分布由贵司在技术方案中提出并报审；开孔位置以 3D 模型为准，不得更改。</li>
+</ol>
+<h3>4.7 支吊架</h3>
+<table>
+<thead>
+<tr>
+<th>位号</th>
+<th>型式</th>
+<th>规格</th>
+<th>数量</th>
+<th>生根</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HGR-PRI</td>
+<td>一次侧吊架（<strong>吊装</strong>）</td>
+<td>M16 吊杆 Ø18（有效长≈498）+ Ø215 管夹（宽 45）+ 吊耳 46 × 82 × 50 + 螺母；跨距 2810，首付 x=1237</td>
+<td>10 付</td>
+<td>舱顶结构面 EL.+4216</td>
+</tr>
+<tr>
+<td>STD-HT</td>
+<td>HT 落地支架</td>
+<td>立柱 60 × 60 × 396，底板 120 × 120 × 10，双臂 60 × 30 托 OD134</td>
+<td>6 付</td>
+<td>甲板面 EL.+2938</td>
+</tr>
+<tr>
+<td>STD-LT</td>
+<td>LT 落地支架</td>
+<td>立柱 60 × 60 × 451，底板 120 × 120 × 10，双臂 60 × 30 托 OD114.3</td>
+<td>8 付</td>
+<td>甲板面 EL.+2945</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>一次侧总管为吊装，二次侧 HT / LT 为落地支撑；全部支吊架由贵司成套供货并在厂内预制到位，不得现场自配。</li>
+<li>材质：吊杆、螺母、垫圈、防松件为 A2-70 / A4-70 不锈钢，吊杆须设双螺母或等效防松；管夹、吊耳、立柱、底板与不锈钢管接触部位须为 SS304 / SS316L，或碳钢热浸镀锌 + 非金属隔离衬垫（须报审）；<strong>严禁铝、镀锌件直接接触二次侧管路，严禁铜及铜合金</strong>。</li>
+<li>支架须按<strong>运输工况</strong>校核（见 §8.3），不得仅按静载设计；生根件与舱体结构的连接方式须报 MDCX 确认。</li>
+</ul>
+<h3>4.8 阀门标识</h3>
+<ul>
+<li>阀牌 40 块：170 × 110 × δ1.5～2.0，SS304 板，<strong>激光打标或蚀刻</strong>（不接受贴纸、不干胶、单纯丝印）；或阳极氧化铝板（须报审）。内容＝位号 + 服务对象 + 公称通径，中英文，字高 ≥8 mm。</li>
+<li>安装：以不锈钢自攻钉 / 铆钉 / 不锈钢卡箍固定于标牌梁，牌面朝操作面、与所属手轮同一 x 位置，牌面 y = −8690.2，EL.+3305…+3415；不接受扎带、挂链直接挂在阀体或管道上。</li>
+<li>标牌梁 1 根：120 × 120 方管，长 13416，SS304 或 Q235B 热浸镀锌（须报审），随管路系统一体预制、整体发货；两端与舱体结构的连接方式报 MDCX 确认。</li>
+<li>管道色标与标识：按供/回、高温/低温、一次/二次分色，内容与位置报审后执行。</li>
+</ul>
+<hr />
+<h2>5. 材料、工艺与清洁度</h2>
+<ol>
+<li><strong>二次侧（HT / LT）与全部与冷板回路接触的管件</strong>：不锈钢 <strong>SS304 / SS316L</strong>；<strong>严禁使用铝、镀锌件、铜及铜合金</strong>。密封件材质须与冷却介质相容，请注明。</li>
+<li><strong>一次侧</strong>：可采用不锈钢或碳钢内外防腐，请<strong>分别报价</strong>并说明利弊与交期差异。</li>
+<li>焊接：不锈钢采用氩弧焊，<strong>内壁充氩保护</strong>；焊后<strong>酸洗钝化</strong>并提供记录。</li>
+<li><strong>清洁度</strong>：二次侧管路出厂前须完成冲洗与吹扫，颗粒度不低于 <strong>ISO 4406 −/18/15</strong>（或等效），并<strong>双端封堵、充氮或封盖</strong>发运；请说明所采用的清洗工艺与检测手段。</li>
+<li>绝热：请<strong>单独报价</strong>（含 / 不含两个方案）；如含，须给出材质、厚度、外护与防凝露计算。</li>
+</ol>
+<hr />
+<h2>6. 接口与净距（硬约束）</h2>
+<ol>
+<li><strong>管路舱净宽 1056 mm，净高 1278 mm</strong>，所有管件、阀门、支架、保温<strong>外形包络不得超出 3D 模型给定包络</strong>；如厂家选型超出，须在报价阶段书面提出并给出替代布置。</li>
+<li><strong>所有阀门手轮必须落在同一操作面</strong>（Ø140 手轮中心 EL.+3090），并可在不拆管的情况下更换阀杆延长件。</li>
+<li><strong>穿甲板法兰面 EL.+2938 为刚性界面</strong>，不得上下浮动；甲板开孔位置以 3D 模型为准，孔位不得更改。</li>
+<li>一次侧总管在舱顶下方吊装，吊杆必须<strong>顶到舱顶结构面 EL.+4216</strong>，不允许悬空生根。</li>
+<li>与电力舱的分隔为独立舱壁，管路系统<strong>不得穿越电力舱</strong>。</li>
+<li>上部模块随箱体运输，全部管路必须<strong>在模块内自持</strong>，运输中不依赖箱体外部支撑。</li>
+</ol>
+<hr />
+<h2>7. 检验、试验与验收</h2>
+<table>
+<thead>
+<tr>
+<th>阶段</th>
+<th>项目</th>
+<th>判据</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>材料入厂</td>
+<td>材质单、合格证</td>
+<td>与 §5 一致</td>
+</tr>
+<tr>
+<td>焊接</td>
+<td>100 % 目视 + 10 % 无损（射线或渗透）</td>
+<td>相应标准合格级</td>
+</tr>
+<tr>
+<td>出厂</td>
+<td><strong>水压试验 1.5 × 设计压力，保压 30 min 无渗漏、无压降</strong></td>
+<td>逐回路进行并出具报告</td>
+</tr>
+<tr>
+<td>出厂</td>
+<td><strong>气密试验</strong>（如厂家建议）、清洁度检测</td>
+<td>§5.4</td>
+</tr>
+<tr>
+<td>出厂</td>
+<td>阀门逐只开关试验、手轮操作力矩记录</td>
+<td>单手可操作</td>
+</tr>
+<tr>
+<td>出厂</td>
+<td><strong>预装配试验</strong>：全部 40 只底板连接件与 MDCX 提供的对接样件试插</td>
+<td>一次对中率 100 %</td>
+</tr>
+<tr>
+<td>现场</td>
+<td>总装后<strong>二次水压 / 气密 + 冲洗 + 联合调试</strong></td>
+<td>见 §8.4</td>
+</tr>
+</tbody>
+</table>
+<p>请在报价中列明<strong>质保期</strong>（建议不少于 24 个月）与质保范围。</p>
+<hr />
+<h2>8. 包装、运输与现场服务（<strong>强制条款，请重点回复</strong>）</h2>
+<h3>8.1 整体发货</h3>
+<blockquote>
+<p><strong>8.1.1　本管路系统必须按总成"整体发货"</strong>：全部管道、阀门、支吊架、底板连接件在厂家工厂内完成<strong>预制、组对、试压、清洗与整体预装配</strong>后，作为<strong>完整成套系统</strong>发运，不得以散件到场拼装。</p>
+<p><strong>8.1.2</strong> 确因运输尺寸限制需要分段的，须在<strong>技术方案阶段</strong>书面提出分段方案，明确分段界面、界面型式（法兰 / 快接）、配对编号与现场连接工序；分段界面数量应尽可能少，且<strong>分段界面不得设在阀门、快接接头或穿甲板法兰处</strong>。</p>
+<p><strong>8.1.3</strong> 现场为<strong>总装厂房内不动火</strong>作业环境，<strong>所有现场连接必须为机械连接（法兰、快接、卡箍）</strong>，不接受现场焊接。</p>
+</blockquote>
+<h3>8.2 现场配合安装与测试</h3>
+<blockquote>
+<p><strong>8.2.1　厂家须派驻技术人员到浙江嘉兴海盐"世赫 3# 厂房"现场，配合本系统的安装、就位、对接、试压、冲洗、调试与联合验收</strong>，直至该批次模块通过 MDCX 的出厂联调（功能性联调）。</p>
+<p><strong>8.2.2</strong> 报价中须<strong>单列现场服务费用</strong>，并明确：派驻人数与专业（管道 / 焊接 / 调试）；<strong>每台模块的现场配合人天数</strong>；接到通知后的<strong>到场响应时间</strong>；是否含差旅、食宿、工具与耗材；首台（首件）与批量阶段的服务强度差异。</p>
+<p><strong>8.2.3</strong> 厂房硬约束：<strong>行吊上限 20 t</strong>，厂内<strong>不动火</strong>，测试联调区仅做功能性联调（&lt; 100 kW，不带真实热负载）。厂家的到场件与工装须满足上述约束。</p>
+</blockquote>
+<h3>8.3 包装与运输</h3>
+<ol>
+<li>成套系统须做<strong>运输工况</strong>固定与减振设计，并提供<strong>运输工况校核报告</strong>（含加速度取值假设）；</li>
+<li>所有管口<strong>封堵防尘</strong>，二次侧管路封氮或密封封盖；</li>
+<li>阀门手轮、压力表、快接母头等易损件<strong>单独包装、现场安装</strong>，并在包装清单中单列；</li>
+<li>提供<strong>装箱单、吊装点标识、重心标识与吊装示意</strong>；</li>
+<li>木质包装须符合出口熏蒸要求（如后续出口）。</li>
+</ol>
+<h3>8.4 现场测试范围（厂家配合项）</h3>
+<ul>
+<li>系统整体复压（气密或水压，工艺由双方确认）；</li>
+<li>二次侧冲洗与清洁度复检；</li>
+<li>阀门功能与手轮可达性复核；</li>
+<li>40 只底板连接件与设备的对接试验；</li>
+<li>配合 MDCX 完成模块级功能联调与问题闭环。</li>
+</ul>
+<hr />
+<h2>9. 报价要求</h2>
+<p>请直接在随附《设备材料清单（询价用）》中逐行填写「厂家建议」「单价」「合价」（人民币含税，EXW / FOB 请注明），并按下表口径汇总：</p>
+<table>
+<thead>
+<tr>
+<th>序</th>
+<th>分项</th>
+<th>计价单位</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>一次侧总管系统（含吊架、快接、排气）</td>
+<td>套</td>
+<td>不锈钢 / 碳钢防腐两案</td>
+</tr>
+<tr>
+<td>2</td>
+<td>二次侧 HT 回路（含支架）</td>
+<td>套</td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>二次侧 LT 回路（含阀门、止回、快接、支架）</td>
+<td>套</td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>设备下引支管 40 支</td>
+<td>套</td>
+<td>按 DLC / CW / CDU 分列</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>阀门 45 件</strong>（隔离 40 / 止回 1 / 排气 2 套 / 球阀 2）</td>
+<td>件</td>
+<td>请列品牌与型号</td>
+</tr>
+<tr>
+<td>6</td>
+<td>阀门操作件 40 套</td>
+<td>套</td>
+<td>含锥齿轮箱 4 套</td>
+</tr>
+<tr>
+<td>7</td>
+<td><strong>底板连接件 40 只</strong></td>
+<td>只</td>
+<td>按 4 种口径分列</td>
+</tr>
+<tr>
+<td>8</td>
+<td>阀门标牌与标牌梁</td>
+<td>套</td>
+<td></td>
+</tr>
+<tr>
+<td>9</td>
+<td>绝热</td>
+<td>套</td>
+<td><strong>单独报价，含 / 不含两案</strong></td>
+</tr>
+<tr>
+<td>10</td>
+<td>出厂试验与清洗</td>
+<td>套</td>
+<td></td>
+</tr>
+<tr>
+<td>11</td>
+<td><strong>整体发货包装与运输</strong></td>
+<td>套</td>
+<td>至海盐厂房</td>
+</tr>
+<tr>
+<td>12</td>
+<td><strong>现场配合安装与测试服务</strong></td>
+<td>人天 / 台</td>
+<td>见 §8.2</td>
+</tr>
+<tr>
+<td>13</td>
+<td>随机备件与专用工具</td>
+<td>套</td>
+<td>建议清单</td>
+</tr>
+</tbody>
+</table>
+<p>同时请提供：<strong>首台交期</strong>、<strong>批量交期</strong>、付款条件、质保条件。</p>
+<hr />
+<h2>10. 需厂家确认 / 答复的问题</h2>
+<table>
+<thead>
+<tr>
+<th>编号</th>
+<th>问题</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Q1</td>
+<td>各回路<strong>壁厚、材质与压力等级</strong>建议值；是否建议调整管径（尤其 HT OD134 与 LT OD114.3 在 §4.3 流量下的流速与压降）？</td>
+</tr>
+<tr>
+<td>Q2</td>
+<td>一次侧采用不锈钢 vs 碳钢防腐的价格与交期差异？</td>
+</tr>
+<tr>
+<td>Q3</td>
+<td>阀门选型（品牌 / 型号 / 阀体型式 / 接口型式），<strong>阀体包络能否落在 §4.4 给定尺寸内</strong>？LT-S 阀杆朝下姿态所选阀型是否允许？</td>
+</tr>
+<tr>
+<td>Q4</td>
+<td>二次侧运行压力上限 <strong>72 psig（≈0.50 MPa）</strong>下，快接接头与底板连接件的<strong>额定压力与循环寿命</strong>？</td>
+</tr>
+<tr>
+<td>Q5</td>
+<td>底板连接件的<strong>一次对中公差</strong>要求（甲板开孔与设备侧接口的允许偏差）？是否需要浮动补偿结构？</td>
+</tr>
+<tr>
+<td>Q6</td>
+<td>二次侧清洁度可达到的等级与检测报告形式？</td>
+</tr>
+<tr>
+<td>Q7</td>
+<td><strong>整体发货</strong>是否可行？若必须分段，分段方案与界面（见 §8.1.2）。</td>
+</tr>
+<tr>
+<td>Q8</td>
+<td>现场配合服务的<strong>人天数、响应时间与费用口径</strong>（见 §8.2.2）。</td>
+</tr>
+<tr>
+<td>Q9</td>
+<td>运输工况校核的加速度取值与固定方案。</td>
+</tr>
+<tr>
+<td>Q10</td>
+<td>阀杆延长支座的生根方案（落甲板 / 挂标牌梁 / 挂舱壁）？</td>
+</tr>
+<tr>
+<td>Q11</td>
+<td>是否有与 GPU 直接液冷（DLC）二次侧管路的既往业绩？请提供 2–3 个案例。</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>11. 回复方式</h2>
+<ul>
+<li>联系人 / 邮箱：见随附邮件；</li>
+<li>技术澄清可先行发起，不必等待完整报价；澄清请按"序号 / 引用文件 / 原文 / 问题"格式提出，MDCX 以书面答疑表回复；</li>
+<li>本文件与随附 3D、图纸、清单仅用于本次询价，<strong>未经 MDCX 书面同意不得转发第三方</strong>。</li>
+</ul>
+<p><em>文件结束　RFI-PIP-001 Rev.1　2026-09-11</em></p></body></html>

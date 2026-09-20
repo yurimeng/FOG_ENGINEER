@@ -17,7 +17,7 @@ source_anchors:
 
 # §1. 分类体系说明
 
-在 MDC 体系中，**IT Zone**（A32 / AC40 / AC45 / DC45）是公司自主产品。
+在 MDC 体系中，**IT Zone**（A32 / AC40 / AC45 / DC45）是公司自主产品。 ^mdc-54bde601f0
 **Cooling Zone**、**Power Zone** 和 **Network Zone** 主要采用第三方成熟产品。
 
 ## 1.1 二级目录结构（V1.5 新增）

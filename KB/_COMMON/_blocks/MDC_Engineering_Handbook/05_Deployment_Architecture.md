@@ -36,7 +36,7 @@ MDC 部署体系分为四个层级，每个层级都可以独立存在，也可�
 ├─────────────────────────────────────────┤
 │     ACC（Advanced Computing Cluster）   │  ← 多个模块 + 共享冷却/电力
 ├─────────────────────────────────────────┤
-│       Module（AC40 / DC45）             │  ← 独立算力单元，可独立运行
+│       Module（AC40 / DC45）             │  ← 独立算力单元，可独立运行 ^mdc-a09c175dd7
 ├─────────────────────────────────────────┤
 │       Infrastructure（场地接入）         │  ← 电力 / 冷却 / 网络接入点
 └─────────────────────────────────────────┘
@@ -81,8 +81,8 @@ ACC 是 MDC 的标准园区单元，由以下组件构成：
 
 ```text
 ACC
- ├── AC40 Module × N    （推理 / 分布式训练）
- ├── DC45 Module × N    （大规模训练）
+ ├── AC40 Module × N    （推理 / 分布式训练） ^mdc-c3c01b64f9
+ ├── DC45 Module × N    （大规模训练） ^mdc-27bd8416cc
  ├── Cooling Plant       （共享冷却站）
  └── Power Infrastructure（共享变压器 / BESS / Generator）
 ```
@@ -97,7 +97,7 @@ ACC
 |BESS|可共享|园区级 BESS 统一调度，削峰填谷|
 |柴油发电机|可共享|按最大负载配置，支持全园区备用|
 |Dry Cooler / Chiller|可共享|冷却站集中建设，管道分配至各模块|
-|CDU（DC45专属）|不共享|每个 DC45 模块独立 CDU，避免冷却耦合|
+|CDU（DC45专属）|不共享|每个 DC45 模块独立 CDU，避免冷却耦合 ^mdc-47b811e833 |
 |UPS（模块级）|不共享|每个模块独立 UPS，故障不跨模块传播|
 
 **设计原则：共享基础设施降低成本，不共享关键保护路径保证可靠性。**
@@ -122,11 +122,11 @@ MDC 的扩展遵循**线性增量模式**：每次扩展只需新增模块，无
 典型扩展路径：
 
 ```text
-阶段 1：1 个 AC40（推理优先，快速上线）
+阶段 1：1 个 AC40（推理优先，快速上线） ^mdc-a07485c5e5
     ↓
-阶段 2：增加 1–2 个 DC45（引入训练能力）
+阶段 2：增加 1–2 个 DC45（引入训练能力） ^mdc-f60ac31710
     ↓
-阶段 3：继续增加 AC40 / DC45（按业务需求混合扩展）
+阶段 3：继续增加 AC40 / DC45（按业务需求混合扩展） ^mdc-058aa0c18f
     ↓
 阶段 N：形成完整 AI Factory 园区
 ```
@@ -141,13 +141,13 @@ MDC 的扩展遵循**线性增量模式**：每次扩展只需新增模块，无
 
 ## 5.5 混合算力园区（Hybrid Compute Campus）
 
-AI Factory 通常同时运行训练和推理任务，MDC 支持在同一园区内混合部署 AC40（Immersion）与 DC45（DLC）：
+AI Factory 通常同时运行训练和推理任务，MDC 支持在同一园区内混合部署 AC40（Immersion）与 DC45（DLC）： ^mdc-31561fe11a
 
 ```text
 ┌──────────────── ACC Campus ─────────────────┐
 │                                              │
 │  ┌─────────────┐    ┌─────────────────────┐  │
-│  │    AC40     │    │        DC45         │  │
+│  │    AC40     │    │        DC45         │  │ ^mdc-484e548e06
 │  │  Immersion  │    │    Direct Liquid     │  │
 │  │  推理集群    │    │    训练集群           │  │
 │  └──────┬──────┘    └──────────┬──────────┘  │
@@ -164,7 +164,7 @@ AI Factory 通常同时运行训练和推理任务，MDC 支持在同一园区�
 └──────────────────────────────────────────────┘
 ```
 
-混合园区的冷却系统可以统一使用高温水系统（28–35°C Supply）， AC40 和 DC45 均在此温度范围内正常工作，无需分别建设冷却回路。
+混合园区的冷却系统可以统一使用高温水系统（28–35°C Supply）， AC40 和 DC45 均在此温度范围内正常工作，无需分别建设冷却回路。 ^mdc-db66d7f461
 
 ---
 
@@ -211,10 +211,10 @@ MDC 部署架构的核心逻辑是：
 |---|---|---|
 |扩展方式|增加模块，不升级单体|降低扩展风险|
 |资源共享|基础设施共享，保护路径独立|平衡成本与可靠性|
-|混合算力|AC40 + DC45 同园区部署|覆盖推理与训练全场景|
+|混合算力|AC40 + DC45 同园区部署|覆盖推理与训练全场景 ^mdc-b124c30ea3 |
 |运维控制|BMS → DCIM → 算力调度三层分离|清晰职责边界，支持规模化运维|
 
-> **关联文档：** [[RA-002_Liquid_1.2MW|KB/Reference Architecture/EDGE_INFERENCE_DLC_1.2MW]] · [[RA-001_Immersion_0.4MW|KB/Reference Architecture/EDGE_INFERENCE_IMMERSION_0.4MW]] · [[L1240C45_Thermal_Assessment_6Sites|KB/LIQUID/L1240C45/DESIGN/L1240C45_Thermal_Assessment_6Sites]]
+> **关联文档：** [[RA-002_Liquid_1.2MW|KB/Reference Architecture/EDGE_INFERENCE_DLC_1.2MW]] · [[RA-001_Immersion_0.4MW|KB/Reference Architecture/EDGE_INFERENCE_IMMERSION_0.4MW]] · [[L1240C45_Thermal_Assessment_6Sites|KB/LIQUID/L1240C45/DESIGN/L1240C45_Thermal_Assessment_6Sites]] ^mdc-1ccc99451a
 
 ---
 

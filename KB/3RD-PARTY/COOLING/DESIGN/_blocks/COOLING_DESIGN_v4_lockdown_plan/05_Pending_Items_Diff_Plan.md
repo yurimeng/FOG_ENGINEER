@@ -40,8 +40,8 @@ source_anchors: []
 | 文档 | 待 v4 改的章节 | 改动量 |
 |---|---|---|
 | `L1240C45_Thermal_Assessment_6Sites.md` | §2.4 TCS 28°C 兜底 / §3.1 工况层级 / §3.4 温度边界 / §4.x 各站点 PUE / §5 跨站对比 / §7 各站点配置 / §8 上游对接面 | 大改（PUE 数值全部重算）|
-| `L1240C45 三支路冷却重评估 2026-05-21.md` | §0.5 三个问题答复 / §1.3 边界假设 / §2.x 全部 ε-NTU 实算 / §3.x RDHx + CRAH 能力 / §4.x 三支路流量 ΔP / §5 工程结论 / §6 单 CDU 校核 | 中–大改 |
-| `L1240C45 Hydronic & Thermal Design Criteria` | §9.x 流量 / §12 TCS 28°C Forbidden（解除？ in B/C）| 中改 |
-| `L1240C45 Tech Spec CN / EN` | TCS 进水温度 26–28 → 22 | 小改 |
+| `L1240C45 三支路冷却重评估 2026-05-21.md` | §0.5 三个问题答复 / §1.3 边界假设 / §2.x 全部 ε-NTU 实算 / §3.x RDHx + CRAH 能力 / §4.x 三支路流量 ΔP / §5 工程结论 / §6 单 CDU 校核 | 中–大改 ^mdc-f0f957c0a9 |
+| `L1240C45 Hydronic & Thermal Design Criteria` | §9.x 流量 / §12 TCS 28°C Forbidden（解除？ in B/C）| 中改 ^mdc-7b10fe5598 |
+| `L1240C45 Tech Spec CN / EN` | TCS 进水温度 26–28 → 22 | 小改 ^mdc-739a9ac0b9 |
 | `Quick Tech Spec` / `PRODUCTS_L1240C45` | 同上 | 小改 |
 | `计算公式.md`（引擎文档）| 与新架构对齐（§4 已是单环路口径 — A 偏离 / B 对齐 / C 偏离）| 看是否要解释偏离 |

@@ -5,8 +5,8 @@ tags:
   - #product/i50ts
   - #MDC
 ---
-# A32 – Scalable Immersion Cooling Tank
-适用对象：AC40 / AC45 / DC45 / 独立边缘部署的浸没式液冷算力单元
+# A32 – Scalable Immersion Cooling Tank ^mdc-4804b52bd0
+适用对象：AC40 / AC45 / DC45 / 独立边缘部署的浸没式液冷算力单元 ^mdc-b7c9899093
 版本：V1.4（2026-06-10 统一 ΔT=8K / Tank 流量 / 纯干冷判据 ≤24°C）
 
 ---
@@ -18,8 +18,8 @@ tags:
 | 1 | 产品定位 + 核心参数 + IT 负荷 | §1–§3：标品定位、参数表、服务器兼容、IT 负荷 |
 | 2 | 机柜详情 | §4：32RU / OCP / Dual CDU |
 | 3 | 冷却架构（含二次侧散热校核） | §5.1–§5.4：热力路径、散热选型、故障模式、二次侧流量 |
-| 4 | 电力路径 | §6：INPUT → PDC → UPS → A32 |
-| 5 | 适用场景 + 扩展逻辑 + 与 AC40/DC45 关系 | §7–§9：禁/适场景、扩展、上下游 |
+| 4 | 电力路径 | §6：INPUT → PDC → UPS → A32 ^mdc-e24eebb8bc |
+| 5 | 适用场景 + 扩展逻辑 + 与 AC40/DC45 关系 | §7–§9：禁/适场景、扩展、上下游 ^mdc-d7d5316173 |
 | 6 | CDU 结构 + 控制系统 + 配电器件 | §10–§12：CDU / 监控 / PDU |
 
 ---
@@ -40,7 +40,7 @@ tags:
 
 ![[04_Power_Path]]
 
-## 5. 适用场景 + 扩展逻辑 + 与 AC40/DC45 关系
+## 5. 适用场景 + 扩展逻辑 + 与 AC40/DC45 关系 ^mdc-036db0f719
 
 ![[05_Use_Cases_And_Relationships]]
 

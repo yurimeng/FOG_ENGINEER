@@ -32,7 +32,8 @@ Product docs are organised by **solution line → SKU**:
 |------|------|------|
 | Liquid Cooling (`L`) | `KB/LIQUID/<alias>/` | L1240C45 (shipped) · L1800C45 (shipped) · L450C20 (shipped) |
 | Immersion Cooling (`I`) | `KB/IMMERSION/<alias>/` | I400C45 (shipped) · I400C40 (shipped) · I200C20 (shipped) · I50TS (tank component) |
-| Cross-product | `KB/_COMMON/` | MDC handbook, standards compilation, product quick-ref |
+| Cross-product | `KB/_COMMON/` | MDC handbook, standards compilation, product quick-ref, inter-module connector standard (`MDCX_Connector_Standard_A1`) |
+| Power modules (not SKUs) | `KB/POWER/` | PowerPod / LV Pod (`待厂家确认`) · MV Pod (not started). These are **not** SKUs — never put them in `NAMING_MAP.md` or quote them as product codes |
 
 All six SKUs are **`shipped`** as of the D-19 Publish gate in `docs/PRODUCT-MATRIX.md` §5
 (2026-08-27), which released I200C20 / L1800C45 / L450C20 in one pass. There is no
@@ -90,6 +91,10 @@ Full role definitions and boundaries: `AGENTS/`. Process flows: `PROCESS/`.
 - **Project status:** `Projects/project_list.md` is the single source of truth. Never maintain a project status snapshot in this file.
 - **Per-project structure:** `Projects/<name>/Project_Record.md` + `Site Info/` + `RFI.md`.
 - **Outbound docs:** `Projects/外发资料_最新/`. CN/EN pairs must be versioned together. Index: `外发资料_最新/index.md`.
+- **Technical proposals (MANDATORY):** All future project technical proposals — CN and EN — must be created per `KB/Guideline/PROPOSAL_Guideline.md`: standards-first design-institute skeleton (编制依据 → 建设等级判定 → 比选论证 → 算力 → 电力 → 冷却 → 消防 → 进度 → 风险), branded cover (Pan's Power logo + language-matched entity). CN version: **no CAPEX/ROI** (GPU compliance); EN version: **include financial analysis chapter**. Read the Guideline before drafting any proposal.
+- **Feasibility studies (MANDATORY, CN):** All domestic project feasibility study reports (可研) must be created per `KB/Guideline/FEASIBILITY_Guideline.md`: NDRC enterprise-investment nine-chapter outline (概述 → 背景需求产出 → 选址要素 → 建设方案 → 运营 → 投融资财务 → 影响效果 → 风险 → 结论), Pan's Power branded cover, one locked indicator table (1.1.10) + one load table driving all chapters. A 可研 **must** include investment estimate + financial evaluation (Excel workbook, 附表 1–12 incl. sensitivity); GPU/server prices and compute sale price are **supplied by the owner and cited as such**. Read the Guideline before drafting any 可研.
+- **Currency & tax (MANDATORY):** Domestic (CN) documents — 可研, proposals, quotes, budgets, decks — use **RMB, tax-inclusive**; overseas documents use **USD, pre-tax** (VAT/GST/duties listed separately, FX date stated). One declaration per document, never mixed. Source: `PROPOSAL_Guideline.md §1B` / `FEASIBILITY_Guideline.md §F-00`.
+- **Data consistency (MANDATORY):** Never derive a new proposal/可研 by "save-as" from a previous project. Every number lives once (Excel template inputs → indicator table → body references); run the dirty-word search (previous project/customer/place names, off-site climate/plants, unused cooling/power route names, stale document numbers) and the Excel `13_一致性校核` before release. Source: `FEASIBILITY_Guideline.md §F-00`.
 - **Pre-proposal checklist:** RFI complete · architecture selected · IT vs Total Load clarified · cooling fixed · layout fixed · compliance path confirmed · SPOF identified.
 - **Delivery cycle & payment terms:** Read from commercial templates. Do not inline figures here.
 
@@ -141,4 +146,8 @@ Rules:
 
 | 日期 | 变更 |
 |---|---|
+| 2026-09-16 | §5 新增 Currency & tax（国内人民币含税 / 海外美元未税）与 Data consistency（禁止另存改稿、单一真值源、脏词检索 + Excel 一致性校核）两条强制规则 |
+| 2026-09-16 | §5 新增 Feasibility studies 强制规则：国内项目可研按 `KB/Guideline/FEASIBILITY_Guideline.md`（发改委企业投资项目九章大纲 + MDC 模块化改写；含投资估算与 Excel 财务附表；GPU 价格由业主提供） |
+| 2026-09-16 | §5 新增 Technical proposals 强制规则：所有技术方案按 `KB/Guideline/PROPOSAL_Guideline.md`（设计院范式统一国内外；国内无 CAPEX/ROI，国际含财务章；品牌封面） |
+| 2026-08-30 | §2 新增 `KB/POWER/`（PowerPod / MV Pod，非 SKU）与 `_COMMON` 连接件标准指引 |
 | 2026-08-30 | §2 产品表状态列全部改为 shipped（L1800C45 / L450C20 / I200C20 原写 draft），对齐站点 `docs/PRODUCT-MATRIX.md` §5 D-19 gate（2026-08-27）；§2 补 D-19 说明与 `PRODUCT_SPEC_BASELINE.md` / `UNCONFIRMED_Convention.md` 指引 |

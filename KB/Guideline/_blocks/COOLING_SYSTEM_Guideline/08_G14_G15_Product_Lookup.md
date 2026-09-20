@@ -20,17 +20,17 @@ Only products listed in `KB/3RD-PARTY/COOLING/` may be selected.
 
 | Product | Supplier | 适配 SKU | Key Specs | 状态 | Reference |
 |---------|---------|---------|-----------|------|----------|
-| Hybrid Chiller TAMFV430.3ALF5 | TICA(天加) | L1240C45 | ≥1600 kW; 磁悬浮; FWS 22→32 °C | ✅ ATS Full Pass 2026-06-11 | [[TICA_TAMFV430.3ALF5_Hybrid_Chiller_Configuration_Review_V2.3]] |
-| CDU SCR 14103 W | STULZ | **L1800C45** | 1200 kW; FWS 36/46 °C; TCS 40/50 °C; 板换×2 + 泵×3; Tri-Clamp 4" | ✅ ATS approved 2026-08-30 | [[PRD-STULZ-SCR14103W]] |
-| CyberRow CW 列间空调 CRS 560 CW | STULZ | **L1800C45 × 2** | 净 54.7 kW/台(毛 57.3); 冷冻水 10/16 °C; 11,200 m³/h; 左/右侧向送风; 400V/50Hz | ✅ ATS approved 2026-08-30 | [[PRD-STULZ-CRS560CW]] |
-| CyberRow CW 列间空调 CRS 330 CW(CW330) | STULZ | **L1800C45 × 6 · L450C20 × 2** | 站点记净 33 kW/台(毛 36, user-supplied); 其余参数为缩放推导 | ✅ 归属台数已定 · ⏳ 单台规格待厂家(2026-08-31) | [[PRD-STULZ-CW330]] |
-| RDHX CoolLoop DCD35 | VERTIV | L1240C45 | 被动式; 35 kW 标称; DN25; ε ≈ 0.55 | ⏳ 正在 review | [[PRD-Vertiv-RDHx]] |
-| **CRAH（吊顶）** CeilAir OHS-084-DG-FC | STULZ | **仅 L1240C45** | 顶置自含 DX + FC; PG25 冷凝。**与上两行的列间机是不同机型类别，不可互换** | ⏳ 正在 review（**CE / 50 Hz 缺席，欧洲/亚太 50 Hz 客户闭环前不得报价**） | [[PRD-STULZ-CeilAir]] |
+| Hybrid Chiller TAMFV430.3ALF5 | TICA(天加) | L1240C45 | ≥1600 kW; 磁悬浮; FWS 22→32 °C | ✅ ATS Full Pass 2026-06-11 | [[TICA_TAMFV430.3ALF5_Hybrid_Chiller_Configuration_Review_V2.3]] ^mdc-60d5326230 |
+| CDU SCR 14103 W | STULZ | **L1800C45** | 1200 kW; FWS 36/46 °C; TCS 40/50 °C; 板换×2 + 泵×3; Tri-Clamp 4" | ✅ ATS approved 2026-08-30 | [[PRD-STULZ-SCR14103W]] ^mdc-3c877c08d0 |
+| CyberRow CW 列间空调 CRS 560 CW | STULZ | **L1800C45 × 2** | 净 61.6 kW/台(毛 64.2); 冷冻水 10/15 °C; 11,200 m³/h; 左/右侧向送风; 400V/50Hz | ✅ ATS approved 2026-08-30 | [[PRD-STULZ-CRS560CW]] ^mdc-acd43bc58d |
+| CyberRow CW 列间空调 CRS 320 CW(CW320) | STULZ | **L1800C45 × 6 · L450C20 × 4** | 站点记净 29.1 kW/台(毛 36, user-supplied); 其余参数为缩放推导 | ✅ 归属台数已定 · ✅ 单台规格 ✅ PRD v2.0 2026-09-08 | [[PRD-STULZ-CW320]] ^mdc-089b6a4cbe |
+| RDHX CoolLoop DCD35 | VERTIV | L1240C45 | 被动式; 35 kW 标称; DN25; ε ≈ 0.55 | ⏳ 正在 review | [[PRD-Vertiv-RDHx]] ^mdc-2f0c94d289 |
+| **CRAH（吊顶）** CeilAir OHS-084-DG-FC | STULZ | **仅 L1240C45** | 顶置自含 DX + FC; PG25 冷凝。**与上两行的列间机是不同机型类别，不可互换** | ⏳ 正在 review（**CE / 50 Hz 缺席，欧洲/亚太 50 Hz 客户闭环前不得报价**） | [[PRD-STULZ-CeilAir]] ^mdc-4e837c9ad1 |
 | DRYCOOL_with_DX | ~~泰铂~~ | — | 600kW class; IP55; C3防腐; 涡旋压缩机 | ⛔ 已移出 2026-06-16（未走正式 ATS 评审） | [[PRD-泰铂-Chiller\|历史归档]] |
 | Hybrid Cooler 600kW | ~~三河同飞~~ | — | 600kW; 螺杆压缩机; -15°C~45°C; IP54 | ⛔ 已移出 2026-06-16（同上） | [[PRD-同飞-Chiller-600KW\|历史归档]] |
 
 > ⚠️ **⛔ 已移出与 ⏳ #unconfirmed 的产品不得进入 BOM 或方案。** 移出项重新引入须走正式 ATS 评审 + Risk/Compliance 评估。
-> ⚠️ **L1800C45 / L450C20 尚无专属 列间空调 / CDU Requirement**，选型目前只有 PRD、无需求书基线。规格取值见 [[PRODUCT_SPEC_BASELINE]] §1.2。
+> ⚠️ **L1800C45 / L450C20 尚无专属 列间空调 / CDU Requirement**，选型目前只有 PRD、无需求书基线。规格取值见 [[PRODUCT_SPEC_BASELINE]] §1.2。 ^mdc-7580902576
 
 **关键部件选型原则 / Component Selection Principles:**
 
@@ -70,3 +70,9 @@ This file is the authoritative source for:
 Check `KB/3RD-PARTY/COOLING/Suppliers/` for product specs. Vendor 范围以 [[3rd Party List]] 为准。
 
 > **Step 3 — 置信度核查（2026-08-30 新增）：** 引用任何参数前，确认它在源文档中不是 ⏳ `#unconfirmed` 或 ⛔ `conflict`。规则见 [[UNCONFIRMED_Convention]]；产品侧参数以 [[PRODUCT_SPEC_BASELINE]] 为准。
+
+## Changelog
+
+| 日期 | 变更 |
+|---|---|
+| 2026-09-20 | 🧭 unconfirmed-128 已可关闭，已回写来源值（已可关闭） |

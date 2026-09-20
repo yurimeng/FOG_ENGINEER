@@ -35,7 +35,7 @@ source_anchors:
 | 每 manifold 分支数 | 20–50 |
 | 每分支设计流量 | **1.6–2.1 L/min**（在 1–3 L/min 规格内 30%+ 余量） |
 | 每 manifold 入口 | **PICV（压差独立流量阀）+ 流量计**（防双 manifold 间不平衡） |
-| 总 manifold 数量 (L1240C45 整机) | **16–24 个**（8 rack × 2–3 manifold/rack） |
+| 总 manifold 数量 (L1240C45 整机) | **16–24 个**（8 rack × 2–3 manifold/rack） ^mdc-0bbd25e4b2 |
 | 不平衡率 | ≤ 10%（单 manifold 内）/ ≤ 15%（含 manifold 间） |
 
 ---

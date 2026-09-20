@@ -53,7 +53,7 @@ source_anchors:
 | Max airflow per unit | 11,200 m³/h |
 | Max water flow per unit | 5.3 m³/h |
 | Water connection | DN25 (1") |
-| Operating air inlet range | datasheet 10–40°C ⚠️ L1240C45 S-Max 41–48°C exceeds limit by 1–8°C, under Vertiv review |
+| Operating air inlet range | datasheet 10–40°C ⚠️ L1240C45 S-Max 41–48°C exceeds limit by 1–8°C, under Vertiv review ^mdc-624e545e0e |
 | Actual air-heat absorption (TCS 26–28°C) | 47–55% (ε ≈ 0.55 passive-RDHX physical ceiling) |
 | Branch 2 design flow (PG25) | ≈ 21 m³/h |
 | Branch 2 ΔP | 36–62 kPa |
@@ -64,7 +64,7 @@ source_anchors:
 |------|-----------|
 | Quantity & model | **9 × STULZ OHS-084-DG-FC** (self-contained DX with free-cooling loop, EG/PG compatible) |
 | Nominal total cooling per unit | 25.6 kW (80°F DB / 67°F WB / 50% RH) |
-| Sensible cooling per unit (L1240C45 conditions, PG25 27°C) | ≈ 26 kW (+13% PG25 uplift + +10% return-air temperature correction + +5% low-humidity correction) |
+| Sensible cooling per unit (L1240C45 conditions, PG25 27°C) | ≈ 26 kW (+13% PG25 uplift + +10% return-air temperature correction + +5% low-humidity correction) ^mdc-40330ce224 |
 | 9-unit total sensible | ≈ 234 kW |
 | Compressor input per unit | 8.2 kW (datasheet) / ≈ 6.4 kW (after PG25 27°C uplift) |
 | Condenser flow per unit | **5.41 m³/h** (23.8 GPM, locked from datasheet) |
@@ -92,6 +92,6 @@ source_anchors:
 | **RDHX branch** | Any single RDHX < 1.5 m³/h → that rack's GPUs throttle + alarm |
 | **CeilAir branch** | Branch 3 < 40 m³/h → alarm + roof-supply temperature trending |
 | **CeilAir redundancy** | All 9 roof positions are occupied — no N+1; failure mitigation relies on GPU throttling |
-| **Free Cooling (FC)** | The -FC variant carries a free-cooling loop; L1240C45's 26–28°C TCS sits above typical FC activation thresholds (< 10°C), so FC stays dormant under normal operation |
+| **Free Cooling (FC)** | The -FC variant carries a free-cooling loop; L1240C45's 26–28°C TCS sits above typical FC activation thresholds (< 10°C), so FC stays dormant under normal operation ^mdc-56dd8a2f66 |
 
 ---

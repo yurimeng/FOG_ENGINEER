@@ -11,6 +11,8 @@ tags:
 # FOG — Hot Cache
 
 > **谁在用：** FOG 工作区里任何 Agent / 任何外部 Claude 会话读 vault 时，先看这份 ~500 字摘要，再决定要不要深读。
+>
+> **待办去哪找：** 全工作区的未决项集中在 [[OPEN_ITEMS]]（2026-09-08 建表）。§1 是 P0 焦点，§2 是按厂家打包的外部索取清单，§4 是口径冲突登记 —— **引用任何数字前先扫 §4**。
 
 ## Last Updated
 2026-08-30. **产品口径基线同步**：六个 SKU **全部 `shipped`** —— 站点 `docs/PRODUCT-MATRIX.md` §5 的 D-19 gate（2026-08-27）一次性放行原为 draft 的 I200C20 / L1800C45 / L450C20；治理层与导航层（CLAUDE.md / _navigation.md / README / PRINCIPLES / SOUL / AGENTS）的产品线与状态表述已同步。同时新增 [[UNCONFIRMED_Convention]] `#unconfirmed` 标注规范（文档级 / 章节级 / 行级三粒度 + ✅ / 🔶 derived / ⏳ #unconfirmed / ⛔ conflict 四级置信度），六 SKU 规格唯一上游为 [[PRODUCT_SPEC_BASELINE]]。

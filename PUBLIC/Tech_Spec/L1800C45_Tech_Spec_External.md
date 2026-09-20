@@ -9,7 +9,7 @@ audience: 客户 / Customer（对外输出版）
 sku_id: L1800C45DR220
 ---
 
-# L1800C45 — Technical Specification（对外输出版 / External Edition）
+# L1800C45 — Technical Specification（对外输出版 / External Edition） ^mdc-8e03f1c5ac
 **双环路直接液冷集装箱数据中心 · Dual-Loop Direct Liquid Cooled Container Data Center**
 **45ft High Cube · 1800 kW IT · 单柜 220 kW / 220 kW per rack**
 
@@ -26,7 +26,7 @@ sku_id: L1800C45DR220
 >
 > **本版为单文件，块拆分待需要时再做 / This edition is a single file; block splitting is deferred until needed.** 锚点 `^sec-2-positioning` … `^sec-14-summary` 已保留 / anchors are preserved.
 
-版本 / Version: v1.1 | 日期 / Date: 2026-08-30 | SKU: `L1800C45DR220`
+版本 / Version: v1.1 | 日期 / Date: 2026-08-30 | SKU: `L1800C45DR220` ^mdc-6ea541dc05
 
 ---
 
@@ -50,17 +50,17 @@ sku_id: L1800C45DR220
 
 ## 2. 产品定位 / Product Positioning ^sec-2-positioning
 
-**中文：** L1800C45 是 45ft High Cube 双环路直接液冷集装箱数据中心，单柜最大 220 kW，整箱 IT 容量 1800 kW，面向 GB300 NVL72 与 B300 HGX 这类 SXM / NVLink 机架级 GPU 系统。
+**中文：** L1800C45 是 45ft High Cube 双环路直接液冷集装箱数据中心，单柜最大 220 kW，整箱 IT 容量 1800 kW，面向 GB300 NVL72 与 B300 HGX 这类 SXM / NVLink 机架级 GPU 系统。 ^mdc-4adf0ef096
 
-这个产品服务的是一类很具体的场地条件：**电有了，地不够（out of floor, not power）。** 园区已经拿到变电容量、已有 MV 进线与变压器余量，甚至已经建好电力室，缺的是足够的、够高的、承重够的机房面积去摊开一片百千瓦级机柜。L1800C45 用单柜 220 kW 把同样的算力压进同一个 45ft 占地：一个集装箱占位换回 1800 kW IT。当场地按面积计价、或厂房层高与楼板荷载卡死扩容时，这个密度差就是决策依据。
+这个产品服务的是一类很具体的场地条件：**电有了，地不够（out of floor, not power）。** 园区已经拿到变电容量、已有 MV 进线与变压器余量，甚至已经建好电力室，缺的是足够的、够高的、承重够的机房面积去摊开一片百千瓦级机柜。L1800C45 用单柜 220 kW 把同样的算力压进同一个 45ft 占地：一个集装箱占位换回 1800 kW IT。当场地按面积计价、或厂房层高与楼板荷载卡死扩容时，这个密度差就是决策依据。 ^mdc-97b318099c
 
-同产品线内的分工：需要 UPS 与电池随箱到场、场站没有独立电力室时，选 [[L1240C45_Tech_Spec_External|L1240C45]]（单柜 150 kW，UPS 箱内）；45ft 箱体进不去的场地，选 [[L450C20_Tech_Spec_External|L450C20]]（20ft，450 kW）。
+同产品线内的分工：需要 UPS 与电池随箱到场、场站没有独立电力室时，选 [[L1240C45_Tech_Spec_External|L1240C45]]（单柜 150 kW，UPS 箱内）；45ft 箱体进不去的场地，选 [[L450C20_Tech_Spec_External|L450C20]]（20ft，450 kW）。 ^mdc-9fa790d0cd
 
-**English:** L1800C45 is a 45ft High Cube dual-loop direct-liquid-cooled containerized data center — up to 220 kW per rack and 1800 kW IT per container — built for rack-scale SXM / NVLink GPU systems such as GB300 NVL72 and B300 HGX.
+**English:** L1800C45 is a 45ft High Cube dual-loop direct-liquid-cooled containerized data center — up to 220 kW per rack and 1800 kW IT per container — built for rack-scale SXM / NVLink GPU systems such as GB300 NVL72 and B300 HGX. ^mdc-2676eeb4f5
 
-It serves a very specific site condition: **you are out of floor, not out of power.** The campus already holds the substation capacity — an MV feed, spare transformer headroom, often a finished electrical room — but lacks the floor area, ceiling height and slab capacity to spread out a field of 100 kW-class racks. L1800C45 uses 220 kW per rack to compress the same compute into the same 45ft footprint: one container slot returns 1800 kW of IT. Where the site is charged by area, or where building height and floor loading cap expansion, that density delta is the decision basis.
+It serves a very specific site condition: **you are out of floor, not out of power.** The campus already holds the substation capacity — an MV feed, spare transformer headroom, often a finished electrical room — but lacks the floor area, ceiling height and slab capacity to spread out a field of 100 kW-class racks. L1800C45 uses 220 kW per rack to compress the same compute into the same 45ft footprint: one container slot returns 1800 kW of IT. Where the site is charged by area, or where building height and floor loading cap expansion, that density delta is the decision basis. ^mdc-0d911f4655
 
-Within the product line: choose [[L1240C45_Tech_Spec_External|L1240C45]] (150 kW per rack, UPS inside) when the site has no separate electrical room and wants UPS and batteries delivered with the container; choose [[L450C20_Tech_Spec_External|L450C20]] (20ft, 450 kW) where a 45ft container cannot physically enter.
+Within the product line: choose [[L1240C45_Tech_Spec_External|L1240C45]] (150 kW per rack, UPS inside) when the site has no separate electrical room and wants UPS and batteries delivered with the container; choose [[L450C20_Tech_Spec_External|L450C20]] (20ft, 450 kW) where a 45ft container cannot physically enter. ^mdc-c9503fd1bb
 
 ---
 
@@ -95,11 +95,11 @@ Utility applications, incoming feeder capacity and switchgear selection on the s
 
 ## 4. 机架规格 / Rack Specifications ^sec-4-rack-spec
 
-| 项目 / Item | 参数 / Parameter |
-|---|---|
-| 单柜最大功率 / Maximum rack power | **220 kW** |
-| 冷却方式 / Cooling method | 冷板直接液冷（DLC），二次侧接 CDU TCS 回路 / Direct liquid cooling (cold plate), secondary side served by the CDU TCS loop |
-| 适配 GPU 平台 / Supported GPU platforms | GB300 NVL72 · B300 HGX（SXM / NVLink） |
+| 项目 / Item                           | 参数 / Parameter                                                                                              |
+| ----------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| 单柜最大功率 / Maximum rack power         | **220 kW**                                                                                                  |
+| 冷却方式 / Cooling method               | 冷板直接液冷（DLC），二次侧接 CDU TCS 回路 / Direct liquid cooling (cold plate), secondary side served by the CDU TCS loop |
+| 适配 GPU 平台 / Supported GPU platforms | GB300 NVL72 · B300 HGX（SXM / NVLink）                                                                        |
 
 | 机柜构成 / Rack build | **8× 220 kW 液冷机柜 + 1× 40 kW 风冷机柜 = 9 柜**<br>8× 220 kW liquid-cooled racks + 1× 40 kW air-cooled rack = 9 racks |
 
@@ -112,12 +112,12 @@ Utility applications, incoming feeder capacity and switchgear selection on the s
 
 ### 5.1 架构 / Architecture ^sec-5-dual-loop
 
-**中文：** L1800C45 箱内并行运行两条在介质、温位、水力上完全独立的回路。
+**中文：** L1800C45 箱内并行运行两条在介质、温位、水力上完全独立的回路。 ^mdc-46518409c3
 
 | 回路 / Loop | 承担负荷 / Load carried | 温位 / Temperatures | 介质 / Fluid |
 |---|---|---|---|
 | **回路 A —— GPU 侧暖水 / Loop A — GPU-side warm water** | GPU / CPU 冷板液冷负荷（绝大部分 IT 热量）/ Cold-plate liquid load (the great majority of IT heat) | **GPU 冷板进水 36–40 °C**；外冷源出水 32–36 °C；CDU approach +4 °C · **GPU cold-plate inlet 36–40 °C**; outdoor-plant supply 32–36 °C; CDU approach +4 °C | 纯水，0% 乙二醇 / Pure water, 0% glycol |
-| **回路 B —— 列间侧冷冻水 / Loop B — In-row CW chilled water** | 机房残余风冷负荷 / Residual room air load | **10 / 16 °C 冷冻水 / chilled water** | 纯水，0% 乙二醇 / Pure water, 0% glycol |
+| **回路 B —— 列间侧冷冻水 / Loop B — In-row CW chilled water** | 机房残余风冷负荷 / Residual room air load | **10 / 15 °C 冷冻水 / chilled water** | 纯水，0% 乙二醇 / Pure water, 0% glycol |
 
 **为什么分成两条：** 冷板可以吃 40 °C 量级的水，风冷末端不行 —— 要把机房回风从 36 °C 降到 21 °C 送风，盘管进水必须在 10 °C 量级。并在同一条回路上，要么冷板侧被迫用冷水、浪费自然冷却时数并拉高 PUE，要么 列间侧冷量不足、送风温度失控。解耦之后，回路 A 的 36–40 °C 暖水在绝大多数气候下可由干冷器直接排掉，机械制冷只作补充；回路 B 的冷冻水负荷则小得多，冷机容量随之下降。这是把单柜密度做到 220 kW 的必要条件，也是能耗上的回报。
 
@@ -162,12 +162,13 @@ Room-level downflow chilled-water precision air conditioner: all-water coil plus
 
 | 项目 / Item | 参数 / Parameter |
 |---|---|
+| **现行设计工况 / Design condition (2026-09-08)** | 回风 37 °C / RH 27% · 冷冻水 10/15 °C（ΔT 5 K）· 0% 乙二醇；毛 64.6 kW · 风机 3.9 kW · 净 60.7 kW · 11.1 m³/h · 水阻 140 kPa<br>Return 37 °C / 27 % rel. · chilled water 10/15 °C (ΔT 5 K) · 0 % glycol; gross 64.6 kW · fan 3.9 kW · net 60.7 kW · 11.1 m³/h · 140 kPa |
 | 型号 / Model | **STULZ CRS 560 CW** |
-| 单机总冷量 / 显冷量 · Total / sensible capacity per unit | **57.3 / 57.3 kW**（全显冷 / fully sensible） |
+| 单机总冷量 / 显冷量（选型书工况 36 °C / 10-16）· Total / sensible per unit (selection sheet, 36 °C / 10-16) | **57.3 / 57.3 kW**（全显冷 / fully sensible） |
 | 净总冷量 / 净显冷量 · Net total / net sensible | 54.7 / 54.7 kW |
 | 回风温度 / 湿度 · Return-air temperature / humidity | 36 °C / 25 % rel. |
 | 送风温度 / Supply-air temperature | **21 °C**（ΔT = 15 K） |
-| 风量 / 迎面风速 · Airflow / face velocity | **11,200 m³/h** / 2.7 m/s |
+| 风量 / 迎面风速 · Airflow / face velocity | **13,000 m³/h** / 3.2 m/s |
 | 进 / 出水温度 · Water inlet / outlet | **10.0 / 16.0 °C** |
 | 水侧流量 / Water flow | **8.2 m³/h** |
 | 介质 / Fluid | 纯水，0% 乙二醇 / Pure water, 0% glycol |
@@ -180,7 +181,7 @@ Room-level downflow chilled-water precision air conditioner: all-water coil plus
 | 水管接口 / Water connections | 进 / 出各 1 只 1.5" 外螺纹 · 1 inlet + 1 outlet, 1.5" male thread |
 | 选型海拔基准 / Altitude basis of selection | 0 m —— 非 0 海拔站点重新选型 / non-zero altitude sites are re-selected |
 
-| 列间空调 / In-row CW | **2× STULZ CRS 560 CW + 6× STULZ CRS 330 CW**（共 8 台）<br>2× STULZ CRS 560 CW + 6× STULZ CRS 330 CW (8 units total) |
+| 列间空调 / In-row CW | **2× STULZ CRS 560 CW + 6× STULZ CRS 320 CW**（共 8 台）· 合计净冷量 **296.0 kW** · 风量 **62,600 m³/h** · 冷冻水 **57.0 m³/h**<br>2× STULZ CRS 560 CW + 6× STULZ CRS 320 CW (8 units total) · net **296.0 kW** · **62,600 m³/h** · **57.0 m³/h** |
 
 > 冗余模型按项目 列间侧热负荷确定，在技术澄清阶段提供。
 > Unit count and redundancy model follow the project's in-row CW heat load and are provided during technical clarification.
@@ -190,7 +191,7 @@ Room-level downflow chilled-water precision air conditioner: all-water coil plus
 | 项目 / Item | 参数 / Parameter |
 |---|---|
 | 回路 A 室外冷源 / Loop A heat rejection | 干冷器为主（36/46 °C 暖水，自然冷却时数长），峰值站点加机械补冷 —— **设计值，以最终选型为准** / Dry-cooler-led (long free-cooling hours on 36/46 °C warm water), mechanical topping at peak-climate sites — **design value, subject to final selection** |
-| 回路 B 室外冷源 / Loop B heat rejection | 冷水机组（10/16 °C 冷冻水）—— **设计值，以最终选型为准** / Chiller plant (10/16 °C chilled water) — **design value, subject to final selection** |
+| 回路 B 室外冷源 / Loop B heat rejection | 冷水机组（10/15 °C 冷冻水）—— **设计值，以最终选型为准** / Chiller plant (10/15 °C chilled water) — **design value, subject to final selection** |
 
 > 室外侧排热基线与站点 PUE 取决于当地气候数据与室外冷源方案，在技术澄清阶段随热力计算提供。
 > The outdoor heat-rejection baseline and site PUE depend on local climate data and the outdoor plant scheme, and are provided with the thermal calculations during technical clarification.
@@ -201,7 +202,7 @@ Room-level downflow chilled-water precision air conditioner: all-water coil plus
 
 ### 6.1 电力边界：UPS 在箱外 / Power boundary: the UPS sits outside
 
-**中文：** L1800C45 的 UPS、电池与 PDC 置于集装箱之外，由场站提供。**这是一次刻意的边界设计，不是配置削减。** 它面向已有电力室、或愿意自建电力室的场站，换回三项收益：
+**中文：** L1800C45 的 UPS、电池与 PDC 置于集装箱之外，由场站提供。**这是一次刻意的边界设计，不是配置削减。** 它面向已有电力室、或愿意自建电力室的场站，换回三项收益： ^mdc-139b885703
 
 1. **箱内空间全部让给算力。** 45ft 箱内不切电力舱，同样的占地容纳 1800 kW IT。
 2. **后备时间不受箱体容积封顶。** UPS 在箱外时，电池规模与后备时长由贵方按自身可用性目标确定，可与柴发方案统筹。
@@ -209,7 +210,7 @@ Room-level downflow chilled-water precision air conditioner: all-water coil plus
 
 若贵方希望电力边界在箱外但不自建电力设施，MDCX 的独立电源模块（UPS / 电池 / PDC）在研，可在方案沟通中一并讨论。
 
-**English:** On L1800C45 the UPS, batteries and PDC sit outside the container and are supplied by the site. **This is a deliberate boundary design, not a reduction in configuration.** It targets sites that already have — or are willing to build — an electrical room, and it buys back three things:
+**English:** On L1800C45 the UPS, batteries and PDC sit outside the container and are supplied by the site. **This is a deliberate boundary design, not a reduction in configuration.** It targets sites that already have — or are willing to build — an electrical room, and it buys back three things: ^mdc-f46dd1fb5f
 
 1. **All of the interior goes to compute.** No electrical bay is carved out of the 45ft shell, so the same footprint holds 1800 kW of IT.
 2. **Backup time is not capped by the shell.** With the UPS outside, battery size and autonomy are set by you against your own availability target and can be coordinated with a genset scheme.
@@ -288,7 +289,7 @@ If you want the boundary outside but do not intend to build the electrical infra
 | 项目 / Item | 要求 / Requirement |
 |---|---|
 | 场站须提供的电力设施 / Electrical infrastructure to be provided by the site | **UPS / 电池 / PDC**（见 §6.1）· **UPS / batteries / PDC** (see §6.1) |
-| 场站须提供的冷却接口 / Cooling interfaces to be provided by the site | **两路独立**：回路 A 暖水（外冷源出水 32–36 °C，GPU 冷板进水 36–40 °C；选型点 FWS 36/46 °C）+ 回路 B 冷冻水（10/16 °C）。两路不可合并 · **Two independent services**: Loop A warm water (outdoor-plant supply 32–36 °C, GPU cold-plate inlet 36–40 °C; duty point FWS 36/46 °C) and Loop B chilled water (10/16 °C). They cannot be combined |
+| 场站须提供的冷却接口 / Cooling interfaces to be provided by the site | **两路独立**：回路 A 暖水（外冷源出水 32–36 °C，GPU 冷板进水 36–40 °C；选型点 FWS 36/46 °C）+ 回路 B 冷冻水（10/15 °C）。两路不可合并 · **Two independent services**: Loop A warm water (outdoor-plant supply 32–36 °C, GPU cold-plate inlet 36–40 °C; duty point FWS 36/46 °C) and Loop B chilled water (10/15 °C). They cannot be combined |
 | CDU 接口形式 / CDU connection type | 4 × DN100 **Tri-Clamp**（DIN 32676-B），顶部出线；场站侧按卫生级卡箍配对，非法兰 · 4 × DN100 **Tri-Clamp** (DIN 32676-B), top exit; site pipework matched with sanitary clamps, not flanges |
 | 列间空调 接口形式 / 列间空调 connection type | 进 / 出各 1 只 1.5" 外螺纹 · 1 inlet + 1 outlet, 1.5" male thread |
 | 现场安装与调试 / On-site installation & commissioning | 不予承诺 / Not committed |
@@ -304,7 +305,7 @@ If you want the boundary outside but do not intend to build the electrical infra
 
 | 项目 / Item | 参数 / Parameter |
 |---|---|
-| SKU | `L1800C45DR220` |
+| SKU | `L1800C45DR220` ^mdc-a12bd3227c |
 | 箱型 / Container type | 45ft High Cube |
 | 外形尺寸 / Exterior dimensions | 13,716 × 2,438 × 2,992 mm（设计值 / design value） |
 | **IT 容量 / IT capacity** | **1800 kW**（IT Load，非设施总负荷 · IT Load, not Total Facility Load） |
@@ -313,10 +314,10 @@ If you want the boundary outside but do not intend to build the electrical infra
 | 环路 / Loops | 双环路 / Dual loop（`D`） |
 | 回路 A / Loop A | GPU 冷板进水 36–40 °C；外冷源出水 32–36 °C；CDU approach +4 °C；选型点 FWS 36/46 · TCS 40/50 °C（热端设计点）· GPU cold-plate inlet 36–40 °C; outdoor-plant supply 32–36 °C; CDU approach +4 °C; duty point FWS 36/46 · TCS 40/50 °C (hot-end design point) |
 | PUE | **`1.0x`** —— 逐站点用 <https://mdcx.org> 计算 · computed per site at <https://mdcx.org> |
-| 回路 B / Loop B | 列间侧 10 / 16 °C 冷冻水 · in-row CW 10 / 16 °C chilled water |
+| 回路 B / Loop B | 列间侧 10 / 15 °C 冷冻水 · in-row CW 10 / 15 °C chilled water |
 | 介质 / Fluid | 纯水，0% 乙二醇 · Pure water, 0% glycol |
 | CDU | STULZ SCR 14103 W · 1200 kW/台 · 103.8 m³/h · Tri-Clamp DN100 顶出 · 泵组 20.0 kW · per unit / top exit / 20.0 kW pump set |
-| 列间空调 | STULZ CRS 560 CW · 57.3 kW/台（净 54.7）· 11,200 m³/h · 8.2 m³/h · 52 kPa · 400 V/50 Hz |
+| 列间空调 | STULZ CRS 560 CW · 64.6 kW/台（净 60.7）· 13,000 m³/h · 11.1 m³/h · 140 kPa · 380 V/50 Hz<br>STULZ CRS 320 CW · 33.6 kW/台（净 29.1）· 6,100 m³/h · 5.8 m³/h · 119 kPa · 380 V/50 Hz |
 | UPS 边界 / UPS boundary | **箱外，由场站提供 · Outside the container, supplied by the site** |
 | 供电制式 / Supply voltages | 380 / 400 / 415 / 480 V AC（800 V HVDC 为 Roadmap Q3 2026 · roadmap Q3 2026） |
 | 软件 / Software | CIOS（含 / included）· NVIDIA Omniverse 数字孪生（含 / included） |

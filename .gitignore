@@ -2,6 +2,10 @@
 .DS_Store
 *.DS_Store
 
+# Python
+__pycache__/
+*.py[cod]
+
 # AI / Claude configuration — never commit
 .openclaw/
 memory/
@@ -55,10 +59,13 @@ Solutions Design/
 # Workspace summary — internal snapshot, not part of KB
 FOG_Workspace_Summary.md
 
-# Index files
-# Match both nested index.md and root-level index.md (no directory prefix required)
+# Index files — keep only the vault hub and four-domain hub tracked
 **/index.md
-/index.md
+!/index.md
+!/_domains/index.md
+
+# Reorg test fixture vault (must not be indexed as real notes)
+TOOLS/mdc_kb_reorg/tests/fixtures/
 
 # --- User-specified ignores ---
 # Top-level directories

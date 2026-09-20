@@ -17,7 +17,7 @@ source_anchors: []
 
 ## 7. Cold Plate Manifold 选型校核（Rev 10）
 
-> **校核任务**：用户给定的冷板分配 manifold 规格是否满足 DC45 单 rack 的 163–206 L/min 流量需求。
+> **校核任务**：用户给定的冷板分配 manifold 规格是否满足 DC45 单 rack 的 163–206 L/min 流量需求。 ^mdc-bc6d3b145b
 
 ### 7.1 用户给定 Manifold 参数
 
@@ -32,7 +32,7 @@ source_anchors: []
 - 下限：20 × 1 = 20 L/min
 - **上限：50 × 3 = 150 L/min**
 
-### 7.2 DC45 单 rack 流量需求 (PG25, ΔT 10K)
+### 7.2 DC45 单 rack 流量需求 (PG25, ΔT 10K) ^mdc-2a1f40e38c
 
 来自 §6.6 φ_air 全场景扫描：
 
@@ -121,7 +121,7 @@ source_anchors: []
 | **每分支设计流量** | **1.6–2.1 L/min**（在 1–3 L/min 规格内有 30%+ 余量）|
 | **双 manifold 间平衡** | 每 manifold 入口装 **PICV** + 流量计；推荐对称布置主管 |
 | **manifold 间最大允差** | 总不平衡（含 manifold 间 + manifold 内）≤ **15%**（含 ≤ 10% 单 manifold + ≤ 5% 间隙）|
-| **总 manifold 数量 (DC45 整机)** | **16–24 个**（8 rack × 2-3 manifold/rack）|
+| **总 manifold 数量 (DC45 整机)** | **16–24 个**（8 rack × 2-3 manifold/rack） ^mdc-b4056370ad |
 
 ### 7.8 与上游 CDU 二次侧的接口
 

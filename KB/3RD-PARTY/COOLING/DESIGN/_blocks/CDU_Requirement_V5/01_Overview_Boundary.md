@@ -15,7 +15,7 @@ source_anchors: []
 
 ## 1. 系统背景与边界条件
 
-**适用产品：** DC45（45ft DLC 集装箱，8× 150 kW DLC 机柜 + 1× 风冷机柜）
+**适用产品：** DC45（45ft DLC 集装箱，8× 150 kW DLC 机柜 + 1× 风冷机柜） ^mdc-24b95f75c4
 **GPU 平台：** NVIDIA GB300 NVL72 / DGX B300（或同等 DLC 平台）
 **IT 容量：** 1240 kW（8× 150 + 40）
 **DLC 液冷比例 φ_air：** 设计上限 27%（S-Max），护栏 ≥ 8%

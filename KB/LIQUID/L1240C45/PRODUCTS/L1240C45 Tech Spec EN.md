@@ -2,12 +2,12 @@
 tags:
   - #MDC
 ---
-# DC45 — Quick Tech Spec
+# DC45 — Quick Tech Spec ^mdc-991f63c1cb
 **PowerPod with Direct Liquid Cooling (45ft Container)**
 
 > ## ⚠️ This file is a copy, not the live edition
 >
-> The live L1240C45 Tech Spec lives in **`PUBLIC/Tech_Spec/`**, in three editions:
+> The live L1240C45 Tech Spec lives in **`PUBLIC/Tech_Spec/`**, in three editions: ^mdc-e8385c3c8d
 > [[L1240C45_Tech_Spec_CN|CN]] · [[L1240C45_Tech_Spec_EN|EN]] · [[L1240C45_Tech_Spec_External|External (the only edition that may go to a customer)]]
 >
 > This copy has been synced with the four rulings of 2026-08-30 so it cannot mislead, but it is **no longer maintained separately**.
@@ -15,11 +15,11 @@ tags:
 
 > **Audience:** This document is a sales / pre-sales deliverable. Target readers: customers, account managers, solution architects. Parameters are normative; if any value conflicts with engineering design, escalate to [[STD_L1240C45|STD_L1240C45]] for the unified reference. Parameter source of truth: V1.4 (2026-05-21).
 >
-> **配套中文版:** [[L1240C45 Tech Spec CN]]
+> **配套中文版:** [[L1240C45 Tech Spec CN]] ^mdc-c425cbabce
 
 Version: V1.4 | Date: 2026-05-21
 
-> **V1.4 Update (per [[../DESIGN/L1240C45 三支路冷却重评估 V4|DC45 Three-Branch Cooling Reassessment V4]]):**
+> **V1.4 Update (per [[../DESIGN/L1240C45 三支路冷却重评估 V4|DC45 Three-Branch Cooling Reassessment V4]]):** ^mdc-8e58518c89
 > 1. CDU spec uprated: heat-rejection ≥ 1500 kW / secondary flow ≥ 175 m³/h / secondary head ≥ 220 kPa / VFD secondary pump / 2N or N+1 redundancy
 > 2. TCS coolant locked as **PG25** (25% propylene glycol solution); TCS inlet 26–28°C
 > 3. Three-branch cooling architecture defined: primary CDU cold plates / 9× VERTIV DCD35 passive RDHX / 9× STULZ OHS-084-DG-FC ceiling units
@@ -43,11 +43,11 @@ Version: V1.4 | Date: 2026-05-21
 
 ## 2. Product Positioning ^sec-2-positioning
 
-DC45 is a **45ft containerized modular data center with Direct Liquid Cooling (DLC)**, employing cold-plate liquid cooling technology for ultra-high-density AI/HPC cluster deployments.
+DC45 is a **45ft containerized modular data center with Direct Liquid Cooling (DLC)**, employing cold-plate liquid cooling technology for ultra-high-density AI/HPC cluster deployments. ^mdc-dacbec08e3
 
 ![[PDC_SLD_EN_light.svg|SuOCbROt9ozRtAxyvDrcBiXnnqc.png]]
 
-> **Cooling Architecture**: DC45 uses a **three-branch parallel TCS loop on PG25**, with all heat carried to the outdoor side (hybrid dry-cooler + DX) via the TCS secondary loop:
+> **Cooling Architecture**: DC45 uses a **three-branch parallel TCS loop on PG25**, with all heat carried to the outdoor side (hybrid dry-cooler + DX) via the TCS secondary loop: ^mdc-e57fe5ba1e
 > - **Branch 1 — Primary CDU cold-plate loop**: 73% liquid-cooled heat from 8× DLC racks
 > - **Branch 2 — 9× passive RDHX**: absorbs 47–55% of rear-door exhaust air heat
 > - **Branch 3 — 9× ceiling-mounted STULZ OHS-084-DG-FC**: handles residual room air heat + UPS/auxiliary heat
@@ -99,7 +99,7 @@ DC45 is a **45ft containerized modular data center with Direct Liquid Cooling (D
 | Branches per manifold | 20–50 |
 | Design flow per branch | **1.6–2.1 L/min** (30%+ margin inside the 1–3 L/min spec) |
 | Manifold inlet fitting | **PICV (Pressure-Independent Control Valve) + flow meter** (prevents inter-manifold imbalance) |
-| Total manifolds (DC45) | **16–24** (8 racks × 2–3 manifolds/rack) |
+| Total manifolds (DC45) | **16–24** (8 racks × 2–3 manifolds/rack) ^mdc-79f07dd3ac |
 | Imbalance tolerance | ≤ 10% (within a manifold) / ≤ 15% (including inter-manifold) |
 
 ---
@@ -143,7 +143,7 @@ DC45 is a **45ft containerized modular data center with Direct Liquid Cooling (D
 | Max airflow per unit | 11,200 m³/h |
 | Max water flow per unit | 5.3 m³/h |
 | Water connection | DN25 (1") |
-| Operating air inlet range | datasheet 10–40°C ⚠️ DC45 S-Max 41–48°C exceeds limit by 1–8°C, under Vertiv review |
+| Operating air inlet range | datasheet 10–40°C ⚠️ DC45 S-Max 41–48°C exceeds limit by 1–8°C, under Vertiv review ^mdc-dec9dfd929 |
 | Actual air-heat absorption (TCS 26–28°C) | 47–55% (ε ≈ 0.55 passive-RDHX physical ceiling) |
 | Branch 2 design flow (PG25) | ≈ 21 m³/h |
 | Branch 2 ΔP | 36–62 kPa |
@@ -154,7 +154,7 @@ DC45 is a **45ft containerized modular data center with Direct Liquid Cooling (D
 |------|-----------|
 | Quantity & model | **9 × STULZ OHS-084-DG-FC** (self-contained DX with free-cooling loop, EG/PG compatible) |
 | Nominal total cooling per unit | 25.6 kW (80°F DB / 67°F WB / 50% RH) |
-| Sensible cooling per unit (DC45 conditions, PG25 27°C) | ≈ 26 kW (+13% PG25 uplift + +10% return-air temperature correction + +5% low-humidity correction) |
+| Sensible cooling per unit (DC45 conditions, PG25 27°C) | ≈ 26 kW (+13% PG25 uplift + +10% return-air temperature correction + +5% low-humidity correction) ^mdc-c50a21f6fd |
 | 9-unit total sensible | ≈ 234 kW |
 | Compressor input per unit | 8.2 kW (datasheet) / ≈ 6.4 kW (after PG25 27°C uplift) |
 | Condenser flow per unit | **5.41 m³/h** (23.8 GPM, locked from datasheet) |
@@ -182,7 +182,7 @@ DC45 is a **45ft containerized modular data center with Direct Liquid Cooling (D
 | **RDHX branch** | Any single RDHX < 1.5 m³/h → that rack's GPUs throttle + alarm |
 | **CeilAir branch** | Branch 3 < 40 m³/h → alarm + roof-supply temperature trending |
 | **CeilAir redundancy** | All 9 roof positions are occupied — no N+1; failure mitigation relies on GPU throttling |
-| **Free Cooling (FC)** | The -FC variant carries a free-cooling loop; DC45's 26–28°C TCS sits above typical FC activation thresholds (< 10°C), so FC stays dormant under normal operation |
+| **Free Cooling (FC)** | The -FC variant carries a free-cooling loop; DC45's 26–28°C TCS sits above typical FC activation thresholds (< 10°C), so FC stays dormant under normal operation ^mdc-88b2f69a08 |
 
 ---
 
@@ -229,7 +229,7 @@ Power Distribution SLD
 
 | Product     | Input Rating      | Output Interface   | Protection                 |
 | ----------- | ----------------- | ------------------ | -------------------------- |
-| **DC45**    | 60A 415V          | 24-position C19    | Magnetic Hydraulic Breaker |
+| **DC45**    | 60A 415V          | 24-position C19    | Magnetic Hydraulic Breaker ^mdc-3a85db9225 |
 | HP POD 240a | 30A / 60A 415V 3Ø | C13 / C19 optional | Standard MCCB              |
 
 ---
@@ -303,7 +303,7 @@ Power Distribution SLD
 
 ---
 
-## 12. Service & Support ^sec-12-service
+## 12. Service & Support ⛔ **conflict** ^sec-12-service
 
 | Item | Parameter |
 |------|-----------|
@@ -328,7 +328,7 @@ Power Distribution SLD
 
 ---
 
-## 13. Site & Installation Requirements ^sec-13-site
+## 13. Site & Installation Requirements ⛔ **conflict** ^sec-13-site
 
 | Item | Requirement |
 |------|-------------|
@@ -380,6 +380,7 @@ Power Distribution SLD
 
 | Version | Date | Summary |
 |---------|------|---------|
+| 2026-09-20 | 🧭 unconfirmed-108 改为 ⛔ conflict，未裁定赢家 |
 | V1.4 | 2026-05-21 | Sync with [[DESIGN/L1240C45 三支路冷却重评估 2026-05-21\|Rev 11 Three-Branch Cooling Reassessment]]: CDU uprated to ≥ 1500 kW / ≥ 175 m³/h / ≥ 220 kPa (VFD + 2N/N+1); TCS fluid locked at PG25; locked 9× DCD35 RDHX + 9× STULZ OHS-084-DG-FC; added §5 Cooling System and §4.1 cold-plate manifold; outdoor-side baseline ≥ 1700 kW. EN: server inlet temperature corrected to 26–28°C; Deployment SOP translated to English. |
 | V1.3 | 2026-05-09 | Server inlet temperature revised from 24°C to 26–28°C (TCS range) |
 

@@ -15,7 +15,7 @@ source_anchors: []
 
 ## 1. 适用场景与架构
 
-**适用：** Direct-to-Chip 液冷 · IT 负载 1.2–1.5 MW · 容器化 MDC DC45
+**适用：** Direct-to-Chip 液冷 · IT 负载 1.2–1.5 MW · 容器化 MDC DC45 ^mdc-662b60c0d5
 **6 站点：** 极热干燥（UAE Dubai）/ 极热湿润（泰国 Chiang Mai）/ 温带大陆（美国 Texas）/ 极寒（芬兰 Kemi）/ 极端双向温差（哈萨克斯坦 Astana）
 
 ### 1.1 冷却架构概述

@@ -35,7 +35,7 @@ source_anchors:
 | Branches per manifold | 20–50 |
 | Design flow per branch | **1.6–2.1 L/min** (30%+ margin inside the 1–3 L/min spec) |
 | Manifold inlet fitting | **PICV (Pressure-Independent Control Valve) + flow meter** (prevents inter-manifold imbalance) |
-| Total manifolds (L1240C45) | **16–24** (8 racks × 2–3 manifolds/rack) |
+| Total manifolds (L1240C45) | **16–24** (8 racks × 2–3 manifolds/rack) ^mdc-c822127653 |
 | Imbalance tolerance | ≤ 10% (within a manifold) / ≤ 15% (including inter-manifold) |
 
 ---

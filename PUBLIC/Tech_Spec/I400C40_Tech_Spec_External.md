@@ -9,12 +9,12 @@ audience: 客户（对外输出版 · 可直接发送）/ Customer-facing (relea
 sku_id: I400C40ST50
 ---
 
-# I400C40 — Technical Specification（对外输出版 · External Release）
+# I400C40 — Technical Specification（对外输出版 · External Release） ^mdc-e515064dcf
 **All-In-One Immersion Container · 40ft 单相浸没式液冷集装箱**
 **40ft single-phase immersion container**
 
-> **受众 Audience：** 客户。本版为**唯一允许直接发给客户**的 I400C40 技术规格文件。
-> *Customers. This is the only I400C40 specification document approved for direct release.*
+> **受众 Audience：** 客户。本版为**唯一允许直接发给客户**的 I400C40 技术规格文件。 ^mdc-d8c71c19bc
+> *Customers. This is the only I400C40 specification document approved for direct release.* ^mdc-c987a0d83c
 >
 > **配套版本 Companion versions：** 中文内部版 [[I400C40_Tech_Spec_CN]] · 英文内部版 [[I400C40_Tech_Spec_EN]]
 >
@@ -23,8 +23,8 @@ sku_id: I400C40ST50
 >
 > **参数争议以基准表为准 / The baseline table settles parameter disputes.**
 >
-> ⚠️ **本版与既有内部版 [[I400C40_Tech_Spec_CN]] / [[I400C40_Tech_Spec_EN]]（V1.0 · 2026-07-28）不是同一套数据。** 既有内部版的参数基线为旧产品文档 AC40 / A32 V1.4，其中若干数值尚未进入 [[PRODUCT_SPEC_BASELINE]]，因此**未收录于本对外版**。两者冲突时以基准表为准。
-> *This edition is not built from the same data set as the existing internal editions (V1.0, 2026-07-28), whose parameter baseline is the legacy AC40 / A32 V1.4 product documents. Figures from those documents that have not yet entered the baseline table are not carried here. Where the two disagree, the baseline table governs.*
+> ⚠️ **本版与既有内部版 [[I400C40_Tech_Spec_CN]] / [[I400C40_Tech_Spec_EN]]（V1.0 · 2026-07-28）不是同一套数据。** 既有内部版的参数基线为旧产品文档 AC40 / A32 V1.4，其中若干数值尚未进入 [[PRODUCT_SPEC_BASELINE]]，因此**未收录于本对外版**。两者冲突时以基准表为准。 ^mdc-fd473331c2
+> *This edition is not built from the same data set as the existing internal editions (V1.0, 2026-07-28), whose parameter baseline is the legacy AC40 / A32 V1.4 product documents. Figures from those documents that have not yet entered the baseline table are not carried here. Where the two disagree, the baseline table governs.* ^mdc-6bc9a23838
 
 ---
 
@@ -58,7 +58,7 @@ sku_id: I400C40ST50
 
 *The 40ft container is a single compute bay: eight immersion tanks in two rows against the side walls, four per side, with a central service aisle, plus one 10 kW air-cooled rack. There is no power bay inside the box — the UPS and batteries sit outside.*
 
-![[KB/IMMERSION/I400C40/I400C40 Layout_v1.svg]]
+![[KB/IMMERSION/I400C40/I400C40 Layout_v1.svg]] ^mdc-2376e532fe
 *布局示意 · Layout schematic*
 
 | 项目 · Item | 参数 · Specification |
@@ -72,20 +72,20 @@ sku_id: I400C40ST50
 
 **同样的八槽核心，你自己的电力架构。**
 
-I400C40 与 I400C45 共享**完全相同的 400 kW 八槽浸没核心** —— 同样的槽体、同样的油回路、同样的 2N 槽内冷却、同样的冷却规则。差别只有一处：**电力边界在箱外**。UPS、电池与配电由场站提供。
+I400C40 与 I400C45 共享**完全相同的 400 kW 八槽浸没核心** —— 同样的槽体、同样的油回路、同样的 2N 槽内冷却、同样的冷却规则。差别只有一处：**电力边界在箱外**。UPS、电池与配电由场站提供。 ^mdc-5e185edaa3
 
 对于已经建成配电与后备体系的场站，这不是减配，而是**不重复付费**：场站已经为电付过一次，箱子不再收第二次。既有的 UPS 容量、既有的运维体系、既有的电气标准继续使用；箱体只承担它真正擅长的那部分 —— 把 400 kW 的算力密度和浸没冷却封装好，交到进线端。
 
 ***The same eight-tank core, your own electrical architecture.***
 
-*I400C40 shares an **identical 400 kW eight-tank immersion core** with I400C45 — the same tanks, the same oil loop, the same 2N in-tank cooling, the same cooling rules. There is exactly one difference: **the power boundary is outside the box**. UPS, batteries and distribution are provided by the site.*
+*I400C40 shares an **identical 400 kW eight-tank immersion core** with I400C45 — the same tanks, the same oil loop, the same 2N in-tank cooling, the same cooling rules. There is exactly one difference: **the power boundary is outside the box**. UPS, batteries and distribution are provided by the site.* ^mdc-d9d72588aa
 
 *For a site that has already built its distribution and ride-through, this is not a reduced configuration — it is **not paying twice**: the site has already paid for power once, and the container does not charge for it again. Existing UPS capacity, existing operations practice and existing electrical standards stay in use, and the container carries only the part it is genuinely good at — packaging 400 kW of compute density and immersion cooling up to the incoming terminals.*
 
 | 维度 · Dimension | 定位 · Positioning |
 |------------------|--------------------|
 | 产品线 · Product line | Immersion Cooling（单相浸没）· Single-phase immersion |
-| SKU | `I400C40ST50` |
+| SKU | `I400C40ST50` ^mdc-e2f1711ff9 |
 | IT 容量 · IT capacity | 400 kW（推荐 360 kW / 上限 400 kW）· 400 kW (360 kW recommended / 400 kW maximum) |
 | 构成单元 · Building blocks | 8× 浸没槽 + 1× 10 kW 风冷机柜 · 8 immersion tanks + 1× 10 kW air-cooled rack |
 | 单槽密度 · Per-tank density | 50 kW |
@@ -93,13 +93,13 @@ I400C40 与 I400C45 共享**完全相同的 400 kW 八槽浸没核心** —— �
 | 箱型 · Container | 40ft |
 | 状态 · Status | 已量产交付 · Shipped |
 
-### 2.1 I400C40 与 I400C45 —— 同一个八槽核心 · The same eight-tank core
+### 2.1 I400C40 与 I400C45 —— 同一个八槽核心 · The same eight-tank core ^mdc-587bd35a12
 
 差别**只有电力边界，以及那五英尺（即电力舱的体积）**。八槽浸没核心、油回路与冷却规则完全相同。
 
 *The difference is **only the power boundary and those five feet — the volume of the power bay**. The eight-tank immersion core, the oil loop and the cooling rules are identical.*
 
-| 项 · Item | I400C40 | I400C45 |
+| 项 · Item | I400C40 | I400C45 ^mdc-e947953355 |
 |-----------|---------|---------|
 | 八槽浸没核心 · Eight-tank core | 相同 · Identical | 相同 · Identical |
 | 油回路与冷却规则 · Oil loop and cooling rules | 相同 · Identical | 相同 · Identical |
@@ -107,8 +107,8 @@ I400C40 与 I400C45 共享**完全相同的 400 kW 八槽浸没核心** —— �
 | UPS 边界 · UPS boundary | 箱外，客户自备 600 kW，~10 min 后备 · Outside, customer-supplied 600 kW, ~10 min | 箱内 600 kW，~20 min 后备 · Inside, 600 kW, ~20 min |
 | 整机 UL · Full-system UL | 非本产品交付项 · Not a deliverable of this product | ✅ UL compliant |
 
-**选型判据 · Selection rule：** 场站已有既成的电力架构、UPS 与电池已在别处付过一次 → I400C40。场站尚未为这 400 kW 建过配电与后备，或市场强制整机 UL → I400C45。
-*If the site already has an established electrical architecture and has paid for UPS and batteries elsewhere, choose I400C40. If the site has not yet built distribution and ride-through for this 400 kW, or the market mandates full-system UL, choose I400C45.*
+**选型判据 · Selection rule：** 场站已有既成的电力架构、UPS 与电池已在别处付过一次 → I400C40。场站尚未为这 400 kW 建过配电与后备，或市场强制整机 UL → I400C45。 ^mdc-f4fcfe71bb
+*If the site already has an established electrical architecture and has paid for UPS and batteries elsewhere, choose I400C40. If the site has not yet built distribution and ride-through for this 400 kW, or the market mandates full-system UL, choose I400C45.* ^mdc-e445c66499
 
 ---
 
@@ -127,8 +127,8 @@ I400C40 与 I400C45 共享**完全相同的 400 kW 八槽浸没核心** —— �
 | GPU 数上限 · Maximum GPU count | 512 张 PCIe · 512 PCIe GPUs | — |
 | GPU 平台 · GPU platforms | 4090 · 5090 · RTX PRO 6000 Blackwell SE · H100 · H200（PCIe 4U 8-GPU） | — |
 
-> **I400C40 的 UPS 在箱外，因此 UPS 损耗与电池柜散热不在本箱之内，但必须计入站端总容量。**
-> ***Because the I400C40 UPS sits outside the container, UPS losses and battery-cabinet heat are not inside this box — but they must still be counted in site capacity.***
+> **I400C40 的 UPS 在箱外，因此 UPS 损耗与电池柜散热不在本箱之内，但必须计入站端总容量。** ^mdc-4da6ac30ad
+> ***Because the I400C40 UPS sits outside the container, UPS losses and battery-cabinet heat are not inside this box — but they must still be counted in site capacity.*** ^mdc-91dbcc8af0
 
 ---
 
@@ -148,9 +148,9 @@ I400C40 与 I400C45 共享**完全相同的 400 kW 八槽浸没核心** —— �
 
 ## 5. 冷却系统 · Cooling System ^sec-5-cooling
 
-服务器整机浸入介电液，热量由槽内 CDU 的板式换热器交给设施水，再由室外冷源排入大气。没有服务器风扇，没有冷热通道，箱内不存在需要靠风量维持的热平衡 —— 这是浸没架构能在低干球站点做到极低 PUE 的物理前提（**具体 PUE 逐站点计算，见 §5.2**）。**这套冷却架构与 I400C45 完全相同。**
+服务器整机浸入介电液，热量由槽内 CDU 的板式换热器交给设施水，再由室外冷源排入大气。没有服务器风扇，没有冷热通道，箱内不存在需要靠风量维持的热平衡 —— 这是浸没架构能在低干球站点做到极低 PUE 的物理前提（**具体 PUE 逐站点计算，见 §5.2**）。**这套冷却架构与 I400C45 完全相同。** ^mdc-23a08a8a9d
 
-*Whole servers sit in dielectric fluid; the in-tank CDU plate heat exchangers hand that heat to facility water, and the outdoor plant rejects it to atmosphere. There are no server fans, no hot and cold aisles, and no in-container heat balance that depends on airflow — this is the physical premise for the very low PUE the immersion architecture reaches at low dry-bulb sites. **This cooling architecture is identical to I400C45.***
+*Whole servers sit in dielectric fluid; the in-tank CDU plate heat exchangers hand that heat to facility water, and the outdoor plant rejects it to atmosphere. There are no server fans, no hot and cold aisles, and no in-container heat balance that depends on airflow — this is the physical premise for the very low PUE the immersion architecture reaches at low dry-bulb sites. **This cooling architecture is identical to I400C45.*** ^mdc-e4f87ee9a9
 
 ```
 IT Load → 介电液 Dielectric fluid (8×) → 双 CDU 板换 Dual CDU plate HX (2N) → 设施水 Facility water
@@ -196,21 +196,21 @@ IT Load → 介电液 Dielectric fluid (8×) → 双 CDU 板换 Dual CDU plate H
 
 ### 5.4 冷源配置原则 · Heat-rejection configuration rule
 
-每台 I400C40 与其室外冷源**一对一**配置，不跨箱共享冷源。系统级可用性靠增加箱数实现。
-*Each I400C40 is paired **one-to-one** with its outdoor plant; plant is not shared across containers. System-level availability is achieved by adding containers.*
+每台 I400C40 与其室外冷源**一对一**配置，不跨箱共享冷源。系统级可用性靠增加箱数实现。 ^mdc-b9cb698c4e
+*Each I400C40 is paired **one-to-one** with its outdoor plant; plant is not shared across containers. System-level availability is achieved by adding containers.* ^mdc-6f9e7623d1
 
 ---
 
 ## 6. 配电规格 · Power Distribution ^sec-6-power
 
-I400C40 的电力边界在**箱外**：UPS、电池与配电由场站或客户提供，箱体只接受进线。40 英尺箱内不设电力舱 —— 全部内部容积用于算力与运维。
+I400C40 的电力边界在**箱外**：UPS、电池与配电由场站或客户提供，箱体只接受进线。40 英尺箱内不设电力舱 —— 全部内部容积用于算力与运维。 ^mdc-804815a24a
 
-*The I400C40 power boundary is **outside the box**: UPS, batteries and distribution are provided by the site or the customer, and the container only receives an incoming feed. There is no power bay inside the 40ft envelope — the whole internal volume serves compute and service access.*
+*The I400C40 power boundary is **outside the box**: UPS, batteries and distribution are provided by the site or the customer, and the container only receives an incoming feed. There is no power bay inside the 40ft envelope — the whole internal volume serves compute and service access.* ^mdc-85598e33fd
 
 ```
 Grid / BESS / Generator → 客户侧 UPS 与配电（箱外）· Customer-side UPS and distribution (outside)
                                         ↓
-                        I400C40 进线 · incomer → 8× 浸没槽 tanks + 10 kW 风冷柜 air rack
+                        I400C40 进线 · incomer → 8× 浸没槽 tanks + 10 kW 风冷柜 air rack ^mdc-5760e5c197
 ```
 
 | 项目 · Item | 参数 · Specification |
@@ -219,8 +219,8 @@ Grid / BESS / Generator → 客户侧 UPS 与配电（箱外）· Customer-side 
 | UPS 容量 · UPS capacity | **600 kW**（客户自备）· 600 kW (customer-supplied) |
 | 电池后备 · Battery ride-through | **~10 min**（客户自备）· ~10 min (customer-supplied) |
 
-> **UPS 与 BESS 是两回事：** UPS 是分钟级切换后备，BESS 是小时级储能。二者在 I400C40 上都在箱外，属于不同的设备和不同的采购项。客户侧设备的合规责任按合同约定。
-> ***UPS and BESS are not the same thing:*** *UPS is minutes-scale ride-through, BESS is hours-scale storage. On I400C40 both sit outside the box, and they are different equipment and different procurement items. Compliance responsibility for customer-side equipment is set by contract.*
+> **UPS 与 BESS 是两回事：** UPS 是分钟级切换后备，BESS 是小时级储能。二者在 I400C40 上都在箱外，属于不同的设备和不同的采购项。客户侧设备的合规责任按合同约定。 ^mdc-2083fc4ffb
+> ***UPS and BESS are not the same thing:*** *UPS is minutes-scale ride-through, BESS is hours-scale storage. On I400C40 both sit outside the box, and they are different equipment and different procurement items. Compliance responsibility for customer-side equipment is set by contract.* ^mdc-52f4493970
 
 ### 6.1 冗余模型 · Redundancy model ^sec-6-redundancy
 
@@ -244,7 +244,7 @@ Grid / BESS / Generator → 客户侧 UPS 与配电（箱外）· Customer-side 
 | 项目 · Item | 参数 · Specification |
 |-------------|----------------------|
 | 散热选型气候判据 · Heat-rejection climate gate | 历史极端干球 **≤ 24 °C** → 干冷器为主；**> 24 °C** → 加装混合冷机 · Historical extreme dry-bulb ≤ 24 °C → dry coolers primarily; > 24 °C → add a hybrid chiller |
-| 整机 UL · Full-system UL | **不作为 I400C40 的交付项** —— 需要整机 UL 认证的市场请选型 [[I400C45_Tech_Spec_External\|I400C45]] · **Not a deliverable of I400C40** — where full-system UL is mandatory, select I400C45 |
+| 整机 UL · Full-system UL | **不作为 I400C40 的交付项** —— 需要整机 UL 认证的市场请选型 [[I400C45_Tech_Spec_External\|I400C45]] · **Not a deliverable of I400C40** — where full-system UL is mandatory, select I400C45 ^mdc-a104fdf033 |
 | 质保背书 · Warranty backing | 浸没线由 OEM 背书；**Intel DataCenter Certified** · Immersion line backed by the OEM; Intel DataCenter Certified |
 | 可用性等级目标 · Availability target | Tier II 投资 → Tier III 级可用性（差异化冗余）· Tier II investment → Tier III-class availability |
 
@@ -301,8 +301,8 @@ Grid / BESS / Generator → 客户侧 UPS 与配电（箱外）· Customer-side 
 
 | 方向 · Direction | 说明 · Notes |
 |------------------|--------------|
-| 横向扩展 · Scale-out | 增加 I400C40 台数；系统级 N / N+1 / 2N 由箱数决定 · Add I400C40 units; system-level redundancy is set by container count |
-| 混合部署 · Mixed deployment | 与 I400C45 / I200C20 混合组集群 —— 同款浸没槽，运维口径与备件通用 · Cluster with I400C45 / I200C20; the same tank means common O&M practice and common spares |
+| 横向扩展 · Scale-out | 增加 I400C40 台数；系统级 N / N+1 / 2N 由箱数决定 · Add I400C40 units; system-level redundancy is set by container count ^mdc-ec0f3636a1 |
+| 混合部署 · Mixed deployment | 与 I400C45 / I200C20 混合组集群 —— 同款浸没槽，运维口径与备件通用 · Cluster with I400C45 / I200C20; the same tank means common O&M practice and common spares ^mdc-7fd1a947e1 |
 
 ---
 
@@ -317,9 +317,9 @@ Grid / BESS / Generator → 客户侧 UPS 与配电（箱外）· Customer-side 
 
 ### 13.1 Zone 边界 · Zone boundaries
 
-| Zone | 与 I400C40 的关系 · Relation to I400C40 |
+| Zone | 与 I400C40 的关系 · Relation to I400C40 ^mdc-62b5aee9dd |
 |------|------------------------------------------|
-| IT Zone | **I400C40 本体**（8× 浸没槽 + 10 kW 风冷柜）· I400C40 itself (8 tanks + 10 kW air rack) |
+| IT Zone | **I400C40 本体**（8× 浸没槽 + 10 kW 风冷柜）· I400C40 itself (8 tanks + 10 kW air rack) ^mdc-ad403812aa |
 | Power Zone | UPS、电池、配电全部在箱外，属客户 / 场站范围 · UPS, batteries and distribution all outside, on the customer / site side |
 | Cooling Zone | 室外冷源一对一，不在箱体内完整集成 · Outdoor plant one-to-one, not fully integrated inside the container |
 
@@ -329,7 +329,7 @@ Grid / BESS / Generator → 客户侧 UPS 与配电（箱外）· Customer-side 
 
 | 项目 · Item | 参数 · Specification |
 |-------------|----------------------|
-| SKU | `I400C40ST50` |
+| SKU | `I400C40ST50` ^mdc-eef71ac363 |
 | 箱型 · Container | 40ft |
 | IT Load | **推荐 360 kW / 上限 400 kW** · 360 kW recommended / 400 kW maximum |
 | Total Facility Load | **随 PUE 变化，逐站点用 <https://mdcx.org> 计算** · varies with PUE, computed per site at <https://mdcx.org> |
@@ -346,7 +346,7 @@ Grid / BESS / Generator → 客户侧 UPS 与配电（箱外）· Customer-side 
 | UPS 边界 · UPS boundary | 箱外，客户自备 · Outside the box, customer-supplied |
 | UPS 容量 · UPS capacity | 600 kW（客户自备）· 600 kW (customer-supplied) |
 | 电池后备 · Battery ride-through | ~10 min（客户自备）· ~10 min (customer-supplied) |
-| 整机 UL · Full-system UL | 非本产品交付项；需要时选型 I400C45 · Not a deliverable of this product; select I400C45 where required |
+| 整机 UL · Full-system UL | 非本产品交付项；需要时选型 I400C45 · Not a deliverable of this product; select I400C45 where required ^mdc-f52475c090 |
 | 冗余模型 · Redundancy model | 槽内 2N；单箱无 IT 冗余；系统级靠增箱 · 2N in-tank; no IT redundancy in a single box; system level by adding boxes |
 | 软件 · Software | CIOS（标配）+ NVIDIA Omniverse 数字孪生 · CIOS (standard) + NVIDIA Omniverse digital twin |
 | 预制率 · Prefabrication rate | 99% 出厂前完成 · 99% completed before leaving the factory |

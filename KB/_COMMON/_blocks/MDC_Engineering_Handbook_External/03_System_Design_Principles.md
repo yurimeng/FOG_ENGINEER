@@ -15,7 +15,7 @@ source_anchors: []
 
 MDC 的系统设计原则旨在解决 AI Factory 基础设施面临的核心问题:**高密度算力、跨区域部署、能源效率、可靠性以及标准化交付。**
 
-本章定义 MDC 在架构设计中的基本工程原则,这些原则适用于不同规模的算力集群,并指导 AC40、AC45、DC45 等模块的设计与实施。
+本章定义 MDC 在架构设计中的基本工程原则,这些原则适用于不同规模的算力集群,并指导 AC40、AC45、DC45 等模块的设计与实施。 ^mdc-82fd555264
 
 > **关联文档:** [[COOLING_SYSTEM_Guideline|KB/Guideline/COOLING_SYSTEM_Guideline]] · [[POWER_SYSTEMS_Guideline|KB/Guideline/POWER_SYSTEMS_Guideline]] · [[PUBLIC/Reference_Architecture/Site_Reference_Climate_Standard|Site Reference Climate]]
 
@@ -304,7 +304,7 @@ MDC 支持两类主流 GPU 计算平台,分别对应不同的封装形态、功�
 
 ## 3.5.1 平台对比总览
 
-| 维度     | PCIe 平台(AC40)                   | SXM 平台(DC45)                        |
+| 维度     | PCIe 平台(AC40)                   | SXM 平台(DC45) ^mdc-ffd1fb9d4f |
 | ------ | ------------------------------- | ----------------------------------- |
 | 典型 GPU | H100 PCIe / RTX 4090 / RTX 5090 | HGX H100/200 / B200/300 / GB200/300 |
 | 封装形态   | PCIe 标准插卡                       | SXM 高密度模块                           |
@@ -361,7 +361,7 @@ MDC 支持两类主流 GPU 计算平台,分别对应不同的封装形态、功�
 | ------------- | ---------------- | ----------------- |
 | AI 推理为主       | PCIe + Immersion | 功率密度适中,运维简单,成本可控  |
 | 大规模 AI 训练     | SXM + DLC        | 高带宽互联需求,功率密度高     |
-| 混合负载(推理 + 训练) | AC40 + DC45 混合部署 | 按负载类型分区,兼顾效率与灵活性  |
+| 混合负载(推理 + 训练) | AC40 + DC45 混合部署 | 按负载类型分区,兼顾效率与灵活性 ^mdc-16751b9c4e |
 | 矿场改造 / 成本敏感场景 | PCIe + Immersion | 与矿场既有浸没冷却基础设施兼容性好 |
 
 ***
@@ -379,8 +379,8 @@ MDC 支持两类主流 GPU 计算平台,分别对应不同的封装形态、功�
 
 不同类型计算模块可以在同一算力园区内部署,例如:
 
-- AC40(Immersion Cluster)
-- DC45(DLC Cluster)
+- AC40(Immersion Cluster) ^mdc-f0dc92fe73
+- DC45(DLC Cluster) ^mdc-350d8d177c
 
 这种架构可以在保证效率的同时,满足不同 AI 工作负载需求。
 

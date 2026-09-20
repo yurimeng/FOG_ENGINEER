@@ -21,7 +21,7 @@ MDC（Modular Datacenter Cluster）是由多个模块组成的模块化数据中
 
 | Zone | 中文名 | 描述 |
 |------|--------|------|
-| **IT Zone** | 算力单元区 | 提供服务器容纳，部分 SKU 含 UPS。六个 SKU 任选：L1240C45 / L1800C45 / L450C20（液冷线）· I400C45 / I400C40 / I200C20（浸没线） |
+| **IT Zone** | 算力单元区 | 提供服务器容纳，部分 SKU 含 UPS。六个 SKU 任选：L1240C45 / L1800C45 / L450C20（液冷线）· I400C45 / I400C40 / I200C20（浸没线） ^mdc-1211e98a1e |
 | **Cooling Zone** | 冷却单元区 | 外制冷，为 IT Zone 内服务器提供散热能力 |
 | **Power Zone** | 电力单元区 | 后备电源系统，由 BESS 或柴油发电机提供 |
 
@@ -32,7 +32,7 @@ MDC（Modular Datacenter Cluster）是由多个模块组成的模块化数据中
 ```
 Transformer → Switchgear → [Power Zone: BESS / Generator]
                           ↓
-        [IT Zone: L1240C45 / L1800C45 / L450C20 / I400C45 / I400C40 / I200C20]
+        [IT Zone: L1240C45 / L1800C45 / L450C20 / I400C45 / I400C40 / I200C20] ^mdc-0173777a1f
                       ├── PDC → UPS → CDU → Tanks/Racks
                       ↓
               [Cooling Zone: Hybrid Cooling System（干冷器+DX一体化）]
@@ -46,28 +46,28 @@ Transformer → Switchgear → [Power Zone: BESS / Generator]
 
 | 产品 | 全 SKU | 旧名 | 规格 | IT 容量 | 冷却类型 | UPS 放置 | UPS 电池后备 | UL |
 |------|--------|------|------|---------|----------|---------|-----------|-----|
-| **L1240C45** | `L1240C45SUR150` | DC45 | 45ft HC | 1240kW | Liquid Cooling · 单环路 | **内置** | 3×93LiG2（~8min）| ✅ |
-| **L1800C45** | `L1800C45DR220` | — | 45ft HC | 1800kW | Liquid Cooling · 双环路 | 外置 | 不适用 | ⏳ |
-| **L450C20** | `L450C20DR150` | — | 20ft ⏳ | 450kW | Liquid Cooling · 双环路 | 外置 | 不适用 | ⏳ |
-| **I400C45** | `I400C45SUT50` | AC45 | 45ft（含电力舱）| 400kW | 浸没式 | **内置**（600kW）| 2×93LiG2（~20min）| ✅ |
-| **I400C40** | `I400C40ST50` | AC40 | 40ft | 400kW（推荐 360kW）| 浸没式 | 外置（客户自备）| 2×93LiG2（~10min，客户自备）| ⏳ ⛔ |
-| **I200C20** | `I200C20ST50` | AC20 | 20ft 算力舱 | 200kW | 浸没式 | 外置 | ⏳ | ⏳ |
-| **I50TS**（组件）| `I50TS` ⚠️ | A32 | 单槽 | 45–50kW | 浸没式 | 外置（客户自备）| 外置 | — |
+| **L1240C45** | `L1240C45SUR150` | DC45 | 45ft HC | 1240kW | Liquid Cooling · 单环路 | **内置** | 3×93LiG2（~8min）| ✅ ^mdc-493d74671b |
+| **L1800C45** | `L1800C45DR220` | — | 45ft HC | 1800kW | Liquid Cooling · 双环路 | 外置 | 不适用 | ⏳ ^mdc-bff2d4a4ef |
+| **L450C20** | `L450C20DR150` | — | 20ft ⏳ | 450kW | Liquid Cooling · 双环路 | 外置 | 不适用 | ⏳ ^mdc-10feed3b8f |
+| **I400C45** | `I400C45SUT50` | AC45 | 45ft（含电力舱）| 400kW | 浸没式 | **内置**（600kW）| 2×93LiG2（~20min）| ✅ ^mdc-b6f04bcf17 |
+| **I400C40** | `I400C40ST50` | AC40 | 40ft | 400kW（推荐 360kW）| 浸没式 | 外置（客户自备）| 2×93LiG2（~10min，客户自备）| ❌ ^mdc-53377e92cf |
+| **I200C20** | `I200C20ST50` | AC20 | 20ft 算力舱 | 200kW | 浸没式 | 外置 | ⏳ | ⏳ ^mdc-fa94c76904 |
+| **I50TS**（组件）| `I50TS` ⚠️ | A32 | 单槽 | 45–50kW | 浸没式 | 外置（客户自备）| 外置 | — ^mdc-bb8c77c1bb |
 
-> ⚠️ `I50TS` 为 KB 侧按 Tank 正则推导，⏳ 待站点 Alias registry 确认（[[PRODUCT_SPEC_BASELINE#^baseline-conflicts|基准表 C-7]]）。它是 I400C45/I400C40 的 8× 与 I200C20 的 4× 构成单元，不是独立 SKU。
-> ⛔ I400C40 的 UL 状态未定义（站点该格为空白），见[[PRODUCT_SPEC_BASELINE#^baseline-conflicts|基准表 C-5]]。**受管制市场投标前须经 Compliance Officer 确认。**
+> ⚠️ `I50TS` 为 KB 侧按 Tank 正则推导，⏳ 待站点 Alias registry 确认（[[PRODUCT_SPEC_BASELINE#^baseline-conflicts|基准表 C-7]]）。它是 I400C45/I400C40 的 8× 与 I200C20 的 4× 构成单元，不是独立 SKU。 ^mdc-0b039a9da0
+> I400C40 UL ❌不提供（站点 ac40.json ulCompliant:false），见[[PRODUCT_SPEC_BASELINE#^baseline-conflicts|基准表 C-5]]。**受管制市场投标前须经 Compliance Officer 确认。** ^mdc-a4c1845fae
 > 各 SKU 完整规格见 [[PRODUCT_SPEC_BASELINE]]；选型判断见 [[MDC_Product_Quick_Ref]]。
 
 > ⚠️ **UPS 电池 vs BESS 电池：** 上表中"UPS电池后备"指 UPS 配套的 93LiG2 磷酸铁锂电池柜（分钟级瞬时切换后备）。BESS（如 Tesla Megapack / 国轩）是独立大型储能系统（小时级供电），两者完全不同。
 
 参考（每个 SKU 三版：CN / EN / 对外版）：
-- L1240C45：[[L1240C45_Tech_Spec_CN|CN]] · [[L1240C45_Tech_Spec_EN|EN]] · [[L1240C45_Tech_Spec_External|对外版]]
-- L1800C45：[[L1800C45_Tech_Spec_CN|CN]] · [[L1800C45_Tech_Spec_EN|EN]] · [[L1800C45_Tech_Spec_External|对外版]]
-- L450C20：[[L450C20_Tech_Spec_CN|CN]] · [[L450C20_Tech_Spec_EN|EN]] · [[L450C20_Tech_Spec_External|对外版]]
-- I400C45：[[I400C45_Tech_Spec_CN|CN]] · [[I400C45_Tech_Spec_EN|EN]] · [[I400C45_Tech_Spec_External|对外版]] · [[PUBLIC/Products/I400C45|PRD]]
-- I400C40：[[I400C40_Tech_Spec_CN|CN]] · [[I400C40_Tech_Spec_EN|EN]] · [[I400C40_Tech_Spec_External|对外版]] · [[PUBLIC/Products/I400C40|PRD]]
-- I200C20：[[I200C20_Tech_Spec_CN|CN]] · [[I200C20_Tech_Spec_EN|EN]] · [[I200C20_Tech_Spec_External|对外版]]
-- I50TS：[[PUBLIC/Products/I50TS|I50TS]]
+- L1240C45：[[L1240C45_Tech_Spec_CN|CN]] · [[L1240C45_Tech_Spec_EN|EN]] · [[L1240C45_Tech_Spec_External|对外版]] ^mdc-2a474d37a0
+- L1800C45：[[L1800C45_Tech_Spec_CN|CN]] · [[L1800C45_Tech_Spec_EN|EN]] · [[L1800C45_Tech_Spec_External|对外版]] ^mdc-a70c797f6b
+- L450C20：[[L450C20_Tech_Spec_CN|CN]] · [[L450C20_Tech_Spec_EN|EN]] · [[L450C20_Tech_Spec_External|对外版]] ^mdc-3e8003f565
+- I400C45：[[I400C45_Tech_Spec_CN|CN]] · [[I400C45_Tech_Spec_EN|EN]] · [[I400C45_Tech_Spec_External|对外版]] · [[PUBLIC/Products/I400C45|PRD]] ^mdc-3cc4925649
+- I400C40：[[I400C40_Tech_Spec_CN|CN]] · [[I400C40_Tech_Spec_EN|EN]] · [[I400C40_Tech_Spec_External|对外版]] · [[PUBLIC/Products/I400C40|PRD]] ^mdc-e4bf03d169
+- I200C20：[[I200C20_Tech_Spec_CN|CN]] · [[I200C20_Tech_Spec_EN|EN]] · [[I200C20_Tech_Spec_External|对外版]] ^mdc-9b2a31b3d5
+- I50TS：[[PUBLIC/Products/I50TS|I50TS]] ^mdc-45f7e16d1e
 
 > **只有对外版可直接发客户。** CN/EN 版含 ⏳ 待证实字段，见 [[UNCONFIRMED_Convention#^unconfirmed-external|标注规范 §5]]。
 
@@ -77,14 +77,14 @@ Transformer → Switchgear → [Power Zone: BESS / Generator]
 
 | 等级 | IT 容量 | 典型配置 | 冷却方式 | 使用场景 |
 |------|---------|---------|----------|----------|
-| **Single** | 0.5MW | 1–2× I400C40/I400C45，或 2–3× I200C20 | 浸没式 | 边缘推理 |
-| **Small** | 1.2MW | 1× L1240C45，或 3× I400C40/I400C45，或 2–3× L450C20 | Liquid / 浸没式 | 边缘推理 / 模型再训练 |
-| **Medium** | 2–3MW | 2× L1240C45，或 1–2× L1800C45，或液冷+浸没混合 | 混合 | 区域级边缘节点 |
-| **Large** | 5MW+ | 多个 MDC 并联（L1800C45 单箱密度最高） | 按需组合 | 数据中心级部署 |
+| **Single** | 0.5MW | 1–2× I400C40/I400C45，或 2–3× I200C20 | 浸没式 | 边缘推理 ^mdc-8e4895480b |
+| **Small** | 1.2MW | 1× L1240C45，或 3× I400C40/I400C45，或 2–3× L450C20 | Liquid / 浸没式 | 边缘推理 / 模型再训练 ^mdc-bae13e9b80 |
+| **Medium** | 2–3MW | 2× L1240C45，或 1–2× L1800C45，或液冷+浸没混合 | 混合 | 区域级边缘节点 ^mdc-bb0776695d |
+| **Large** | 5MW+ | 多个 MDC 并联（L1800C45 单箱密度最高） | 按需组合 | 数据中心级部署 ^mdc-e59f8325a9 |
 
-> **I400C45 vs I400C40 选型提示：** 两者 IT 容量与八槽核心完全相同，差别只有电力边界和那五英尺（= 电力舱体积）。场地已有配电、或锂电不许进箱 → I400C40；场地没有配电、且允许锂电进箱 → I400C45（另具 UL 与 ~20min 后备）。
+> **I400C45 vs I400C40 选型提示：** 两者 IT 容量与八槽核心完全相同，差别只有电力边界和那五英尺（= 电力舱体积）。场地已有配电、或锂电不许进箱 → I400C40；场地没有配电、且允许锂电进箱 → I400C45（另具 UL 与 ~20min 后备）。 ^mdc-4b8bba315e
 >
-> **液冷线选型提示：** 空地起步选 L1240C45（UPS 在箱内）；缺地不缺电选 L1800C45（220 kW/柜）；45ft 进不去选 L450C20。详见 [[MDC_Product_Quick_Ref]] §2。
+> **液冷线选型提示：** 空地起步选 L1240C45（UPS 在箱内）；缺地不缺电选 L1800C45（220 kW/柜）；45ft 进不去选 L450C20。详见 [[MDC_Product_Quick_Ref]] §2。 ^mdc-6d66939e33
 
 ---
 
@@ -96,7 +96,7 @@ Transformer → Switchgear → [Power Zone: BESS / Generator]
 
 | 项目 | 配置 |
 |------|------|
-| 推荐产品 | I400C40（场地已有配电）/ I400C45（需整体交付）|
+| 推荐产品 | I400C40（场地已有配电）/ I400C45（需整体交付） ^mdc-8c90fddd87 |
 | 数量 | 1–2 台 |
 | IT 容量 | 400–800kW |
 | 冷却 | 浸没式（干冷 + DX）|
@@ -107,8 +107,8 @@ Transformer → Switchgear → [Power Zone: BESS / Generator]
 
 | 项目 | 配置 |
 |------|------|
-| 推荐产品 | L1240C45，或 L1240C45 + I400C40 混合 |
-| 数量 | 1–3 台 L1240C45，或混合组合 |
+| 推荐产品 | L1240C45，或 L1240C45 + I400C40 混合 ^mdc-180214efe5 |
+| 数量 | 1–3 台 L1240C45，或混合组合 ^mdc-c91f2576a2 |
 | IT 容量 | 1240–3720kW |
 | 冷却 | Liquid Cooling（Hybrid Chiller ≥1600kW）|
 | 电力 | Grid + UPS + BESS（推荐）|
@@ -118,7 +118,7 @@ Transformer → Switchgear → [Power Zone: BESS / Generator]
 
 | 项目 | 配置 |
 |------|------|
-| 推荐产品 | 多台 L1240C45 / L1800C45 + I400C40 组合 |
+| 推荐产品 | 多台 L1240C45 / L1800C45 + I400C40 组合 ^mdc-aed4612043 |
 | 扩展方式 | 横向并联（增加集装箱数量）|
 | IT 容量 | 3MW+ |
 | 冷却 | 按集装箱类型独立配置 |
@@ -132,10 +132,10 @@ Transformer → Switchgear → [Power Zone: BESS / Generator]
 
 | IT Zone | 冷却 Zone 配置 | 散热方式 |
 |---------|---------------|----------|
-| I400C45 / I400C40 / I200C20（浸没式）| **Hybrid Cooling System**（干冷器+DX一体化）| 每台独立配置 |
-| L1240C45（液冷·单环路）| **Hybrid Chiller** ≥1600 kW（TICA TAMFV430.3ALF5 已 ATS Full Pass）+ 三支路 TCS PG25 | 每台独立配置 |
-| L1800C45（液冷·双环路）| GPU 侧 **2× STULZ SCR 14103 W**；列间侧 **2× CRS 560 CW + 6× CRS 330 CW**（混配 8 台，307.4 kW）· 室外侧 ⏳ | 台数已定，冗余归属 ⏳ |
-| L450C20（液冷·双环路）| GPU 侧 **1× STULZ SCR 14103 W**；列间侧 **2× CRS 330 CW**（N+1）· 室外侧 ⏳ | 台数已定，⏳ 单台规格待厂家 |
+| I400C45 / I400C40 / I200C20（浸没式）| **Hybrid Cooling System**（干冷器+DX一体化）| 每台独立配置 ^mdc-b2ea70cd1e |
+| L1240C45（液冷·单环路）| **Hybrid Chiller** ≥1600 kW（TICA TAMFV430.3ALF5 已 ATS Full Pass）+ 三支路 TCS PG25 | 每台独立配置 ^mdc-397c0b4f68 |
+| L1800C45（液冷·双环路）| GPU 侧 **2× STULZ SCR 14103 W**；列间侧 **2× CRS 560 CW + 6× CRS 320 CW**（混配 8 台，329.1 kW）· 室外侧 ⏳ | 台数已定，冗余归属 ⏳ ^mdc-28d5d637a1 |
+| L450C20（液冷·双环路）| GPU 侧 **1× STULZ SCR 14103 W**；列间侧 **2× CRS 320 CW**（N+1）· 室外侧 ⏳ | 台数已定，⏳ 单台规格待厂家 ^mdc-d86c32fd24 |
 
 > ⚠️ **规则：不允许纯干冷器方案。** 浸没线必须配置 Hybrid Cooling System（干冷器+DX一体化），确保环境温度 >28°C 时的散热能力。**唯一例外是 [[I50TS]] 单槽的纯干冷场景**，见 [[COOLING_SYSTEM_Guideline]]。
 >
@@ -236,6 +236,7 @@ Cooling Zone (Hybrid Cooling System)
 
 | 版本 | 日期 | 变更 |
 |---|---|---|
+| 2026-09-20 | 🧭 unconfirmed-016 已可关闭，已回写来源值（已可关闭） |
 | V2.0 | 2026-08-30 | 六 SKU 对齐。§1 Zone 定义、§2/§12 架构图、§3 IT Zone 产品对照（补 L1800C45/L450C20/I200C20 三行 + 三版 Tech Spec 入口）、§4 最小节点配置、§6 冷却 Zone（按线区分冷源并挂入已批机型）、§8 冗余（补槽内 2N）、§9 交期（⛔ 标记）、§11 设计原则 全部换新码；接入 [[PRODUCT_SPEC_BASELINE]] 与 [[UNCONFIRMED_Convention]] |
 | V1.1 | 2026-03-29 | 统一结构版 |
 

@@ -20,9 +20,9 @@ source_anchors: []
 
 | IT Zone Type | Cooling Zone Requirement | Cooling Capacity |
 |-------------|------------------------|-----------------|
-| AC40 | 1× Hybrid Cooling System | ~600kW class |
-| DC45 | 1× Hybrid Cooling System | ~1200kW class |
-| A32 | 1× Hybrid Cooling System | ~320kW class |
+| AC40 | 1× Hybrid Cooling System | ~600kW class ^mdc-9505f3c65a |
+| DC45 | 1× Hybrid Cooling System | ~1200kW class ^mdc-6b6519c430 |
+| A32 | 1× Hybrid Cooling System | ~320kW class ^mdc-63bc494574 |
 
 > Each cooling device is matched to one specific IT Zone device. Do not size one cooling unit to serve multiple IT Zone containers.
 

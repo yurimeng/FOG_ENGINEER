@@ -17,14 +17,14 @@ source_anchors:
 
 | Item | Spec |
 |------|------|
-| Container | **40ft HC** (~12,192 × 2,438 × 2,896 mm) ⏳ **#unconfirmed** (legacy AC40 V1.4, not covered by the baseline table; waiting on I400C40 DESIGN/ documents, expected TBD) |
-| IT capacity | **360kW rec. / 400kW max** (8×I50TS @ 45/50kW) |
+| Container | **40ft HC** (~12,192 × 2,438 × 2,896 mm) ⏳ **#unconfirmed** (legacy AC40 V1.4, not covered by the baseline table; waiting on I400C40 DESIGN/ documents, expected TBD) ^mdc-a598989e46 |
+| IT capacity | **360kW rec. / 400kW max** (8×I50TS @ 45/50kW) ^mdc-691824e421 |
 | Air rack | 1 × 10kW |
-| Rack space | 256RU / 232OU ⏳ **#unconfirmed** (legacy AC40 V1.4, not covered by the baseline table; waiting on I400C40 DESIGN/ documents, expected TBD) |
+| Rack space | 256RU / 232OU ⏳ **#unconfirmed** (legacy AC40 V1.4, not covered by the baseline table; waiting on I400C40 DESIGN/ documents, expected TBD) ^mdc-abbb3a8a72 |
 | Cooling | **Single-phase immersion** + Dual CDU 1+1 + independent air |
 | Secondary | Inlet ≤35°C / outlet ≈43°C / **ΔT=8K**; DC20 / S5LV |
-| Primary | ≤32 / 37°C (ΔT=5K) ⏳ **#unconfirmed** (see §5.2; waiting on Cooling Engineer to confirm same temperatures, expected TBD); design WB 28°C ⏳ **#unconfirmed** (legacy AC40 V1.4, not covered by the baseline table; waiting on I400C40 DESIGN/ documents, expected TBD) |
-| Secondary flow (box) | ≈ **87.8 / 97.6 m³/h** (360 / 400kW) ⏳ **#unconfirmed** (legacy AC40 V1.4, not covered by the baseline table; waiting on I400C40 DESIGN/ documents, expected TBD) |
+| Primary | ≤32 / 37°C (ΔT=5K) ⛔ **conflict** (see §5.2; waiting on Cooling Engineer to confirm same temperatures, expected TBD); design WB 28°C ⛔ **conflict** **** (legacy AC40 V1.4, not covered by the baseline table; waiting on I400C40 DESIGN/ documents, expected TBD) ^mdc-5d4da582b6 |
+| Secondary flow (box) | ≈ **87.8 / 97.6 m³/h** (360 / 400kW) ⛔ **conflict** (legacy AC40 V1.4, not covered by the baseline table; waiting on I400C40 DESIGN/ documents, expected TBD) ^mdc-168b2323a0 |
 | Heat rejection | DB **≤24°C dry cooler**; **>24°C Hybrid** |
 | Facility load | Varies with PUE — **computed per site at <https://mdcx.org>** ✅ adjudicated 2026-08-30 (the former ~400–480kW is void) |
 | PUE | **`1.0x`** — no fixed value, no range; computed per site with the TCO / Designer at <https://mdcx.org> ✅ adjudicated 2026-08-30 (the former 1.05–1.10 / 1.15–1.20 figures are void); see §3 |
@@ -36,14 +36,14 @@ source_anchors:
 | Ambient | -45°C to +45°C (reference) |
 | Fire | FM-200 + ASSD/VESDA |
 | Monitoring | MODBUS / SNMP / Web / Redfish |
-| Full-system UL | **No** (use I400C45) |
+| Full-system UL | **No** (use I400C45) ^mdc-1d320bb857 |
 | Warranty | **Core components, one year from EXW**; annual service fee thereafter. Response level (ONSITE / NBD / 9×5 / 24×7) is **governed by the Invoice** ✅ adjudicated 2026-08-30 |
 | Lead time | **120 days EXW first batch / 90 days EXW for Scale**; dummy-load burn-in 5–30 days (not covered by the EXW commitment); commercial, freight and installation carry no commitment ✅ adjudicated 2026-08-30 (the former ~185–230 days is void) |
-| Operating weight | ~22–30T (structural calc) ⏳ **#unconfirmed** (legacy AC40 V1.4, not covered by the baseline table; waiting on I400C40 DESIGN/ documents, expected TBD) |
+| Operating weight | ~22–30T (structural calc) ⏳ **#unconfirmed** (legacy AC40 V1.4, not covered by the baseline table; waiting on I400C40 DESIGN/ documents, expected TBD) ^mdc-7ffa230298 |
 
-### vs L1240C45 (one glance)
+### vs L1240C45 (one glance) ^mdc-349eb2ba48
 
-| | I400C40 | L1240C45 |
+| | I400C40 | L1240C45 ^mdc-f6812c20a7 |
 |--|------|------|
 | Cooling | Immersion | DLC + RDHX + CeilAir |
 | IT | 0.36–0.40 MW | 1.24 MW |
@@ -61,3 +61,10 @@ source_anchors:
 7. External UPS interface drawings (customer side)
 
 ---
+
+## Changelog
+
+| 日期 | 变更 |
+|---|---|
+| 2026-09-20 | 🧭 unconfirmed-048 改为 ⛔ conflict，未裁定赢家 |
+| 2026-09-20 | 🧭 unconfirmed-047 改为 ⛔ conflict，未裁定赢家 |

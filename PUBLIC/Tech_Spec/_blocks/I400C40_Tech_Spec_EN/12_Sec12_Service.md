@@ -42,6 +42,6 @@ source_anchors:
 
 ### Expansion
 
-Scale-out by more I400C40s; hybrid with L1240C45/I400C45; density uprates require revalidation of cooling and power.
+Scale-out by more I400C40s; hybrid with L1240C45/I400C45; density uprates require revalidation of cooling and power. ^mdc-7d03693f96
 
 ---

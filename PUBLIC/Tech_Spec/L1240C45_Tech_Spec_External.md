@@ -9,7 +9,7 @@ audience: 客户 / Customer（对外输出版）
 sku_id: L1240C45SUR150
 ---
 
-# L1240C45 — Technical Specification（对外输出版 / External Edition）
+# L1240C45 — Technical Specification（对外输出版 / External Edition） ^mdc-51d92670ee
 **单环路直接液冷集装箱数据中心 · Single-Loop Direct Liquid Cooled Container Data Center**
 **45ft High Cube · 1240 kW IT · 单柜 150 kW / 150 kW per rack · UPS 箱内 / UPS inside**
 
@@ -26,7 +26,7 @@ sku_id: L1240C45SUR150
 >
 > **本版为单文件，块拆分待需要时再做 / This edition is a single file; block splitting is deferred until needed.** 锚点 `^sec-1-layout` … `^sec-14-summary` 已保留 / anchors are preserved.
 
-版本 / Version: v1.1 | 日期 / Date: 2026-08-30 | SKU: `L1240C45SUR150`
+版本 / Version: v1.1 | 日期 / Date: 2026-08-30 | SKU: `L1240C45SUR150` ^mdc-4b7adea71e
 
 ---
 
@@ -69,25 +69,25 @@ sku_id: L1240C45SUR150
 
 ## 2. 产品定位 / Product Positioning ^sec-2-positioning
 
-**中文：** L1240C45 是 45ft High Cube 单环路直接液冷集装箱数据中心，采用冷板液冷，单柜 150 kW，整箱 IT 容量 1240 kW，面向高密度 AI / HPC 集群部署。
+**中文：** L1240C45 是 45ft High Cube 单环路直接液冷集装箱数据中心，采用冷板液冷，单柜 150 kW，整箱 IT 容量 1240 kW，面向高密度 AI / HPC 集群部署。 ^mdc-9d262b0f8b
 
 这个产品的分界线在**电力边界**：**UPS、电池与母线全部在箱内。** 场站只需要把市电送到箱边，箱内的不间断电源、电池后备、母线与配电一次交付到位。它面向的是没有独立电力室、也不打算为一次部署新建电力设施的场站 —— 一个集装箱到场，算力与电力同时闭环。
 
-同产品线内的分工：场站已有电力室、缺的是机房面积时，选 [[L1800C45_Tech_Spec_External|L1800C45]]（单柜 220 kW，1800 kW，UPS 箱外）；45ft 箱体进不去的受限场地，选 [[L450C20_Tech_Spec_External|L450C20]]（20ft，450 kW）。
+同产品线内的分工：场站已有电力室、缺的是机房面积时，选 [[L1800C45_Tech_Spec_External|L1800C45]]（单柜 220 kW，1800 kW，UPS 箱外）；45ft 箱体进不去的受限场地，选 [[L450C20_Tech_Spec_External|L450C20]]（20ft，450 kW）。 ^mdc-0aacd2196b
 
-**冷却架构：** L1240C45 采用**三支路并联 TCS 回路（PG25）**，全部热量经 TCS 二次侧送至室外侧（混合干冷器 + DX）：
+**冷却架构：** L1240C45 采用**三支路并联 TCS 回路（PG25）**，全部热量经 TCS 二次侧送至室外侧（混合干冷器 + DX）： ^mdc-fca440fcd5
 
 - **支路 1 —— 主 CDU 冷板回路：** 承担 8 台液冷机柜 73% 的液冷热量
 - **支路 2 —— 9 台被动式后门换热器（RDHX）：** 吸收 47–55% 的后门排风热量
 - **支路 3 —— 9 台顶置空调：** 处理机房残余风冷热量与 UPS / 辅助热量
 
-**English:** L1240C45 is a 45ft High Cube single-loop direct-liquid-cooled containerized data center using cold-plate liquid cooling — 150 kW per rack, 1240 kW IT per container — for high-density AI / HPC cluster deployment.
+**English:** L1240C45 is a 45ft High Cube single-loop direct-liquid-cooled containerized data center using cold-plate liquid cooling — 150 kW per rack, 1240 kW IT per container — for high-density AI / HPC cluster deployment. ^mdc-b398dfb3c2
 
 Its dividing line is the **power boundary**: **UPS, batteries and busbar are all inside the container.** The site only has to bring utility power to the container edge; uninterruptible power, battery autonomy, busbar and distribution are delivered inside it in one pass. It targets sites with no separate electrical room that do not intend to build electrical infrastructure for a first deployment — one container arrives and both compute and power are closed out.
 
-Within the product line: choose [[L1800C45_Tech_Spec_External|L1800C45]] (220 kW per rack, 1800 kW, UPS outside) where the site already has an electrical room and is short of floor area; choose [[L450C20_Tech_Spec_External|L450C20]] (20ft, 450 kW) for restricted sites a 45ft container cannot enter.
+Within the product line: choose [[L1800C45_Tech_Spec_External|L1800C45]] (220 kW per rack, 1800 kW, UPS outside) where the site already has an electrical room and is short of floor area; choose [[L450C20_Tech_Spec_External|L450C20]] (20ft, 450 kW) for restricted sites a 45ft container cannot enter. ^mdc-92a6942e3a
 
-**Cooling architecture:** L1240C45 runs a **three-branch parallel TCS loop on PG25**, with all heat carried to the outdoor side (hybrid dry cooler + DX) via the TCS secondary loop:
+**Cooling architecture:** L1240C45 runs a **three-branch parallel TCS loop on PG25**, with all heat carried to the outdoor side (hybrid dry cooler + DX) via the TCS secondary loop: ^mdc-0f699dbb4f
 
 - **Branch 1 — primary CDU cold-plate loop:** 73% of the liquid-cooled heat from the eight DLC racks
 - **Branch 2 — 9 × passive rear-door heat exchangers (RDHX):** absorbs 47–55% of rear-door exhaust air heat
@@ -401,7 +401,7 @@ Utility applications, incoming feeder capacity and switchgear selection must be 
 
 | 项目 / Item | 参数 / Parameter |
 |---|---|
-| SKU | `L1240C45SUR150` |
+| SKU | `L1240C45SUR150` ^mdc-0224c258a8 |
 | 箱型 / Container type | 45ft High Cube（13,716 × 2,438 × 2,992 mm） |
 | **IT 容量 / IT capacity** | **1240 kW**（8 × 150 kW 液冷 + 1 × 40 kW 风冷 · 8 × 150 kW DLC + 1 × 40 kW air-cooled）—— IT Load，非设施总负荷 · IT Load, not Total Facility Load |
 | Total Facility Load | 随 PUE 变化，逐站点用 <https://mdcx.org> 计算 · varies with PUE, computed per site at <https://mdcx.org> |

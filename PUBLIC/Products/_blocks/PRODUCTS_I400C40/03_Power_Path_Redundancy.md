@@ -21,10 +21,10 @@ Grid / BESS → PDC → UPS (EATON 9395XR-600) → PDC → Tanks → PDU
 
 | 项目 | 说明 |
 |------|------|
-| UPS 放置 | UPS 及 UPS 电池**外置（客户自备）**，AC40 本体不含 UPS |
+| UPS 放置 | UPS 及 UPS 电池**外置（客户自备）**，AC40 本体不含 UPS ^mdc-25152300a4 |
 | 客户采购 | 客户需另行采购 EATON 9395XR-600 及 2×93LiG2 电池柜 |
-| BESS 路径 | Grid → BESS → AC40（Power Zone 负责） |
-| 备用路径 | Grid → ATS → Generator → AC40（视客户场地条件） |
+| BESS 路径 | Grid → BESS → AC40（Power Zone 负责） ^mdc-86e447e310 |
+| 备用路径 | Grid → ATS → Generator → AC40（视客户场地条件） ^mdc-c1cb16bd1d |
 
 ### 6.1 集装箱内配电拓扑
 
@@ -52,8 +52,8 @@ Grid / BESS → PDC → UPS (EATON 9395XR-600) → PDC → Tanks → PDU
 |------|---------|
 | **UPS 模块** | 9395XR-600 内置 4 个功率模块，支持内部 N+1（单模块故障不影响运行）|
 | **CDU** | 各 Tank 内置 Dual CDU，1+1 完全冗余 |
-| **IT Zone（AC40 集装箱）** | **无内部冗余** — 单台 AC40 独立运行，不含内部 N+1/2N |
-| **MDC 系统级** | 多台 AC40 并联 → 系统级冗余（N / N+1 / 2N 由集装箱数量决定）|
+| **IT Zone（AC40 集装箱）** | **无内部冗余** — 单台 AC40 独立运行，不含内部 N+1/2N ^mdc-5e0ca2cda4 |
+| **MDC 系统级** | 多台 AC40 并联 → 系统级冗余（N / N+1 / 2N 由集装箱数量决定） ^mdc-94806ab2b1 |
 
-> AC40 是一台完整的集装箱设备，不存在"多增加几个服务器"来增加冗余的概念。
-> 如需更高可靠性，通过增加 AC40 集装箱数量实现。
+> AC40 是一台完整的集装箱设备，不存在"多增加几个服务器"来增加冗余的概念。 ^mdc-546460cb0c
+> 如需更高可靠性，通过增加 AC40 集装箱数量实现。 ^mdc-198778f2d1

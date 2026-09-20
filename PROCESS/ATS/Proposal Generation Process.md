@@ -1,8 +1,8 @@
 ---
 tags:
   - #MDC
-  - 
-  - 
+  -
+  -
   -
 ---# Proposal Generation Process
 提案生成流程

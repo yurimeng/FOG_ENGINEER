@@ -12,7 +12,7 @@ audience: 销售 / 方案架构师 / 客户经理 / AM
 
 > **用途：** 在六个 SKU 之间快速做选型判断。**这是导航表，不是规格表** —— 任何参数以 [[PRODUCT_SPEC_BASELINE]] 为准，与本表冲突时以基准表为准。
 >
-> **命名基准：** [[NAMING_MAP]]。旧名 DC45 / AC45 / AC40 / AC20 / A32 已全部退役，仅在历史档案、项目记录与供应商往来中保留。
+> **命名基准：** [[NAMING_MAP]]。旧名 DC45 / AC45 / AC40 / AC20 / A32 已全部退役，仅在历史档案、项目记录与供应商往来中保留。 ^mdc-cb4e3429a0
 >
 > **置信度标记：** ✅ 已确认 · 🔶 derived · ⏳ [[UNCONFIRMED_Convention|#unconfirmed]] · ⛔ conflict
 
@@ -34,14 +34,14 @@ audience: 销售 / 方案架构师 / 客户经理 / AM
 
 ## 2. Liquid Cooling 线（`L`）—— 三个 SKU
 
-| 维度 | **L1240C45** | **L1800C45** | **L450C20** |
+| 维度 | **L1240C45** | **L1800C45** | **L450C20** ^mdc-bbef1d38ea |
 |---|---|---|---|
-| 全 SKU ID | `L1240C45SUR150` | `L1800C45DR220` | `L450C20DR150` |
+| 全 SKU ID | `L1240C45SUR150` | `L1800C45DR220` | `L450C20DR150` ^mdc-f10a6a5acf |
 | IT 容量 | **1240 kW** | **1800 kW** | **450 kW** |
 | 箱型 | 45ft High Cube | 45ft High Cube | 20ft ⏳ 标准箱/HC 未确认 |
 | 单柜密度 | 150 kW（R150） | **220 kW（R220）** ← 全线天花板 | 150 kW（R150） |
-| 环路 | 单环路 · TCS 26 °C 暖水 | 双环路 · GPU 进水 **36–40 °C** + 列间 10/16 °C | 双环路 · GPU 进水 **36–40 °C** + 列间 10/16 °C |
-| 末端 | **CRAH 吊顶** 9× OHS-084-DG-FC | **列间** 2× CRS 560 CW + 6× CRS 330 CW | **列间** 2× CRS 330 CW（N+1） |
+| 环路 | 单环路 · TCS 26 °C 暖水 | 双环路 · GPU 进水 **36–40 °C** + 列间 10/15 °C | 双环路 · GPU 进水 **36–40 °C** + 列间 10/15 °C |
+| 末端 | **CRAH 吊顶** 9× OHS-084-DG-FC | **列间** 2× CRS 560 CW + 6× CRS 320 CW<br>净 296.0 kW · 风机 34.8 kW · 62,600 m³/h | **列间** 4× CRS 320 CW<br>净 116.4 kW · 风机 18.0 kW · 24,400 m³/h |
 | UPS | **箱内**（UPS + 电池） | 箱外 | 箱外 |
 | 机柜 | 8× 150 kW 液冷 + 1× 40 kW 风冷 | 8× 220 kW 液冷 + 1× 40 kW 风冷 | 3× 150 kW 液冷，无风冷柜 |
 | PUE | `1.0x` —— 逐站点用 <https://mdcx.org> 计算 | `1.0x` | `1.0x` |
@@ -51,22 +51,22 @@ audience: 销售 / 方案架构师 / 客户经理 / AM
 
 | 场地情况 | 选 | 理由 |
 |---|---|---|
-| **一块空地，只有一路进线** | **L1240C45** | 全线唯一把 UPS 和电池装进算力箱的型号。你接的是市电、水和网，不是一套配电工程 |
-| **地不够了，电够** | **L1800C45** | 同样 45ft 壳子多装 560 kW IT、每柜多 70 kW。不含 UPS 不是缺件 —— 场站已经为电付过一次 |
-| **45ft 进不去** | **L450C20** | 20ft 那扇还能进得去的门。每 kW 比 45ft 贵，这是为塞进舱位付的价钱，不是产品降级 |
+| **一块空地，只有一路进线** | **L1240C45** | 全线唯一把 UPS 和电池装进算力箱的型号。你接的是市电、水和网，不是一套配电工程 ^mdc-ed2fe35ce2 |
+| **地不够了，电够** | **L1800C45** | 同样 45ft 壳子多装 560 kW IT、每柜多 70 kW。不含 UPS 不是缺件 —— 场站已经为电付过一次 ^mdc-2c27424576 |
+| **45ft 进不去** | **L450C20** | 20ft 那扇还能进得去的门。每 kW 比 45ft 贵，这是为塞进舱位付的价钱，不是产品降级 ^mdc-23795a4d0c |
 
-> **一个前置问题：场地能否许可锂电池置于算力箱体内？** 不能的地方边界就划到箱外（L1800C45 / L450C20）。**这是地方主管部门判定，不是技术判定，也不是降级。**
+> **一个前置问题：场地能否许可锂电池置于算力箱体内？** 不能的地方边界就划到箱外（L1800C45 / L450C20）。**这是地方主管部门判定，不是技术判定，也不是降级。** ^mdc-e34573345b
 
 ---
 
 ## 3. Immersion Cooling 线（`I`）—— 三个 SKU
 
-| 维度 | **I400C45** | **I400C40** | **I200C20** |
+| 维度 | **I400C45** | **I400C40** | **I200C20** ^mdc-323898124b |
 |---|---|---|---|
-| 全 SKU ID | `I400C45SUT50` | `I400C40ST50` | `I200C20ST50` |
+| 全 SKU ID | `I400C45SUT50` | `I400C40ST50` | `I200C20ST50` ^mdc-44de42f68d |
 | IT 容量 | **400 kW**（推荐 360 kW） | **400 kW**（推荐 360 kW） | **200 kW**（推荐 180 kW） |
 | 箱型 | 45ft（含专用电力舱） | 40ft | 20ft 算力舱 |
-| 槽体 | 8× [[I50TS]] + 1× 10 kW 风冷柜 | 8× [[I50TS]] + 1× 10 kW 风冷柜 | 4× [[I50TS]] + 1× 5 kW 风冷柜 |
+| 槽体 | 8× [[I50TS]] + 1× 10 kW 风冷柜 | 8× [[I50TS]] + 1× 10 kW 风冷柜 | 4× [[I50TS]] + 1× 5 kW 风冷柜 ^mdc-97bcb001c6 |
 | 单槽密度 | 50 kW（T50） | 50 kW（T50） | 50 kW（T50） |
 | GPU 数上限 | 512 张 PCIe | 512 张 PCIe | 256 张 PCIe ⛔ 见基准表 KC-6 |
 | UPS | **箱内** 600 kW · ~20 min | 箱外（客户自备）· ~10 min | 箱外 |
@@ -78,13 +78,13 @@ audience: 销售 / 方案架构师 / 客户经理 / AM
 
 | 场地情况 | 选 | 理由 |
 |---|---|---|
-| **场地没有配电，且允许锂电进箱** | **I400C45** | 完整推理包：八槽 + UPS + 电池一起落地，一个 SKU 而不是"算力箱 + 一个院子里的配电工程" |
-| **场地已有配电，或锂电不许进箱** | **I400C40** | 同样八槽核心，短五英尺 —— 那五英尺就是电力舱。场站已经为电付过一次，箱子不再收第二次 |
-| **40/45ft 都进不去** | **I200C20** | 20ft 四槽边缘推理舱 |
+| **场地没有配电，且允许锂电进箱** | **I400C45** | 完整推理包：八槽 + UPS + 电池一起落地，一个 SKU 而不是"算力箱 + 一个院子里的配电工程" ^mdc-c17f52f9da |
+| **场地已有配电，或锂电不许进箱** | **I400C40** | 同样八槽核心，短五英尺 —— 那五英尺就是电力舱。场站已经为电付过一次，箱子不再收第二次 ^mdc-b33c5494cb |
+| **40/45ft 都进不去** | **I200C20** | 20ft 四槽边缘推理舱 ^mdc-7f90d7ba7c |
 
-> ⚠️ **I400C45 与 I400C40 的差别只有电力边界和那五英尺。** 八槽核心、油回路、冷却规则完全相同。
+> ⚠️ **I400C45 与 I400C40 的差别只有电力边界和那五英尺。** 八槽核心、油回路、冷却规则完全相同。 ^mdc-fe0e9a9485
 >
-> ⚠️ **I200C20 不是 I400 的减半版。** 同 T50 密度、一半槽数，为进不了 40/45ft 的场地而造。**不要用"缩小版""半配置""半价"对客描述。**
+> ⚠️ **I200C20 不是 I400 的减半版。** 同 T50 密度、一半槽数，为进不了 40/45ft 的场地而造。**不要用"缩小版""半配置""半价"对客描述。** ^mdc-8f6bfd6e1c
 
 ---
 
@@ -92,12 +92,12 @@ audience: 销售 / 方案架构师 / 客户经理 / AM
 
 | SKU | 线 | IT kW | 尺寸 | 密度 | UPS | 一句话定位 |
 |---|---|---|---|---|---|---|
-| L1240C45 | Liquid | 1240 | 45ft | 150 kW/柜 | 内置 | 空地起步，电也一起给你 |
-| L1800C45 | Liquid | 1800 | 45ft | **220 kW/柜** | 外置 | 缺地不缺电时的密度天花板 |
-| L450C20 | Liquid | 450 | 20ft | 150 kW/柜 | 外置 | 还能进得去的那扇门 |
-| I400C45 | Immersion | 400 | 45ft | 50 kW/槽 | 内置 | 完整推理包 |
-| I400C40 | Immersion | 400 | 40ft | 50 kW/槽 | 外置 | 你自己的电力架构 |
-| I200C20 | Immersion | 200 | 20ft | 50 kW/槽 | 外置 | 边缘推理舱 |
+| L1240C45 | Liquid | 1240 | 45ft | 150 kW/柜 | 内置 | 空地起步，电也一起给你 ^mdc-b9c988286e |
+| L1800C45 | Liquid | 1800 | 45ft | **220 kW/柜** | 外置 | 缺地不缺电时的密度天花板 ^mdc-30cc7bb676 |
+| L450C20 | Liquid | 450 | 20ft | 150 kW/柜 | 外置 | 还能进得去的那扇门 ^mdc-9a4d0201e2 |
+| I400C45 | Immersion | 400 | 45ft | 50 kW/槽 | 内置 | 完整推理包 ^mdc-f54e772dfa |
+| I400C40 | Immersion | 400 | 40ft | 50 kW/槽 | 外置 | 你自己的电力架构 ^mdc-92d493cdef |
+| I200C20 | Immersion | 200 | 20ft | 50 kW/槽 | 外置 | 边缘推理舱 ^mdc-48e0e02649 |
 
 ---
 
@@ -123,13 +123,13 @@ audience: 销售 / 方案架构师 / 客户经理 / AM
 
 | SKU | KB 工程入口 | 对外 Tech Spec |
 |---|---|---|
-| L1240C45 | [[KB/LIQUID/L1240C45/index\|LIQUID/L1240C45/]] | [[L1240C45_Tech_Spec_CN\|CN]] · [[L1240C45_Tech_Spec_EN\|EN]] · [[L1240C45_Tech_Spec_External\|对外版]] |
-| L1800C45 | [[KB/LIQUID/L1800C45/index\|LIQUID/L1800C45/]] | [[L1800C45_Tech_Spec_CN\|CN]] · [[L1800C45_Tech_Spec_EN\|EN]] · [[L1800C45_Tech_Spec_External\|对外版]] |
-| L450C20 | [[KB/LIQUID/L450C20/index\|LIQUID/L450C20/]] | [[L450C20_Tech_Spec_CN\|CN]] · [[L450C20_Tech_Spec_EN\|EN]] · [[L450C20_Tech_Spec_External\|对外版]] |
-| I400C45 | [[KB/IMMERSION/I400C45/index\|IMMERSION/I400C45/]] | [[I400C45_Tech_Spec_CN\|CN]] · [[I400C45_Tech_Spec_EN\|EN]] · [[I400C45_Tech_Spec_External\|对外版]] |
-| I400C40 | [[KB/IMMERSION/I400C40/index\|IMMERSION/I400C40/]] | [[I400C40_Tech_Spec_CN\|CN]] · [[I400C40_Tech_Spec_EN\|EN]] · [[I400C40_Tech_Spec_External\|对外版]] |
-| I200C20 | [[KB/IMMERSION/I200C20/index\|IMMERSION/I200C20/]] | [[I200C20_Tech_Spec_CN\|CN]] · [[I200C20_Tech_Spec_EN\|EN]] · [[I200C20_Tech_Spec_External\|对外版]] |
-| I50TS（槽体组件） | [[KB/IMMERSION/I50TS/index\|IMMERSION/I50TS/]] | [[PUBLIC/Products/I50TS\|I50TS]] |
+| L1240C45 | [[KB/LIQUID/L1240C45/index\|LIQUID/L1240C45/]] | [[L1240C45_Tech_Spec_CN\|CN]] · [[L1240C45_Tech_Spec_EN\|EN]] · [[L1240C45_Tech_Spec_External\|对外版]] ^mdc-c7155cfe6b |
+| L1800C45 | [[KB/LIQUID/L1800C45/index\|LIQUID/L1800C45/]] | [[L1800C45_Tech_Spec_CN\|CN]] · [[L1800C45_Tech_Spec_EN\|EN]] · [[L1800C45_Tech_Spec_External\|对外版]] ^mdc-b8e20705e1 |
+| L450C20 | [[KB/LIQUID/L450C20/index\|LIQUID/L450C20/]] | [[L450C20_Tech_Spec_CN\|CN]] · [[L450C20_Tech_Spec_EN\|EN]] · [[L450C20_Tech_Spec_External\|对外版]] ^mdc-0712820d82 |
+| I400C45 | [[KB/IMMERSION/I400C45/index\|IMMERSION/I400C45/]] | [[I400C45_Tech_Spec_CN\|CN]] · [[I400C45_Tech_Spec_EN\|EN]] · [[I400C45_Tech_Spec_External\|对外版]] ^mdc-6e891f2c03 |
+| I400C40 | [[KB/IMMERSION/I400C40/index\|IMMERSION/I400C40/]] | [[I400C40_Tech_Spec_CN\|CN]] · [[I400C40_Tech_Spec_EN\|EN]] · [[I400C40_Tech_Spec_External\|对外版]] ^mdc-fcb8573434 |
+| I200C20 | [[KB/IMMERSION/I200C20/index\|IMMERSION/I200C20/]] | [[I200C20_Tech_Spec_CN\|CN]] · [[I200C20_Tech_Spec_EN\|EN]] · [[I200C20_Tech_Spec_External\|对外版]] ^mdc-d243f8b563 |
+| I50TS（槽体组件） | [[KB/IMMERSION/I50TS/index\|IMMERSION/I50TS/]] | [[PUBLIC/Products/I50TS\|I50TS]] ^mdc-c7cb121549 |
 
 > **对外版是唯一可直接发给客户的版本** —— 只保留 ✅ 与 🔶 字段，⏳ 与 ⛔ 整行删除。CN / EN 版含待证实字段，**不得整份外发**。见 [[UNCONFIRMED_Convention#^unconfirmed-external|标注规范 §5]]。
 

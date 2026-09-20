@@ -10,16 +10,16 @@ audience: 人 + 工程师 + AI
 > 本目录用于存放**对外可发布**的工程资料(客户、合作伙伴、公开渠道)。
 > 与内部知识库 `KB/` 严格分离:内部设计稿、评估、模板归档在 `KB/`,成稿后下放到 `PUBLIC/`。
 >
-> **产品口径:** 两条产品线 —— **Liquid Cooling**(`L`)L1240C45 · L1800C45 · L450C20，**Immersion Cooling**(`I`)I400C45 · I400C40 · I200C20，六 SKU **全部 `shipped`**(站点 `docs/PRODUCT-MATRIX.md` §5 D-19 gate · 2026-08-27);另有 I50TS 浸没槽体**组件**。命名基准 [[NAMING_MAP]],规格基准 [[PRODUCT_SPEC_BASELINE]]。
-> 下方「Phase 2 移动清单」「跨引用更新」与 Changelog 中的旧名(A32 / AC40 / AC45 / DC45)属**迁移历史记录**,保留原样。
+> **产品口径:** 两条产品线 —— **Liquid Cooling**(`L`)L1240C45 · L1800C45 · L450C20，**Immersion Cooling**(`I`)I400C45 · I400C40 · I200C20，六 SKU **全部 `shipped`**(站点 `docs/PRODUCT-MATRIX.md` §5 D-19 gate · 2026-08-27);另有 I50TS 浸没槽体**组件**。命名基准 [[NAMING_MAP]],规格基准 [[PRODUCT_SPEC_BASELINE]]。 ^mdc-da6ceed931
+> 下方「Phase 2 移动清单」「跨引用更新」与 Changelog 中的旧名(A32 / AC40 / AC45 / DC45)属**迁移历史记录**,保留原样。 ^mdc-a6c823e058
 
 ## 目录结构
 
 | 子目录 | 内容 | 状态 |
 |--------|------|------|
 | `PUBLIC/Tech_Spec/` | 六 SKU Tech Spec CN/EN/External —— Liquid Cooling：`L1240C45_*` · `L1800C45_*` · `L450C20_*`；Immersion Cooling：`I400C45_*` · `I400C40_*` · `I200C20_*`；含 `_blocks/` 分块 | 六 SKU 齐备 ✅ |
-| `PUBLIC/Products/` | I50TS / I400C40 / I400C45 PRD + `_blocks/` | Phase 2 ✅ |
-| `PUBLIC/Reference_Architecture/` | RA-001 (Immersion Cooling 0.4MW · I400C40) / RA-002 (Liquid Cooling 1.2MW · L1240C45) / RA-003 (Immersion Cooling 0.2MW All-in-One · I200C20) / Site Reference Climate | Phase 2 ✅ / RA-003 增补 ✅ |
+| `PUBLIC/Products/` | I50TS / I400C40 / I400C45 PRD + `_blocks/` | Phase 2 ✅ ^mdc-815918ba7a |
+| `PUBLIC/Reference_Architecture/` | RA-001 (Immersion Cooling 0.4MW · I400C40) / RA-002 (Liquid Cooling 1.2MW · L1240C45) / RA-003 (Immersion Cooling 0.2MW All-in-One · I200C20) / Site Reference Climate | Phase 2 ✅ / RA-003 增补 ✅ ^mdc-b2bbf63716 |
 | `PUBLIC/Pitch/` | PITCH DECK Flyer | Phase 2 ✅ |
 | `PUBLIC/Media/` | PQTech 采访稿 v2 + `_blocks/PQTech_Interview/` | Phase 2 ✅ |
 
@@ -29,13 +29,13 @@ audience: 人 + 工程师 + AI
 
 | # | 原路径 | 新路径 | 备注 |
 |---|--------|--------|------|
-| 1 | `KB/LIQUID/L1240C45/PRODUCTS/L1240C45 Tech Spec EN.md` | `PUBLIC/Tech_Spec/L1240C45_Tech_Spec_EN.md` | 重命名(空格 → 下划线) |
-| 2 | `KB/LIQUID/L1240C45/PRODUCTS/L1240C45 Tech Spec CN.md` | `PUBLIC/Tech_Spec/L1240C45_Tech_Spec_CN.md` | 重命名 |
-| 3 | `KB/LIQUID/L1240C45/PRODUCTS/_blocks/L1240C45_Tech_Spec_EN/` | `PUBLIC/Tech_Spec/_blocks/L1240C45_Tech_Spec_EN/` | 14 块 |
-| 4 | `KB/LIQUID/L1240C45/PRODUCTS/_blocks/L1240C45_Tech_Spec_CN/` | `PUBLIC/Tech_Spec/_blocks/L1240C45_Tech_Spec_CN/` | 14 块 |
-| 5 | `KB/IMMERSION/PRODUCTS_I50TS.md` | `PUBLIC/Products/I50TS.md` | 重命名(短名) |
-| 6 | `KB/IMMERSION/PRODUCTS_I400C40.md` | `PUBLIC/Products/I400C40.md` | 重命名(短名) |
-| 7 | `KB/IMMERSION/PRODUCTS_I400C45.md` | `PUBLIC/Products/I400C45.md` | 重命名(短名) |
+| 1 | `KB/LIQUID/L1240C45/PRODUCTS/L1240C45 Tech Spec EN.md` | `PUBLIC/Tech_Spec/L1240C45_Tech_Spec_EN.md` | 重命名(空格 → 下划线) ^mdc-b5c5310363 |
+| 2 | `KB/LIQUID/L1240C45/PRODUCTS/L1240C45 Tech Spec CN.md` | `PUBLIC/Tech_Spec/L1240C45_Tech_Spec_CN.md` | 重命名 ^mdc-17353d4c61 |
+| 3 | `KB/LIQUID/L1240C45/PRODUCTS/_blocks/L1240C45_Tech_Spec_EN/` | `PUBLIC/Tech_Spec/_blocks/L1240C45_Tech_Spec_EN/` | 14 块 ^mdc-59960ec6bb |
+| 4 | `KB/LIQUID/L1240C45/PRODUCTS/_blocks/L1240C45_Tech_Spec_CN/` | `PUBLIC/Tech_Spec/_blocks/L1240C45_Tech_Spec_CN/` | 14 块 ^mdc-069e49322a |
+| 5 | `KB/IMMERSION/PRODUCTS_I50TS.md` | `PUBLIC/Products/I50TS.md` | 重命名(短名) ^mdc-97ee7ac187 |
+| 6 | `KB/IMMERSION/PRODUCTS_I400C40.md` | `PUBLIC/Products/I400C40.md` | 重命名(短名) ^mdc-cb0ce382e6 |
+| 7 | `KB/IMMERSION/PRODUCTS_I400C45.md` | `PUBLIC/Products/I400C45.md` | 重命名(短名) ^mdc-dae0eb0fc5 |
 | 8 | `KB/IMMERSION/_blocks/PRODUCTS_A{32,40,45}/` | `PUBLIC/Products/_blocks/PRODUCTS_A{32,40,45}/` | 6+6+7=19 块 |
 | 9 | `Reference Architecture/EDGE_INFERENCE_IMMERSION_0.4MW.md` | `PUBLIC/Reference_Architecture/RA-001_Immersion_0.4MW.md` | 重命名为 RA-001 |
 | 10 | `Reference Architecture/EDGE_INFERENCE_DLC_1.2MW.md` | `PUBLIC/Reference_Architecture/RA-002_Liquid_1.2MW.md` | 重命名为 RA-002 |
@@ -45,18 +45,18 @@ audience: 人 + 工程师 + AI
 | 14 | `Projects/PQTech/_blocks/PQTech_Interview/` | `PUBLIC/Media/_blocks/PQTech_Interview/` | 5 块 |
 
 **未动(Phase 3 决策):**
-- `Projects/外发资料_最新/DC45 Tech Spec {EN,CN}.md` (V1.3 旧副本,疑似重复)
+- `Projects/外发资料_最新/DC45 Tech Spec {EN,CN}.md` (V1.3 旧副本,疑似重复) ^mdc-99256a4268
 - `Market/Market_Report.md` (内部周报,非对外)
 - `Market/Diablo_400_市场分析报告.md` (本期未在范围内)
 - `KB/_COMMON/MDC Engineering Handbook External.md` (已用 External 命名,实际属 KB 内)
 
 ## 跨引用更新
 
-- 82 处 wikilink 替换(51 个 .md 文件),主要在 `MDC_Handbook_Index.md` (10)、`KB/LIQUID/L1240C45/PRODUCTS/index.md` (7)、`Document Tree.md` (4)、`KB/_COMMON/PRODUCTS_MDC.md` (3) 等
+- 82 处 wikilink 替换(51 个 .md 文件),主要在 `MDC_Handbook_Index.md` (10)、`KB/LIQUID/L1240C45/PRODUCTS/index.md` (7)、`Document Tree.md` (4)、`KB/_COMMON/PRODUCTS_MDC.md` (3) 等 ^mdc-b4db6377b7
 - 52 个块文件 frontmatter `source_file:` 字段已更新
 - 19 个 A 系列块文件 `parent: [[../PRODUCTS_Axx]]` 已更新为短名
 - 5 个 PQTech 块文件 `parent: [[../../采访稿_新版]]` 已更新为 `[[PQTech_Interview_v2]]`
-- 2 个 DC45 Tech Spec 父文件中 `[[../DESIGN/...]]` 相对路径修复(改为 vault 相对路径)
+- 2 个 DC45 Tech Spec 父文件中 `[[../DESIGN/...]]` 相对路径修复(改为 vault 相对路径) ^mdc-278c2254cc
 
 ## 内部对照
 

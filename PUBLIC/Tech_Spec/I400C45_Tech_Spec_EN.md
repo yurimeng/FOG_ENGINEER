@@ -10,7 +10,7 @@ audience: Sales / pre-sales / account managers (internal deliverable — do not 
 sku_id: I400C45SUT50
 ---
 
-# I400C45 — Tech Spec (English)
+# I400C45 — Tech Spec (English) ^mdc-67b9228474
 **All-In-One Immersion Container · 45ft single-phase immersion container with dedicated power bay**
 
 > **Audience:** Sales / pre-sales / account managers. This document contains ⏳ **#unconfirmed** rows and **must not be released to customers in full**; for customer-facing material use [[I400C45_Tech_Spec_External]].
@@ -23,7 +23,7 @@ sku_id: I400C45SUT50
 >
 > ✅ **Yuri's rulings of 2026-08-30 are propagated here ([[PRODUCT_SPEC_BASELINE]] v2.0):** (1) **PUE is written `1.0x` everywhere** — the ≈1.05 in §5.3 and the ~440–500 kW facility load in §3.1 are void, replaced by a per-site calculation with the TCO / Designer at <https://mdcx.org>; the IT Load vs Total Facility Load distinction is retained. (2) **Lead time**: **120 days EXW** first batch, **90 days EXW** for Scale (from order placement), dummy-load burn-in **5–30 days** (Supermicro recommendation, not covered by the EXW commitment), with **no commitment** on the commercial, freight or installation segments; the old ~185–230 days and the four-phase timeline are deleted. (3) **Warranty**: core components for **one year from EXW**, annual service fee thereafter; ONSITE / NBD / 9×5 / 24×7 response levels are **governed by the Invoice**. (4) The dual-loop GPU-side temperature ruling does not apply to the immersion line.
 >
-> **Related:** [[PUBLIC/Products/I400C45]] · [[PUBLIC/Products/I50TS]] · [[KB/IMMERSION/I400C45/index]] · [[I400C40_Tech_Spec_EN]]
+> **Related:** [[PUBLIC/Products/I400C45]] · [[PUBLIC/Products/I50TS]] · [[KB/IMMERSION/I400C45/index]] · [[I400C40_Tech_Spec_EN]] ^mdc-91c9227e0e
 
 ---
 
@@ -36,7 +36,7 @@ sku_id: I400C45SUT50
 | 1 | Layout | `^sec-1-layout` | Partly ⏳ |
 | 2 | Product Positioning | `^sec-2-positioning` | ✅ |
 | 3 | IT Capacity and Total Facility Load | `^sec-3-it-capacity` | ✅ |
-| 4 | Immersion Tank (I50TS) Spec | `^sec-4-rack-spec` | Partly ⏳ |
+| 4 | Immersion Tank (I50TS) Spec | `^sec-4-rack-spec` | Partly ⏳ ^mdc-340eb799c5 |
 | 5 | Cooling System | `^sec-5-cooling` | ✅ + 🔶 |
 | 6 | Power Distribution | `^sec-6-power` | Partly ⏳ |
 | 7 | Structural Specifications | `^sec-7-structural` | Whole section ⏳ |
@@ -52,43 +52,43 @@ sku_id: I400C45SUT50
 
 ## 1. Layout ^sec-1-layout
 
-I400C45 is a **two-bay container**: the forward section of the 45ft box is the **compute bay**, the aft section is the **dedicated power bay**. Inside the compute bay, 8 I50TS immersion tanks sit in two rows against the side walls, four per side, with a service aisle down the middle; a single 10 kW air-cooled rack carries switching and any auxiliary gear that cannot be immersed. The power bay holds the 600 kW EATON UPS and two 93LiG2 battery cabinets — **that is the entire content of the five extra feet I400C45 has over I400C40**.
+I400C45 is a **two-bay container**: the forward section of the 45ft box is the **compute bay**, the aft section is the **dedicated power bay**. Inside the compute bay, 8 I50TS immersion tanks sit in two rows against the side walls, four per side, with a service aisle down the middle; a single 10 kW air-cooled rack carries switching and any auxiliary gear that cannot be immersed. The power bay holds the 600 kW EATON UPS and two 93LiG2 battery cabinets — **that is the entire content of the five extra feet I400C45 has over I400C40**. ^mdc-f34196ceb5
 
-![[KB/IMMERSION/I400C45/I400C45 Layout_v1.svg]]
-*I400C45 layout schematic (8× I50TS dual row + service aisle + dedicated power bay)*
+![[KB/IMMERSION/I400C45/I400C45 Layout_v1.svg]] ^mdc-bf35571bff
+*I400C45 layout schematic (8× I50TS dual row + service aisle + dedicated power bay)* ^mdc-0b30e42902
 
 | Item | Spec | Confidence / closure |
 |------|------|----------------------|
-| Bay division | Compute bay (8× I50TS + 1× 10 kW air rack) + dedicated power bay (UPS + batteries) | ✅ Site |
+| Bay division | Compute bay (8× I50TS + 1× 10 kW air rack) + dedicated power bay (UPS + batteries) | ✅ Site ^mdc-df9b52cb24 |
 | Tank arrangement | Two rows against the walls, central service aisle | ✅ Site |
-| Clear internal dimensions of compute / power bay | ⏳ **#unconfirmed** | Waiting on the site side or I400C45 DESIGN/ for a general arrangement drawing and clear-dimension table; expected TBD |
-| Server lifting interface (rail / hoist spec) | ⏳ **#unconfirmed** | Waiting on the structural engineer for the I400C45 lifting interface drawing; expected TBD |
+| Clear internal dimensions of compute / power bay | ⏳ **#unconfirmed** | Waiting on the site side or I400C45 DESIGN/ for a general arrangement drawing and clear-dimension table; expected TBD ^mdc-01b10317ce |
+| Server lifting interface (rail / hoist spec) | ⏳ **#unconfirmed** | Waiting on the structural engineer for the I400C45 lifting interface drawing; expected TBD ^mdc-43588acde1 |
 
 ---
 
 ## 2. Product Positioning ^sec-2-positioning
 
-**I400C45 is the complete inference package: the compute and the power land together.** It packages a 400 kW immersion compute core and 600 kW of UPS / battery ride-through into one 45ft box, so the delivery boundary is settled in a single step — the site provides a utility feed and an outdoor heat-rejection interface, and nothing inside the box requires the customer to separately procure, separately select, or separately permit electrical plant. For a site with no existing switchroom, or one unwilling to run a standalone UPS project for a single compute module, this is the shortest path to energization.
+**I400C45 is the complete inference package: the compute and the power land together.** It packages a 400 kW immersion compute core and 600 kW of UPS / battery ride-through into one 45ft box, so the delivery boundary is settled in a single step — the site provides a utility feed and an outdoor heat-rejection interface, and nothing inside the box requires the customer to separately procure, separately select, or separately permit electrical plant. For a site with no existing switchroom, or one unwilling to run a standalone UPS project for a single compute module, this is the shortest path to energization. ^mdc-189ef122de
 
 | Dimension | Positioning | Confidence |
 |-----------|-------------|------------|
 | Product line | Immersion Cooling (single-phase immersion) | ✅ Site |
-| Full SKU ID | `I400C45SUT50` | ✅ Site |
+| Full SKU ID | `I400C45SUT50` | ✅ Site ^mdc-214717fdca |
 | IT capacity | 400 kW | ✅ Site |
-| Building blocks | 8× [[I50TS]] immersion tanks + 1× 10 kW air-cooled rack | ✅ Site |
+| Building blocks | 8× [[I50TS]] immersion tanks + 1× 10 kW air-cooled rack | ✅ Site ^mdc-3516072167 |
 | Per-tank density | 50 kW (T50) | ✅ Site |
 | Power boundary | **Inside the box** — 45ft dedicated power bay carries UPS and batteries | ✅ Site |
 | UL compliance | ✅ UL compliant | ✅ Site |
 | Status | shipped | ✅ Site |
 | Typical use | Dense AI inference; sites with no existing switchroom that need the power boundary delivered with the box; UL-mandatory markets | ✅ Site |
 
-### 2.1 What separates I400C45 from I400C40 — two things only
+### 2.1 What separates I400C45 from I400C40 — two things only ^mdc-5a6a5f4cea
 
 > **Site wording:** *"They share the same 400 kW, eight-tank core."*
 
-The difference between I400C45 and [[I400C40_Tech_Spec_EN|I400C40]] is **only the power boundary and those five feet (= the volume of the power bay)**. The eight-tank core, the oil loop, the in-tank CDU redundancy and the cooling rules are **identical**. Do not describe them as two generations or two cooling architectures.
+The difference between I400C45 and [[I400C40_Tech_Spec_EN|I400C40]] is **only the power boundary and those five feet (= the volume of the power bay)**. The eight-tank core, the oil loop, the in-tank CDU redundancy and the cooling rules are **identical**. Do not describe them as two generations or two cooling architectures. ^mdc-bc51bd2fe4
 
-| Item | I400C45 | I400C40 |
+| Item | I400C45 | I400C40 ^mdc-b36fb847ad |
 |------|---------|---------|
 | Eight-tank immersion core | **Identical** | **Identical** |
 | Oil loop and cooling rules | **Identical** | **Identical** |
@@ -96,17 +96,17 @@ The difference between I400C45 and [[I400C40_Tech_Spec_EN|I400C40]] is **only th
 | UPS boundary | Inside (600 kW EATON + 2× 93LiG2, ~20 min) | Outside (customer-supplied 600 kW, ~10 min) |
 | UL compliance | ✅ UL compliant | Baseline records "—" (not a deliverable of this SKU) |
 
-**Selection rule:** the site has not yet built distribution and ride-through for this 400 kW, or the market mandates full-system UL → I400C45. The site already has an established electrical architecture and has paid for UPS and batteries elsewhere → [[I400C40_Tech_Spec_EN|I400C40]].
+**Selection rule:** the site has not yet built distribution and ride-through for this 400 kW, or the market mandates full-system UL → I400C45. The site already has an established electrical architecture and has paid for UPS and batteries elsewhere → [[I400C40_Tech_Spec_EN|I400C40]]. ^mdc-5f970bc665
 
 ### 2.2 How the three immersion SKUs relate
 
 | SKU | Full SKU ID | Container | IT | Tanks | Per-tank density | UPS boundary |
 |-----|-------------|-----------|-----|-------|------------------|--------------|
-| **I400C45** | `I400C45SUT50` | 45ft (with power bay) | 400 kW | 8× I50TS | 50 kW | Inside |
-| I400C40 | `I400C40ST50` | 40ft | 400 kW | 8× I50TS | 50 kW | Outside |
-| I200C20 | `I200C20ST50` | 20ft | 200 kW | 4× I50TS | 50 kW | Outside |
+| **I400C45** | `I400C45SUT50` | 45ft (with power bay) | 400 kW | 8× I50TS | 50 kW | Inside ^mdc-465cb544c6 |
+| I400C40 | `I400C40ST50` | 40ft | 400 kW | 8× I50TS | 50 kW | Outside ^mdc-fe13ac0279 |
+| I200C20 | `I200C20ST50` | 20ft | 200 kW | 4× I50TS | 50 kW | Outside ^mdc-cf9017f7ed |
 
-> The three are **the same density at different scale**. I200C20 is not a halved I400 — see [[I200C20_Tech_Spec_EN#^sec-2-positioning]].
+> The three are **the same density at different scale**. I200C20 is not a halved I400 — see [[I200C20_Tech_Spec_EN#^sec-2-positioning]]. ^mdc-b85a52d385
 
 ---
 
@@ -117,12 +117,12 @@ The difference between I400C45 and [[I400C40_Tech_Spec_EN|I400C40]] is **only th
 | Item | Spec | Confidence |
 |------|------|------------|
 | IT capacity | **400 kW** | ✅ Site |
-| Immersion tanks | 8× I50TS at 50 kW each (T50) | ✅ Site |
+| Immersion tanks | 8× I50TS at 50 kW each (T50) | ✅ Site ^mdc-b3b687705a |
 | Air-cooled rack | 1× 10 kW | ✅ Site |
 | Maximum GPU count | **512 PCIe GPUs** | ✅ Site |
 | GPU platforms | 4090 · 5090 · RTX PRO 6000 Blackwell SE · H100 · H200 (PCIe 4U 8-GPU) | ✅ Site |
-| Rack space (RU / OU) | ⏳ **#unconfirmed** | Waiting on the site side or I50TS DESIGN/ to publish tank RU capacity; expected TBD |
-| Power factor (UPS output) | ⏳ **#unconfirmed** | Waiting on the Power Engineer for the I400C45 electrical calculation sheet; expected TBD |
+| Rack space (RU / OU) | ⏳ **#unconfirmed** | Waiting on the site side or I50TS DESIGN/ to publish tank RU capacity; expected TBD ^mdc-79cb95882b |
+| Power factor (UPS output) | ⏳ **#unconfirmed** | Waiting on the Power Engineer for the I400C45 electrical calculation sheet; expected TBD ^mdc-0eaed4b60c |
 
 ### 3.1 IT Load vs Total Facility Load ^sec-3-it-vs-facility
 
@@ -131,7 +131,7 @@ The difference between I400C45 and [[I400C40_Tech_Spec_EN|I400C40]] is **only th
 | **IT Load** | **400 kW** | Real power drawn by servers / GPUs inside the eight tanks | ✅ Site |
 | **Total Facility Load** | Varies with PUE — **computed per site with the TCO / Designer at <https://mdcx.org>** | IT + in-tank CDU pump power + outdoor rejection (dry cooler / Hybrid Chiller) + UPS losses + distribution losses + in-container auxiliaries | ✅ adjudicated |
 
-> **Always quote both numbers.** Customers buy compute against IT Load and apply for substation capacity and model electricity cost against Total Facility Load. Because the I400C45 UPS sits inside the box, UPS losses and battery-cabinet heat **are counted inside this container's facility load** — the opposite of I400C40.
+> **Always quote both numbers.** Customers buy compute against IT Load and apply for substation capacity and model electricity cost against Total Facility Load. Because the I400C45 UPS sits inside the box, UPS losses and battery-cabinet heat **are counted inside this container's facility load** — the opposite of I400C40. ^mdc-7cec98d723
 >
 > ⚠️ **PUE is written `1.0x` everywhere (adjudicated by Yuri, 2026-08-30 · C-2 closed).** The former ~440–500 kW facility-load range and the ≈1.05 in §5 are **both void**. Total Facility Load varies with PUE and is **computed per site with the TCO / Designer at <https://mdcx.org>; no figure is given**.
 >
@@ -141,11 +141,11 @@ The difference between I400C45 and [[I400C40_Tech_Spec_EN|I400C40]] is **only th
 
 ## 4. Immersion Tank (I50TS) Spec ^sec-4-rack-spec
 
-The building block of I400C45 is eight [[I50TS]] single-phase immersion tanks. **I50TS is a tank component, not a SKU** (formerly A32; the legacy name survives only in `_archive/`, `Projects/` and supplier correspondence).
+The building block of I400C45 is eight [[I50TS]] single-phase immersion tanks. **I50TS is a tank component, not a SKU** (formerly A32; the legacy name survives only in `_archive/`, `Projects/` and supplier correspondence). ^mdc-0b06d9df11
 
 | Item | Spec | Confidence / closure |
 |------|------|----------------------|
-| Tank model | **I50TS** (formerly A32) | ⏳ **#unconfirmed** — the code was derived KB-side from the Tank naming regex; waiting on the site side to enter it in the `docs/PRODUCT-MATRIX.md` Alias registry, expected TBD |
+| Tank model | **I50TS** (formerly A32) | ⏳ **#unconfirmed** — the code was derived KB-side from the Tank naming regex; waiting on the site side to enter it in the `docs/PRODUCT-MATRIX.md` Alias registry, expected TBD ^mdc-2627add8ed |
 | Quantity per container | **8** | ✅ Site |
 | IT capacity per tank | **50 kW** (T50) | ✅ Site |
 | Cooling method | Single-phase immersion | ✅ Site |
@@ -153,18 +153,18 @@ The building block of I400C45 is eight [[I50TS]] single-phase immersion tanks. *
 | Oil-side ΔT | **8 K** | ✅ Site |
 | Oil flow per tank | **≈11–12 m³/h** | ✅ Site |
 | Supported GPU platforms | 4090 · 5090 · RTX PRO 6000 Blackwell SE · H100 · H200 (PCIe 4U 8-GPU) | ✅ Site |
-| Tank external dimensions / RU / OU | ⏳ **#unconfirmed** | Waiting on the site side or I50TS DESIGN/ for a tank specification sheet; expected TBD |
-| Dielectric fluid grade and properties (cp / density) | ⏳ **#unconfirmed** | Waiting on the Cooling Engineer for the I400C45 fluid selection and measured-property report; expected TBD |
-| In-tank PDU specification | ⏳ **#unconfirmed** | Waiting on the Power Engineer for the I50TS PDU specification table; expected TBD |
-| Max server depth / rack standards | ⏳ **#unconfirmed** | Waiting on the site side or I50TS DESIGN/ to publish the server compatibility table; expected TBD |
+| Tank external dimensions / RU / OU | ⏳ **#unconfirmed** | Waiting on the site side or I50TS DESIGN/ for a tank specification sheet; expected TBD ^mdc-98e75b42a1 |
+| Dielectric fluid grade and properties (cp / density) | ⏳ **#unconfirmed** | Waiting on the Cooling Engineer for the I400C45 fluid selection and measured-property report; expected TBD ^mdc-1c561d181e |
+| In-tank PDU specification | ⏳ **#unconfirmed** | Waiting on the Power Engineer for the I50TS PDU specification table; expected TBD ^mdc-8c171968af |
+| Max server depth / rack standards | ⏳ **#unconfirmed** | Waiting on the site side or I50TS DESIGN/ to publish the server compatibility table; expected TBD ^mdc-2e53284429 |
 
-> **Note:** no tank dimension, RU count or fluid property figure has been carried over from [[I400C40_Tech_Spec_EN]]. Those figures originate in legacy product documents (AC40/A32 V1.4) that [[PRODUCT_SPEC_BASELINE]] does not cover, and may not be quoted as I400C45 specifications until the baseline confirms them.
+> **Note:** no tank dimension, RU count or fluid property figure has been carried over from [[I400C40_Tech_Spec_EN]]. Those figures originate in legacy product documents (AC40/A32 V1.4) that [[PRODUCT_SPEC_BASELINE]] does not cover, and may not be quoted as I400C45 specifications until the baseline confirms them. ^mdc-2317a3a1d4
 
 ---
 
 ## 5. Cooling System ^sec-5-cooling
 
-I400C45 uses **single-phase immersion**: whole servers sit in dielectric fluid, the in-tank CDU plate heat exchangers hand that heat to facility water, and the outdoor plant rejects it to atmosphere. There are no server fans, no hot and cold aisles, and no in-container heat balance that depends on airflow — this is the physical premise for the very low PUE the immersion architecture reaches at low dry-bulb sites (**the specific PUE is computed per site — see §5.3**).
+I400C45 uses **single-phase immersion**: whole servers sit in dielectric fluid, the in-tank CDU plate heat exchangers hand that heat to facility water, and the outdoor plant rejects it to atmosphere. There are no server fans, no hot and cold aisles, and no in-container heat balance that depends on airflow — this is the physical premise for the very low PUE the immersion architecture reaches at low dry-bulb sites (**the specific PUE is computed per site — see §5.3**). ^mdc-b3764f33d8
 
 ### 5.1 Two loops
 
@@ -175,7 +175,7 @@ I400C45 uses **single-phase immersion**: whole servers sit in dielectric fluid, 
 | Air branch | Air | 1× 10 kW air-cooled rack, **does not share a heat path with the immersion loops** | ✅ Site |
 
 ```
-IT Load → Dielectric fluid (inside I50TS) → Dual CDU plate HX (2N) → Facility water 32 / 37 °C
+IT Load → Dielectric fluid (inside I50TS) → Dual CDU plate HX (2N) → Facility water 32 / 37 °C ^mdc-7a90f7042b
                                                                             ↓
                               Dry coolers primarily; Hybrid Chiller added at peak-climate sites
 ```
@@ -189,11 +189,11 @@ IT Load → Dielectric fluid (inside I50TS) → Dual CDU plate HX (2N) → Facil
 | Oil-side ΔT | **8 K** | ✅ Site |
 | Oil flow per tank | **≈11–12 m³/h** | ✅ Site |
 | Container secondary flow (8 tanks) | **≈88–96 m³/h** | 🔶 **derived** — from 11–12 m³/h × 8; design value, subject to final selection |
-| **Facility water temperatures** | **32 / 37 °C warm water** | ✅ Site — **of the three immersion SKUs only I400C45 has site evidence for this**; it must not be applied laterally to I400C40 / I200C20 |
+| **Facility water temperatures** | **32 / 37 °C warm water** | ✅ Site — **of the three immersion SKUs only I400C45 has site evidence for this**; it must not be applied laterally to I400C40 / I200C20 ^mdc-27932cf39c |
 | Outdoor heat source | Dry coolers primarily; Hybrid Chiller added at peak-climate sites | ✅ Site |
-| Facility-side ΔT / flow | ⏳ **#unconfirmed** | Waiting on the Cooling Engineer for the I400C45 primary-loop hydraulic calculation; expected TBD |
-| Outdoor heat-rejection baseline (kW) | ⏳ **#unconfirmed** | Waiting on the Cooling Engineer for the I400C45 rejection calculation; expected TBD |
-| Design ambient wet-bulb | ⏳ **#unconfirmed** | Waiting on the site side or I400C45 DESIGN/ to publish the design wet-bulb; expected TBD |
+| Facility-side ΔT / flow | ⏳ **#unconfirmed** | Waiting on the Cooling Engineer for the I400C45 primary-loop hydraulic calculation; expected TBD ^mdc-9f32cac511 |
+| Outdoor heat-rejection baseline (kW) | ⏳ **#unconfirmed** | Waiting on the Cooling Engineer for the I400C45 rejection calculation; expected TBD ^mdc-69ff6b6d95 |
+| Design ambient wet-bulb | ⏳ **#unconfirmed** | Waiting on the site side or I400C45 DESIGN/ to publish the design wet-bulb; expected TBD ^mdc-fc7856dea8 |
 
 ### 5.3 PUE and the boundary it is valid within ^sec-5-pue
 

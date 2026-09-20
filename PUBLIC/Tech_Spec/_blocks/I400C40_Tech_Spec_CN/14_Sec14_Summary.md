@@ -17,14 +17,14 @@ source_anchors:
 
 | 项目 | 参数 |
 |------|------|
-| 集装箱规格 | **40ft 高箱**（约 12,192 × 2,438 × 2,896 mm） ⏳ **#unconfirmed**（旧基线 AC40 V1.4，基准表未覆盖；等 I400C40 DESIGN/ 工程文档回写，预期 TBD） |
-| IT 容量 | **推荐 360kW / 最大 400kW**（8×I50TS：45/50kW） |
+| 集装箱规格 | **40ft 高箱**（约 12,192 × 2,438 × 2,896 mm） ⏳ **#unconfirmed**（旧基线 AC40 V1.4，基准表未覆盖；等 I400C40 DESIGN/ 工程文档回写，预期 TBD） ^mdc-88bd14fbcd |
+| IT 容量 | **推荐 360kW / 最大 400kW**（8×I50TS：45/50kW） ^mdc-58d6ac4cd0 |
 | 风冷机柜 | 1 × 10kW |
-| 机架空间 | 256RU / 232OU ⏳ **#unconfirmed**（旧基线 AC40 V1.4，基准表未覆盖；等 I400C40 DESIGN/ 工程文档回写，预期 TBD） |
+| 机架空间 | 256RU / 232OU ⏳ **#unconfirmed**（旧基线 AC40 V1.4，基准表未覆盖；等 I400C40 DESIGN/ 工程文档回写，预期 TBD） ^mdc-407349d3c5 |
 | 冷却方式 | **单相浸没** + Tank 内置 Dual CDU（1+1）+ 独立风冷 |
 | 二次侧 | 进油 ≤35°C / 出油 ≈43°C / **ΔT=8K**；DC20 / S5LV |
-| 一次侧 | ≤32 / 37°C（ΔT=5K） ⏳ **#unconfirmed**（同 §5.2，等 Cooling Engineer 确认是否同温位，预期 TBD）；设计湿球 28°C ⏳ **#unconfirmed**（旧基线 AC40 V1.4，基准表未覆盖；等 I400C40 DESIGN/ 工程文档回写，预期 TBD） |
-| 二次侧流量（整箱） | ≈ **87.8 m³/h**（360kW）/ **97.6 m³/h**（400kW） ⏳ **#unconfirmed**（旧基线 AC40 V1.4，基准表未覆盖；等 I400C40 DESIGN/ 工程文档回写，预期 TBD） |
+| 一次侧 | ≤32 / 37°C（ΔT=5K） ⛔ **conflict**（同 §5.2，等 Cooling Engineer 确认是否同温位，预期 TBD）；设计湿球 28°C ⛔ **conflict** ****（旧基线 AC40 V1.4，基准表未覆盖；等 I400C40 DESIGN/ 工程文档回写，预期 TBD） ^mdc-7e72367079 |
+| 二次侧流量（整箱） | ≈ **87.8 m³/h**（360kW）/ **97.6 m³/h**（400kW） ⛔ **conflict**（旧基线 AC40 V1.4，基准表未覆盖；等 I400C40 DESIGN/ 工程文档回写，预期 TBD） ^mdc-7df1a03380 |
 | 热排放选型 | 干球 **≤24°C → 纯干冷**；**>24°C → Hybrid Chiller** |
 | 整体电力负荷（Total Facility Load） | 随 PUE 变化，**逐站点用 <https://mdcx.org> 计算** ✅ 2026-08-30 裁定（原 ~400–480kW 作废） |
 | PUE | **`1.0x`** —— 不给固定值、不给区间，逐站点用 <https://mdcx.org>（TCO / Designer）计算 ✅ 2026-08-30 裁定（原 1.05–1.10 / 1.15–1.20 作废）；详见 §3 |
@@ -37,14 +37,14 @@ source_anchors:
 | 灭火 | FM-200 + ASSD/VESDA |
 | 门禁 | 刷卡 / 人脸 |
 | 监控 | MODBUS / SNMP / Web / Redfish |
-| UL 整机 | **否**（需 UL 选 I400C45） |
+| UL 整机 | **否**（需 UL 选 I400C45） ^mdc-ca7a76dc4d |
 | 质保 | **核心部件自 EXW 起 1 年**；后续年份按年收取服务费。响应级别（ONSITE / NBD / 9×5 / 24×7）**以 Invoice 为准** ✅ 2026-08-30 裁定 |
 | 交期 | **首批 120 天 EXW / Scale 90 天 EXW**；假负载运行期 5–30 天（不含在 EXW 承诺内）；商务·运输·安装不予承诺 ✅ 2026-08-30 裁定（原 ~185–230 天作废） |
-| 运行重量 | 约 22–30T（以结构书为准） ⏳ **#unconfirmed**（旧基线 AC40 V1.4，基准表未覆盖；等 I400C40 DESIGN/ 工程文档回写，预期 TBD） |
+| 运行重量 | 约 22–30T（以结构书为准） ⏳ **#unconfirmed**（旧基线 AC40 V1.4，基准表未覆盖；等 I400C40 DESIGN/ 工程文档回写，预期 TBD） ^mdc-70ebb62d57 |
 
-### 14.1 与 L1240C45 一句话对比
+### 14.1 与 L1240C45 一句话对比 ^mdc-24d23e0182
 
-| | I400C40 | L1240C45 |
+| | I400C40 | L1240C45 ^mdc-e1f608a7e8 |
 |--|------|------|
 | 冷却 | 浸没 | DLC 冷板 + RDHX + CeilAir |
 | IT | 0.36–0.40 MW | 1.24 MW |
@@ -64,3 +64,10 @@ source_anchors:
 | 7 | 外置 UPS 场地接口图（客户侧） |
 
 ---
+
+## Changelog
+
+| 日期 | 变更 |
+|---|---|
+| 2026-09-20 | 🧭 unconfirmed-032 改为 ⛔ conflict，未裁定赢家 |
+| 2026-09-20 | 🧭 unconfirmed-031 改为 ⛔ conflict，未裁定赢家 |

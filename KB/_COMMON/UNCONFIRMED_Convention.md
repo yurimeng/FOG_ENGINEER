@@ -22,7 +22,7 @@ status: 现行规范
 
 | 粒度 | 写法 | 含义 | 示例 |
 |---|---|---|---|
-| **文档级** | frontmatter `tags:` 中加 `"#unconfirmed"` | 整份文档的核心结论尚未证实，**不得整份外发** | [[PRD-STULZ-CW330]] |
+| **文档级** | frontmatter `tags:` 中加 `"#unconfirmed"` | 整份文档的核心结论尚未证实，**不得整份外发** | [[PRD-STULZ-CW320]] |
 | **章节级** | 章节标题后加 `#unconfirmed` | 该节全部数值待证实，其余章节可用 | Tech Spec §7 结构规格 |
 | **行级** | 表格行的备注列写 `⏳ #unconfirmed` | 仅该行待证实 | 单行运行海拔 TBD |
 
@@ -58,7 +58,7 @@ status: 现行规范
 | **等什么** | 具体到交付物：CE DoC 证书编号 / 选型书 / 实测报告 | "更多信息" |
 | **预期时点** | 日期或事件；未知写 `TBD` 但不得省略该列 | （空白） |
 
-> 例：`⏳ #unconfirmed —— 等 STULZ 提供 CW330 选型书与外形图，预期 2026-09-01（周一）`
+> 例：`⏳ #unconfirmed —— 等 STULZ 提供 CW320 选型书与外形图，预期 2026-09-01（周一）`
 
 ## 4. 闭环流程
 
@@ -113,9 +113,9 @@ Obsidian 内直接点击 `#unconfirmed` tag 可聚合全部命中。
 
 | 区域 | 原因 | 预期闭环 |
 |---|---|---|
-| [[PRD-STULZ-CW330]] | 厂家未提供任何规格参数 | 2026-09-01（周一）厂家提供 |
+| [[PRD-STULZ-CW320]] | 厂家未提供任何规格参数 | 2026-09-01（周一）厂家提供 |
 | [[PRODUCT_SPEC_BASELINE]] 六 SKU 表中的结构 / 环境 / 服务字段 | 站点对客页面未披露，KB 侧亦无工程文档 | 待各 SKU DESIGN/ 建立 |
-| L1800C45 / L450C20 / I200C20 / I400C45 的 Tech Spec | 四个 SKU 无 DESIGN/ 工程文档，规格来自站点对客口径 | 待各 SKU 工程文档产出 |
+| L1800C45 / L450C20 / I200C20 / I400C45 的 Tech Spec | 四个 SKU 无 DESIGN/ 工程文档，规格来自站点对客口径 | 待各 SKU 工程文档产出 ^mdc-288aad0661 |
 | [[PRD-STULZ-CRS560CW]] Q1–Q7 · [[PRD-STULZ-SCR14103W]] Q1–Q9 | 台数 / 冗余 / 认证 / 泵扬程余量等 | 待 STULZ 与 Cooling Engineer |
 | [[STD_L1240C45]] C1–C11 | 历史源冲突 | 待 Yuri 裁定 |
 | [[PRD-STULZ-CeilAir]] Q1 | CE / 50 Hz 缺席，市场准入阻塞 | 待 STULZ |

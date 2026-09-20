@@ -22,7 +22,7 @@ source_anchors:
 | Ambient (reference) | **-45°C to +45°C** (project climate study) |
 | Humidity | Typical DC 40–60% RH non-condensing for air space |
 | Altitude | **TBD** (derate cooling/electrical as needed) |
-| Design wet-bulb | **28°C** ⏳ **#unconfirmed** (legacy AC40 V1.4, not covered by the baseline table; waiting on I400C40 DESIGN/ documents, expected TBD) |
+| Design wet-bulb | **28°C** ⏳ **#unconfirmed** (legacy AC40 V1.4, not covered by the baseline table; waiting on I400C40 DESIGN/ documents, expected TBD) ^mdc-bd7ad4f706 |
 | Heat-rejection climate gate | Extreme DB **≤24°C** dry cooler; **>24°C** Hybrid |
 
 ### 9.2 Fit / no-fit scenarios
@@ -40,15 +40,15 @@ source_anchors:
 
 | Item | Status |
 |------|--------|
-| **Full-system UL** | **❌ Not I400C40 standard** — use **I400C45** |
+| **Full-system UL** | **❌ Not I400C40 standard** — use **I400C45** ^mdc-31e5f31e64 |
 | Component UL | Per BOM / supply chain |
 | Field certification | TUV / local AHJ as project requires |
 | Enclosure rating | Project-custom |
 | External UPS | Customer/integrator responsibility under contract (IEC 62040, etc.) |
 
-### 9.4 I400C40 vs I400C45 compliance
+### 9.4 I400C40 vs I400C45 compliance ^mdc-c56e26d86f
 
-| | I400C40 | I400C45 |
+| | I400C40 | I400C45 ^mdc-ba8058eaa5 |
 |--|------|------|
 | Form factor | 40ft | 45ft |
 | UPS | External | Internal power bay |

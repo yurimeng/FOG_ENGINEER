@@ -7,7 +7,7 @@ tags:
   - "#type/prd"
   - "#product/RDHx"
   - "#thermal"
-  - 
+  -
 created: 2026-06-18
 source_file: KB/3RD-PARTY/COOLING/Suppliers/PRD-Vertiv-RDHx.md
 source_anchors:

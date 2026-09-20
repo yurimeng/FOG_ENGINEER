@@ -44,10 +44,10 @@ source_anchors:
 
 | IT Zone | 形态 | IT Load | UPS 状态 | 对应冷却容量 |
 |---------|------|---------|---------|-------------|
-| **A32** | 单柜 | 45–50 kW | 内置 | ~320 kW Hybrid |
-| **AC40** | 40 ft 容器 | 400 kW | 外置（客户自备，9395XR-600） | ~600 kW Hybrid |
-| **AC45** | 40 ft 容器 | 400 kW | 内置（9395XR-600） | ~600 kW Hybrid |
-| **DC45** | 45 ft 容器 | 1240 kW | 内置（9395XR-1500） | ~1200 kW Hybrid |
+| **A32** | 单柜 | 45–50 kW | 内置 | ~320 kW Hybrid ^mdc-59a7410aa4 |
+| **AC40** | 40 ft 容器 | 400 kW | 外置（客户自备，9395XR-600） | ~600 kW Hybrid ^mdc-91947176ca |
+| **AC45** | 40 ft 容器 | 400 kW | 内置（9395XR-600） | ~600 kW Hybrid ^mdc-ae8cc1b119 |
+| **DC45** | 45 ft 容器 | 1240 kW | 内置（9395XR-1500） | ~1200 kW Hybrid ^mdc-61fe654028 |
 
 **详细规范**：`KB/PRODUCTS/` 与 `POWER_SYSTEMS_Guideline §P-2`。
 

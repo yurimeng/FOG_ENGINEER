@@ -23,7 +23,7 @@ Branch 1 在 manifold 总管下游，进入每个 DLC 机柜后，**每 rack 内
 | 每 manifold 分支数 | 20–50 |
 | 每分支设计流量 | **1.6–2.1 L/min**（在 1–3 L/min 规格内 30%+ 余量） |
 | 每 manifold 入口 | **PICV + 流量计**（防双 manifold 间不平衡） |
-| 总 manifold 数量（DC45 整机）| **16–24 个**（8 rack × 2–3 manifold/rack） |
+| 总 manifold 数量（DC45 整机）| **16–24 个**（8 rack × 2–3 manifold/rack） ^mdc-ee8e50d855 |
 | 不平衡率 | ≤ 10%（单 manifold 内）/ ≤ 15%（manifold 间）|
 
 > 注：rack 内 manifold 由 GPU 平台 OEM 或 DLC 集成商提供，**不属于 CDU 供货范围**，但 CDU 二次侧的扬程余量必须覆盖该 manifold 阻力。
@@ -41,7 +41,7 @@ Branch 1 在 manifold 总管下游，进入每个 DLC 机柜后，**每 rack 内
 | 远程通信 | **Modbus TCP / BACnet**（兼容 FOG BMS）；干接点告警接口 |
 | 数据记录 | 本地存储 ≥ 30 天历史数据，USB / 网络导出 |
 | 告警分级 | 预警 / 故障 / 紧急，三级告警体系 |
-| 联动接口 | 与 DC45 BMS 联动，接收 GPU 负荷信号（0–10V 或 4–20mA），输出 PICV 设定值 |
+| 联动接口 | 与 DC45 BMS 联动，接收 GPU 负荷信号（0–10V 或 4–20mA），输出 PICV 设定值 ^mdc-28b492784e |
 | 流量保护联动 | Branch 1 流量 < 70 m³/h → 输出 BMS 信号触发 GPU 降载 80%；< 60 m³/h → 触发 GPU 降载 60% |
 
 ---

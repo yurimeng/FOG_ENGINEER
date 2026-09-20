@@ -19,11 +19,11 @@ source_anchors: []
 
 | 项目 | 参数 |
 |------|------|
-| Tank 型号 | A32，50kW/柜 |
+| Tank 型号 | A32，50kW/柜 ^mdc-b585ca54b4 |
 | Tank 数量 | 8 |
 | 热交换器 | CDU（内置于 Tank），2N 冗余 |
 | 散热方式 | **历史最高（极端）干球温度 ≤24°C → 纯干冷器（Free Cooling）；>24°C → Hybrid Cooling System**（干冷器 + DX 一体化）或热泵 |
-| 二次侧 Tank 流量 | 单 Tank ≈11.0 m³/h（45kW）/ ≈12.2 m³/h（50kW）；整箱 8× ≈87.8 / ≈97.6 m³/h，详见 [[I50TS#5.4 二次侧散热校核\|A32 §5.4]] |
+| 二次侧 Tank 流量 | 单 Tank ≈11.0 m³/h（45kW）/ ≈12.2 m³/h（50kW）；整箱 8× ≈87.8 / ≈97.6 m³/h，详见 [[I50TS#5.4 二次侧散热校核\|A32 §5.4]] ^mdc-13478224eb |
 | 设计原则 | [[COOLING_SYSTEM_Guideline]] |
 
 ### 5.2 电力舱散热

@@ -8,14 +8,14 @@ doc_version: v1.6
 updated: 2026-08-30
 sku_id: I400C40ST50
 ---
-# I400C40 — Tech Spec
+# I400C40 — Tech Spec ^mdc-68fa3b52f1
 **All-In-One Immersion Container (40ft)**
 
-> **SKU identity:** short alias **I400C40** · full SKU ID `I400C40ST50` · product line **Immersion Cooling (I)** · status **shipped**. Naming baseline: [[NAMING_MAP]].
+> **SKU identity:** short alias **I400C40** · full SKU ID `I400C40ST50` · product line **Immersion Cooling (I)** · status **shipped**. Naming baseline: [[NAMING_MAP]]. ^mdc-81b5d62a78
 >
-> **Audience:** Sales / pre-sales deliverable. Readers: customers, account managers, solution architects. Parameters are normative; if they conflict with engineering design, escalate to [[PUBLIC/Products/I400C40|I400C40 product PRD]] and [[PUBLIC/Products/I50TS|I50TS]]. Parameter baseline: **V1.0 (2026-07-28)**, sourced from AC40 V1.4 / A32 V1.4.
+> **Audience:** Sales / pre-sales deliverable. Readers: customers, account managers, solution architects. Parameters are normative; if they conflict with engineering design, escalate to [[PUBLIC/Products/I400C40|I400C40 product PRD]] and [[PUBLIC/Products/I50TS|I50TS]]. Parameter baseline: **V1.0 (2026-07-28)**, sourced from AC40 V1.4 / A32 V1.4. ^mdc-7c059f40c3
 >
-> **Source of truth:** product parameters follow [[PRODUCT_SPEC_BASELINE]] (six-SKU baseline table); **where this document disagrees with it, the baseline table governs**. Several figures here come from the legacy AC40 / A32 V1.4 baseline that the table does not yet cover; they are marked row by row per [[UNCONFIRMED_Convention]].
+> **Source of truth:** product parameters follow [[PRODUCT_SPEC_BASELINE]] (six-SKU baseline table); **where this document disagrees with it, the baseline table governs**. Several figures here come from the legacy AC40 / A32 V1.4 baseline that the table does not yet cover; they are marked row by row per [[UNCONFIRMED_Convention]]. ^mdc-6849746c90
 >
 > **Three companion editions:** English internal (this file) · 中文内部版 [[I400C40_Tech_Spec_CN]] · external edition [[I400C40_Tech_Spec_External]]
 >
@@ -23,16 +23,16 @@ sku_id: I400C40ST50
 >
 > ⏳ **This document still carries a document-level `#unconfirmed`:** envelope dimensions / weights, facility-water temperatures, container flow rates, design wet-bulb and rack space remain ⏳ unconfirmed. Who / what / when for each is given in the notes column of the relevant section table. **Do not release this edition as-is** — use the external edition for customers.
 >
-> **Internal engineering detail:** [[PUBLIC/Products/I400C40]] · [[PUBLIC/Products/I50TS]] · [[KB/IMMERSION/I400C40/I400C40 工作负荷]] · [[COOLING_SYSTEM_Guideline]]
+> **Internal engineering detail:** [[PUBLIC/Products/I400C40]] · [[PUBLIC/Products/I50TS]] · [[KB/IMMERSION/I400C40/I400C40 工作负荷]] · [[COOLING_SYSTEM_Guideline]] ^mdc-a5e19dd267
 
 Version: V1.6 | Date: 2026-08-30 | Parameter baseline: V1.0 (2026-07-28)
 
-> **V1.0 first release (aligned to AC40/A32 V1.4):**
-> 1. IT capacity locked: **recommended 360kW / max 400kW** (8×I50TS, formerly A32, at 45/50kW) + 1×10kW air-cooled rack
+> **V1.0 first release (aligned to AC40/A32 V1.4):** ^mdc-7b3e76bac7
+> 1. IT capacity locked: **recommended 360kW / max 400kW** (8×I50TS, formerly A32, at 45/50kW) + 1×10kW air-cooled rack ^mdc-34edea5ffc
 > 2. Cooling: single-phase immersion + in-tank Dual CDU (1+1); secondary **inlet ≤35°C / outlet ≈43°C / ΔT=8K**; facility water ≤32/37°C (ΔT=5K)
 > 3. Heat rejection: site extreme dry-bulb **≤24°C → dry cooler only**; **>24°C → Hybrid Chiller**
-> 4. UPS: **external (customer-supplied)** EATON 9395XR-600 + 2×93LiG2 (~10 min) — not inside I400C40
-> 5. **No full-system UL listing** (select [[PUBLIC/Products/I400C45|I400C45]] when UL is mandatory)
+> 4. UPS: **external (customer-supplied)** EATON 9395XR-600 + 2×93LiG2 (~10 min) — not inside I400C40 ^mdc-94f66e15c8
+> 5. **No full-system UL listing** (select [[PUBLIC/Products/I400C45|I400C45]] when UL is mandatory) ^mdc-35806d0472
 
 ---
 
@@ -53,7 +53,7 @@ Version: V1.6 | Date: 2026-08-30 | Parameter baseline: V1.0 (2026-07-28)
 | 11 | Fire Protection & Safety | [[PUBLIC/Tech_Spec/_blocks/I400C40_Tech_Spec_EN/11_Sec11_Fire\|11_Sec11_Fire]] |
 | 12 | Service & Support | [[PUBLIC/Tech_Spec/_blocks/I400C40_Tech_Spec_EN/12_Sec12_Service\|12_Sec12_Service]] |
 | 13 | Site & Installation | [[PUBLIC/Tech_Spec/_blocks/I400C40_Tech_Spec_EN/13_Sec13_Site\|13_Sec13_Site]] |
-| 14 | I400C40 Key Specs Summary | [[PUBLIC/Tech_Spec/_blocks/I400C40_Tech_Spec_EN/14_Sec14_Summary\|14_Sec14_Summary]] |
+| 14 | I400C40 Key Specs Summary | [[PUBLIC/Tech_Spec/_blocks/I400C40_Tech_Spec_EN/14_Sec14_Summary\|14_Sec14_Summary]] ^mdc-6b4c3355ac |
 
 ---
 

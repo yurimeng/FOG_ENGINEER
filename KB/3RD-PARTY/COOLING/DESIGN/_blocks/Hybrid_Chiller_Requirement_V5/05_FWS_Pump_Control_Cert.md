@@ -16,7 +16,7 @@ source_anchors:
 
 ## 6. 冷冻水泵（FWS 主泵 — Chiller 集成） ^chiller-10-fws-pump
 
-> **归属决策（[[../../LIQUID/L1240C45/DESIGN/L1240C45 Hydronic & Thermal Design Criteria]] Rev.C §9.2 锁定）**：FWS 主泵由 Chiller 集成提供，CDU 不自带一次泵。
+> **归属决策（[[../../LIQUID/L1240C45/DESIGN/L1240C45 Hydronic & Thermal Design Criteria]] Rev.C §9.2 锁定）**：FWS 主泵由 Chiller 集成提供，CDU 不自带一次泵。 ^mdc-d9bc72468d
 
 | 参数 | 锁定值 |
 |---|---|

@@ -11,7 +11,7 @@ tags:
 Reference Architecture Version: v1.3
 Last Updated: 2026-08-30
 
-> **数据源 / Source of truth：** 本文全部产品参数以 [[PRODUCT_SPEC_BASELINE]]（六 SKU 规格基准表 v2.0）为准 —— **本文任一数值与基准表冲突时，以基准表为准**。本 RA 对应 SKU：**I400C40**。
+> **数据源 / Source of truth：** 本文全部产品参数以 [[PRODUCT_SPEC_BASELINE]]（六 SKU 规格基准表 v2.0）为准 —— **本文任一数值与基准表冲突时，以基准表为准**。本 RA 对应 SKU：**I400C40**。 ^mdc-5befe28eb2
 >
 > **置信度标注规则见 [[UNCONFIRMED_Convention]] §2：** ✅ 已确认 · 🔶 derived 我方推导 · ⏳ #unconfirmed 待证实 · ⛔ conflict 源冲突。带 ⏳ / ⛔ 的行**不得对客外发**（[[UNCONFIRMED_Convention]] §5）。
 
@@ -26,7 +26,7 @@ Last Updated: 2026-08-30
 | 项目 | 内容 |
 |------|------|
 | IT 容量 | **0.4MW（400kW）** |
-| 产品形态 | 1× AC40 集装箱 |
+| 产品形态 | 1× AC40 集装箱 ^mdc-31821c8a0d |
 | 冷却技术 | 浸没式液冷（Immersion Cooling）|
 | 散热方式 | **Hybrid Cooling System**（干冷器+DX一体化）|
 | 交期 | **首批 120 天 EXW · Scale（扩容批次）90 天 EXW**，自下单起算；另有**假负载运行期 5–30 天**（不含在 EXW 承诺内）；商务 / 运输 / 安装**一律不予承诺**。见 [[PRODUCT_SPEC_BASELINE]] §3.1 |
@@ -60,24 +60,24 @@ Last Updated: 2026-08-30
 | 服务器形态 | 4U |
 | 主要用途 | AI 推理 |
 
-> ⚠️ 服务器与 GPU 数量取决于实际 GPU TDP 与功耗包络。若客户配置 GPU TDP 较高致 IT 负载逼近 400kW 上限，需评估是否升级至多台 AC40 并联。
+> ⚠️ 服务器与 GPU 数量取决于实际 GPU TDP 与功耗包络。若客户配置 GPU TDP 较高致 IT 负载逼近 400kW 上限，需评估是否升级至多台 AC40 并联。 ^mdc-cf2ff677e1
 
 ---
 
 ## 4. 产品配置
 
-本方案使用 **1× AC40**：
+本方案使用 **1× AC40**： ^mdc-a8640318f7
 
-| 项目 | AC40 参数 |
+| 项目 | AC40 参数 ^mdc-aff27a75f3 |
 |------|-----------|
-| IT 容量 | 400kW（8×50kW **I50TS（原 A32）** Tank）|
+| IT 容量 | 400kW（8×50kW **I50TS（原 A32）** Tank） ^mdc-d06ccaddc8 |
 | 风冷辅助 | 10kW × 1 |
 | UPS | EATON 9395XR-600（4 UPM × 150kW）|
 | UPS 电池 | 2× EATON 93LiG2（10 分钟后备）|
 | CDU | 内阻 Dual CDU（1+1 冗余）|
 | 冷却 | **Hybrid Cooling System** |
 
-> 如客户算力需求大于 400kW，请参考 RA-002（1.2MW DLC，DC45）或采用多台 AC40 并联。
+> 如客户算力需求大于 400kW，请参考 RA-002（1.2MW DLC，DC45）或采用多台 AC40 并联。 ^mdc-770b1eab92
 
 ---
 
@@ -86,16 +86,16 @@ Last Updated: 2026-08-30
 | 项目 | 参数 |
 |------|------|
 | 冷却技术 | 浸没式液冷（Immersion）|
-| Tank 型号 | **I50TS**，50kW/柜（密度码 `T50`）|
-| Tank 数量 | 8 台（组成 AC40）|
+| Tank 型号 | **I50TS**，50kW/柜（密度码 `T50`） ^mdc-998f4dcb80 |
+| Tank 数量 | 8 台（组成 AC40） ^mdc-7b5dbdf7ad |
 | 热交换器 | CDU（内置于 Tank），1+1 冗余 |
 | 散热方式 | **Hybrid Cooling System**（必须）|
 | 进液温度 | 32–35°C ⏳ **#unconfirmed** —— 见下注 |
 | 出液温度 | 35–38°C ⏳ **#unconfirmed** —— 见下注 |
 
-> ⏳ **#unconfirmed —— 设施水温位与基准表不一致，本次不自行统一。** [[PRODUCT_SPEC_BASELINE]] §2.2 只披露了 **I400C45 的 32 / 37 °C**，**I400C40 一栏本身即为 ⏳**（"核心相同，推同温位属 🔶 derived"）。本文的 **32–35 / 35–38 °C** 是第三套数值，来源为本 RA v1.2 既有工程口径，未经基准表确认。三套数并存、未经裁定，**本次只标注、不合并**。等 Cooling Engineer 确认 I400C40 设施水温位，预期 TBD。
+> ⛔ **conflict** ** —— 设施水温位与基准表不一致，本次不自行统一。** [[PRODUCT_SPEC_BASELINE]] §2.2 只披露了 **I400C45 的 32 / 37 °C**，**I400C40 一栏本身即为 ⛔ **conflict****（"核心相同，推同温位属 🔶 derived"）。本文的 **32–35 / 35–38 °C** 是第三套数值，来源为本 RA v1.2 既有工程口径，未经基准表确认。三套数并存、未经裁定，**本次只标注、不合并**。等 Cooling Engineer 确认 I400C40 设施水温位，预期 TBD。 ^mdc-93e8366578
 >
-> 注：2026-08-30 裁定 1（外冷源 32–36 °C → CDU +4 °C → GPU 36–40 °C）**只适用 L1800C45 / L450C20 两个双环路液冷 SKU**，不适用本浸没 SKU，故本节未按该链改写。
+> 注：2026-08-30 裁定 1（外冷源 32–36 °C → CDU +4 °C → GPU 36–40 °C）**只适用 L1800C45 / L450C20 两个双环路液冷 SKU**，不适用本浸没 SKU，故本节未按该链改写。 ^mdc-a7d5a00c05
 
 ---
 
@@ -104,10 +104,10 @@ Last Updated: 2026-08-30
 | 项目 | 参数 |
 |------|------|
 | 电网连接 | Grid Utility |
-| UPS | EATON 9395XR-600（4 UPM，600kW），**外置（客户自备）**，AC40 本体不含 UPS |
+| UPS | EATON 9395XR-600（4 UPM，600kW），**外置（客户自备）**，AC40 本体不含 UPS ^mdc-e9ab9d0181 |
 | UPS 电池 | 2× EATON 93LiG2，**外置（客户自备）**，约 10 分钟后备 |
 | 储能（BESS）| ~500kW BESS（可选，Grid 不稳定地区推荐）|
-| 功率路径 | Grid → BESS → Switchgear → AC40 |
+| 功率路径 | Grid → BESS → Switchgear → AC40 ^mdc-5f5b4164ac |
 
 ---
 
@@ -117,7 +117,7 @@ Last Updated: 2026-08-30
 |------|---------|------|
 | **UPS 模块** | 内部 N+1（4 模块）| 单模块故障不影响运行 |
 | **CDU** | Dual CDU，1+1 | 完全冗余 |
-| **IT Zone（AC40）** | **无内部冗余** | 单台 AC40 独立运行 |
+| **IT Zone（AC40）** | **无内部冗余** | 单台 AC40 独立运行 ^mdc-8ee0fbda67 |
 | BESS（可选）| 可配置 N+1 | 按客户可靠性要求 |
 
 ---
@@ -141,10 +141,10 @@ Last Updated: 2026-08-30
 Reference Architecture — 0.4MW Immersion AI Inference Unit
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-IT Load:       400kW（1×AC40）
+IT Load:       400kW（1×AC40） ^mdc-b9d9596a66
 Total Load:    随 PUE 变化，逐站点用 https://mdcx.org 计算（不给区间）
 PUE:           1.0x（逐站点计算，不给固定值）
-Product:       AC40（Immersion Container，40ft）
+Product:       AC40（Immersion Container，40ft） ^mdc-5b5e11535f
 Cooling:       Immersion + **Hybrid Cooling System**
 Power:         Grid + UPS（9395XR-600）+ BESS（可选）
 Redundancy:    UPS 模块 N+1 / CDU 1+1（**IT Zone 本身无内部冗余**）
@@ -160,8 +160,8 @@ Warranty:      核心部件自 EXW 起 1 年 + 后续按年服务费
 
 ## 10. 参考文档
 
-- AC40 完整规格：[[I400C40|KB/PRODUCTS_I400C40]]
-- I50TS 完整规格：[[I50TS|KB/PRODUCTS_I50TS]]
+- AC40 完整规格：[[I400C40|KB/PRODUCTS_I400C40]] ^mdc-eb139a027b
+- I50TS 完整规格：[[I50TS|KB/PRODUCTS_I50TS]] ^mdc-f26790063f
 - MDC 组合标准：[[_COMMON/PRODUCTS_MDC|KB/_COMMON/_COMMON/PRODUCTS_MDC]]
 - 冷却方案：[[COOLING_SYSTEM_Guideline]]
 - UPS 规格：[[UPS_EATON_9395XR|KB/3RD-PARTY/UPS/Eaton/UPS_EATON_9395XR]]
@@ -176,3 +176,4 @@ Warranty:      核心部件自 EXW 起 1 年 + 后续按年服务费
 > v1.2 变更：原命名 "0.5MW" 与实际配置（1×AC40 = 400kW IT）不符。按"RA 命名 = IT 容量"原则，重命名为 0.4MW；同步修正所有 IT 负载 / Total Load 数字；删除原 §4 中混淆 RA 边界的"1.2MW 方案需 3×AC40"误导注释（1.2MW 场景应走 RA-002 / DC45）。
 
 > v1.3 变更（2026-08-30）：**按 [[PRODUCT_SPEC_BASELINE]] v2.0 传导 2026-08-30 Yuri 四条裁定。** ① **双环路温位（C-1）—— 不适用本 SKU**：该裁定只覆盖 L1800C45 / L450C20 两个双环路液冷 SKU，本浸没 SKU 未作温位改写；§5 的 32–35 / 35–38 °C 与基准表 §2.2 不一致，已按 [[UNCONFIRMED_Convention]] 标 ⏳ #unconfirmed，**未自行统一**。 ② **PUE（C-2）**：§2 与 §8 的 `~1.02–1.08` / `~1.08–1.15` / `~1.15–1.20` / `~1.02–1.20` 全部作废，一律改写为 **`1.0x`**，逐站点用 <https://mdcx.org> 计算；Total Facility Load 的 `~408–480kW` 区间同步作废，改为"随 PUE 变化，逐站点计算"，**IT Load vs Total Facility Load 的口径区分予以保留并强化**（Hard Rule 5）。 ③ **交期（C-8）**：§1 与 §9 的 `~185–230 天` 及其五阶段拆解（勘测 / 商务 / 制造 / 运输 / 安装）**全部删除**，改为首批 **120 天 EXW** · Scale **90 天 EXW**（自下单起算），新增**假负载运行期 5–30 天**（Supermicro 建议，不含在 EXW 承诺内），商务 / 运输 / 安装**一律不予承诺**。 ④ **质保（C-9）**：§9 新增 Warranty 行 —— 核心部件自 EXW 起一年 + 后续按年服务费，ONSITE / NBD / 24×7 等响应级别以 Invoice 为准，本文不承诺（全文原无 `9×5 NBD`，无需删除）。 另：**槽体旧名 A32 全部改为 I50TS**（§4 / §5 / §10 共 3 处，§4 首次出现处保留 `I50TS（原 A32）` 对照；§10 的 wikilink 原已指向 `[[I50TS]]`、正文仍写 A32 的半迁移状态一并修复）；顶部新增数据源指针（以 [[PRODUCT_SPEC_BASELINE]] 为准 + [[UNCONFIRMED_Convention]] 标注规则）。全文不含价格数字。
+| 2026-09-20 | 🧭 unconfirmed-050 改为 ⛔ conflict，未裁定赢家 |

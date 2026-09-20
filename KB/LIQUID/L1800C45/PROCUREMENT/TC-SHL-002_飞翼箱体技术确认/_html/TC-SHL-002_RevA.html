@@ -1,0 +1,466 @@
+<title>TC-SHL-002 45ft 飞翼集装箱技术确认书 Rev.A</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans+Condensed:wght@400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap">
+<style>
+:root{
+  --paper:#F7F8F9; --panel:#FFFFFF; --sunk:#EEF1F3;
+  --ink:#15191D; --ink-2:#3C464F; --muted:#5E6A74;
+  --rule:#D6DBDF; --rule-strong:#A8B2BA;
+  --accent:#1D4E77; --accent-soft:#E3EDF5;
+  --alert:#9C3B22; --alert-soft:#F7E8E2;
+  --ok:#2C6A4A; --ok-soft:#E2EFE8;
+  --warn:#8A6412; --warn-soft:#F6EFDC;
+  --shadow:0 1px 0 rgba(21,25,29,.04);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#101416; --panel:#161C1F; --sunk:#1B2326;
+    --ink:#E5EAEC; --ink-2:#C2CCD1; --muted:#93A0A8;
+    --rule:#273034; --rule-strong:#3B474D;
+    --accent:#6BAEDB; --accent-soft:#132532;
+    --alert:#DF8261; --alert-soft:#2D1A14;
+    --ok:#6DBE93; --ok-soft:#12241B;
+    --warn:#D5A94B; --warn-soft:#292013;
+    --shadow:0 1px 0 rgba(0,0,0,.3);
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#101416; --panel:#161C1F; --sunk:#1B2326;
+  --ink:#E5EAEC; --ink-2:#C2CCD1; --muted:#93A0A8;
+  --rule:#273034; --rule-strong:#3B474D;
+  --accent:#6BAEDB; --accent-soft:#132532;
+  --alert:#DF8261; --alert-soft:#2D1A14;
+  --ok:#6DBE93; --ok-soft:#12241B;
+  --warn:#D5A94B; --warn-soft:#292013;
+  --shadow:0 1px 0 rgba(0,0,0,.3);
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);
+  font-family:"Noto Sans SC","IBM Plex Sans Condensed",-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;
+  font-weight:400;font-size:15.5px;line-height:1.75;-webkit-font-smoothing:antialiased;}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px 96px}
+@media (max-width:640px){.wrap{padding:0 16px 64px}}
+
+.doc{border:1.5px solid var(--rule-strong);background:var(--panel);margin:32px 0 12px}
+.doc-head{padding:22px 24px 18px;border-bottom:1px solid var(--rule)}
+.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--accent);margin:0 0 10px}
+h1{font-family:"IBM Plex Sans Condensed","Noto Sans SC",sans-serif;font-weight:700;
+  font-size:clamp(26px,4.4vw,36px);line-height:1.15;margin:0;text-wrap:balance}
+.sub{margin:10px 0 0;color:var(--muted);font-size:14.5px;max-width:62ch}
+.doc-grid{display:grid;grid-template-columns:repeat(3,1fr)}
+@media (max-width:640px){.doc-grid{grid-template-columns:repeat(2,1fr)}}
+.dc{padding:11px 16px;border-right:1px solid var(--rule);border-top:1px solid var(--rule)}
+.dc:nth-child(3n){border-right:none}
+@media (max-width:640px){.dc:nth-child(3n){border-right:1px solid var(--rule)}.dc:nth-child(2n){border-right:none}}
+.dk{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.dv{font-size:14px;font-weight:500;margin-top:3px;color:var(--ink)}
+.stamp{font-family:"IBM Plex Mono",monospace;font-size:11.5px;color:var(--muted);
+  letter-spacing:.03em;margin:0 0 44px;padding-left:2px}
+
+section{margin:0 0 48px;scroll-margin-top:24px}
+h2{font-family:"IBM Plex Sans Condensed","Noto Sans SC",sans-serif;font-weight:600;font-size:22px;
+  line-height:1.28;margin:0 0 14px;padding-bottom:8px;border-bottom:1.5px solid var(--rule-strong);
+  display:flex;align-items:baseline;gap:12px;text-wrap:balance}
+h2 .n{font-family:"IBM Plex Mono",monospace;font-size:14px;font-weight:600;color:var(--accent);flex:none}
+h3{font-family:"IBM Plex Sans Condensed","Noto Sans SC",sans-serif;font-weight:600;font-size:16.5px;
+  margin:26px 0 8px;display:flex;align-items:baseline;gap:10px}
+h3 .n{font-family:"IBM Plex Mono",monospace;font-size:12.5px;font-weight:500;color:var(--muted);flex:none}
+p{margin:0 0 13px;max-width:76ch}
+strong{font-weight:700;color:var(--ink)}
+code{font-family:"IBM Plex Mono",monospace;font-size:.9em;background:var(--sunk);padding:1px 5px;border-radius:2px}
+ul,ol{margin:0 0 13px;padding-left:1.3em;max-width:76ch}
+li{margin:0 0 6px}
+li::marker{color:var(--muted)}
+
+.scroll{overflow-x:auto;margin:0 0 16px;border:1px solid var(--rule);background:var(--panel)}
+table{border-collapse:collapse;width:100%;min-width:520px;font-size:13.5px}
+th,td{padding:8px 12px;text-align:left;border-bottom:1px solid var(--rule);vertical-align:top}
+thead th{font-family:"IBM Plex Sans Condensed",sans-serif;font-weight:600;font-size:11.5px;
+  letter-spacing:.06em;text-transform:uppercase;color:var(--muted);background:var(--sunk);
+  border-bottom:1px solid var(--rule-strong);white-space:nowrap}
+tbody tr:last-child td{border-bottom:none}
+td.n,th.n{text-align:right;font-family:"IBM Plex Mono",monospace;font-variant-numeric:tabular-nums;white-space:nowrap}
+tbody tr.hl td{background:var(--sunk);font-weight:700}
+.cap{font-size:12.5px;color:var(--muted);margin:-6px 0 20px;max-width:76ch}
+
+.pill{display:inline-block;font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:500;
+  padding:1px 7px;border-radius:2px;white-space:nowrap}
+.pill.ok{background:var(--ok-soft);color:var(--ok)}
+.pill.bad{background:var(--alert-soft);color:var(--alert)}
+.pill.mid{background:var(--warn-soft);color:var(--warn)}
+
+.box{border:1px solid var(--rule);border-left:3px solid var(--accent);background:var(--panel);
+  padding:14px 18px;margin:0 0 16px;box-shadow:var(--shadow)}
+.box.req{border-left-color:var(--alert)}
+.box.note{border-left-color:var(--muted)}
+.box p:last-child{margin-bottom:0}
+.box .bt{display:block;font-family:"IBM Plex Sans Condensed","Noto Sans SC",sans-serif;font-weight:600;
+  font-size:15px;margin:0 0 6px;color:var(--ink)}
+
+pre.sld{font-family:"IBM Plex Mono",monospace;font-size:12.5px;line-height:1.7;background:var(--sunk);
+  border:1px solid var(--rule);padding:16px 18px;overflow-x:auto;margin:0 0 16px;color:var(--ink)}
+
+h4{font-family:"IBM Plex Sans Condensed","Noto Sans SC",sans-serif;font-weight:600;
+  font-size:15.5px;line-height:1.35;margin:22px 0 8px;color:var(--ink)}
+h4 .n4{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--accent);
+  margin-right:9px;letter-spacing:.04em}
+
+figure.fig{margin:0 0 18px;padding:14px 10px 10px;background:var(--sunk);
+  border:1px solid var(--rule);text-align:center;overflow-x:auto;page-break-inside:avoid;break-inside:avoid}
+figure.fig svg{max-width:100%;height:auto;display:block;margin:0 auto}
+figure.fig figcaption{margin-top:10px;font-size:12px;color:var(--muted);font-style:italic;text-align:center}
+
+.foot{border-top:1.5px solid var(--rule-strong);padding-top:14px;font-size:12.5px;color:var(--muted);font-style:italic}
+</style>
+
+<div class="wrap">
+<div class="doc">
+  <div class="doc-head">
+    <img src="data:image/png;base64,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" alt="Pan's Power" style="height:30px;display:block;margin:0 0 16px 0">
+    <p class="eyebrow">技术确认书 · Technical Confirmation</p>
+    <h1>45 ft 飞翼集装箱<br>技术确认书</h1>
+    <p class="sub">侧开式飞翼箱体 · 结构、液压、箱顶接口与箱内接口边界</p>
+  </div>
+  <div class="doc-grid">
+    <div class="dc"><div class="dk">文件编号</div><div class="dv">TC-SHL-002</div></div>
+    <div class="dc"><div class="dk">版本 / 日期</div><div class="dv">Rev.A / 2026-09-17</div></div>
+    <div class="dc"><div class="dk">发放对象</div><div class="dv">集装箱制造厂（技术确认）</div></div>
+  </div>
+</div>
+<p class="stamp">潘氏未来（上海）算力科技有限公司 · 本文件供箱体技术确认，不含商务条件</p>
+<section>
+  <h2><span class="n">1</span>文件信息与目的</h2>
+  <div class="scroll">
+  <table>
+    <thead><tr><th>项</th><th>内容</th></tr></thead>
+    <tbody>
+      <tr><td>文件编号</td><td>TC-SHL-002　Rev.A</td></tr>
+      <tr><td>日期</td><td>2026-09-17</td></tr>
+      <tr><td>采购主体</td><td>潘氏未来（上海）算力科技有限公司</td></tr>
+      <tr><td>对象</td><td>45 ft 高箱、两侧飞翼（液压侧开）集装箱，作为设备箱体使用；箱顶加装我方顶部设备模块</td></tr>
+      <tr><td>数据基准</td><td>贵司 2026-09-16 提供的三维模型 <code>45飞.STEP</code>（SolidWorks 2026）。本文件全部尺寸由该模型量得，若与贵司图纸不一致，请在答复栏注明正确值</td></tr>
+      <tr><td>坐标约定</td><td>x：自端门端角件外缘起，沿箱长；y：自前通道侧角件外缘起，沿箱宽；z：自角件底面起，向上。单位 mm</td></tr>
+      <tr><td>文件性质</td><td>技术确认。请贵司在每条"答复"栏填写"确认 / 修改（写明值）/ 不可行（写明原因）"，并随附相应图纸后返回</td></tr>
+      <tr><td>答复期限</td><td>请于 2026-09-24 前返回</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>我方拟采用贵司 45 ft 飞翼集装箱作为设备箱体，箱内沿箱长布置一排设备，箱顶加装一个与箱体等长等宽、高约 1 400 的顶部设备模块，模块通过箱顶角件与箱体连接。箱内设备与箱顶模块之间有水管与电缆穿过箱顶板。</p>
+  <p>贵司已告知：飞翼只能安装在 40 ft 框架上，45 ft 箱的液压支撑总成必须布置在中间 40 ft 位置的立柱两侧，不能靠近端门。我方已按此约束完成箱内布置，本文件把布置结果涉及的箱体边界条件列出，请贵司逐条确认。所有确认项按结构、飞翼与液压、箱顶接口、箱内接口、端部、文件与交付六组编号。</p>
+</section>
+
+<section>
+  <h2><span class="n">2</span>我方对箱体的解读</h2>
+  <p>下表为我方从三维模型量得的关键尺寸，是后续全部布置的依据。请贵司核对，量得值与贵司设计值不一致的，请在答复栏给出设计值与公差。</p>
+  <div class="scroll">
+  <table>
+    <thead><tr><th>编号</th><th>项目</th><th>量得值</th><th>答复</th></tr></thead>
+    <tbody>
+      <tr><td>S-1</td><td>外形（角件外缘）</td><td>13 716 × 2 438 × 2 896</td><td></td></tr>
+      <tr><td>S-2</td><td>40 ft 位置立柱</td><td>x 762 – 940 与 12 776 – 12 954，宽 178，全高；顶、底各带中间角件</td><td></td></tr>
+      <tr><td>S-3</td><td>飞翼开口</td><td>x 940 – 12 776，长 11 836（两根 40 ft 立柱内侧面之间）</td><td></td></tr>
+      <tr><td>S-4</td><td>固定顶侧梁</td><td>矩形管 80 × 160，y 24 – 104（前）/ 2 335 – 2 415（后），z 2 698 – 2 858</td><td></td></tr>
+      <tr><td>S-5</td><td>翼框</td><td>45 × 100 管，顶杆 z 2 588 – 2 688，底杆 z 182 – 282，两端立杆 x 950 – 1 050 与 12 666 – 12 766</td><td></td></tr>
+      <tr><td>S-6</td><td>翼板</td><td>厚 35，内表面 y 72（前）/ 2 367（后），高 z 172 – 2 698</td><td></td></tr>
+      <tr><td>S-7</td><td>箱顶板</td><td>厚 25，上表面 z 2 886，分块拼缝 x 1 104 起每 1 045 一道，至 12 599；两端另有 x 356 – 605、576 – 1 126、12 590 – 13 140、13 118 – 13 367 四块。未见横向顶梁</td><td></td></tr>
+      <tr><td>S-8</td><td>端门端顶梁</td><td>x 6 – 368，贯通全宽 y 64 – 2 374，z 2 778 – 2 863</td><td></td></tr>
+      <tr><td>S-9</td><td>地板</td><td>钢板厚 5，地板面 z 172；地板下为横向底梁</td><td></td></tr>
+      <tr><td>S-10</td><td>液压支撑总成（4 套）</td><td>落地包络 200 × 200：x 1 058 – 1 258 与 12 454 – 12 654，y 97 – 297（前）/ 2 142 – 2 342（后）；缸体高 z 172 – 1 230；活塞杆与上支架包络至 z 2 018；上支架固定在翼板内表面，距翼板内表面外凸 225</td><td></td></tr>
+      <tr><td>S-11</td><td>端门</td><td>双扇外开，单扇 1 019 × 2 583，净开口约 2 038 × 2 583</td><td></td></tr>
+      <tr><td>S-12</td><td>角件顶面标高</td><td>四角与 40 ft 位置中间角件顶面均为 z 2 896，高出顶板上表面 10</td><td></td></tr>
+      <tr><td>S-13</td><td>箱内净尺寸</td><td>翼板内表面之间 2 295；顶侧梁与底部横梁处 2 231；地板面至顶板下表面 2 689，至顶侧梁下缘 2 526</td><td></td></tr>
+    </tbody>
+  </table>
+  </div>
+  <figure class="fig"><svg xmlns="http://www.w3.org/2000/svg" viewBox="81 0 483 311" font-family='"Noto Sans CJK SC","Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif' font-size="10">
+<rect x="110.0" y="95.0" width="877.8" height="156.0" fill="#f7f7f7" stroke="#222" stroke-width="1.4" opacity="1"/>
+<rect x="110.0" y="95.0" width="60.2" height="156.0" fill="#e3e3e3" stroke="none" stroke-width="1" opacity="1"/>
+<rect x="927.7" y="95.0" width="60.2" height="156.0" fill="#e3e3e3" stroke="none" stroke-width="1" opacity="1"/>
+<rect x="158.8" y="244.4" width="11.4" height="6.7" fill="#e0a020" stroke="#8a6000" stroke-width="1" opacity="1"/>
+<rect x="158.8" y="95.0" width="11.4" height="6.7" fill="#e0a020" stroke="#8a6000" stroke-width="1" opacity="1"/>
+<rect x="927.7" y="244.4" width="11.4" height="6.7" fill="#e0a020" stroke="#8a6000" stroke-width="1" opacity="1"/>
+<rect x="927.7" y="95.0" width="11.4" height="6.7" fill="#e0a020" stroke="#8a6000" stroke-width="1" opacity="1"/>
+<rect x="170.2" y="246.4" width="757.5" height="2.2" fill="#7fa8e0" stroke="#2b5fb0" stroke-width="1" opacity="1"/>
+<rect x="170.2" y="97.3" width="757.5" height="2.2" fill="#7fa8e0" stroke="#2b5fb0" stroke-width="1" opacity="1"/>
+<rect x="177.7" y="232.0" width="12.8" height="12.8" fill="#e03030" stroke="#900" stroke-width="1" opacity="1"/>
+<rect x="177.7" y="101.1" width="12.8" height="12.8" fill="#e03030" stroke="#900" stroke-width="1" opacity="1"/>
+<rect x="907.1" y="232.0" width="12.8" height="12.8" fill="#e03030" stroke="#900" stroke-width="1" opacity="1"/>
+<rect x="907.1" y="101.1" width="12.8" height="12.8" fill="#e03030" stroke="#900" stroke-width="1" opacity="1"/>
+<rect x="132.4" y="115.4" width="57.6" height="76.8" fill="#cfe8ff" stroke="#4a7fb5" stroke-width="1" stroke-dasharray="3,2" opacity="1"/>
+<rect x="193.9" y="111.6" width="652.8" height="76.8" fill="#cfe8ff" stroke="#4a7fb5" stroke-width="1" stroke-dasharray="3,2" opacity="1"/>
+<rect x="846.7" y="111.6" width="57.6" height="76.8" fill="#cfe8ff" stroke="#4a7fb5" stroke-width="1" stroke-dasharray="3,2" opacity="1"/>
+<rect x="922.8" y="102.7" width="57.6" height="44.8" fill="#ffd9b3" stroke="#b56a20" stroke-width="1" stroke-dasharray="3,2" opacity="1"/>
+<rect x="110.4" y="107.8" width="2.9" height="130.4" fill="#444" stroke="#222" stroke-width="1" opacity="1"/>
+<text x="94.0" y="173.0" text-anchor="middle" font-size="8" fill="#222" transform="rotate(-90 94.0 173.0)">端门（双扇，外开）</text>
+<text x="984.2" y="174.2" text-anchor="middle" font-size="8" fill="#222" transform="rotate(-90 984.2 174.2)">封闭端墙（不开门）</text>
+<text x="1009.2" y="140.3" text-anchor="middle" font-size="8" fill="#222" transform="rotate(-90 1009.2 140.3)">爬梯（端墙外侧）</text>
+<rect x="987.8" y="125.2" width="7.3" height="30.2" fill="#999" stroke="#555" stroke-width="1" opacity="1"/>
+<text x="161.2" y="151.8" text-anchor="middle" font-size="8" fill="#222">设备区 A</text>
+<text x="359.6" y="149.9" text-anchor="middle" font-size="9" fill="#222">设备区 B（x 1 311 – 11 511）</text>
+<text x="724.4" y="149.9" text-anchor="middle" font-size="9" fill="#222">设备区 B（x 1 311 – 11 511）</text>
+<text x="875.4" y="151.8" text-anchor="middle" font-size="8" fill="#222">设备区 C</text>
+<text x="951.6" y="125.6" text-anchor="middle" font-size="8" fill="#222">设备区 D</text>
+<text x="359.6" y="219.0" text-anchor="middle" font-size="9" fill="#555">前通道</text>
+<text x="724.4" y="219.0" text-anchor="middle" font-size="9" fill="#555">前通道</text>
+<text x="184.1" y="224.2" text-anchor="middle" font-size="7.5" fill="#900">液压总成</text>
+<text x="913.5" y="224.2" text-anchor="middle" font-size="7.5" fill="#900">液压总成</text>
+<text x="184.1" y="91.0" text-anchor="middle" font-size="7.5" fill="#900">液压总成</text>
+<text x="913.5" y="91.0" text-anchor="middle" font-size="7.5" fill="#900">液压总成</text>
+<text x="164.5" y="212.6" text-anchor="middle" font-size="7" fill="#8a6000" transform="rotate(-90 164.5 212.6)">40ft 立柱</text>
+<text x="933.4" y="212.6" text-anchor="middle" font-size="7" fill="#8a6000" transform="rotate(-90 933.4 212.6)">40ft 立柱</text>
+<line x1="110.0" y1="34.2" x2="987.8" y2="34.2" stroke="#555" stroke-width="0.8"/>
+<line x1="110.0" y1="30.2" x2="110.0" y2="38.2" stroke="#555" stroke-width="0.8"/>
+<line x1="987.8" y1="30.2" x2="987.8" y2="38.2" stroke="#555" stroke-width="0.8"/>
+<text x="119.6" y="31.2" text-anchor="start" font-size="9" fill="#333">总长 13 716（角件外缘）</text>
+<line x1="110.0" y1="34.2" x2="987.8" y2="34.2" stroke="#555" stroke-width="0.8"/>
+<line x1="110.0" y1="30.2" x2="110.0" y2="38.2" stroke="#555" stroke-width="0.8"/>
+<line x1="987.8" y1="30.2" x2="987.8" y2="38.2" stroke="#555" stroke-width="0.8"/>
+<text x="577.2" y="31.2" text-anchor="start" font-size="9" fill="#333">总长 13 716（角件外缘）</text>
+<line x1="170.2" y1="50.2" x2="927.7" y2="50.2" stroke="#555" stroke-width="0.8"/>
+<line x1="170.2" y1="46.2" x2="170.2" y2="54.2" stroke="#555" stroke-width="0.8"/>
+<line x1="927.7" y1="46.2" x2="927.7" y2="54.2" stroke="#555" stroke-width="0.8"/>
+<text x="180.4" y="47.2" text-anchor="start" font-size="9" fill="#333">飞翼开口 11 836（x 940 – 12 776）</text>
+<line x1="170.2" y1="50.2" x2="927.7" y2="50.2" stroke="#555" stroke-width="0.8"/>
+<line x1="170.2" y1="46.2" x2="170.2" y2="54.2" stroke="#555" stroke-width="0.8"/>
+<line x1="927.7" y1="46.2" x2="927.7" y2="54.2" stroke="#555" stroke-width="0.8"/>
+<text x="577.2" y="47.2" text-anchor="start" font-size="9" fill="#333">飞翼开口 11 836（x 940 – 12 776）</text>
+<line x1="110.0" y1="270.2" x2="177.7" y2="270.2" stroke="#555" stroke-width="0.8"/>
+<line x1="110.0" y1="266.2" x2="110.0" y2="274.2" stroke="#555" stroke-width="0.8"/>
+<line x1="177.7" y1="266.2" x2="177.7" y2="274.2" stroke="#555" stroke-width="0.8"/>
+<text x="143.9" y="281.2" text-anchor="middle" font-size="9" fill="#333">1 058</text>
+<line x1="177.7" y1="270.2" x2="190.5" y2="270.2" stroke="#555" stroke-width="0.8"/>
+<line x1="177.7" y1="266.2" x2="177.7" y2="274.2" stroke="#555" stroke-width="0.8"/>
+<line x1="190.5" y1="266.2" x2="190.5" y2="274.2" stroke="#555" stroke-width="0.8"/>
+<text x="184.1" y="281.2" text-anchor="middle" font-size="9" fill="#333">200</text>
+<line x1="907.1" y1="270.2" x2="919.9" y2="270.2" stroke="#555" stroke-width="0.8"/>
+<line x1="907.1" y1="266.2" x2="907.1" y2="274.2" stroke="#555" stroke-width="0.8"/>
+<line x1="919.9" y1="266.2" x2="919.9" y2="274.2" stroke="#555" stroke-width="0.8"/>
+<text x="913.5" y="281.2" text-anchor="middle" font-size="9" fill="#333">200</text>
+<line x1="919.9" y1="270.2" x2="987.8" y2="270.2" stroke="#555" stroke-width="0.8"/>
+<line x1="919.9" y1="266.2" x2="919.9" y2="274.2" stroke="#555" stroke-width="0.8"/>
+<line x1="987.8" y1="266.2" x2="987.8" y2="274.2" stroke="#555" stroke-width="0.8"/>
+<text x="953.8" y="281.2" text-anchor="middle" font-size="9" fill="#333">1 062</text>
+</svg></figure>
+  <p class="cap">图 1a　平面（端门端至箱中）：阴影为 40 ft 立柱外的固定墙段，红色为液压总成占位（落地 200 × 200，包络高至 z 2 018），虚线为我方设备区外包络</p>
+  <figure class="fig"><svg xmlns="http://www.w3.org/2000/svg" viewBox="532 0 493 311" font-family='"Noto Sans CJK SC","Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif' font-size="10">
+<rect x="110.0" y="95.0" width="877.8" height="156.0" fill="#f7f7f7" stroke="#222" stroke-width="1.4" opacity="1"/>
+<rect x="110.0" y="95.0" width="60.2" height="156.0" fill="#e3e3e3" stroke="none" stroke-width="1" opacity="1"/>
+<rect x="927.7" y="95.0" width="60.2" height="156.0" fill="#e3e3e3" stroke="none" stroke-width="1" opacity="1"/>
+<rect x="158.8" y="244.4" width="11.4" height="6.7" fill="#e0a020" stroke="#8a6000" stroke-width="1" opacity="1"/>
+<rect x="158.8" y="95.0" width="11.4" height="6.7" fill="#e0a020" stroke="#8a6000" stroke-width="1" opacity="1"/>
+<rect x="927.7" y="244.4" width="11.4" height="6.7" fill="#e0a020" stroke="#8a6000" stroke-width="1" opacity="1"/>
+<rect x="927.7" y="95.0" width="11.4" height="6.7" fill="#e0a020" stroke="#8a6000" stroke-width="1" opacity="1"/>
+<rect x="170.2" y="246.4" width="757.5" height="2.2" fill="#7fa8e0" stroke="#2b5fb0" stroke-width="1" opacity="1"/>
+<rect x="170.2" y="97.3" width="757.5" height="2.2" fill="#7fa8e0" stroke="#2b5fb0" stroke-width="1" opacity="1"/>
+<rect x="177.7" y="232.0" width="12.8" height="12.8" fill="#e03030" stroke="#900" stroke-width="1" opacity="1"/>
+<rect x="177.7" y="101.1" width="12.8" height="12.8" fill="#e03030" stroke="#900" stroke-width="1" opacity="1"/>
+<rect x="907.1" y="232.0" width="12.8" height="12.8" fill="#e03030" stroke="#900" stroke-width="1" opacity="1"/>
+<rect x="907.1" y="101.1" width="12.8" height="12.8" fill="#e03030" stroke="#900" stroke-width="1" opacity="1"/>
+<rect x="132.4" y="115.4" width="57.6" height="76.8" fill="#cfe8ff" stroke="#4a7fb5" stroke-width="1" stroke-dasharray="3,2" opacity="1"/>
+<rect x="193.9" y="111.6" width="652.8" height="76.8" fill="#cfe8ff" stroke="#4a7fb5" stroke-width="1" stroke-dasharray="3,2" opacity="1"/>
+<rect x="846.7" y="111.6" width="57.6" height="76.8" fill="#cfe8ff" stroke="#4a7fb5" stroke-width="1" stroke-dasharray="3,2" opacity="1"/>
+<rect x="922.8" y="102.7" width="57.6" height="44.8" fill="#ffd9b3" stroke="#b56a20" stroke-width="1" stroke-dasharray="3,2" opacity="1"/>
+<rect x="110.4" y="107.8" width="2.9" height="130.4" fill="#444" stroke="#222" stroke-width="1" opacity="1"/>
+<text x="94.0" y="173.0" text-anchor="middle" font-size="8" fill="#222" transform="rotate(-90 94.0 173.0)">端门（双扇，外开）</text>
+<text x="984.2" y="174.2" text-anchor="middle" font-size="8" fill="#222" transform="rotate(-90 984.2 174.2)">封闭端墙（不开门）</text>
+<text x="1009.2" y="140.3" text-anchor="middle" font-size="8" fill="#222" transform="rotate(-90 1009.2 140.3)">爬梯（端墙外侧）</text>
+<rect x="987.8" y="125.2" width="7.3" height="30.2" fill="#999" stroke="#555" stroke-width="1" opacity="1"/>
+<text x="161.2" y="151.8" text-anchor="middle" font-size="8" fill="#222">设备区 A</text>
+<text x="359.6" y="149.9" text-anchor="middle" font-size="9" fill="#222">设备区 B（x 1 311 – 11 511）</text>
+<text x="724.4" y="149.9" text-anchor="middle" font-size="9" fill="#222">设备区 B（x 1 311 – 11 511）</text>
+<text x="875.4" y="151.8" text-anchor="middle" font-size="8" fill="#222">设备区 C</text>
+<text x="951.6" y="125.6" text-anchor="middle" font-size="8" fill="#222">设备区 D</text>
+<text x="359.6" y="219.0" text-anchor="middle" font-size="9" fill="#555">前通道</text>
+<text x="724.4" y="219.0" text-anchor="middle" font-size="9" fill="#555">前通道</text>
+<text x="184.1" y="224.2" text-anchor="middle" font-size="7.5" fill="#900">液压总成</text>
+<text x="913.5" y="224.2" text-anchor="middle" font-size="7.5" fill="#900">液压总成</text>
+<text x="184.1" y="91.0" text-anchor="middle" font-size="7.5" fill="#900">液压总成</text>
+<text x="913.5" y="91.0" text-anchor="middle" font-size="7.5" fill="#900">液压总成</text>
+<text x="164.5" y="212.6" text-anchor="middle" font-size="7" fill="#8a6000" transform="rotate(-90 164.5 212.6)">40ft 立柱</text>
+<text x="933.4" y="212.6" text-anchor="middle" font-size="7" fill="#8a6000" transform="rotate(-90 933.4 212.6)">40ft 立柱</text>
+<line x1="110.0" y1="34.2" x2="987.8" y2="34.2" stroke="#555" stroke-width="0.8"/>
+<line x1="110.0" y1="30.2" x2="110.0" y2="38.2" stroke="#555" stroke-width="0.8"/>
+<line x1="987.8" y1="30.2" x2="987.8" y2="38.2" stroke="#555" stroke-width="0.8"/>
+<text x="119.6" y="31.2" text-anchor="start" font-size="9" fill="#333">总长 13 716（角件外缘）</text>
+<line x1="110.0" y1="34.2" x2="987.8" y2="34.2" stroke="#555" stroke-width="0.8"/>
+<line x1="110.0" y1="30.2" x2="110.0" y2="38.2" stroke="#555" stroke-width="0.8"/>
+<line x1="987.8" y1="30.2" x2="987.8" y2="38.2" stroke="#555" stroke-width="0.8"/>
+<text x="577.2" y="31.2" text-anchor="start" font-size="9" fill="#333">总长 13 716（角件外缘）</text>
+<line x1="170.2" y1="50.2" x2="927.7" y2="50.2" stroke="#555" stroke-width="0.8"/>
+<line x1="170.2" y1="46.2" x2="170.2" y2="54.2" stroke="#555" stroke-width="0.8"/>
+<line x1="927.7" y1="46.2" x2="927.7" y2="54.2" stroke="#555" stroke-width="0.8"/>
+<text x="180.4" y="47.2" text-anchor="start" font-size="9" fill="#333">飞翼开口 11 836（x 940 – 12 776）</text>
+<line x1="170.2" y1="50.2" x2="927.7" y2="50.2" stroke="#555" stroke-width="0.8"/>
+<line x1="170.2" y1="46.2" x2="170.2" y2="54.2" stroke="#555" stroke-width="0.8"/>
+<line x1="927.7" y1="46.2" x2="927.7" y2="54.2" stroke="#555" stroke-width="0.8"/>
+<text x="577.2" y="47.2" text-anchor="start" font-size="9" fill="#333">飞翼开口 11 836（x 940 – 12 776）</text>
+<line x1="110.0" y1="270.2" x2="177.7" y2="270.2" stroke="#555" stroke-width="0.8"/>
+<line x1="110.0" y1="266.2" x2="110.0" y2="274.2" stroke="#555" stroke-width="0.8"/>
+<line x1="177.7" y1="266.2" x2="177.7" y2="274.2" stroke="#555" stroke-width="0.8"/>
+<text x="143.9" y="281.2" text-anchor="middle" font-size="9" fill="#333">1 058</text>
+<line x1="177.7" y1="270.2" x2="190.5" y2="270.2" stroke="#555" stroke-width="0.8"/>
+<line x1="177.7" y1="266.2" x2="177.7" y2="274.2" stroke="#555" stroke-width="0.8"/>
+<line x1="190.5" y1="266.2" x2="190.5" y2="274.2" stroke="#555" stroke-width="0.8"/>
+<text x="184.1" y="281.2" text-anchor="middle" font-size="9" fill="#333">200</text>
+<line x1="907.1" y1="270.2" x2="919.9" y2="270.2" stroke="#555" stroke-width="0.8"/>
+<line x1="907.1" y1="266.2" x2="907.1" y2="274.2" stroke="#555" stroke-width="0.8"/>
+<line x1="919.9" y1="266.2" x2="919.9" y2="274.2" stroke="#555" stroke-width="0.8"/>
+<text x="913.5" y="281.2" text-anchor="middle" font-size="9" fill="#333">200</text>
+<line x1="919.9" y1="270.2" x2="987.8" y2="270.2" stroke="#555" stroke-width="0.8"/>
+<line x1="919.9" y1="266.2" x2="919.9" y2="274.2" stroke="#555" stroke-width="0.8"/>
+<line x1="987.8" y1="266.2" x2="987.8" y2="274.2" stroke="#555" stroke-width="0.8"/>
+<text x="953.8" y="281.2" text-anchor="middle" font-size="9" fill="#333">1 062</text>
+</svg></figure>
+  <p class="cap">图 1b　平面（箱中至封闭端）：图例同图 1a；D 区为贴后墙布置的设备</p>
+  <figure class="fig"><svg xmlns="http://www.w3.org/2000/svg" data-fig="section" viewBox="0 0 1014 661" font-family='"Noto Sans CJK SC","Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif' font-size="17.5">
+<rect x="120.0" y="571.8" width="414.5" height="29.2" fill="#dddddd" stroke="#333" stroke-width="1"/>
+<text x="327.2" y="584.0" text-anchor="middle" font-size="14.9" fill="#222">底架 + 地板（地板面 z 172）</text>
+<rect x="286.3" y="180.8" width="204.0" height="391.0" fill="#f2f2f2" stroke="#4a7fb5" stroke-width="1" stroke-dasharray="3,2"/>
+<text x="388.3" y="380.0" text-anchor="middle" font-size="15.8" fill="#4a7fb5">设备带 y 978 – 2 178</text>
+<text x="208.4" y="380.0" text-anchor="middle" font-size="15.8" fill="#555">前通道</text>
+<rect x="126.3" y="142.3" width="5.9" height="429.4" fill="#7fa8e0" stroke="#2b5fb0" stroke-width="1"/>
+<rect x="522.4" y="142.3" width="6.0" height="429.4" fill="#7fa8e0" stroke="#2b5fb0" stroke-width="1"/>
+<rect x="124.1" y="144.0" width="7.7" height="17.0" fill="#4a7fb5" stroke="#1f3f70" stroke-width="1"/>
+<rect x="522.9" y="144.0" width="7.6" height="17.0" fill="#4a7fb5" stroke="#1f3f70" stroke-width="1"/>
+<rect x="124.1" y="115.1" width="13.6" height="27.2" fill="#e0a020" stroke="#8a6000" stroke-width="1"/>
+<rect x="517.0" y="115.1" width="13.6" height="27.2" fill="#e0a020" stroke="#8a6000" stroke-width="1"/>
+<rect x="127.0" y="110.4" width="400.5" height="4.2" fill="#bbbbbb" stroke="#333" stroke-width="1"/>
+<rect x="120.0" y="108.7" width="27.5" height="20.1" fill="#999" stroke="#333" stroke-width="1" stroke-dasharray="2,2"/>
+<rect x="506.9" y="108.7" width="27.5" height="20.1" fill="#999" stroke="#333" stroke-width="1" stroke-dasharray="2,2"/>
+<rect x="118.3" y="101.5" width="417.9" height="2.0" fill="#cfe8ff" stroke="#4a7fb5" stroke-width="1"/>
+<rect x="120.0" y="84.5" width="20.4" height="17.0" fill="#cfe8ff" stroke="#4a7fb5" stroke-width="1"/>
+<rect x="514.1" y="84.5" width="20.4" height="17.0" fill="#cfe8ff" stroke="#4a7fb5" stroke-width="1"/>
+<rect x="118.3" y="48.5" width="417.9" height="36.0" fill="#eef5ff" stroke="#4a7fb5" stroke-width="1" stroke-dasharray="3,2"/>
+<text x="327.2" y="63.8" text-anchor="middle" font-size="14.9" fill="#2b5fb0">顶部设备模块（我方，底面 z 2 926，与角件顶面 2 896 留 30）</text>
+<rect x="484.1" y="391.9" width="34.0" height="179.9" fill="#e03030" stroke="#900" stroke-width="1"/>
+<rect x="484.1" y="257.9" width="34.0" height="134.0" fill="#f0a0a0" stroke="#900" stroke-width="1" stroke-dasharray="2,2"/>
+<text x="482.1" y="482.0" text-anchor="end" font-size="14.0" fill="#900">液压总成 200 深</text>
+<text x="482.1" y="329.0" text-anchor="end" font-size="14.0" fill="#900">活塞杆/支架包络至 z 2 018</text>
+<polyline points="536.5,84.5 553.5,78.5 562.0,78.5" fill="none" stroke="#2b5fb0" stroke-width="0.7"/>
+<text x="565.4" y="81.5" font-size="14.9" fill="#2b5fb0">z 3 038 顶模块底横梁上缘（我方）</text>
+<polyline points="536.5,103.6 553.5,102.5 562.0,102.5" fill="none" stroke="#2b5fb0" stroke-width="0.7"/>
+<text x="565.4" y="105.5" font-size="14.9" fill="#2b5fb0">z 2 926 顶模块底面（我方）</text>
+<polyline points="536.5,108.7 553.5,126.5 562.0,126.5" fill="none" stroke="#333" stroke-width="0.7"/>
+<text x="565.4" y="129.5" font-size="14.9" fill="#333">z 2 896 角件顶面</text>
+<polyline points="536.5,110.4 553.5,150.5 562.0,150.5" fill="none" stroke="#333" stroke-width="0.7"/>
+<text x="565.4" y="153.5" font-size="14.9" fill="#333">z 2 886 顶板上表面（板厚 25）</text>
+<polyline points="536.5,115.1 553.5,174.5 562.0,174.5" fill="none" stroke="#8a6000" stroke-width="0.7"/>
+<text x="565.4" y="177.5" font-size="14.9" fill="#8a6000">z 2 858 固定顶侧梁 80×160 上缘</text>
+<polyline points="536.5,142.3 553.5,198.5 562.0,198.5" fill="none" stroke="#8a6000" stroke-width="0.7"/>
+<text x="565.4" y="201.5" font-size="14.9" fill="#8a6000">z 2 698 顶侧梁下缘 / 翼板上缘</text>
+<polyline points="536.5,144.0 553.5,222.5 562.0,222.5" fill="none" stroke="#1f3f70" stroke-width="0.7"/>
+<text x="565.4" y="225.5" font-size="14.9" fill="#1f3f70">z 2 688 翼框顶杆 45×100 上缘</text>
+<polyline points="536.5,161.0 553.5,246.5 562.0,246.5" fill="none" stroke="#1f3f70" stroke-width="0.7"/>
+<text x="565.4" y="249.5" font-size="14.9" fill="#1f3f70">z 2 588 翼框顶杆下缘</text>
+<polyline points="536.5,257.9 553.5,257.9 562.0,257.9" fill="none" stroke="#900" stroke-width="0.7"/>
+<text x="565.4" y="260.9" font-size="14.9" fill="#900">z 2 018 液压总成包络上限</text>
+<polyline points="536.5,391.9 553.5,391.9 562.0,391.9" fill="none" stroke="#900" stroke-width="0.7"/>
+<text x="565.4" y="394.9" font-size="14.9" fill="#900">z 1 230 液压缸体上缘</text>
+<polyline points="536.5,571.8 553.5,571.8 562.0,571.8" fill="none" stroke="#333" stroke-width="0.7"/>
+<text x="565.4" y="574.8" font-size="14.9" fill="#333">z 172 地板面</text>
+<text x="565.4" y="295.0" font-size="14.9" fill="#900">铰链轴位置与开翼回转包络：待厂家确认（问题 A1/A2）</text>
+<line x1="120.0" y1="621.4" x2="534.5" y2="621.4" stroke="#555" stroke-width="0.8"/>
+<text x="327.2" y="628.2" text-anchor="middle" font-size="14.9" fill="#333">2 438（角件外缘）；翼板内表面净宽 2 295（y 72 – 2 367）；地板面至顶板下表面 2 689</text>
+</svg></figure>
+  <p class="cap">图 2　横剖面（后侧）：顶侧梁、翼框、顶板、角件与我方顶部模块底面的相对标高</p>
+</section>
+
+<section>
+  <h2><span class="n">3</span>飞翼与液压系统</h2>
+  <div class="scroll">
+  <table>
+    <thead><tr><th>编号</th><th>我方理解 / 要求</th><th>请贵司确认或提供</th><th>答复</th></tr></thead>
+    <tbody>
+      <tr><td>A-1</td><td>从模型判断，80 × 160 为固定顶侧梁，45 × 100 翼框顶杆挂在其下，铰链线约在 z 2 690 – 2 700、y 2 415 附近</td><td>铰链形式（外露合页 / 内藏轴）、铰链轴中心的 y、z 坐标、铰链数量与分布</td><td></td></tr>
+      <tr><td>A-2</td><td>我方顶部模块底面为 z 2 926，模块侧面与箱体角件外缘齐平（y 0 与 2 438），滴水檐外凸 30。开翼过程中翼框与翼板的回转包络不得高于 z 2 896，也不得进入 y 0 – 2 438 范围内 z 2 896 以上的空间</td><td>翼板由关到全开的回转包络图（最高点、最外点），最大开启角度，全开时翼板底缘的标高与外伸距离</td><td></td></tr>
+      <tr><td>A-3</td><td>液压总成的位置、落地尺寸、高度、外凸量以 S-10 为准，我方设备已按该包络避让，两端各留出 x 1 058 – 1 258 与 12 454 – 12 654 不放设备</td><td>液压总成的最终定位与包络（含油管、接头、防护罩），是否与模型一致；若可沿 x 向靠近立柱移动，可移动量</td><td></td></tr>
+      <tr><td>A-4</td><td>液压油管在箱内的走向未在模型中体现</td><td>油管走向（沿地板边、沿立柱或沿顶侧梁）、占用截面、固定方式；箱内是否还有其他液压部件</td><td></td></tr>
+      <tr><td>A-5</td><td>液压动力单元（泵站、油箱、阀组、控制箱）的位置与尺寸未在模型中体现</td><td>动力单元的安装位置（箱内 / 箱外 / 端墙）、外形尺寸、重量，电源规格（电压、相数、功率、启动电流），我方按此预留供电回路</td><td></td></tr>
+      <tr><td>A-6</td><td>我方需要将飞翼状态接入自己的监控系统</td><td>是否提供翼板开到位 / 关到位、锁紧到位的无源触点，以及远程开关翼的控制接口；控制电压</td><td></td></tr>
+      <tr><td>A-7</td><td>翼板锁紧机构在箱内的凸出物未在模型中逐一识别</td><td>锁具、把手、限位块等在箱内的位置与凸出尺寸清单，作为我方设备避让依据</td><td></td></tr>
+      <tr><td>A-8</td><td>开翼后翼板处于悬臂状态</td><td>全开状态允许的风速，是否配机械撑杆或安全锁，停电时的手动放下方式，单侧翼板重量与开闭时间</td><td></td></tr>
+      <tr><td>A-9</td><td>翼板与翼框、顶侧梁、立柱之间的密封</td><td>关闭状态的防水防尘等级（要求不低于 IP55），密封条形式与更换方式</td><td></td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<section>
+  <h2><span class="n">4</span>箱顶接口（顶部设备模块）</h2>
+  <div class="scroll">
+  <table>
+    <thead><tr><th>编号</th><th>我方理解 / 要求</th><th>请贵司确认或提供</th><th>答复</th></tr></thead>
+    <tbody>
+      <tr><td>B-1</td><td>顶部模块通过四个角的底角件与箱体四个顶角件用扭锁连接，模块底角件底面 z 2 926，比箱体角件顶面高 30。模块总重按不超过 10 t 考虑（最终重量表另发）</td><td>箱体顶角件、角柱与端框在该荷载下的承载能力；是否允许 40 ft 位置的中间顶角件同时受力；顶角件是否为 ISO 1161 标准件</td><td></td></tr>
+      <tr><td>B-2</td><td>模块底面横梁（宽 120，z 2 938 – 3 038）沿箱两侧全长布置，在 y 0 – 120 与 2 318 – 2 438 范围内，与固定顶侧梁在平面上重叠</td><td>顶侧梁上方是否有高于 z 2 896 的任何构件（合页、吊耳、防雨檐、加强板）</td><td></td></tr>
+      <tr><td>B-3</td><td>箱顶板需要开孔：水管穿孔约 40 处，孔径不大于 220，全部位于 y 900 – 2 230、x 380 – 12 350 范围内；电缆穿孔约 90 处，孔径不大于 120，全部位于 y 280 – 990、x 730 – 13 520 范围内。孔位均避开顶侧梁 180 以上，避开顶板拼缝</td><td>顶板材质与厚度；是否允许按上述范围开孔；开孔处是否需要贵司加焊补强框或翻边套管，由贵司还是我方开孔；开孔后对箱体刚度与 CSC 铭牌的影响</td><td></td></tr>
+      <tr><td>B-4</td><td>端门端顶梁 S-8 为结构件，我方所有穿孔均避开其 x 0 – 368 范围，最近一孔距其 28</td><td>该顶梁范围内是否绝对禁止开孔；箱顶是否还有其他未在模型中体现的横向结构</td><td></td></tr>
+      <tr><td>B-5</td><td>顶部模块盖住整个箱顶，箱顶板不再直接受雨</td><td>顶板排水方向与坡度；模块盖住后是否影响顶板的防腐与排水设计</td><td></td></tr>
+      <tr><td>B-6</td><td>模块在封闭端墙一端（x 13 716 端）向外伸出约 920，标高 z 2 950 以上，位于 y 300 – 980 范围</td><td>该外伸部分是否与端墙上的任何附件冲突</td><td></td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<section>
+  <h2><span class="n">5</span>箱内接口</h2>
+  <div class="scroll">
+  <table>
+    <thead><tr><th>编号</th><th>我方理解 / 要求</th><th>请贵司确认或提供</th><th>答复</th></tr></thead>
+    <tbody>
+      <tr><td>C-1</td><td>设备沿箱长布置在 y 978 – 2 178 带内，前侧为通道。分区：A 区 x 350 – 1 250，B 区 x 1 311 – 11 511，C 区 x 11 511 – 12 411，D 区 x 12 700 – 13 600（y 1 617 – 2 317）。B 区整体落在飞翼开口内</td><td>无需答复，供贵司了解荷载与穿孔的分布</td><td></td></tr>
+      <tr><td>C-2</td><td>地板荷载（我方预估上限，最终以设备重量表为准）：B 区沿箱长线荷载不大于 1.9 t/m，单台设备不大于 1.6 t，四点支承；A、C 区单台不大于 1.2 t；D 区不大于 0.6 t。设备在贵司出厂后由我方安装，装好后随箱整体运输</td><td>地板结构（钢板厚度、底梁规格与间距）与设计荷载；上述荷载分布下是否需要加强；地板平整度</td><td></td></tr>
+      <tr><td>C-3</td><td>设备需与地板固定</td><td>允许的固定方式（穿地板螺栓 / 焊接底座 / 预埋螺母），地板下可供固定的底梁位置</td><td></td></tr>
+      <tr><td>C-4</td><td>翼板厚 35</td><td>翼板构造（单层钢板 / 夹芯板）、保温材料与厚度、传热系数；内表面材质</td><td></td></tr>
+      <tr><td>C-5</td><td>箱体保温与防结露</td><td>顶板、端墙、地板的保温做法与传热系数；箱内相对湿度较低时的结露风险评估</td><td></td></tr>
+      <tr><td>C-6</td><td>箱内壁面凸出物</td><td>除液压总成与锁具外，箱内所有凸出物（加强筋、合页螺栓、密封压条、接地端子等）的位置与尺寸清单</td><td></td></tr>
+      <tr><td>C-7</td><td>接地</td><td>箱体接地端子位置与规格，翼板与箱体之间的跨接</td><td></td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<section>
+  <h2><span class="n">6</span>端部</h2>
+  <div class="scroll">
+  <table>
+    <thead><tr><th>编号</th><th>我方理解 / 要求</th><th>请贵司确认或提供</th><th>答复</th></tr></thead>
+    <tbody>
+      <tr><td>D-1</td><td>端门只设在 x 0 端，双扇外开，净开口约 2 038 × 2 583</td><td>端门净开口尺寸、开启角度（要求可开至 270°并有定位）、门锁形式、门槛高度</td><td></td></tr>
+      <tr><td>D-2</td><td>x 13 716 端不设门，做成封闭端墙</td><td>封闭端墙的构造与板厚；取消门后端框是否变化</td><td></td></tr>
+      <tr><td>D-3</td><td>封闭端墙外侧安装一部固定爬梯，梯梁 60 × 12 两根，位于 y 1 494 – 1 506 与 1 954 – 1 966，自 z 164 起向上通至顶部模块顶面；在端墙上需要三组焊接支座，标高 z 684、1 384、2 184，支座外伸 114</td><td>端墙是否允许焊接爬梯支座及其承载能力（按 1 人 + 工具 150 kg，动载系数 2）；支座由贵司预焊还是由我方现场安装</td><td></td></tr>
+      <tr><td>D-4</td><td>端墙不需要开孔</td><td>无需答复</td><td></td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<section>
+  <h2><span class="n">7</span>文件与交付</h2>
+  <div class="scroll">
+  <table>
+    <thead><tr><th>编号</th><th>要求</th><th>答复</th></tr></thead>
+    <tbody>
+      <tr><td>E-1</td><td>请提供：总图（三视图，含全部结构件截面）、铰链与液压系统布置图、开翼回转包络图、箱内凸出物清单图、允许开孔区域图</td><td></td></tr>
+      <tr><td>E-2</td><td>请提供：液压动力单元规格书、电气接口图、翼板操作与维护说明</td><td></td></tr>
+      <tr><td>E-3</td><td>请提供：空箱重量、重心位置、允许总重、堆码与吊装限制（含箱顶加装模块后的吊装方式）</td><td></td></tr>
+      <tr><td>E-4</td><td>请说明：箱顶开孔与端墙焊接支座后，CSC 铭牌与相关认证是否仍然有效；若需按非标箱处理，需要贵司提供的证明文件</td><td></td></tr>
+      <tr><td>E-5</td><td>请说明：本文件确认后到贵司出具正式图纸的周期，以及首台样箱的交付周期</td><td></td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<section>
+  <h2><span class="n">8</span>说明</h2>
+  <p>本文件只约定箱体与我方设备、顶部模块之间的几何与接口边界，不涉及箱体的商务条件。贵司答复的尺寸与限制将直接作为我方箱内布置与顶部模块加工的输入，答复后若再变更，请书面通知。</p>
+  <p>本文件所附平面图与剖面图由同一套量测数据生成，与表 2 数值一致；图中我方设备区仅表示外包络，不代表设备形式。</p>
+</section>
+
+<div class="foot">
+  <p>本文件为技术确认用，贵司答复内容将作为箱体正式图纸与我方设备布置的共同依据。</p>
+</div>
+
+</div>

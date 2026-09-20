@@ -63,7 +63,7 @@ ttags:
 | §3.3 | 面向 AI 工作负载的可靠性 | 按工作负载类型（Training/Inference）差异化设计 |
 | §3.4 | 标准化交付 | 工厂预集成 + 标准接口 + 模块化运维 |
 | §3.5 | 计算平台选型 | PCIe+Immersion vs SXM+DLC 对比及选型建议 |
-| §3.6 | 混合算力架构 | AC40 + DC45 同园区混合部署 |
+| §3.6 | 混合算力架构 | AC40 + DC45 同园区混合部署 ^mdc-9d3bd10c74 |
 
 **结论：** 设计原则必须适配 AI 工作负载特征和全球气候环境。
 
@@ -80,7 +80,7 @@ ttags:
 | 章节 | 主题 | 核心结论 |
 |------|------|---------|
 | §4.1 | 总体架构原则 | 算力独立 / 分层容错 / 能量缓冲优先 |
-| §4.2 | 计算系统架构 | AC40（PCIe+Immersion）/ DC45（SXM+DLC）详细设计 |
+| §4.2 | 计算系统架构 | AC40（PCIe+Immersion）/ DC45（SXM+DLC）详细设计 ^mdc-dc33e84e04 |
 | §4.3 | 冷却系统架构 | 冷却冗余分层模型 / 分层控制逻辑 / 热路径设计原则 |
 | §4.4 | 电力系统架构 | 单路 / 双路 / Tier III 实现 / 电力调度优先级 |
 | §4.5 | 认证与标准体系 | UL / CE / IEC / NFPA / Uptime Tier III 适用场景 |
@@ -89,9 +89,9 @@ ttags:
 **结论：** 三域架构 + 分层容错实现整体可靠性。
 
 **关联文档：**
-- [[L1240C45 Power System Criteria|KB/LIQUID/L1240C45/DESIGN/L1240C45 Power System Criteria]]
-- [[L1240C45 Hydronic & Thermal Design Criteria|KB/LIQUID/L1240C45/DESIGN/L1240C45 Hydronic & Thermal Design Criteria]]
-- [[L1240C45 Compliance Checklist UL CE Fire|KB/LIQUID/L1240C45/DESIGN/L1240C45 Compliance Checklist UL CE Fire]]
+- [[L1240C45 Power System Criteria|KB/LIQUID/L1240C45/DESIGN/L1240C45 Power System Criteria]] ^mdc-48b50a5c23
+- [[L1240C45 Hydronic & Thermal Design Criteria|KB/LIQUID/L1240C45/DESIGN/L1240C45 Hydronic & Thermal Design Criteria]] ^mdc-15b3e17a79
+- [[L1240C45 Compliance Checklist UL CE Fire|KB/LIQUID/L1240C45/DESIGN/L1240C45 Compliance Checklist UL CE Fire]] ^mdc-d7fac48938
 - [[RA-002_Liquid_1.2MW|Reference Architecture/EDGE_INFERENCE_DLC_1.2MW]]
 
 ---
@@ -106,13 +106,13 @@ ttags:
 | §5.2 | 单模块部署 | 最小可部署单元，三个外部接入条件即可运行 |
 | §5.3 | ACC 园区部署 | 共享冷却/电力，模块级 UPS 不共享 |
 | §5.4 | 扩展路径 | 线性增量扩展，电力主接入按最终规模预留 |
-| §5.5 | 混合算力园区 | AC40 + DC45 同园区，共享冷却站 |
+| §5.5 | 混合算力园区 | AC40 + DC45 同园区，共享冷却站 ^mdc-681f41e13c |
 | §5.6 | 运维控制架构 | BMS → DCIM → 算力调度三层分离 |
 
 **结论：** 以模块为原子单元，以 ACC 为标准园区单元，线性扩展。
 
 **关联文档：**
-- [[L1240C45_Thermal_Assessment_6Sites|KB/LIQUID/L1240C45/DESIGN/L1240C45_Thermal_Assessment_6Sites]]
+- [[L1240C45_Thermal_Assessment_6Sites|KB/LIQUID/L1240C45/DESIGN/L1240C45_Thermal_Assessment_6Sites]] ^mdc-c96dde96d9
 
 ---
 
@@ -139,10 +139,10 @@ ttags:
 三大产品平台对比。
 
 **关联文档：**
-- [[MDC_Product_Quick_Ref|KB/LIQUID/L1240C45/DESIGN/MDC_Product_Quick_Ref]]（详细对比表）
-- [[I400C40|KB/IMMERSION/PRODUCTS_I400C40]]
-- [[I400C45|KB/IMMERSION/PRODUCTS_I400C45]]
-- [[L1240C45_Tech_Spec_EN|KB/LIQUID/L1240C45/PRODUCTS/L1240C45 Tech Spec EN]]
+- [[MDC_Product_Quick_Ref|KB/LIQUID/L1240C45/DESIGN/MDC_Product_Quick_Ref]]（详细对比表） ^mdc-bd22c1a9b8
+- [[I400C40|KB/IMMERSION/PRODUCTS_I400C40]] ^mdc-1f765e899a
+- [[I400C45|KB/IMMERSION/PRODUCTS_I400C45]] ^mdc-528f4cfbf5
+- [[L1240C45_Tech_Spec_EN|KB/LIQUID/L1240C45/PRODUCTS/L1240C45 Tech Spec EN]] ^mdc-513608c422
 
 ---
 
@@ -162,14 +162,14 @@ MDC Engineering Handbook（索引入口）
 ├── §1–6 核心内容（不分拆，保持 WHY→HOW→WHAT 论证链）
 │
 ├── §7 产品快速参考 → [[MDC_Product_Quick_Ref]]
-│     ├── [[I400C40]]
-│     ├── [[I400C45]]
+│     ├── [[I400C40]] ^mdc-6af340ffa5
+│     ├── [[I400C45]] ^mdc-4420b0a90c
 │     └── [[L1240C45_Tech_Spec_EN]]
 │
 └── §8 研发标准 → [[MDC_Standards_Compilation]]
-      ├── [[L1240C45 Power System Criteria]]
-      ├── [[L1240C45 Hydronic & Thermal Design Criteria]]
-      ├── [[L1240C45 Compliance Checklist UL CE Fire]]
+      ├── [[L1240C45 Power System Criteria]] ^mdc-8efe0fa200
+      ├── [[L1240C45 Hydronic & Thermal Design Criteria]] ^mdc-a1d5656bd2
+      ├── [[L1240C45 Compliance Checklist UL CE Fire]] ^mdc-11761269f3
       └── [[L1240C45_Thermal_Assessment_6Sites]]
 
 三大 Reference Architecture（案例验证）：

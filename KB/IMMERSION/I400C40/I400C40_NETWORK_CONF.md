@@ -7,7 +7,7 @@ tags:
 Supplier Name:
 Category: Network Configuration
 ---
-# AC40 Network Configuration — Metadata
+# AC40 Network Configuration — Metadata ^mdc-97a32afa47
 
 > ⚠️ 本文件为 `I400C40_NETWORK_CONF.pdf` 的元数据伴侣文件。PDF 文件本身不支持 YAML frontmatter，相关标签和元数据记录于此。
 
@@ -18,7 +18,7 @@ Category: Network Configuration
 
 ## 说明
 
-AC40 网络配置参考文档，包含 AC40 集装箱的网络架构、端口定义及布线规范。网络设计原则（IB/ROCE/带内带外）请参考：[[NETWORK_Guideline|KB/Guideline/NETWORK_Guideline]]
+AC40 网络配置参考文档，包含 AC40 集装箱的网络架构、端口定义及布线规范。网络设计原则（IB/ROCE/带内带外）请参考：[[NETWORK_Guideline|KB/Guideline/NETWORK_Guideline]] ^mdc-30626b15b6
 
 ---
 

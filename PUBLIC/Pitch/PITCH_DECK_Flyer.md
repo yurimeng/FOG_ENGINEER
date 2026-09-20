@@ -30,11 +30,11 @@ Fog Computing delivers modular, power-ready AI infrastructure systems
 
 We provide fully integrated, standardized deployment units:
 
-- AC40 (Immersion Cooling)  
+- AC40 (Immersion Cooling)   ^mdc-67e71b9057
   - 500KW IT load  
   - Ultra-high efficiency (PUE ~1.0X)
 
-- DC45 (Direct Liquid Cooling)  
+- DC45 (Direct Liquid Cooling)   ^mdc-ab2b3dd4bf
   - 1.2MW IT load  
   - Designed for high-density AI clusters
 
@@ -69,7 +69,7 @@ All systems are engineered as modular, interoperable building blocks:
 
 ### Traction
 
-- ✅ AC40 completed 0→1 validation
+- ✅ AC40 completed 0→1 validation ^mdc-8fb2064fc0
 - ✅ First commercial deployment signed and revenue collected
 - ✅ Entering second production cycle
 
@@ -146,7 +146,7 @@ Resulting Market Scale:
 Use of Funds
 
 - 50% — Infrastructure Deployment
-  - AC40 / DC45 production
+  - AC40 / DC45 production ^mdc-6871851b3c
   - Site build-out
 
 - 25% — Power Lock-in

@@ -16,6 +16,15 @@ tags:
 
 ---
 
+## 0. 未决项总表（做事前先看）
+
+[[OPEN_ITEMS]] —— 全工作区唯一的待办登记处（2026-09-08 建表）。
+- §1 P0 焦点：卡住埋件 / 卡住对外文件 / 卡住选型报价 的 43 条
+- §2 外部索取包：按 STULZ / Siemens / Supermicro / TICA / 客户 打包，发信前看这里
+- §3 分领域全表 · §4 **口径冲突与陈旧引用登记（引数字前必扫）** · §5 长期挂账
+
+---
+
 ## 1. 灵魂层（启动必读）
 
 启动顺序（来自 [[MDC/SOUL]] §BOOTSTRAP）：
@@ -40,14 +49,16 @@ tags:
 | 角色 | [[MDC/AGENTS]] → [[AM]] / [[ATS]] / [[Cooling Engineer]] / [[Power Engineer]] / [[Layout Planner]] / [[Cost Architect]] / [[Compliance Officer]] / [[Risk Auditor]] / [[Market Researcher]] | 9 个 Agent 角色定义 |
 | 工作流 | [[WORKFLOW]] | 7 阶段工程工作流（Lead Qual → Discovery → Requirement → Arch → Engineering → Governance → Proposal） |
 | 流程 | [[MDC/PROCESS/index]] → [[PROCESS/AM/]] / [[PROCESS/ATS/]] / [[PROCESS/SUPPORT/]] | AM/ATS/支持流程 |
+| 产品设计 | [[_domains/产品设计]] | 四域入口 |
 | 产品 KB | [[MDC/KB/index]] → [[KB/LIQUID/index]] / [[KB/IMMERSION/index]] · [[_COMMON/PRODUCTS_MDC]] | 产品手册入口。两条线：**Liquid Cooling**（`L`）L1240C45 · L1800C45 · L450C20；**Immersion Cooling**（`I`）I400C45 · I400C40 · I200C20（六 SKU 均 shipped）+ I50TS 槽体组件 |
 | 产品基准 | [[PRODUCT_SPEC_BASELINE]] · [[NAMING_MAP]] · [[UNCONFIRMED_Convention]] | 六 SKU 规格唯一上游 · 旧名↔新名映射 · `#unconfirmed` 标注规范 |
 | 第三方 KB | [[MDC/KB/3RD-PARTY/index]] → [[3rd Party List]] | BESS / Busbar / COOLING / NETWORK / UPS 第三方清单 |
 | 技术指南 | [[MDC/KB/Guideline/index]] → COOLING / POWER_SYSTEMS / LAYOUT / COMPLIANCE / RISK / COST / MARKETING | 7 个领域 Guideline |
 | 参考架构 | [[MDC/Reference Architecture/index]] → RA-001 (0.4MW 浸没) / RA-002 (1.2MW DLC) | 已验证的预工程配置 |
 | 工具 | [[MDC/TOOLS/TOOLS]] → [[CRM_WORKFLOW]] / [[KB_ACCESS]] / [[QUOTE_ENGINE]] | CRM/KB 访问/报价引擎（商务专用）|
-| 项目 | [[project_list]] → 各项目目录 | 客户项目（修改需 Yuri 确认）|
-| 方案设计 | [[Solutions Design/index]] | 方案设计稿 |
+| 项目 | [[_domains/项目]] · [[project_list]] | 客户项目（修改需 Yuri 确认）|
+| 采购询价 | [[_domains/采购询价]] | `SupplyChain/` 不存在；入口已固定为 `**/PROCUREMENT/**` 与项目 `RFI*` |
+| 解决方案 | [[_domains/解决方案]] · [[Reference Architecture/index]] · [[PUBLIC/README]] | `Solutions Design/` 不存在，入口已固定 |
 | 画布 | [[KB_Relation.canvas]] | KB 关系图 |
 
 ---

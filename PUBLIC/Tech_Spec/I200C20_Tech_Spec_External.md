@@ -9,11 +9,11 @@ audience: 客户（对外输出版 · 可直接发送）/ Customer-facing (relea
 sku_id: I200C20ST50
 ---
 
-# I200C20 — Technical Specification（对外输出版 · External Release）
+# I200C20 — Technical Specification（对外输出版 · External Release） ^mdc-cf07e6d6f4
 **20ft 单相浸没式液冷算力舱 · 20ft single-phase immersion compute bay**
 
-> **受众 Audience：** 客户。本版为**唯一允许直接发给客户**的 I200C20 技术规格文件。
-> *Customers. This is the only I200C20 specification document approved for direct release.*
+> **受众 Audience：** 客户。本版为**唯一允许直接发给客户**的 I200C20 技术规格文件。 ^mdc-8ee1edf65a
+> *Customers. This is the only I200C20 specification document approved for direct release.* ^mdc-beed6411e8
 >
 > **配套版本 Companion versions：** 中文内部版 [[I200C20_Tech_Spec_CN]] · 英文内部版 [[I200C20_Tech_Spec_EN]]
 >
@@ -50,22 +50,22 @@ sku_id: I200C20ST50
 
 ## 2. 产品定位 · Product Positioning ^sec-2-positioning
 
-**I200C20 是 45 英尺进不去时的推理密度。**
+**I200C20 是 45 英尺进不去时的推理密度。** ^mdc-0333e8a331
 
-它面向的场地条件很具体：城市既有厂房内的一块空地、屋顶、地下空间、旧机房改造、道路转弯半径吃不下 40/45 英尺箱的园区 —— **场地本身决定了只能放 20 英尺，而算力需求并没有因此降低**。I200C20 的回答不是把密度降下来迁就箱型，而是在 20 英尺里保持与 400 kW 产品**完全相同的单槽密度**：4 台浸没槽，每槽 50 kW，200 kW IT。
+它面向的场地条件很具体：城市既有厂房内的一块空地、屋顶、地下空间、旧机房改造、道路转弯半径吃不下 40/45 英尺箱的园区 —— **场地本身决定了只能放 20 英尺，而算力需求并没有因此降低**。I200C20 的回答不是把密度降下来迁就箱型，而是在 20 英尺里保持与 400 kW 产品**完全相同的单槽密度**：4 台浸没槽，每槽 50 kW，200 kW IT。 ^mdc-68988590c1
 
-**同密度、一半槽数、为不同的场地约束而造。** 选择 I200C20 的通常原因不是预算，而是场地进不去。
+**同密度、一半槽数、为不同的场地约束而造。** 选择 I200C20 的通常原因不是预算，而是场地进不去。 ^mdc-ee31054b18
 
-***I200C20 is inference density for when 45 feet will not fit.***
+***I200C20 is inference density for when 45 feet will not fit.*** ^mdc-c8094998a5
 
-*The site conditions it addresses are specific: a clear patch inside an existing urban plant building, a rooftop, an underground space, a legacy machine room being converted, a campus whose turning radii cannot take a 40 or 45ft box — **the site itself dictates 20 feet, and the compute requirement has not shrunk to match**. The I200C20 answer is not to lower density to suit the form factor, but to hold inside 20 feet exactly the **same per-tank density** as the 400 kW products: four immersion tanks, 50 kW each, 200 kW of IT.*
+*The site conditions it addresses are specific: a clear patch inside an existing urban plant building, a rooftop, an underground space, a legacy machine room being converted, a campus whose turning radii cannot take a 40 or 45ft box — **the site itself dictates 20 feet, and the compute requirement has not shrunk to match**. The I200C20 answer is not to lower density to suit the form factor, but to hold inside 20 feet exactly the **same per-tank density** as the 400 kW products: four immersion tanks, 50 kW each, 200 kW of IT.* ^mdc-12b54cec90
 
-***The same density, half the tank count, built for a different site constraint.*** *The reason to choose I200C20 is usually not budget — it is that the site will not take a bigger box.*
+***The same density, half the tank count, built for a different site constraint.*** *The reason to choose I200C20 is usually not budget — it is that the site will not take a bigger box.* ^mdc-7508ffe173
 
 | 维度 · Dimension | 定位 · Positioning |
 |------------------|--------------------|
 | 产品线 · Product line | Immersion Cooling（单相浸没）· Single-phase immersion |
-| SKU | `I200C20ST50` |
+| SKU | `I200C20ST50` ^mdc-bf4cd1797e |
 | IT 容量 · IT capacity | 200 kW |
 | 构成单元 · Building blocks | 4× 浸没槽 · 4 immersion tanks |
 | 单槽密度 · Per-tank density | **50 kW —— 与 400 kW 产品相同** · 50 kW, identical to the 400 kW products |
@@ -78,9 +78,9 @@ sku_id: I200C20ST50
 
 | 产品 · Product | SKU | 箱型 · Container | IT | 槽数 · Tanks | 单槽密度 · Per-tank | UPS 边界 · UPS boundary |
 |----------------|-----|------------------|-----|--------------|---------------------|-------------------------|
-| I400C45 | `I400C45SUT50` | 45ft（含电力舱）· with power bay | 400 kW | 8 | 50 kW | 箱内 · Inside |
-| I400C40 | `I400C40ST50` | 40ft | 400 kW | 8 | 50 kW | 箱外 · Outside |
-| **I200C20** | `I200C20ST50` | **20ft** | **200 kW** | **4** | **50 kW** | **箱外 · Outside** |
+| I400C45 | `I400C45SUT50` | 45ft（含电力舱）· with power bay | 400 kW | 8 | 50 kW | 箱内 · Inside ^mdc-07256bf469 |
+| I400C40 | `I400C40ST50` | 40ft | 400 kW | 8 | 50 kW | 箱外 · Outside ^mdc-590813dccc |
+| **I200C20** | `I200C20ST50` | **20ft** | **200 kW** | **4** | **50 kW** | **箱外 · Outside** ^mdc-1119454142 |
 
 > 三者同密度不同规模。选型的第一问不是「要多少 kW」，而是**场地能放下多长的箱子、以及电力边界在哪一侧**。
 > *The three are the same density at different scale. The first selection question is not "how many kW" but **how long a box the site can take, and which side the power boundary sits on**.*
@@ -99,16 +99,16 @@ sku_id: I200C20ST50
 | 浸没槽 · Immersion tanks | 4 台，每槽 50 kW · 4 tanks at 50 kW each |
 | GPU 平台 · GPU platforms | 4090 · 5090 · RTX PRO 6000 · H100 · H200（PCIe） |
 
-> **Total Facility Load 与 IT Load 是两个不同的数。** 设施总负荷 = IT + 槽内 CDU 泵功 + 室外排热电耗 + 配电损耗 + 辅机。I200C20 的 UPS 在箱外，其损耗计入站端而非本箱。**站端总用电取决于站点气候与冷源选型，须逐站核算**，MDCX 将在技术澄清阶段以书面形式提供该项计算结果。
-> ***Total Facility Load and IT Load are two different numbers.*** *Facility load = IT + in-tank CDU pump power + outdoor rejection energy + distribution losses + auxiliaries. On I200C20 the UPS sits outside the box, so its losses land in site capacity rather than in this container. **Total site power depends on site climate and heat-rejection selection and is calculated per site**; MDCX issues that calculation in writing during technical clarification.*
+> **Total Facility Load 与 IT Load 是两个不同的数。** 设施总负荷 = IT + 槽内 CDU 泵功 + 室外排热电耗 + 配电损耗 + 辅机。I200C20 的 UPS 在箱外，其损耗计入站端而非本箱。**站端总用电取决于站点气候与冷源选型，须逐站核算**，MDCX 将在技术澄清阶段以书面形式提供该项计算结果。 ^mdc-57b8b16a97
+> ***Total Facility Load and IT Load are two different numbers.*** *Facility load = IT + in-tank CDU pump power + outdoor rejection energy + distribution losses + auxiliaries. On I200C20 the UPS sits outside the box, so its losses land in site capacity rather than in this container. **Total site power depends on site climate and heat-rejection selection and is calculated per site**; MDCX issues that calculation in writing during technical clarification.* ^mdc-b5fcfa18f5
 
 ---
 
 ## 4. 浸没槽规格 · Immersion Tank Specification ^sec-4-rack-spec
 
-I200C20 使用的浸没槽**与 400 kW 产品是同一款槽体**，槽数不同而已 —— 运维方式、备件与操作规程通用。
+I200C20 使用的浸没槽**与 400 kW 产品是同一款槽体**，槽数不同而已 —— 运维方式、备件与操作规程通用。 ^mdc-64166810c5
 
-*I200C20 uses **the same tank** as the 400 kW products, only fewer of them — O&M practice, spares and operating procedures are common.*
+*I200C20 uses **the same tank** as the 400 kW products, only fewer of them — O&M practice, spares and operating procedures are common.* ^mdc-4d68c1cbc3
 
 | 项目 · Item | 参数 · Specification |
 |-------------|----------------------|
@@ -124,9 +124,9 @@ I200C20 使用的浸没槽**与 400 kW 产品是同一款槽体**，槽数不同
 
 ## 5. 冷却系统 · Cooling System ^sec-5-cooling
 
-服务器整机浸入介电液，热量由槽内 CDU 的板式换热器交给设施水，再由室外冷源排入大气。没有服务器风扇，没有冷热通道 —— **这套架构在 I200C20 上与 400 kW 产品完全一致，只是槽数从 8 变成 4**，这也是 20 英尺箱能承载 200 kW 而不需要降密度的原因。
+服务器整机浸入介电液，热量由槽内 CDU 的板式换热器交给设施水，再由室外冷源排入大气。没有服务器风扇，没有冷热通道 —— **这套架构在 I200C20 上与 400 kW 产品完全一致，只是槽数从 8 变成 4**，这也是 20 英尺箱能承载 200 kW 而不需要降密度的原因。 ^mdc-5c046bd3da
 
-*Whole servers sit in dielectric fluid; the in-tank CDU plate heat exchangers hand that heat to facility water, and the outdoor plant rejects it to atmosphere. There are no server fans and no hot and cold aisles — **on I200C20 this architecture is identical to the 400 kW products, only with four tanks instead of eight**, which is why a 20ft box carries 200 kW without derating density.*
+*Whole servers sit in dielectric fluid; the in-tank CDU plate heat exchangers hand that heat to facility water, and the outdoor plant rejects it to atmosphere. There are no server fans and no hot and cold aisles — **on I200C20 this architecture is identical to the 400 kW products, only with four tanks instead of eight**, which is why a 20ft box carries 200 kW without derating density.* ^mdc-928008d33a
 
 ```
 IT Load → 介电液 Dielectric fluid (4×) → 双 CDU 板换 Dual CDU plate HX (2N) → 设施水 Facility water
@@ -174,24 +174,24 @@ IT Load → 介电液 Dielectric fluid (4×) → 双 CDU 板换 Dual CDU plate H
 
 ### 5.4 冷源配置原则 · Heat-rejection configuration rule
 
-每台 I200C20 与其室外冷源**一对一**配置，不跨箱共享冷源。系统级可用性靠增加箱数实现。
-*Each I200C20 is paired **one-to-one** with its outdoor plant; plant is not shared across containers. System-level availability is achieved by adding containers.*
+每台 I200C20 与其室外冷源**一对一**配置，不跨箱共享冷源。系统级可用性靠增加箱数实现。 ^mdc-79aa905e37
+*Each I200C20 is paired **one-to-one** with its outdoor plant; plant is not shared across containers. System-level availability is achieved by adding containers.* ^mdc-5ad1b31747
 
 ---
 
 ## 6. 配电规格 · Power Distribution ^sec-6-power
 
-I200C20 的电力边界在**箱外**：UPS、电池与配电由场站或客户提供，箱体只接受进线。20 英尺箱内不预留电力舱空间 —— 这正是它能把 200 kW 密度装进 20 英尺的原因之一。
+I200C20 的电力边界在**箱外**：UPS、电池与配电由场站或客户提供，箱体只接受进线。20 英尺箱内不预留电力舱空间 —— 这正是它能把 200 kW 密度装进 20 英尺的原因之一。 ^mdc-5b7743b09e
 
-*The I200C20 power boundary is **outside the box**: UPS, batteries and distribution are supplied by the site or the customer, and the container only receives an incoming feed. No power-bay volume is reserved inside the 20ft envelope — one of the reasons 200 kW of density fits inside 20 feet at all.*
+*The I200C20 power boundary is **outside the box**: UPS, batteries and distribution are supplied by the site or the customer, and the container only receives an incoming feed. No power-bay volume is reserved inside the 20ft envelope — one of the reasons 200 kW of density fits inside 20 feet at all.* ^mdc-164450e59d
 
 | 项目 · Item | 参数 · Specification |
 |-------------|----------------------|
 | UPS 边界 · UPS boundary | **箱外**（场站 / 客户提供 UPS、电池、PDC）· **Outside the box** (site / customer supplies UPS, batteries, PDC) |
 | UPS 容量 · UPS capacity | **不适用** —— MDCX 不为本产品定义 UPS 容量，由客户按其电力架构选型 · **Not applicable** — MDCX does not define a UPS capacity for this product; it is selected by the customer to suit their electrical architecture |
 
-> **UPS 与 BESS 是两回事：** UPS 是分钟级切换后备，BESS 是小时级储能。二者在 I200C20 上都在箱外，属于不同的设备和不同的采购项。
-> ***UPS and BESS are not the same thing:*** *UPS is minutes-scale ride-through, BESS is hours-scale storage. On I200C20 both sit outside the box, and they are different equipment and different procurement items.*
+> **UPS 与 BESS 是两回事：** UPS 是分钟级切换后备，BESS 是小时级储能。二者在 I200C20 上都在箱外，属于不同的设备和不同的采购项。 ^mdc-ca8827d712
+> ***UPS and BESS are not the same thing:*** *UPS is minutes-scale ride-through, BESS is hours-scale storage. On I200C20 both sit outside the box, and they are different equipment and different procurement items.* ^mdc-dd771a6d16
 
 ### 6.1 冗余模型 · Redundancy model ^sec-6-redundancy
 
@@ -205,8 +205,8 @@ I200C20 的电力边界在**箱外**：UPS、电池与配电由场站或客户�
 | 设计目标 · Design objective | Tier II 投资，经差异化冗余达到 Tier III 级可用性 · Tier II investment reaching Tier III-class availability through differentiated redundancy |
 | 冗余原则 · Redundancy principle | 失效代价高的地方 2N，其余 N+1 —— 不做全局 2N · 2N where failure is expensive, N+1 elsewhere; never global 2N |
 
-> **20 英尺箱型让「增加箱数」这条冗余路径在受限场地上成为现实选项** —— 两台 I200C20 组成 N+1，占地与吊装限界仍小于一台 40 英尺箱。对场地受限但要求可用性的客户，这是 I200C20 的实际价值。
-> ***The 20ft form factor makes "add another container" a realistic redundancy path on a constrained site*** *— two I200C20 units forming N+1 still sit inside a smaller footprint and lifting envelope than one 40ft box. For a space-constrained customer who nonetheless needs availability, that is the real value of I200C20.*
+> **20 英尺箱型让「增加箱数」这条冗余路径在受限场地上成为现实选项** —— 两台 I200C20 组成 N+1，占地与吊装限界仍小于一台 40 英尺箱。对场地受限但要求可用性的客户，这是 I200C20 的实际价值。 ^mdc-a285881060
+> ***The 20ft form factor makes "add another container" a realistic redundancy path on a constrained site*** *— two I200C20 units forming N+1 still sit inside a smaller footprint and lifting envelope than one 40ft box. For a space-constrained customer who nonetheless needs availability, that is the real value of I200C20.* ^mdc-79f785f755
 
 ---
 
@@ -271,16 +271,16 @@ I200C20 的电力边界在**箱外**：UPS、电池与配电由场站或客户�
 
 | 方向 · Direction | 说明 · Notes |
 |------------------|--------------|
-| 横向扩展 · Scale-out | 增加 I200C20 台数 —— 20 英尺箱型让多箱扩展在受限场地上成为现实选项；系统级 N / N+1 / 2N 由箱数决定 · Add I200C20 units; the 20ft form factor makes multi-container growth realistic on constrained sites, and system-level redundancy is set by container count |
-| 混合部署 · Mixed deployment | 与 I400C45 / I400C40 混合组集群 —— 同款浸没槽，运维口径与备件通用 · Cluster with I400C45 / I400C40; the same tank means common O&M practice and common spares |
+| 横向扩展 · Scale-out | 增加 I200C20 台数 —— 20 英尺箱型让多箱扩展在受限场地上成为现实选项；系统级 N / N+1 / 2N 由箱数决定 · Add I200C20 units; the 20ft form factor makes multi-container growth realistic on constrained sites, and system-level redundancy is set by container count ^mdc-50a68ac456 |
+| 混合部署 · Mixed deployment | 与 I400C45 / I400C40 混合组集群 —— 同款浸没槽，运维口径与备件通用 · Cluster with I400C45 / I400C40; the same tank means common O&M practice and common spares ^mdc-d8827e4bd0 |
 
 ---
 
 ## 13. 选址与安装 · Site & Installation ^sec-13-site
 
-I200C20 的选址判据与 400 kW 产品不同：后者的第一约束通常是电力与冷源，I200C20 的第一约束往往是**结构与进场路径** —— 楼板承重、净空高度、吊装半径、坡道或电梯限界。**这些必须在方案阶段完成结构复核**，由双方在技术澄清阶段共同确认，不留到部署期。
+I200C20 的选址判据与 400 kW 产品不同：后者的第一约束通常是电力与冷源，I200C20 的第一约束往往是**结构与进场路径** —— 楼板承重、净空高度、吊装半径、坡道或电梯限界。**这些必须在方案阶段完成结构复核**，由双方在技术澄清阶段共同确认，不留到部署期。 ^mdc-32c8d6f313
 
-*I200C20's siting criteria differ from the 400 kW products. For those the first constraint is usually power and heat rejection; for I200C20 it is usually **structure and the access route** — floor loading, clear height, lifting radius, ramp or lift envelope. **A structural review must be completed at proposal stage**, jointly confirmed during technical clarification rather than left to deployment.*
+*I200C20's siting criteria differ from the 400 kW products. For those the first constraint is usually power and heat rejection; for I200C20 it is usually **structure and the access route** — floor loading, clear height, lifting radius, ramp or lift envelope. **A structural review must be completed at proposal stage**, jointly confirmed during technical clarification rather than left to deployment.* ^mdc-8c781bc8bb
 
 | 项目 · Item | 要求 · Requirement |
 |-------------|--------------------|
@@ -292,9 +292,9 @@ I200C20 的选址判据与 400 kW 产品不同：后者的第一约束通常是�
 
 ### 13.1 Zone 边界 · Zone boundaries
 
-| Zone | 与 I200C20 的关系 · Relation to I200C20 |
+| Zone | 与 I200C20 的关系 · Relation to I200C20 ^mdc-dca461b781 |
 |------|------------------------------------------|
-| IT Zone | **I200C20 本体**（4× 浸没槽）· I200C20 itself (4 tanks) |
+| IT Zone | **I200C20 本体**（4× 浸没槽）· I200C20 itself (4 tanks) ^mdc-83707af5a3 |
 | Power Zone | UPS、电池、配电全部在箱外，属客户 / 场站范围 · UPS, batteries and distribution all outside, on the customer / site side |
 | Cooling Zone | 室外冷源一对一，不在箱体内集成 · Outdoor plant one-to-one, not integrated inside the container |
 
@@ -304,7 +304,7 @@ I200C20 的选址判据与 400 kW 产品不同：后者的第一约束通常是�
 
 | 项目 · Item | 参数 · Specification |
 |-------------|----------------------|
-| SKU | `I200C20ST50` |
+| SKU | `I200C20ST50` ^mdc-28e4534e01 |
 | 箱型 · Container | 20ft 算力舱 · 20ft compute bay |
 | IT Load | **200 kW** |
 | 浸没槽 · Immersion tanks | 4 台，每槽 50 kW · 4 tanks at 50 kW each |

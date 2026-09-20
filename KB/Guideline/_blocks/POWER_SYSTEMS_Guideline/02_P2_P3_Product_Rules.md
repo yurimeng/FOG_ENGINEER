@@ -16,9 +16,9 @@ source_anchors: []
 
 | 产品 | IT负载 | 整体负荷（参考PUE） | 冷却系统功耗 | UPS损耗 |
 |------|--------|-------------------|------------|---------|
-| **A32** (单柜) | 45–50kW | ~46–56kW (PUE≈1.03–1.12) | ~2–4kW | 含于IT Zone内 |
-| **AC40** | 400kW IT | ~408–480kW (PUE≈1.02–1.20) | ~8–80kW | 含于IT Zone内 |
-| **L1240C45** | 1240kW IT | 随 PUE 变化，逐站点用 <https://mdcx.org> 计算 | ~85–435kW | 含于IT Zone内 |
+| **A32** (单柜) | 45–50kW | ~46–56kW (PUE≈1.03–1.12) | ~2–4kW | 含于IT Zone内 ^mdc-b07d75e713 |
+| **AC40** | 400kW IT | ~408–480kW (PUE≈1.02–1.20) | ~8–80kW | 含于IT Zone内 ^mdc-c6bee1ef9d |
+| **L1240C45** | 1240kW IT | 随 PUE 变化，逐站点用 <https://mdcx.org> 计算 | ~85–435kW | 含于IT Zone内 ^mdc-0501089543 |
 
 > **注意：** 整体负荷不包括 BESS、变压器损耗、外部开关设备等 BOP（Balance of Plant）负荷。
 
@@ -59,7 +59,7 @@ IT负载:      xxx kW
 
 | 区域 | 描述 | 对外输出 |
 |------|------|---------|
-| **IT Zone** (A32/AC40/AC45/DC45) | 包含服务器；UPS（AC45/DC45 内置；AC40 外置客户自备）| IT 负载（客户算力需求） |
+| **IT Zone** (A32/AC40/AC45/DC45) | 包含服务器；UPS（AC45/DC45 内置；AC40 外置客户自备）| IT 负载（客户算力需求） ^mdc-80b16cbdeb |
 | **Cooling Zone** | **Hybrid Cooling System**（干冷器+DX一体化） | 不单独对外报价 |
 | **Power Zone** | BESS / 变压器 / 开关设备 | 容量规格（kW/MW） |
 

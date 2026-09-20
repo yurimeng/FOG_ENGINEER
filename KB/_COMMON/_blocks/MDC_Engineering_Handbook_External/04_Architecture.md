@@ -94,13 +94,13 @@ UPS > BESS > Generator
 
 ## 4.2 计算系统架构(Compute Architecture)
 
-计算系统分为两类平台:**AC40(PCIe + Immersion)** 与 **DC45(SXM + DLC)**。\
+计算系统分为两类平台:**AC40(PCIe + Immersion)** 与 **DC45(SXM + DLC)**。\ ^mdc-8b03f659eb
 本节聚焦两类平台的工程实现细节,包括与冷却、电力系统的接口关系及可靠性架构设计。\
 平台选型逻辑参见第 3.5 节。
 
 ***
 
-## 4.2.1 AC40 — PCIe Immersion Compute
+## 4.2.1 AC40 — PCIe Immersion Compute ^mdc-e127f81982
 
 ### 系统接口关系
 
@@ -144,7 +144,7 @@ Compute Node │ ▼ Immersion Tank ──► TCS Loop ──► Dry Cooler / Ch
 
 ***
 
-## 4.2.2 DC45 — SXM DLC Compute
+## 4.2.2 DC45 — SXM DLC Compute ^mdc-43ca2a7359
 
 ### 系统接口关系
 
@@ -169,7 +169,7 @@ GPU Cold Plate │ ▼ CDU(2N)──► TCS Loop ──► Dry Cooler / Chiller 
 网络接口:
 
 - 需部署 InfiniBand / NVLink Fabric 高速网络
-- 网络拓扑复杂度显著高于 AC40,需独立网络规划
+- 网络拓扑复杂度显著高于 AC40,需独立网络规划 ^mdc-d7286628dc
 
 ***
 
@@ -193,7 +193,7 @@ GPU Cold Plate │ ▼ CDU(2N)──► TCS Loop ──► Dry Cooler / Chiller 
 
 ## 4.2.3 两类平台工程实现对比
 
-| 维度    | AC40(PCIe + Immersion) | DC45(SXM + DLC)          |
+| 维度    | AC40(PCIe + Immersion) | DC45(SXM + DLC) ^mdc-f370f4afc2 |
 | ----- | ---------------------- | ------------------------ |
 | 电力接口  | 单路 + UPS,40–80 kW/Tank | 双路 + STS,100–150 kW/rack |
 | 冷却接口  | 直接接 TCS Loop,无 CDU     | CDU 2N,独立水路管理            |
@@ -227,7 +227,7 @@ GPU Cold Plate │ ▼ CDU(2N)──► TCS Loop ──► Dry Cooler / Chiller 
 冷却系统分为三个控制层:
 
 - Local control(机柜级)
-- Module control(DC45 / AC40)
+- Module control(DC45 / AC40) ^mdc-6eb18cc800
 - Plant control(冷站 / hybrid chiller)
 
 控制策略:
@@ -377,9 +377,9 @@ MDC 系统面向跨区域部署,需兼容多种认证体系。\
 
 | 标准                        | 类别   | 必要性    | 适用模块        | 说明              |
 | ------------------------- | ---- | ------ | ----------- | --------------- |
-| Uptime Institute Tier III | 数据中心 | 推荐     | AC40 / DC45 | 高可靠场景参考目标,非强制认证 |
-| Uptime Institute Tier IV  | 数据中心 | 可选     | DC45        | 仅适用于极高可用性需求场景   |
-| ASHRAE Thermal Guidelines | 热管理  | 推荐     | AC40 / DC45 | 液冷系统水温设计参考基准    |
+| Uptime Institute Tier III | 数据中心 | 推荐     | AC40 / DC45 | 高可靠场景参考目标,非强制认证 ^mdc-c388a0ec46 |
+| Uptime Institute Tier IV  | 数据中心 | 可选     | DC45        | 仅适用于极高可用性需求场景 ^mdc-d2c06a1137 |
+| ASHRAE Thermal Guidelines | 热管理  | 推荐     | AC40 / DC45 | 液冷系统水温设计参考基准 ^mdc-d0ff460d91 |
 | IEC 60364                 | 电气安全 | 必须     | 全模块         | 低压电气系统通用安全标准    |
 | IEC 61439                 | 低压配电 | 必须     | 全模块         | 配电柜与母线系统设计基准    |
 | UL 认证                     | 设备安全 | 必须(北美) | 全模块         | 北美市场准入要求        |

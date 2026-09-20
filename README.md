@@ -7,6 +7,8 @@ tags:
 ---
 # Engineer Workspace
 
+四域导航 → [[_domains/index]] · [[_domains/产品设计]] · [[_domains/解决方案]] · [[_domains/项目]] · [[_domains/采购询价]]
+
 ## Fog Computing – Pre-Sales Engineering Agent System
 
 > Engineer Workspace 是一个面向模块化数据中心（MDC）的**售前工程 Agent 系统**。
@@ -66,7 +68,7 @@ FOG/
 │
 ├── Reference Architecture/  ← 参考架构
 │
-├── Solutions Design/     ← 方案设计
+├── Reference Architecture/ + PUBLIC/  ← 解决方案（原 Solutions Design/ 不存在，入口已固定）
 │
 ├── TOOLS/                ← 工具说明
 │   ├── TOOLS.md
@@ -78,7 +80,7 @@ FOG/
 └── README.md             ← 本文件
 ```
 
-> ⚠️ 以下目录被 `.gitignore` 忽略，不进入版本控制：Projects/、KB/BOM、Canvas/、Market/、HRBP、ResoucePool、SupplyChain、COST/
+> ⚠️ 以下目录被 `.gitignore` 忽略，不进入版本控制：Projects/、KB/BOM、Canvas/、Market/、HRBP、ResoucePool、SupplyChain（目录不存在，采购询价见 PROCUREMENT/RFI*）、COST/
 
 ---
 

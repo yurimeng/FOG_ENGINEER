@@ -9,7 +9,7 @@ audience: 客户 / Customer（对外输出版）
 sku_id: L450C20DR150
 ---
 
-# L450C20 — Technical Specification（对外输出版 / External Edition）
+# L450C20 — Technical Specification（对外输出版 / External Edition） ^mdc-12d8319b49
 **双环路直接液冷集装箱数据中心 · Dual-Loop Direct Liquid Cooled Container Data Center**
 **20ft · 450 kW IT · 单柜 150 kW / 150 kW per rack**
 
@@ -26,7 +26,7 @@ sku_id: L450C20DR150
 >
 > **本版为单文件，块拆分待需要时再做 / This edition is a single file; block splitting is deferred until needed.** 锚点 `^sec-2-positioning` … `^sec-14-summary` 已保留 / anchors are preserved.
 
-版本 / Version: v1.1 | 日期 / Date: 2026-08-30 | SKU: `L450C20DR150`
+版本 / Version: v1.1 | 日期 / Date: 2026-08-30 | SKU: `L450C20DR150` ^mdc-abe78a7f04
 
 ---
 
@@ -50,21 +50,21 @@ sku_id: L450C20DR150
 
 ## 2. 产品定位 / Product Positioning ^sec-2-positioning
 
-**中文：** L450C20 是 20ft 双环路直接液冷集装箱数据中心，单柜最大 150 kW，整箱 IT 容量 450 kW。
+**中文：** L450C20 是 20ft 双环路直接液冷集装箱数据中心，单柜最大 150 kW，整箱 IT 容量 450 kW。 ^mdc-b01724f3e2
 
-**这个产品的存在理由，是一扇门。** 45ft High Cube 是 13.7 米长、近 3 米高的钢箱，它进不去很多地方：层高三米出头的老厂房、只有货梯的屋顶机房、限高涵洞之后的园区、乡道拐角转不过来的山地站点、吊车站位摆不开的密集城区。这些场地不缺电、也不缺需求，缺的是一条 45ft 箱能通过的物理路径。L450C20 用 20ft 标准箱型，把运输、吊装与通过性全部拉回最普通的一档。
+**这个产品的存在理由，是一扇门。** 45ft High Cube 是 13.7 米长、近 3 米高的钢箱，它进不去很多地方：层高三米出头的老厂房、只有货梯的屋顶机房、限高涵洞之后的园区、乡道拐角转不过来的山地站点、吊车站位摆不开的密集城区。这些场地不缺电、也不缺需求，缺的是一条 45ft 箱能通过的物理路径。L450C20 用 20ft 标准箱型，把运输、吊装与通过性全部拉回最普通的一档。 ^mdc-9fa625ea5b
 
-**代价我们直说：单位算力成本高于 45ft 机型。** 双环路的 CDU、列间空调、两套管路、控制、消防与监控是固定投入，摊在 450 kW 上必然高于摊在 1240 kW 或 1800 kW 上。**这不是缺陷，这是为「塞得进那个舱位」付的钱。** 如果贵方场地能进 45ft 箱，我们会建议选 45ft 机型；选择 L450C20 的正当理由只有一个 —— 45ft 进不去。
+**代价我们直说：单位算力成本高于 45ft 机型。** 双环路的 CDU、列间空调、两套管路、控制、消防与监控是固定投入，摊在 450 kW 上必然高于摊在 1240 kW 或 1800 kW 上。**这不是缺陷，这是为「塞得进那个舱位」付的钱。** 如果贵方场地能进 45ft 箱，我们会建议选 45ft 机型；选择 L450C20 的正当理由只有一个 —— 45ft 进不去。 ^mdc-9078a1aec5
 
-同时请注意：**L450C20 不是大箱的减配版。** 它与 [[L1800C45_Tech_Spec_External|L1800C45]] 同为双环路架构、同样的 GPU 侧暖水 + 列间侧冷冻水温位体系，密度码 `R150` 与 [[L1240C45_Tech_Spec_External|L1240C45]] 相同。它是换了箱型重新排的产品。
+同时请注意：**L450C20 不是大箱的减配版。** 它与 [[L1800C45_Tech_Spec_External|L1800C45]] 同为双环路架构、同样的 GPU 侧暖水 + 列间侧冷冻水温位体系，密度码 `R150` 与 [[L1240C45_Tech_Spec_External|L1240C45]] 相同。它是换了箱型重新排的产品。 ^mdc-6ee978641c
 
-**English:** L450C20 is a 20ft dual-loop direct-liquid-cooled containerized data center — up to 150 kW per rack and 450 kW IT per container.
+**English:** L450C20 is a 20ft dual-loop direct-liquid-cooled containerized data center — up to 150 kW per rack and 450 kW IT per container. ^mdc-d2211d66ef
 
-**The reason this product exists is a doorway.** A 45ft High Cube is a steel box 13.7 m long and nearly 3 m tall, and there are many places it cannot enter: legacy buildings with barely three metres of clear height, rooftop plant rooms served only by a goods lift, campuses behind a height-restricted underpass, hill sites where a rural bend cannot be negotiated, dense urban plots where a crane has nowhere to stand. Those sites are short of neither power nor demand — they are short of a physical route a 45ft box can travel. L450C20 uses a 20ft standard shell to put transport, lifting and access back into the most ordinary category there is.
+**The reason this product exists is a doorway.** A 45ft High Cube is a steel box 13.7 m long and nearly 3 m tall, and there are many places it cannot enter: legacy buildings with barely three metres of clear height, rooftop plant rooms served only by a goods lift, campuses behind a height-restricted underpass, hill sites where a rural bend cannot be negotiated, dense urban plots where a crane has nowhere to stand. Those sites are short of neither power nor demand — they are short of a physical route a 45ft box can travel. L450C20 uses a 20ft standard shell to put transport, lifting and access back into the most ordinary category there is. ^mdc-08ee783ca5
 
-**We will say the cost plainly: cost per unit of compute is higher than on the 45ft machines.** A dual-loop CDU, 列间空调, two pipework systems, controls, fire protection and monitoring are fixed investments; amortised over 450 kW they are necessarily higher than over 1240 kW or 1800 kW. **That is not a defect; it is the price of fitting through the opening.** If your site can take a 45ft container we will recommend a 45ft machine. There is exactly one legitimate reason to choose L450C20: a 45ft container cannot get in.
+**We will say the cost plainly: cost per unit of compute is higher than on the 45ft machines.** A dual-loop CDU, 列间空调, two pipework systems, controls, fire protection and monitoring are fixed investments; amortised over 450 kW they are necessarily higher than over 1240 kW or 1800 kW. **That is not a defect; it is the price of fitting through the opening.** If your site can take a 45ft container we will recommend a 45ft machine. There is exactly one legitimate reason to choose L450C20: a 45ft container cannot get in. ^mdc-7505b2de7f
 
-Note also that **L450C20 is not a stripped-down large container.** It shares the dual-loop architecture and the GPU warm-water / 列间空调 chilled-water scheme with [[L1800C45_Tech_Spec_External|L1800C45]], and shares the `R150` density code with [[L1240C45_Tech_Spec_External|L1240C45]]. It is a different shell, laid out from scratch.
+Note also that **L450C20 is not a stripped-down large container.** It shares the dual-loop architecture and the GPU warm-water / 列间空调 chilled-water scheme with [[L1800C45_Tech_Spec_External|L1800C45]], and shares the `R150` density code with [[L1240C45_Tech_Spec_External|L1240C45]]. It is a different shell, laid out from scratch. ^mdc-6298b90c9a
 
 ---
 
@@ -114,12 +114,12 @@ Utility applications, incoming feeder capacity and switchgear selection on the s
 
 ### 5.1 架构 / Architecture ^sec-5-dual-loop
 
-**中文：** L450C20 箱内并行运行两条在介质、温位、水力上完全独立的回路。
+**中文：** L450C20 箱内并行运行两条在介质、温位、水力上完全独立的回路。 ^mdc-6f2bfb5d06
 
 | 回路 / Loop | 承担负荷 / Load carried | 温位 / Temperatures |
 |---|---|---|
 | **回路 A —— GPU 侧暖水 / Loop A — GPU-side warm water** | GPU / CPU 冷板液冷负荷（绝大部分 IT 热量）/ Cold-plate liquid load (the great majority of IT heat) | **GPU 冷板进水 36–40 °C**；外冷源出水 32–36 °C；CDU approach +4 °C · **GPU cold-plate inlet 36–40 °C**; outdoor-plant supply 32–36 °C; CDU approach +4 °C |
-| **回路 B —— 列间侧冷冻水 / Loop B — In-row CW chilled water** | 机房残余风冷负荷 / Residual room air load | **10 / 16 °C 冷冻水 / chilled water** |
+| **回路 B —— 列间侧冷冻水 / Loop B — In-row CW chilled water** | 机房残余风冷负荷 / Residual room air load | **10 / 15 °C 冷冻水 / chilled water** |
 
 **为什么分成两条：** 冷板可以吃 40 °C 量级的水，风冷末端不行 —— 要把机房回风降到可用的送风温度，盘管进水必须在 10 °C 量级。并在同一条回路上，要么冷板侧被迫用冷水、浪费自然冷却时数并拉高 PUE，要么 列间侧冷量不足。解耦之后，回路 A 的 36–40 °C 暖水在绝大多数气候下可由干冷器直接排掉，机械制冷只作补充；回路 B 的冷冻水负荷则小得多。
 
@@ -138,10 +138,10 @@ Utility applications, incoming feeder capacity and switchgear selection on the s
 |---|---|
 | 回路 A 室外冷源 / Loop A heat rejection | 干冷器为主（出水 32–36 °C，自然冷却时数长），峰值站点加机械补冷 —— **设计值，以最终选型为准** / Dry-cooler-led (long free-cooling hours at a 32–36 °C supply), mechanical topping at peak-climate sites — **design value, subject to final selection** |
 | PUE | **`1.0x`** —— 不给固定值、不给区间，逐站点用 <https://mdcx.org>（TCO / Designer）计算 · **`1.0x`** — no fixed value and no range; computed per site with the TCO / Designer at <https://mdcx.org> |
-| 回路 B 室外冷源 / Loop B heat rejection | 冷水机组（10/16 °C 冷冻水）—— **设计值，以最终选型为准** / Chiller plant (10/16 °C chilled water) — **design value, subject to final selection** |
+| 回路 B 室外冷源 / Loop B heat rejection | 冷水机组（10/15 °C 冷冻水）—— **设计值，以最终选型为准** / Chiller plant (10/15 °C chilled water) — **design value, subject to final selection** |
 
 | CDU | **1× STULZ SCR 14103 W** |
-| 列间空调 | **2× STULZ CRS 330 CW，N+1 冗余 / 2× STULZ CRS 330 CW, N+1** |
+| 列间空调 | **4× STULZ CRS 320 CW** · 净 116.4 kW · 24,400 m³/h · 冷冻水 23.2 m³/h<br>**4× STULZ CRS 320 CW** · net 116.4 kW · 24,400 m³/h · 23.2 m³/h chilled water |
 
 > CDU 与 列间空调 的单台容量参数，以及室外侧排热基线，在技术澄清阶段随热力计算与选型书一并提供。站点 PUE 请用 <https://mdcx.org> 的 TCO / Designer 按贵站点气候条件计算。
 > CDU and In-row CW models, capacities, quantities and redundancy models, together with the outdoor heat-rejection baseline, are provided with the thermal calculations and selection sheets during technical clarification. For the site PUE, run your site's climate through the TCO / Designer at <https://mdcx.org>.
@@ -154,7 +154,7 @@ Utility applications, incoming feeder capacity and switchgear selection on the s
 
 ### 6.1 电力边界：UPS 在箱外 / Power boundary: the UPS sits outside
 
-**中文：** L450C20 的 UPS、电池与 PDC 置于集装箱之外，由场站提供。**这是一次刻意的边界设计，不是配置削减。**
+**中文：** L450C20 的 UPS、电池与 PDC 置于集装箱之外，由场站提供。**这是一次刻意的边界设计，不是配置削减。** ^mdc-7e563b1070
 
 在 20ft 箱型上，这个选择尤其直接：一个 20ft 箱的内部长度约为 45ft High Cube 的 44%。要同时容纳算力机柜、双环路的两套泵组与管路、配电、消防与监控，再切出能装下 UPS 与电池组的电力舱，450 kW 的 IT 容量就无从谈起。把电力边界放在箱外，换回来的是：
 
@@ -164,7 +164,7 @@ Utility applications, incoming feeder capacity and switchgear selection on the s
 
 若贵方希望电力边界在箱外但不自建电力设施，MDCX 的独立电源模块（UPS / 电池 / PDC）在研，可在方案沟通中一并讨论。
 
-**English:** On L450C20 the UPS, batteries and PDC sit outside the container and are supplied by the site. **This is a deliberate boundary design, not a reduction in configuration.**
+**English:** On L450C20 the UPS, batteries and PDC sit outside the container and are supplied by the site. **This is a deliberate boundary design, not a reduction in configuration.** ^mdc-4ea4144be5
 
 On a 20ft shell the choice is particularly direct: a 20ft container's internal length is about 44% of a 45ft High Cube's. Fit compute racks, two dual-loop pump sets and pipework systems, distribution, fire protection and monitoring inside it, then carve out an electrical bay large enough for a UPS and a battery string, and 450 kW of IT capacity stops being achievable. Putting the boundary outside buys back:
 
@@ -242,7 +242,7 @@ If you want the boundary outside but do not intend to build the electrical infra
 | 项目 / Item | 要求 / Requirement |
 |---|---|
 | 场站须提供的电力设施 / Electrical infrastructure to be provided by the site | **UPS / 电池 / PDC**（见 §6.1）· **UPS / batteries / PDC** (see §6.1) |
-| 场站须提供的冷却接口 / Cooling interfaces to be provided by the site | **两路独立**：回路 A 暖水（外冷源出水 32–36 °C，GPU 冷板进水 36–40 °C）+ 回路 B 冷冻水（10/16 °C）。两路不可合并 · **Two independent services**: Loop A warm water (outdoor-plant supply 32–36 °C, GPU cold-plate inlet 36–40 °C) and Loop B chilled water (10/16 °C). They cannot be combined |
+| 场站须提供的冷却接口 / Cooling interfaces to be provided by the site | **两路独立**：回路 A 暖水（外冷源出水 32–36 °C，GPU 冷板进水 36–40 °C）+ 回路 B 冷冻水（10/15 °C）。两路不可合并 · **Two independent services**: Loop A warm water (outdoor-plant supply 32–36 °C, GPU cold-plate inlet 36–40 °C) and Loop B chilled water (10/15 °C). They cannot be combined |
 | 现场安装与调试 / On-site installation & commissioning | 不予承诺 / Not committed |
 | 运费与清关 / Freight & customs | 买方自理，不予承诺周期 / Buyer's responsibility; no duration committed |
 | **运输与通过性条件 / Transport and access conditions** | 本产品的关键项目输入，见 §7 清单 · The key project input for this product; see the list in §7 |
@@ -256,14 +256,14 @@ If you want the boundary outside but do not intend to build the electrical infra
 
 | 项目 / Item | 参数 / Parameter |
 |---|---|
-| SKU | `L450C20DR150` |
+| SKU | `L450C20DR150` ^mdc-c320a3d791 |
 | 箱型 / Container type | **20ft** |
 | **IT 容量 / IT capacity** | **450 kW**（IT Load，非设施总负荷 · IT Load, not Total Facility Load） |
 | 单柜最大密度 / Maximum rack density | **150 kW**（`R150`） |
 | 环路 / Loops | 双环路 / Dual loop（`D`） |
 | 回路 A / Loop A | GPU 冷板进水 36–40 °C；外冷源出水 32–36 °C；CDU approach +4 °C · GPU cold-plate inlet 36–40 °C; outdoor-plant supply 32–36 °C; CDU approach +4 °C |
 | PUE | **`1.0x`** —— 逐站点用 <https://mdcx.org> 计算 · computed per site at <https://mdcx.org> |
-| 回路 B / Loop B | 列间侧 10 / 16 °C 冷冻水 · in-row CW 10 / 16 °C chilled water |
+| 回路 B / Loop B | 列间侧 10 / 15 °C 冷冻水 · in-row CW 10 / 15 °C chilled water |
 | UPS 边界 / UPS boundary | **箱外，由场站提供 · Outside the container, supplied by the site** |
 | 供电制式 / Supply voltages | 380 / 400 / 415 / 480 V AC（800 V HVDC 为 Roadmap Q3 2026 · roadmap Q3 2026） |
 | 软件 / Software | CIOS（含 / included）· NVIDIA Omniverse 数字孪生（含 / included） |

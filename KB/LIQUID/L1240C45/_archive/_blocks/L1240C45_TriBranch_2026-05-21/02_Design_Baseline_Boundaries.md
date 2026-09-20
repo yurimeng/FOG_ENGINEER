@@ -51,7 +51,7 @@ source_anchors: []
 ### 1.1 IT + 冷却拓扑
 
 ```
-DC45 集装箱 IT Zone
+DC45 集装箱 IT Zone ^mdc-3a88c79854
 ├── 8 × DLC 机柜 (每柜 150 kW max)
 │   ├── 73% 液冷 (CDU 冷板回路)  → 109.5 kW/柜  → 主 CDU
 │   ├── 27% 风冷 (机柜后门排风)  ≤ 40.5 kW/柜
@@ -98,7 +98,7 @@ TCS 回水 → 室外侧 (混合干冷器 + DX 或 热泵)
 | 机柜前进风设计温度 | **25–27°C** | 用户 v2 |
 | RDHX 进风温度（datasheet 标定上限）| **40°C** | **Vertiv 复核中** — 当前 DLC 排气 43.3°C 超规 3.3°C |
 | RDHX ε（被动型 DCD35 典型）| **0.55** | 由 DCD35 最大冷量 66 kW 反推得 ε ≈ 0.53；取 0.55 含轻微余量 |
-| OHS-084-DG-FC 冷凝液标称工况 | **EGT 110°F = 43.3°C，EG40**（datasheet 标定） | DC45 实际 PG25 26–28°C，性能显著上扬 |
+| OHS-084-DG-FC 冷凝液标称工况 | **EGT 110°F = 43.3°C，EG40**（datasheet 标定） | DC45 实际 PG25 26–28°C，性能显著上扬 ^mdc-6021b2a6b2 |
 | OHS-084-DG-FC 单台净冷量（标称 80°F/50% RH） | **总 25.6 kW / 显冷 20.4 kW** | datasheet 确认 ✅ |
 | OHS-084-DG-FC 单台压缩机输入 | **8.2 kW**（2 × 4.1 kW） | datasheet 确认 ✅ |
 | OHS-084-DG-FC 单台冷凝液流量 | **5.41 m³/h** (23.8 GPM) | datasheet 确认 ✅ |

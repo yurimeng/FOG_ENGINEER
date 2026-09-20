@@ -9,12 +9,12 @@ audience: 客户（对外输出版 · 可直接发送）/ Customer-facing (relea
 sku_id: I400C45SUT50
 ---
 
-# I400C45 — Technical Specification（对外输出版 · External Release）
+# I400C45 — Technical Specification（对外输出版 · External Release） ^mdc-18b4381a54
 **All-In-One Immersion Container · 45ft 单相浸没式液冷集装箱（含专用电力舱）**
 **45ft single-phase immersion container with a dedicated power bay**
 
-> **受众 Audience：** 客户。本版为**唯一允许直接发给客户**的 I400C45 技术规格文件。
-> *Customers. This is the only I400C45 specification document approved for direct release.*
+> **受众 Audience：** 客户。本版为**唯一允许直接发给客户**的 I400C45 技术规格文件。 ^mdc-20c2df3fe9
+> *Customers. This is the only I400C45 specification document approved for direct release.* ^mdc-996c8986fa
 >
 > **配套版本 Companion versions：** 中文内部版 [[I400C45_Tech_Spec_CN]] · 英文内部版 [[I400C45_Tech_Spec_EN]]
 >
@@ -51,11 +51,11 @@ sku_id: I400C45SUT50
 
 ## 1. 布局 · Layout ^sec-1-layout
 
-I400C45 为双舱布置：45 英尺箱体前段为算力舱，8 台浸没槽沿两侧箱壁双排布置、每侧 4 台，中间为运维通道；另设 1 台 10 kW 风冷机柜。箱体后段为**专用电力舱**，装载 600 kW UPS 与电池柜。
+I400C45 为双舱布置：45 英尺箱体前段为算力舱，8 台浸没槽沿两侧箱壁双排布置、每侧 4 台，中间为运维通道；另设 1 台 10 kW 风冷机柜。箱体后段为**专用电力舱**，装载 600 kW UPS 与电池柜。 ^mdc-19290e710c
 
-*I400C45 is a two-bay container. The forward compute bay holds eight immersion tanks in two rows against the side walls, four per side, with a central service aisle, plus one 10 kW air-cooled rack. The aft section is a **dedicated power bay** carrying the 600 kW UPS and its battery cabinets.*
+*I400C45 is a two-bay container. The forward compute bay holds eight immersion tanks in two rows against the side walls, four per side, with a central service aisle, plus one 10 kW air-cooled rack. The aft section is a **dedicated power bay** carrying the 600 kW UPS and its battery cabinets.* ^mdc-e13f34fac3
 
-![[KB/IMMERSION/I400C45/I400C45 Layout_v1.svg]]
+![[KB/IMMERSION/I400C45/I400C45 Layout_v1.svg]] ^mdc-2add8c7d7b
 *布局示意 · Layout schematic*
 
 | 项目 · Item | 参数 · Specification |
@@ -67,14 +67,14 @@ I400C45 为双舱布置：45 英尺箱体前段为算力舱，8 台浸没槽沿�
 
 ## 2. 产品定位 · Product Positioning ^sec-2-positioning
 
-**I400C45 是完整推理包：算力和电一起落地。** 400 kW 的浸没算力核心与 600 kW 的 UPS / 电池后备封装在同一个 45 英尺箱体内，交付边界一次到位 —— 场站只需提供市电进线与室外冷源接口，箱内不再有需要另行采购、另行选型、另行报建的电力设备。对于没有既有配电室、或不愿为单个算力模块另立一套 UPS 工程的场地，这是最短的落地路径。
+**I400C45 是完整推理包：算力和电一起落地。** 400 kW 的浸没算力核心与 600 kW 的 UPS / 电池后备封装在同一个 45 英尺箱体内，交付边界一次到位 —— 场站只需提供市电进线与室外冷源接口，箱内不再有需要另行采购、另行选型、另行报建的电力设备。对于没有既有配电室、或不愿为单个算力模块另立一套 UPS 工程的场地，这是最短的落地路径。 ^mdc-f057a826b9
 
-***I400C45 is the complete inference package: the compute and the power land together.*** *A 400 kW immersion compute core and 600 kW of UPS / battery ride-through are packaged in one 45ft container, so the delivery boundary is settled in a single step: the site provides a utility feed and an outdoor heat-rejection interface, and nothing inside the box has to be separately procured, separately selected or separately permitted. For a site with no existing switchroom — or one unwilling to run a standalone UPS project for a single compute module — this is the shortest path to energization.*
+***I400C45 is the complete inference package: the compute and the power land together.*** *A 400 kW immersion compute core and 600 kW of UPS / battery ride-through are packaged in one 45ft container, so the delivery boundary is settled in a single step: the site provides a utility feed and an outdoor heat-rejection interface, and nothing inside the box has to be separately procured, separately selected or separately permitted. For a site with no existing switchroom — or one unwilling to run a standalone UPS project for a single compute module — this is the shortest path to energization.* ^mdc-938baadff3
 
 | 维度 · Dimension | 定位 · Positioning |
 |------------------|--------------------|
 | 产品线 · Product line | Immersion Cooling（单相浸没）· Single-phase immersion |
-| SKU | `I400C45SUT50` |
+| SKU | `I400C45SUT50` ^mdc-1f4d9aaafc |
 | IT 容量 · IT capacity | 400 kW |
 | 构成单元 · Building blocks | 8× 浸没槽 + 1× 10 kW 风冷机柜 · 8 immersion tanks + 1× 10 kW air-cooled rack |
 | 单槽密度 · Per-tank density | 50 kW |
@@ -83,13 +83,13 @@ I400C45 为双舱布置：45 英尺箱体前段为算力舱，8 台浸没槽沿�
 | 箱型 · Container | 45ft（含专用电力舱）· 45ft with dedicated power bay |
 | 状态 · Status | 已量产交付 · Shipped |
 
-### 2.1 I400C45 与 I400C40 —— 同一个八槽核心 · The same eight-tank core
+### 2.1 I400C45 与 I400C40 —— 同一个八槽核心 · The same eight-tank core ^mdc-9a5e09f9a2
 
-I400C45 与 I400C40 的差别**只有电力边界，以及那五英尺（即电力舱的体积）**。八槽浸没核心、油回路与冷却规则完全相同。
+I400C45 与 I400C40 的差别**只有电力边界，以及那五英尺（即电力舱的体积）**。八槽浸没核心、油回路与冷却规则完全相同。 ^mdc-27f9d5cdd3
 
-*The difference between I400C45 and I400C40 is **only the power boundary and those five feet — the volume of the power bay**. The eight-tank immersion core, the oil loop and the cooling rules are identical.*
+*The difference between I400C45 and I400C40 is **only the power boundary and those five feet — the volume of the power bay**. The eight-tank immersion core, the oil loop and the cooling rules are identical.* ^mdc-800b1687d9
 
-| 项 · Item | I400C45 | I400C40 |
+| 项 · Item | I400C45 | I400C40 ^mdc-0a8f6898f3 |
 |-----------|---------|---------|
 | 八槽浸没核心 · Eight-tank core | 相同 · Identical | 相同 · Identical |
 | 油回路与冷却规则 · Oil loop and cooling rules | 相同 · Identical | 相同 · Identical |
@@ -97,8 +97,8 @@ I400C45 与 I400C40 的差别**只有电力边界，以及那五英尺（即电�
 | UPS 边界 · UPS boundary | 箱内 600 kW，~20 min 后备 · Inside, 600 kW, ~20 min | 箱外，客户自备 600 kW，~10 min · Outside, customer-supplied |
 | UL 合规 · UL compliance | ✅ UL compliant | 非本 SKU 交付项 · Not a deliverable of that SKU |
 
-**选型判据 · Selection rule：** 场站尚未为这 400 kW 建过配电与后备，或市场强制整机 UL → I400C45。场站已有既成电力架构 → I400C40。
-*If the site has not yet built distribution and ride-through for this 400 kW, or the market mandates full-system UL, choose I400C45. If the site already has an established electrical architecture, choose I400C40.*
+**选型判据 · Selection rule：** 场站尚未为这 400 kW 建过配电与后备，或市场强制整机 UL → I400C45。场站已有既成电力架构 → I400C40。 ^mdc-add96e78c9
+*If the site has not yet built distribution and ride-through for this 400 kW, or the market mandates full-system UL, choose I400C45. If the site already has an established electrical architecture, choose I400C40.* ^mdc-803a913dc2
 
 ---
 
@@ -117,8 +117,8 @@ I400C45 与 I400C40 的差别**只有电力边界，以及那五英尺（即电�
 | GPU 数上限 · Maximum GPU count | 512 张 PCIe · 512 PCIe GPUs |
 | GPU 平台 · GPU platforms | 4090 · 5090 · RTX PRO 6000 Blackwell SE · H100 · H200（PCIe 4U 8-GPU） |
 
-> **I400C45 的 UPS 在箱内，因此 UPS 损耗与电池柜散热计入本箱的设施总负荷。**
-> *Because the I400C45 UPS sits inside the container, UPS losses and battery-cabinet heat are counted within this container's total facility load.*
+> **I400C45 的 UPS 在箱内，因此 UPS 损耗与电池柜散热计入本箱的设施总负荷。** ^mdc-1fbd4435ce
+> *Because the I400C45 UPS sits inside the container, UPS losses and battery-cabinet heat are counted within this container's total facility load.* ^mdc-eaaec1c572
 
 ---
 
@@ -183,16 +183,16 @@ IT Load → 介电液 Dielectric fluid → 双 CDU 板换 Dual CDU plate HX (2N)
 
 ### 5.4 冷源配置原则 · Heat-rejection configuration rule
 
-每台 I400C45 与其室外冷源**一对一**配置，不跨箱共享冷源。系统级可用性靠增加箱数实现。
-*Each I400C45 is paired **one-to-one** with its outdoor plant; plant is not shared across containers. System-level availability is achieved by adding containers.*
+每台 I400C45 与其室外冷源**一对一**配置，不跨箱共享冷源。系统级可用性靠增加箱数实现。 ^mdc-d84091b877
+*Each I400C45 is paired **one-to-one** with its outdoor plant; plant is not shared across containers. System-level availability is achieved by adding containers.* ^mdc-0b4d356f2e
 
 ---
 
 ## 6. 配电规格 · Power Distribution ^sec-6-power
 
-I400C45 的电力边界在**箱内**：UPS 与电池装在专用电力舱内，客户侧只需把市电（及可选发电机 / 储能）接到箱体进线柜，无需另建 UPS 机房。
+I400C45 的电力边界在**箱内**：UPS 与电池装在专用电力舱内，客户侧只需把市电（及可选发电机 / 储能）接到箱体进线柜，无需另建 UPS 机房。 ^mdc-2f51190da3
 
-*The I400C45 power boundary is **inside the box**: the UPS and batteries are installed in the dedicated power bay, so the customer only brings utility power (and optionally a generator or BESS) to the container's incoming panel — no separate UPS room is required.*
+*The I400C45 power boundary is **inside the box**: the UPS and batteries are installed in the dedicated power bay, so the customer only brings utility power (and optionally a generator or BESS) to the container's incoming panel — no separate UPS room is required.* ^mdc-9637b8793a
 
 | 项目 · Item | 参数 · Specification |
 |-------------|----------------------|
@@ -280,8 +280,8 @@ I400C45 的电力边界在**箱内**：UPS 与电池装在专用电力舱内，�
 
 | 方向 · Direction | 说明 · Notes |
 |------------------|--------------|
-| 横向扩展 · Scale-out | 增加 I400C45 台数；系统级 N / N+1 / 2N 由箱数决定 · Add I400C45 units; system-level redundancy is set by container count |
-| 混合部署 · Mixed deployment | 与 I400C40 / I200C20 混合组集群 —— 八槽核心相同，运维口径统一 · Cluster with I400C40 / I200C20; the tank core is common, so O&M practice is shared |
+| 横向扩展 · Scale-out | 增加 I400C45 台数；系统级 N / N+1 / 2N 由箱数决定 · Add I400C45 units; system-level redundancy is set by container count ^mdc-b996142572 |
+| 混合部署 · Mixed deployment | 与 I400C40 / I200C20 混合组集群 —— 八槽核心相同，运维口径统一 · Cluster with I400C40 / I200C20; the tank core is common, so O&M practice is shared ^mdc-4359bb269e |
 
 ---
 
@@ -296,9 +296,9 @@ I400C45 的电力边界在**箱内**：UPS 与电池装在专用电力舱内，�
 
 ### 13.1 Zone 边界 · Zone boundaries
 
-| Zone | 与 I400C45 的关系 · Relation to I400C45 |
+| Zone | 与 I400C45 的关系 · Relation to I400C45 ^mdc-039c099310 |
 |------|------------------------------------------|
-| IT Zone | **I400C45 本体** · I400C45 itself |
+| IT Zone | **I400C45 本体** · I400C45 itself ^mdc-4dc0fa297d |
 | Power Zone | UPS 与电池在箱内；市电、发电机、储能、开关站在客户侧 · UPS and batteries inside; utility, generator, BESS and switchyard on the customer side |
 | Cooling Zone | 室外冷源一对一，不在箱体内完整集成 · Outdoor plant one-to-one, not fully integrated inside the container |
 
@@ -308,7 +308,7 @@ I400C45 的电力边界在**箱内**：UPS 与电池装在专用电力舱内，�
 
 | 项目 · Item | 参数 · Specification |
 |-------------|----------------------|
-| SKU | `I400C45SUT50` |
+| SKU | `I400C45SUT50` ^mdc-9ecd9459dd |
 | 箱型 · Container | 45ft（含专用电力舱）· 45ft with dedicated power bay |
 | IT Load | **400 kW** |
 | Total Facility Load | **随 PUE 变化，逐站点用 <https://mdcx.org> 计算** · varies with PUE, computed per site at <https://mdcx.org> |

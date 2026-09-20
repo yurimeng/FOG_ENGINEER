@@ -82,9 +82,9 @@ Category: Network Structured Cabling System
 ## 6. 参考标准
 
 - 网络系统设计原则：[[NETWORK_Guideline]]
-- AC40 网络配置参考：[[I400C40_NETWORK_CONF]]
-- AC40 产品规格：[[I400C40]]
-- DC45 产品规格：[[PRODUCTS_L1240C45]]
+- AC40 网络配置参考：[[I400C40_NETWORK_CONF]] ^mdc-e85d678db5
+- AC40 产品规格：[[I400C40]] ^mdc-b259773817
+- DC45 产品规格：[[PRODUCTS_L1240C45]] ^mdc-fc6b8e2bd5
 
 ---
 

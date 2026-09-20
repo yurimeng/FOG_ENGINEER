@@ -19,18 +19,18 @@ source_anchors:
 ### 6.1 电力路径（系统级）
 
 ```
-Grid / BESS → 外置 UPS (EATON 9395XR-600) → I400C40 舱内 PDC → Tanks / PDU
+Grid / BESS → 外置 UPS (EATON 9395XR-600) → I400C40 舱内 PDC → Tanks / PDU ^mdc-54769b9055
                 ↑
          可选：ATS ← Generator
 ```
 
 | 项目 | 说明 |
 |------|------|
-| UPS 放置 | **外置（客户自备）** — I400C40 本体 **不含** UPS 主机与 UPS 电池 |
+| UPS 放置 | **外置（客户自备）** — I400C40 本体 **不含** UPS 主机与 UPS 电池 ^mdc-b1d277b68f |
 | 标准 UPS | EATON **9395XR-600**（4×150kW 模块 = 600kW），发热量约 **7.9kW** |
 | UPS 电池 | 客户自备 **2×93LiG2**（每柜 332kW），合计约 **10 分钟** 后备 |
-| BESS 路径 | Grid → BESS → I400C40（由 Power Zone 负责；**BESS ≠ UPS 电池**） |
-| 备用路径 | Grid → ATS → Generator → I400C40（视场地） |
+| BESS 路径 | Grid → BESS → I400C40（由 Power Zone 负责；**BESS ≠ UPS 电池**） ^mdc-7f5227d9cb |
+| 备用路径 | Grid → ATS → Generator → I400C40（视场地） ^mdc-5f33f25482 |
 
 > ⚠️ **UPS 电池 vs BESS：** 93LiG2 为分钟级切换后备；BESS（如国轩 / Tesla Megapack）为小时级储能。二者不可混称。
 
@@ -49,9 +49,9 @@ Grid / BESS → 外置 UPS (EATON 9395XR-600) → I400C40 舱内 PDC → Tanks /
 
 | 产品 | UPS 型号 | 模块 | 总功率 | 放置 | 电池后备 |
 |------|----------|------|--------|------|----------|
-| **I400C40** | 9395XR-600 | 4 UPM ×150kW | 600kW | **外置（客户自备）** | ~10 min（2×93LiG2） |
-| I400C45 | 9395XR-600 | 4 UPM | 600kW | 内置电力舱 | ~20 min（2×93LiG2） |
-| L1240C45 | 9395XR-1500 | 10 UPM | 1500kW | 内置 | ~8 min（3×93LiG2） |
+| **I400C40** | 9395XR-600 | 4 UPM ×150kW | 600kW | **外置（客户自备）** | ~10 min（2×93LiG2） ^mdc-9ab6cc8561 |
+| I400C45 | 9395XR-600 | 4 UPM | 600kW | 内置电力舱 | ~20 min（2×93LiG2） ^mdc-209f063fe2 |
+| L1240C45 | 9395XR-1500 | 10 UPM | 1500kW | 内置 | ~8 min（3×93LiG2） ^mdc-2fa2402d7c |
 
 电池型号：**EATON 93LiG2**（93Li92S-100Ah-3PBFA，332kW/柜）。  
 参考：[[KB/3RD-PARTY/UPS/Suppliers/Eaton/]] / UPS_EATON_9395XR。
@@ -69,7 +69,7 @@ Grid / BESS → 外置 UPS (EATON 9395XR-600) → I400C40 舱内 PDC → Tanks /
 
 ### 6.5 IT Zone 电气负荷（415VAC 参考）
 
-数据源：[[I400C40 工作负荷]]。以下为设计阶段参考值。
+数据源：[[I400C40 工作负荷]]。以下为设计阶段参考值。 ^mdc-304ca06f0e
 
 #### 6.5.1 动力配电柜 PDC1
 
@@ -111,7 +111,7 @@ Grid / BESS → 外置 UPS (EATON 9395XR-600) → I400C40 舱内 PDC → Tanks /
 |------|------|
 | UPS 模块（外置 9395XR-600） | 4 模块，支持内部 **N+1**（单模块故障可运行） |
 | Tank CDU | **1+1 / 2N** |
-| I400C40 集装箱 IT Zone | **无内部 N+1/2N** — 单箱独立；更高可靠靠增加箱数 |
-| MDC 系统级 | 多台 I400C40 并联实现 N / N+1 / 2N |
+| I400C40 集装箱 IT Zone | **无内部 N+1/2N** — 单箱独立；更高可靠靠增加箱数 ^mdc-d8baaf8b63 |
+| MDC 系统级 | 多台 I400C40 并联实现 N / N+1 / 2N ^mdc-434fb7aaa3 |
 
 ---

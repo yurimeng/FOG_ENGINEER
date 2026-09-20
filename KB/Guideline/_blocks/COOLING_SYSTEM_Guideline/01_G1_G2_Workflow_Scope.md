@@ -23,7 +23,7 @@ Before starting any technical work, Cooling Engineer **MUST** read this file.
 This Guideline defines:
 - Permitted cooling architectures (site historical max dry-bulb ≤24°C → pure dry cooler permitted; >24°C → dry cooler + DX / Hybrid mandatory)
 - DX activation threshold (≥28°C ambient)
-- IT Zone to Cooling Zone matching rules (AC40, DC45, A32 each have specific capacity requirements)
+- IT Zone to Cooling Zone matching rules (AC40, DC45, A32 each have specific capacity requirements) ^mdc-10aea42e51
 - Hybrid Cooling System design principles
 - Environmental operating ranges
 

@@ -65,7 +65,7 @@ source_anchors: []
    - 三支路水力失配，需平衡阀控制
    - **必须三选一**：升级 CDU / 三泵架构 / 单 CDU + PICV
 
-1. 🛑 **Vertiv DCD35 在 41–48°C 进风工况下的运行许可** — datasheet 标定 10–40°C，DC45 S-Max 工况超规 1–8°C。Yuri 与 Vertiv 复核中。可能结果：
+1. 🛑 **Vertiv DCD35 在 41–48°C 进风工况下的运行许可** — datasheet 标定 10–40°C，DC45 S-Max 工况超规 1–8°C。Yuri 与 Vertiv 复核中。可能结果： ^mdc-05fb2a3f9e
    - off-spec 运行允许（仅保修条款变化）→ Rev 7 BOM 不变
    - off-spec 运行不允许 → 需机柜后门导流板或降 φ_air 上限
    - 升级到主动 RDHX → 增加 5–6 kW 风扇电耗
@@ -77,11 +77,11 @@ source_anchors: []
 4. UPS 散热是否在 IT zone 内（影响 CeilAir 负荷 ±47 kW）— 与 PRODUCTS_L1240C45 §3 / §10 交叉核对。
 5. **CeilAir 9 台顶置结构复核**：
    - 单台 250 kg × 9 = **2250 kg 顶置载荷**，需结构工程师评审
-   - DC45 内空 ~ 2.6 m 高度内的安装净空
+   - DC45 内空 ~ 2.6 m 高度内的安装净空 ^mdc-8d4dfe27fb
    - 9 台风口送回风组织 + 13.7 m 长度均匀布置
 6. **PG25 系统兼容性**：
    - TCS 主泵叶轮 / 密封 / O 圈 PG25 兼容
    - CDU 一次侧板换 / 阀门 PG25 兼容
    - RDHX 水侧（DCD35 被动）需向 Vertiv 确认 PG 兼容
 7. Compliance 路径：DCD35 被动 + OHS-084-DG-FC（含 R-407C 制冷剂回路 + 自由冷却阀组）的 UL/TUV 现场认证 BOM。
-8. **FC 自由冷却回路触发逻辑**：本设计 TCS 范围 26–28°C 永远高于 FC 触发阈值（typical < 10°C），FC 在正常 DC45 运行中不激活。-FC 变体的额外阀组成本是否值得 — 由 Cost Architect 评估。
+8. **FC 自由冷却回路触发逻辑**：本设计 TCS 范围 26–28°C 永远高于 FC 触发阈值（typical < 10°C），FC 在正常 DC45 运行中不激活。-FC 变体的额外阀组成本是否值得 — 由 Cost Architect 评估。 ^mdc-7acaf94a7d

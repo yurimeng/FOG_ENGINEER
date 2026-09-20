@@ -15,8 +15,8 @@ source_anchors: []
 
 ```text
 ACC Campus
-    ├ AC40  (Immersion Compute)
-    ├ DC45  (DLC Compute)
+    ├ AC40  (Immersion Compute) ^mdc-682226f099
+    ├ DC45  (DLC Compute) ^mdc-0665ee1a19
     ├ Cooling Plant
     └ Power Infrastructure
 ```

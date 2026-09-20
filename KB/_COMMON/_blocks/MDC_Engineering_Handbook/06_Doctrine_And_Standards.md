@@ -208,22 +208,22 @@ Doctrine 本身也可以修订，但修订需要：
 
 ```text
 ACC Campus
-    ├ AC40  (Immersion Compute)
-    ├ DC45  (DLC Compute)
+    ├ AC40  (Immersion Compute) ^mdc-3b2ea6813a
+    ├ DC45  (DLC Compute) ^mdc-3eaff350db
     ├ Cooling Plant
     └ Power Infrastructure
 ```
 
 # 8. Product Definitions
 
-## 8.1 AC40
-参见：[[PUBLIC/Products/I400C40|I400C40 产品 PRD]]
+## 8.1 AC40 ^mdc-0c67d347d7
+参见：[[PUBLIC/Products/I400C40|I400C40 产品 PRD]] ^mdc-bdda1840bf
 
-## 8.2 AC45
-参见：[[PUBLIC/Products/I400C45|I400C45 产品 PRD]]
+## 8.2 AC45 ^mdc-27bad4965a
+参见：[[PUBLIC/Products/I400C45|I400C45 产品 PRD]] ^mdc-719413af24
 
-## 8.3 DC45
-参见：[[L1240C45_Tech_Spec_EN|KB/LIQUID/L1240C45/PRODUCTS/L1240C45 Tech Spec EN]]
+## 8.3 DC45 ^mdc-e06c2d6fd3
+参见：[[L1240C45_Tech_Spec_EN|KB/LIQUID/L1240C45/PRODUCTS/L1240C45 Tech Spec EN]] ^mdc-e55669c58d
 
 > 快速对比参考：[[MDC_Product_Quick_Ref|KB/_COMMON/MDC_Product_Quick_Ref]]
 
@@ -235,23 +235,23 @@ ACC Campus
 |---|---|---|
 |安全标准|UL / IEC / CE / NFPA|电气、消防、结构|
 |PUE指标|Immersion: 1.04±0.02 DLC: 1.18~1.22|根据冷却方式区分|
-|模块化|所有计算模块（AC40/AC45/DC45）需标准化尺寸和接口|支持工厂集成与快速部署|
+|模块化|所有计算模块（AC40/AC45/DC45）需标准化尺寸和接口|支持工厂集成与快速部署 ^mdc-f1000b5ba5 |
 |文件与版本|所有工程图纸、BOM、测试报告必须统一版本管理|研发和现场一致性|
 
 ---
 
 ## 9.2 电力系统标准（Power Standards）
-参见：[[L1240C45 Power System Criteria|KB/LIQUID/L1240C45/DESIGN/L1240C45 Power System Criteria]]
+参见：[[L1240C45 Power System Criteria|KB/LIQUID/L1240C45/DESIGN/L1240C45 Power System Criteria]] ^mdc-38c9e8bb48
 
 ---
 
 ## 9.3 冷却系统标准（Thermal Standards）
-参见：[[L1240C45 Hydronic & Thermal Design Criteria|KB/LIQUID/L1240C45/DESIGN/L1240C45 Hydronic & Thermal Design Criteria]]
+参见：[[L1240C45 Hydronic & Thermal Design Criteria|KB/LIQUID/L1240C45/DESIGN/L1240C45 Hydronic & Thermal Design Criteria]] ^mdc-5070f39a5b
 ---
 
 ## 9.4 算力模块标准（Compute Module Standards）
 
-| 项目    | AC40                | DC45         | AC45      |
+| 项目    | AC40                | DC45         | AC45 ^mdc-640d944aff |
 | ----- | ------------------- | ------------ | --------- |
 | GPU类型 | PCIe H100/4090/5090 | SXM/B系列/GB系列 | 可定制混合     |
 | 冷却方式  | Immersion           | DLC          | Immersion |
@@ -274,7 +274,7 @@ ACC Campus
 ---
 
 ## 9.6 环境与区域适配（Regional Adaptation Standards）
-参见：[[L1240C45_Thermal_Assessment_6Sites|KB/LIQUID/L1240C45/DESIGN/L1240C45_Thermal_Assessment_6Sites]]
+参见：[[L1240C45_Thermal_Assessment_6Sites|KB/LIQUID/L1240C45/DESIGN/L1240C45_Thermal_Assessment_6Sites]] ^mdc-bae83104f8
 
 ---
 

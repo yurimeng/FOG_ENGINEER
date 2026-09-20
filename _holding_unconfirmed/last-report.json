@@ -1,0 +1,23 @@
+{
+  "before_count": 3363,
+  "after_count": 3363,
+  "missing": [],
+  "domain_counts": {
+    "product": 471,
+    "solution": 199,
+    "project": 1275,
+    "procurement": 66,
+    "other": 1352,
+    "unclassifiable": 0
+  },
+  "relocated": [],
+  "typesafe_calls": 10,
+  "typed_used": true,
+  "smoke": {
+    "noul_about_product": 0.98,
+    "choice_kind": "match_example",
+    "score_readiness": 1.23,
+    "choice_confidence": 1.0
+  },
+  "notes": []
+}

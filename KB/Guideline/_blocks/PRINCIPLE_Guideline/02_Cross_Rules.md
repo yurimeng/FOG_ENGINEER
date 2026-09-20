@@ -26,7 +26,7 @@ source_anchors:
 
 ## §1.2 KB-only 产品原则 / KB-Only Product Rule
 
-- **只允许**在核心产品线（A32 / AC40 / AC45 / DC45）或 `KB/3RD-PARTY/3rd Party List.md` 列出的供应商中选型。
+- **只允许**在核心产品线（A32 / AC40 / AC45 / DC45）或 `KB/3RD-PARTY/3rd Party List.md` 列出的供应商中选型。 ^mdc-bdee564d92
 - 任何"建议使用 KB 之外的产品"必须先上报 ATS，再由 ATS 上报 AM。
 - **适用范围**: 所有技术 Guideline（Cooling/Power/Network/Layout/Compliance/Cost）。
 

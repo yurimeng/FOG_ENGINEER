@@ -15,11 +15,11 @@ source_anchors:
 
 ## 4. Immersion Tank / Rack Spec ^sec-4-rack-spec
 
-### 4.1 I50TS immersion tank (single)
+### 4.1 I50TS immersion tank (single) ^mdc-5f08a87df5
 
 | Item | Spec |
 |------|------|
-| Model | **I50TS** |
+| Model | **I50TS** ^mdc-20a7018596 |
 | Quantity | **8** |
 | IT capacity | **45kW** recommended / **50kW** max |
 | Rack units | **32RU / 29OU** (OCP compatible) |
@@ -38,7 +38,7 @@ source_anchors:
 | Example silicon | 4090 / A100 / H100 / H200 (project-specific) |
 | Immersion path | Air-cooled retrofit or immersion-ready servers |
 
-> Single source of truth: [[PUBLIC/Products/I50TS|I50TS server compatibility]].
+> Single source of truth: [[PUBLIC/Products/I50TS|I50TS server compatibility]]. ^mdc-8585967d31
 
 ### 4.3 Air-cooled rack
 
@@ -47,7 +47,7 @@ source_anchors:
 | Qty / capacity | **1 × 10kW** |
 | Rule | **Dedicated CRAC**; must not share immersion loops as sole path |
 
-### 4.4 In-tank PDU (I50TS)
+### 4.4 In-tank PDU (I50TS) ^mdc-6d9c6e3952
 
 | Item | Spec |
 |------|------|

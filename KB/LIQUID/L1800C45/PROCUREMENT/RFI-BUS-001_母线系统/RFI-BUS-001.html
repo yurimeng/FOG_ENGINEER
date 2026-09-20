@@ -1,0 +1,854 @@
+<!doctype html><html lang='zh-CN'><head><meta charset='utf-8'><title>RFI-BUS-001 DC45 L1800 TOP Add-on 母线与插接开关系统询价 Rev.1</title><style>
+@page { size: A4; margin: 16mm 14mm 16mm 14mm; }
+body{font-family:"Noto Sans CJK SC","Noto Sans CJK","Source Han Sans SC","PingFang SC",sans-serif;
+ font-size:10.2pt;line-height:1.55;color:#16191d;margin:0;}
+h1{font-size:18pt;margin:0 0 6pt;padding-bottom:6pt;border-bottom:2.5pt solid #0f3d5c;color:#0f3d5c;}
+h2{font-size:13pt;margin:16pt 0 6pt;color:#0f3d5c;border-left:4pt solid #0f3d5c;padding-left:7pt;}
+h3{font-size:11.2pt;margin:11pt 0 4pt;color:#22557a;}
+h4{font-size:10.4pt;margin:9pt 0 3pt;color:#22557a;}
+table{border-collapse:collapse;width:100%;margin:7pt 0 10pt;font-size:8.9pt;}
+th{background:#0f3d5c;color:#fff;text-align:left;padding:4pt 6pt;border:0.5pt solid #0f3d5c;font-weight:600;}
+td{padding:3.5pt 6pt;border:0.5pt solid #c3ccd4;vertical-align:top;}
+tr:nth-child(even) td{background:#f4f7f9;}
+blockquote{margin:7pt 0;padding:6pt 10pt;background:#fff7e6;border-left:3.5pt solid #d98b00;}
+blockquote p{margin:3pt 0;}
+code{background:#eef2f5;padding:0.5pt 3pt;border-radius:2pt;font-size:8.8pt;
+ font-family:"DejaVu Sans Mono",monospace;}
+hr{border:0;border-top:0.6pt solid #c3ccd4;margin:12pt 0;}
+ul,ol{margin:5pt 0 5pt 16pt;padding:0;} li{margin:2pt 0;}
+strong{color:#0b2c44;}
+p{margin:5pt 0;}
+</style></head><body><h1>RFI-BUS-001　DC45 L1800 上部模块（TOP Add-on）母线槽与插接开关系统　询价与技术要求</h1>
+<table>
+<thead>
+<tr>
+<th>项</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>文件编号</td>
+<td>RFI-BUS-001　<strong>Rev.1</strong></td>
+</tr>
+<tr>
+<td>日期</td>
+<td>2026-09-05</td>
+</tr>
+<tr>
+<td>采购主体</td>
+<td>潘氏未来（上海）算力科技有限公司（英文 MDCX）；境外签约主体 PAN'S FUTURE HOLDING TECH GROUP CO., LIMITED</td>
+</tr>
+<tr>
+<td>项目</td>
+<td>DC45 L1800 模块化 AI 数据中心　上部模块（TOP Add-on）电力舱母线系统</td>
+</tr>
+<tr>
+<td>询价性质</td>
+<td>RFI（技术方案 + 预算报价），后续按本文件转 RFQ / 技术确认书</td>
+</tr>
+<tr>
+<td>数据基准</td>
+<td>三维模型 <code>TOP Add-on</code>（2026-09-05 版，已就位于算力仓顶），坐标系 = 集装箱坐标系，单位 mm</td>
+</tr>
+<tr>
+<td>关联文件</td>
+<td>BW-TC-001（母线技术确认书 Rev.B）、BW-TC-002（插接开关配置确认）——<strong>本 RFI 的接头位置与插接开关配置已更新，以本文件为准</strong></td>
+</tr>
+<tr>
+<td>替代</td>
+<td>本文件<strong>整体替代 RFI-BUS-001 Rev.0（2026-09-04）</strong>。已收到 Rev.0 的厂家请以本版为准重新报价</td>
+</tr>
+</tbody>
+</table>
+<h3>修订记录　Rev.0 → Rev.1</h3>
+<table>
+<thead>
+<tr>
+<th>序</th>
+<th>条款</th>
+<th>修订内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>§2.1 E / §4.5.2 / §9-6</td>
+<td><strong>泵回路插接开关由 160 A 框改为 125 A 框</strong>（箱体 394×247×255 → <strong>354×227×225</strong>，与其余小开关同型），使其可以配用 IEC 60309 连接器</td>
+</tr>
+<tr>
+<td>2</td>
+<td>§2.1 F / §4.5.4（新增）/ §9-8</td>
+<td><strong>泵回路取消格兰硬接线</strong>，改为 <strong>whip 延长弯曲 + IEC 60309 125 A 5P 面板插座</strong>，插座固定在<strong>端墙内凹腔背板、母线进线孔正下方</strong>，做成<strong>快插</strong>；新增腔内接线盒</td>
+</tr>
+<tr>
+<td>3</td>
+<td>§2.1 H / §3 / §4.6</td>
+<td>端墙出线口由 <strong>36 件 → 42 件</strong>（新增 2 × 插座法兰 + 2 × 插座本体 + 2 × 接线盒）；模型总件数 <strong>1196 → 1200</strong></td>
+</tr>
+<tr>
+<td>4</td>
+<td>§4.2 / §4.6</td>
+<td>模型坐标基准更新（上部模块已就位于算力仓顶）：<strong>母线中心线 y = 430 / 837</strong>（原 −10701.2 / −10294.2）。<strong>几何尺寸与相对关系完全未变</strong></td>
+</tr>
+<tr>
+<td>5</td>
+<td>§4.5.3 / §9-7</td>
+<td>回路数改为 <strong>IT 64 路 63 A + 辅助 24 路 63 A + 泵 2 路 125 A</strong></td>
+</tr>
+<tr>
+<td>6</td>
+<td>§4.7（新增）/ Q13</td>
+<td>新增<strong>电力舱通风与散热</strong>要求（估算舱内损耗 4–5 kW）</td>
+</tr>
+<tr>
+<td>7</td>
+<td>§10 Q6</td>
+<td>原"160 A 无连接器"问题关闭；改为<strong>泵实际满载 / 启动电流是否 ≤ 125 A</strong> 的核对问题</td>
+</tr>
+<tr>
+<td>8</td>
+<td>§2.3（新增）/ §9-15</td>
+<td>新增<strong>VR200（Vera Rubin）125 A 升级模块</strong>选项报价（不进入本次主供货范围）</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>关于 63 A / 125 A：本次主供货范围（IT 侧 64 路 + 辅助侧 24 路）继续采用 IEC 60309 63 A</strong>，与 Rev.0 一致，仅泵回路改为 125 A。原因见 §2.3。</p>
+</blockquote>
+<hr />
+<h2>1. 项目背景与本次询价定位</h2>
+<p>DC45 L1800 是 45 尺标准箱体的液冷 AI 算力模块，单箱 IT 容量上限 1800 kW（8 × 225 kW 机柜口径）。
+箱体上方设<strong>上部模块（TOP Add-on）</strong>，分为管路舱与<strong>电力舱</strong>；本文件针对<strong>电力舱内的全部母线与插接开关系统</strong>询价。管路系统另行询价（见 RFI-PIP-001）。</p>
+<p>上部模块随箱体在<strong>浙江嘉兴海盐 世赫 3# 厂房（算力集装箱总装与联调基地）</strong>完成总装与联调后整体发运。该厂房<strong>厂内不动火</strong>，因此本系统必须<strong>预制成套、现场全螺栓/插接连接</strong>交付（详见 §8）。</p>
+<h3>🔴 电力舱三条设计铁律（投标方案必须遵守）</h3>
+<ol>
+<li><strong>电力舱只有底面开放，其余五面封闭；人站在下方操作与维护。</strong> 所有插接开关只能<strong>下挂、手柄朝下</strong>；顶面与侧面出线一律不可用。</li>
+<li><strong>线缆不允许直角折弯</strong>，任何折弯按弯曲半径设计。</li>
+<li><strong>两条母线由上游同一路馈电，只做分流、不互为备用</strong>；冗余只体现在插接开关及其下游。因此<strong>不做 4000 A 单母线比选，也不按 N−1 限功率</strong>。</li>
+</ol>
+<hr />
+<h2>2. 询价范围与供货边界</h2>
+<h3>2.1 供货范围（含）</h3>
+<table>
+<thead>
+<tr>
+<th>分项</th>
+<th>内容</th>
+<th>数量</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A. 主母线</td>
+<td>2 × 2000 A 立放直线母线槽，含壳体、导体、绝缘、端封</td>
+<td>2 条，各约 13.47 m</td>
+</tr>
+<tr>
+<td>B. 母线接头</td>
+<td>直线连接接头（套管式）</td>
+<td>每条 6 处，共 12 处</td>
+</tr>
+<tr>
+<td>C. 始端进线段</td>
+<td>端部进线段 + 进线法兰</td>
+<td>2 套</td>
+</tr>
+<tr>
+<td>D. <strong>大插接开关（TOU）</strong></td>
+<td>400 A 3P 插接式开关箱，含 MCCB、夹爪、卡箍</td>
+<td><strong>16 只</strong></td>
+</tr>
+<tr>
+<td>E. <strong>小插接开关（STU）</strong></td>
+<td>100 A 框 24 只 + <strong>125 A 框 2 只（泵回路，Rev.1 由 160 A 改）</strong></td>
+<td><strong>26 只</strong></td>
+</tr>
+<tr>
+<td>F. <strong>出线组件</strong></td>
+<td>IEC 60309 <strong>63 A</strong> 5P 插座 + 软电缆 whip + 格兰（88 路）；<strong>泵回路 2 路为 IEC 60309 125 A 5P 面板插座 + 延长弯曲 whip + 腔内接线盒</strong></td>
+<td>见 §4.5</td>
+</tr>
+<tr>
+<td>G. <strong>母线吊架</strong></td>
+<td>母线支吊架，吊至舱顶结构面 z 4216</td>
+<td>24 付（每条 12）</td>
+</tr>
+<tr>
+<td>H. <strong>端墙出线口</strong></td>
+<td>内凹腔、进线框、垫片、外框、铰链、防雨盖、检修门、<strong>泵回路 125 A 面板插座与接线盒</strong></td>
+<td>1 套（<strong>42 件</strong>）</td>
+</tr>
+<tr>
+<td>I. 附件</td>
+<td>全部紧固件、防松件、相序标识、色标、随机备件与专用工具</td>
+<td>成套</td>
+</tr>
+</tbody>
+</table>
+<p><strong>合计模型件数 1200 件</strong>（3D 文件按 11 个总成分组，见 §3）。</p>
+<h3>2.2 不在本次范围</h3>
+<ul>
+<li>上部模块结构框架、甲板、围护板（电力舱壳体由 MDCX 提供）</li>
+<li>上游 PowerPod（LV Pod）低压柜、4000 A 出线母线与站侧电缆</li>
+<li>算力仓内机柜 PDU 与随机柜 whip（Supermicro 随机柜供货，带插头）</li>
+<li>管路系统（见 RFI-PIP-001）</li>
+</ul>
+<blockquote>
+<p><strong>供货边界界面</strong>：
+<strong>上界面</strong> = 端墙出线口内的<strong>母线始端进线法兰</strong>（与 PowerPod 4000 A 出线对接，法兰接口尺寸链见 §6）；
+<strong>下界面</strong> = <strong>每一路 IEC 60309 插座的插合面</strong>（我方出插座，负载侧带插头）：IT 与辅助侧为 <strong>63 A</strong>，泵回路为端墙内凹腔面板上的 <strong>125 A</strong> 插座。</p>
+</blockquote>
+<hr />
+<h3>2.3 关于连接器电流等级（63 A / 125 A）的说明</h3>
+<p>Supermicro 已确认：<strong>IEC 60309 63 A 与 125 A 的插头 / 插座本体不兼容</strong>，不能互插，也无法通过更换插芯升级。</p>
+<p>因此：</p>
+<ul>
+<li><strong>本次主供货范围的 88 路出线全部为 63 A</strong>（IT 侧 64 路对应 GB300 机柜的 60 A/480 V whip，辅助侧 24 路）；</li>
+<li>面向下一代 <strong>VR200（Vera Rubin，4 × 100 A 输出）</strong>机柜的 125 A 方案，MDCX 已另行建模一套独立的上部模块（<code>TOP Add-on.VR200-125A</code>，标注 <em>TOU Update to 125A to fit Vera Rubin</em>）。该方案<strong>不进入本次主供货范围</strong>，仅在 §9 序 15 中作为<strong>选项单独报价</strong>，以便评估后续升级成本；</li>
+<li>请厂家注意：<strong>由 63 A 升级到 125 A 需整体更换 TOU 的出线模块与全部插座</strong>，不是简单加装，报价时请体现这一点。</li>
+</ul>
+<h2>3. 随附文件（本 RFI 附件）</h2>
+<table>
+<thead>
+<tr>
+<th>文件</th>
+<th>内容</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>DC45_TopAddon_Busway_RFI.blend</code></td>
+<td>Blender 三维模型，仅含本次询价范围</td>
+<td>父级已烘焙，保留世界坐标，按 11 个总成分集合</td>
+</tr>
+<tr>
+<td><code>DC45_TopAddon_Busway_RFI_step.zip</code></td>
+<td>STEP AP214 装配体（解压约 57 MB）</td>
+<td><strong>1200 个实体</strong>，带装配树与颜色，mm 单位，模块坐标系</td>
+</tr>
+<tr>
+<td><code>DC45_TopAddon_Busway_RFI_GA.dxf</code> / <code>.pdf</code></td>
+<td>总布置图（平面 / 立面 / 断面 / 插接开关表 / <strong>泵回路快插详图 VIEW 5</strong>）</td>
+<td>DIMENSION 实体真标注，mm</td>
+</tr>
+</tbody>
+</table>
+<p>3D 分组：<code>TRUNK_2000A_A/B</code>（各 28）· <code>TOU_400A_A/B</code>（各 168）· <code>TOU_SMALL_A/B</code>（各 234）· <code>WHIP_IEC60309_A/B</code>（各 <strong>89</strong>）· <code>HANGER_A/B</code>（各 60）· <code>END_WALL_PORT</code>（<strong>42</strong>）</p>
+<blockquote>
+<p>说明：模型中的<strong>母线壳体、导体与绝缘为包络建模</strong>，用于确认空间与接口；<strong>内部结构、导体排布与散热由厂家按标准产品设计</strong>，但<strong>外形包络与接口尺寸不得超出模型给定值</strong>。</p>
+</blockquote>
+<hr />
+<h2>4. 系统技术规格</h2>
+<h3>4.1 电气总口径</h3>
+<table>
+<thead>
+<tr>
+<th>项</th>
+<th>参数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>系统电压</td>
+<td><strong>400 V AC 3P+N+PE</strong>（如需 415 V 变体请一并说明），50 Hz</td>
+</tr>
+<tr>
+<td>功率因数</td>
+<td>0.99</td>
+</tr>
+<tr>
+<td>单箱 IT 容量上限</td>
+<td>1800 kW（8 × 225 kW 机柜口径）</td>
+</tr>
+<tr>
+<td>负荷分解</td>
+<td>IT <strong>2625 A</strong> · 列间空调 + CDU <strong>262 A</strong> · 空调箱 AIR <strong>58 A</strong> · 照明 <strong>22 A</strong> · 泵/阀控 <strong>131 A</strong></td>
+</tr>
+<tr>
+<td><strong>合计</strong></td>
+<td><strong>3018 A</strong></td>
+</tr>
+<tr>
+<td>每条母线分担</td>
+<td><strong>1509 A（2000 A 档的 75.5 %）</strong></td>
+</tr>
+<tr>
+<td>单机柜负荷</td>
+<td><strong>328 A</strong>（GB300 198 A / VR200 321 A）</td>
+</tr>
+<tr>
+<td>短路口径</td>
+<td>BESS 孤岛可用故障电流 ≈ <strong>4.4 kA</strong>；插接开关瞬动 Ii 须在此电流下可靠动作（400 A 档 Ii = 10 × In = 4.0 kA）</td>
+</tr>
+<tr>
+<td>冗余口径</td>
+<td>两条母线由上游同一路馈电，<strong>只分流不互备</strong>；冗余在插接开关及下游</td>
+</tr>
+</tbody>
+</table>
+<h3>4.2 主母线</h3>
+<table>
+<thead>
+<tr>
+<th>项</th>
+<th>参数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>额定电流</td>
+<td><strong>2000 A × 2 条</strong></td>
+</tr>
+<tr>
+<td>敷设方式</td>
+<td><strong>立放（竖装）</strong>，两条并排</td>
+</tr>
+<tr>
+<td>壳体外形（包络）</td>
+<td><strong>132（宽）× 215（高）</strong></td>
+</tr>
+<tr>
+<td>导体</td>
+<td>5 根，<strong>铜排 12 × 171</strong>（L1 / L2 / L3 / N / PE），N 与相同截面</td>
+</tr>
+<tr>
+<td>全长</td>
+<td>壳体 x 194 … 13510；始端进线段 x 13510 … 13660</td>
+</tr>
+<tr>
+<td>中心线</td>
+<td>A 路 <strong>y = 430</strong>；B 路 <strong>y = 837</strong>；<strong>中心距 407</strong>；壳体净距 <strong>275</strong></td>
+</tr>
+<tr>
+<td>标高</td>
+<td>壳体 <strong>z 3666 … 3881</strong>（中心 3773.5）</td>
+</tr>
+<tr>
+<td>参考重量</td>
+<td>约 <strong>37.3 kg/m</strong>，两条合计约 <strong>1005 kg</strong></td>
+</tr>
+</tbody>
+</table>
+<h3>4.3 母线接头与分段（<strong>本轮已更新，与 BW-TC-001 Rev.B 不同</strong>）</h3>
+<p>接头中心 x：<strong>1050 / 3537 / 5961 / 7126 / 9537 / 11490</strong>（每条 6 处），套管长 120（例：3477 … 3597）。</p>
+<p>分段长度（m）：<strong>0.836 / 2.487 / 2.424 / 1.165 / 2.411 / 1.953 / 2.020</strong>，最长 2.487 m ≤ 2.7 m。</p>
+<blockquote>
+<p>⚠ 与 BW-TC-001 Rev.B 相比，<strong>第 2、第 5 处接头由 3.261 / 9.261 右移至 3.537 / 9.537</strong>，以便列间空调插接开关对准机柜柜心。请按本文件分段排产。</p>
+</blockquote>
+<h3>4.4 母线吊架</h3>
+<ul>
+<li>每条 <strong>12 付</strong>，中心 x：<strong>350 / 1500 / 2600 / 3750 / 4900 / 6300 / 7500 / 8600 / 9750 / 10900 / 12000 / 13200</strong></li>
+<li><strong>最大跨距 1.40 m</strong>，端部悬臂 0.156 / 0.460 m</li>
+<li><strong>吊架必须顶到舱顶结构面 z = 4216，不允许悬空生根</strong></li>
+<li>模型中吊架为 2 根 Ø12 吊杆 + 顶板 25 × 192 × 6 + 双侧夹板 25 × 6 × 86；厂家可按标准件替代，但须满足跨距与生根要求，并提供<strong>运输工况</strong>校核</li>
+</ul>
+<h3>4.5 插接开关（TOU / STU）—— 本次询价重点</h3>
+<h4>4.5.1 大插接开关 TOU 400 A（16 只，每条母线 8 只）</h4>
+<table>
+<thead>
+<tr>
+<th>项</th>
+<th>参数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>额定</td>
+<td><strong>400 A 3P</strong>，MCCB 型，Ii = 10 × In</td>
+</tr>
+<tr>
+<td>箱体外形</td>
+<td><strong>400（长，沿母线走向）× 200（宽）× 350（高）</strong> ——<strong>统一尺寸，不得超出</strong></td>
+</tr>
+<tr>
+<td>顶面标高</td>
+<td><strong>z = 3666</strong>（与母线壳体底部界面一致），箱体向下生长至 <strong>z = 3316</strong></td>
+</tr>
+<tr>
+<td>操作</td>
+<td><strong>MCCB 手柄朝下</strong>，手柄伸出箱体底面约 15 mm</td>
+</tr>
+<tr>
+<td>取电</td>
+<td>5 只夹爪（L1 L2 L3 N PE），夹爪伸入母线插接口 90 mm；8 只卡箍抱壳体，卡箍中心相对箱心 ±60 / ±160</td>
+</tr>
+<tr>
+<td><strong>出线</strong></td>
+<td><strong>4 路</strong>：箱底 4 只格兰（Ø58 × 78，2 × 2 布置，中心 ±100 / ±50）+ 4 根软电缆 whip（Ø32）+ 末端 <strong>IEC 60309 63 A 5P 400 V 插座</strong>（本体 Ø110 × 100 + 颈 Ø75 × 30）</td>
+</tr>
+<tr>
+<td>插座落位</td>
+<td>2 × 2，中心 ±150（X）/ ±90（Y），插座上端面 <strong>z = 3030</strong></td>
+</tr>
+<tr>
+<td>服务对象</td>
+<td>8 台 DLC 机柜（EQ_02 / 04 / 06 / 08 / 12 / 14 / 16 / 18），柜心 x = 1536 / 2686 / 3836 / 4986 / 7536 / 8686 / 9836 / 10986</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>例外：TOU_R07（x = 9836）</strong>的 4 只插座整组左移让开消防承重梁，格兰局部 x = −150 / −50，插座局部 x = −175 / −45。详见 3D。</p>
+</blockquote>
+<h4>4.5.2 小插接开关 STU（26 只，每条母线 13 只）</h4>
+<table>
+<thead>
+<tr>
+<th>位号</th>
+<th>服务对象</th>
+<th>柜心 x</th>
+<th>额定</th>
+<th>箱体</th>
+<th>出线</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>STU_CDU_L</td>
+<td>CDU（EQ_01）</td>
+<td>711</td>
+<td>100 A 3P</td>
+<td>354 × 227 × 225</td>
+<td>1 × IEC 60309 63 A 5P</td>
+</tr>
+<tr>
+<td>STU_CW03 / 05 / 07 / 09 / 11 / 13 / 15 / 17</td>
+<td>列间空调 8 台</td>
+<td>2111 / 3261 / 4411 / 5661 / 6861 / 8111 / 9261 / 10411</td>
+<td>100 A 3P</td>
+<td>354 × 227 × 225</td>
+<td>1 × IEC 60309 63 A 5P</td>
+</tr>
+<tr>
+<td>STU_AIR</td>
+<td>空调箱（EQ_10）</td>
+<td>6261</td>
+<td>100 A 3P</td>
+<td>354 × 227 × 225</td>
+<td>1 × IEC 60309 63 A 5P</td>
+</tr>
+<tr>
+<td>STU_CDU_R</td>
+<td>CDU（EQ_19）</td>
+<td>11811</td>
+<td>100 A 3P</td>
+<td>354 × 227 × 225</td>
+<td>1 × IEC 60309 63 A 5P</td>
+</tr>
+<tr>
+<td>STU_LTG</td>
+<td>舱内照明</td>
+<td>12200</td>
+<td>100 A 3P</td>
+<td>354 × 227 × 225</td>
+<td>1 × IEC 60309 63 A 5P</td>
+</tr>
+<tr>
+<td><strong>STU_EXT_PUMP</strong></td>
+<td>外接一次侧泵</td>
+<td>12650</td>
+<td><strong>125 A 3P</strong>（Rev.1 由 160 A 改）</td>
+<td>354 × 227 × 225</td>
+<td><strong>1 × 延长 whip → IEC 60309 125 A 5P 面板插座</strong>（见 §4.5.4）</td>
+</tr>
+</tbody>
+</table>
+<p>小开关同为<strong>下挂、手柄朝下</strong>；单出线位于箱底局部 (x +80, y 0)，<strong>不得设在 x = 0</strong>（与朝下的 MCCB 手柄冲突）。</p>
+<blockquote>
+<p><strong>例外：STU_CW05（x = 3261）</strong>的出线组件整体左移 30 mm，让开消防承重梁。</p>
+<p><strong>STU_EXT_PUMP 的箱体已由 394 × 247 × 255 缩小为 354 × 227 × 225，与其余 24 只小开关同型</strong>，顶面标高随之由 z 3442.5 抬高至 <strong>z 3457.5</strong>（箱体 z 3441 … 3666）。请按 125 AF / 125 AT 3P MCCB 选型。</p>
+</blockquote>
+<h4>4.5.3 连接器口径</h4>
+<ul>
+<li><strong>IT 侧与辅助侧全部采用 IEC 60309 63 A 5P 400 V（3P+N+PE，6h）</strong>，红色；</li>
+<li><strong>泵回路采用 IEC 60309 125 A 5P 400 V（3P+N+PE，6h）</strong>，红色，<strong>IP67 面板安装式</strong>；</li>
+<li><strong>我方出插座</strong>，负载侧带插头（Supermicro GB300 单柜 8 根 60 A/480 V whip，每 power shelf 1 根）；</li>
+<li>全箱回路数：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>类别</th>
+<th>回路数</th>
+<th>连接器</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IT 机柜（16 只 TOU × 4）</td>
+<td><strong>64</strong></td>
+<td>IEC 60309 <strong>63 A</strong> 5P，whip 悬垂</td>
+</tr>
+<tr>
+<td>辅助（CDU / 列间空调 / 空调箱 / 照明，12 × 2）</td>
+<td><strong>24</strong></td>
+<td>IEC 60309 <strong>63 A</strong> 5P，whip 悬垂</td>
+</tr>
+<tr>
+<td>外接一次侧泵（2 × 1）</td>
+<td><strong>2</strong></td>
+<td>IEC 60309 <strong>125 A</strong> 5P，<strong>端墙面板固定式快插</strong></td>
+</tr>
+<tr>
+<td><strong>合计</strong></td>
+<td><strong>90</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>⚠ <strong>IEC 60309 标准最大即 125 A</strong>。原 160 A 泵回路已下调至 125 A 框以匹配连接器；<strong>泵实际满载与启动电流是否落在 125 A 以内需核实</strong>，见 §10 Q6。</li>
+<li>⚠ <strong>63 A 与 125 A 插头 / 插座本体不兼容</strong>（Supermicro 已确认），选型时不得混用，标识须清晰区分。</li>
+</ul>
+<h4>4.5.4 泵回路快插（<strong>Rev.1 新增，请重点回复</strong>）</h4>
+<p>泵回路是本系统<strong>唯一穿出上部模块、与外部一次侧泵撬块对接</strong>的电力回路。Rev.0 采用格兰硬接线，需现场剥线压接；Rev.1 改为<strong>面板固定式快插</strong>，现场只需插合，符合"厂内不动火、全插接连接"的要求。</p>
+<table>
+<thead>
+<tr>
+<th>项</th>
+<th>参数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>上游</td>
+<td>STU_EXT_PUMP（x 12650，<strong>125 A 3P</strong> MCCB，箱体 354 × 227 × 225，x 12473 … 12827）</td>
+</tr>
+<tr>
+<td>whip</td>
+<td>软电缆 whip，箱底格兰 Ø58 引出，<strong>外径按 Ø45 建模</strong>，展开长度 <strong>1257 mm</strong></td>
+</tr>
+<tr>
+<td>走向</td>
+<td>自 TOU 箱底 (x 12730, z 3366) <strong>向下</strong> → <strong>R360 圆弧</strong> → <strong>水平段 z = 2986</strong> → <strong>R360 圆弧</strong> → 向上至插座 (x 13490, z 3412)</td>
+</tr>
+<tr>
+<td>最小弯曲半径</td>
+<td><strong>359.2 mm = 8 × Ø45</strong>（模型值），大于常规软电缆 6 × OD 的下限</td>
+</tr>
+<tr>
+<td>插座</td>
+<td><strong>IEC 60309 125 A 5P 400 V IP67 面板安装式</strong>，本体 Ø135 × 90 + 出口 Ø120 × 20</td>
+</tr>
+<tr>
+<td>插座法兰</td>
+<td><strong>160 × 160 × 12</strong>，安装面 <strong>x = 13560</strong>，中心标高 <strong>z = 3480</strong>，A 路 y 中心 430 / B 路 y 中心 837</td>
+</tr>
+<tr>
+<td>安装位置</td>
+<td><strong>端墙内凹腔背板 <code>EXTC2_Pocket_Back_B</code>，正位于母线进线孔正下方</strong>（进线孔底 z 3666，插座顶 z 3560，净距 106）</td>
+</tr>
+<tr>
+<td>腔内接线盒</td>
+<td><strong>100 × 140 × 140</strong>（x 13448 … 13548），<strong>IP65</strong>，whip 由格兰进入，与插座尾端在盒内压接</td>
+</tr>
+<tr>
+<td>现场界面</td>
+<td><strong>插座插合面即为供货下界面</strong>；泵撬块侧的插头与电缆由 MDCX / 泵供方提供</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>A / B 两路对称，各 1 套</strong>（共 2 只插座 + 2 只法兰 + 2 只接线盒，计入 §4.6 端墙出线口 42 件）。</p>
+<p>⚠ <strong>电缆截面</strong>：模型按 Ø45 外径建模（约相当于 H07RN-F 5G25 mm²）。若厂家按 <strong>125 A 连续工况</strong>认为需要 5G35 / 5G50 mm²，<strong>请给出实际外径、最小弯曲半径与所需的 whip 展开长度</strong>，MDCX 将据此调整腔内空间（见 §10 Q6）。</p>
+</blockquote>
+<h3>4.6 端墙出线口（<strong>42 件</strong>）</h3>
+<ul>
+<li>端墙内凹腔 <strong>深 148</strong>（x 13560 … 13708），外框 + 铰链 + <strong>35° 外挑 810 的防雨盖</strong> + 检修门；</li>
+<li><strong>两个进线孔 = 母线壳体净尺寸 132 × 215</strong>，A 孔 y <strong>364 … 496</strong>，B 孔 y <strong>771 … 903</strong>，<strong>z 3666 … 3881</strong>；</li>
+<li>背板分 5 块 + 每孔 4 边进线框（外扩 25）+ 4 边垫片（外扩 21）；</li>
+<li>母线始端进线壳穿背板伸入腔内 100，腔内余 48 至外表面；</li>
+<li><strong>Rev.1 新增</strong>：背板上、两个进线孔的<strong>正下方</strong>各开 1 个泵回路插座孔，装 <strong>IEC 60309 125 A 面板插座</strong>（法兰 160 × 160 × 12，安装面 x 13560，中心 z 3480），背板后侧配 <strong>100 × 140 × 140 IP65 接线盒</strong>，详见 §4.5.4 与图纸 VIEW 5；</li>
+<li>要求防护等级 <strong>不低于 IP55</strong>（门关闭状态），并说明开门状态的防护措施；<strong>插座本体与法兰的安装接缝须做到 IP67</strong>。</li>
+</ul>
+<h3>4.7 电力舱通风与散热（<strong>Rev.1 新增</strong>）</h3>
+<p>电力舱为<strong>五面封闭、仅底面开放</strong>的密闭空间，内部热源为母线导体损耗、42 只插接开关的 MCCB 与接触损耗、以及 90 路 whip 的电缆损耗。</p>
+<p>MDCX 初步估算<strong>舱内总损耗约 4 – 5 kW</strong>，若按 Δt = 10 K 计算，需约 <strong>1200 – 1500 m³/h</strong> 的通风量。</p>
+<p>请厂家答复：</p>
+<ol>
+<li>在 <strong>1509 A / 条</strong>的运行工况下，母线 + 插接开关的<strong>实际损耗值</strong>（W/m 与 W/只）；</li>
+<li>母线与插接开关的<strong>最高允许环境温度</strong>，以及 40 / 45 / 50 °C 下的<strong>降容曲线</strong>；</li>
+<li>若电力舱内<strong>不设强制通风</strong>（仅靠底面开放自然对流），厂家是否接受？需要何种前提（如最高环境温度、最小自由空间）；</li>
+<li>若需强制通风，建议的<strong>通风口位置、风量与气流组织</strong>，以及是否会影响 IP 等级。</li>
+</ol>
+<blockquote>
+<p>本条不改变供货范围（通风设备由 MDCX 提供），但<strong>厂家的损耗数据与温度限值是 MDCX 定通风方案的输入</strong>，请务必给出。</p>
+</blockquote>
+<hr />
+<h2>5. 材料与工艺</h2>
+<ol>
+<li>导体：<strong>电解铜（TU1 / T2）</strong>，接头接触面镀锡或镀银，请注明；</li>
+<li>壳体：铝合金挤压或钢板，表面处理请注明；<strong>外形包络不得超出 §4.2</strong>；</li>
+<li>绝缘：等级与耐温请注明（含 40 / 45 / 50 °C 环境的<strong>降容曲线</strong>）；</li>
+<li>插接开关箱体：钢板喷涂或铝，<strong>手柄、铭牌、相序标识</strong>齐全；</li>
+<li><strong>厂内不动火</strong>：现场安装全部为螺栓 / 插接连接，不接受现场焊接与切割；</li>
+<li>所有紧固件须有防松措施并可复检（力矩标记）；</li>
+<li><strong>IEC 60309 连接器须为同一品牌同一系列</strong>（63 A 与 125 A 可为同系列不同规格），提供品牌与型号，并附 IP 与耐温证明。</li>
+</ol>
+<hr />
+<h2>6. 接口与净距（硬约束）</h2>
+<ol>
+<li><strong>母线壳体净距 275、TOU 箱体之间净距 100</strong>，全部部件外形包络不得超出 3D 模型；</li>
+<li><strong>插接开关顶面统一 z = 3666</strong>，夹爪与卡箍位置以模型为准，不得更改；</li>
+<li><strong>所有 42 只插接开关的箱体中心已对准所服务设备的柜心</strong>（见 §4.5），排产与开孔须按此表；</li>
+<li>母线吊架<strong>必须顶到 z = 4216</strong>；</li>
+<li>端墙进线孔位置与尺寸链见 §4.6，与 PowerPod 4000 A 出线的对接由 MDCX 协调；</li>
+<li><strong>舱底横穿两根消防承重梁（x 3260…3420 与 x 9943…10103）</strong>，任何下垂件不得与之干涉；</li>
+<li>上部模块随箱体运输，母线系统必须在模块内自持。</li>
+</ol>
+<hr />
+<h2>7. 检验、试验与验收</h2>
+<table>
+<thead>
+<tr>
+<th>阶段</th>
+<th>项目</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>型式</td>
+<td>提供<strong>型式试验报告</strong>：温升、短时耐受电流与峰值耐受电流、绝缘、防护等级、IP 试验</td>
+</tr>
+<tr>
+<td>出厂</td>
+<td>逐段绝缘电阻与工频耐压、接触电阻、相序核对、机械操作试验</td>
+</tr>
+<tr>
+<td>出厂</td>
+<td>插接开关逐只操作与脱扣校验，出具记录</td>
+</tr>
+<tr>
+<td>出厂</td>
+<td><strong>预装配试验</strong>：全部 16 只 TOU + 26 只 STU 在母线上试插拔，记录插拔力与对位情况</td>
+</tr>
+<tr>
+<td>出厂</td>
+<td><strong>IEC 60309 插座与 MDCX 提供的插头样件试插</strong>，一次对合率 100 %（63 A 与 125 A 各测）</td>
+</tr>
+<tr>
+<td>出厂</td>
+<td><strong>泵回路快插组件</strong>：whip 按 §4.5.4 走向预制成型后<strong>装机试装</strong>，核对最小弯曲半径、插座法兰对位与接线盒空间，出具记录与照片</td>
+</tr>
+<tr>
+<td>现场</td>
+<td>总装后复检绝缘、相序、接触电阻，配合功能联调</td>
+</tr>
+</tbody>
+</table>
+<p>质保建议不少于 <strong>24 个月</strong>，请在报价中明确范围。</p>
+<hr />
+<h2>8. 包装、运输与现场服务（<strong>本次新增要求，请重点回复</strong>）</h2>
+<h3>8.1 整体发货（强制）</h3>
+<blockquote>
+<p><strong>8.1.1　本母线系统必须按总成"整体发货"</strong>：母线段、接头、全部 42 只插接开关、出线 whip 与插座（含泵回路 125 A 面板插座与接线盒）、吊架、端墙出线口在厂家工厂内完成<strong>预制、组装、试验与整体预装配</strong>后，作为<strong>完整成套系统</strong>发运，不得以散件到场拼装。</p>
+<p><strong>8.1.2</strong> 确需分段的，须在技术方案阶段书面提出分段方案，明确分段界面、配对编号与现场连接工序；<strong>分段界面只能设在母线直线接头处</strong>，不得设在插接开关、进线段或端墙出线口处。</p>
+<p><strong>8.1.3</strong> 现场为<strong>总装厂房内不动火</strong>作业环境，所有现场连接必须为<strong>螺栓 / 插接连接</strong>。</p>
+</blockquote>
+<h3>8.2 现场配合安装与测试（强制）</h3>
+<blockquote>
+<p><strong>8.2.1　厂家须派驻技术人员到浙江嘉兴海盐"世赫 3# 厂房"（算力集装箱总装与联调基地）现场，配合本系统的安装、就位、插接、力矩紧固、绝缘与相序复检、通电调试与联合验收</strong>，直至该批次模块通过 MDCX 的出厂联调（Zone D 功能性联调）。</p>
+<p><strong>8.2.2</strong> 报价中须<strong>单列现场服务费用</strong>，并明确：
+- 派驻人数与专业（母线安装 / 电气试验）；
+- <strong>每台模块的现场配合人天数</strong>；
+- 接到通知后的<strong>到场响应时间</strong>；
+- 是否含差旅、食宿、试验仪器与耗材；
+- 首台（首件）与批量阶段的服务强度差异。</p>
+<p><strong>8.2.3</strong> 厂房硬约束：<strong>行吊上限 20 t</strong>，厂内<strong>不动火</strong>，测试联调区仅做功能性联调（&lt; 100 kW，不带真实热负载）。厂家到场件与工装须满足上述约束。</p>
+</blockquote>
+<h3>8.3 包装与运输（沿用 BW-TC-001 §10 的 7 项要求，并补充）</h3>
+<ol>
+<li>成套系统的<strong>运输工况</strong>固定与减振设计，提供校核报告（含加速度取值假设）；</li>
+<li>母线段两端封堵防潮，插接口防尘保护；</li>
+<li>插接开关手柄、插座、防尘盖等易损件单独包装并在装箱单中单列；</li>
+<li>提供装箱单、吊装点与重心标识、吊装示意；</li>
+<li>出口包装满足熏蒸要求（如后续出口）；</li>
+<li>随箱提供力矩表、接线图、相序图与操作维护手册（中文）；</li>
+<li>随机备件与专用工具（含插拔工装）清单。</li>
+</ol>
+<hr />
+<h2>9. 报价要求</h2>
+<table>
+<thead>
+<tr>
+<th>序</th>
+<th>分项</th>
+<th>计价单位</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>2000 A 母线本体</td>
+<td>m / 条</td>
+<td>含壳体、导体、绝缘</td>
+</tr>
+<tr>
+<td>2</td>
+<td>直线接头</td>
+<td>处</td>
+<td>12 处</td>
+</tr>
+<tr>
+<td>3</td>
+<td>始端进线段 + 进线法兰</td>
+<td>套</td>
+<td>2 套</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>TOU 400 A 插接开关</strong></td>
+<td>只</td>
+<td>16 只，含 MCCB</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>STU 100 A 插接开关</strong></td>
+<td>只</td>
+<td>24 只</td>
+</tr>
+<tr>
+<td>6</td>
+<td><strong>STU 125 A 插接开关（泵回路）</strong></td>
+<td>只</td>
+<td>2 只（Rev.1 由 160 A 改）</td>
+</tr>
+<tr>
+<td>7</td>
+<td><strong>IEC 60309 63 A 5P 插座 + whip + 格兰</strong></td>
+<td>路</td>
+<td>88 路（64 IT + 24 辅助）</td>
+</tr>
+<tr>
+<td>8</td>
+<td><strong>泵回路快插组件</strong>：125 A 面板插座 + 法兰 + 延长弯曲 whip + IP65 接线盒</td>
+<td>套</td>
+<td>2 套，见 §4.5.4</td>
+</tr>
+<tr>
+<td>9</td>
+<td>母线吊架</td>
+<td>付</td>
+<td>24 付</td>
+</tr>
+<tr>
+<td>10</td>
+<td>端墙出线口（含防雨盖与门）</td>
+<td>套</td>
+<td>1 套</td>
+</tr>
+<tr>
+<td>11</td>
+<td>型式与出厂试验</td>
+<td>套</td>
+<td></td>
+</tr>
+<tr>
+<td>12</td>
+<td><strong>整体发货包装与运输</strong></td>
+<td>套</td>
+<td>至海盐厂房</td>
+</tr>
+<tr>
+<td>13</td>
+<td><strong>现场配合安装与测试服务</strong></td>
+<td>人天 / 台</td>
+<td>见 §8.2</td>
+</tr>
+<tr>
+<td>14</td>
+<td>随机备件与专用工具</td>
+<td>套</td>
+<td>建议清单</td>
+</tr>
+<tr>
+<td><strong>15</strong></td>
+<td><strong>【选项，不进入主范围】VR200 125 A 升级模块</strong></td>
+<td>套</td>
+<td>16 只 TOU 的出线模块改 4 × IEC 60309 125 A（共 64 路），含插座、whip、格兰；见 §2.3</td>
+</tr>
+</tbody>
+</table>
+<p><strong>序 15 请单独列价，不计入总价</strong>，用于评估后续升级成本。</p>
+<p>同时请提供：<strong>首台交期</strong>、<strong>批量交期（月产能）</strong>、付款条件、质保条件。</p>
+<hr />
+<h2>10. 需厂家确认 / 答复的问题</h2>
+<table>
+<thead>
+<tr>
+<th>编号</th>
+<th>问题</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Q1</td>
+<td><strong>格兰能否从插接开关底面出线</strong>（三条铁律之一，最高优先级）？如不能，请给出替代方案。</td>
+</tr>
+<tr>
+<td>Q2</td>
+<td>插接开关<strong>出线窗能否按本文件给定的 x 位置定制</strong>（已对准机柜柜心，见 §4.5）？</td>
+</tr>
+<tr>
+<td>Q3</td>
+<td><strong>40 / 45 / 50 °C 环境温度下的降容曲线</strong>；在 1509 A 工况下的温升裕度。</td>
+</tr>
+<tr>
+<td>Q4</td>
+<td>吊架<strong>跨距 1.40 m</strong> 是否满足力学与厂家标准？端部悬臂 0.156 / 0.460 m 是否可接受？</td>
+</tr>
+<tr>
+<td>Q5</td>
+<td><strong>TOU 箱体 400 × 200 × 350</strong> 能否容纳 400 A MCCB 与 4 路出线？若不能，请给出最小可行尺寸。</td>
+</tr>
+<tr>
+<td>Q6</td>
+<td><strong>泵回路快插（§4.5.4）</strong>：(a) <strong>125 A 面板插座 + 延长弯曲 whip + 腔内 IP65 接线盒</strong>的做法是否可行、是否为厂家标准做法？(b) 125 A 连续工况下<strong>软电缆实际截面与外径</strong>（Ø45 是否够用），以及对应的<strong>最小弯曲半径与 whip 展开长度</strong>；(c) whip 在腔内的固定与应力释放方式。</td>
+</tr>
+<tr>
+<td>Q7</td>
+<td>4 路 63 A 出线<strong>在 400 × 200 底面装不下面板插座</strong>（法兰约 125 方），本方案改为软缆 whip 外扩，厂家是否有更优的成品方案？</td>
+</tr>
+<tr>
+<td>Q8</td>
+<td><strong>整体发货</strong>是否可行？若必须分段，分段方案与界面（见 §8.1.2）。</td>
+</tr>
+<tr>
+<td>Q9</td>
+<td>现场配合服务的<strong>人天数、响应时间与费用口径</strong>（见 §8.2.2）。</td>
+</tr>
+<tr>
+<td>Q10</td>
+<td><strong>运输振动</strong>工况下母线与插接开关的固定与防松措施；是否需要运输支撑并在现场拆除？</td>
+</tr>
+<tr>
+<td>Q11</td>
+<td>端墙出线口的 <strong>IP 等级</strong>与开门状态防护措施。</td>
+</tr>
+<tr>
+<td>Q12</td>
+<td>是否有<strong>集装箱式数据中心内置母线</strong>的既往业绩？请提供 2–3 个案例。</td>
+</tr>
+<tr>
+<td><strong>Q13</strong></td>
+<td><strong>电力舱通风与散热（§4.7）</strong>：母线与插接开关在 1509 A / 条工况下的实际损耗、最高允许环境温度、以及"不设强制通风"是否可接受。</td>
+</tr>
+<tr>
+<td><strong>Q14</strong></td>
+<td><strong>63 A → 125 A 升级路径（§2.3）</strong>：TOU 出线模块能否设计成<strong>可整体更换</strong>的形式（同一箱体、同一夹爪，只换底部出线板 + 插座），以降低后续升级成本？若可行，请在序 15 报价中体现差价。</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Rev.0 的 Q6 已关闭</strong>：泵回路主开关由 160 A 下调至 125 A，与 IEC 60309 上限一致，不再需要硬接线。<strong>但 MDCX 侧仍需核实泵的实际满载与启动电流是否 ≤ 125 A</strong>（§4.1 负荷分解中"泵/阀控 131 A"为两路合计的初估值），核实结果将在技术确认书阶段书面确认。</p>
+</blockquote>
+<hr />
+<h2>11. 回复方式</h2>
+<ul>
+<li>联系人 / 邮箱：见随附邮件；</li>
+<li>技术澄清可先行发起，不必等待完整报价；</li>
+<li>本文件与随附 3D、图纸仅用于本次询价，<strong>未经 MDCX 书面同意不得转发第三方</strong>。</li>
+</ul>
+<p><em>文件结束　RFI-BUS-001 Rev.1　2026-09-05</em></p></body></html>

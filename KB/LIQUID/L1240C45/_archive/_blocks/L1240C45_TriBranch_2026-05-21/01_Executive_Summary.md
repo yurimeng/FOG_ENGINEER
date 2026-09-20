@@ -102,7 +102,7 @@ source_anchors: []
 | 每 rack manifold 数量 | **2 个**（冷板 ≤ 100）或 **3 个**（冷板 > 100，NVL72-class） |
 | 每分支设计流量 | **1.6–2.1 L/min** (在 1–3 规格内 30%+ 余量) |
 | 每 manifold 入口 | **装 PICV + 流量计**（防双 manifold 间不平衡） |
-| DC45 整机总 manifold | **16–24 个**（8 rack × 2–3 manifold/rack） |
+| DC45 整机总 manifold | **16–24 个**（8 rack × 2–3 manifold/rack） ^mdc-044bd7a066 |
 
 ---
 

@@ -23,16 +23,16 @@ source_anchors:
 | Primary | ~25% vol. EG water (design) | Facility loop to outdoor rejection |
 | Air | Air | 1×10kW rack + CRAC, independent |
 
-![[I50TS Flow_v1.svg]]
-*I50TS / I400C40 thermal path*
+![[I50TS Flow_v1.svg]] ^mdc-81beb78835
+*I50TS / I400C40 thermal path* ^mdc-d9a571b3da
 
 ### 5.2 Design conditions (standard product)
 
 | Item | Spec |
 |------|------|
-| Design wet-bulb | **28°C** ⏳ **#unconfirmed** — taken from the legacy AC40 V1.4 baseline; not covered by [[PRODUCT_SPEC_BASELINE]]. Waiting on I400C40 DESIGN/ engineering documents (shop drawings / weighing report / structural calculation) to be issued and written back to the baseline table — expected TBD |
+| Design wet-bulb | **28°C** ⏳ **#unconfirmed** — taken from the legacy AC40 V1.4 baseline; not covered by [[PRODUCT_SPEC_BASELINE]]. Waiting on I400C40 DESIGN/ engineering documents (shop drawings / weighing report / structural calculation) to be issued and written back to the baseline table — expected TBD ^mdc-7c5c7a1203 |
 | Secondary oil | **Inlet ≤35°C / outlet ≈43°C, ΔT=8K** |
-| Facility water | **≤32 / 37°C (ΔT=5K)** ⏳ **#unconfirmed** — [[PRODUCT_SPEC_BASELINE]] §2.2 carries site evidence for I400C45 only; the same temperatures for I400C40 are derived. Waiting on Cooling Engineer to confirm whether I400C40 runs the same water temperatures and to write it back to the baseline table — expected TBD |
+| Facility water | **≤32 / 37°C (ΔT=5K)** ⛔ **conflict** — [[PRODUCT_SPEC_BASELINE]] §2.2 carries site evidence for I400C45 only; the same temperatures for I400C40 are derived. Waiting on Cooling Engineer to confirm whether I400C40 runs the same water temperatures and to write it back to the baseline table — expected TBD ^mdc-fa0d50ab07 |
 | Coolant | DC20 or S5LV (S5LV cp = **2.306 kJ/kg·°C**) |
 | Design basis | [[COOLING_SYSTEM_Guideline]] |
 
@@ -45,7 +45,7 @@ source_anchors:
 | Redundancy | **1+1 / 2N** |
 | Service | Hot-swap pumps/HX; drainable before removal |
 
-### 5.4 Secondary flow check (I50TS §5.4)
+### 5.4 Secondary flow check (I50TS §5.4) ^mdc-3a1ccf37f8
 
 Using S5LV cp and ΔT=8°C (ρ≈0.8 kg/L provisional):
 
@@ -58,8 +58,8 @@ Using S5LV cp and ΔT=8°C (ρ≈0.8 kg/L provisional):
 
 | Case | Total Q | Secondary total flow |
 |------|---------|----------------------|
-| Recommended | 360kW | ≈ **87.8 m³/h** ⏳ **#unconfirmed** — taken from the legacy AC40 V1.4 baseline; not covered by [[PRODUCT_SPEC_BASELINE]]. Waiting on I400C40 DESIGN/ engineering documents (shop drawings / weighing report / structural calculation) to be issued and written back to the baseline table — expected TBD |
-| Maximum | 400kW | ≈ **97.6 m³/h** ⏳ **#unconfirmed** (legacy AC40 V1.4, not covered by the baseline table; waiting on I400C40 DESIGN/ documents, expected TBD) |
+| Recommended | 360kW | ≈ **87.8 m³/h** ⛔ **conflict** — taken from the legacy AC40 V1.4 baseline; not covered by [[PRODUCT_SPEC_BASELINE]]. Waiting on I400C40 DESIGN/ engineering documents (shop drawings / weighing report / structural calculation) to be issued and written back to the baseline table — expected TBD ^mdc-d2b7598593 |
+| Maximum | 400kW | ≈ **97.6 m³/h** ⛔ **conflict** (legacy AC40 V1.4, not covered by the baseline table; waiting on I400C40 DESIGN/ documents, expected TBD) ^mdc-6ddaf9d626 |
 
 > ⚠️ Density/cp verification pending; validate pumps, HX, and velocity at ΔT=8K / inlet ≤35°C.
 
@@ -70,7 +70,7 @@ Using S5LV cp and ΔT=8°C (ρ≈0.8 kg/L provisional):
 | Extreme dry-bulb **≤24°C** | **Dry cooler only (free cooling)** |
 | Extreme dry-bulb **>24°C** | **Hybrid Chiller** (dry + DX) |
 
-> Per [[COOLING_SYSTEM_Guideline]] §G-7. One Cooling Zone per I400C40; system N+1 via more containers, not shared chillers.
+> Per [[COOLING_SYSTEM_Guideline]] §G-7. One Cooling Zone per I400C40; system N+1 via more containers, not shared chillers. ^mdc-0a25078a75
 
 ### 5.6 Air branch
 
@@ -91,3 +91,11 @@ Independent 1×10kW rack + CRAC (~10kW in electrical schedule).
 Temperature setpoints, pump VFD, primary valves; monitoring of oil temps, level, conductivity, pressure; SNMP / Modbus / Redfish.
 
 ---
+
+## Changelog
+
+| 日期 | 变更 |
+|---|---|
+| 2026-09-20 | 🧭 unconfirmed-038 改为 ⛔ conflict，未裁定赢家 |
+| 2026-09-20 | 🧭 unconfirmed-065 改为 ⛔ conflict，未裁定赢家 |
+| 2026-09-20 | 🧭 unconfirmed-037 改为 ⛔ conflict，未裁定赢家 |

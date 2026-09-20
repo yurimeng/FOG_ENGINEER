@@ -15,16 +15,16 @@ source_anchors:
 
 ## 2. Product Positioning ^sec-2-positioning
 
-I400C40 is a **40ft containerized single-phase immersion modular data center** with **8× I50TS** immersion tanks, targeting high-performance AI inference, distributed training, and edge compute.
+I400C40 is a **40ft containerized single-phase immersion modular data center** with **8× I50TS** immersion tanks, targeting high-performance AI inference, distributed training, and edge compute. ^mdc-e79f43a9f5
 
 | Dimension | Positioning |
 |-----------|-------------|
 | Product family | IMMERSION (immersion) |
-| IT Zone role | Standard MDC compute unit (mixable with L1240C45) |
+| IT Zone role | Standard MDC compute unit (mixable with L1240C45) ^mdc-3a1841c989 |
 | GPU platform | Primarily PCIe (H100 / H200 / 4090 / A100, etc.) |
 | Network | Ethernet-first (10G/25G/100G/400G upgrade path) |
-| UPS | **External (customer-supplied)** — not in I400C40 envelope |
-| Full-system UL | **No** (use [[I400C45]] when UL is required) |
+| UPS | **External (customer-supplied)** — not in I400C40 envelope ^mdc-0b8b7e5a11 |
+| Full-system UL | **No** (use [[I400C45]] when UL is required) ^mdc-2c193994d4 |
 
 > **Cooling architecture (two loops + air branch):**
 > - **Secondary (dielectric):** servers immersed → in-tank Dual CDU (HX) → heat to facility loop
@@ -39,9 +39,9 @@ IT Load → Dielectric Fluid (Tank) → Dual CDU (in-tank) → Facility Water / 
 
 | Product | Form factor | IT capacity | Cooling | UPS | UL |
 |---------|-------------|-------------|---------|-----|-----|
-| **I50TS** | Single tank | 45–50kW | Immersion | External | — |
-| **I400C40** | 40ft | 360–400kW | Immersion | **External** | ❌ |
-| **I400C45** | 45ft | 400kW | Immersion | Internal power bay | ✅ |
-| **L1240C45** | 45ft | 1240kW | DLC cold plate | Internal | ✅ |
+| **I50TS** | Single tank | 45–50kW | Immersion | External | — ^mdc-2f5c271589 |
+| **I400C40** | 40ft | 360–400kW | Immersion | **External** | ❌ ^mdc-216d39e9fd |
+| **I400C45** | 45ft | 400kW | Immersion | Internal power bay | ✅ ^mdc-fd5b12398c |
+| **L1240C45** | 45ft | 1240kW | DLC cold plate | Internal | ✅ ^mdc-bb61d7055c |
 
 ---
