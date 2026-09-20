@@ -106,6 +106,10 @@ ResoucePool/
 **/*Review*
 **/*review*
 **/*REVIEW*
+!_holding_unconfirmed/review-state.json
+!_holding_unconfirmed/review-compass-original.txt
+!_holding_unconfirmed/_backup_2026-09-20/review-state.json
+!_holding_unconfirmed/_backup_2026-09-20/review-compass-original.txt
 **/*评估*
 **/*STD*
 **/*std*
